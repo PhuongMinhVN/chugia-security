@@ -1768,6 +1768,7 @@ Nhờ Chu Gia liên hệ tư vấn và xếp lịch khảo sát / lắp đặt s
 
   // ---------------- HERO SHOWCASE SLIDER (IMOU STYLE) ----------------
   const heroCarousel = document.getElementById('heroCarousel');
+  const heroProgressNav = document.getElementById('heroProgressNav');
   const heroCarouselSlides = document.querySelectorAll('.hero-carousel-slide');
   const heroProgressItems = document.querySelectorAll('.hero-progress-item');
   const heroPrevBtn = document.getElementById('heroPrevBtn');
@@ -1775,6 +1776,7 @@ Nhờ Chu Gia liên hệ tư vấn và xếp lịch khảo sát / lắp đặt s
   let currentHeroSlide = 0;
   let heroSlideTimer = null;
   const HERO_SLIDE_DURATION = 5500;
+  let isHeroVisible = true;
 
   function setHeroSlide(index) {
     if (!heroCarouselSlides.length) return;
@@ -1798,9 +1800,11 @@ Nhờ Chu Gia liên hệ tư vấn và xếp lịch khảo sát / lắp đặt s
           fill.style.width = '0%';
         }
       }
-      if (isActive && window.innerWidth <= 768) {
+      // CHỈ cuộn thanh tab nằm ngang cục bộ, TUYỆT ĐỐI KHÔNG dùng scrollIntoView gây giật cuộn trang window
+      if (isActive && heroProgressNav && window.innerWidth <= 768) {
         try {
-          item.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+          const scrollOffset = (item.offsetLeft + item.offsetWidth / 2) - (heroProgressNav.clientWidth / 2);
+          heroProgressNav.scrollTo({ left: Math.max(0, scrollOffset), behavior: 'smooth' });
         } catch (err) {}
       }
     });
@@ -1816,9 +1820,25 @@ Nhờ Chu Gia liên hệ tư vấn và xếp lịch khảo sát / lắp đặt s
 
   function startHeroTimer() {
     if (heroSlideTimer) clearInterval(heroSlideTimer);
+    if (!isHeroVisible) return; // Tạm dừng nếu hero đang nằm ngoài màn hình (user đã cuộn xuống dưới)
     heroSlideTimer = setInterval(() => {
       nextHeroSlide();
     }, HERO_SLIDE_DURATION);
+  }
+
+  // Tạm dừng chạy slide khi người dùng cuộn xuống dưới, tự động tiếp tục khi cuộn lại lên đầu
+  if ('IntersectionObserver' in window && heroCarousel) {
+    const heroObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        isHeroVisible = entry.isIntersecting;
+        if (!isHeroVisible) {
+          if (heroSlideTimer) clearInterval(heroSlideTimer);
+        } else {
+          startHeroTimer();
+        }
+      });
+    }, { threshold: 0.1 });
+    heroObserver.observe(heroCarousel);
   }
 
   function resetHeroTimer() {
