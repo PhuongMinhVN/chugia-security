@@ -882,7 +882,7 @@ document.addEventListener('DOMContentLoaded', () => {
       typeLabel: 'Trong Nhà',
       price: 590000,
       img: 'images/imou_indoor_ranger.png',
-      badge: 'BÁN CHẠY NHẤT 🔥',
+      badge: 'BÁN CHẠY NHẤT',
       specs: ['Xoay 360°', 'Bám theo người', 'Còi báo động']
     },
     'ezviz-c6n': {
@@ -893,7 +893,7 @@ document.addEventListener('DOMContentLoaded', () => {
       typeLabel: 'Trong Nhà',
       price: 850000,
       img: 'images/ezviz_indoor_c6n_4k.png',
-      badge: 'SIÊU NÉT 2K AI ✨',
+      badge: 'SIÊU NÉT 2K AI',
       specs: ['Chuẩn nét 2K/4K', 'Xoay 360°', 'Đàm thoại 2C']
     },
     'imou-bullet-2c': {
@@ -904,7 +904,7 @@ document.addEventListener('DOMContentLoaded', () => {
       typeLabel: 'Ngoài Trời',
       price: 690000,
       img: 'images/imou_outdoor_bullet_2c.png',
-      badge: 'CHỐNG NƯỚC IP67 🌧️',
+      badge: 'CHỐNG NƯỚC IP67',
       specs: ['Chống nước IP67', 'Hồng ngoại 30m', 'Anten thu xa']
     },
     'imou-cruiser-2': {
@@ -915,7 +915,7 @@ document.addEventListener('DOMContentLoaded', () => {
       typeLabel: 'Ngoài Trời',
       price: 1650000,
       img: 'images/imou_outdoor_cruiser.png',
-      badge: 'ĐÊM CÓ MÀU 30M 🌙',
+      badge: 'ĐÊM CÓ MÀU 30M',
       specs: ['Xoay 360° ngoài trời', 'Đêm có màu 30m', 'Còi hú chớp đèn']
     },
     'solar-4g': {
@@ -926,7 +926,7 @@ document.addEventListener('DOMContentLoaded', () => {
       typeLabel: 'Ngoài Trời / 4G',
       price: 3690000,
       img: 'images/ezviz_solar_eb3_4g.png',
-      badge: 'PIN SOLAR 4G ☀️',
+      badge: 'PIN SOLAR 4G KHÔNG DÂY',
       specs: ['Pin năng lượng MT', 'Sim 4G không wifi', 'Không kéo dây']
     }
   };
@@ -1465,7 +1465,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (selectedCams.length === 1) {
           calcPreviewBadge.textContent = selectedCams[0].data.badge;
         } else {
-          calcPreviewBadge.textContent = `🔥 GÓI COMBO TÙY CHỌN (${totalCamCount} MẮT)`;
+          calcPreviewBadge.textContent = `GÓI COMBO TÙY CHỌN (${totalCamCount} MẮT)`;
         }
       }
 

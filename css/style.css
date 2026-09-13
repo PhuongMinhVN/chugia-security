@@ -1773,22 +1773,14 @@ a.floating-hud-badge.hud-top-right:hover {
 }
 
 .preset-header {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 2px;
-}
-
-.preset-icon {
-  font-size: 1rem;
-  line-height: 1;
+  margin-bottom: 3px;
 }
 
 .preset-name {
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   font-weight: 800;
   color: #0F172A;
-  line-height: 1.25;
+  line-height: 1.3;
 }
 
 .combo-preset-btn.active .preset-name {
