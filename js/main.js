@@ -941,29 +941,6 @@ document.addEventListener('DOMContentLoaded', () => {
     'solar-4g': 0
   };
 
-  const COMBO_PRESETS = {
-    '1in-1out': {
-      'imou-ranger-2': 1,
-      'imou-bullet-2c': 1
-    },
-    '1in-2out': {
-      'imou-ranger-2': 1,
-      'imou-bullet-2c': 2
-    },
-    '2in-2out': {
-      'imou-ranger-2': 2,
-      'imou-bullet-2c': 2
-    },
-    '1in-3out': {
-      'imou-ranger-2': 1,
-      'imou-bullet-2c': 3
-    },
-    '2in-0out': {
-      'imou-ranger-2': 2
-    },
-    'reset': {}
-  };
-
   const calcStorage = document.querySelectorAll('input[name="calc_storage"]');
   const calcNvr = document.querySelectorAll('input[name="calc_nvr"]');
   const calcHdd = document.querySelectorAll('input[name="calc_hdd"]');
@@ -1012,9 +989,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const calcPreviewName = document.getElementById('calcPreviewName');
   const calcPreviewSpecs = document.getElementById('calcPreviewSpecs');
   const calcLiveTotalPrice = document.getElementById('calcLiveTotalPrice');
-
-  const pillCamText = document.getElementById('pillCamText');
-  const comboPresetBtns = document.querySelectorAll('.combo-preset-btn');
 
   const calcMobileStickyBar = document.getElementById('calcMobileStickyBar');
   const cmsbCamImg = document.getElementById('cmsbCamImg');
@@ -1090,49 +1064,6 @@ document.addEventListener('DOMContentLoaded', () => {
   function changeCameraQty(id, delta) {
     const cur = camQuantities[id] || 0;
     setCameraQty(id, cur + delta);
-  }
-
-  function applyComboPreset(presetKey) {
-    const preset = COMBO_PRESETS[presetKey];
-    if (!preset) return;
-    Object.keys(camQuantities).forEach(id => {
-      camQuantities[id] = preset[id] || 0;
-      updateCardUI(id);
-    });
-    updateCalculator();
-  }
-
-  function checkActivePreset() {
-    let matchedKey = null;
-    const totalCount = getTotalCamCount();
-    if (totalCount === 0) {
-      matchedKey = 'reset';
-    } else {
-      for (const [key, preset] of Object.entries(COMBO_PRESETS)) {
-        if (key === 'reset') continue;
-        let match = true;
-        for (const [id, q] of Object.entries(camQuantities)) {
-          const targetQ = preset[id] || 0;
-          if (q !== targetQ) {
-            match = false;
-            break;
-          }
-        }
-        if (match) {
-          matchedKey = key;
-          break;
-        }
-      }
-    }
-
-    comboPresetBtns.forEach(btn => {
-      const pKey = btn.getAttribute('data-preset');
-      if (pKey === matchedKey) {
-        btn.classList.add('active');
-      } else {
-        btn.classList.remove('active');
-      }
-    });
   }
 
   function setStorageMode(mode) {
@@ -1330,15 +1261,6 @@ document.addEventListener('DOMContentLoaded', () => {
       breakdownShort = 'Chưa chọn camera';
     }
 
-    // Cập nhật Pill trạng thái ở Bước 2
-    if (pillCamText) {
-      if (totalCamCount > 0) {
-        pillCamText.innerHTML = `<strong>${totalCamCount}</strong> mắt: ${breakdownShort}`;
-      } else {
-        pillCamText.innerHTML = `<span style="color: #DC2626; font-weight: 700;">Chưa chọn camera nào (0 mắt)</span>`;
-      }
-    }
-
     // Cập nhật danh sách camera chi tiết trong Summary Box
     if (summaryCamList) {
       if (selectedCams.length === 0) {
@@ -1487,7 +1409,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (selectedCams.length === 1) {
           calcPreviewBadge.textContent = selectedCams[0].data.badge;
         } else {
-          calcPreviewBadge.textContent = `GÓI COMBO TÙY CHỌN (${totalCamCount} MẮT)`;
+          calcPreviewBadge.textContent = `GÓI LẮP ĐẶT (${totalCamCount} MẮT)`;
         }
       }
 
@@ -1512,10 +1434,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (cmsbTotalPrice) cmsbTotalPrice.textContent = formattedGrandTotal;
 
-    // 7. Đồng bộ active state cho combo preset buttons
-    checkActivePreset();
-
-    // 8. Lời khuyên chọn Đầu Ghi & Ổ Cứng khi chọn >= 3 camera bất kỳ
+    // 7. Lời khuyên chọn Đầu Ghi & Ổ Cứng khi chọn >= 3 camera bất kỳ
     if (totalCamCount >= 3) {
       if (recTabBadge) recTabBadge.style.display = 'inline-block';
 
@@ -1590,16 +1509,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (cur === 0) {
           setCameraQty(id, 1);
         }
-      }
-    });
-  });
-
-  // Lắng nghe sự kiện click các gói combo gợi ý ở Bước 2
-  comboPresetBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const presetKey = btn.getAttribute('data-preset');
-      if (presetKey) {
-        applyComboPreset(presetKey);
       }
     });
   });
