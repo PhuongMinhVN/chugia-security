@@ -861,11 +861,109 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setupPromoHookLinks();
 
-  // ---------------- BẢNG TÍNH DỰ TOÁN CHI PHÍ (NVR & HDD 24/7) ----------------
-  const calcCameraType = document.querySelectorAll('input[name="calc_cam_type"]');
-  const calcCamQty = document.getElementById('calcCamQty');
-  const calcQtyMinus = document.getElementById('calcQtyMinus');
-  const calcQtyPlus = document.getElementById('calcQtyPlus');
+  // ---------------- BẢNG TÍNH DỰ TOÁN CHI PHÍ (MULTI-CAMERA & GÓI COMBO) ----------------
+  const CAMERAS_DATA = {
+    'imou-cue-2c': {
+      id: 'imou-cue-2c',
+      name: 'Imou Cue 2C (Trong Nhà Góc Rộng)',
+      shortName: 'Trong Nhà Góc Rộng',
+      type: 'indoor',
+      typeLabel: 'Trong Nhà',
+      price: 490000,
+      img: 'images/imou_indoor_cue.png',
+      badge: 'GIÁ TỐT 490K',
+      specs: ['Góc rộng 108°', 'Đế nam châm', 'Đàm thoại 2C']
+    },
+    'imou-ranger-2': {
+      id: 'imou-ranger-2',
+      name: 'Imou Ranger 2 (Trong Nhà 360° AI)',
+      shortName: 'Trong Nhà 360° AI',
+      type: 'indoor',
+      typeLabel: 'Trong Nhà',
+      price: 590000,
+      img: 'images/imou_indoor_ranger.png',
+      badge: 'BÁN CHẠY NHẤT 🔥',
+      specs: ['Xoay 360°', 'Bám theo người', 'Còi báo động']
+    },
+    'ezviz-c6n': {
+      id: 'ezviz-c6n',
+      name: 'EZVIZ C6N (Trong Nhà 2K AI)',
+      shortName: 'Trong Nhà 2K AI',
+      type: 'indoor',
+      typeLabel: 'Trong Nhà',
+      price: 850000,
+      img: 'images/ezviz_indoor_c6n_4k.png',
+      badge: 'SIÊU NÉT 2K AI ✨',
+      specs: ['Chuẩn nét 2K/4K', 'Xoay 360°', 'Đàm thoại 2C']
+    },
+    'imou-bullet-2c': {
+      id: 'imou-bullet-2c',
+      name: 'Imou Bullet 2C (Ngoài Trời IP67)',
+      shortName: 'Ngoài Trời IP67',
+      type: 'outdoor',
+      typeLabel: 'Ngoài Trời',
+      price: 690000,
+      img: 'images/imou_outdoor_bullet_2c.png',
+      badge: 'CHỐNG NƯỚC IP67 🌧️',
+      specs: ['Chống nước IP67', 'Hồng ngoại 30m', 'Anten thu xa']
+    },
+    'imou-cruiser-2': {
+      id: 'imou-cruiser-2',
+      name: 'Imou Cruiser 2 (Ngoài Trời 3K 360° AI)',
+      shortName: 'Ngoài Trời 3K 360°',
+      type: 'outdoor',
+      typeLabel: 'Ngoài Trời',
+      price: 1650000,
+      img: 'images/imou_outdoor_cruiser.png',
+      badge: 'ĐÊM CÓ MÀU 30M 🌙',
+      specs: ['Xoay 360° ngoài trời', 'Đêm có màu 30m', 'Còi hú chớp đèn']
+    },
+    'solar-4g': {
+      id: 'solar-4g',
+      name: 'Camera Pin Solar 4G Năng Lượng Mặt Trời',
+      shortName: 'Pin Solar 4G',
+      type: 'outdoor',
+      typeLabel: 'Ngoài Trời / 4G',
+      price: 3690000,
+      img: 'images/ezviz_solar_eb3_4g.png',
+      badge: 'PIN SOLAR 4G ☀️',
+      specs: ['Pin năng lượng MT', 'Sim 4G không wifi', 'Không kéo dây']
+    }
+  };
+
+  // Trạng thái số lượng cho từng model camera (mặc định 1 Trong Nhà 360° + 1 Ngoài Trời IP67)
+  const camQuantities = {
+    'imou-cue-2c': 0,
+    'imou-ranger-2': 1,
+    'ezviz-c6n': 0,
+    'imou-bullet-2c': 1,
+    'imou-cruiser-2': 0,
+    'solar-4g': 0
+  };
+
+  const COMBO_PRESETS = {
+    '1in-1out': {
+      'imou-ranger-2': 1,
+      'imou-bullet-2c': 1
+    },
+    '1in-2out': {
+      'imou-ranger-2': 1,
+      'imou-bullet-2c': 2
+    },
+    '2in-2out': {
+      'imou-ranger-2': 2,
+      'imou-bullet-2c': 2
+    },
+    '1in-3out': {
+      'imou-ranger-2': 1,
+      'imou-bullet-2c': 3
+    },
+    '2in-0out': {
+      'imou-ranger-2': 2
+    },
+    'reset': {}
+  };
+
   const calcStorage = document.querySelectorAll('input[name="calc_storage"]');
   const calcNvr = document.querySelectorAll('input[name="calc_nvr"]');
   const calcHdd = document.querySelectorAll('input[name="calc_hdd"]');
@@ -880,12 +978,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const days500GB = document.getElementById('days500GB');
   const days1000GB = document.getElementById('days1000GB');
   const days2000GB = document.getElementById('days2000GB');
+  const days4000GB = document.getElementById('days4000GB');
   const advisoryCamCount = document.getElementById('advisoryCamCount');
   const advisoryHddCap = document.getElementById('advisoryHddCap');
   const advisoryDays = document.getElementById('advisoryDays');
 
-  const summaryCamName = document.getElementById('summaryCamName');
-  const summaryCamQty = document.getElementById('summaryCamQty');
+  const summaryCamList = document.getElementById('summaryCamList');
+  const summaryTotalCamCount = document.getElementById('summaryTotalCamCount');
   const summaryCamPrice = document.getElementById('summaryCamPrice');
   const lineSummaryCard = document.getElementById('lineSummaryCard');
   const lineSummaryNVR = document.getElementById('lineSummaryNVR');
@@ -893,6 +992,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const summaryStoragePrice = document.getElementById('summaryStoragePrice');
   const summaryNvrPrice = document.getElementById('summaryNvrPrice');
   const summaryHddPrice = document.getElementById('summaryHddPrice');
+  const lineSummaryInstall = document.getElementById('lineSummaryInstall');
   const summaryInstallPrice = document.getElementById('summaryInstallPrice');
   const summaryTotalPrice = document.getElementById('summaryTotalPrice');
   const btnBookCalc = document.getElementById('btnBookCalc');
@@ -903,30 +1003,126 @@ document.addEventListener('DOMContentLoaded', () => {
   const calcPreviewSpecs = document.getElementById('calcPreviewSpecs');
   const calcLiveTotalPrice = document.getElementById('calcLiveTotalPrice');
 
+  const pillCamText = document.getElementById('pillCamText');
+  const comboPresetBtns = document.querySelectorAll('.combo-preset-btn');
+
   const calcMobileStickyBar = document.getElementById('calcMobileStickyBar');
   const cmsbCamImg = document.getElementById('cmsbCamImg');
   const cmsbCamName = document.getElementById('cmsbCamName');
   const cmsbTotalPrice = document.getElementById('cmsbTotalPrice');
 
-  const qtyPresetChips = document.querySelectorAll('.qty-preset-chip');
-
-  let currentQty = 2;
   let currentStorageMode = 'card'; // 'card' hoặc 'nvr'
+
+  function getTotalCamCount() {
+    return Object.values(camQuantities).reduce((acc, q) => acc + q, 0);
+  }
+
+  function getTotalCamPrice() {
+    return Object.entries(camQuantities).reduce((acc, [id, q]) => {
+      return acc + (q * (CAMERAS_DATA[id]?.price || 0));
+    }, 0);
+  }
 
   // Tính số ngày lưu 24/7 theo dung lượng ổ cứng và số camera (chuẩn H.265 ~20GB/ngày/mắt)
   function calc247Days(hddGB, qty) {
-    return Math.max(1, Math.floor(hddGB / (qty * 20)));
+    const q = Math.max(1, qty);
+    return Math.max(1, Math.floor(hddGB / (q * 20)));
   }
 
   // Cập nhật nhãn tư vấn ngày lưu trên các thẻ ổ cứng
   function updateHddLiveLabels() {
-    const d500 = calc247Days(500, currentQty);
-    const d1000 = calc247Days(1000, currentQty);
-    const d2000 = calc247Days(2000, currentQty);
+    const totalCount = getTotalCamCount();
+    const d500 = calc247Days(500, totalCount);
+    const d1000 = calc247Days(1000, totalCount);
+    const d2000 = calc247Days(2000, totalCount);
+    const d4000 = calc247Days(4000, totalCount);
 
     if (days500GB) days500GB.textContent = `Lưu 24/7 ~${d500} ngày`;
     if (days1000GB) days1000GB.textContent = `Lưu 24/7 ~${d1000} ngày`;
     if (days2000GB) days2000GB.textContent = `Lưu 24/7 ~${d2000} ngày`;
+    if (days4000GB) days4000GB.textContent = `Lưu 24/7 ~${d4000} ngày`;
+  }
+
+  function updateCardUI(id) {
+    const card = document.querySelector(`.calc-cam-card[data-id="${id}"]`);
+    if (!card) return;
+    const qty = camQuantities[id] || 0;
+    const badge = card.querySelector('.calc-cam-qty-badge');
+    const addBtn = card.querySelector('.cam-add-btn');
+    const stepper = card.querySelector('.cam-stepper');
+    const qtyVal = card.querySelector('.cam-stepper-val');
+
+    if (qty > 0) {
+      card.classList.add('selected');
+      if (badge) {
+        badge.textContent = qty;
+        badge.style.display = 'flex';
+      }
+      if (addBtn) addBtn.style.display = 'none';
+      if (stepper) stepper.style.display = 'flex';
+      if (qtyVal) qtyVal.textContent = qty;
+    } else {
+      card.classList.remove('selected');
+      if (badge) badge.style.display = 'none';
+      if (addBtn) addBtn.style.display = 'flex';
+      if (stepper) stepper.style.display = 'none';
+      if (qtyVal) qtyVal.textContent = '0';
+    }
+  }
+
+  function setCameraQty(id, qty) {
+    qty = Math.max(0, Math.min(16, qty));
+    camQuantities[id] = qty;
+    updateCardUI(id);
+    updateCalculator();
+  }
+
+  function changeCameraQty(id, delta) {
+    const cur = camQuantities[id] || 0;
+    setCameraQty(id, cur + delta);
+  }
+
+  function applyComboPreset(presetKey) {
+    const preset = COMBO_PRESETS[presetKey];
+    if (!preset) return;
+    Object.keys(camQuantities).forEach(id => {
+      camQuantities[id] = preset[id] || 0;
+      updateCardUI(id);
+    });
+    updateCalculator();
+  }
+
+  function checkActivePreset() {
+    let matchedKey = null;
+    const totalCount = getTotalCamCount();
+    if (totalCount === 0) {
+      matchedKey = 'reset';
+    } else {
+      for (const [key, preset] of Object.entries(COMBO_PRESETS)) {
+        if (key === 'reset') continue;
+        let match = true;
+        for (const [id, q] of Object.entries(camQuantities)) {
+          const targetQ = preset[id] || 0;
+          if (q !== targetQ) {
+            match = false;
+            break;
+          }
+        }
+        if (match) {
+          matchedKey = key;
+          break;
+        }
+      }
+    }
+
+    comboPresetBtns.forEach(btn => {
+      const pKey = btn.getAttribute('data-preset');
+      if (pKey === matchedKey) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
   }
 
   function setStorageMode(mode) {
@@ -937,7 +1133,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (storageCardsGroup) storageCardsGroup.style.display = 'block';
       if (storageNVRGroup) storageNVRGroup.style.display = 'none';
 
-      // Bỏ chọn Đầu ghi và Ổ cứng
       calcNvr.forEach(r => {
         r.checked = false;
         r.closest('.calc-option')?.classList.remove('selected');
@@ -947,7 +1142,7 @@ document.addEventListener('DOMContentLoaded', () => {
         r.closest('.calc-option')?.classList.remove('selected');
       });
 
-      // Nếu chưa có thẻ nhớ nào được chọn, chọn thẻ 64GB
+      // Mặc định chọn Thẻ 64GB
       let hasCard = false;
       calcStorage.forEach(r => {
         if (r.checked) hasCard = true;
@@ -960,32 +1155,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     } else {
-      // mode === 'nvr'
-      if (tabModeNVR) tabModeNVR.classList.add('active');
       if (tabModeCard) tabModeCard.classList.remove('active');
-      if (storageNVRGroup) storageNVRGroup.style.display = 'block';
+      if (tabModeNVR) tabModeNVR.classList.add('active');
       if (storageCardsGroup) storageCardsGroup.style.display = 'none';
+      if (storageNVRGroup) storageNVRGroup.style.display = 'block';
 
-      // Bỏ chọn Thẻ nhớ
+      // Bỏ chọn thẻ nhớ
       calcStorage.forEach(r => {
         r.checked = false;
         r.closest('.calc-option')?.classList.remove('selected');
       });
 
-      // Nếu chưa chọn đầu ghi, tự động chọn IMOU NVR
+      // Chọn NVR mặc định (IMOU 10 kênh)
       let hasNvr = false;
       calcNvr.forEach(r => {
         if (r.checked) hasNvr = true;
       });
-      if (!hasNvr) {
+      if (!hasNvr && calcNvr.length > 0) {
         const nvrFirst = calcNvr[0];
-        if (nvrFirst) {
-          nvrFirst.checked = true;
-          nvrFirst.closest('.calc-option')?.classList.add('selected');
-        }
+        nvrFirst.checked = true;
+        nvrFirst.closest('.calc-option')?.classList.add('selected');
       }
 
-      // Nếu chưa chọn ổ cứng, tự động chọn 1000GB (1TB)
+      // Chọn HDD mặc định (1TB)
       let hasHdd = false;
       calcHdd.forEach(r => {
         if (r.checked) hasHdd = true;
@@ -998,11 +1190,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     }
-
     updateCalculator();
   }
 
-  // Chuyển tab chế độ lưu
   if (tabModeCard) {
     tabModeCard.addEventListener('click', () => setStorageMode('card'));
   }
@@ -1010,134 +1200,152 @@ document.addEventListener('DOMContentLoaded', () => {
     tabModeNVR.addEventListener('click', () => setStorageMode('nvr'));
   }
 
-  // Khi click vào bất kỳ tùy chọn thẻ nhớ -> Tự động chuyển mode card và bỏ chọn NVR + Ổ cứng
+  // Tương tác radio Thẻ nhớ
   calcStorage.forEach(radio => {
     radio.addEventListener('change', () => {
-      currentStorageMode = 'card';
-      if (tabModeCard) tabModeCard.classList.add('active');
-      if (tabModeNVR) tabModeNVR.classList.remove('active');
-      if (storageCardsGroup) storageCardsGroup.style.display = 'block';
-      if (storageNVRGroup) storageNVRGroup.style.display = 'none';
+      if (radio.checked) {
+        currentStorageMode = 'card';
+        if (tabModeCard) tabModeCard.classList.add('active');
+        if (tabModeNVR) tabModeNVR.classList.remove('active');
+        if (storageCardsGroup) storageCardsGroup.style.display = 'block';
+        if (storageNVRGroup) storageNVRGroup.style.display = 'none';
 
-      // Bỏ chọn toàn bộ Đầu ghi & Ổ cứng
-      calcNvr.forEach(r => {
-        r.checked = false;
-        r.closest('.calc-option')?.classList.remove('selected');
-      });
-      calcHdd.forEach(r => {
-        r.checked = false;
-        r.closest('.calc-option')?.classList.remove('selected');
-      });
-
-      updateCalculator();
+        calcNvr.forEach(r => {
+          r.checked = false;
+          r.closest('.calc-option')?.classList.remove('selected');
+        });
+        calcHdd.forEach(r => {
+          r.checked = false;
+          r.closest('.calc-option')?.classList.remove('selected');
+        });
+        updateCalculator();
+      }
     });
   });
 
-  // Khi click vào Đầu ghi -> Tự động chuyển mode NVR và BỎ CHỌN THẺ NHỚ
+  // Tương tác radio Đầu ghi NVR
   calcNvr.forEach(radio => {
     radio.addEventListener('change', () => {
-      currentStorageMode = 'nvr';
-      if (tabModeNVR) tabModeNVR.classList.add('active');
-      if (tabModeCard) tabModeCard.classList.remove('active');
-      if (storageNVRGroup) storageNVRGroup.style.display = 'block';
+      if (radio.checked) {
+        currentStorageMode = 'nvr';
+        if (tabModeCard) tabModeCard.classList.remove('active');
+        if (tabModeNVR) tabModeNVR.classList.add('active');
+        if (storageCardsGroup) storageCardsGroup.style.display = 'none';
+        if (storageNVRGroup) storageNVRGroup.style.display = 'block';
 
-      // BỎ CHỌN TOÀN BỘ THẺ NHỚ
-      calcStorage.forEach(r => {
-        r.checked = false;
-        r.closest('.calc-option')?.classList.remove('selected');
-      });
+        calcStorage.forEach(r => {
+          r.checked = false;
+          r.closest('.calc-option')?.classList.remove('selected');
+        });
 
-      // Nếu chưa chọn ổ cứng, mặc định chọn 1000GB
-      let hasHdd = false;
-      calcHdd.forEach(r => { if (r.checked) hasHdd = true; });
-      if (!hasHdd) {
-        const hdd1000 = document.querySelector('input[name="calc_hdd"][data-gb="1000"]');
-        if (hdd1000) {
-          hdd1000.checked = true;
-          hdd1000.closest('.calc-option')?.classList.add('selected');
+        let hasHdd = false;
+        calcHdd.forEach(r => { if (r.checked) hasHdd = true; });
+        if (!hasHdd) {
+          const hdd1000 = document.querySelector('input[name="calc_hdd"][data-gb="1000"]');
+          if (hdd1000) {
+            hdd1000.checked = true;
+            hdd1000.closest('.calc-option')?.classList.add('selected');
+          }
         }
+        updateCalculator();
       }
-
-      updateCalculator();
     });
   });
 
-  // Khi click vào Ổ Cứng -> Tự động chuyển mode NVR và BỎ CHỌN THẺ NHỚ
+  // Tương tác radio Ổ cứng HDD
   calcHdd.forEach(radio => {
     radio.addEventListener('change', () => {
-      currentStorageMode = 'nvr';
-      if (tabModeNVR) tabModeNVR.classList.add('active');
-      if (tabModeCard) tabModeCard.classList.remove('active');
-      if (storageNVRGroup) storageNVRGroup.style.display = 'block';
+      if (radio.checked) {
+        currentStorageMode = 'nvr';
+        if (tabModeCard) tabModeCard.classList.remove('active');
+        if (tabModeNVR) tabModeNVR.classList.add('active');
+        if (storageCardsGroup) storageCardsGroup.style.display = 'none';
+        if (storageNVRGroup) storageNVRGroup.style.display = 'block';
 
-      // BỎ CHỌN TOÀN BỘ THẺ NHỚ
-      calcStorage.forEach(r => {
-        r.checked = false;
-        r.closest('.calc-option')?.classList.remove('selected');
-      });
+        calcStorage.forEach(r => {
+          r.checked = false;
+          r.closest('.calc-option')?.classList.remove('selected');
+        });
 
-      // Nếu chưa chọn đầu ghi, tự động chọn đầu ghi đầu tiên
-      let hasNvr = false;
-      calcNvr.forEach(r => { if (r.checked) hasNvr = true; });
-      if (!hasNvr) {
-        const nvrFirst = calcNvr[0];
-        if (nvrFirst) {
+        let hasNvr = false;
+        calcNvr.forEach(r => { if (r.checked) hasNvr = true; });
+        if (!hasNvr && calcNvr.length > 0) {
+          const nvrFirst = calcNvr[0];
           nvrFirst.checked = true;
           nvrFirst.closest('.calc-option')?.classList.add('selected');
         }
+        updateCalculator();
       }
-
-      updateCalculator();
     });
   });
 
   function updateCalculator() {
-    updateHddLiveLabels();
+    const totalCamCount = getTotalCamCount();
+    const totalCamPrice = getTotalCamPrice();
 
-    // 1. Camera Type & Live Visual Preview
-    let selectedCamPrice = 590000;
-    let selectedCamLabel = 'Trong Nhà 360° (590k)';
-    let selectedCamName = 'Imou Ranger 2 (Trong Nhà 360° AI)';
-    let selectedCamImg = 'images/imou_indoor_ranger.png';
-    let selectedCamBadge = 'BÁN CHẠY NHẤT 🔥';
-    let selectedCamSpecs = ['Xoay 360°', 'Bám theo người', 'Còi hú báo động'];
+    // 1. Phân loại và tóm tắt số mắt trong nhà & ngoài trời
+    let indoorCount = 0;
+    let outdoorCount = 0;
+    const selectedCams = [];
 
-    calcCameraType.forEach(radio => {
-      if (radio.checked) {
-        selectedCamPrice = parseInt(radio.value, 10);
-        selectedCamLabel = radio.getAttribute('data-label') || selectedCamLabel;
-        selectedCamName = radio.getAttribute('data-name') || selectedCamLabel;
-        selectedCamImg = radio.getAttribute('data-img') || selectedCamImg;
-        selectedCamBadge = radio.getAttribute('data-badge') || selectedCamBadge;
-        const specsAttr = radio.getAttribute('data-specs');
-        if (specsAttr) {
-          selectedCamSpecs = specsAttr.split('|').filter(Boolean);
-        }
+    Object.entries(camQuantities).forEach(([id, q]) => {
+      if (q > 0) {
+        const data = CAMERAS_DATA[id];
+        if (data.type === 'indoor') indoorCount += q;
+        else outdoorCount += q;
+        selectedCams.push({ id, q, data });
       }
     });
 
-    document.querySelectorAll('.cam-type-option').forEach(opt => {
-      const input = opt.querySelector('input');
-      if (input && input.checked) opt.classList.add('selected');
-      else opt.classList.remove('selected');
-    });
-
-    // Cập nhật thẻ Live Preview đầu bảng tính
-    if (calcPreviewImg) calcPreviewImg.src = selectedCamImg;
-    if (calcPreviewName) calcPreviewName.textContent = selectedCamName;
-    if (calcPreviewBadge) calcPreviewBadge.textContent = selectedCamBadge;
-    if (calcPreviewSpecs) {
-      calcPreviewSpecs.innerHTML = selectedCamSpecs.map(s => `<span class="preview-chip">${s}</span>`).join('');
+    let breakdownShort = '';
+    if (indoorCount > 0 && outdoorCount > 0) {
+      breakdownShort = `${indoorCount} Trong Nhà + ${outdoorCount} Ngoài Trời`;
+    } else if (indoorCount > 0) {
+      breakdownShort = `${indoorCount} Trong Nhà`;
+    } else if (outdoorCount > 0) {
+      breakdownShort = `${outdoorCount} Ngoài Trời`;
+    } else {
+      breakdownShort = 'Chưa chọn camera';
     }
+
+    // Cập nhật Pill trạng thái ở Bước 2
+    if (pillCamText) {
+      if (totalCamCount > 0) {
+        pillCamText.innerHTML = `<strong>${totalCamCount}</strong> mắt: ${breakdownShort}`;
+      } else {
+        pillCamText.innerHTML = `<span style="color: #DC2626; font-weight: 700;">Chưa chọn camera nào (0 mắt)</span>`;
+      }
+    }
+
+    // Cập nhật danh sách camera chi tiết trong Summary Box
+    if (summaryCamList) {
+      if (selectedCams.length === 0) {
+        summaryCamList.innerHTML = `<div style="font-size: 0.74rem; color: #DC2626; padding: 4px 0; font-weight: 600;">Vui lòng chọn ít nhất 1 camera ở Bước 1!</div>`;
+      } else {
+        summaryCamList.innerHTML = selectedCams.map(item => {
+          const itemSubtotal = item.q * item.data.price;
+          return `<div class="summary-cam-item">
+            <span>${item.q}x ${item.data.shortName} (${formatVND(item.data.price)})</span>
+            <strong>${formatVND(itemSubtotal)}</strong>
+          </div>`;
+        }).join('');
+      }
+    }
+
+    if (summaryTotalCamCount) summaryTotalCamCount.textContent = totalCamCount;
+    if (summaryCamPrice) summaryCamPrice.textContent = formatVND(totalCamPrice);
 
     // 2. Storage Mode Calculation
     let totalStorage = 0;
+    let storageChipText = '';
 
     if (currentStorageMode === 'card') {
       let selectedCardPrice = 320000;
+      let selectedCardLabel = 'Thẻ nhớ 64GB';
       calcStorage.forEach(radio => {
         if (radio.checked) {
           selectedCardPrice = parseInt(radio.value, 10);
+          selectedCardLabel = radio.getAttribute('data-label') || selectedCardLabel;
         }
       });
 
@@ -1147,20 +1355,21 @@ document.addEventListener('DOMContentLoaded', () => {
         else opt.classList.remove('selected');
       });
 
-      totalStorage = selectedCardPrice * currentQty;
+      totalStorage = totalCamCount > 0 ? (selectedCardPrice * totalCamCount) : 0;
+      storageChipText = totalCamCount > 0 ? `${totalCamCount}x ${selectedCardLabel}` : 'Thẻ nhớ';
 
       if (lineSummaryCard) lineSummaryCard.style.display = 'flex';
       if (lineSummaryNVR) lineSummaryNVR.style.display = 'none';
       if (lineSummaryHDD) lineSummaryHDD.style.display = 'none';
-      if (summaryStoragePrice) summaryStoragePrice.textContent = `${formatVND(totalStorage)} (${currentQty} thẻ)`;
+      if (summaryStoragePrice) {
+        summaryStoragePrice.textContent = totalCamCount > 0 ? `${formatVND(totalStorage)} (${totalCamCount} thẻ)` : '0 đ';
+      }
     } else {
       // Mode NVR + HDD
       let selectedNvrPrice = 1235000;
-      let selectedNvrLabel = 'Đầu ghi IMOU NVR-N110W (10 kênh)';
       calcNvr.forEach(radio => {
         if (radio.checked) {
           selectedNvrPrice = parseInt(radio.value, 10);
-          selectedNvrLabel = radio.getAttribute('data-label');
         }
       });
 
@@ -1171,12 +1380,10 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       let selectedHddPrice = 850000;
-      let selectedHddLabel = 'Ổ Cứng HDD 1000GB (1TB)';
       let selectedHddGB = 1000;
       calcHdd.forEach(radio => {
         if (radio.checked) {
           selectedHddPrice = parseInt(radio.value, 10);
-          selectedHddLabel = radio.getAttribute('data-label');
           selectedHddGB = parseInt(radio.getAttribute('data-gb'), 10) || 1000;
         }
       });
@@ -1187,11 +1394,12 @@ document.addEventListener('DOMContentLoaded', () => {
         else opt.classList.remove('selected');
       });
 
-      const days247 = calc247Days(selectedHddGB, currentQty);
-      totalStorage = selectedNvrPrice + selectedHddPrice;
+      const days247 = calc247Days(selectedHddGB, totalCamCount);
+      totalStorage = totalCamCount > 0 ? (selectedNvrPrice + selectedHddPrice) : 0;
+      storageChipText = `NVR + Ổ ${selectedHddGB}GB (~${days247} ngày)`;
 
       // Cập nhật advisory box
-      if (advisoryCamCount) advisoryCamCount.textContent = currentQty;
+      if (advisoryCamCount) advisoryCamCount.textContent = totalCamCount;
       if (advisoryHddCap) advisoryHddCap.textContent = `${selectedHddGB}GB`;
       if (advisoryDays) advisoryDays.textContent = `~${days247} ngày`;
 
@@ -1203,15 +1411,15 @@ document.addEventListener('DOMContentLoaded', () => {
       if (summaryHddPrice) summaryHddPrice.textContent = `${formatVND(selectedHddPrice)} (Lưu 24/7 ~${days247} ngày)`;
     }
 
+    updateHddLiveLabels();
+
     // 3. Installation
     let installPricePerCam = 200000;
-    let selectedInstallLabel = 'Lắp đặt thẩm mỹ (200k/mắt)';
     let isSelfInstall = false;
 
     calcInstall.forEach(radio => {
       if (radio.checked) {
         installPricePerCam = parseInt(radio.value, 10);
-        selectedInstallLabel = radio.getAttribute('data-label') || '';
         if (installPricePerCam === 0) {
           isSelfInstall = true;
         }
@@ -1224,78 +1432,118 @@ document.addEventListener('DOMContentLoaded', () => {
       else opt.classList.remove('selected');
     });
 
-    const totalInstall = installPricePerCam * currentQty;
+    const totalInstall = (isSelfInstall || totalCamCount === 0) ? 0 : (installPricePerCam * totalCamCount);
+
+    if (summaryInstallPrice) {
+      if (totalCamCount === 0) {
+        summaryInstallPrice.textContent = '0 đ';
+      } else {
+        summaryInstallPrice.textContent = isSelfInstall ? '0 đ (Tự lắp)' : `${formatVND(totalInstall)} (${totalCamCount} mắt)`;
+      }
+    }
 
     // 4. Totals
-    const totalCam = selectedCamPrice * currentQty;
-    const grandTotal = totalCam + totalStorage + totalInstall;
+    const grandTotal = totalCamCount > 0 ? (totalCamPrice + totalStorage + totalInstall) : 0;
     const formattedGrandTotal = formatVND(grandTotal);
 
-    if (summaryCamName) summaryCamName.textContent = selectedCamLabel;
-    if (summaryCamQty) summaryCamQty.textContent = `${currentQty} Mắt`;
-    if (summaryCamPrice) summaryCamPrice.textContent = formatVND(totalCam);
-    if (summaryInstallPrice) {
-      summaryInstallPrice.textContent = isSelfInstall ? '0 đ (Tự lắp)' : formatVND(totalInstall);
-    }
     if (summaryTotalPrice) summaryTotalPrice.textContent = formattedGrandTotal;
     if (calcLiveTotalPrice) calcLiveTotalPrice.textContent = formattedGrandTotal;
 
-    // Cập nhật Mobile Sticky Bar
-    if (cmsbCamImg) cmsbCamImg.src = selectedCamImg;
-    if (cmsbCamName) cmsbCamName.textContent = `${selectedCamName} (${currentQty} Mắt)`;
+    // 5. Cập nhật thẻ Live Preview đầu bảng tính
+    const primaryCam = selectedCams[0]?.data || CAMERAS_DATA['imou-ranger-2'];
+
+    if (calcPreviewImg) calcPreviewImg.src = primaryCam.img;
+
+    if (totalCamCount === 0) {
+      if (calcPreviewBadge) calcPreviewBadge.textContent = 'CHƯA CHỌN CAMERA';
+      if (calcPreviewName) calcPreviewName.textContent = 'Vui lòng bấm "+ Thêm mắt" ở Bước 1';
+      if (calcPreviewSpecs) {
+        calcPreviewSpecs.innerHTML = `<span class="preview-chip" style="background:#FEE2E2;color:#DC2626;border-color:#FECACA;">Chưa có thiết bị nào trong gói</span>`;
+      }
+    } else {
+      if (calcPreviewBadge) {
+        if (selectedCams.length === 1) {
+          calcPreviewBadge.textContent = selectedCams[0].data.badge;
+        } else {
+          calcPreviewBadge.textContent = `🔥 GÓI COMBO TÙY CHỌN (${totalCamCount} MẮT)`;
+        }
+      }
+
+      if (calcPreviewName) {
+        calcPreviewName.textContent = `${totalCamCount} Mắt: ${breakdownShort}`;
+      }
+
+      if (calcPreviewSpecs) {
+        const camChips = selectedCams.map(c => `<span class="preview-chip">${c.q}x ${c.data.shortName}</span>`);
+        const otherChips = [
+          `<span class="preview-chip">${storageChipText}</span>`,
+          `<span class="preview-chip">${isSelfInstall ? 'Tự lắp đặt (0đ)' : `Công lắp ${totalCamCount} mắt`}</span>`
+        ];
+        calcPreviewSpecs.innerHTML = [...camChips, ...otherChips].join('');
+      }
+    }
+
+    // 6. Cập nhật Mobile Sticky Bar
+    if (cmsbCamImg) cmsbCamImg.src = primaryCam.img;
+    if (cmsbCamName) {
+      cmsbCamName.textContent = totalCamCount > 0 ? `${totalCamCount} Cam (${breakdownShort})` : 'Chưa chọn camera';
+    }
     if (cmsbTotalPrice) cmsbTotalPrice.textContent = formattedGrandTotal;
 
-    // Cập nhật trạng thái active cho các nút Preset số lượng
-    qtyPresetChips.forEach(chip => {
-      const q = parseInt(chip.getAttribute('data-qty'), 10);
-      if (q === currentQty) {
-        chip.classList.add('active');
-      } else {
-        chip.classList.remove('active');
-      }
-    });
-
-    if (calcCamQty) calcCamQty.textContent = currentQty;
+    // 7. Đồng bộ active state cho combo preset buttons
+    checkActivePreset();
   }
 
-  if (calcQtyMinus && calcQtyPlus) {
-    calcQtyMinus.addEventListener('click', () => {
-      if (currentQty > 1) {
-        currentQty--;
-        updateCalculator();
-      }
-    });
-    calcQtyPlus.addEventListener('click', () => {
-      if (currentQty < 16) {
-        currentQty++;
-        updateCalculator();
-      }
-    });
-  }
-
-  // Click vào preset chips số lượng
-  qtyPresetChips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      const q = parseInt(chip.getAttribute('data-qty'), 10);
-      if (q && q >= 1 && q <= 16) {
-        currentQty = q;
-        updateCalculator();
-      }
+  // Lắng nghe sự kiện tăng/giảm số lượng camera trên từng thẻ
+  document.querySelectorAll('.cam-add-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const id = btn.getAttribute('data-id');
+      if (id) setCameraQty(id, 1);
     });
   });
 
-  // Tương tác chạm thẻ camera
+  document.querySelectorAll('.cam-stepper-btn.minus').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const id = btn.getAttribute('data-id');
+      if (id) changeCameraQty(id, -1);
+    });
+  });
+
+  document.querySelectorAll('.cam-stepper-btn.plus').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const id = btn.getAttribute('data-id');
+      if (id) changeCameraQty(id, 1);
+    });
+  });
+
+  // Chạm vào thẻ camera: nếu chưa chọn thì thêm 1 mắt
   document.querySelectorAll('.calc-cam-card').forEach(card => {
-    card.addEventListener('click', () => {
-      const radio = card.querySelector('input[type="radio"]');
-      if (radio && !radio.checked) {
-        radio.checked = true;
-        updateCalculator();
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('.cam-stepper-btn') || e.target.closest('.cam-add-btn')) return;
+      const id = card.getAttribute('data-id');
+      if (id) {
+        const cur = camQuantities[id] || 0;
+        if (cur === 0) {
+          setCameraQty(id, 1);
+        }
       }
     });
   });
 
-  calcCameraType.forEach(radio => radio.addEventListener('change', updateCalculator));
+  // Lắng nghe sự kiện click các gói combo gợi ý ở Bước 2
+  comboPresetBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const presetKey = btn.getAttribute('data-preset');
+      if (presetKey) {
+        applyComboPreset(presetKey);
+      }
+    });
+  });
+
+  // Lắng nghe thay đổi gói lắp đặt
   calcInstall.forEach(radio => {
     radio.addEventListener('change', updateCalculator);
     radio.addEventListener('click', updateCalculator);
@@ -1325,29 +1573,44 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', handleCalcStickyBarVisibility, { passive: true });
   window.addEventListener('resize', handleCalcStickyBarVisibility, { passive: true });
 
+  // Khởi tạo trạng thái ban đầu cho các thẻ camera
+  Object.keys(camQuantities).forEach(id => updateCardUI(id));
   updateCalculator();
 
   if (btnBookCalc) {
     btnBookCalc.addEventListener('click', () => {
-      const camName = summaryCamName ? summaryCamName.textContent : 'Camera';
+      const totalCount = getTotalCamCount();
+      if (totalCount === 0) {
+        alert('Vui lòng chọn ít nhất 1 mắt camera ở Bước 1 để tính dự toán và đặt lịch!');
+        return;
+      }
+
+      const selectedCams = [];
+      Object.entries(camQuantities).forEach(([id, q]) => {
+        if (q > 0) {
+          selectedCams.push(`${q}x ${CAMERAS_DATA[id].name}`);
+        }
+      });
+      const camMixText = selectedCams.join(', ');
       const total = summaryTotalPrice ? summaryTotalPrice.textContent : '';
+
       let storageNote = '';
       if (currentStorageMode === 'card') {
         const cardRadio = document.querySelector('input[name="calc_storage"]:checked');
-        const cardLbl = cardRadio ? cardRadio.getAttribute('data-label') : 'Thẻ nhớ';
-        storageNote = `${currentQty} thẻ ${cardLbl}`;
+        const cardLbl = cardRadio ? cardRadio.getAttribute('data-label') : 'Thẻ nhớ 64GB';
+        storageNote = `${totalCount} thẻ ${cardLbl}`;
       } else {
         const hddRadio = document.querySelector('input[name="calc_hdd"]:checked');
         const nvrRadio = document.querySelector('input[name="calc_nvr"]:checked');
         const nvrLbl = nvrRadio ? nvrRadio.getAttribute('data-label') : 'Đầu ghi NVR';
         const hddGB = hddRadio ? hddRadio.getAttribute('data-gb') : '1000';
-        const days = calc247Days(parseInt(hddGB, 10), currentQty);
+        const days = calc247Days(parseInt(hddGB, 10), totalCount);
         storageNote = `${nvrLbl} + Ổ cứng ${hddGB}GB (Lưu 24/7 ~${days} ngày)`;
       }
       const installRadio = document.querySelector('input[name="calc_install"]:checked');
       const isSelf = installRadio && parseInt(installRadio.value, 10) === 0;
       const installNote = isSelf ? 'Tự lắp đặt tại nhà (0 đ)' : `Công lắp trọn gói (${summaryInstallPrice ? summaryInstallPrice.textContent : '400.000 đ'})`;
-      scrollToContact(`${currentQty} mắt ${camName} + ${storageNote} + ${installNote} (Dự toán: ${total})`);
+      scrollToContact(`Gói dự toán ${totalCount} camera [${camMixText}] + ${storageNote} + ${installNote} (Tổng trọn gói: ${total})`);
     });
   }
 

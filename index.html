@@ -273,19 +273,20 @@
               <img src="images/imou_indoor_ranger.png" alt="Camera đang chọn" id="calcPreviewImg" class="calc-preview-img">
             </div>
             <div class="calc-preview-details">
-              <div class="calc-preview-badge" id="calcPreviewBadge">🔥 GÓI BÁN CHẠY NHẤT</div>
-              <h3 class="calc-preview-name" id="calcPreviewName">Imou Ranger 2 (Trong Nhà 360° AI)</h3>
+              <div class="calc-preview-badge" id="calcPreviewBadge">🔥 GÓI COMBO TIÊU CHUẨN (2 MẮT)</div>
+              <h3 class="calc-preview-name" id="calcPreviewName">1 Trong Nhà 360° + 1 Ngoài Trời IP67</h3>
               <div class="calc-preview-specs" id="calcPreviewSpecs">
-                <span class="preview-chip">Xoay 360°</span>
-                <span class="preview-chip">Bám theo người</span>
-                <span class="preview-chip">Đàm thoại 2 chiều</span>
+                <span class="preview-chip">1x Trong Nhà 360°</span>
+                <span class="preview-chip">1x Ngoài Trời IP67</span>
+                <span class="preview-chip">Thẻ nhớ 64GB</span>
+                <span class="preview-chip">Công lắp 2 mắt</span>
               </div>
             </div>
           </div>
           <div class="calc-preview-right">
             <div class="calc-preview-price-group">
               <div class="calc-preview-price-label">Tổng Dự Kiến Trọn Gói:</div>
-              <div class="calc-preview-total" id="calcLiveTotalPrice">2.220.000 đ</div>
+              <div class="calc-preview-total" id="calcLiveTotalPrice">2.320.000 đ</div>
             </div>
             <button type="button" class="btn btn-primary btn-sm calc-preview-cta" onclick="document.getElementById('btnBookCalc').click()">
               <span>Đặt Lịch Gói Này</span>
@@ -296,20 +297,20 @@
 
         <div class="calculator-grid">
           <div>
-            <!-- Step 1: Chọn Loại Camera với Hình Ảnh & Thẻ Trực Quan -->
+            <!-- Step 1: Chọn Tùy Biến Hoặc Phối Hợp Nhiều Camera (Trong Nhà & Ngoài Trời) -->
             <div class="calc-step">
-              <div class="calc-step-title" style="justify-content: space-between;">
+              <div class="calc-step-title" style="justify-content: space-between; flex-wrap: wrap; gap: 8px;">
                 <div style="display: flex; align-items: center; gap: 8px;">
                   <span class="step-num">1</span>
-                  <span>Chọn loại camera (Có ảnh thật):</span>
+                  <span>Chọn các mắt camera bạn cần (Có thể chọn nhiều loại):</span>
                 </div>
-                <span style="font-size: 0.72rem; color: #0084ff; font-weight: 700;">Chạm vào thẻ để đổi</span>
+                <span class="calc-step-hint">💡 Bấm nút "+" để thêm số lượng</span>
               </div>
               <div class="calc-cam-grid">
                 <!-- 1. Imou Cue 2C -->
-                <label class="calc-cam-card cam-type-option" data-img="images/imou_indoor_cue.png" data-name="Imou Cue 2C (Trong Nhà Góc Rộng)" data-badge="GIÁ SỐC 490K" data-specs="Góc rộng 108°|Đế nam châm|Đàm thoại 2C">
-                  <input type="radio" name="calc_cam_type" value="490000" data-label="Trong Nhà Siêu Rộng (490k)" data-img="images/imou_indoor_cue.png" data-name="Imou Cue 2C (Trong Nhà Góc Rộng)" data-badge="GIÁ SỐC 490K" data-specs="Góc rộng 108°|Đế nam châm|Đàm thoại 2C">
+                <div class="calc-cam-card" data-id="imou-cue-2c" data-price="490000" data-name="Imou Cue 2C" data-category="Trong nhà" data-full-name="Imou Cue 2C (Trong Nhà Góc Rộng)" data-img="images/imou_indoor_cue.png" data-badge="GIÁ TỐT 490K" data-specs="Góc rộng 108°|Đế nam châm|Đàm thoại 2C">
                   <span class="calc-cam-tag">GIÁ TỐT 490K</span>
+                  <span class="calc-cam-qty-badge" id="badge-imou-cue-2c" style="display: none;">0</span>
                   <div class="calc-cam-img-wrap">
                     <img src="images/imou_indoor_cue.png" alt="Trong Nhà Góc Rộng" loading="lazy">
                   </div>
@@ -318,15 +319,23 @@
                     <div class="calc-cam-desc">Đế nam châm, góc rộng 108°</div>
                     <div class="calc-cam-price">490.000 đ</div>
                   </div>
-                  <div class="calc-cam-check">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <div class="calc-cam-actions">
+                    <button type="button" class="cam-add-btn" data-id="imou-cue-2c">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                      <span>Thêm mắt</span>
+                    </button>
+                    <div class="cam-stepper" style="display: none;">
+                      <button type="button" class="cam-stepper-btn minus" data-id="imou-cue-2c" aria-label="Giảm">−</button>
+                      <span class="cam-stepper-val" id="qty-imou-cue-2c">0</span>
+                      <button type="button" class="cam-stepper-btn plus" data-id="imou-cue-2c" aria-label="Tăng">+</button>
+                    </div>
                   </div>
-                </label>
+                </div>
 
                 <!-- 2. Imou Ranger 2 360 -->
-                <label class="calc-cam-card cam-type-option selected" data-img="images/imou_indoor_ranger.png" data-name="Imou Ranger 2 (Trong Nhà 360° AI)" data-badge="BÁN CHẠY NHẤT 🔥" data-specs="Xoay 360°|Bám theo người|Còi báo động">
-                  <input type="radio" name="calc_cam_type" value="590000" data-label="Trong Nhà 360° (590k)" data-img="images/imou_indoor_ranger.png" data-name="Imou Ranger 2 (Trong Nhà 360° AI)" data-badge="BÁN CHẠY NHẤT 🔥" data-specs="Xoay 360°|Bám theo người|Còi báo động" checked>
+                <div class="calc-cam-card selected" data-id="imou-ranger-2" data-price="590000" data-name="Imou Ranger 2" data-category="Trong nhà" data-full-name="Imou Ranger 2 (Trong Nhà 360° AI)" data-img="images/imou_indoor_ranger.png" data-badge="BÁN CHẠY NHẤT 🔥" data-specs="Xoay 360°|Bám theo người|Còi báo động">
                   <span class="calc-cam-tag hot">BÁN CHẠY 🔥</span>
+                  <span class="calc-cam-qty-badge" id="badge-imou-ranger-2">1</span>
                   <div class="calc-cam-img-wrap">
                     <img src="images/imou_indoor_ranger.png" alt="Trong Nhà 360°" loading="lazy">
                   </div>
@@ -335,15 +344,23 @@
                     <div class="calc-cam-desc">Quay quét 360°, bám theo người</div>
                     <div class="calc-cam-price">590.000 đ</div>
                   </div>
-                  <div class="calc-cam-check">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <div class="calc-cam-actions">
+                    <button type="button" class="cam-add-btn" data-id="imou-ranger-2" style="display: none;">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                      <span>Thêm mắt</span>
+                    </button>
+                    <div class="cam-stepper">
+                      <button type="button" class="cam-stepper-btn minus" data-id="imou-ranger-2" aria-label="Giảm">−</button>
+                      <span class="cam-stepper-val" id="qty-imou-ranger-2">1</span>
+                      <button type="button" class="cam-stepper-btn plus" data-id="imou-ranger-2" aria-label="Tăng">+</button>
+                    </div>
                   </div>
-                </label>
+                </div>
 
-                <!-- 3. EZVIZ C6N 4K -->
-                <label class="calc-cam-card cam-type-option" data-img="images/ezviz_indoor_c6n_4k.png" data-name="EZVIZ C6N G1 (Trong Nhà 2K/4K AI)" data-badge="SIÊU NÉT 2K AI ✨" data-specs="Chuẩn nét 2K/4K|Xoay 360°|Đàm thoại 2C">
-                  <input type="radio" name="calc_cam_type" value="850000" data-label="Trong Nhà 2K AI (850k)" data-img="images/ezviz_indoor_c6n_4k.png" data-name="EZVIZ C6N (Trong Nhà 2K/4K AI)" data-badge="SIÊU NÉT 2K AI ✨" data-specs="Chuẩn nét 2K/4K|Xoay 360°|Đàm thoại 2C">
+                <!-- 3. EZVIZ C6N 2K -->
+                <div class="calc-cam-card" data-id="ezviz-c6n" data-price="850000" data-name="EZVIZ C6N" data-category="Trong nhà" data-full-name="EZVIZ C6N (Trong Nhà 2K AI)" data-img="images/ezviz_indoor_c6n_4k.png" data-badge="SIÊU NÉT 2K AI ✨" data-specs="Chuẩn nét 2K/4K|Xoay 360°|Đàm thoại 2C">
                   <span class="calc-cam-tag quality">SIÊU NÉT 2K</span>
+                  <span class="calc-cam-qty-badge" id="badge-ezviz-c6n" style="display: none;">0</span>
                   <div class="calc-cam-img-wrap">
                     <img src="images/ezviz_indoor_c6n_4k.png" alt="Trong Nhà 2K AI" loading="lazy">
                   </div>
@@ -352,15 +369,23 @@
                     <div class="calc-cam-desc">Nét chuẩn 2K, đàm thoại 2 chiều</div>
                     <div class="calc-cam-price">850.000 đ</div>
                   </div>
-                  <div class="calc-cam-check">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <div class="calc-cam-actions">
+                    <button type="button" class="cam-add-btn" data-id="ezviz-c6n">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                      <span>Thêm mắt</span>
+                    </button>
+                    <div class="cam-stepper" style="display: none;">
+                      <button type="button" class="cam-stepper-btn minus" data-id="ezviz-c6n" aria-label="Giảm">−</button>
+                      <span class="cam-stepper-val" id="qty-ezviz-c6n">0</span>
+                      <button type="button" class="cam-stepper-btn plus" data-id="ezviz-c6n" aria-label="Tăng">+</button>
+                    </div>
                   </div>
-                </label>
+                </div>
 
                 <!-- 4. Imou Bullet 2C Outdoor -->
-                <label class="calc-cam-card cam-type-option" data-img="images/imou_outdoor_bullet_2c.png" data-name="Imou Bullet 2C (Ngoài Trời IP67)" data-badge="CHỐNG NƯỚC IP67 🌧️" data-specs="Chống nước IP67|Hồng ngoại 30m|Anten thu xa">
-                  <input type="radio" name="calc_cam_type" value="690000" data-label="Ngoài Trời Chuẩn IP67 (690k)" data-img="images/imou_outdoor_bullet_2c.png" data-name="Imou Bullet 2C (Ngoài Trời IP67)" data-badge="CHỐNG NƯỚC IP67 🌧️" data-specs="Chống nước IP67|Hồng ngoại 30m|Anten thu xa">
+                <div class="calc-cam-card selected" data-id="imou-bullet-2c" data-price="690000" data-name="Imou Bullet 2C" data-category="Ngoài trời" data-full-name="Imou Bullet 2C (Ngoài Trời IP67)" data-img="images/imou_outdoor_bullet_2c.png" data-badge="CHỐNG NƯỚC IP67 🌧️" data-specs="Chống nước IP67|Hồng ngoại 30m|Anten thu xa">
                   <span class="calc-cam-tag outdoor">CHỐNG NƯỚC IP67</span>
+                  <span class="calc-cam-qty-badge" id="badge-imou-bullet-2c">1</span>
                   <div class="calc-cam-img-wrap">
                     <img src="images/imou_outdoor_bullet_2c.png" alt="Ngoài Trời Chuẩn IP67" loading="lazy">
                   </div>
@@ -369,15 +394,23 @@
                     <div class="calc-cam-desc">Thân trụ chịu mưa nắng bền bỉ</div>
                     <div class="calc-cam-price">690.000 đ</div>
                   </div>
-                  <div class="calc-cam-check">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <div class="calc-cam-actions">
+                    <button type="button" class="cam-add-btn" data-id="imou-bullet-2c" style="display: none;">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                      <span>Thêm mắt</span>
+                    </button>
+                    <div class="cam-stepper">
+                      <button type="button" class="cam-stepper-btn minus" data-id="imou-bullet-2c" aria-label="Giảm">−</button>
+                      <span class="cam-stepper-val" id="qty-imou-bullet-2c">1</span>
+                      <button type="button" class="cam-stepper-btn plus" data-id="imou-bullet-2c" aria-label="Tăng">+</button>
+                    </div>
                   </div>
-                </label>
+                </div>
 
                 <!-- 5. Imou Cruiser 2 Outdoor 360 -->
-                <label class="calc-cam-card cam-type-option" data-img="images/imou_outdoor_cruiser.png" data-name="Imou Cruiser 2 (Ngoài Trời 3K 360° AI)" data-badge="ĐÊM CÓ MÀU 30M 🌙" data-specs="Xoay 360° ngoài trời|Đêm có màu 30m|Còi hú chớp đèn">
-                  <input type="radio" name="calc_cam_type" value="1650000" data-label="Ngoài Trời 3K 360° (1.650k)" data-img="images/imou_outdoor_cruiser.png" data-name="Imou Cruiser 2 (Ngoài Trời 3K 360°)" data-badge="ĐÊM CÓ MÀU 30M 🌙" data-specs="Xoay 360° ngoài trời|Đêm có màu 30m|Còi hú chớp đèn">
+                <div class="calc-cam-card" data-id="imou-cruiser-2" data-price="1650000" data-name="Imou Cruiser 2" data-category="Ngoài trời" data-full-name="Imou Cruiser 2 (Ngoài Trời 3K 360° AI)" data-img="images/imou_outdoor_cruiser.png" data-badge="ĐÊM CÓ MÀU 30M 🌙" data-specs="Xoay 360° ngoài trời|Đêm có màu 30m|Còi hú chớp đèn">
                   <span class="calc-cam-tag premium">ĐÊM CÓ MÀU 🌙</span>
+                  <span class="calc-cam-qty-badge" id="badge-imou-cruiser-2" style="display: none;">0</span>
                   <div class="calc-cam-img-wrap">
                     <img src="images/imou_outdoor_cruiser.png" alt="Ngoài Trời 3K 360°" loading="lazy">
                   </div>
@@ -386,15 +419,23 @@
                     <div class="calc-cam-desc">Ban đêm có màu, còi hú răn đe</div>
                     <div class="calc-cam-price">1.650.000 đ</div>
                   </div>
-                  <div class="calc-cam-check">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <div class="calc-cam-actions">
+                    <button type="button" class="cam-add-btn" data-id="imou-cruiser-2">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                      <span>Thêm mắt</span>
+                    </button>
+                    <div class="cam-stepper" style="display: none;">
+                      <button type="button" class="cam-stepper-btn minus" data-id="imou-cruiser-2" aria-label="Giảm">−</button>
+                      <span class="cam-stepper-val" id="qty-imou-cruiser-2">0</span>
+                      <button type="button" class="cam-stepper-btn plus" data-id="imou-cruiser-2" aria-label="Tăng">+</button>
+                    </div>
                   </div>
-                </label>
+                </div>
 
                 <!-- 6. Pin Solar 4G -->
-                <label class="calc-cam-card cam-type-option" data-img="images/ezviz_solar_eb3_4g.png" data-name="Camera Pin Solar 4G Năng Lượng Mặt Trời" data-badge="PIN SOLAR 4G KHÔNG DÂY ☀️" data-specs="Pin năng lượng MT|Sim 4G không cần wifi|Không cần kéo dây">
-                  <input type="radio" name="calc_cam_type" value="3690000" data-label="Pin Solar 4G (3.690k)" data-img="images/ezviz_solar_eb3_4g.png" data-name="Camera Pin Solar 4G" data-badge="PIN SOLAR 4G KHÔNG DÂY ☀️" data-specs="Pin năng lượng MT|Sim 4G không cần wifi|Không cần kéo dây">
+                <div class="calc-cam-card" data-id="solar-4g" data-price="3690000" data-name="Pin Solar 4G" data-category="Không dây / 4G" data-full-name="Camera Pin Solar 4G Năng Lượng Mặt Trời" data-img="images/ezviz_solar_eb3_4g.png" data-badge="PIN SOLAR 4G KHÔNG DÂY ☀️" data-specs="Pin năng lượng MT|Sim 4G không cần wifi|Không cần kéo dây">
                   <span class="calc-cam-tag solar">PIN SOLAR 4G ☀️</span>
+                  <span class="calc-cam-qty-badge" id="badge-solar-4g" style="display: none;">0</span>
                   <div class="calc-cam-img-wrap">
                     <img src="images/ezviz_solar_eb3_4g.png" alt="Pin Solar 4G" loading="lazy">
                   </div>
@@ -403,31 +444,87 @@
                     <div class="calc-cam-desc">Không cần kéo dây điện / wifi</div>
                     <div class="calc-cam-price">3.690.000 đ</div>
                   </div>
-                  <div class="calc-cam-check">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <div class="calc-cam-actions">
+                    <button type="button" class="cam-add-btn" data-id="solar-4g">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                      <span>Thêm mắt</span>
+                    </button>
+                    <div class="cam-stepper" style="display: none;">
+                      <button type="button" class="cam-stepper-btn minus" data-id="solar-4g" aria-label="Giảm">−</button>
+                      <span class="cam-stepper-val" id="qty-solar-4g">0</span>
+                      <button type="button" class="cam-stepper-btn plus" data-id="solar-4g" aria-label="Tăng">+</button>
+                    </div>
                   </div>
-                </label>
+                </div>
               </div>
             </div>
 
-            <!-- Step 2: Chọn Số Lượng Camera (Quick Preset Chips) -->
+            <!-- Step 2: Gói Combo Gợi Ý & Tổng Số Lượng Camera Đang Chọn -->
             <div class="calc-step">
-              <div class="calc-step-title">
-                <span class="step-num">2</span>
-                <span>Số lượng camera:</span>
-              </div>
-              <div class="qty-control-wrapper">
-                <div class="qty-preset-chips" id="qtyPresets">
-                  <button type="button" class="qty-preset-chip" data-qty="1">1 Mắt</button>
-                  <button type="button" class="qty-preset-chip active" data-qty="2">2 Mắt (Phổ biến)</button>
-                  <button type="button" class="qty-preset-chip" data-qty="4">4 Mắt (Gia đình)</button>
-                  <button type="button" class="qty-preset-chip" data-qty="6">6 Mắt</button>
-                  <button type="button" class="qty-preset-chip" data-qty="8">8 Mắt</button>
+              <div class="calc-step-title" style="justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span class="step-num">2</span>
+                  <span>Gói combo nhanh &amp; Tổng camera:</span>
                 </div>
-                <div class="qty-stepper">
-                  <button type="button" class="qty-btn" id="calcQtyMinus" aria-label="Giảm">-</button>
-                  <span class="qty-val" id="calcCamQty">2</span>
-                  <button type="button" class="qty-btn" id="calcQtyPlus" aria-label="Tăng">+</button>
+                <div class="calc-total-cam-pill" id="calcTotalCamPill">
+                  <span class="pulse-dot"></span>
+                  <span id="pillCamText"><strong>2</strong> mắt: 1 Trong Nhà + 1 Ngoài Trời</span>
+                </div>
+              </div>
+              <div class="combo-presets-wrapper">
+                <div class="combo-presets-grid" id="comboPresetsGrid">
+                  <button type="button" class="combo-preset-btn active" data-preset="1in-1out">
+                    <span class="preset-badge-tag">TIÊU CHUẨN</span>
+                    <div class="preset-header">
+                      <span class="preset-icon">🔥</span>
+                      <span class="preset-name">1 Trong Nhà + 1 Ngoài Trời</span>
+                    </div>
+                    <div class="preset-desc">2 mắt • Nhà 1 trệt / Chung cư có ban công</div>
+                  </button>
+
+                  <button type="button" class="combo-preset-btn" data-preset="1in-2out">
+                    <span class="preset-badge-tag hot">BÁN CHẠY NHẤT</span>
+                    <div class="preset-header">
+                      <span class="preset-icon">⭐</span>
+                      <span class="preset-name">1 Trong Nhà + 2 Ngoài Trời</span>
+                    </div>
+                    <div class="preset-desc">3 mắt • 1 Phòng khách + Cổng trước + Sân sau</div>
+                  </button>
+
+                  <button type="button" class="combo-preset-btn" data-preset="2in-2out">
+                    <span class="preset-badge-tag">TOÀN DIỆN</span>
+                    <div class="preset-header">
+                      <span class="preset-icon">🏡</span>
+                      <span class="preset-name">2 Trong Nhà + 2 Ngoài Trời</span>
+                    </div>
+                    <div class="preset-desc">4 mắt • Nhà 2-3 tầng, biệt thự (2 tầng + 2 sân)</div>
+                  </button>
+
+                  <button type="button" class="combo-preset-btn" data-preset="1in-3out">
+                    <span class="preset-badge-tag">KINH DOANH</span>
+                    <div class="preset-header">
+                      <span class="preset-icon">🏢</span>
+                      <span class="preset-name">1 Trong Nhà + 3 Ngoài Trời</span>
+                    </div>
+                    <div class="preset-desc">4 mắt • Cửa hàng, quán cafe, kho bãi xe</div>
+                  </button>
+
+                  <button type="button" class="combo-preset-btn" data-preset="2in-0out">
+                    <span class="preset-badge-tag">CĂN HỘ</span>
+                    <div class="preset-header">
+                      <span class="preset-icon">🛋️</span>
+                      <span class="preset-name">2 Trong Nhà 360° AI</span>
+                    </div>
+                    <div class="preset-desc">2 mắt • Phòng khách + phòng ngủ / trông trẻ</div>
+                  </button>
+
+                  <button type="button" class="combo-preset-btn reset-btn" data-preset="reset">
+                    <div class="preset-header">
+                      <span class="preset-icon">🔄</span>
+                      <span class="preset-name">Chọn Lại Từ Đầu</span>
+                    </div>
+                    <div class="preset-desc">Đặt số lượng về 0 để tự bấm chọn riêng</div>
+                  </button>
                 </div>
               </div>
             </div>
@@ -590,23 +687,26 @@
           <!-- Summary Box -->
           <div class="calc-summary-box">
             <div>
-              <div class="calc-summary-title">Dự Toán Chi Phí</div>
-              <div class="summary-items">
-                <div class="summary-line">
-                  <span>Thiết bị:</span>
-                  <span id="summaryCamName">Trong Nhà 360° (590k)</span>
+              <div class="calc-summary-title">Dự Toán Chi Phí Trọn Gói</div>
+
+              <!-- Danh sách camera đã chọn chi tiết -->
+              <div class="summary-cam-section">
+                <div class="summary-sec-title">
+                  <span>Camera đã chọn (<strong id="summaryTotalCamCount">2</strong> mắt):</span>
                 </div>
-                <div class="summary-line">
-                  <span>Số lượng:</span>
-                  <span id="summaryCamQty">2 Mắt</span>
+                <div class="summary-cam-list" id="summaryCamList">
+                  <!-- Rendered dynamically -->
                 </div>
-                <div class="summary-line">
+                <div class="summary-line summary-subtotal-line">
                   <span>Tiền camera:</span>
-                  <span id="summaryCamPrice">1.180.000 đ</span>
+                  <span id="summaryCamPrice">1.280.000 đ</span>
                 </div>
+              </div>
+
+              <div class="summary-items" style="border-top: 1px dashed #E2E8F0; padding-top: 10px; margin-top: 10px;">
                 <div class="summary-line" id="lineSummaryCard">
                   <span>Thẻ nhớ:</span>
-                  <span id="summaryStoragePrice">640.000 đ</span>
+                  <span id="summaryStoragePrice">640.000 đ (2 thẻ)</span>
                 </div>
                 <div class="summary-line" id="lineSummaryNVR" style="display: none;">
                   <span>Đầu ghi hình:</span>
@@ -617,14 +717,14 @@
                   <span id="summaryHddPrice">850.000 đ</span>
                 </div>
                 <div class="summary-line" id="lineSummaryInstall">
-                  <span>Công lắp:</span>
-                  <span id="summaryInstallPrice">400.000 đ</span>
+                  <span>Công lắp đặt:</span>
+                  <span id="summaryInstallPrice">400.000 đ (2 mắt)</span>
                 </div>
               </div>
 
               <div class="summary-total">
                 <div style="font-size: 0.75rem; color: #94A3B8; text-transform: uppercase;">Tổng dự kiến trọn gói</div>
-                <div class="total-number" id="summaryTotalPrice">2.220.000 đ</div>
+                <div class="total-number" id="summaryTotalPrice">2.320.000 đ</div>
               </div>
             </div>
 
