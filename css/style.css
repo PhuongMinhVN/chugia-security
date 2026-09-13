@@ -1338,6 +1338,42 @@ a.floating-hud-badge.hud-top-right:hover {
   text-shadow: 0 0 16px rgba(255, 122, 0, 0.35);
 }
 
+.calc-preview-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-preview-detail {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #E2E8F0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.btn-preview-detail:hover {
+  background: rgba(0, 132, 255, 0.2);
+  border-color: #38BDF8;
+  color: #FFFFFF;
+}
+
+.btn-preview-detail svg {
+  transition: transform 0.2s ease;
+}
+
+.btn-preview-detail:hover svg {
+  transform: translateY(2px);
+}
+
 .calc-preview-cta {
   padding: 8px 14px;
   font-size: 0.78rem;
@@ -1354,37 +1390,54 @@ a.floating-hud-badge.hud-top-right:hover {
     flex-direction: column;
     align-items: stretch;
     padding: 12px 14px;
-    gap: 10px;
+    gap: 12px;
   }
   .calc-preview-left {
     gap: 10px;
   }
   .calc-preview-img-wrap {
-    width: 60px;
-    height: 60px;
+    width: 56px;
+    height: 56px;
   }
   .calc-preview-name {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
   }
   .calc-preview-right {
     width: 100%;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 10px;
     margin-top: 2px;
-    gap: 10px;
+    gap: 8px;
   }
   .calc-preview-price-group {
-    align-items: flex-start;
-    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
   }
   .calc-preview-total {
     font-size: 1.25rem;
   }
+  .calc-preview-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+  }
+  .btn-preview-detail {
+    flex: 1;
+    justify-content: center;
+    padding: 8px 10px;
+    font-size: 0.75rem;
+  }
   .calc-preview-cta {
+    flex: 1.4;
+    justify-content: center;
     padding: 8px 12px;
-    font-size: 0.74rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -2013,24 +2066,26 @@ a.floating-hud-badge.hud-top-right:hover {
     -webkit-backdrop-filter: blur(12px);
     border: 1.5px solid rgba(0, 132, 255, 0.35);
     border-radius: 12px;
-    padding: 8px 12px;
+    padding: 7px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
+    gap: 6px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
   }
 
   .cmsb-cam-info {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     min-width: 0;
+    flex: 1;
+    cursor: pointer;
   }
 
   .cmsb-img {
-    width: 38px;
-    height: 38px;
+    width: 32px;
+    height: 32px;
     object-fit: contain;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
@@ -2046,31 +2101,62 @@ a.floating-hud-badge.hud-top-right:hover {
   }
 
   .cmsb-name {
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     font-weight: 700;
     color: #FFFFFF;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 140px;
+    max-width: 100px;
   }
 
   .cmsb-price {
-    font-size: 0.96rem;
+    font-size: 0.88rem;
     font-weight: 800;
     color: #FF7A00;
     line-height: 1.15;
   }
 
+  .cmsb-actions {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+  }
+
+  .cmsb-detail-btn {
+    flex-shrink: 0;
+    padding: 6px 8px;
+    font-size: 0.68rem;
+    font-weight: 600;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(0, 132, 255, 0.45);
+    color: #38BDF8;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+  }
+
+  .cmsb-detail-btn:hover,
+  .cmsb-detail-btn:active {
+    background: rgba(0, 132, 255, 0.25);
+    color: #FFFFFF;
+    border-color: #38BDF8;
+  }
+
   .cmsb-btn {
     flex-shrink: 0;
-    padding: 8px 12px;
-    font-size: 0.74rem;
+    padding: 7px 10px;
+    font-size: 0.72rem;
     font-weight: 700;
     border-radius: 8px;
     display: inline-flex;
     align-items: center;
-    gap: 4px;
+    gap: 3px;
     box-shadow: 0 3px 10px rgba(255, 102, 0, 0.35);
   }
 }
@@ -2323,6 +2409,28 @@ a.floating-hud-badge.hud-top-right:hover {
   position: sticky;
   top: 90px;
   align-self: start;
+  border: 1.5px solid transparent;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+@keyframes summaryPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 132, 255, 0.85);
+    border-color: rgba(0, 132, 255, 1);
+  }
+  40% {
+    box-shadow: 0 0 24px 6px rgba(0, 132, 255, 0.6);
+    border-color: #38BDF8;
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 132, 255, 0);
+    border-color: transparent;
+  }
+}
+
+.calc-summary-box.summary-highlight-pulse {
+  animation: summaryPulse 1.8s ease-out;
+  border-color: #0084FF !important;
 }
 
 .calc-summary-title {

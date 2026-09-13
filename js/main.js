@@ -1020,6 +1020,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const cmsbCamImg = document.getElementById('cmsbCamImg');
   const cmsbCamName = document.getElementById('cmsbCamName');
   const cmsbTotalPrice = document.getElementById('cmsbTotalPrice');
+  const cmsbBtnDetail = document.getElementById('cmsbBtnDetail');
+  const cmsbCamInfo = document.getElementById('cmsbCamInfo');
+  const previewBtnDetail = document.getElementById('previewBtnDetail');
+  const calcSummaryBox = document.getElementById('calcSummaryBox');
 
   let currentStorageMode = 'card'; // 'card' hoặc 'nvr'
 
@@ -1569,6 +1573,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Hàm cuộn mượt mà xuống Bảng Dự Toán Chi Phí Trọn Gói (Ảnh 3)
+  function scrollToSummary() {
+    const target = calcSummaryBox || document.querySelector('.calc-summary-box');
+    if (!target) return;
+    const headerOffset = 75;
+    const elementPosition = target.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+    target.classList.remove('summary-highlight-pulse');
+    void target.offsetWidth; // trigger reflow
+    target.classList.add('summary-highlight-pulse');
+    setTimeout(() => {
+      target.classList.remove('summary-highlight-pulse');
+    }, 2200);
+  }
+
+  if (previewBtnDetail) {
+    previewBtnDetail.addEventListener('click', scrollToSummary);
+  }
+  if (cmsbBtnDetail) {
+    cmsbBtnDetail.addEventListener('click', scrollToSummary);
+  }
+  if (cmsbCamInfo) {
+    cmsbCamInfo.addEventListener('click', scrollToSummary);
+  }
+
   // Điều khiển ẩn/hiện Mobile Sticky Live Price Bar khi cuộn qua bảng dự toán
   function handleCalcStickyBarVisibility() {
     if (!calcMobileStickyBar) return;
@@ -1580,7 +1613,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const calcSection = document.getElementById('du-toan');
     if (!calcSection) return;
     const rect = calcSection.getBoundingClientRect();
-    const inView = (rect.top <= window.innerHeight * 0.75) && (rect.bottom >= 140);
+
+    // Ẩn thanh nổi nếu màn hình đã cuộn tới bảng chi tiết tóm tắt để không che khuất
+    const target = calcSummaryBox || document.querySelector('.calc-summary-box');
+    let summaryInView = false;
+    if (target) {
+      const sRect = target.getBoundingClientRect();
+      summaryInView = (sRect.top <= window.innerHeight - 100) && (sRect.bottom >= 120);
+    }
+
+    const inView = (rect.top <= window.innerHeight * 0.75) && (rect.bottom >= 140) && !summaryInView;
     calcMobileStickyBar.classList.toggle('visible', inView);
     document.body.classList.toggle('has-calc-sticky-visible', inView);
   }

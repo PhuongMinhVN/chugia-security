@@ -295,10 +295,16 @@
               <div class="calc-preview-price-label">Tổng Dự Kiến Trọn Gói:</div>
               <div class="calc-preview-total" id="calcLiveTotalPrice">2.320.000 đ</div>
             </div>
-            <button type="button" class="btn btn-primary btn-sm calc-preview-cta" onclick="document.getElementById('btnBookCalc').click()">
-              <span>Đặt Lịch Gói Này</span>
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-            </button>
+            <div class="calc-preview-actions">
+              <button type="button" class="btn-preview-detail" id="previewBtnDetail" title="Xem chi tiết dự toán chi phí">
+                <span>Chi tiết</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <button type="button" class="btn btn-primary btn-sm calc-preview-cta" onclick="document.getElementById('btnBookCalc').click()">
+                <span>Đặt Lịch Gói Này</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -667,7 +673,7 @@
           </div>
 
           <!-- Summary Box -->
-          <div class="calc-summary-box">
+          <div class="calc-summary-box" id="calcSummaryBox">
             <div>
               <div class="calc-summary-title">Dự Toán Chi Phí Trọn Gói</div>
 
@@ -962,17 +968,23 @@
   <!-- ================= MOBILE STICKY LIVE PRICE BAR (DỰ TOÁN NHANH) ================= -->
   <div class="calc-mobile-sticky-bar" id="calcMobileStickyBar">
     <div class="cmsb-content">
-      <div class="cmsb-cam-info">
+      <div class="cmsb-cam-info" id="cmsbCamInfo" title="Bấm để xem chi tiết dự toán">
         <img src="images/imou_indoor_ranger.png" alt="Camera" id="cmsbCamImg" class="cmsb-img">
         <div class="cmsb-text">
           <div class="cmsb-name" id="cmsbCamName">Imou Ranger 2 (2 Mắt)</div>
           <div class="cmsb-price" id="cmsbTotalPrice">2.220.000 đ</div>
         </div>
       </div>
-      <button type="button" class="btn btn-primary cmsb-btn" id="cmsbBtnBook" onclick="document.getElementById('btnBookCalc').click()">
-        <span>Đặt Lịch Ngay</span>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      </button>
+      <div class="cmsb-actions">
+        <button type="button" class="cmsb-detail-btn" id="cmsbBtnDetail" title="Xem chi tiết dự toán">
+          <span>Chi tiết</span>
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <button type="button" class="btn btn-primary cmsb-btn" id="cmsbBtnBook" onclick="document.getElementById('btnBookCalc').click()">
+          <span>Đặt Lịch Ngay</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
     </div>
   </div>
 
