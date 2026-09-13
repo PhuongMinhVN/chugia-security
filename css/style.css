@@ -2377,7 +2377,8 @@ a.floating-hud-badge.hud-top-right:hover {
     z-index: 999;
   }
 
-  .nav-menu.open {
+  .nav-menu.open,
+  .nav-menu.active {
     transform: translateY(0);
   }
 

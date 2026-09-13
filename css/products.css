@@ -1296,6 +1296,17 @@
 
 /* Mobile Responsive */
 @media (max-width: 991px) {
+  .quick-pills-bar {
+    top: 60px;
+  }
+
+  .nav-menu.open,
+  .nav-menu.active {
+    transform: translateY(0) !important;
+    display: flex !important;
+    visibility: visible !important;
+  }
+
   .catalog-layout {
     grid-template-columns: 1fr;
   }
