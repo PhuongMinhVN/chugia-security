@@ -8,7 +8,7 @@
  */
 
 window.HTA_PRODUCTS_DATA = {
-  "total": 469,
+  "total": 475,
   "generatedAt": "2026-09-13 11:54:50",
   "categories": [
     {
@@ -20,7 +20,7 @@ window.HTA_PRODUCTS_DATA = {
     {
       "id": 52945,
       "name": "Switch POE thông dụng",
-      "count": 34,
+      "count": 40,
       "parentGroup": "Thiết Bị Mạng & Switch PoE"
     },
     {
@@ -184,6 +184,12 @@ window.HTA_PRODUCTS_DATA = {
       "name": "Máy chấm công và kiểm soát ra vào",
       "count": 2,
       "parentGroup": "Chuông Cửa & Kiểm Soát Ra Vào"
+    },
+    {
+      "id": 53999,
+      "name": "Thiết bị mạng TP-Link Omada",
+      "count": 6,
+      "parentGroup": "Thiết Bị Mạng & Switch PoE"
     }
   ],
   "products": [
@@ -46892,6 +46898,359 @@ window.HTA_PRODUCTS_DATA = {
         {
           "k": "Hàng chính Hãng, bảo hành 12 tháng",
           "v": ""
+        }
+      ]
+    },
+    {
+      "id": 99001,
+      "name": "Access Point Gắn Trần TP-Link Omada EAP653 Wi-Fi 6 AX3000 Gigabit PoE",
+      "sku": "EAP653",
+      "primaryCategoryId": 53999,
+      "categoryIds": [
+        53999,
+        52945
+      ],
+      "categoryName": "Thiết bị mạng TP-Link Omada",
+      "parentGroup": "Thiết Bị Mạng & Switch PoE",
+      "brand": "TP-LINK",
+      "price": 1880000,
+      "originalPrice": 2750000,
+      "retailPrice": 2450000,
+      "image": "https://www.tp-link.com/res/images/products/gallery/EAP653_V1_01_large.jpg",
+      "images": [
+        "https://www.tp-link.com/res/images/products/gallery/EAP653_V1_01_large.jpg",
+        "https://www.tp-link.com/res/images/products/gallery/EAP653_V1_02_large.jpg"
+      ],
+      "features": [
+        "Tốc độ Wi-Fi 6 siêu nhanh: 574 Mbps trên 2.4 GHz + 2402 Mbps trên 5 GHz (tổng cộng 2976 Mbps).",
+        "Chuyển vùng liền mạch Seamless Roaming (802.11k/v/r) không gián đoạn video call khi di chuyển.",
+        "Tích hợp nền tảng quản lý tập trung đám mây Omada Cloud SDN tiện lợi qua App hoặc Web.",
+        "Thiết kế siêu mỏng thanh lịch (chỉ 160 mm × 33.6 mm), cấp nguồn linh hoạt PoE+ (802.3at) hoặc DC.",
+        "Hỗ trợ kết nối đồng thời hơn 250 thiết bị, Mesh Wi-Fi và tối ưu hóa RF tự động."
+      ],
+      "warranty": "24 tháng chính hãng TP-Link",
+      "inStock": true,
+      "description": "TP-Link Omada EAP653 là điểm truy cập gắn trần Wi-Fi 6 chuẩn doanh nghiệp, tối ưu cho biệt thự, khách sạn, văn phòng và nhà hàng. Trang bị công nghệ Wi-Fi 6 tân tiến AX3000, tính năng Seamless Roaming chuyển vùng mượt mà không rớt mạng, quản lý thông minh qua Omada Cloud Controller. Sản phẩm chính hãng phân phối và lắp đặt trọn gói bởi Chu Gia Security.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TP-LINK"
+        },
+        {
+          "k": "Dòng sản phẩm",
+          "v": "Omada SDN"
+        },
+        {
+          "k": "Mã sản phẩm",
+          "v": "EAP653"
+        },
+        {
+          "k": "Chuẩn Wi-Fi",
+          "v": "Wi-Fi 6 (IEEE 802.11ax/ac/n/g/b/a)"
+        },
+        {
+          "k": "Băng thông",
+          "v": "AX3000 (574 Mbps 2.4GHz + 2402 Mbps 5GHz)"
+        },
+        {
+          "k": "Cổng kết nối",
+          "v": "1 × Cổng Gigabit Ethernet RJ45"
+        },
+        {
+          "k": "Nguồn cấp",
+          "v": "PoE+ (802.3at) hoặc DC 12V/1A"
+        },
+        {
+          "k": "Chuyển vùng Roaming",
+          "v": "Chuẩn 802.11k/v/r Seamless Roaming"
+        },
+        {
+          "k": "Quản lý tập trung",
+          "v": "Omada Hardware / Software / Cloud Controller"
+        }
+      ]
+    },
+    {
+      "id": 99002,
+      "name": "Access Point Ngoài Trời TP-Link Omada EAP610-Outdoor Wi-Fi 6 AX1800 IP67",
+      "sku": "EAP610-Outdoor",
+      "primaryCategoryId": 53999,
+      "categoryIds": [
+        53999,
+        52945
+      ],
+      "categoryName": "Thiết bị mạng TP-Link Omada",
+      "parentGroup": "Thiết Bị Mạng & Switch PoE",
+      "brand": "TP-LINK",
+      "price": 2190000,
+      "originalPrice": 3200000,
+      "retailPrice": 2850000,
+      "image": "https://www.tp-link.com/res/images/products/gallery/EAP610-Outdoor_V1_01_large.jpg",
+      "images": [
+        "https://www.tp-link.com/res/images/products/gallery/EAP610-Outdoor_V1_01_large.jpg"
+      ],
+      "features": [
+        "Vỏ bảo vệ chuẩn công nghiệp kháng nước và bụi bẩn IP67, chống sét 6kV ngoài trời.",
+        "Tốc độ Wi-Fi 6 AX1800 (574 Mbps trên 2.4 GHz + 1201 Mbps trên 5 GHz).",
+        "Vùng phủ sóng siêu rộng lên tới 200m+ với ăng-ten khuếch đại công suất cao chuyên dụng ngoài trời.",
+        "Hỗ trợ Omada Mesh không cần kéo dây mạng giữa các trạm phát sóng ngoài sân vườn, hồ bơi.",
+        "Cấp nguồn tiện lợi qua chuẩn 802.3at PoE+ hoặc Passive PoE 48V."
+      ],
+      "warranty": "24 tháng chính hãng TP-Link",
+      "inStock": true,
+      "description": "TP-Link Omada EAP610-Outdoor thiết kế chuyên biệt cho sân vườn biệt thự, quán cà phê sân thượng, bãi đỗ xe và khuôn viên resort. Khả năng chống chịu thời tiết khắc nghiệt chuẩn IP67, phủ sóng tầm xa vượt trội, quản lý Cloud qua Omada app.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TP-LINK"
+        },
+        {
+          "k": "Mã sản phẩm",
+          "v": "EAP610-Outdoor"
+        },
+        {
+          "k": "Chuẩn chống nước",
+          "v": "IP67 chịu nắng mưa ngoài trời"
+        },
+        {
+          "k": "Tốc độ Wi-Fi",
+          "v": "AX1800 (574 Mbps 2.4GHz + 1201 Mbps 5GHz)"
+        },
+        {
+          "k": "Cổng kết nối",
+          "v": "1 × Gigabit RJ45 Port (Hỗ trợ PoE 802.3at/Passive PoE)"
+        },
+        {
+          "k": "Ăng-ten",
+          "v": "Ăng-ten ngầm độ lợi cao đa hướng"
+        },
+        {
+          "k": "Tính năng",
+          "v": "Omada Mesh, Seamless Roaming, Quản lý Cloud"
+        }
+      ]
+    },
+    {
+      "id": 99003,
+      "name": "Router Cân Bằng Tải Multi-WAN Gigabit TP-Link Omada ER605 VPN Cloud SDN",
+      "sku": "ER605",
+      "primaryCategoryId": 53999,
+      "categoryIds": [
+        53999,
+        52945
+      ],
+      "categoryName": "Thiết bị mạng TP-Link Omada",
+      "parentGroup": "Thiết Bị Mạng & Switch PoE",
+      "brand": "TP-LINK",
+      "price": 960000,
+      "originalPrice": 1400000,
+      "retailPrice": 1250000,
+      "image": "https://www.tp-link.com/res/images/products/gallery/ER605_V2_01_large.jpg",
+      "images": [
+        "https://www.tp-link.com/res/images/products/gallery/ER605_V2_01_large.jpg"
+      ],
+      "features": [
+        "Tích hợp nền tảng Omada SDN: Quản lý Cloud tập trung thông minh qua App hoặc Web.",
+        "Hỗ trợ lên tới 4 cổng WAN Gigabit: 1 cổng WAN cố định + 3 cổng WAN/LAN chuyển đổi linh hoạt.",
+        "Cân bằng tải đa đường truyền Internet thông minh, dự phòng rớt mạng tự động (Failover).",
+        "Bảo mật VPN cấp doanh nghiệp: IPsec, OpenVPN, PPTP, L2TP với mã hóa phần cứng.",
+        "Tường lửa nâng cao, lọc web DoS Defense, phân tách VLAN nội bộ an toàn."
+      ],
+      "warranty": "24 tháng chính hãng TP-Link",
+      "inStock": true,
+      "description": "TP-Link Omada ER605 là router cân bằng tải Gigabit chuyên nghiệp thế hệ mới dành cho văn phòng, chuỗi cửa hàng, căn hộ thông minh cao cấp. Khả năng gộp băng thông nhiều đường truyền Internet, quản lý Cloud từ xa 24/7.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TP-LINK"
+        },
+        {
+          "k": "Mã sản phẩm",
+          "v": "ER605 (TL-R605)"
+        },
+        {
+          "k": "Cổng Ethernet",
+          "v": "5 cổng Gigabit (1 WAN, 1 LAN, 3 WAN/LAN)"
+        },
+        {
+          "k": "Tính năng cân bằng tải",
+          "v": "Load Balancing đa đường truyền, Link Backup"
+        },
+        {
+          "k": "Giao thức VPN",
+          "v": "IPsec, OpenVPN, L2TP, PPTP VPN"
+        },
+        {
+          "k": "Quản lý Cloud",
+          "v": "Tích hợp Omada SDN Controller"
+        }
+      ]
+    },
+    {
+      "id": 99004,
+      "name": "Switch Thông Minh TP-Link Omada SG2008P JetStream 8 Cổng Gigabit PoE+ 62W",
+      "sku": "SG2008P",
+      "primaryCategoryId": 53999,
+      "categoryIds": [
+        53999,
+        52945
+      ],
+      "categoryName": "Thiết bị mạng TP-Link Omada",
+      "parentGroup": "Thiết Bị Mạng & Switch PoE",
+      "brand": "TP-LINK",
+      "price": 1500000,
+      "originalPrice": 2200000,
+      "retailPrice": 1950000,
+      "image": "https://www.tp-link.com/res/images/products/gallery/TL-SG2008P_V1_01_large.jpg",
+      "images": [
+        "https://www.tp-link.com/res/images/products/gallery/TL-SG2008P_V1_01_large.jpg"
+      ],
+      "features": [
+        "8 cổng Gigabit RJ45, trong đó 4 cổng cấp nguồn PoE+ 802.3af/at chuẩn quốc tế.",
+        "Tổng công suất nguồn PoE 62W, cấp nguồn mượt mà cho Access Point và Camera IP.",
+        "Tích hợp Omada SDN: Cấu hình VLAN, QoS, IGMP Snooping tập trung từ Cloud.",
+        "Thiết kế vỏ kim loại chắc chắn, tản nhiệt không dùng quạt hoạt động hoàn toàn tĩnh lặng.",
+        "Bảo vệ cổng PoE tự động phục hồi thiết bị treo (PoE Auto Recovery)."
+      ],
+      "warranty": "24 tháng chính hãng TP-Link",
+      "inStock": true,
+      "description": "Switch mạng thông minh TP-Link Omada SG2008P 8 cổng Gigabit cung cấp 4 cổng PoE+ chuyên dụng cho hệ thống camera giám sát và Access Point wifi trong biệt thự hoặc văn phòng. Quản lý Cloud qua nền tảng Omada SDN hiện đại.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TP-LINK"
+        },
+        {
+          "k": "Mã sản phẩm",
+          "v": "TL-SG2008P"
+        },
+        {
+          "k": "Cổng kết nối",
+          "v": "8 cổng Gigabit RJ45 (4 cổng cấp PoE+)"
+        },
+        {
+          "k": "Công suất PoE",
+          "v": "62W (Tối đa 30W mỗi cổng)"
+        },
+        {
+          "k": "Băng thông chuyển mạch",
+          "v": "16 Gbps"
+        },
+        {
+          "k": "Tính năng Layer 2+",
+          "v": "802.1Q VLAN, QoS, IGMP Snooping, Port Mirroring"
+        }
+      ]
+    },
+    {
+      "id": 99005,
+      "name": "Bộ Điều Khiển Phần Cứng Đám Mây TP-Link Omada OC200 Cloud Controller",
+      "sku": "OC200",
+      "primaryCategoryId": 53999,
+      "categoryIds": [
+        53999,
+        52945
+      ],
+      "categoryName": "Thiết bị mạng TP-Link Omada",
+      "parentGroup": "Thiết Bị Mạng & Switch PoE",
+      "brand": "TP-LINK",
+      "price": 1120000,
+      "originalPrice": 1650000,
+      "retailPrice": 1450000,
+      "image": "https://www.tp-link.com/res/images/products/gallery/OC200_V1_01_large.jpg",
+      "images": [
+        "https://www.tp-link.com/res/images/products/gallery/OC200_V1_01_large.jpg"
+      ],
+      "features": [
+        "Quản lý tập trung lên tới 100 thiết bị mạng Omada (Access Point, Switch, Router).",
+        "Truy cập đám mây Cloud miễn phí trọn đời, không phí license hàng tháng.",
+        "Phần cứng chuyên dụng tối ưu: Hoạt động 24/7 liên tục không bị gián đoạn như cài trên PC.",
+        "Cấp nguồn linh hoạt qua cổng PoE 802.3af/at hoặc cáp Micro USB 5V.",
+        "Cung cấp cổng Captive Portal trang chào đăng nhập Wi-Fi Marketing chuyên nghiệp."
+      ],
+      "warranty": "24 tháng chính hãng TP-Link",
+      "inStock": true,
+      "description": "TP-Link Omada OC200 là thiết bị điều khiển phần cứng chuyên dụng quản lý tập trung toàn bộ hệ thống mạng Omada SDN. Đảm bảo tính ổn định cao nhất cho hệ thống chuyển vùng roaming, cổng chào Wi-Fi khách hàng và giám sát thời gian thực từ ứng dụng di động.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TP-LINK"
+        },
+        {
+          "k": "Mã sản phẩm",
+          "v": "OC200"
+        },
+        {
+          "k": "Dung lượng quản lý",
+          "v": "Lên tới 100 thiết bị Omada APs, Switches, Routers"
+        },
+        {
+          "k": "Cổng giao tiếp",
+          "v": "2 × 10/100 Mbps RJ45, 1 × USB 2.0 (Backup cấu hình)"
+        },
+        {
+          "k": "Nguồn cấp",
+          "v": "802.3af/at PoE hoặc Micro USB 5V/1A"
+        },
+        {
+          "k": "Vỏ máy",
+          "v": "Kim loại siêu bền tản nhiệt tự nhiên"
+        }
+      ]
+    },
+    {
+      "id": 99006,
+      "name": "Access Point Gắn Trần TP-Link Omada EAP610 Wi-Fi 6 AX1800 Gigabit PoE",
+      "sku": "EAP610",
+      "primaryCategoryId": 53999,
+      "categoryIds": [
+        53999,
+        52945
+      ],
+      "categoryName": "Thiết bị mạng TP-Link Omada",
+      "parentGroup": "Thiết Bị Mạng & Switch PoE",
+      "brand": "TP-LINK",
+      "price": 1420000,
+      "originalPrice": 2100000,
+      "retailPrice": 1850000,
+      "image": "https://www.tp-link.com/res/images/products/gallery/EAP610_V1_01_large.jpg",
+      "images": [
+        "https://www.tp-link.com/res/images/products/gallery/EAP610_V1_01_large.jpg"
+      ],
+      "features": [
+        "Tốc độ Wi-Fi 6 chuẩn AX1800: 574 Mbps trên 2.4 GHz + 1201 Mbps trên 5 GHz.",
+        "Chuyển vùng thông minh Seamless Roaming giúp kết nối luôn mượt mà khi di chuyển qua các phòng.",
+        "Mesh Wi-Fi tiện lợi mở rộng sóng tại những vị trí khó kéo dây mạng.",
+        "Cấp nguồn qua chuẩn 802.3at PoE+ hoặc adapter DC 12V.",
+        "Tích hợp Omada SDN quản trị Cloud thông minh."
+      ],
+      "warranty": "24 tháng chính hãng TP-Link",
+      "inStock": true,
+      "description": "TP-Link Omada EAP610 giải pháp Wi-Fi 6 hiệu năng cao chi phí tối ưu cho nhà phố cao tầng, căn hộ và văn phòng công ty. Thiết kế tinh tế gắn trần hoặc tường thẩm mỹ cao.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TP-LINK"
+        },
+        {
+          "k": "Mã sản phẩm",
+          "v": "EAP610"
+        },
+        {
+          "k": "Chuẩn Wi-Fi",
+          "v": "Wi-Fi 6 AX1800"
+        },
+        {
+          "k": "Cổng Ethernet",
+          "v": "1 × Gigabit RJ45"
+        },
+        {
+          "k": "Nguồn điện",
+          "v": "PoE+ 802.3at hoặc DC 12V/1A"
+        },
+        {
+          "k": "Quản lý Cloud",
+          "v": "Omada SDN App & Web"
         }
       ]
     }
