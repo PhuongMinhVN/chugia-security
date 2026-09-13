@@ -853,6 +853,10 @@ a.floating-hud-badge.hud-top-right:hover {
   background: var(--imou-orange);
 }
 
+.caption-brand.dahua {
+  background: #E60012;
+}
+
 /* Floating HUD Badges */
 .floating-hud-badge {
   position: absolute;
