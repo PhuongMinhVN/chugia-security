@@ -258,7 +258,7 @@
     });
     const total = state.cart.reduce((s, i) => s + i.retailPrice * i.qty, 0);
     if (total > 0) text += `\nTổng cộng: ${formatVND(total)}`;
-    text += '\nHotline: 0941 204 125 | Zalo: https://zalo.me/0941204125';
+    text += '\nHotline: 0941 204 125 | Zalo: https://zalo.me/0941204125 | Facebook: https://www.facebook.com/phuongminhorg/';
     navigator.clipboard.writeText(text).then(() => {
       if (el.cartCopyBtn) {
         el.cartCopyBtn.textContent = '✓ Đã sao chép!';

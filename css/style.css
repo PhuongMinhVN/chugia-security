@@ -2941,7 +2941,8 @@ a.floating-hud-badge.hud-top-right:hover {
 }
 
 /* ---------------- FLOATING WIDGETS (COMPACT) ---------------- */
-.floating-widgets {
+.floating-widgets,
+.floating-cta {
   position: fixed;
   bottom: 20px;
   right: 16px;
@@ -2961,10 +2962,11 @@ a.floating-hud-badge.hud-top-right:hover {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
   color: #FFFFFF;
   transition: transform var(--transition);
+  text-decoration: none;
 }
 
 .float-btn:hover {
-  transform: scale(1.06);
+  transform: scale(1.08);
 }
 
 .float-phone {
@@ -2975,6 +2977,17 @@ a.floating-hud-badge.hud-top-right:hover {
   background: #0068FF;
   font-weight: 700;
   font-size: 0.75rem;
+}
+
+.float-fb {
+  background: #1877F2;
+  color: #FFFFFF;
+}
+
+.float-fb svg {
+  fill: currentColor;
+  width: 22px;
+  height: 22px;
 }
 
 .float-top {
@@ -4207,6 +4220,7 @@ a.floating-hud-badge.hud-top-right:hover {
   }
 
   .floating-widgets,
+  .floating-cta,
   .cart-float-btn {
     bottom: 74px !important;
     right: 14px !important;
@@ -4214,6 +4228,7 @@ a.floating-hud-badge.hud-top-right:hover {
   }
 
   body.has-calc-sticky-visible .floating-widgets,
+  body.has-calc-sticky-visible .floating-cta,
   body.has-calc-sticky-visible .cart-float-btn {
     bottom: 125px !important;
     bottom: calc(125px + env(safe-area-inset-bottom)) !important;
