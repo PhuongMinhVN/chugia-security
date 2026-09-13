@@ -161,6 +161,26 @@ img {
   cursor: pointer;
 }
 
+.brand-logo-img {
+  height: 44px;
+  width: auto;
+  max-width: 250px;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.brand-logo:hover .brand-logo-img {
+  transform: scale(1.02);
+}
+
+@media (max-width: 576px) {
+  .brand-logo-img {
+    height: 36px;
+    max-width: 200px;
+  }
+}
+
 .brand-icon-box, .logo-shield {
   width: 38px;
   height: 38px;

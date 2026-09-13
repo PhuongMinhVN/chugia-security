@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="shieldG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C6FF"/>
+      <stop offset="100%" stop-color="#0072FF"/>
+    </linearGradient>
+    <linearGradient id="lensG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0A1128"/>
+    </linearGradient>
+    <linearGradient id="orgG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7A00"/>
+      <stop offset="100%" stop-color="#FF3E00"/>
+    </linearGradient>
+  </defs>
+  <!-- Outer Shield -->
+  <path d="M32 2 C48 2, 62 10, 64 23 C64 44, 48 58, 32 63 C16 58, 0 44, 0 23 C2 10, 16 2, 32 2 Z" fill="url(#shieldG)" />
+  <!-- Inner Shield -->
+  <path d="M32 6 C45 6, 57 13, 59 24 C59 42, 45 54, 32 59 C19 54, 5 42, 5 24 C7 13, 19 6, 32 6 Z" fill="url(#lensG)" />
+  <!-- Camera Lens -->
+  <circle cx="32" cy="31" r="17" fill="none" stroke="#00C6FF" stroke-width="2.5" />
+  <circle cx="32" cy="31" r="10" fill="url(#shieldG)" />
+  <circle cx="32" cy="31" r="5" fill="#FFFFFF" />
+  <circle cx="29" cy="28" r="2" fill="#FFFFFF" opacity="0.9" />
+  <!-- Accent Blade -->
+  <path d="M51 21 A24 24 0 0 1 53 38" fill="none" stroke="url(#orgG)" stroke-width="4" stroke-linecap="round" />
+</svg>

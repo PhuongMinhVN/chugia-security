@@ -606,6 +606,10 @@
               referrerpolicy="no-referrer"
               onerror="this.onerror=null;this.src='images/hero_security.jpg';"
             />
+            <!-- Chu Gia Security Watermark Stamp (Che logo cũ ở góc trái dưới) -->
+            <div class="pro-card-watermark">
+              <img src="images/chugia_watermark.svg" alt="Chu Gia Security" />
+            </div>
             <div class="pro-card-hover-overlay">
               <button class="btn-quick-preview" type="button">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
@@ -988,16 +992,45 @@
 
       // Draw QR badge at bottom right of card
       drawQrCornerBadge(ctx, cardX + cardW - 105, cardY + cardH - 105, qrDiv);
+      // Draw Chu Gia watermark at bottom left of card (covers old watermark)
+      drawWatermarkCornerBadge(ctx, cardX + 12, cardY + cardH - 46);
       drawPosterDetails(ctx, prod, width, height);
     };
 
     prodImg.onerror = function () {
       // Fallback if image blocked
       drawQrCornerBadge(ctx, cardX + cardW - 105, cardY + cardH - 105, qrDiv);
+      drawWatermarkCornerBadge(ctx, cardX + 12, cardY + cardH - 46);
       drawPosterDetails(ctx, prod, width, height);
     };
 
     prodImg.src = prod.image;
+  }
+
+  function drawWatermarkCornerBadge(ctx, x, y) {
+    ctx.save();
+    ctx.fillStyle = '#ffffff';
+    ctx.strokeStyle = '#e2e8f0';
+    ctx.lineWidth = 1.5;
+    roundRect(ctx, x, y, 160, 34, 6);
+    ctx.fill();
+    ctx.stroke();
+
+    // Text: CHU GIA SECURITY
+    ctx.fillStyle = '#0f172a';
+    ctx.font = 'bold 11px "Plus Jakarta Sans", sans-serif';
+    ctx.fillText('CHU GIA', x + 10, y + 21);
+
+    ctx.fillStyle = '#0072ff';
+    ctx.fillText('SECURITY', x + 64, y + 21);
+
+    // Orange accent dot
+    ctx.fillStyle = '#ff6600';
+    ctx.beginPath();
+    ctx.arc(x + 146, y + 17, 3.5, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.restore();
   }
 
   function drawQrCornerBadge(ctx, x, y, qrDiv) {

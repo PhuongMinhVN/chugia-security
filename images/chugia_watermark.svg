@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 68" width="240" height="68">
+  <defs>
+    <linearGradient id="bgG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <linearGradient id="shG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C6FF"/>
+      <stop offset="100%" stop-color="#0072FF"/>
+    </linearGradient>
+    <linearGradient id="orG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7A00"/>
+      <stop offset="100%" stop-color="#FF3E00"/>
+    </linearGradient>
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Clean Background Pill with Border & Shadow (100% opaque to cover any watermark underneath) -->
+  <rect x="2" y="2" width="236" height="64" rx="10" fill="url(#bgG)" stroke="#E2E8F0" stroke-width="1.5" filter="url(#dropShadow)"/>
+
+  <!-- Mini Shield Emblem -->
+  <g transform="translate(12, 10)">
+    <path d="M24 2 C36 2, 46 8, 48 18 C48 34, 36 44, 24 48 C12 44, 0 34, 0 18 C2 8, 12 2, 24 2 Z" fill="url(#shG)"/>
+    <path d="M24 5 C33 5, 42 10, 44 18 C44 32, 33 41, 24 44 C15 41, 4 32, 4 18 C6 10, 15 5, 24 5 Z" fill="#0A1128"/>
+    <circle cx="24" cy="24" r="12" fill="none" stroke="#00C6FF" stroke-width="2"/>
+    <circle cx="24" cy="24" r="7" fill="url(#shG)"/>
+    <circle cx="24" cy="24" r="3.5" fill="#FFFFFF"/>
+    <path d="M38 16 A17 17 0 0 1 39 29" fill="none" stroke="url(#orG)" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Brand Typography -->
+  <g transform="translate(68, 16)">
+    <text x="0" y="19" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16.5" font-weight="900" fill="#0F172A" letter-spacing="-0.3">
+      CHU GIA
+    </text>
+    <text x="76" y="19" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16.5" font-weight="900" fill="#0072FF" letter-spacing="-0.3">
+      SECURITY
+    </text>
+    <text x="0" y="34" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="700" fill="#FF6600" letter-spacing="0.5">
+      PHÂN PHỐI CHÍNH HÃNG
+    </text>
+  </g>
+</svg>

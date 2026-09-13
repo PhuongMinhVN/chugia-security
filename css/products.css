@@ -624,6 +624,48 @@
   transform: scale(1.08);
 }
 
+/* Chu Gia Security Watermark Stamp (Covers and replaces old watermark at bottom-left) */
+.pro-card-watermark {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  z-index: 2;
+  pointer-events: none;
+  width: 135px;
+  max-width: 46%;
+  height: auto;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.12));
+  transition: transform 0.25s ease;
+}
+
+.pro-card-watermark img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pro-card:hover .pro-card-watermark {
+  transform: translateY(-2px);
+}
+
+.modal-img-watermark {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  z-index: 2;
+  pointer-events: none;
+  width: 175px;
+  max-width: 48%;
+  height: auto;
+  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.15));
+}
+
+.modal-img-watermark img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Quick View Overlay Button on Hover */
 .pro-card-hover-overlay {
   position: absolute;

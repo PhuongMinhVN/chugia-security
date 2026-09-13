@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 70" width="340" height="70">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C6FF"/>
+      <stop offset="100%" stop-color="#0072FF"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7A00"/>
+      <stop offset="100%" stop-color="#FF3E00"/>
+    </linearGradient>
+    <linearGradient id="lensGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#090E17"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Emblem Left (Shield + Camera Iris) -->
+  <g transform="translate(10, 5)">
+    <!-- Outer Shield Glow / Shadow -->
+    <path d="M30 2 C45 2, 58 10, 60 22 C60 42, 45 56, 30 62 C15 56, 0 42, 0 22 C2 10, 15 2, 30 2 Z" fill="url(#shieldGrad)" />
+    
+    <!-- Inner Dark Shield -->
+    <path d="M30 6 C42 6, 54 13, 56 23 C56 40, 42 52, 30 57 C18 52, 4 40, 4 23 C6 13, 18 6, 30 6 Z" fill="url(#lensGrad)" />
+    
+    <!-- Modern Camera Aperture Blades & Iris -->
+    <circle cx="30" cy="30" r="16" fill="none" stroke="#00C6FF" stroke-width="2.5" opacity="0.9" />
+    <circle cx="30" cy="30" r="9" fill="url(#shieldGrad)" />
+    <circle cx="30" cy="30" r="4.5" fill="#FFFFFF" />
+    <circle cx="27" cy="27" r="2" fill="#FFFFFF" opacity="0.8" />
+    
+    <!-- Security Arc (Orange Accent) -->
+    <path d="M48 20 A22 22 0 0 1 50 36" fill="none" stroke="url(#orangeGrad)" stroke-width="3.5" stroke-linecap="round" filter="url(#glow)" />
+    <path d="M12 40 A22 22 0 0 1 10 24" fill="none" stroke="#00C6FF" stroke-width="2.5" stroke-linecap="round" />
+  </g>
+
+  <!-- Typography Right -->
+  <g transform="translate(82, 12)">
+    <!-- Brand Title -->
+    <text x="0" y="27" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="25" font-weight="900" fill="#0F172A" letter-spacing="-0.5">
+      CHU GIA
+    </text>
+    <text x="116" y="27" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="25" font-weight="900" fill="#0072FF" letter-spacing="-0.5">
+      SECURITY
+    </text>
+    
+    <!-- Slogan / Subtitle -->
+    <text x="1" y="44" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" fill="#FF6600" letter-spacing="1.2">
+      SMART SECURITY &amp; TECHNOLOGY
+    </text>
+  </g>
+</svg>
