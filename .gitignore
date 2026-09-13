@@ -1,0 +1,6 @@
+# Temporary and scratch files
+scratch/
+scratch_solutions.json
+*.log
+.DS_Store
+Thumbs.db
