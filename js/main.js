@@ -975,6 +975,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const storageNVRGroup = document.getElementById('storageNVRGroup');
   const nvrAdvisoryBox = document.getElementById('nvrAdvisoryBox');
 
+  const storageNvrRecommendBox = document.getElementById('storageNvrRecommendBox');
+  const recCamCount = document.getElementById('recCamCount');
+  const recBadgeChip = document.getElementById('recBadgeChip');
+  const recBoxDesc = document.getElementById('recBoxDesc');
+  const btnRecSwitchNvr = document.getElementById('btnRecSwitchNvr');
+  const recTabBadge = document.getElementById('recTabBadge');
+  const previewRecHint = document.getElementById('previewRecHint');
+  const previewRecCamCount = document.getElementById('previewRecCamCount');
+  const previewSwitchNvrBtn = document.getElementById('previewSwitchNvrBtn');
+
   const days500GB = document.getElementById('days500GB');
   const days1000GB = document.getElementById('days1000GB');
   const days2000GB = document.getElementById('days2000GB');
@@ -1198,6 +1208,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   if (tabModeNVR) {
     tabModeNVR.addEventListener('click', () => setStorageMode('nvr'));
+  }
+  if (btnRecSwitchNvr) {
+    btnRecSwitchNvr.addEventListener('click', () => setStorageMode('nvr'));
+  }
+  if (previewSwitchNvrBtn) {
+    previewSwitchNvrBtn.addEventListener('click', () => {
+      setStorageMode('nvr');
+      const step3 = document.getElementById('storageNVRGroup') || document.getElementById('tabModeNVR');
+      if (step3) {
+        step3.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
   }
 
   // Tương tác radio Thẻ nhớ
@@ -1492,6 +1514,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 7. Đồng bộ active state cho combo preset buttons
     checkActivePreset();
+
+    // 8. Lời khuyên chọn Đầu Ghi & Ổ Cứng khi chọn >= 3 camera bất kỳ
+    if (totalCamCount >= 3) {
+      if (recTabBadge) recTabBadge.style.display = 'inline-block';
+
+      if (currentStorageMode === 'card') {
+        if (storageNvrRecommendBox) {
+          storageNvrRecommendBox.style.display = 'block';
+          storageNvrRecommendBox.classList.remove('applied-nvr');
+        }
+        if (recCamCount) recCamCount.textContent = totalCamCount;
+        if (recBadgeChip) recBadgeChip.textContent = 'KHUYÊN DÙNG';
+        if (recBoxDesc) {
+          recBoxDesc.innerHTML = `Với hệ thống từ <strong>${totalCamCount} camera</strong> trở lên, bạn nên chọn <strong>Đầu Ghi &amp; Ổ Cứng 24/7</strong> để hệ thống chuyên nghiệp, xem trực tiếp trên TV, lưu trữ liên tục nhiều ngày và tối ưu chi phí hơn so với mua nhiều thẻ nhớ riêng lẻ.`;
+        }
+        if (btnRecSwitchNvr) btnRecSwitchNvr.style.display = 'inline-flex';
+
+        if (previewRecHint) previewRecHint.style.display = 'flex';
+        if (previewRecCamCount) previewRecCamCount.textContent = totalCamCount;
+      } else {
+        // Đã chọn sang mode NVR
+        if (storageNvrRecommendBox) {
+          storageNvrRecommendBox.style.display = 'block';
+          storageNvrRecommendBox.classList.add('applied-nvr');
+        }
+        if (recCamCount) recCamCount.textContent = totalCamCount;
+        if (recBadgeChip) recBadgeChip.textContent = 'ĐÃ CHỌN TỐI ƯU';
+        if (recBoxDesc) {
+          recBoxDesc.innerHTML = `✅ <strong>Lựa chọn tối ưu:</strong> Hệ thống <strong>${totalCamCount} camera</strong> đang dùng <strong>Đầu Ghi &amp; Ổ Cứng 24/7</strong> chuyên nghiệp, hỗ trợ xem trực tiếp trên TV và lưu trữ liên tục bền bỉ.`;
+        }
+        if (btnRecSwitchNvr) btnRecSwitchNvr.style.display = 'none';
+
+        if (previewRecHint) previewRecHint.style.display = 'none';
+      }
+    } else {
+      if (storageNvrRecommendBox) storageNvrRecommendBox.style.display = 'none';
+      if (recTabBadge) recTabBadge.style.display = 'none';
+      if (previewRecHint) previewRecHint.style.display = 'none';
+    }
   }
 
   // Lắng nghe sự kiện tăng/giảm số lượng camera trên từng thẻ

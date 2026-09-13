@@ -1887,6 +1887,164 @@ a.floating-hud-badge.hud-top-right:hover {
   }
 }
 
+/* --- Step 3: NVR Recommendation for >= 3 Cameras --- */
+.rec-tab-badge {
+  display: inline-block;
+  font-size: 0.60rem;
+  font-weight: 800;
+  background: #FF6600;
+  color: #FFFFFF;
+  padding: 2px 6px;
+  border-radius: 8px;
+  margin-left: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.storage-nvr-recommend-box {
+  background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+  border: 1.5px solid #0084FF;
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin: 10px 0 12px 0;
+  box-shadow: 0 4px 14px rgba(0, 132, 255, 0.08);
+  transition: all 0.25s ease;
+}
+
+.rec-box-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.rec-icon-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 132, 255, 0.15);
+}
+
+.rec-box-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.rec-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 3px;
+  flex-wrap: wrap;
+}
+
+.rec-main-title {
+  font-size: 0.82rem;
+  color: #0F172A;
+  font-weight: 800;
+}
+
+.rec-badge-chip {
+  font-size: 0.60rem;
+  font-weight: 800;
+  background: #0084FF;
+  color: #FFFFFF;
+  padding: 2px 7px;
+  border-radius: 10px;
+  letter-spacing: 0.3px;
+}
+
+.rec-desc-text {
+  font-size: 0.74rem;
+  color: #334155;
+  line-height: 1.4;
+}
+
+.btn-rec-switch {
+  margin-top: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #0084FF;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.76rem;
+  padding: 7px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  box-shadow: 0 2px 8px rgba(0, 132, 255, 0.25);
+}
+
+.btn-rec-switch:hover {
+  background: #006ED4;
+  transform: translateY(-1px);
+}
+
+.storage-nvr-recommend-box.applied-nvr {
+  background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
+  border-color: #22C55E;
+}
+
+.storage-nvr-recommend-box.applied-nvr .rec-badge-chip {
+  background: #16A34A;
+}
+
+.storage-nvr-recommend-box.applied-nvr .btn-rec-switch {
+  display: none;
+}
+
+/* --- Live Preview Box Recommendation Hint --- */
+.preview-rec-hint {
+  margin-top: 8px;
+  font-size: 0.72rem;
+  color: #FEF08A;
+  background: rgba(254, 240, 138, 0.1);
+  border: 1px solid rgba(254, 240, 138, 0.3);
+  border-radius: 8px;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.prh-text {
+  flex: 1;
+  min-width: 200px;
+  line-height: 1.35;
+}
+
+.prh-btn {
+  background: #FF6600;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-weight: 700;
+  font-size: 0.70rem;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.prh-btn:hover {
+  background: #E55B00;
+  transform: translateY(-1px);
+}
+
 /* --- Floating Mobile Sticky Bar --- */
 .calc-mobile-sticky-bar {
   display: none;

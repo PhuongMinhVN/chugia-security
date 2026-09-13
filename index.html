@@ -281,6 +281,13 @@
                 <span class="preview-chip">Thẻ nhớ 64GB</span>
                 <span class="preview-chip">Công lắp 2 mắt</span>
               </div>
+              <!-- Khuyên dùng Đầu Ghi & Ổ Cứng khi chọn >= 3 camera -->
+              <div class="preview-rec-hint" id="previewRecHint" style="display: none;">
+                <div class="prh-text">
+                  <span>💡 Khuyên dùng: Đang chọn <strong id="previewRecCamCount">3</strong> camera, nên chọn <strong>Đầu Ghi &amp; Ổ Cứng</strong> để chuyên nghiệp &amp; tối ưu chi phí.</span>
+                </div>
+                <button type="button" class="prh-btn" id="previewSwitchNvrBtn">Đổi sang Đầu Ghi →</button>
+              </div>
             </div>
           </div>
           <div class="calc-preview-right">
@@ -535,9 +542,30 @@
                     💾 Thẻ Nhớ MicroSD
                   </button>
                   <button type="button" class="storage-tab-btn" id="tabModeNVR" data-mode="nvr">
-                    📼 Đầu Ghi &amp; Ổ Cứng 24/7
+                    <span>📼 Đầu Ghi &amp; Ổ Cứng 24/7</span>
+                    <span class="rec-tab-badge" id="recTabBadge" style="display: none;">Khuyên Dùng</span>
                   </button>
                 </div>
+              </div>
+
+              <!-- BANNER LỜI KHUYÊN KHI CHỌN >= 3 CAMERA -->
+              <div class="storage-nvr-recommend-box" id="storageNvrRecommendBox" style="display: none;">
+                <div class="rec-box-body">
+                  <div class="rec-icon-circle">💡</div>
+                  <div class="rec-box-text">
+                    <div class="rec-title-row">
+                      <strong class="rec-main-title">Lời khuyên kỹ thuật (Hệ thống <span id="recCamCount">3</span> camera):</strong>
+                      <span class="rec-badge-chip" id="recBadgeChip">KHUYÊN DÙNG</span>
+                    </div>
+                    <div class="rec-desc-text" id="recBoxDesc">
+                      Với từ <strong>3 camera</strong> trở lên, bạn nên chọn <strong>Đầu Ghi &amp; Ổ Cứng 24/7</strong> để hệ thống chuyên nghiệp, xem trực tiếp trên TV, lưu trữ liên tục nhiều ngày và tiết kiệm chi phí hơn so với mua nhiều thẻ nhớ riêng lẻ.
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="btn-rec-switch" id="btnRecSwitchNvr">
+                  <span>Chuyển Sang Đầu Ghi &amp; Ổ Cứng</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
               </div>
 
               <!-- LỰA CHỌN A: THẺ NHỚ MICROSD (LƯỚI 2 CỘT GỌN GÀNG) -->
