@@ -295,6 +295,345 @@
 
   // ===================== END QUOTE CART SYSTEM =====================
 
+  // ===================== TP-LINK OMADA SPECIALIZED COMBOS SYSTEM =====================
+
+  window.OMADA_COMBOS = {
+    home: {
+      id: 'home',
+      badge: 'GIẢI PHÁP TIÊU BIỂU • NHÀ Ở & NHÀ PHỐ',
+      icon: '🏠',
+      title: 'Combo Mạng Wi-Fi 6 Omada Nhà Ở & Căn Hộ Cao Cấp',
+      subtitle: 'Chấm dứt hoàn toàn tình trạng rớt mạng khi leo cầu thang, phủ sóng căng tràn 100% diện tích 100 – 250m².',
+      stats: [
+        { label: 'Chịu tải đề xuất', val: '30 – 50 Thiết bị' },
+        { label: 'Diện tích phủ sóng', val: '100 – 250 m²' },
+        { label: 'Chuẩn Wi-Fi', val: 'Wi-Fi 6 AX1800' },
+        { label: 'Chuyển vùng', val: 'Fast Roaming 802.11k/v' }
+      ],
+      items: [
+        { id: 99003, sku: 'ER605', name: 'Router Cân Bằng Tải Multi-WAN Gigabit Omada ER605', qty: 1, role: 'Định tuyến & Gộp băng thông Internet', price: 1560000, img: 'images/products/omada/er605.jpg' },
+        { id: 99004, sku: 'SG2008P', name: 'Switch Thông Minh JetStream 8 Cổng (4 PoE+ 62W) SG2008P', qty: 1, role: 'Cấp nguồn PoE trực tiếp qua dây cáp mạng', price: 2145000, img: 'images/products/omada/sg2008p.jpg' },
+        { id: 99006, sku: 'EAP610', name: 'Access Point Gắn Trần Wi-Fi 6 AX1800 Gigabit PoE EAP610', qty: 2, role: 'Phát sóng Wi-Fi 6 đa tầng xuyên phòng', price: 2015000, img: 'images/products/omada/eap610.jpg' }
+      ],
+      originalPrice: 9500000,
+      retailTotal: 7735000,
+      comboPrice: 6990000,
+      savingsAmount: 745000,
+      savingsText: 'Tiết kiệm 745.000 ₫ (Miễn phí cấu hình SDN Cloud)',
+      description: 'Bộ combo mạng tiêu chuẩn cho nhà phố 2-4 tầng hoặc căn hộ chung cư 3 phòng ngủ. Kết hợp router cân bằng tải ER605 với 2 Access Point EAP610 cấp nguồn PoE gọn gàng, bảo đảm học tập trực tuyến, xem phim 4K và họp Zoom không độ trễ.'
+    },
+    villa: {
+      id: 'villa',
+      badge: 'ĐẲNG CẤP THƯỢNG LƯU • BIỆT THỰ & DINH THỰ',
+      icon: '🏰',
+      title: 'Combo Wi-Fi 6 Toàn Diện Biệt Thự & Villa Sân Vườn',
+      subtitle: 'Sóng phủ 100% từ phòng khách, phòng ngủ Master đến sân vườn hồ bơi ngoài trời IP67, thiết kế siêu mỏng sang trọng.',
+      stats: [
+        { label: 'Chịu tải đề xuất', val: '80 – 150 Thiết bị' },
+        { label: 'Diện tích phủ sóng', val: '300 – 800 m²' },
+        { label: 'Tốc độ tối đa', val: 'AX3000 (HE160)' },
+        { label: 'Ngoài trời', val: 'IP67 Chống sét 6kV' }
+      ],
+      items: [
+        { id: 99007, sku: 'ER7206', name: 'Router Doanh Nghiệp Multi-WAN Gigabit ER7206', qty: 1, role: 'Cân bằng tải đa mạng, chịu tải 200 user', price: 3380000, img: 'images/products/omada/er7206.jpg' },
+        { id: 99005, sku: 'OC200', name: 'Bộ Điều Khiển Phần Cứng Đám Mây OC200', qty: 1, role: 'Quản trị tập trung 24/7, Fast Roaming', price: 1625000, img: 'images/products/omada/oc200.jpg' },
+        { id: 99008, sku: 'SG2210P', name: 'Switch Quản Lý 10 Cổng Gigabit (8 PoE+ 61W + 2 SFP) SG2210P', qty: 1, role: 'Cấp nguồn PoE toàn bộ hệ thống APs', price: 3510000, img: 'images/products/omada/sg2210p.jpg' },
+        { id: 99001, sku: 'EAP653', name: 'Access Point Gắn Trần Siêu Mỏng Wi-Fi 6 AX3000 EAP653', qty: 2, role: 'Phòng khách & Đại sảnh vòm', price: 2665000, img: 'images/products/omada/eap653.jpg' },
+        { id: 99009, sku: 'EAP615-Wall', name: 'Access Point Âm Tường Wi-Fi 6 EAP615-Wall (4 LAN Port)', qty: 2, role: 'Phòng ngủ Master & Phòng giải trí', price: 2080000, img: 'images/products/omada/eap615_wall.jpg' },
+        { id: 99002, sku: 'EAP610-Outdoor', name: 'Access Point Ngoài Trời IP67 EAP610-Outdoor', qty: 1, role: 'Sân vườn, bể bơi, khu tiệc BBQ', price: 3120000, img: 'images/products/omada/eap610_outdoor.jpg' }
+      ],
+      originalPrice: 25000000,
+      retailTotal: 20870000,
+      comboPrice: 18990000,
+      savingsAmount: 1880000,
+      savingsText: 'Tiết kiệm 1.880.000 ₫ (Tặng gói đo kiểm sóng Heatmap)',
+      description: 'Giải pháp mạng Wi-Fi kiến trúc hoàn hảo cho biệt thự nghỉ dưỡng và dinh thự cao cấp. Kết hợp AP gắn trần siêu mỏng EAP653 với AP âm tường EAP615-Wall trong phòng ngủ và AP ngoài trời IP67 chịu nắng mưa sân vườn.'
+    },
+    office: {
+      id: 'office',
+      badge: 'DOANH NGHIỆP HIỆN ĐẠI • VĂN PHÒNG & CO-WORKING',
+      icon: '🏢',
+      title: 'Combo Mạng Doanh Nghiệp Văn Phòng & Tòa Nhà Làm Việc',
+      subtitle: 'Chịu tải mật độ cao High-Density 150 – 200 nhân sự, cổng 2.5GE không nghẽn cổ chai, chia 5 VLAN bảo mật nội bộ.',
+      stats: [
+        { label: 'Chịu tải đồng thời', val: '150 – 200 Nhân sự' },
+        { label: 'Cổng kết nối AP', val: '2.5 Gigabit Multi-Gig' },
+        { label: 'Băng thông', val: 'AX5400 (Kênh 160MHz)' },
+        { label: 'Bảo mật', val: '5 VLAN + Captive Portal' }
+      ],
+      items: [
+        { id: 99007, sku: 'ER7206', name: 'Router Doanh Nghiệp Multi-WAN Gigabit ER7206', qty: 1, role: 'Cân bằng tải 3 line mạng FPT/Viettel/VNPT', price: 3380000, img: 'images/products/omada/er7206.jpg' },
+        { id: 99005, sku: 'OC200', name: 'Bộ Điều Khiển Phần Cứng Đám Mây OC200', qty: 1, role: 'Phát hành Wi-Fi Marketing Captive Portal', price: 1625000, img: 'images/products/omada/oc200.jpg' },
+        { id: 99011, sku: 'SG2428P', name: 'Switch Quản Lý Smart JetStream 28 Cổng (24 PoE+ 250W) SG2428P', qty: 1, role: 'Cấp nguồn PoE cho 24 cổng APs & Camera', price: 8060000, img: 'images/products/omada/sg2428p.jpg' },
+        { id: 99010, sku: 'EAP670', name: 'Access Point High-Density Wi-Fi 6 AX5400 Cổng 2.5GE EAP670', qty: 4, role: 'Chịu tải 150+ user/AP cho phòng mở & hội họp', price: 4420000, img: 'images/products/omada/eap670.jpg' }
+      ],
+      originalPrice: 38000000,
+      retailTotal: 30745000,
+      comboPrice: 27500000,
+      savingsAmount: 3245000,
+      savingsText: 'Tiết kiệm 3.245.000 ₫ (Miễn phí cấu hình VLAN & Trang chào)',
+      description: 'Hạ tầng mạng chuẩn công nghệ dành cho văn phòng công ty 50 – 150 nhân viên. Phân tách mạng riêng biệt cho Giám đốc, Kế toán, Nhân viên và Khách hàng; cổng 2.5GE trên AP EAP670 giải phóng tối đa tốc độ họp trực tuyến và sao lưu NAS nội bộ.'
+    },
+    factory: {
+      id: 'factory',
+      badge: 'CÔNG NGHIỆP NẶNG • NHÀ MÁY & KHU CHẾ XUẤT',
+      icon: '🏭',
+      title: 'Combo Mạng Công Nghiệp Siêu Cấp Nhà Máy & Kho Bãi Logistics',
+      subtitle: 'Hệ thống Gateway 10G Multi-WAN, Switch 10G SFP+ Uplink, AP công suất lớn phủ xuyên giá kệ kim loại nhà xưởng 2.000 – 10.000m².',
+      stats: [
+        { label: 'Quy mô chịu tải', val: '500 – 1.000+ Thiết bị' },
+        { label: 'Trục cáp quang', val: '10G SFP+ Dual Redundant' },
+        { label: 'Diện tích xưởng', val: '2.000 – 10.000 m²' },
+        { label: 'Roaming xe nâng', val: 'Handheld Scanner < 10ms' }
+      ],
+      items: [
+        { id: 99012, sku: 'ER8411', name: 'Router Siêu Cấp 10G Multi-WAN Dual Power ER8411', qty: 1, role: 'Gateway 10G, CPU lõi tứ, nguồn kép dự phòng', price: 11440000, img: 'images/products/omada/er8411.jpg' },
+        { id: 99013, sku: 'OC300', name: 'Bộ Điều Khiển Phần Cứng Enterprise OC300', qty: 1, role: 'Quản trị 500 thiết bị & 15.000 client', price: 3640000, img: 'images/products/omada/oc300.jpg' },
+        { id: 99014, sku: 'SG3428XMP', name: 'Switch Quản Lý L2+ Managed 28 Cổng (24 PoE+ 384W + 4 10G SFP+) SG3428XMP', qty: 2, role: 'Trục chính kéo cáp quang 10G về từng phân xưởng', price: 15340000, img: 'images/products/omada/sg3428xmp.jpg' },
+        { id: 99015, sku: 'EAP683 LR', name: 'Access Point Tầm Xa High-Density Wi-Fi 6 AX6000 4x4 EAP683 LR', qty: 6, role: 'Phủ sóng nhà xưởng trần cao & kho kệ kim loại', price: 6370000, img: 'images/products/omada/eap683_lr.jpg' },
+        { id: 99016, sku: 'EAP650-Outdoor', name: 'Access Point Ngoài Trời Cao Cấp IP67 EAP650-Outdoor', qty: 2, role: 'Bãi container, cầu cảng xuất nhập hàng', price: 4160000, img: 'images/products/omada/eap650_outdoor.jpg' }
+      ],
+      originalPrice: 110000000,
+      retailTotal: 93630000,
+      comboPrice: 83900000,
+      savingsAmount: 9730000,
+      savingsText: 'Tiết kiệm 9.730.000 ₫ (Bao gồm khảo sát mô phỏng phổ nhiệt sóng RF 3D)',
+      description: 'Hạ tầng mạng công nghiệp hoàn hảo cho nhà xưởng sản xuất quy mô lớn và trung tâm logistics. Đáp ứng nghiêm ngặt việc kết nối thiết bị quét mã vạch Barcode Handheld trên xe nâng di chuyển liên tục, camera AI giám sát dây chuyền sản xuất và hệ thống cảm biến IoT.'
+    }
+  };
+
+  let currentActiveCombo = 'home';
+
+  function renderOmadaCombo(comboKey) {
+    const container = document.getElementById('omadaComboDisplay');
+    if (!container) return;
+    const combo = window.OMADA_COMBOS[comboKey] || window.OMADA_COMBOS.home;
+    currentActiveCombo = comboKey;
+
+    let statsHtml = '';
+    combo.stats.forEach(st => {
+      statsHtml += `
+        <div class="combo-stat-pill">
+          <small>${st.label}</small>
+          <strong>${st.val}</strong>
+        </div>
+      `;
+    });
+
+    let itemsHtml = '';
+    combo.items.forEach((item, idx) => {
+      const lineTotal = item.price * item.qty;
+      itemsHtml += `
+        <div class="combo-hw-card">
+          <div class="combo-hw-img-wrap">
+            <img src="${item.img}" alt="${item.name}" loading="lazy" onerror="this.src='images/logo_omada.svg'" />
+            <span class="combo-hw-qty-badge">x${item.qty}</span>
+          </div>
+          <div class="combo-hw-info">
+            <div class="combo-hw-top">
+              <span class="combo-hw-sku">${item.sku}</span>
+              <span class="combo-hw-role">${item.role}</span>
+            </div>
+            <div class="combo-hw-name" title="${item.name}">${item.name}</div>
+            <div class="combo-hw-pricing">
+              <span class="combo-hw-unit">${formatVND(item.price)} / bộ</span>
+              ${item.qty > 1 ? `<span class="combo-hw-subtotal">Tổng: <strong>${formatVND(lineTotal)}</strong></span>` : ''}
+            </div>
+          </div>
+        </div>
+      `;
+    });
+
+    container.innerHTML = `
+      <div class="omada-combo-card" data-combo="${combo.id}">
+        <!-- Left / Main Column: Overview & Equipment List -->
+        <div class="combo-main-col">
+          <div class="combo-header-box">
+            <span class="combo-card-badge">${combo.badge}</span>
+            <h3 class="combo-card-title">${combo.title}</h3>
+            <p class="combo-card-subtitle">${combo.subtitle}</p>
+          </div>
+
+          <!-- Fast Metrics Strip -->
+          <div class="combo-stats-strip">
+            ${statsHtml}
+          </div>
+
+          <!-- Included Hardware Grid -->
+          <div class="combo-hw-section">
+            <div class="combo-hw-header">
+              <span>DANH SÁCH THIẾT BỊ TRỌN BỘ (${combo.items.reduce((s, i) => s + i.qty, 0)} THIẾT BỊ)</span>
+              <span class="combo-hw-co-cq">✓ 100% Phân Phối Chính Hãng CO/CQ</span>
+            </div>
+            <div class="combo-hw-grid">
+              ${itemsHtml}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Price & High-Converting Actions -->
+        <div class="combo-side-col">
+          <div class="combo-pricing-card">
+            <div class="combo-price-head">
+              <span class="price-head-label">DỰ TOÁN TRỌN GÓI ƯU ĐÃI</span>
+              <span class="price-save-badge">🔥 ${combo.savingsText}</span>
+            </div>
+
+            <div class="combo-price-body">
+              <div class="combo-retail-price">
+                <span class="label">Tổng giá bán lẻ linh kiện:</span>
+                <span class="val strike">${formatVND(combo.retailTotal)}</span>
+              </div>
+              <div class="combo-final-price">
+                <span class="label">Giá Combo Trọn Gói Chu Gia:</span>
+                <div class="price-val-wrap">
+                  <span class="val-num">${formatVND(combo.comboPrice)}</span>
+                  <span class="val-note">Đã gồm cấu hình SDN Cloud</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Value Props List -->
+            <ul class="combo-guarantees-list">
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Bảo hành chính hãng <strong>24 tháng (1 đổi 1)</strong></span>
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Khảo sát đo kiểm bản đồ sóng Wi-Fi tận nơi <strong>0đ</strong></span>
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Bàn giao sơ đồ nguyên lý &amp; tài khoản Omada Cloud trọn đời</span>
+              </li>
+            </ul>
+
+            <!-- Actions -->
+            <div class="combo-actions-wrap">
+              <button type="button" class="btn-combo-cart" onclick="window.addComboToCart('${combo.id}')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                <span>Thêm Toàn Bộ Vào Giỏ Báo Giá</span>
+              </button>
+
+              <button type="button" class="btn-combo-zalo" onclick="window.bookComboZalo('${combo.id}')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                <span>Tư Vấn &amp; Nhận Báo Giá Zalo</span>
+              </button>
+
+              <button type="button" class="btn-combo-explore" onclick="window.filterOmadaCatalog()">
+                <span>Xem 16 Thiết Bị Omada Trong Kho ↓</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function initOmadaCombos() {
+    const tabsNav = document.getElementById('omadaTabsNav');
+    if (tabsNav) {
+      tabsNav.addEventListener('click', e => {
+        const btn = e.target.closest('.omada-tab-btn');
+        if (!btn) return;
+        const comboKey = btn.getAttribute('data-combo');
+        if (!comboKey) return;
+        switchOmadaCombo(comboKey);
+      });
+    }
+    renderOmadaCombo('home');
+  }
+
+  function switchOmadaCombo(comboKey) {
+    const tabsNav = document.getElementById('omadaTabsNav');
+    if (tabsNav) {
+      tabsNav.querySelectorAll('.omada-tab-btn').forEach(b => {
+        b.classList.toggle('active', b.getAttribute('data-combo') === comboKey);
+      });
+    }
+    renderOmadaCombo(comboKey);
+  }
+
+  // Global Helpers for Omada Combos
+  window.switchOmadaCombo = comboKey => switchOmadaCombo(comboKey);
+
+  window.addComboToCart = function(comboKey) {
+    const combo = window.OMADA_COMBOS[comboKey];
+    if (!combo) return;
+
+    combo.items.forEach(item => {
+      // Find full product info or fallback to combo item
+      const prod = state.products.find(p => p.id === item.id || p.sku === item.sku) || {
+        id: item.id,
+        name: item.name,
+        sku: item.sku,
+        brand: 'TP-LINK',
+        retailPrice: item.price,
+        image: item.img
+      };
+
+      const existing = state.cart.find(c => c.id === prod.id);
+      if (existing) {
+        existing.qty = Math.min(existing.qty + item.qty, 99);
+      } else {
+        state.cart.push({
+          id: prod.id,
+          name: prod.name,
+          sku: prod.sku || item.sku,
+          brand: prod.brand || 'TP-LINK',
+          retailPrice: prod.retailPrice || item.price,
+          image: prod.image || item.img,
+          qty: item.qty
+        });
+      }
+    });
+
+    saveCartToStorage();
+    updateCartUI();
+    renderCartDrawer();
+    openCartDrawer();
+
+    // Visual toast feedback
+    const btn = document.querySelector(`.omada-combo-card[data-combo="${comboKey}"] .btn-combo-cart`);
+    if (btn) {
+      const origText = btn.innerHTML;
+      btn.classList.add('added');
+      btn.innerHTML = `<span>✓ Đã Thêm Toàn Bộ ${combo.items.reduce((s, i) => s + i.qty, 0)} Thiết Bị!</span>`;
+      setTimeout(() => {
+        btn.classList.remove('added');
+        btn.innerHTML = origText;
+      }, 2000);
+    }
+  };
+
+  window.bookComboZalo = function(comboKey) {
+    const combo = window.OMADA_COMBOS[comboKey];
+    if (!combo) return;
+
+    let msg = `Xin chào Chu Gia Security! Tôi quan tâm đến giải pháp:\n`;
+    msg += `⭐ ${combo.title.toUpperCase()}\n`;
+    msg += `• Giá combo ưu đãi trọn gói: ${formatVND(combo.comboPrice)}\n`;
+    msg += `• Dự kiến quy mô: ${combo.stats.map(s => s.label + ': ' + s.val).join(' | ')}\n\n`;
+    msg += `Danh sách thiết bị cấu hình:\n`;
+    combo.items.forEach((item, idx) => {
+      msg += `${idx + 1}. [${item.sku}] ${item.name} — SL: ${item.qty} (${item.role})\n`;
+    });
+    msg += `\nNhờ Chu Gia tư vấn chi tiết, khảo sát thực địa và hỗ trợ lên phương án lắp đặt trọn gói giúp tôi. Cảm ơn!`;
+
+    window.open(`https://zalo.me/0941204125?text=${encodeURIComponent(msg)}`, '_blank');
+  };
+
+  window.filterOmadaCatalog = function() {
+    setCategory(53999);
+    const catalogEl = document.getElementById('catalogMain');
+    if (catalogEl) {
+      catalogEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  // ===================== END TP-LINK OMADA SPECIALIZED COMBOS SYSTEM =====================
+
   // Initialize
   function init() {
     if (!window.HTA_PRODUCTS_DATA) {
@@ -309,6 +648,7 @@
     renderQuickPills();
     renderSidebarCategories();
     bindEvents();
+    initOmadaCombos();
     applyFilters();
     updateCartUI();
 
@@ -329,6 +669,18 @@
         if (target) {
           setTimeout(() => openQuickView(target), 350);
         }
+      }
+
+      const catParam = urlParams.get('category') || urlParams.get('cat');
+      if (catParam) {
+        const cid = parseInt(catParam, 10);
+        if (!isNaN(cid)) {
+          setTimeout(() => setCategory(cid), 150);
+        }
+      }
+      const comboParam = urlParams.get('combo');
+      if (comboParam && ['home', 'villa', 'office', 'factory'].includes(comboParam)) {
+        setTimeout(() => switchOmadaCombo(comboParam), 150);
       }
 
       const searchParam = urlParams.get('search') || urlParams.get('q');
@@ -400,7 +752,7 @@
     if (!el.quickPills) return;
 
     // Featured top categories order
-    const featuredOrder = [52930, 52929, 52931, 52932, 52936, 52945, 52940, 52941, 52948, 53652, 53301];
+    const featuredOrder = [53999, 52930, 52929, 52931, 52932, 52936, 52945, 52940, 52941, 52948, 53652, 53301];
     const sortedCats = [...state.categories].sort((a, b) => {
       const idxA = featuredOrder.indexOf(a.id);
       const idxB = featuredOrder.indexOf(b.id);
@@ -419,9 +771,12 @@
 
     sortedCats.forEach(cat => {
       const activeCls = state.selectedCategoryId === cat.id ? 'active' : '';
+      const isOmada = cat.id === 53999;
+      const omadaCls = isOmada ? 'quick-pill-omada' : '';
+      const displayName = isOmada ? '📶 ' + cat.name : cat.name;
       html += `
-        <button class="quick-pill ${activeCls}" data-cat-id="${cat.id}">
-          <span>${cat.name}</span>
+        <button class="quick-pill ${activeCls} ${omadaCls}" data-cat-id="${cat.id}">
+          <span>${displayName}</span>
           <span class="quick-pill-badge">${cat.count}</span>
         </button>
       `;
@@ -444,9 +799,12 @@
 
     state.categories.forEach(cat => {
       const activeCls = state.selectedCategoryId === cat.id ? 'active' : '';
+      const isOmada = cat.id === 53999;
+      const omadaCls = isOmada ? 'cat-item-omada' : '';
+      const displayName = isOmada ? '📶 ' + cat.name : cat.name;
       html += `
-        <li class="cat-filter-item ${activeCls}" data-cat-id="${cat.id}">
-          <span>${cat.name}</span>
+        <li class="cat-filter-item ${activeCls} ${omadaCls}" data-cat-id="${cat.id}">
+          <span>${displayName}</span>
           <span class="cat-count-badge">${cat.count}</span>
         </li>
       `;
@@ -849,7 +1207,14 @@
     // 2. Brand Filter
     if (state.selectedBrand !== 'all') {
       const brandUpper = state.selectedBrand.toUpperCase();
-      list = list.filter(p => (p.brand || '').toUpperCase() === brandUpper);
+      if (brandUpper === 'TP-LINK' || brandUpper === 'OMADA') {
+        list = list.filter(p => {
+          const b = (p.brand || '').toUpperCase();
+          return b === 'TP-LINK' || b === 'OMADA' || p.primaryCategoryId === 53999;
+        });
+      } else {
+        list = list.filter(p => (p.brand || '').toUpperCase() === brandUpper);
+      }
     }
 
     // 3. Price Range Filter

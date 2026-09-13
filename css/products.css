@@ -2240,20 +2240,39 @@
   min-width: 0;
 }
 
+.cart-item-brand {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #38BDF8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.cart-item-name,
 .cart-item-title {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #f1f5f9;
-  margin: 0 0 4px;
-  white-space: nowrap;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #FFFFFF !important;
+  margin: 0 0 3px;
+  line-height: 1.35;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  text-overflow: ellipsis;
+}
+
+.cart-item-sku {
+  font-size: 0.75rem;
+  color: #94A3B8;
+  margin-bottom: 4px;
 }
 
 .cart-item-price {
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: #4ade80;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #34D399;
 }
 
 .cart-item-controls {
@@ -2427,5 +2446,683 @@
 
   .cart-float-label {
     display: none;
+  }
+}
+
+/* ==========================================================================
+   TP-LINK OMADA SPECIALIZED COMBOS SHOWCASE STYLES (san-pham.html)
+   Cyber Dark Glassmorphism, Emerald Neon Accents & Desktop Optimized
+   ========================================================================== */
+
+.omada-combos-section {
+  position: relative;
+  background: linear-gradient(180deg, #050914 0%, #080D1A 100%);
+  padding: 56px 0 64px;
+  border-top: 1px solid rgba(16, 185, 129, 0.22);
+  border-bottom: 1px solid rgba(16, 185, 129, 0.18);
+  overflow: hidden;
+}
+
+.omada-combos-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.12) 0%, rgba(6, 182, 212, 0.05) 50%, transparent 75%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.omada-combos-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.omada-combos-header {
+  text-align: center;
+  max-width: 920px;
+  margin: 0 auto 36px;
+}
+
+.omada-badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #34D399;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.15);
+}
+
+.omada-badge-tag .pulse-beacon {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 8px #10B981;
+  animation: omadaPulse 2s infinite ease-in-out;
+}
+
+@keyframes omadaPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.3); }
+}
+
+.omada-section-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.25;
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+}
+
+.omada-section-sub {
+  font-size: 0.98rem;
+  color: #94A3B8;
+  line-height: 1.65;
+  margin: 0 0 28px;
+}
+
+.omada-section-sub strong {
+  color: #F1F5F9;
+}
+
+/* 4 Tabs Selector Bar */
+.omada-tabs-nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 0 auto;
+}
+
+.omada-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 14px 18px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(8px);
+}
+
+.omada-tab-btn:hover {
+  background: rgba(15, 23, 42, 0.95);
+  border-color: rgba(16, 185, 129, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.omada-tab-btn.active {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.18) 0%, rgba(6, 182, 212, 0.09) 100%);
+  border-color: #10B981;
+  box-shadow: 0 0 24px rgba(16, 185, 129, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.omada-tab-btn .tab-icon {
+  font-size: 1.65rem;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.omada-tab-btn:hover .tab-icon {
+  transform: scale(1.15);
+}
+
+.omada-tab-btn .tab-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.omada-tab-btn .tab-text strong {
+  font-size: 0.94rem;
+  color: #F8FAFC;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 700;
+}
+
+.omada-tab-btn .tab-text small {
+  font-size: 0.76rem;
+  color: #94A3B8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.omada-tab-btn.active .tab-text small {
+  color: #34D399;
+  font-weight: 600;
+}
+
+/* Dynamic Combo Display Wrap */
+.omada-combo-display-wrap {
+  margin-top: 24px;
+}
+
+.omada-combo-card {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 28px;
+  background: rgba(11, 19, 43, 0.75);
+  border: 1px solid rgba(16, 185, 129, 0.28);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(16, 185, 129, 0.08);
+  backdrop-filter: blur(12px);
+  animation: fadeInCombo 0.35s ease-out;
+}
+
+@keyframes fadeInCombo {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Left Column */
+.combo-main-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.combo-header-box {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 18px;
+}
+
+.combo-card-badge {
+  display: inline-block;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #10B981;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 4px 12px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.combo-card-title {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+
+.combo-card-subtitle {
+  font-size: 0.94rem;
+  color: #CBD5E1;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Fast Metrics Strip */
+.combo-stats-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.combo-stat-pill {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.combo-stat-pill small {
+  font-size: 0.72rem;
+  color: #94A3B8;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.combo-stat-pill strong {
+  font-size: 0.9rem;
+  color: #38BDF8;
+  font-weight: 700;
+}
+
+/* Hardware Included Section */
+.combo-hw-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.combo-hw-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #94A3B8;
+  padding: 0 4px;
+}
+
+.combo-hw-co-cq {
+  color: #34D399;
+  font-weight: 600;
+}
+
+.combo-hw-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 380px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+/* Custom Scrollbar for Hardware Grid */
+.combo-hw-grid::-webkit-scrollbar {
+  width: 5px;
+}
+.combo-hw-grid::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+}
+.combo-hw-grid::-webkit-scrollbar-thumb {
+  background: rgba(16, 185, 129, 0.35);
+  border-radius: 10px;
+}
+
+.combo-hw-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 10px 14px;
+  transition: all 0.2s ease;
+}
+
+.combo-hw-card:hover {
+  background: rgba(15, 23, 42, 0.85);
+  border-color: rgba(16, 185, 129, 0.3);
+  transform: translateX(3px);
+}
+
+.combo-hw-img-wrap {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  background: #0B132B;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 4px;
+}
+
+.combo-hw-img-wrap img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.combo-hw-qty-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #10B981;
+  color: #050914;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.combo-hw-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.combo-hw-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.combo-hw-sku {
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: #38BDF8;
+  background: rgba(56, 189, 248, 0.12);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.combo-hw-role {
+  font-size: 0.74rem;
+  color: #94A3B8;
+}
+
+.combo-hw-name {
+  font-size: 0.88rem;
+  color: #F8FAFC;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.combo-hw-pricing {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.78rem;
+}
+
+.combo-hw-unit {
+  color: #64748B;
+}
+
+.combo-hw-subtotal {
+  color: #CBD5E1;
+}
+
+.combo-hw-subtotal strong {
+  color: #34D399;
+}
+
+/* Right Column (Pricing & CTAs) */
+.combo-side-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.combo-pricing-card {
+  position: sticky;
+  top: 90px;
+  background: rgba(8, 13, 26, 0.95);
+  border: 1px solid rgba(16, 185, 129, 0.38);
+  border-radius: 16px;
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.45);
+}
+
+.combo-price-head {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 14px;
+}
+
+.price-head-label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  color: #94A3B8;
+}
+
+.price-save-badge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #FF7A00;
+  background: rgba(255, 122, 0, 0.12);
+  border: 1px solid rgba(255, 122, 0, 0.3);
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.combo-price-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.combo-retail-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #94A3B8;
+}
+
+.combo-retail-price .strike {
+  text-decoration: line-through;
+  color: #64748B;
+  font-weight: 600;
+}
+
+.combo-final-price {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.combo-final-price .label {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #E2E8F0;
+}
+
+.combo-final-price .price-val-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.combo-final-price .val-num {
+  font-size: 1.95rem;
+  font-weight: 800;
+  color: #34D399;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  text-shadow: 0 0 16px rgba(52, 211, 153, 0.35);
+}
+
+.combo-final-price .val-note {
+  font-size: 0.74rem;
+  color: #94A3B8;
+  margin-top: 4px;
+}
+
+/* Guarantees List */
+.combo-guarantees-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 14px 0;
+}
+
+.combo-guarantees-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: #CBD5E1;
+  line-height: 1.4;
+}
+
+.combo-guarantees-list li svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.combo-guarantees-list strong {
+  color: #FFFFFF;
+}
+
+/* Combo Action Buttons */
+.combo-actions-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-combo-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 12px;
+  padding: 13px 18px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 18px rgba(16, 185, 129, 0.4);
+}
+
+.btn-combo-cart:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.55);
+  background: linear-gradient(135deg, #34D399 0%, #10B981 100%);
+  color: #050914;
+}
+
+.btn-combo-cart.added {
+  background: #047857 !important;
+  color: #FFFFFF !important;
+  transform: scale(0.98);
+}
+
+.btn-combo-zalo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.35);
+}
+
+.btn-combo-zalo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(2, 132, 199, 0.5);
+  background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+  color: #050914;
+}
+
+.btn-combo-explore {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #94A3B8;
+  border-radius: 10px;
+  padding: 9px 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.btn-combo-explore:hover {
+  border-color: rgba(16, 185, 129, 0.4);
+  color: #34D399;
+  background: rgba(16, 185, 129, 0.06);
+}
+
+/* Quick pill badge & sidebar highlight for Omada WiFi */
+.quick-pill.quick-pill-omada {
+  border: 1px solid rgba(16, 185, 129, 0.45) !important;
+  background: rgba(16, 185, 129, 0.1) !important;
+  color: #34D399 !important;
+  font-weight: 700;
+}
+
+.quick-pill.quick-pill-omada:hover,
+.quick-pill.quick-pill-omada.active {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%) !important;
+  color: #050914 !important;
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.5) !important;
+}
+
+.quick-pill.quick-pill-omada .quick-pill-badge {
+  background: rgba(0, 0, 0, 0.3) !important;
+  color: #FFFFFF !important;
+}
+
+.cat-filter-item.cat-item-omada {
+  border-left: 3px solid #10B981 !important;
+  font-weight: 700;
+  color: #34D399;
+}
+
+/* Responsive Media Queries for Omada Combos */
+@media (max-width: 1100px) {
+  .omada-combo-card {
+    grid-template-columns: 1fr 340px;
+    padding: 24px;
+    gap: 20px;
+  }
+  .omada-tabs-nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .omada-combos-section {
+    padding: 40px 0;
+  }
+  .omada-section-title {
+    font-size: 1.55rem;
+  }
+  .omada-combo-card {
+    grid-template-columns: 1fr;
+  }
+  .combo-pricing-card {
+    position: static;
+  }
+  .combo-stats-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .omada-tabs-nav {
+    grid-template-columns: 1fr;
   }
 }
