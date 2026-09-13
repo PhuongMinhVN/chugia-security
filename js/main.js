@@ -77,6 +77,19 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: 'Dòng camera quốc dân thế hệ mới sắc nét 4K, kết nối và đàm thoại dễ dàng.'
     },
     {
+      id: 'ezviz-c6n',
+      name: 'EZVIZ C6N (Trong Nhà 2K AI)',
+      category: 'indoor',
+      brand: 'ezviz',
+      badge: 'SIÊU NÉT 2K AI',
+      costPrice: 620000,
+      price: 850000,
+      oldPrice: 1250000,
+      image: 'images/ezviz_indoor_c6n_4k.png',
+      specs: ['Độ nét 2K AI', 'Quay quét 360°', 'Đàm thoại 2 chiều'],
+      desc: 'Camera Wi-Fi quay quét 360° trong nhà sắc nét chuẩn 2K, đàm thoại 2 chiều và bám theo người.'
+    },
+    {
       id: 'imou-cruiser-2',
       name: 'Imou Cruiser 2 (3K AI 360°)',
       category: 'outdoor',
@@ -111,6 +124,19 @@ document.addEventListener('DOMContentLoaded', () => {
       image: 'images/ezviz_solar_hb8_lite.png',
       specs: ['Sim 4G LTE', 'Pin sạc + Tấm Solar', 'Xoay 360°'],
       desc: 'Không cần dây điện hay wifi. Hoạt động độc lập tại trang trại, ao hồ, bến bãi.'
+    },
+    {
+      id: 'solar-4g',
+      name: 'Camera Pin Solar 4G Năng Lượng Mặt Trời',
+      category: 'solar',
+      brand: 'ezviz',
+      badge: 'PIN SOLAR 4G',
+      costPrice: 2650000,
+      price: 3690000,
+      oldPrice: 4800000,
+      image: 'images/ezviz_solar_eb3_4g.png',
+      specs: ['Sim 4G không dây', 'Pin sạc + Tấm Solar', 'Không kéo điện/wifi'],
+      desc: 'Giải pháp an ninh không dây độc lập, dùng tấm pin năng lượng mặt trời & Sim 4G cho trang trại, bến bãi.'
     },
     {
       id: 'imou-cell-wirefree',
@@ -1502,7 +1528,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Chạm vào thẻ camera: nếu chưa chọn thì thêm 1 mắt
   document.querySelectorAll('.calc-cam-card').forEach(card => {
     card.addEventListener('click', (e) => {
-      if (e.target.closest('.cam-stepper-btn') || e.target.closest('.cam-add-btn')) return;
+      if (e.target.closest('.cam-stepper-btn') || e.target.closest('.cam-add-btn') || e.target.closest('.cam-detail-btn')) return;
       const id = card.getAttribute('data-id');
       if (id) {
         const cur = camQuantities[id] || 0;
@@ -1510,6 +1536,25 @@ document.addEventListener('DOMContentLoaded', () => {
           setCameraQty(id, 1);
         }
       }
+    });
+  });
+
+  // Lắng nghe sự kiện click nút "Xem chi tiết" trên từng thẻ camera
+  const CAM_MODAL_MAP = {
+    'imou-cue-2c': 'imou-cue-2c',
+    'imou-ranger-2': 'imou-ranger-2mp',
+    'ezviz-c6n': 'ezviz-c6n',
+    'imou-bullet-2c': 'imou-bullet-2c',
+    'imou-cruiser-2': 'imou-cruiser-2',
+    'solar-4g': 'solar-4g'
+  };
+
+  document.querySelectorAll('.cam-detail-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const id = btn.getAttribute('data-id');
+      const prodId = CAM_MODAL_MAP[id] || id;
+      openProductModal(prodId);
     });
   });
 

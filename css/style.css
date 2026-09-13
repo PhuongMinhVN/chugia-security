@@ -1575,6 +1575,40 @@ a.floating-hud-badge.hud-top-right:hover {
   border-style: solid;
 }
 
+.cam-detail-btn {
+  width: 100%;
+  margin-top: 6px;
+  padding: 5px 8px;
+  border-radius: 8px;
+  border: 1px solid #E2E8F0;
+  background: #FFFFFF;
+  color: #475569;
+  font-weight: 600;
+  font-size: 0.72rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: inherit;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.cam-detail-btn svg {
+  transition: transform 0.2s ease;
+}
+
+.cam-detail-btn:hover {
+  color: #0084FF;
+  border-color: #93C5FD;
+  background: #EFF6FF;
+}
+
+.cam-detail-btn:hover svg {
+  transform: translateX(2px);
+}
+
 .cam-stepper {
   width: 100%;
   display: flex;
@@ -1661,6 +1695,12 @@ a.floating-hud-badge.hud-top-right:hover {
     width: 20px;
     height: 20px;
     font-size: 0.85rem;
+  }
+  .cam-detail-btn {
+    font-size: 0.67rem;
+    padding: 4px 6px;
+    margin-top: 5px;
+    border-radius: 6px;
   }
 }
 
