@@ -180,11 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ---------------- HỖ TRỢ CHIA SẺ SẢN PHẨM QUA LINK ----------------
   function getProductShareUrl(productId) {
-    const loc = window.location;
-    if (loc.protocol === 'file:' || !loc.host) {
-      return `${loc.href.split('?')[0].split('#')[0]}?product=${encodeURIComponent(productId)}`;
-    }
-    return `${loc.origin}${loc.pathname}?product=${encodeURIComponent(productId)}`;
+    return `https://chugia.shop/?product=${encodeURIComponent(productId)}`;
   }
 
   function copyTextToClipboard(text, onSuccess, onError) {

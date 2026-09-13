@@ -201,7 +201,7 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Camera Wifi DAHUA",
     "parentGroup": "Camera Wifi Không Dây",
     "brand": "DAHUA",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/dahua-dh-h3as-anh-thong-so-1787118967613.jpg",
+    "image": "images/products/52932.jpg",
     "images": [
       "https://sapo.dktcdn.net/100/825/511/variants/dahua-dh-h3as-anh-thong-so-1787118967613.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dahua-dh-h3as-1787118783834.jpg",
@@ -407,8 +407,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Camera Wifi DAHUA",
     "parentGroup": "Camera Wifi Không Dây",
     "brand": "DAHUA",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/dahua-dh-h3t-1-1788587460264.jpg",
+    "image": "images/products/1193893.jpg",
     "images": [
+      "images/products/1193893.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dahua-dh-h3t-1-1788587460264.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dahua-h3t-1-1786603529802.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dahua-h3t-2-1786603530694.jpg",
@@ -440,8 +441,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Camera Wifi DAHUA",
     "parentGroup": "Camera Wifi Không Dây",
     "brand": "DAHUA",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/dh-ipc-hdw1539da-saw-il-1786627585887.jpg",
+    "image": "images/products/1193892.jpg",
     "images": [
+      "images/products/1193892.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dh-ipc-hdw1539da-saw-il-1786627585887.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-hdw1539da-sw-pv-2-1777899770478.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-hdw1539da-sw-pv-1-1777899771239.jpg",
@@ -504,8 +506,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Tất cả sản phẩm",
     "parentGroup": "Thiết Bị & Phụ Kiện Khác",
     "brand": "LILANG",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/lilang-xf-zfzd-e3wa-1785935889946.jpg",
+    "image": "images/products/1192531.jpg",
     "images": [
+      "images/products/1192531.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/lilang-xf-zfzd-e3wa-1785935889946.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/lilang-xf-zfzd-e3wa-1-1785935890918.jpg"
     ],
@@ -531,8 +534,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Tất cả sản phẩm",
     "parentGroup": "Thiết Bị & Phụ Kiện Khác",
     "brand": "LILANG",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/lilang-xf-zfzd-e3wb-1786156501873.jpg",
+    "image": "images/products/1192530.jpg",
     "images": [
+      "images/products/1192530.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/lilang-xf-zfzd-e3wb-1786156501873.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/lilang-xf-zfzd-e3wb-1-1786156502875.jpg"
     ],
@@ -560,8 +564,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Máy chấm công và kiểm soát ra vào",
     "parentGroup": "Chuông Cửa & Kiểm Soát Ra Vào",
     "brand": "DAHUA",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/dhi-asi3204e-w-a1-1785478250699.jpg",
+    "image": "images/products/1190704.jpg",
     "images": [
+      "images/products/1190704.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dhi-asi3204e-w-a1-1785478250699.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dhi-asi3204e-w-1-1777900062352.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dhi-asi3204e-w-2-1777900062888.jpg",
@@ -592,8 +597,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Máy chấm công và kiểm soát ra vào",
     "parentGroup": "Chuông Cửa & Kiểm Soát Ra Vào",
     "brand": "DAHUA",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/dhi-asi3203e-w-a1-1785478372881.jpg",
+    "image": "images/products/1190703.jpg",
     "images": [
+      "images/products/1190703.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dhi-asi3203e-w-a1-1785478372881.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dhi-asi3203e-w-1-1777900058905.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dhi-asi3203e-w-2-1777900059547.jpg",
@@ -623,8 +629,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Camera Wifi IMOU",
     "parentGroup": "Camera Wifi Không Dây",
     "brand": "IMOU",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ipc-c32ep-a1-1784954698972.jpg",
+    "image": "images/products/1188973.jpg",
     "images": [
+      "images/products/1188973.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-c32ep-a1-1784954698972.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-c32ep-1-1777899349069.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-c32ep-2-1777899349587.jpg",
@@ -652,8 +659,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Camera Wifi IMOU",
     "parentGroup": "Camera Wifi Không Dây",
     "brand": "IMOU",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ipc-a32ep-a1-1784957134771.jpg",
+    "image": "images/products/1188972.jpg",
     "images": [
+      "images/products/1188972.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-a32ep-a1-1784957134771.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-a32ep-l-1728822004651-1777902794826.png",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-a32ep-2-1777902795483.jpg",
@@ -686,8 +694,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Camera Wifi IMOU",
     "parentGroup": "Camera Wifi Không Dây",
     "brand": "IMOU",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ipc-a32p-pro-1784957953715.jpg",
+    "image": "images/products/1188971.jpg",
     "images": [
+      "images/products/1188971.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-a32p-pro-1784957953715.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-a32ep-1-1728822079249-1777898866842.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-a32ep-pro-1-jpeg-1777898867605.jpg",
@@ -718,8 +727,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Camera Wifi IMOU",
     "parentGroup": "Camera Wifi Không Dây",
     "brand": "IMOU",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ipc-a42p-a1-1784958763839.jpg",
+    "image": "images/products/1188970.jpg",
     "images": [
+      "images/products/1188970.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-a42p-a1-1784958763839.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-a42p-1-1777902788607.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-a42p-3-1777902789083.jpg",
@@ -754,8 +764,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Camera Wifi IMOU",
     "parentGroup": "Camera Wifi Không Dây",
     "brand": "IMOU",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ipc-a52p-a1-1784958718717.jpg",
+    "image": "images/products/1188969.jpg",
     "images": [
+      "images/products/1188969.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-a52p-a1-1784958718717.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-a52p-1-1777902770068.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-a52p-3-1777902772003.jpg",
@@ -787,8 +798,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Camera Wifi IMOU",
     "parentGroup": "Camera Wifi Không Dây",
     "brand": "IMOU",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ipc-a52p-pro-e46902f4-c3f8-499e-a09d-ad14d024ae8f-1784957945737.jpg",
+    "image": "images/products/1188968.jpg",
     "images": [
+      "images/products/1188968.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-a52p-pro-e46902f4-c3f8-499e-a09d-ad14d024ae8f-1784957945737.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-a52p-pro-1-1777898853100.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-a52p-pro-anh-1777898853699.jpg",
@@ -819,8 +831,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Camera Wifi IMOU",
     "parentGroup": "Camera Wifi Không Dây",
     "brand": "IMOU",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ipc-k2mp-3h1we-a1-1785911237016.jpg",
+    "image": "images/products/1188967.jpg",
     "images": [
+      "images/products/1188967.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-k2mp-3h1we-a1-1785911237016.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ranger-mini-1777900041478.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ranger-mini-2-1777900042075.jpg",
@@ -850,8 +863,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Camera Wifi IMOU",
     "parentGroup": "Camera Wifi Không Dây",
     "brand": "IMOU",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ipc-k2mp-5h1we-a1-1785911392853.jpg",
+    "image": "images/products/1188966.jpg",
     "images": [
+      "images/products/1188966.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-k2mp-5h1we-a1-1785911392853.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ranger-mini-2fc0f963-9a94-4f89-8684-d352fabc908e-1777900036159.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ranger-mini-5mp-1777900036979.jpg",
@@ -881,8 +895,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Camera Wifi IMOU",
     "parentGroup": "Camera Wifi Không Dây",
     "brand": "IMOU",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ipc-s2xep-6m0s-1785912033799.jpg",
+    "image": "images/products/1188965.jpg",
     "images": [
+      "images/products/1188965.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-s2xep-6m0s-1785912033799.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-s2xp-10m0wed-4-ae4e5881-5007-44a6-9225-82737ec9fd3e-1777899730886.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-s2xp-10m0wed-6-5c2b2e14-4ec5-4227-a47e-bebbab5e3f5f-1777899731575.jpg",
@@ -916,8 +931,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Camera Wifi IMOU",
     "parentGroup": "Camera Wifi Không Dây",
     "brand": "IMOU",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ipc-s2xep-10m0s-1785912186014.jpg",
+    "image": "images/products/1188964.jpg",
     "images": [
+      "images/products/1188964.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-s2xep-10m0s-1785912186014.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-s2xp-10m0wed-4-1777902738858.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-s2xp-10m0wed-6-1777902739572.jpg",
@@ -1140,8 +1156,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Camera Wifi IMOU",
     "parentGroup": "Camera Wifi Không Dây",
     "brand": "IMOU",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ipc-s31fep-a2-1784959814470.jpg",
+    "image": "images/products/1188957.jpg",
     "images": [
+      "images/products/1188957.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-s31fep-a2-1784959814470.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-s31fep-a1-1784959813300.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-s31fep-1777902765484.png"
@@ -1169,8 +1186,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Camera Wifi IMOU",
     "parentGroup": "Camera Wifi Không Dây",
     "brand": "IMOU",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ipc-s51fep-a1-1784959728809.jpg",
+    "image": "images/products/1188956.jpg",
     "images": [
+      "images/products/1188956.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-s51fep-a1-1784959728809.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-s51fep-1777902730387.png"
     ],
@@ -1345,8 +1363,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Camera Wifi IMOU",
     "parentGroup": "Camera Wifi Không Dây",
     "brand": "IMOU",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ipc-s7xep-6m0wed-1784960619032.jpg",
+    "image": "images/products/1188950.jpg",
     "images": [
+      "images/products/1188950.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-s7xep-6m0wed-1784960619032.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-s7xep-6m0wed-600x600-1777901973554.png"
     ],
@@ -1402,8 +1421,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Camera Wifi IMOU",
     "parentGroup": "Camera Wifi Không Dây",
     "brand": "IMOU",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ipc-s7xep-10m0wed-1784960649774.jpg",
+    "image": "images/products/1188948.jpg",
     "images": [
+      "images/products/1188948.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-s7xep-10m0wed-1784960649774.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-s7xep-10m0wed-600x600-1777901975573.png"
     ],
@@ -1634,8 +1654,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Tất cả sản phẩm",
     "parentGroup": "Thiết Bị & Phụ Kiện Khác",
     "brand": "CHÍNH HÃNG",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/homa-ac3000mbps-12816641-a157-4ecd-8bfc-21ee4973fcc2-1787318040583.jpg",
+    "image": "images/products/1187882.jpg",
     "images": [
+      "images/products/1187882.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/homa-ac3000mbps-12816641-a157-4ecd-8bfc-21ee4973fcc2-1787318040583.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/homa-ac3000mbps-1-1777900246376.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/homa-ac3000mbps-2-1777900247302.jpg",
@@ -1669,8 +1690,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Camera IP DAHUA",
     "parentGroup": "Camera IP & Đầu Ghi Chuyên Dụng",
     "brand": "DAHUA",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ipc-hdpw1230r1-s5-2-1787708415268.jpg",
+    "image": "images/products/1187881.jpg",
     "images": [
+      "images/products/1187881.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-hdpw1230r1-s5-2-1787708415268.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-hdpw1230r1-s5-1784717119732.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-hdpw1230r1-s5-1-1784717120397.jpg"
@@ -1697,8 +1719,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Camera IP DAHUA",
     "parentGroup": "Camera IP & Đầu Ghi Chuyên Dụng",
     "brand": "DAHUA",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ipc-hfw1230tc-a-a1-1784718168727.jpg",
+    "image": "images/products/1187880.jpg",
     "images": [
+      "images/products/1187880.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-hfw1230tc-a-a1-1784718168727.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-hfw1230tc-a-1-1784717913790.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ipc-hfw1230tc-a-2-1784717914234.jpg",
@@ -1728,8 +1751,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Khóa cửa điện tử",
     "parentGroup": "Khóa Cửa Thông Minh",
     "brand": "CHÍNH HÃNG",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ylock-yl-8835-1785986541787.jpg",
+    "image": "images/products/1181958.jpg",
     "images": [
+      "images/products/1181958.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ylock-yl-8835-1785986541787.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/yl-8835-1785986301299.png",
       "https://sapo.dktcdn.net/100/825/511/variants/img_0196-1785986312691.jpg",
@@ -1760,8 +1784,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Khóa cửa điện tử",
     "parentGroup": "Khóa Cửa Thông Minh",
     "brand": "CHÍNH HÃNG",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/hune-918-88-f-1786016943869.jpg",
+    "image": "images/products/1181957.jpg",
     "images": [
+      "images/products/1181957.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/hune-918-88-f-1786016943869.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/918-88-1777900556483.jpg"
     ],
@@ -1789,8 +1814,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Khóa cửa điện tử",
     "parentGroup": "Khóa Cửa Thông Minh",
     "brand": "CHÍNH HÃNG",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/hune-918-62a-f-a1-79acc5fb-bfcc-442a-b1b7-7b911375bf6c-1785985989806.jpg",
+    "image": "images/products/1181956.jpg",
     "images": [
+      "images/products/1181956.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/hune-918-62a-f-a1-79acc5fb-bfcc-442a-b1b7-7b911375bf6c-1785985989806.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/mat-ngoai-1777900550826.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/mat-trong-1777900551326.jpg",
@@ -1827,8 +1853,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Khóa cửa điện tử",
     "parentGroup": "Khóa Cửa Thông Minh",
     "brand": "DAHUA",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/dahua-asl8112r-b-1785994660768.jpg",
+    "image": "images/products/1181955.jpg",
     "images": [
+      "images/products/1181955.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dahua-asl8112r-b-1785994660768.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/asl8112r-b-1777900594694.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/asl8112r-b-1-1777900594087.jpg"
@@ -1887,8 +1914,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Khóa cửa điện tử",
     "parentGroup": "Khóa Cửa Thông Minh",
     "brand": "DAHUA",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/dahua-asl8212r-b-1785987639890.jpg",
+    "image": "images/products/1181953.jpg",
     "images": [
+      "images/products/1181953.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dahua-asl8212r-b-1785987639890.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/asl8212r-basl8212s-b2-9e9f1f3e-c83b-45ae-b30c-c1c887ef0385-1777900597206.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/asl8212r-b-1777900596359.jpg"
@@ -1917,8 +1945,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Khóa cửa điện tử",
     "parentGroup": "Khóa Cửa Thông Minh",
     "brand": "DAHUA",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/dahua-asl8212s-b-1785987580610.jpg",
+    "image": "images/products/1181952.jpg",
     "images": [
+      "images/products/1181952.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dahua-asl8212s-b-1785987580610.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/asl8212r-basl8212s-b2-1777900588993.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/img-6289-1777900589465.jpg",
@@ -1950,8 +1979,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Khóa cửa điện tử",
     "parentGroup": "Khóa Cửa Thông Minh",
     "brand": "DAHUA",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/dahua-asl9112c-b-1785988667954.jpg",
+    "image": "images/products/1181951.jpg",
     "images": [
+      "images/products/1181951.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dahua-asl9112c-b-1785988667954.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/9112c-1a14ba6a-db28-4aa0-801a-057d40bf9cbb-1777900593278.png"
     ],
@@ -1979,8 +2009,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Khóa cửa điện tử",
     "parentGroup": "Khóa Cửa Thông Minh",
     "brand": "DAHUA",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/dahua-asl9112r-b-1785989631292.jpg",
+    "image": "images/products/1181950.jpg",
     "images": [
+      "images/products/1181950.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dahua-asl9112r-b-1785989631292.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/9112c-1777900587511.png"
     ],
@@ -2008,8 +2039,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Khóa cửa điện tử",
     "parentGroup": "Khóa Cửa Thông Minh",
     "brand": "EZVIZ",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ezviz-dl05-1785996441597.jpg",
+    "image": "images/products/1181949.jpg",
     "images": [
+      "images/products/1181949.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ezviz-dl05-1785996441597.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ezviz-dl05-2-1777901569136.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dl-05-1777901569643.jpg",
@@ -2239,8 +2271,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Khóa cửa điện tử",
     "parentGroup": "Khóa Cửa Thông Minh",
     "brand": "CHÍNH HÃNG",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ylock-yl-6675-t-1785995908307.jpg",
+    "image": "images/products/1181942.jpg",
     "images": [
+      "images/products/1181942.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ylock-yl-6675-t-1785995908307.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ylock-yl-6675-p-1785995906823.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ylock-yl-6675-2-1740575483668-1777900294407.jpg",
@@ -2359,8 +2392,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Khóa cửa điện tử",
     "parentGroup": "Khóa Cửa Thông Minh",
     "brand": "CHÍNH HÃNG",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ylock-yl-3118-s-1785996158983.jpg",
+    "image": "images/products/1181938.jpg",
     "images": [
+      "images/products/1181938.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ylock-yl-3118-s-1785996158983.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/3118-s-1777900300168.png"
     ],
@@ -2444,8 +2478,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Khóa cửa điện tử",
     "parentGroup": "Khóa Cửa Thông Minh",
     "brand": "CHÍNH HÃNG",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ylock-yl-8832-79e60745-78a4-45b5-aaa0-d423744fa845-1786017170805.jpg",
+    "image": "images/products/1181935.jpg",
     "images": [
+      "images/products/1181935.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ylock-yl-8832-79e60745-78a4-45b5-aaa0-d423744fa845-1786017170805.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/yl-8832-chitiet-1785997203931.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ylock-yl-8832-1785997205441.jpg",
@@ -2476,8 +2511,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Khóa cửa điện tử",
     "parentGroup": "Khóa Cửa Thông Minh",
     "brand": "CHÍNH HÃNG",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/zkt-gl300-a1-1785996956571.jpg",
+    "image": "images/products/1181934.jpg",
     "images": [
+      "images/products/1181934.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/zkt-gl300-a1-1785996956571.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/zkteco-gl300-1785996955372.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/zkt-gl-300-395c3b8a-f351-4d91-8db8-6cd09b24c617-1777900267146.png"
@@ -2534,8 +2570,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Thiết bị mạng HUAWEI",
     "parentGroup": "Thiết Bị Mạng & Switch PoE",
     "brand": "HUAWEI",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/huawei-ekit-ap361-1785942800706.jpg",
+    "image": "images/products/1181511.jpg",
     "images": [
+      "images/products/1181511.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/huawei-ekit-ap361-1785942800706.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ap361-4-1777899014392.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ap361-1-1777899015070.jpg",
@@ -2596,8 +2633,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Thiết bị mạng HUAWEI",
     "parentGroup": "Thiết Bị Mạng & Switch PoE",
     "brand": "HUAWEI",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/huawei-ekit-ar180-1785586187588.jpg",
+    "image": "images/products/1181509.jpg",
     "images": [
+      "images/products/1181509.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/huawei-ekit-ar180-1785586187588.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ar180-2-1777898790441.png",
       "https://sapo.dktcdn.net/100/825/511/variants/ar180-3-1777898791252.png",
@@ -2874,8 +2912,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Thiết bị mạng RUIJIE",
     "parentGroup": "Thiết Bị Mạng & Switch PoE",
     "brand": "RUIJIE",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/rg-rap2200-f-2-1777902311183.jpg",
+    "image": "images/products/1181500.jpg",
     "images": [
+      "images/products/1181500.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/rg-rap2200-f-2-1777902311183.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/rg-rap2200-f-1-1777902311535.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/rg-rap2200-f-3-1777902312111.jpg",
@@ -2906,8 +2945,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Thiết bị mạng RUIJIE",
     "parentGroup": "Thiết Bị Mạng & Switch PoE",
     "brand": "RUIJIE",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/rg-rap2200-e-1-1777902314638.jpg",
+    "image": "images/products/1181499.jpg",
     "images": [
+      "images/products/1181499.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/rg-rap2200-e-1-1777902314638.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/rg-rap2200-e-2-1777902315214.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/rg-rap2200-e-7-1777902315779.jpg",
@@ -2939,8 +2979,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Thiết bị mạng RUIJIE",
     "parentGroup": "Thiết Bị Mạng & Switch PoE",
     "brand": "RUIJIE",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/rg-rap2260-g-1-1b69b234-6f6d-4afb-b671-564ae9207e09-1777902307425.jpg",
+    "image": "images/products/1181498.jpg",
     "images": [
+      "images/products/1181498.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/rg-rap2260-g-1-1b69b234-6f6d-4afb-b671-564ae9207e09-1777902307425.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/rg-rap2260-g-2-d1926b1c-1aca-4ea2-b87c-42003ba5f7a1-1777902307943.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/rg-rap2260-g-5-1777902308543.jpg",
@@ -3388,8 +3429,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Thiết bị mạng MERCUSYS",
     "parentGroup": "Thiết Bị Mạng & Switch PoE",
     "brand": "MERCUSYS",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/mw302r-c0b46465-cb83-4ad5-bd4e-61d54d13cb84-1784785167502.jpg",
+    "image": "images/products/1181483.jpg",
     "images": [
+      "images/products/1181483.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/mw302r-c0b46465-cb83-4ad5-bd4e-61d54d13cb84-1784785167502.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/mw302r-2-1777899979808.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/mw302r-3-1777899980998.jpg",
@@ -4282,8 +4324,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Switch POE thông dụng",
     "parentGroup": "Thiết Bị Mạng & Switch PoE",
     "brand": "CHÍNH HÃNG",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/sinic-3104poe-2-1784899269198.jpg",
+    "image": "images/products/1181454.jpg",
     "images": [
+      "images/products/1181454.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/sinic-3104poe-2-1784899269198.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/sinic-3104poe-1-1784895373705.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/sinic-3104poe-1739761082489-1777900404079.jpg",
@@ -4312,8 +4355,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Switch POE thông dụng",
     "parentGroup": "Thiết Bị Mạng & Switch PoE",
     "brand": "CHÍNH HÃNG",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/sinic-3108poe-1-1784895248562.jpg",
+    "image": "images/products/1181453.jpg",
     "images": [
+      "images/products/1181453.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/sinic-3108poe-1-1784895248562.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/sinic-3108poe-3905a680-7c32-4c38-91e9-c13605ea1f50-1784895247809.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/sinic-3108poe-1777900403107.jpg"
@@ -4341,8 +4385,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Switch POE thông dụng",
     "parentGroup": "Thiết Bị Mạng & Switch PoE",
     "brand": "CHÍNH HÃNG",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/sinic-3116poe-1-1784894969786.jpg",
+    "image": "images/products/1181452.jpg",
     "images": [
+      "images/products/1181452.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/sinic-3116poe-1-1784894969786.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/3116pe-6-1777900402621.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/sinic-3116poe-1784894969066.jpg"
@@ -4722,8 +4767,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Switch POE thông dụng",
     "parentGroup": "Thiết Bị Mạng & Switch PoE",
     "brand": "DAHUA",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/dahua-dh-cs4218-16et-190-1788406858231.jpg",
+    "image": "images/products/1181439.jpg",
     "images": [
+      "images/products/1181439.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dahua-dh-cs4218-16et-190-1788406858231.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dh-pfs4218-16et-190-3-1777901870497.png",
       "https://sapo.dktcdn.net/100/825/511/variants/dh-pfs4218-16et-190-beba84c7-02b2-4683-859b-6a08736ddfe5-1777901870906.png",
@@ -5131,8 +5177,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Switch POE thông dụng",
     "parentGroup": "Thiết Bị Mạng & Switch PoE",
     "brand": "RUIJIE",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ruijie-rg-es211gs-p-1787921410470.jpg",
+    "image": "images/products/1181425.jpg",
     "images": [
+      "images/products/1181425.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ruijie-rg-es211gs-p-1787921410470.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/rg-es211gs-p-1-1787921308571.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/rg-es211gs-p-2-1787921309370.jpg",
@@ -5904,8 +5951,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Báo cháy HIKVISION",
     "parentGroup": "Hệ Thống Báo Cháy",
     "brand": "HIKVISION",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/hf-s3e-a1-1784795266212.jpg",
+    "image": "images/products/1179164.jpg",
     "images": [
+      "images/products/1179164.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/hf-s3e-a1-1784795266212.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/hf-s3e-1-1781845739095.png",
       "https://sapo.dktcdn.net/100/825/511/variants/hf-s3e-3-1781858157022.jpg",
@@ -7449,8 +7497,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Smart TIVI - Google TIVI",
     "parentGroup": "Smart Tivi & Màn Hình",
     "brand": "XIAOMI",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/l98mc-stwn-1-1778412972813.jpg",
+    "image": "images/products/1169830.jpg",
     "images": [
+      "images/products/1169830.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/l98mc-stwn-1-1778412972813.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/l98mc-stwn-a1-1778412974031.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/l98mc-stwn-a2-1778412974865.jpg",
@@ -7760,8 +7809,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Báo cháy DAHUA",
     "parentGroup": "Hệ Thống Báo Cháy",
     "brand": "DAHUA",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-c131-3a736a55-180f-4b9c-8b75-5ce083d67e70-1784814250413.jpg",
+    "image": "images/products/1169793.jpg",
     "images": [
+      "images/products/1169793.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-c131-3a736a55-180f-4b9c-8b75-5ce083d67e70-1784814250413.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-c131-2-1777899825470.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-c131-1777899824847.jpg"
@@ -7790,8 +7840,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Báo cháy DAHUA",
     "parentGroup": "Hệ Thống Báo Cháy",
     "brand": "DAHUA",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-c132-757e5e54-a900-4a56-8ffe-0334b4f34c98-1784814189237.jpg",
+    "image": "images/products/1169791.jpg",
     "images": [
+      "images/products/1169791.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-c132-757e5e54-a900-4a56-8ffe-0334b4f34c98-1784814189237.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-c132-1-1777899824126.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-c132-1777899822435.jpg"
@@ -7820,8 +7871,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Báo cháy DAHUA",
     "parentGroup": "Hệ Thống Báo Cháy",
     "brand": "DAHUA",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-c121-5d7580c3-e03f-4eb0-b217-defdfe994977-1784814575337.jpg",
+    "image": "images/products/1169790.jpg",
     "images": [
+      "images/products/1169790.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-c121-5d7580c3-e03f-4eb0-b217-defdfe994977-1784814575337.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-c121-1777899818817.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-c121-1777899818196.png"
@@ -7850,8 +7902,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Báo cháy DAHUA",
     "parentGroup": "Hệ Thống Báo Cháy",
     "brand": "DAHUA",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-c151-5abc862e-eacb-41b7-ad2f-ae903d0d3891-1784815111328.jpg",
+    "image": "images/products/1169789.jpg",
     "images": [
+      "images/products/1169789.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-c151-5abc862e-eacb-41b7-ad2f-ae903d0d3891-1784815111328.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-c151-1-1777899816242.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-c151-1777899815400.jpg"
@@ -7909,8 +7962,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Báo cháy DAHUA",
     "parentGroup": "Hệ Thống Báo Cháy",
     "brand": "DAHUA",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-c152-c66840e9-0081-4332-9ed6-5822d2e5b00a-1784815199364.jpg",
+    "image": "images/products/1169787.jpg",
     "images": [
+      "images/products/1169787.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-c152-c66840e9-0081-4332-9ed6-5822d2e5b00a-1784815199364.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-c152-1-1777899817754.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-c152-1777899817009.jpg"
@@ -8063,8 +8117,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Báo cháy DAHUA",
     "parentGroup": "Hệ Thống Báo Cháy",
     "brand": "DAHUA",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-sa40a-r4-1784812784323.jpg",
+    "image": "images/products/1169782.jpg",
     "images": [
+      "images/products/1169782.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-sa40a-r4-1784812784323.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-sa40a-r4-2-1777899327998.png",
       "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-sa40a-r4-3-1777899328484.png",
@@ -8095,8 +8150,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Báo cháy DAHUA",
     "parentGroup": "Hệ Thống Báo Cháy",
     "brand": "DAHUA",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-ht10a-r4-1784813295329.jpg",
+    "image": "images/products/1169781.jpg",
     "images": [
+      "images/products/1169781.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-ht10a-r4-1784813295329.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/hy-ht10a-1777899321299.png",
       "https://sapo.dktcdn.net/100/825/511/variants/hy-ht10a-2-1777899321899.png",
@@ -8128,8 +8184,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Báo cháy DAHUA",
     "parentGroup": "Hệ Thống Báo Cháy",
     "brand": "DAHUA",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-gw01a-r4-a1-1784811328591.jpg",
+    "image": "images/products/1169780.jpg",
     "images": [
+      "images/products/1169780.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dhi-hy-gw01a-r4-a1-1784811328591.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/z7337142935158-dd7eb604e3658c166258f6b6c5ce2733-1777899325932.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/hy-gw01a-2-1777899326553.png",
@@ -9861,8 +9918,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Camera IP HIKVISION",
     "parentGroup": "Camera IP & Đầu Ghi Chuyên Dụng",
     "brand": "HIKVISION",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ik-4042th-mh-6db277bd-cb97-47a2-93e9-d9f7112773bf-1777899537339.jpg",
+    "image": "images/products/1169584.jpg",
     "images": [
+      "images/products/1169584.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ik-4042th-mh-6db277bd-cb97-47a2-93e9-d9f7112773bf-1777899537339.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ik-4042th-mh-1-1777899537991.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/daky-kit-hilock-1-1777899538564.jpg"
@@ -10211,8 +10269,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Camera IP HIKVISION",
     "parentGroup": "Camera IP & Đầu Ghi Chuyên Dụng",
     "brand": "HIKVISION",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/hikvision-ds-2cd1343g2-liu-1786603761690.jpg",
+    "image": "images/products/1169571.jpg",
     "images": [
+      "images/products/1169571.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/hikvision-ds-2cd1343g2-liu-1786603761690.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ds-2cd1343g2-liuf-1-1727924817389-1777898798368.png",
       "https://sapo.dktcdn.net/100/825/511/variants/ds-2cd1343g2-liuf-1727924816363-1777898798649.png",
@@ -10243,8 +10302,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Camera IP HIKVISION",
     "parentGroup": "Camera IP & Đầu Ghi Chuyên Dụng",
     "brand": "HIKVISION",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ds-2cd1143g2-liu-1785899704748.jpg",
+    "image": "images/products/1169570.jpg",
     "images": [
+      "images/products/1169570.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ds-2cd1143g2-liu-1785899704748.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ds-2cd1143g2-liuf-1777901344044.png"
     ],
@@ -10831,8 +10891,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Camera IP DAHUA",
     "parentGroup": "Camera IP & Đầu Ghi Chuyên Dụng",
     "brand": "DAHUA",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/dahua-dh-sd2a500nb-gny-a-pv-1788067922948.jpg",
+    "image": "images/products/1168740.jpg",
     "images": [
+      "images/products/1168740.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dahua-dh-sd2a500nb-gny-a-pv-1788067922948.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dh-sd2a500nb-gny-a-pv-1777902010970.png"
     ],
@@ -11719,8 +11780,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Camera IP DAHUA",
     "parentGroup": "Camera IP & Đầu Ghi Chuyên Dụng",
     "brand": "DAHUA",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/dahua-sd6ce232gb-hnr-3-1787734867454.jpg",
+    "image": "images/products/1168703.jpg",
     "images": [
+      "images/products/1168703.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dahua-sd6ce232gb-hnr-3-1787734867454.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dahua-sd6ce232gb-hnr-1787229945694.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dahua-sd6ce232gb-hnr-1-1787229946591.jpg",
@@ -13185,8 +13247,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Camera Wifi DAHUA",
     "parentGroup": "Camera Wifi Không Dây",
     "brand": "DAHUA",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/dh-p3f-pv-1777898876352.jpg",
+    "image": "images/products/1168617.jpg",
     "images": [
+      "images/products/1168617.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dh-p3f-pv-1777898876352.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dh-p3f-pv-1-1777898877181.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/cam-wizcolor-1772881937985-1777898878048.jpg"
@@ -13214,8 +13277,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Camera Wifi DAHUA",
     "parentGroup": "Camera Wifi Không Dây",
     "brand": "DAHUA",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/dh-p5f-pv-1777898874098.jpg",
+    "image": "images/products/1168616.jpg",
     "images": [
+      "images/products/1168616.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dh-p5f-pv-1777898874098.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dh-p5f-pv-1-1777898874774.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/cam-wizcolor-1772881926712-1777898875597.jpg"
@@ -13243,8 +13307,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Camera Wifi DAHUA",
     "parentGroup": "Camera Wifi Không Dây",
     "brand": "DAHUA",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/dh-p8f-pv-1777898872181.jpg",
+    "image": "images/products/1168615.jpg",
     "images": [
+      "images/products/1168615.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dh-p8f-pv-1777898872181.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/dh-p8f-pv-1-1777898872902.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/cam-wizcolor-1772881913079-1777898873448.jpg"
@@ -13429,8 +13494,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Chuông cửa có hình",
     "parentGroup": "Chuông Cửa & Kiểm Soát Ra Vào",
     "brand": "EZVIZ",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ezviz-hp5-1784725582158.jpg",
+    "image": "images/products/1168282.jpg",
     "images": [
+      "images/products/1168282.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ezviz-hp5-1784725582158.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/hp5-2-1777899764746.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/hp5-3-1777899765381.jpg",
@@ -13468,8 +13534,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Chuông cửa có hình",
     "parentGroup": "Chuông Cửa & Kiểm Soát Ra Vào",
     "brand": "EZVIZ",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ezviz-hp7-1784725710301.jpg",
+    "image": "images/products/1168281.jpg",
     "images": [
+      "images/products/1168281.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ezviz-hp7-1784725710301.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/hp7-2-1777901590347.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/hp7-1-1777901591197.jpg",
@@ -13568,8 +13635,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Chuông cửa có hình",
     "parentGroup": "Chuông Cửa & Kiểm Soát Ra Vào",
     "brand": "DAHUA",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/vto2211g-wp-1777901454912.jpg",
+    "image": "images/products/1168278.jpg",
     "images": [
+      "images/products/1168278.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/vto2211g-wp-1777901454912.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/vto2211g-wp-1-1777901455456.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/vto2211g-wp-3-1777901455839.jpg",
@@ -13780,8 +13848,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Chuông cửa có hình",
     "parentGroup": "Chuông Cửa & Kiểm Soát Ra Vào",
     "brand": "HIKVISION",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ds-kv6113-wme1-a1-1785417786968.jpg",
+    "image": "images/products/1168271.jpg",
     "images": [
+      "images/products/1168271.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ds-kv6113-wme1-a1-1785417786968.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ds-kv6113-wpe1-c6a35da1-6459-4e95-99f3-fd806ea7289b-1777901091762.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ds-kv6113-wpe1-1777901092435.jpg",
@@ -13935,8 +14004,9 @@ window.HTA_PRODUCTS_DATA = {
     "categoryName": "Chuông cửa có hình",
     "parentGroup": "Chuông Cửa & Kiểm Soát Ra Vào",
     "brand": "HIKVISION",
-    "image": "https://sapo.dktcdn.net/100/825/511/variants/ds-kv9503-wbe1-1-1786711531773.jpg",
+    "image": "images/products/1168265.jpg",
     "images": [
+      "images/products/1168265.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ds-kv9503-wbe1-1-1786711531773.jpg",
       "https://sapo.dktcdn.net/100/825/511/variants/ds-kv9503-wbe1-1777901078648.png",
       "https://sapo.dktcdn.net/100/825/511/variants/ds-kv9503-wbe1-0dd3fb93-969c-4d0d-acc6-1c7a05c3a5f5-1786711530952.jpg",

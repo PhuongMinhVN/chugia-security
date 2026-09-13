@@ -26,7 +26,9 @@
     sortBy: 'default',
     currentPage: 1,
     itemsPerPage: 24,
-    currentModalProduct: null
+    currentModalProduct: null,
+    // Quote Cart
+    cart: [] // [{id, name, sku, brand, retailPrice, image, qty}]
   };
 
   // DOM Elements
@@ -60,7 +62,12 @@
     modalRetailPrice: document.getElementById('modalRetailPrice'),
     modalOldPrice: document.getElementById('modalOldPrice'),
     modalDiscountTag: document.getElementById('modalDiscountTag'),
+    modalTabsNav: document.getElementById('modalTabsNav'),
     modalSpecsList: document.getElementById('modalSpecsList'),
+    modalTechTags: document.getElementById('modalTechTags'),
+    modalFitTags: document.getElementById('modalFitTags'),
+    modalMaterialTags: document.getElementById('modalMaterialTags'),
+    modalTechTable: document.getElementById('modalTechTable'),
     modalZaloBtn: document.getElementById('modalZaloBtn'),
     modalCallBtn: document.getElementById('modalCallBtn'),
     modalShareBtn: document.getElementById('modalShareBtn'),
@@ -70,8 +77,217 @@
     qrShareCanvas: document.getElementById('qrShareCanvas'),
     qrDownloadBtn: document.getElementById('qrDownloadBtn'),
     qrCopyLinkBtn: document.getElementById('qrCopyLinkBtn'),
-    qrShareTitle: document.getElementById('qrShareTitle')
+    qrShareTitle: document.getElementById('qrShareTitle'),
+    // Quote Cart
+    cartDrawer: document.getElementById('cartDrawer'),
+    cartDrawerClose: document.getElementById('cartDrawerClose'),
+    cartDrawerBackdrop: document.getElementById('cartDrawerBackdrop'),
+    cartItemsList: document.getElementById('cartItemsList'),
+    cartTotalPrice: document.getElementById('cartTotalPrice'),
+    cartItemCount: document.getElementById('cartItemCount'),
+    cartTotalCount: document.getElementById('cartTotalCount'),
+    cartFloatBtn: document.getElementById('cartFloatBtn'),
+    cartFloatBadge: document.getElementById('cartFloatBadge'),
+    cartSendZaloBtn: document.getElementById('cartSendZaloBtn'),
+    cartCopyBtn: document.getElementById('cartCopyBtn'),
+    cartClearBtn: document.getElementById('cartClearBtn'),
+    modalAddCartBtn: document.getElementById('modalAddCartBtn')
   };
+
+  // ===================== QUOTE CART SYSTEM =====================
+
+  function loadCartFromStorage() {
+    try {
+      const saved = localStorage.getItem('chugia_quote_cart');
+      if (saved) state.cart = JSON.parse(saved);
+    } catch (e) { state.cart = []; }
+  }
+
+  function saveCartToStorage() {
+    try {
+      localStorage.setItem('chugia_quote_cart', JSON.stringify(state.cart));
+    } catch (e) {}
+  }
+
+  function addToCart(prod) {
+    const existing = state.cart.find(item => item.id === prod.id);
+    if (existing) {
+      existing.qty = Math.min(existing.qty + 1, 99);
+    } else {
+      state.cart.push({
+        id: prod.id,
+        name: prod.name,
+        sku: prod.sku || '',
+        brand: prod.brand || '',
+        retailPrice: prod.retailPrice || 0,
+        image: prod.image || '',
+        qty: 1
+      });
+    }
+    saveCartToStorage();
+    updateCartUI();
+    showCartAddedFeedback(prod.id);
+  }
+
+  function removeFromCart(id) {
+    state.cart = state.cart.filter(item => item.id !== id);
+    saveCartToStorage();
+    updateCartUI();
+    renderCartDrawer();
+  }
+
+  function changeCartQty(id, delta) {
+    const item = state.cart.find(i => i.id === id);
+    if (!item) return;
+    item.qty = Math.max(1, Math.min(item.qty + delta, 99));
+    saveCartToStorage();
+    updateCartUI();
+    renderCartDrawer();
+  }
+
+  function clearCart() {
+    state.cart = [];
+    saveCartToStorage();
+    updateCartUI();
+    renderCartDrawer();
+  }
+
+  function updateCartUI() {
+    const totalQty = state.cart.reduce((s, i) => s + i.qty, 0);
+    // Float button badge
+    if (el.cartFloatBadge) {
+      el.cartFloatBadge.textContent = totalQty;
+      el.cartFloatBadge.style.display = totalQty > 0 ? 'flex' : 'none';
+    }
+    if (el.cartFloatBtn) {
+      el.cartFloatBtn.classList.toggle('has-items', totalQty > 0);
+    }
+    // Drawer header count
+    if (el.cartItemCount) el.cartItemCount.textContent = state.cart.length;
+    if (el.cartTotalCount) el.cartTotalCount.textContent = totalQty;
+  }
+
+  function renderCartDrawer() {
+    if (!el.cartItemsList) return;
+    if (state.cart.length === 0) {
+      el.cartItemsList.innerHTML = `
+        <div class="cart-empty">
+          <div class="cart-empty-icon">🛒</div>
+          <p>Chưa có sản phẩm nào trong giỏ báo giá</p>
+          <p class="cart-empty-hint">Nhấn nút <strong>+ Báo Giá</strong> trên từng sản phẩm để thêm vào đây</p>
+        </div>
+      `;
+      if (el.cartTotalPrice) el.cartTotalPrice.textContent = '0 ₫';
+      return;
+    }
+
+    let html = '';
+    let total = 0;
+    state.cart.forEach(item => {
+      const lineTotal = item.retailPrice * item.qty;
+      total += lineTotal;
+      const priceStr = item.retailPrice > 0 ? formatVND(item.retailPrice) : 'Liên hệ';
+      const lineTotalStr = item.retailPrice > 0 ? formatVND(lineTotal) : '';
+      html += `
+        <div class="cart-item" data-id="${item.id}">
+          <img class="cart-item-img" src="${item.image}" alt="${item.name}" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='images/hero_security.jpg';" />
+          <div class="cart-item-info">
+            <div class="cart-item-brand">${item.brand}</div>
+            <div class="cart-item-name" title="${item.name}">${item.name}</div>
+            ${item.sku ? `<div class="cart-item-sku">SKU: ${item.sku}</div>` : ''}
+            <div class="cart-item-price">${priceStr}</div>
+          </div>
+          <div class="cart-item-controls">
+            <div class="cart-qty-row">
+              <button class="cart-qty-btn" onclick="window.cartChangeQty(${item.id}, -1)">−</button>
+              <span class="cart-qty-num">${item.qty}</span>
+              <button class="cart-qty-btn" onclick="window.cartChangeQty(${item.id}, 1)">+</button>
+            </div>
+            ${lineTotalStr ? `<div class="cart-line-total">${lineTotalStr}</div>` : ''}
+            <button class="cart-remove-btn" onclick="window.cartRemove(${item.id})" title="Xóa khỏi giỏ">✕</button>
+          </div>
+        </div>
+      `;
+    });
+
+    el.cartItemsList.innerHTML = html;
+    if (el.cartTotalPrice) {
+      el.cartTotalPrice.textContent = total > 0 ? formatVND(total) : 'Liên hệ báo giá';
+    }
+  }
+
+  function openCartDrawer() {
+    renderCartDrawer();
+    if (el.cartDrawer) el.cartDrawer.classList.add('open');
+    if (el.cartDrawerBackdrop) el.cartDrawerBackdrop.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeCartDrawer() {
+    if (el.cartDrawer) el.cartDrawer.classList.remove('open');
+    if (el.cartDrawerBackdrop) el.cartDrawerBackdrop.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function sendCartZalo() {
+    if (state.cart.length === 0) {
+      alert('Giỏ báo giá đang trống! Hãy thêm sản phẩm trước.');
+      return;
+    }
+    let msg = 'Xin chào Chu Gia Security! Tôi muốn yêu cầu báo giá các sản phẩm sau:\n\n';
+    state.cart.forEach((item, i) => {
+      msg += `${i + 1}. ${item.name}${item.sku ? ' (SKU: ' + item.sku + ')' : ''} — SL: ${item.qty}${item.retailPrice > 0 ? ' — Đơn giá: ' + formatVND(item.retailPrice) : ''}\n`;
+    });
+    const total = state.cart.reduce((s, i) => s + i.retailPrice * i.qty, 0);
+    if (total > 0) msg += `\nTổng dự kiến: ${formatVND(total)}`;
+    msg += '\n\nNhờ Chu Gia tư vấn và xác nhận đơn hàng giúp tôi. Cảm ơn!';
+    window.open(`https://zalo.me/0941204125?text=${encodeURIComponent(msg)}`, '_blank');
+  }
+
+  function copyCartList() {
+    if (state.cart.length === 0) return;
+    let text = 'DANH SÁCH BÁO GIÁ - CHU GIA SECURITY\n' + '='.repeat(40) + '\n';
+    state.cart.forEach((item, i) => {
+      text += `${i + 1}. ${item.name}\n   SKU: ${item.sku || 'N/A'} | SL: ${item.qty} | Đơn giá: ${item.retailPrice > 0 ? formatVND(item.retailPrice) : 'Liên hệ'}\n`;
+    });
+    const total = state.cart.reduce((s, i) => s + i.retailPrice * i.qty, 0);
+    if (total > 0) text += `\nTổng cộng: ${formatVND(total)}`;
+    text += '\nHotline: 0941 204 125 | Zalo: https://zalo.me/0941204125';
+    navigator.clipboard.writeText(text).then(() => {
+      if (el.cartCopyBtn) {
+        el.cartCopyBtn.textContent = '✓ Đã sao chép!';
+        setTimeout(() => { el.cartCopyBtn.textContent = '📋 Sao chép danh sách'; }, 2000);
+      }
+    });
+  }
+
+  function showCartAddedFeedback(productId) {
+    // Flash the card's add-to-cart button
+    const card = el.productsGrid?.querySelector(`.pro-card[data-id="${productId}"]`);
+    if (card) {
+      const btn = card.querySelector('.btn-card-cart');
+      if (btn) {
+        btn.classList.add('added');
+        btn.textContent = '✓ Đã thêm';
+        setTimeout(() => {
+          btn.classList.remove('added');
+          btn.textContent = '+ Báo Giá';
+        }, 1500);
+      }
+    }
+    // Animate float cart button
+    if (el.cartFloatBtn) {
+      el.cartFloatBtn.classList.add('bounce');
+      setTimeout(() => el.cartFloatBtn.classList.remove('bounce'), 600);
+    }
+  }
+
+  // Global cart helpers
+  window.cartRemove = id => removeFromCart(id);
+  window.cartChangeQty = (id, delta) => changeCartQty(id, delta);
+  window.cartClear = () => clearCart();
+
+  // ===================== END QUOTE CART SYSTEM =====================
 
   // Initialize
   function init() {
@@ -83,10 +299,12 @@
     state.products = window.HTA_PRODUCTS_DATA.products || [];
     state.categories = window.HTA_PRODUCTS_DATA.categories || [];
 
+    loadCartFromStorage();
     renderQuickPills();
     renderSidebarCategories();
     bindEvents();
     applyFilters();
+    updateCartUI();
 
     // Check URL hash for direct product preview e.g. #prod-1194333
     const hash = window.location.hash;
@@ -413,6 +631,14 @@
           return;
         }
 
+        // Add to Cart button
+        if (e.target.closest('.btn-card-cart')) {
+          e.preventDefault();
+          e.stopPropagation();
+          addToCart(prod);
+          return;
+        }
+
         // Preview or Title or Image Click
         openQuickView(prod);
       });
@@ -430,6 +656,38 @@
         if (state.currentModalProduct) {
           closeQuickView();
           openQrShare(state.currentModalProduct);
+        }
+      });
+    }
+
+    // Modal Tab Buttons Switcher
+    if (el.modalTabsNav) {
+      el.modalTabsNav.addEventListener('click', e => {
+        const btn = e.target.closest('.modal-tab-btn');
+        if (!btn) return;
+        const targetTabId = btn.getAttribute('data-tab');
+        if (!targetTabId) return;
+
+        el.modalTabsNav.querySelectorAll('.modal-tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.modal-tab-pane').forEach(p => p.classList.remove('active'));
+
+        btn.classList.add('active');
+        const targetPane = document.getElementById(targetTabId);
+        if (targetPane) targetPane.classList.add('active');
+      });
+    }
+
+    // Modal Add to Cart
+    if (el.modalAddCartBtn) {
+      el.modalAddCartBtn.addEventListener('click', () => {
+        if (state.currentModalProduct) {
+          addToCart(state.currentModalProduct);
+          el.modalAddCartBtn.textContent = '✓ Đã thêm vào giỏ!';
+          el.modalAddCartBtn.style.background = '#16a34a';
+          setTimeout(() => {
+            el.modalAddCartBtn.textContent = '🛒 Thêm vào Giỏ Báo Giá';
+            el.modalAddCartBtn.style.background = '';
+          }, 1800);
         }
       });
     }
@@ -458,6 +716,28 @@
             el.qrCopyLinkBtn.textContent = '📋 Sao chép liên kết';
           }, 2000);
         });
+      });
+    }
+
+    // Cart Drawer Toggle
+    if (el.cartFloatBtn) {
+      el.cartFloatBtn.addEventListener('click', openCartDrawer);
+    }
+    if (el.cartDrawerClose) {
+      el.cartDrawerClose.addEventListener('click', closeCartDrawer);
+    }
+    if (el.cartDrawerBackdrop) {
+      el.cartDrawerBackdrop.addEventListener('click', closeCartDrawer);
+    }
+    if (el.cartSendZaloBtn) {
+      el.cartSendZaloBtn.addEventListener('click', sendCartZalo);
+    }
+    if (el.cartCopyBtn) {
+      el.cartCopyBtn.addEventListener('click', copyCartList);
+    }
+    if (el.cartClearBtn) {
+      el.cartClearBtn.addEventListener('click', () => {
+        if (confirm('Xóa tất cả sản phẩm khỏi giỏ báo giá?')) clearCart();
       });
     }
   }
@@ -764,9 +1044,12 @@
 
             <!-- Actions -->
             <div class="pro-card-actions">
+              <button class="btn-card-cart" type="button" data-id="${p.id}">
+                + Báo Giá
+              </button>
               <button class="btn-card-order" type="button">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-                <span>Đặt Mua Zalo</span>
+                <span>Zalo</span>
               </button>
               <button class="btn-card-share" type="button" title="Tạo mã QR & Chia sẻ">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
@@ -883,6 +1166,166 @@
     }
   };
 
+  // Helper: Trích xuất & Tạo Thẻ Tag Công Nghệ, Chất Liệu, Không Gian Phù Hợp & Bảng Thông Số Chi Tiết
+  function generateProductRichMetadata(prod) {
+    const name = (prod.name || '').toLowerCase();
+    const cat = (prod.categoryName || '').toLowerCase();
+    const parent = (prod.parentGroup || '').toLowerCase();
+    
+    const techTags = [];
+    const fitTags = [];
+    const materialTags = [];
+    const specsTable = [];
+
+    const isLock = cat.includes('khóa') || name.includes('khóa');
+    const isIntercom = cat.includes('chuông') || name.includes('chuông') || name.includes('vto') || name.includes('vth');
+    const isSwitch = cat.includes('switch') || name.includes('switch') || cat.includes('mạng');
+
+    if (isLock) {
+      techTags.push('Vân Tay FPC Sinh Trắc Học', 'Mã Số Ảo Chống Nhìn Trộm', 'Thẻ Từ Mã Hóa NFC', 'Chìa Khóa Cơ Cấp C', 'Mở Khóa Qua App Điện Thoại', 'Báo Động Cạy Cửa & Pin Yếu');
+      materialTags.push('Hợp Kim Nhôm/Kẽm Đúc Nguyên Khối', 'Kính Cường Lực Chống Xước 9H', 'Ruột Khóa Inox 304 Chống Cắt 3 Chốt', 'Bo Mạch Phủ Nano Chống Ẩm');
+      fitTags.push('Cửa Gỗ Đại Sảnh & Nhà Phố', 'Cửa Thép Chống Cháy Chung Cư', 'Cửa Phòng Ngủ Biệt Thự', 'Căn Hộ Dịch Vụ, Homestay, Khách Sạn');
+      
+      specsTable.push(
+        { k: 'Phương thức mở khóa', v: 'Vân tay, Mật mã số, Thẻ từ RFID, Chìa cơ khẩn cấp, App điện thoại' },
+        { k: 'Dung lượng người dùng', v: '100 dấu vân tay, 100 thẻ từ, 100 mã số mật khẩu' },
+        { k: 'Chất liệu thân khóa', v: 'Hợp kim kẽm/nhôm cao cấp đúc nguyên khối, mặt kính cường lực' },
+        { k: 'Cơ chế bảo vệ ruột khóa', v: 'Inox 304 không gỉ, 3 chốt an toàn chống cạy phá cưa cắt' },
+        { k: 'Nguồn cấp & Thời lượng', v: '4 viên Pin AA Alkaline 1.5V (Thời gian sử dụng 10-12 tháng)' },
+        { k: 'Cổng sạc khẩn cấp', v: 'Cổng MicroUSB/Type-C kích nguồn bên ngoài khi hết pin đột ngột' },
+        { k: 'Độ dày cửa yêu cầu', v: '38mm - 60mm (Độ rộng đố cửa tối thiểu 90mm)' },
+        { k: 'Bảo hành chính hãng', v: '24 tháng 1 đổi 1 tận nơi bởi Chu Gia Security' }
+      );
+    } else if (isIntercom) {
+      techTags.push('Đàm Thoại Video 2 Chiều Rõ Nét', 'Mở Khóa Cửa Từ Xa Bằng Màn Hình & App', 'Góc Nhìn Siêu Rộng 125°', 'Cấp Nguồn PoE Tiêu Chuẩn', 'Chụp Ảnh Khách Bấm Chuông');
+      materialTags.push('Hợp Kim Nhôm Phay Xước Anodized', 'Vỏ Kháng Nước Chuẩn IP65 Ngoài Trời', 'Màn Hình Cảm Ứng Chống Trầy Xước');
+      fitTags.push('Cổng Biệt Thự & Nhà Liền Kề', 'Cửa Căn Hộ Chung Cư Cao Cấp', 'Văn Phòng Doanh Nghiệp', 'Nhà Phố Mặt Tiền');
+
+      specsTable.push(
+        { k: 'Chức năng hệ thống', v: 'Gọi chuông có hình, Đàm thoại âm thanh 2 chiều, Mở khóa cổng từ xa' },
+        { k: 'Màn hình hiển thị', v: 'Màn hình cảm ứng LCD TFT 7 inch hoặc 10 inch hiển thị sắc nét' },
+        { k: 'Camera tích hợp', v: 'Độ phân giải 2.0MP Full HD, Góc quan sát 125 độ bao quát lối vào' },
+        { k: 'Tầm nhìn ban đêm', v: 'Hồng ngoại thông minh, tự động bật khi trời tối' },
+        { k: 'Giao tiếp mạng', v: 'Cổng LAN RJ45, Hỗ trợ cấp nguồn trực tiếp qua cáp mạng PoE' },
+        { k: 'Lưu trữ thông minh', v: 'Khe cắm thẻ nhớ MicroSD lưu trữ lịch sử khách bấm chuông' },
+        { k: 'Bảo hành', v: '24 tháng chính hãng 1 đổi 1' }
+      );
+    } else if (isSwitch) {
+      techTags.push('Cấp Nguồn PoE Chuẩn IEEE 802.3af/at', 'Khoảng Cách Truyền Xa 250m', 'Chống Sét Lan Truyền 6KV', 'Tự Động Phân Bổ Công Suất', 'Chế Độ Cách Ly Cổng VLAN');
+      materialTags.push('Vỏ Thép Sơn Tĩnh Điện Tản Nhiệt Tốt', 'Thiết Kế Fanless Không Quạt (Êm Ái)', 'Linh Kiện Bền Bỉ Tiêu Chuẩn Công Nghiệp');
+      fitTags.push('Hệ Thống Camera IP Dự Án', 'Tủ Rack Kỹ Thuật Tòa Nhà', 'Văn Phòng, Khách Sạn & Nhà Xưởng');
+
+      specsTable.push(
+        { k: 'Chuẩn PoE hỗ trợ', v: 'IEEE 802.3af (tối đa 15.4W/cổng), 802.3at (tối đa 30W/cổng)' },
+        { k: 'Tốc độ cổng truyền dẫn', v: 'Cổng 10/100/1000 Mbps Gigabit ổn định không nghẽn mạng' },
+        { k: 'Khoảng cách truyền PoE', v: 'Chế độ tiêu chuẩn 100m, Chế độ Extend truyền xa đến 250m' },
+        { k: 'Chống sét bảo vệ', v: 'Chống sét lan truyền điện áp 6KV cổng kết nối' },
+        { k: 'Chất liệu vỏ máy', v: 'Kim loại tản nhiệt cao cấp, chống han gỉ' },
+        { k: 'Bảo hành', v: '24 tháng chính hãng' }
+      );
+    } else {
+      // Camera Standard (Indoor & Outdoor)
+      let resText = '2.0 Megapixel (Full HD 1080P)';
+      if (name.includes('4k') || name.includes('8mp')) {
+        resText = '8.0 Megapixel (Chuẩn nét 4K Ultra HD)';
+        techTags.push('Độ Nét 4K Ultra HD');
+      } else if (name.includes('3k') || name.includes('5mp')) {
+        resText = '5.0 Megapixel (Độ nét 3K QHD)';
+        techTags.push('Độ Nét 3K (5MP)');
+      } else if (name.includes('2k+') || name.includes('4mp')) {
+        resText = '4.0 Megapixel (Độ nét 2K+ Quad HD)';
+        techTags.push('Độ Nét 2K+ (4MP)');
+      } else if (name.includes('2k') || name.includes('3mp')) {
+        resText = '3.0 Megapixel (Độ nét 2K Super HD)';
+        techTags.push('Độ Nét 2K (3MP)');
+      } else {
+        techTags.push('Độ Nét Full HD 1080P');
+      }
+
+      if (name.includes('2 mắt') || name.includes('dual') || name.includes('2 lens')) {
+        techTags.push('Camera 2 Mắt Kép (Dual Lens)', '1 Cố Định + 1 Xoay Quét');
+        fitTags.push('Ngã Ba & Góc Khuất Rộng');
+      }
+
+      let nightText = 'Hồng ngoại thông minh tầm xa 30m';
+      if (name.includes('wizcolor') || name.includes('full-color') || name.includes('đêm có màu') || name.includes('color') || name.includes('pv')) {
+        techTags.push('WizColor / Full-Color Ban Đêm Có Màu 24/7');
+        nightText = 'Đèn LED trợ sáng có màu 24/7 + Hồng ngoại 30m';
+      } else {
+        techTags.push('Hồng Ngoại Ban Đêm Smart IR 30m');
+      }
+
+      let ptText = 'Ống kính cố định góc rộng 108°';
+      if (name.includes('quay quét') || name.includes('360') || name.includes('pts') || name.includes('pt') || name.includes('ranger') || name.includes('cruiser') || name.includes('c8c') || name.includes('h80x') || name.includes('h3') || name.includes('h5') || name.includes('p3') || name.includes('p5')) {
+        techTags.push('Quay Quét 360° Toàn Cảnh', 'Tự Động Bám Đuổi Chuyển Động');
+        ptText = 'Quay ngang 355 độ, Quay dọc 90 độ (Bao quát toàn cảnh)';
+      }
+
+      if (name.includes('ai') || name.includes('pro') || name.includes('nhận diện') || name.includes('human')) {
+        techTags.push('AI Nhận Diện Người & Phương Tiện');
+      } else {
+        techTags.push('Phát Hiện Chuyển Động Thông Minh');
+      }
+
+      let audioText = 'Tích hợp Micro lọc ồn ghi âm';
+      if (name.includes('loa') || name.includes('mic') || name.includes('đàm thoại') || name.includes('2 chiều') || name.includes('pv')) {
+        techTags.push('Đàm Thoại Âm Thanh 2 Chiều', 'Còi Hú & Đèn Chớp Báo Động');
+        audioText = 'Đàm thoại 2 chiều (Loa to + Micro khử ồn AI)';
+      }
+
+      let connText = 'Wi-Fi 2.4GHz + Cổng LAN RJ45';
+      if (name.includes('wifi 6')) {
+        techTags.push('Chuẩn Wi-Fi 6 Siêu Tốc Bắt Sóng Xa');
+        connText = 'Wi-Fi 6 thế hệ mới (2.4GHz) + Cổng LAN RJ45';
+      } else if (name.includes('poe')) {
+        techTags.push('Cấp Nguồn PoE Qua Dây Mạng');
+        connText = 'Cáp mạng LAN PoE (Cấp nguồn và tín hiệu 1 dây)';
+      } else if (name.includes('4g') || name.includes('sim')) {
+        techTags.push('Lắp SIM 4G LTE Không Cần Mạng Dây');
+        connText = 'SIM 4G LTE (Hỗ trợ tất cả nhà mạng Viettel, Vina, Mobi)';
+      }
+
+      let powerText = 'DC 12V/1A (Kèm củ nguồn chính hãng)';
+      if (name.includes('solar') || name.includes('năng lượng mặt trời') || name.includes('pin') || name.includes('cell')) {
+        techTags.push('Pin Sạc Năng Lượng Mặt Trời');
+        powerText = 'Pin Lithium dung lượng lớn + Tấm sạc Solar tự nạp';
+        fitTags.push('Trang Trại & Vườn Cây Không Có Điện');
+      } else if (name.includes('poe')) {
+        powerText = 'PoE 48V (IEEE 802.3af) hoặc Nguồn phụ DC 12V';
+      }
+
+      techTags.push('Chuẩn Nén Video H.265 Tiết Kiệm Bộ Nhớ');
+      techTags.push('Khe Cắm Thẻ Nhớ MicroSD Tối Đa 256GB');
+
+      const isOutdoor = cat.includes('ngoài trời') || parent.includes('ngoài trời') || name.includes('ngoài trời') || name.includes('cruiser') || name.includes('bullet') || name.includes('hfw') || name.includes('h80x') || name.includes('c8c');
+
+      if (isOutdoor) {
+        materialTags.push('Vỏ Kim Loại + Nhựa Chống Cháy Cao Cấp', 'Kháng Nước & Bụi Chuẩn IP66 / IP67', 'Chân Đế Kim Loại Kháng Gỉ Sét', 'Chống Chịu Nắng Mưa & Bão Gió');
+        fitTags.push('Cổng Nhà & Sân Vườn Biệt Thự', 'Bãi Đỗ Xe & Nhà Xe Công Ty', 'Mặt Tiền Cửa Hàng & Shop Thời Trang', 'Kho Bãi, Xưởng Sản Xuất & Trang Trại');
+      } else {
+        materialTags.push('Nhựa ABS Nguyên Sinh Cao Cấp', 'Chống Cháy & Bền Màu Không Bạc', 'Thiết Kế Hiện Đại, Nhỏ Gọn Tinh Tế', 'Khớp Xoay Êm Ái Không Phát Tiếng Ồn');
+        fitTags.push('Phòng Khách & Cửa Chính Gia Đình', 'Phòng Trẻ Nhỏ & Người Lớn Tuổi', 'Quầy Thu Ngân & Kệ Hàng Cửa Hàng', 'Văn Phòng Làm Việc & Lớp Học');
+      }
+
+      specsTable.push(
+        { k: 'Cảm biến & Độ phân giải', v: resText },
+        { k: 'Góc quan sát & Xoay quét', v: ptText },
+        { k: 'Tầm nhìn ban đêm', v: nightText },
+        { k: 'Âm thanh & Báo động', v: audioText },
+        { k: 'Công nghệ thông minh', v: 'AI phát hiện dáng người/xe, Cảnh báo âm thanh bất thường' },
+        { k: 'Chuẩn nén hình ảnh', v: 'H.265 / H.264 (Tiết kiệm 50% dung lượng thẻ nhớ & băng thông)' },
+        { k: 'Phương thức lưu trữ', v: 'Khe thẻ nhớ MicroSD tối đa 256GB, Lưu trữ Cloud hoặc Đầu ghi NVR' },
+        { k: 'Kết nối mạng', v: connText },
+        { k: 'Chất liệu vỏ máy', v: isOutdoor ? 'Vỏ kim loại + nhựa kỹ thuật, Kháng nước IP67' : 'Nhựa ABS cao cấp chống cháy' },
+        { k: 'Nguồn điện hoạt động', v: powerText },
+        { k: 'Nhiệt độ môi trường', v: '-30°C đến +60°C (Độ ẩm dưới 95%)' },
+        { k: 'Chính sách bảo hành', v: '24 tháng 1 đổi 1 tận nơi chính hãng' }
+      );
+    }
+
+    return { techTags, fitTags, materialTags, specsTable };
+  }
+
   // Open Quick View Modal
   function openQuickView(prod) {
     state.currentModalProduct = prod;
@@ -932,7 +1375,10 @@
       }
     }
 
-    // Specs List
+    // Generate Rich Metadata (Tags, Suitability, Material, Detailed Specs)
+    const richMeta = generateProductRichMetadata(prod);
+
+    // Tab 1: Specs Highlights
     if (el.modalSpecsList) {
       let specs = prod.features || [];
       if (specs.length === 0) {
@@ -949,6 +1395,51 @@
         )
         .join('');
     }
+
+    // Tab 2: Technology, Suitability, and Material Tags
+    if (el.modalTechTags) {
+      el.modalTechTags.innerHTML = richMeta.techTags
+        .map(t => `<span class="tag-chip chip-tech">#${t}</span>`)
+        .join('');
+    }
+    if (el.modalFitTags) {
+      el.modalFitTags.innerHTML = richMeta.fitTags
+        .map(t => `<span class="tag-chip chip-fit">#${t}</span>`)
+        .join('');
+    }
+    if (el.modalMaterialTags) {
+      el.modalMaterialTags.innerHTML = richMeta.materialTags
+        .map(t => `<span class="tag-chip chip-material">#${t}</span>`)
+        .join('');
+    }
+
+    // Tab 3: Detailed Tech Specs Table
+    if (el.modalTechTable) {
+      el.modalTechTable.innerHTML = `
+        <table class="tech-table">
+          <tbody>
+            ${richMeta.specsTable
+              .map(
+                row => `
+              <tr>
+                <td class="tech-table-label">${row.k}</td>
+                <td class="tech-table-val">${row.v}</td>
+              </tr>
+            `
+              )
+              .join('')}
+          </tbody>
+        </table>
+      `;
+    }
+
+    // Reset default active tab to 'tab-specs'
+    document.querySelectorAll('.modal-tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.modal-tab-pane').forEach(p => p.classList.remove('active'));
+    const defaultTabBtn = document.querySelector('.modal-tab-btn[data-tab="tab-specs"]');
+    const defaultTabPane = document.getElementById('tab-specs');
+    if (defaultTabBtn) defaultTabBtn.classList.add('active');
+    if (defaultTabPane) defaultTabPane.classList.add('active');
 
     if (el.quickViewModal) {
       el.quickViewModal.classList.add('active');
@@ -982,12 +1473,10 @@
     window.open(zaloUrl, '_blank');
   }
 
-  // Share URL helper
+  // Share URL helper - luôn tạo link chuẩn domain chugia.shop để khi quét mã QR trên điện thoại mở đúng link
   function getProductShareUrl(prod) {
-    if (!prod) return window.location.href;
-    const url = new URL(window.location.href);
-    url.hash = `prod-${prod.id}`;
-    return url.toString();
+    if (!prod) return 'https://chugia.shop/san-pham.html';
+    return `https://chugia.shop/san-pham.html#prod-${prod.id}`;
   }
 
   // Open QR Share Modal & Generate Poster
@@ -1112,7 +1601,8 @@
 
       // Draw QR badge at bottom right of card
       drawQrCornerBadge(ctx, cardX + cardW - 105, cardY + cardH - 105, qrDiv);
-      // Draw Chu Gia watermark at bottom left of card (covers old watermark)
+      // Draw Chu Gia watermark at top left and bottom left of card
+      drawWatermarkCornerBadge(ctx, cardX + 12, cardY + 12);
       drawWatermarkCornerBadge(ctx, cardX + 12, cardY + cardH - 46);
       drawPosterDetails(ctx, prod, width, height);
     };
@@ -1120,6 +1610,7 @@
     prodImg.onerror = function () {
       // Fallback if image blocked
       drawQrCornerBadge(ctx, cardX + cardW - 105, cardY + cardH - 105, qrDiv);
+      drawWatermarkCornerBadge(ctx, cardX + 12, cardY + 12);
       drawWatermarkCornerBadge(ctx, cardX + 12, cardY + cardH - 46);
       drawPosterDetails(ctx, prod, width, height);
     };

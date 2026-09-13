@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liên Hệ Tư Vấn &amp; Khảo Sát Lắp Đặt Camera An Ninh | Chu Gia Security</title>
+  <meta name="description" content="Liên hệ Chu Gia Security - Hotline/Zalo: 0941 204 125. Tư vấn giải pháp camera an ninh, nhà thông minh, chuông cửa có hình & khóa vân tay chuyên nghiệp, khảo sát tận nơi miễn phí." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="alternate icon" type="image/png" href="images/favicon.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Liên Hệ Chu Gia Security | Tư Vấn &amp; Khảo Sát Camera Miễn Phí" />
+  <meta property="og:description" content="Hotline/Zalo: 0941 204 125. Khảo sát tận nơi miễn phí, báo giá minh bạch, bảo hành 24 tháng 1 đổi 1." />
+  <meta property="og:image" content="https://chugia.shop/images/chugia_og_share.png" />
+  <meta property="og:url" content="https://chugia.shop/lien-he.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Chu Gia Security" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://chugia.shop/images/chugia_og_share.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/products.css" />
+
+  <style>
+    /* Contact Page Custom Styles */
+    .contact-hero {
+      padding: 130px 0 50px;
+      text-align: center;
+      position: relative;
+      background: radial-gradient(circle at 50% 20%, rgba(0, 132, 255, 0.15) 0%, transparent 65%);
+    }
+
+    .contact-hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 132, 255, 0.12);
+      border: 1px solid rgba(0, 132, 255, 0.3);
+      padding: 6px 16px;
+      border-radius: 30px;
+      color: #38bdf8;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .contact-hero-title {
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 14px;
+      line-height: 1.25;
+    }
+
+    .contact-hero-desc {
+      font-size: 1.05rem;
+      color: #94a3b8;
+      max-width: 660px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .contact-layout {
+      padding: 40px 0 90px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    /* Left Info Cards */
+    .contact-info-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-card {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 24px;
+      backdrop-filter: blur(12px);
+      transition: all 0.3s ease;
+    }
+
+    .contact-card:hover {
+      border-color: rgba(0, 132, 255, 0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .contact-card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(0, 132, 255, 0.15);
+      color: #38bdf8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .contact-card-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .contact-card-desc {
+      font-size: 0.9rem;
+      color: #94a3b8;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .contact-card-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #0084ff;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .contact-card-action:hover {
+      color: #38bdf8;
+      text-decoration: underline;
+    }
+
+    /* Commitment Banner */
+    .commit-box {
+      background: linear-gradient(135deg, rgba(0, 132, 255, 0.1) 0%, rgba(22, 163, 74, 0.1) 100%);
+      border: 1px solid rgba(0, 132, 255, 0.25);
+      border-radius: 16px;
+      padding: 22px;
+    }
+
+    .commit-box-title {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #38bdf8;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .commit-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .commit-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: #cbd5e1;
+    }
+
+    .commit-item::before {
+      content: '✓';
+      color: #4ade80;
+      font-weight: 800;
+    }
+
+    /* Form Right Box */
+    .contact-form-card {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 36px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    }
+
+    .form-header-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .form-header-sub {
+      font-size: 0.9rem;
+      color: #94a3b8;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #cbd5e1;
+    }
+
+    .form-label span {
+      color: #ef4444;
+    }
+
+    .form-input, .form-select, .form-textarea {
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
+      padding: 12px 16px;
+      color: #ffffff;
+      font-size: 0.92rem;
+      font-family: inherit;
+      transition: all 0.2s ease;
+      outline: none;
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: #0084ff;
+      background: rgba(30, 41, 59, 0.9);
+      box-shadow: 0 0 0 3px rgba(0, 132, 255, 0.2);
+    }
+
+    .form-textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .btn-submit-contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #0084ff 0%, #0056b3 100%);
+      color: #ffffff;
+      border: none;
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      box-shadow: 0 6px 20px rgba(0, 132, 255, 0.4);
+      margin-top: 6px;
+    }
+
+    .btn-submit-contact:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 132, 255, 0.6);
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      padding: 60px 0 90px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(10, 15, 28, 0.5);
+    }
+
+    .faq-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .faq-title {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 20px;
+    }
+
+    .faq-q {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-bottom: 8px;
+    }
+
+    .faq-a {
+      font-size: 0.88rem;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header" id="siteHeader">
+    <div class="container header-container">
+      <!-- Logo -->
+      <a href="index.html" class="brand-logo logo" title="Trang chủ Chu Gia Security">
+        <img src="images/logo_chugia_horizontal.svg" alt="Chu Gia Security Logo" class="brand-logo-img" />
+      </a>
+
+      <!-- Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Trang Chủ</a>
+        <a href="san-pham.html" class="nav-link">Sản Phẩm (460+)</a>
+        <a href="giai-phap.html" class="nav-link">Giải Pháp &amp; Phần Mềm ↗</a>
+        <a href="index.html#the-manh" class="nav-link">Vì Sao Chọn Chu Gia</a>
+        <a href="lien-he.html" class="nav-link active">Liên Hệ</a>
+        <a href="index.html#du-toan" class="nav-link nav-link-mobile-cta">🧮 Dự Toán Chi Phí Lắp Đặt</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="header-actions">
+        <a href="index.html#du-toan" class="btn btn-dutoan-header">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+            <line x1="8" y1="6" x2="16" y2="6"></line>
+            <line x1="16" y1="14" x2="16" y2="18"></line>
+            <path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path>
+            <path d="M12 14h.01"></path><path d="M8 14h.01"></path>
+            <path d="M12 18h.01"></path><path d="M8 18h.01"></path>
+          </svg>
+          <span>Dự Toán Giá</span>
+        </a>
+        <a href="tel:0941204125" class="btn btn-primary btn-sm">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>0941 204 125</span>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="contact-hero">
+    <div class="container">
+      <div class="contact-hero-tag">
+        <span>⚡ HỖ TRỢ KỸ THUẬT &amp; TƯ VẤN 24/7</span>
+      </div>
+      <h1 class="contact-hero-title">Liên Hệ Chu Gia Security</h1>
+      <p class="contact-hero-desc">
+        Đội ngũ kỹ sư an ninh sẵn sàng hỗ trợ khảo sát thực địa miễn phí, tư vấn giải pháp camera giám sát, chuông cửa có hình &amp; hệ thống điện thông minh tối ưu chi phí nhất.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT DETAILS & FORM ================= -->
+  <section class="contact-layout">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <!-- Left: Contact Information Cards -->
+        <div class="contact-info-wrap">
+          
+          <!-- Hotline / Zalo -->
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <h3 class="contact-card-title">Hotline &amp; Zalo Tư Vấn 24/7</h3>
+            <p class="contact-card-desc">Tư vấn chọn mẫu camera phù hợp nhu cầu, giải đáp kỹ thuật và tiếp nhận yêu cầu khảo sát lắp đặt ngay.</p>
+            <div style="display: flex; gap: 16px;">
+              <a href="tel:0941204125" class="contact-card-action">📞 Gọi 0941 204 125</a>
+              <a href="https://zalo.me/0941204125" target="_blank" rel="noopener noreferrer" class="contact-card-action">💬 Chat Zalo</a>
+            </div>
+          </div>
+
+          <!-- Trụ sở & Dịch vụ tận nơi -->
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <h3 class="contact-card-title">Phạm Vi Lắp Đặt &amp; Khảo Sát</h3>
+            <p class="contact-card-desc">
+              <strong>Công ty TNHH Đầu tư và Thương mại Chu Gia</strong><br>
+              Khảo sát và thi công lắp đặt camera, mạng LAN, chuông hình tận nơi tại Hà Nội &amp; các tỉnh lân cận. Giao hàng toàn quốc kiểm tra ưng ý mới thanh toán.
+            </p>
+            <span style="font-size: 0.85rem; color: #38bdf8; font-weight: 600;">Website chính thức: chugia.shop</span>
+          </div>
+
+          <!-- Commitments -->
+          <div class="commit-box">
+            <div class="commit-box-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <span>Cam Kết Chất Lượng Chu Gia</span>
+            </div>
+            <ul class="commit-list">
+              <li class="commit-item">100% Sản phẩm chính hãng IMOU, EZVIZ, DAHUA, HIKVISION</li>
+              <li class="commit-item">Bảo hành 24 tháng chính hãng - 1 đổi 1 trong 30 ngày</li>
+              <li class="commit-item">Khảo sát tận nơi miễn phí, không phát sinh chi phí ẩn</li>
+              <li class="commit-item">Hỗ trợ kỹ thuật từ xa qua Ultraview &amp; điện thoại trọn đời</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Right: Inquiry Form with Zalo Integration -->
+        <div class="contact-form-card">
+          <h2 class="form-header-title">Gửi Yêu Cầu Tư Vấn Nhanh</h2>
+          <p class="form-header-sub">Điền thông tin bên dưới, hệ thống sẽ kết nối trực tiếp đến Zalo kỹ thuật viên để nhận báo giá &amp; ưu đãi trong 5 phút.</p>
+
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label class="form-label" for="contactName">Họ và Tên <span>*</span></label>
+              <input type="text" id="contactName" class="form-input" placeholder="Ví dụ: Anh Tuấn, Chị Mai..." required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contactPhone">Số Điện Thoại / Zalo <span>*</span></label>
+              <input type="tel" id="contactPhone" class="form-input" placeholder="Ví dụ: 0941 204 125" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contactService">Nhu Cầu Lắp Đặt</label>
+              <select id="contactService" class="form-select">
+                <option value="Camera Gia Đình / Phòng Trọ">Camera gia đình / phòng khách / cửa chính</option>
+                <option value="Camera Cửa Hàng / Quán Cafe">Camera cửa hàng, shop thời trang, quán cafe</option>
+                <option value="Camera Kho Xưởng / Văn Phòng">Camera nhà xưởng, kho bãi, văn phòng công ty</option>
+                <option value="Chuông Cửa Có Hình & Khóa Điện Tử">Chuông cửa có hình &amp; Khóa vân tay thông minh</option>
+                <option value="Đầu Ghi Hình & Switch PoE Dự Án">Hệ thống đầu ghi &amp; Switch PoE chuyên dụng</option>
+                <option value="Khác">Tư vấn giải pháp khác</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contactAddress">Khu Vực Lắp Đặt</label>
+              <input type="text" id="contactAddress" class="form-input" placeholder="Ví dụ: Quận Cầu Giấy, Hà Nội..." />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contactNote">Ghi Chú Thêm</label>
+              <textarea id="contactNote" class="form-textarea" placeholder="Số lượng mắt camera dự kiến, vị trí cần quan sát hoặc yêu cầu đặc biệt..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit-contact" id="btnSubmitContact">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              <span>Gửi Yêu Cầu Qua Zalo (Phản Hồi Ngay)</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ SECTION ================= -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="faq-header">
+        <h2 class="faq-title">Câu Hỏi Thường Gặp</h2>
+        <p style="color: #94a3b8; font-size: 0.95rem;">Giải đáp các thắc mắc phổ biến của khách hàng khi lắp đặt thiết bị tại Chu Gia Security</p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h4 class="faq-q">1. Khảo sát tận nơi có mất phí không?</h4>
+          <p class="faq-a">Hoàn toàn miễn phí! Kỹ thuật viên của Chu Gia sẽ đến tận nơi đo đạc góc nhìn, tư vấn vị trí đặt camera tối ưu và lên báo giá chi tiết mà không thu bất kỳ khoản phí nào.</p>
+        </div>
+        <div class="faq-item">
+          <h4 class="faq-q">2. Thời gian lắp đặt trong bao lâu?</h4>
+          <p class="faq-a">Với gói 1-4 camera wifi gia đình, thời gian thi công chỉ từ 1 - 2 giờ. Với hệ thống kho xưởng dây mạng âm tường, hoàn thành trong ngày làm việc.</p>
+        </div>
+        <div class="faq-item">
+          <h4 class="faq-q">3. Chính sách bảo hành như thế nào?</h4>
+          <p class="faq-a">Tất cả sản phẩm đều được bảo hành chính hãng 24 tháng theo số serial của hãng. Nếu thiết bị lỗi phần cứng trong 30 ngày đầu sẽ được đổi mới ngay lập tức.</p>
+        </div>
+        <div class="faq-item">
+          <h4 class="faq-q">4. Xem camera trên điện thoại có dễ không?</h4>
+          <p class="faq-a">Cực kỳ đơn giản! Kỹ thuật viên sẽ cài sẵn ứng dụng tiếng Việt (Imou Life, EZVIZ, DMSS) trên điện thoại của tất cả thành viên trong gia đình và hướng dẫn chi tiết cách sử dụng.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-col">
+        <img src="images/logo_chugia_horizontal.svg" alt="Chu Gia Security Logo" class="footer-logo" />
+        <p class="footer-desc">
+          Công ty TNHH Đầu tư và Thương mại Chu Gia — Nhà phân phối và cung cấp giải pháp an ninh, camera giám sát &amp; thiết bị thông minh chính hãng.
+        </p>
+        <div class="footer-contact">
+          <p>📞 Hotline/Zalo: <strong>0941 204 125</strong></p>
+          <p>🌐 Website: <strong>chugia.shop</strong></p>
+          <p>🛡️ Bảo hành 24 tháng 1 đổi 1 tận nơi</p>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Liên Kết Nhanh</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li><a href="san-pham.html">Kho Sản Phẩm (460+)</a></li>
+          <li><a href="giai-phap.html">Giải Pháp Doanh Nghiệp</a></li>
+          <li><a href="lien-he.html">Liên Hệ &amp; Khảo Sát</a></li>
+          <li><a href="index.html#du-toan">Dự Toán Giá Lắp Đặt</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Dòng Sản Phẩm</h4>
+        <ul class="footer-links">
+          <li><a href="san-pham.html?category=52930">Camera Wifi IMOU</a></li>
+          <li><a href="san-pham.html?category=52931">Camera Wifi EZVIZ</a></li>
+          <li><a href="san-pham.html?category=52932">Camera IP DAHUA</a></li>
+          <li><a href="san-pham.html?category=52934">Đầu Ghi NVR / DVR</a></li>
+          <li><a href="san-pham.html?category=52945">Switch PoE Thông Dụng</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p>&copy; 2026 Chu Gia Security (chugia.shop). Bản quyền thuộc về Công ty TNHH Đầu tư và Thương mại Chu Gia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Form Zalo submission
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('contactName').value.trim();
+      const phone = document.getElementById('contactPhone').value.trim();
+      const service = document.getElementById('contactService').value;
+      const address = document.getElementById('contactAddress').value.trim();
+      const note = document.getElementById('contactNote').value.trim();
+
+      const text = `Xin chào Chu Gia Security! Tôi cần tư vấn lắp đặt:\n- Họ tên: ${name}\n- Số điện thoại: ${phone}\n- Nhu cầu: ${service}\n- Khu vực: ${address || 'Chưa cung cấp'}\n- Ghi chú: ${note || 'Không có'}\n(Gửi từ chugia.shop/lien-he.html)`;
+      const zaloUrl = `https://zalo.me/0941204125?text=${encodeURIComponent(text)}`;
+      window.open(zaloUrl, '_blank');
+    });
+
+    // Mobile nav toggle
+    const toggle = document.getElementById('mobileToggle');
+    const menu = document.getElementById('navMenu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+      });
+    }
+  </script>
+</body>
+</html>
