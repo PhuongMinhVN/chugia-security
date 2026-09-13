@@ -1819,6 +1819,7 @@ Nhờ Chu Gia liên hệ tư vấn và xếp lịch khảo sát / lắp đặt s
   }
 
   function startHeroTimer() {
+    if (!heroCarouselSlides || !heroCarouselSlides.length) return;
     if (heroSlideTimer) clearInterval(heroSlideTimer);
     if (!isHeroVisible) return; // Tạm dừng nếu hero đang nằm ngoài màn hình (user đã cuộn xuống dưới)
     heroSlideTimer = setInterval(() => {
