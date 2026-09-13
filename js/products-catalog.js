@@ -34,6 +34,8 @@
     searchHeroInput: document.getElementById('catalogSearchHero'),
     searchHeroClear: document.getElementById('catalogSearchClear'),
     quickPills: document.getElementById('quickCategoryPills'),
+    pillNavPrev: document.getElementById('pillNavPrev'),
+    pillNavNext: document.getElementById('pillNavNext'),
     sidebarCats: document.getElementById('sidebarCategoryList'),
     brandFilters: document.getElementById('brandFilters'),
     priceRadios: document.querySelectorAll('input[name="priceFilter"]'),
@@ -95,40 +97,94 @@
         setTimeout(() => openQuickView(target), 400);
       }
     }
+
+    // Initial pill position & nav button update
+    setTimeout(() => {
+      const activePill = el.quickPills?.querySelector('.quick-pill.active');
+      if (activePill) scrollPillToCenter(activePill);
+      updatePillNavButtons();
+    }, 120);
+  }
+
+  // Smoothly center active category pill horizontally in the bar so text never clips
+  function scrollPillToCenter(pillElement) {
+    if (!pillElement || !el.quickPills) return;
+
+    const container = el.quickPills;
+    const containerRect = container.getBoundingClientRect();
+    const pillRect = pillElement.getBoundingClientRect();
+
+    // Calculate relative horizontal center of pill inside container
+    const pillCenterRelativeToContainer = (pillRect.left - containerRect.left) + (pillRect.width / 2);
+    // Offset needed to align pill center with container center
+    const offsetToCenter = pillCenterRelativeToContainer - (containerRect.width / 2);
+
+    const targetScrollLeft = container.scrollLeft + offsetToCenter;
+
+    container.scrollTo({
+      left: Math.max(0, targetScrollLeft),
+      behavior: 'smooth'
+    });
+  }
+
+  // Update navigation scroll arrow button states (disabled/enabled)
+  function updatePillNavButtons() {
+    if (!el.quickPills || !el.pillNavPrev || !el.pillNavNext) return;
+    const { scrollLeft, scrollWidth, clientWidth } = el.quickPills;
+
+    if (scrollWidth <= clientWidth + 2) {
+      el.pillNavPrev.classList.add('disabled');
+      el.pillNavNext.classList.add('disabled');
+      return;
+    }
+
+    if (scrollLeft <= 5) {
+      el.pillNavPrev.classList.add('disabled');
+    } else {
+      el.pillNavPrev.classList.remove('disabled');
+    }
+
+    if (scrollLeft + clientWidth >= scrollWidth - 6) {
+      el.pillNavNext.classList.add('disabled');
+    } else {
+      el.pillNavNext.classList.remove('disabled');
+    }
   }
 
   // Render Top Quick Pills
   function renderQuickPills() {
     if (!el.quickPills) return;
 
-    // Top categories to highlight in pills
-    const topPills = [
-      { id: -1, name: 'Tất cả sản phẩm', count: state.products.length },
-      { id: 52930, name: 'Camera Wifi IMOU', count: 33 },
-      { id: 52929, name: 'Camera Wifi DAHUA', count: 31 },
-      { id: 52931, name: 'Camera Wifi EZVIZ', count: 16 },
-      { id: 52932, name: 'Camera IP DAHUA', count: 36 },
-      { id: 52936, name: 'Camera IP HIKVISION', count: 28 },
-      { id: 52945, name: 'Switch POE', count: 34 },
-      { id: 52940, name: 'Chuông cửa có hình', count: 26 },
-      { id: 52941, name: 'Khóa cửa điện tử', count: 25 },
-      { id: 52948, name: 'Thiết bị mạng RUIJIE', count: 25 },
-      { id: 53652, name: 'Thẻ nhớ camera', count: 6 },
-      { id: 53301, name: 'Ổ cứng HDD', count: 9 }
-    ];
+    // Featured top categories order
+    const featuredOrder = [52930, 52929, 52931, 52932, 52936, 52945, 52940, 52941, 52948, 53652, 53301];
+    const sortedCats = [...state.categories].sort((a, b) => {
+      const idxA = featuredOrder.indexOf(a.id);
+      const idxB = featuredOrder.indexOf(b.id);
+      if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+      if (idxA !== -1) return -1;
+      if (idxB !== -1) return 1;
+      return b.count - a.count;
+    });
 
-    let html = '';
-    topPills.forEach(p => {
-      const activeCls = state.selectedCategoryId === p.id ? 'active' : '';
+    let html = `
+      <button class="quick-pill ${state.selectedCategoryId === -1 ? 'active' : ''}" data-cat-id="-1">
+        <span>Tất cả sản phẩm</span>
+        <span class="quick-pill-badge">${state.products.length}</span>
+      </button>
+    `;
+
+    sortedCats.forEach(cat => {
+      const activeCls = state.selectedCategoryId === cat.id ? 'active' : '';
       html += `
-        <button class="quick-pill ${activeCls}" data-cat-id="${p.id}">
-          <span>${p.name}</span>
-          <span class="quick-pill-badge">${p.count}</span>
+        <button class="quick-pill ${activeCls}" data-cat-id="${cat.id}">
+          <span>${cat.name}</span>
+          <span class="quick-pill-badge">${cat.count}</span>
         </button>
       `;
     });
 
     el.quickPills.innerHTML = html;
+    updatePillNavButtons();
   }
 
   // Render Sidebar Categories with Counts
@@ -159,11 +215,63 @@
   function bindEvents() {
     // Quick Category Pills
     if (el.quickPills) {
+      // Drag to scroll on desktop
+      let isMouseDown = false;
+      let startX = 0;
+      let scrollLeftStart = 0;
+      let hasDragged = false;
+
+      el.quickPills.addEventListener('mousedown', e => {
+        isMouseDown = true;
+        hasDragged = false;
+        startX = e.pageX - el.quickPills.offsetLeft;
+        scrollLeftStart = el.quickPills.scrollLeft;
+      });
+
+      window.addEventListener('mousemove', e => {
+        if (!isMouseDown) return;
+        const x = e.pageX - el.quickPills.offsetLeft;
+        const walk = (x - startX);
+        if (Math.abs(walk) > 5) {
+          hasDragged = true;
+        }
+        el.quickPills.scrollLeft = scrollLeftStart - walk;
+      });
+
+      window.addEventListener('mouseup', () => {
+        isMouseDown = false;
+      });
+
+      // Click pill to activate & auto-scroll to center
       el.quickPills.addEventListener('click', e => {
+        if (hasDragged) {
+          e.preventDefault();
+          e.stopPropagation();
+          hasDragged = false;
+          return;
+        }
         const btn = e.target.closest('.quick-pill');
         if (!btn) return;
         const catId = parseInt(btn.dataset.catId, 10);
         setCategory(catId);
+        scrollPillToCenter(btn);
+      });
+
+      // Update arrow states on scroll & resize
+      el.quickPills.addEventListener('scroll', updatePillNavButtons);
+      window.addEventListener('resize', updatePillNavButtons);
+    }
+
+    // Pill Navigation Scroll Buttons
+    if (el.pillNavPrev && el.quickPills) {
+      el.pillNavPrev.addEventListener('click', () => {
+        el.quickPills.scrollBy({ left: -280, behavior: 'smooth' });
+      });
+    }
+
+    if (el.pillNavNext && el.quickPills) {
+      el.pillNavNext.addEventListener('click', () => {
+        el.quickPills.scrollBy({ left: 280, behavior: 'smooth' });
       });
     }
 
@@ -365,16 +473,28 @@
     state.currentPage = 1;
 
     // Update Quick Pills UI
-    document.querySelectorAll('.quick-pill').forEach(btn => {
-      const pid = parseInt(btn.dataset.catId, 10);
-      btn.classList.toggle('active', pid === catId);
-    });
+    let activePill = null;
+    if (el.quickPills) {
+      el.quickPills.querySelectorAll('.quick-pill').forEach(btn => {
+        const pid = parseInt(btn.dataset.catId, 10);
+        const isActive = (pid === catId);
+        btn.classList.toggle('active', isActive);
+        if (isActive) activePill = btn;
+      });
+    }
+
+    // Always scroll active pill to center so text is never clipped or overflowing
+    if (activePill) {
+      scrollPillToCenter(activePill);
+    }
 
     // Update Sidebar UI
-    document.querySelectorAll('.cat-filter-item').forEach(item => {
-      const pid = parseInt(item.dataset.catId, 10);
-      item.classList.toggle('active', pid === catId);
-    });
+    if (el.sidebarCats) {
+      el.sidebarCats.querySelectorAll('.cat-filter-item').forEach(item => {
+        const pid = parseInt(item.dataset.catId, 10);
+        item.classList.toggle('active', pid === catId);
+      });
+    }
 
     applyFilters();
   }
