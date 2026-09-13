@@ -691,6 +691,62 @@ a.floating-hud-badge.hud-top-right:hover {
   font-size: 0.9rem;
 }
 
+/* Nổi bật đặc quyền Mở Khóa Cổng Từ Xa */
+.hero-chip.hero-chip-highlight {
+  background: linear-gradient(135deg, rgba(255, 122, 0, 0.22) 0%, rgba(255, 60, 0, 0.12) 100%) !important;
+  border: 1.5px solid #FF7A00 !important;
+  box-shadow: 0 0 16px rgba(255, 122, 0, 0.35), inset 0 0 10px rgba(255, 122, 0, 0.12) !important;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-chip.hero-chip-highlight .chip-text-highlight,
+.hero-chip.hero-chip-highlight strong {
+  color: #FFB347 !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.2px;
+  text-shadow: 0 0 10px rgba(255, 122, 0, 0.5);
+}
+
+.chip-icon-highlight {
+  font-size: 1.15rem;
+  filter: drop-shadow(0 0 6px #FF7A00);
+  animation: keyPulse 2.2s infinite ease-in-out;
+  display: inline-block;
+}
+
+.chip-hot-tag {
+  background: linear-gradient(135deg, #FF7A00, #FF3D00);
+  color: #FFFFFF;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  margin-left: auto;
+  box-shadow: 0 2px 8px rgba(255, 61, 0, 0.5);
+  white-space: nowrap;
+}
+
+.highlight-gate-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 122, 0, 0.18);
+  color: #FFB347;
+  border: 1px solid rgba(255, 122, 0, 0.6);
+  padding: 1px 7px;
+  border-radius: 5px;
+  font-weight: 800;
+  text-shadow: 0 0 8px rgba(255, 122, 0, 0.4);
+}
+
+@keyframes keyPulse {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.15) rotate(-6deg); }
+}
+
 /* Actions */
 .hero-actions {
   display: flex;
@@ -3730,12 +3786,16 @@ a.floating-hud-badge.hud-top-right:hover {
   }
 
   .hero-badge-tag {
-    font-size: 0.7rem;
-    padding: 4px 10px;
+    font-size: 0.68rem;
+    padding: 5px 10px;
     max-width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    white-space: normal;
+    word-break: break-word;
+    overflow: visible;
+    line-height: 1.32;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
   }
 
   .hero-title {
@@ -3753,30 +3813,49 @@ a.floating-hud-badge.hud-top-right:hover {
   }
 
   .hero-chips {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
     width: 100% !important;
     max-width: 100% !important;
     min-width: 0 !important;
+    margin: 4px 0 6px 0;
   }
 
   .hero-chip {
-    font-size: 0.69rem;
-    padding: 4px 7px;
+    font-size: 0.76rem;
+    padding: 6px 11px;
     min-width: 0 !important;
     max-width: 100% !important;
-    overflow: hidden;
-    white-space: nowrap;
+    width: 100% !important;
+    border-radius: 9px;
+    overflow: visible;
+    white-space: normal;
+    word-break: break-word;
+    display: flex;
+    align-items: center;
     justify-content: flex-start;
+    gap: 8px;
+    box-sizing: border-box;
+    line-height: 1.35;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.09);
   }
 
   .hero-chip span {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
     min-width: 0;
     flex: 1;
+    line-height: 1.35;
+  }
+
+  .hero-chip.hero-chip-highlight {
+    padding: 7px 11px;
+    background: linear-gradient(135deg, rgba(255, 122, 0, 0.26) 0%, rgba(255, 60, 0, 0.15) 100%) !important;
+    border: 1.5px solid #FF7A00 !important;
+    box-shadow: 0 0 16px rgba(255, 122, 0, 0.4) !important;
   }
 
   .hero-slides-wrapper {
