@@ -1024,6 +1024,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const cmsbCamInfo = document.getElementById('cmsbCamInfo');
   const previewBtnDetail = document.getElementById('previewBtnDetail');
   const calcSummaryBox = document.getElementById('calcSummaryBox');
+  const calcPreviewCta = document.getElementById('calcPreviewCta');
+  const cmsbBtnBook = document.getElementById('cmsbBtnBook');
 
   let currentStorageMode = 'card'; // 'card' hoặc 'nvr'
 
@@ -1634,41 +1636,92 @@ document.addEventListener('DOMContentLoaded', () => {
   Object.keys(camQuantities).forEach(id => updateCardUI(id));
   updateCalculator();
 
-  if (btnBookCalc) {
-    btnBookCalc.addEventListener('click', () => {
-      const totalCount = getTotalCamCount();
-      if (totalCount === 0) {
-        alert('Vui lòng chọn ít nhất 1 mắt camera ở Bước 1 để tính dự toán và đặt lịch!');
-        return;
-      }
+  // Xử lý gửi trọn gói dự toán sang tin nhắn Zalo kèm cấu hình chi tiết khách chọn
+  function handleBookPackageZalo() {
+    const totalCount = getTotalCamCount();
+    if (totalCount === 0) {
+      alert('Vui lòng chọn ít nhất 1 mắt camera ở Bước 1 để tính dự toán và đặt lịch!');
+      return;
+    }
 
-      const selectedCams = [];
-      Object.entries(camQuantities).forEach(([id, q]) => {
-        if (q > 0) {
-          selectedCams.push(`${q}x ${CAMERAS_DATA[id].name}`);
-        }
-      });
-      const camMixText = selectedCams.join(', ');
-      const total = summaryTotalPrice ? summaryTotalPrice.textContent : '';
-
-      let storageNote = '';
-      if (currentStorageMode === 'card') {
-        const cardRadio = document.querySelector('input[name="calc_storage"]:checked');
-        const cardLbl = cardRadio ? cardRadio.getAttribute('data-label') : 'Thẻ nhớ 64GB';
-        storageNote = `${totalCount} thẻ ${cardLbl}`;
-      } else {
-        const hddRadio = document.querySelector('input[name="calc_hdd"]:checked');
-        const nvrRadio = document.querySelector('input[name="calc_nvr"]:checked');
-        const nvrLbl = nvrRadio ? nvrRadio.getAttribute('data-label') : 'Đầu ghi NVR';
-        const hddGB = hddRadio ? hddRadio.getAttribute('data-gb') : '1000';
-        const days = calc247Days(parseInt(hddGB, 10), totalCount);
-        storageNote = `${nvrLbl} + Ổ cứng ${hddGB}GB (Lưu 24/7 ~${days} ngày)`;
+    const camLines = [];
+    let totalCamPriceCalc = 0;
+    Object.entries(camQuantities).forEach(([id, q]) => {
+      if (q > 0) {
+        const cam = CAMERAS_DATA[id];
+        const subtotal = q * cam.price;
+        totalCamPriceCalc += subtotal;
+        camLines.push(`• ${q}x ${cam.fullName || cam.name} (${formatVND(cam.price)}/mắt) = ${formatVND(subtotal)}`);
       }
-      const installRadio = document.querySelector('input[name="calc_install"]:checked');
-      const isSelf = installRadio && parseInt(installRadio.value, 10) === 0;
-      const installNote = isSelf ? 'Tự lắp đặt tại nhà (0 đ)' : `Công lắp trọn gói (${summaryInstallPrice ? summaryInstallPrice.textContent : '400.000 đ'})`;
-      scrollToContact(`Gói dự toán ${totalCount} camera [${camMixText}] + ${storageNote} + ${installNote} (Tổng trọn gói: ${total})`);
     });
+
+    let storageLine = '';
+    if (currentStorageMode === 'card') {
+      const cardRadio = document.querySelector('input[name="calc_storage"]:checked');
+      const cardPrice = cardRadio ? parseInt(cardRadio.value, 10) : 320000;
+      const cardLbl = cardRadio ? cardRadio.getAttribute('data-label') : 'Thẻ nhớ 64GB';
+      const totalCardPrice = cardPrice * totalCount;
+      storageLine = `• Thẻ nhớ MicroSD: ${totalCount}x ${cardLbl} (${formatVND(cardPrice)}/thẻ) = ${formatVND(totalCardPrice)}`;
+    } else {
+      const nvrRadio = document.querySelector('input[name="calc_nvr"]:checked');
+      const hddRadio = document.querySelector('input[name="calc_hdd"]:checked');
+      const nvrLbl = nvrRadio ? nvrRadio.getAttribute('data-label') : 'Đầu ghi NVR';
+      const nvrPrice = nvrRadio ? parseInt(nvrRadio.value, 10) : 1235000;
+      const hddLbl = hddRadio ? hddRadio.getAttribute('data-label') : 'Ổ cứng 500GB';
+      const hddPrice = hddRadio ? parseInt(hddRadio.value, 10) : 850000;
+      const hddGB = hddRadio ? hddRadio.getAttribute('data-gb') : '500';
+      const days = calc247Days(parseInt(hddGB, 10), totalCount);
+      storageLine = `• Đầu ghi hình: ${nvrLbl} (${formatVND(nvrPrice)})\n• Ổ cứng chuyên dụng 24/7: ${hddLbl} (${formatVND(hddPrice)} - Lưu liên tục ~${days} ngày)`;
+    }
+
+    const installRadio = document.querySelector('input[name="calc_install"]:checked');
+    const isSelf = installRadio && parseInt(installRadio.value, 10) === 0;
+    let installLine = '';
+    if (isSelf) {
+      installLine = '• Dịch vụ: Tự lắp đặt tại nhà (Chu Gia hỗ trợ cài đặt đồng bộ sẵn, 0 đ)';
+    } else {
+      const installTotal = 200000 * totalCount;
+      installLine = `• Dịch vụ: Trọn gói lắp đặt thẩm mỹ tận nhà ${totalCount} mắt (200k/mắt) = ${formatVND(installTotal)}\n  (Bao gồm: Công thợ thẩm mỹ, hộp kỹ thuật, nẹp dây, nguồn nối dài & bảo hành tận nơi 24 tháng)`;
+    }
+
+    const grandTotalText = summaryTotalPrice ? summaryTotalPrice.textContent : '';
+
+    const zaloMsg = 
+`Xin chào Chu Gia Security! Tôi muốn đặt lịch tư vấn & lắp đặt gói camera theo dự toán trên website:
+
+📸 1. CAMERA ĐÃ CHỌN (${totalCount} MẮT):
+${camLines.join('\n')}
+👉 Tiền camera: ${summaryCamPrice ? summaryCamPrice.textContent : formatVND(totalCamPriceCalc)}
+
+💾 2. PHƯƠNG THỨC LƯU TRỮ:
+${storageLine}
+
+🛠️ 3. GÓI DỊCH VỤ LẮP ĐẶT:
+${installLine}
+
+💰 TỔNG DỰ KIẾN TRỌN GÓI: ${grandTotalText}
+
+Nhờ Chu Gia liên hệ tư vấn và xếp lịch khảo sát / lắp đặt sớm giúp tôi nhé. Cảm ơn!`;
+
+    // Tự động sao chép nội dung gói dự toán vào clipboard
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(zaloMsg).catch(() => {});
+    }
+
+    showToast('Đang mở Zalo kết nối với Chu Gia Security... Đã sao chép cấu hình gói!');
+
+    const zaloUrl = `https://zalo.me/0941204125?text=${encodeURIComponent(zaloMsg)}`;
+    window.open(zaloUrl, '_blank');
+  }
+
+  if (btnBookCalc) {
+    btnBookCalc.addEventListener('click', handleBookPackageZalo);
+  }
+  if (calcPreviewCta) {
+    calcPreviewCta.addEventListener('click', handleBookPackageZalo);
+  }
+  if (cmsbBtnBook) {
+    cmsbBtnBook.addEventListener('click', handleBookPackageZalo);
   }
 
   // ---------------- FORM ----------------
