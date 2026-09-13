@@ -1798,6 +1798,11 @@ Nhờ Chu Gia liên hệ tư vấn và xếp lịch khảo sát / lắp đặt s
           fill.style.width = '0%';
         }
       }
+      if (isActive && window.innerWidth <= 768) {
+        try {
+          item.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        } catch (err) {}
+      }
     });
   }
 

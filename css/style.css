@@ -974,14 +974,21 @@ a.floating-hud-badge.hud-top-right:hover {
   box-shadow: 0 0 25px rgba(255, 122, 0, 0.5);
 }
 
-/* Imou-style Segmented Progress Navigation */
+/* Imou-style Segmented Progress Navigation (7 items) */
 .hero-progress-nav {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
   margin-top: 24px;
   position: relative;
   z-index: 15;
+}
+
+@media (max-width: 1180px) and (min-width: 769px) {
+  .hero-progress-nav {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
 }
 
 .hero-progress-item {
@@ -989,12 +996,13 @@ a.floating-hud-badge.hud-top-right:hover {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-md);
-  padding: 10px 14px;
+  padding: 8px 10px;
   cursor: pointer;
   text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
+  min-width: 0;
   transition: all var(--transition);
 }
 
@@ -1041,14 +1049,16 @@ a.floating-hud-badge.hud-top-right:hover {
 .progress-info {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  min-width: 0;
 }
 
 .progress-num {
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 800;
   color: #94A3B8;
   font-family: monospace;
+  flex-shrink: 0;
 }
 
 .hero-progress-item.active .progress-num {
@@ -1056,12 +1066,13 @@ a.floating-hud-badge.hud-top-right:hover {
 }
 
 .progress-title {
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   font-weight: 600;
   color: #CBD5E1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  min-width: 0;
 }
 
 .hero-progress-item.active .progress-title {
@@ -3644,12 +3655,24 @@ a.floating-hud-badge.hud-top-right:hover {
   }
 
   .hero-progress-nav {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 6px;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 8px;
     margin-top: 14px;
+    padding: 4px 2px 8px 2px;
+  }
+
+  .hero-progress-nav::-webkit-scrollbar {
+    display: none;
   }
 
   .hero-progress-item {
+    flex: 0 0 calc(46% - 4px);
+    min-width: 140px;
+    scroll-snap-align: start;
     padding: 7px 10px;
     gap: 5px;
   }
