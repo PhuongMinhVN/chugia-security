@@ -472,10 +472,53 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Tải lười script chia sẻ QR chỉ khi người dùng thực sự cần
+  let shareScriptsLoading = false;
+  function loadShareScripts(cb) {
+    if (window.PRODUCT_SHARE_THUMBS && typeof QRCode !== 'undefined') {
+      if (cb) cb();
+      return;
+    }
+    if (shareScriptsLoading) {
+      if (cb) setTimeout(() => loadShareScripts(cb), 250);
+      return;
+    }
+    shareScriptsLoading = true;
+    let loaded = 0;
+    const checkDone = () => {
+      loaded++;
+      if (loaded >= 2) {
+        shareScriptsLoading = false;
+        if (cb) cb();
+      }
+    };
+    const s1 = document.createElement('script');
+    s1.src = 'js/qrcode.min.js';
+    s1.async = true;
+    s1.onload = checkDone;
+    s1.onerror = checkDone;
+    document.body.appendChild(s1);
+
+    const s2 = document.createElement('script');
+    s2.src = 'js/product-share-assets.js';
+    s2.async = true;
+    s2.onload = checkDone;
+    s2.onerror = checkDone;
+    document.body.appendChild(s2);
+  }
+
   // Mở Popup Chia Sẻ Mã QR & Ảnh Sản Phẩm
   function openShareQrModal(productId) {
     const product = products.find(p => p.id === productId);
     if (!product || !shareQrModal || !qrModalBody) return;
+
+    if (!window.PRODUCT_SHARE_THUMBS || typeof QRCode === 'undefined') {
+      loadShareScripts(() => {
+        if (shareQrModal.classList.contains('active')) {
+          openShareQrModal(productId);
+        }
+      });
+    }
 
     const shareUrl = getProductShareUrl(product.id);
     const heroImgSrc = (window.PRODUCT_SHARE_THUMBS && window.PRODUCT_SHARE_THUMBS[product.id]) 
@@ -613,9 +656,9 @@ document.addEventListener('DOMContentLoaded', () => {
           <div style="display: flex; justify-content: center; gap: 6px; margin-bottom: 18px; flex-wrap: wrap;">
             ${product.specs.map(s => `<span class="spec-badge" style="padding: 4px 8px;">✓ ${s}</span>`).join('')}
           </div>
-          <div style="display: flex; gap: 10px; justify-content: center; margin-bottom: 14px;">
-            <a href="tel:0941204125" class="btn btn-primary">Gọi 0941 204 125</a>
-            <button class="btn btn-outline modal-consult-btn" data-name="${product.name}">Khảo Sát Tận Nhà</button>
+          <div class="modal-cta-group" style="display: flex; gap: 10px; justify-content: center; margin-bottom: 14px; flex-wrap: wrap;">
+            <a href="tel:0941204125" class="btn btn-primary" style="flex: 1; min-width: 135px; justify-content: center; text-align: center;">Gọi 0941 204 125</a>
+            <button class="btn btn-outline modal-consult-btn" data-name="${product.name}" style="flex: 1; min-width: 135px; justify-content: center; text-align: center;">Khảo Sát Tận Nhà</button>
           </div>
 
           <!-- KHỐI CHIA SẺ MẠNG XÃ HỘI QUA LINK -->

@@ -1060,6 +1060,12 @@
   animation: fadeIn 0.2s ease;
 }
 
+@media (max-width: 576px) {
+  .modal-overlay {
+    padding: 8px;
+  }
+}
+
 .modal-overlay.active {
   display: flex;
 }
@@ -1071,9 +1077,17 @@
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
+  overflow-x: hidden;
   position: relative;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
   animation: modalPop 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (max-width: 576px) {
+  .modal-card {
+    max-height: 94vh;
+    border-radius: 16px;
+  }
 }
 
 @keyframes modalPop {
@@ -1471,15 +1485,23 @@
 .modal-tech-table-wrap {
   border: 1px solid #e2e8f0;
   border-radius: 8px;
-  overflow: hidden;
+  overflow-x: auto;
+  max-width: 100%;
   background: #ffffff;
 }
 
 .tech-table {
   width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
   font-size: 0.8rem;
   text-align: left;
+}
+
+.tech-table-label,
+.tech-table-val {
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .tech-table tr {
@@ -1520,11 +1542,20 @@
 
 @media (max-width: 520px) {
   .modal-tabs-nav {
+    display: flex;
     gap: 4px;
     padding: 3px;
+    overflow-x: auto;
+    max-width: 100%;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .modal-tabs-nav::-webkit-scrollbar {
+    display: none;
   }
   .modal-tab-btn {
-    padding: 7px 6px;
+    flex: 0 0 auto;
+    padding: 7px 8px;
     font-size: 0.74rem;
     gap: 4px;
   }
@@ -1548,6 +1579,47 @@
   display: flex;
   gap: 10px;
   margin-top: auto;
+  flex-wrap: wrap;
+}
+
+.modal-actions-subgroup {
+  display: flex;
+  gap: 10px;
+  flex: 2;
+  min-width: 0;
+}
+
+@media (max-width: 640px) {
+  .modal-actions {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+  .btn-modal-cart {
+    width: 100% !important;
+    justify-content: center;
+    padding: 12px 14px;
+    font-size: 0.92rem;
+  }
+  .modal-actions-subgroup {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+  }
+  .btn-modal-zalo,
+  .btn-modal-call {
+    flex: 1;
+    min-width: 0;
+    padding: 11px 6px;
+    font-size: 0.8rem;
+    justify-content: center;
+    gap: 5px;
+  }
+  .btn-modal-share {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+  }
 }
 
 .btn-modal-zalo {
@@ -1646,9 +1718,36 @@
   }
 
   .modal-grid {
-    grid-template-columns: 1fr;
-    padding: 24px;
-    gap: 20px;
+    grid-template-columns: minmax(0, 1fr) !important;
+    padding: 18px 14px;
+    gap: 16px;
+  }
+
+  .modal-details,
+  .modal-gallery-box {
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .modal-tabs-nav {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 4px;
+    gap: 4px;
+  }
+
+  .modal-tabs-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .modal-tab-btn {
+    flex-shrink: 0;
+    padding: 8px 10px;
+    font-size: 0.76rem;
+    white-space: nowrap;
   }
 }
 
@@ -2105,71 +2204,10 @@
   color: #ef4444;
 }
 
-/* Mobile Bottom Navigation (Visible on mobile only) */
-.mobile-bottom-nav {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  background: rgba(10, 15, 28, 0.96);
-  backdrop-filter: blur(12px);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  z-index: 900;
-  align-items: center;
-  justify-content: space-around;
-  padding: 0 8px;
-}
-
-.mbn-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3px;
-  color: #94a3b8;
-  text-decoration: none;
-  font-size: 0.68rem;
-  font-weight: 600;
-  flex: 1;
-  height: 100%;
-  position: relative;
-  transition: color 0.2s ease;
-}
-
-.mbn-item.active, .mbn-item:hover {
-  color: #0084ff;
-}
-
-.mbn-badge {
-  position: absolute;
-  top: 6px;
-  right: calc(50% - 18px);
-  background: #ef4444;
-  color: #ffffff;
-  font-size: 0.62rem;
-  font-weight: 800;
-  min-width: 16px;
-  height: 16px;
-  line-height: 16px;
-  border-radius: 8px;
-  text-align: center;
-  padding: 0 4px;
-}
-
 @media (max-width: 768px) {
-  body {
-    padding-bottom: 64px;
-  }
-
-  .mobile-bottom-nav {
-    display: flex;
-  }
-
   .cart-float-btn {
-    bottom: 72px;
-    right: 16px;
+    bottom: 74px;
+    right: 14px;
     padding: 10px 14px;
   }
 

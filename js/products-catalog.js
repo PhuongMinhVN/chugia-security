@@ -159,6 +159,11 @@
       el.cartFloatBadge.textContent = totalQty;
       el.cartFloatBadge.style.display = totalQty > 0 ? 'flex' : 'none';
     }
+    const mbnBadge = document.getElementById('mbnBadge');
+    if (mbnBadge) {
+      mbnBadge.textContent = totalQty;
+      mbnBadge.style.display = totalQty > 0 ? 'inline-block' : 'none';
+    }
     if (el.cartFloatBtn) {
       el.cartFloatBtn.classList.toggle('has-items', totalQty > 0);
     }
