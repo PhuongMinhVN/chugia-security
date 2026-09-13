@@ -312,14 +312,34 @@
     applyFilters();
     updateCartUI();
 
-    // Check URL hash for direct product preview e.g. #prod-1194333
-    const hash = window.location.hash;
-    if (hash && hash.startsWith('#prod-')) {
-      const pid = parseInt(hash.replace('#prod-', ''), 10);
-      const target = state.products.find(p => p.id === pid);
-      if (target) {
-        setTimeout(() => openQuickView(target), 400);
+    // Check URL parameters or hash for direct product preview or search query
+    try {
+      const urlParams = new URLSearchParams(window.location.search);
+      let targetProdId = urlParams.get('product') || urlParams.get('id');
+      const hash = window.location.hash;
+      if (!targetProdId && hash && hash.startsWith('#prod-')) {
+        targetProdId = hash.replace('#prod-', '');
+      } else if (!targetProdId && hash && hash.startsWith('#product-')) {
+        targetProdId = hash.replace('#product-', '');
       }
+
+      if (targetProdId) {
+        const pid = parseInt(targetProdId, 10);
+        const target = state.products.find(p => p.id === pid || String(p.id) === String(targetProdId) || p.sku === targetProdId);
+        if (target) {
+          setTimeout(() => openQuickView(target), 350);
+        }
+      }
+
+      const searchParam = urlParams.get('search') || urlParams.get('q');
+      if (searchParam) {
+        state.searchQuery = searchParam.trim();
+        if (el.searchHeroInput) el.searchHeroInput.value = searchParam.trim();
+        if (el.searchHeroClear) el.searchHeroClear.classList.add('active');
+        applyFilters();
+      }
+    } catch (e) {
+      console.error('Error parsing catalog URL params:', e);
     }
 
     // Initial pill position & nav button update
