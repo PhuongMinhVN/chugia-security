@@ -1766,43 +1766,126 @@ Nhờ Chu Gia liên hệ tư vấn và xếp lịch khảo sát / lắp đặt s
     }
   });
 
-  // ---------------- HERO SHOWCASE SLIDER ----------------
-  const heroSlides = document.querySelectorAll('.hero-slide');
-  const sliderTabs = document.querySelectorAll('.slider-tab-btn');
-  let currentHeroIndex = 0;
-  let heroTimer = null;
+  // ---------------- HERO SHOWCASE SLIDER (IMOU STYLE) ----------------
+  const heroCarousel = document.getElementById('heroCarousel');
+  const heroCarouselSlides = document.querySelectorAll('.hero-carousel-slide');
+  const heroProgressItems = document.querySelectorAll('.hero-progress-item');
+  const heroPrevBtn = document.getElementById('heroPrevBtn');
+  const heroNextBtn = document.getElementById('heroNextBtn');
+  let currentHeroSlide = 0;
+  let heroSlideTimer = null;
+  const HERO_SLIDE_DURATION = 5500;
 
   function setHeroSlide(index) {
-    if (!heroSlides.length) return;
-    currentHeroIndex = index;
-    heroSlides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === index);
+    if (!heroCarouselSlides.length) return;
+    currentHeroSlide = (index + heroCarouselSlides.length) % heroCarouselSlides.length;
+
+    heroCarouselSlides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === currentHeroSlide);
     });
-    sliderTabs.forEach((tab, i) => {
-      tab.classList.toggle('active', i === index);
+
+    heroProgressItems.forEach((item, i) => {
+      const isActive = (i === currentHeroSlide);
+      item.classList.toggle('active', isActive);
+      const fill = item.querySelector('.progress-bar-fill');
+      if (fill) {
+        if (isActive) {
+          fill.style.animation = 'none';
+          void fill.offsetHeight; // trigger reflow to reset animation
+          fill.style.animation = '';
+        } else {
+          fill.style.animation = 'none';
+          fill.style.width = '0%';
+        }
+      }
     });
   }
 
-  sliderTabs.forEach(btn => {
+  function nextHeroSlide() {
+    setHeroSlide(currentHeroSlide + 1);
+  }
+
+  function prevHeroSlide() {
+    setHeroSlide(currentHeroSlide - 1);
+  }
+
+  function startHeroTimer() {
+    if (heroSlideTimer) clearInterval(heroSlideTimer);
+    heroSlideTimer = setInterval(() => {
+      nextHeroSlide();
+    }, HERO_SLIDE_DURATION);
+  }
+
+  function resetHeroTimer() {
+    startHeroTimer();
+  }
+
+  if (heroNextBtn) {
+    heroNextBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      nextHeroSlide();
+      resetHeroTimer();
+    });
+  }
+
+  if (heroPrevBtn) {
+    heroPrevBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      prevHeroSlide();
+      resetHeroTimer();
+    });
+  }
+
+  heroProgressItems.forEach((btn, idx) => {
     btn.addEventListener('click', () => {
-      const targetIdx = parseInt(btn.getAttribute('data-target'), 10);
+      const targetIdx = parseInt(btn.getAttribute('data-target') || idx, 10);
       setHeroSlide(targetIdx);
       resetHeroTimer();
     });
   });
 
-  function startHeroTimer() {
-    heroTimer = setInterval(() => {
-      if (!heroSlides.length) return;
-      const nextIdx = (currentHeroIndex + 1) % heroSlides.length;
-      setHeroSlide(nextIdx);
-    }, 5000);
+  if (heroCarousel) {
+    heroCarousel.addEventListener('mouseenter', () => {
+      if (heroSlideTimer) clearInterval(heroSlideTimer);
+      heroCarousel.classList.add('paused');
+    });
+
+    heroCarousel.addEventListener('mouseleave', () => {
+      heroCarousel.classList.remove('paused');
+      startHeroTimer();
+    });
+
+    let touchStartX = 0;
+    let touchStartY = 0;
+
+    heroCarousel.addEventListener('touchstart', (e) => {
+      if (e.touches && e.touches[0]) {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+      }
+    }, { passive: true });
+
+    heroCarousel.addEventListener('touchend', (e) => {
+      if (e.changedTouches && e.changedTouches[0]) {
+        const touchEndX = e.changedTouches[0].clientX;
+        const touchEndY = e.changedTouches[0].clientY;
+        const diffX = touchStartX - touchEndX;
+        const diffY = touchStartY - touchEndY;
+
+        if (Math.abs(diffX) > 45 && Math.abs(diffX) > Math.abs(diffY)) {
+          if (diffX > 0) {
+            nextHeroSlide();
+          } else {
+            prevHeroSlide();
+          }
+          resetHeroTimer();
+        }
+      }
+    }, { passive: true });
   }
 
-  function resetHeroTimer() {
-    if (heroTimer) clearInterval(heroTimer);
-    startHeroTimer();
-  }
+  setHeroSlide(0);
+  startHeroTimer();
 
   // ---------------- TỰ ĐỘNG MỞ MODAL KHI TRUY CẬP TỪ LINK CHIA SẺ ----------------
   function checkUrlProductParam() {

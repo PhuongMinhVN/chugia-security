@@ -64,6 +64,7 @@
     modalDiscountTag: document.getElementById('modalDiscountTag'),
     modalTabsNav: document.getElementById('modalTabsNav'),
     modalSpecsList: document.getElementById('modalSpecsList'),
+    modalDescription: document.getElementById('modalDescription'),
     modalTechTags: document.getElementById('modalTechTags'),
     modalFitTags: document.getElementById('modalFitTags'),
     modalMaterialTags: document.getElementById('modalMaterialTags'),
@@ -106,7 +107,7 @@
   function saveCartToStorage() {
     try {
       localStorage.setItem('chugia_quote_cart', JSON.stringify(state.cart));
-    } catch (e) {}
+    } catch (e) { }
   }
 
   function addToCart(prod) {
@@ -539,7 +540,7 @@
       el.searchHeroInput.addEventListener('input', e => {
         const val = e.target.value.trim();
         state.searchQuery = val;
-        
+
         if (el.searchHeroClear) {
           if (val.length > 0) el.searchHeroClear.classList.add('active');
           else el.searchHeroClear.classList.remove('active');
@@ -1171,164 +1172,293 @@
     }
   };
 
-  // Helper: Trích xuất & Tạo Thẻ Tag Công Nghệ, Chất Liệu, Không Gian Phù Hợp & Bảng Thông Số Chi Tiết
+  // Helper: Ẩn/hiện một tab (cả nút tab và pane) theo việc có dữ liệu thật hay không.
+  function setTabVisible(tabId, visible) {
+    const btn = document.querySelector(`.modal-tab-btn[data-tab="${tabId}"]`);
+    const pane = document.getElementById(tabId);
+    const display = visible ? '' : 'none';
+    if (btn) btn.style.display = display;
+    if (pane) pane.style.display = display;
+  }
+
+  // Helper: Lấy metadata THẬT của sản phẩm.
+  //
+  // QUAN TRỌNG: Hàm này KHÔNG được phép bịa dữ liệu. Toàn bộ thông số kỹ thuật
+  // và mô tả đều lấy trực tiếp từ dữ liệu đã cào thật (prod.specsTable,
+  // prod.description, prod.features). Nếu sản phẩm không có dữ liệu thật thì
+  // trả về rỗng để giao diện ẩn tab tương ứng, tuyệt đối không suy diễn.
   function generateProductRichMetadata(prod) {
-    const name = (prod.name || '').toLowerCase();
-    const cat = (prod.categoryName || '').toLowerCase();
-    const parent = (prod.parentGroup || '').toLowerCase();
-    
+    // Bảng thông số kỹ thuật thật (đã cào từ trang nguồn)
+    const specsTable = Array.isArray(prod.specsTable) ? prod.specsTable.slice() : [];
+
+    // Mô tả thật (đoạn giới thiệu sản phẩm)
+    const description = (prod.description || '').trim();
+
+    // Tính năng nổi bật thật
+    const features = Array.isArray(prod.features) ? prod.features.slice() : [];
+
+    // Thẻ tag: chỉ lấy từ dữ liệu thật, không hardcode.
+    // - Thương hiệu (nếu có)
+    // - Danh mục / nhóm sản phẩm (nếu có)
     const techTags = [];
-    const fitTags = [];
-    const materialTags = [];
-    const specsTable = [];
-
-    const isLock = cat.includes('khóa') || name.includes('khóa');
-    const isIntercom = cat.includes('chuông') || name.includes('chuông') || name.includes('vto') || name.includes('vth');
-    const isSwitch = cat.includes('switch') || name.includes('switch') || cat.includes('mạng');
-
-    if (isLock) {
-      techTags.push('Vân Tay FPC Sinh Trắc Học', 'Mã Số Ảo Chống Nhìn Trộm', 'Thẻ Từ Mã Hóa NFC', 'Chìa Khóa Cơ Cấp C', 'Mở Khóa Qua App Điện Thoại', 'Báo Động Cạy Cửa & Pin Yếu');
-      materialTags.push('Hợp Kim Nhôm/Kẽm Đúc Nguyên Khối', 'Kính Cường Lực Chống Xước 9H', 'Ruột Khóa Inox 304 Chống Cắt 3 Chốt', 'Bo Mạch Phủ Nano Chống Ẩm');
-      fitTags.push('Cửa Gỗ Đại Sảnh & Nhà Phố', 'Cửa Thép Chống Cháy Chung Cư', 'Cửa Phòng Ngủ Biệt Thự', 'Căn Hộ Dịch Vụ, Homestay, Khách Sạn');
-      
-      specsTable.push(
-        { k: 'Phương thức mở khóa', v: 'Vân tay, Mật mã số, Thẻ từ RFID, Chìa cơ khẩn cấp, App điện thoại' },
-        { k: 'Dung lượng người dùng', v: '100 dấu vân tay, 100 thẻ từ, 100 mã số mật khẩu' },
-        { k: 'Chất liệu thân khóa', v: 'Hợp kim kẽm/nhôm cao cấp đúc nguyên khối, mặt kính cường lực' },
-        { k: 'Cơ chế bảo vệ ruột khóa', v: 'Inox 304 không gỉ, 3 chốt an toàn chống cạy phá cưa cắt' },
-        { k: 'Nguồn cấp & Thời lượng', v: '4 viên Pin AA Alkaline 1.5V (Thời gian sử dụng 10-12 tháng)' },
-        { k: 'Cổng sạc khẩn cấp', v: 'Cổng MicroUSB/Type-C kích nguồn bên ngoài khi hết pin đột ngột' },
-        { k: 'Độ dày cửa yêu cầu', v: '38mm - 60mm (Độ rộng đố cửa tối thiểu 90mm)' },
-        { k: 'Bảo hành chính hãng', v: '24 tháng 1 đổi 1 tận nơi bởi Chu Gia Security' }
-      );
-    } else if (isIntercom) {
-      techTags.push('Đàm Thoại Video 2 Chiều Rõ Nét', 'Mở Khóa Cửa Từ Xa Bằng Màn Hình & App', 'Góc Nhìn Siêu Rộng 125°', 'Cấp Nguồn PoE Tiêu Chuẩn', 'Chụp Ảnh Khách Bấm Chuông');
-      materialTags.push('Hợp Kim Nhôm Phay Xước Anodized', 'Vỏ Kháng Nước Chuẩn IP65 Ngoài Trời', 'Màn Hình Cảm Ứng Chống Trầy Xước');
-      fitTags.push('Cổng Biệt Thự & Nhà Liền Kề', 'Cửa Căn Hộ Chung Cư Cao Cấp', 'Văn Phòng Doanh Nghiệp', 'Nhà Phố Mặt Tiền');
-
-      specsTable.push(
-        { k: 'Chức năng hệ thống', v: 'Gọi chuông có hình, Đàm thoại âm thanh 2 chiều, Mở khóa cổng từ xa' },
-        { k: 'Màn hình hiển thị', v: 'Màn hình cảm ứng LCD TFT 7 inch hoặc 10 inch hiển thị sắc nét' },
-        { k: 'Camera tích hợp', v: 'Độ phân giải 2.0MP Full HD, Góc quan sát 125 độ bao quát lối vào' },
-        { k: 'Tầm nhìn ban đêm', v: 'Hồng ngoại thông minh, tự động bật khi trời tối' },
-        { k: 'Giao tiếp mạng', v: 'Cổng LAN RJ45, Hỗ trợ cấp nguồn trực tiếp qua cáp mạng PoE' },
-        { k: 'Lưu trữ thông minh', v: 'Khe cắm thẻ nhớ MicroSD lưu trữ lịch sử khách bấm chuông' },
-        { k: 'Bảo hành', v: '24 tháng chính hãng 1 đổi 1' }
-      );
-    } else if (isSwitch) {
-      techTags.push('Cấp Nguồn PoE Chuẩn IEEE 802.3af/at', 'Khoảng Cách Truyền Xa 250m', 'Chống Sét Lan Truyền 6KV', 'Tự Động Phân Bổ Công Suất', 'Chế Độ Cách Ly Cổng VLAN');
-      materialTags.push('Vỏ Thép Sơn Tĩnh Điện Tản Nhiệt Tốt', 'Thiết Kế Fanless Không Quạt (Êm Ái)', 'Linh Kiện Bền Bỉ Tiêu Chuẩn Công Nghiệp');
-      fitTags.push('Hệ Thống Camera IP Dự Án', 'Tủ Rack Kỹ Thuật Tòa Nhà', 'Văn Phòng, Khách Sạn & Nhà Xưởng');
-
-      specsTable.push(
-        { k: 'Chuẩn PoE hỗ trợ', v: 'IEEE 802.3af (tối đa 15.4W/cổng), 802.3at (tối đa 30W/cổng)' },
-        { k: 'Tốc độ cổng truyền dẫn', v: 'Cổng 10/100/1000 Mbps Gigabit ổn định không nghẽn mạng' },
-        { k: 'Khoảng cách truyền PoE', v: 'Chế độ tiêu chuẩn 100m, Chế độ Extend truyền xa đến 250m' },
-        { k: 'Chống sét bảo vệ', v: 'Chống sét lan truyền điện áp 6KV cổng kết nối' },
-        { k: 'Chất liệu vỏ máy', v: 'Kim loại tản nhiệt cao cấp, chống han gỉ' },
-        { k: 'Bảo hành', v: '24 tháng chính hãng' }
-      );
-    } else {
-      // Camera Standard (Indoor & Outdoor)
-      let resText = '2.0 Megapixel (Full HD 1080P)';
-      if (name.includes('4k') || name.includes('8mp')) {
-        resText = '8.0 Megapixel (Chuẩn nét 4K Ultra HD)';
-        techTags.push('Độ Nét 4K Ultra HD');
-      } else if (name.includes('3k') || name.includes('5mp')) {
-        resText = '5.0 Megapixel (Độ nét 3K QHD)';
-        techTags.push('Độ Nét 3K (5MP)');
-      } else if (name.includes('2k+') || name.includes('4mp')) {
-        resText = '4.0 Megapixel (Độ nét 2K+ Quad HD)';
-        techTags.push('Độ Nét 2K+ (4MP)');
-      } else if (name.includes('2k') || name.includes('3mp')) {
-        resText = '3.0 Megapixel (Độ nét 2K Super HD)';
-        techTags.push('Độ Nét 2K (3MP)');
-      } else {
-        techTags.push('Độ Nét Full HD 1080P');
-      }
-
-      if (name.includes('2 mắt') || name.includes('dual') || name.includes('2 lens')) {
-        techTags.push('Camera 2 Mắt Kép (Dual Lens)', '1 Cố Định + 1 Xoay Quét');
-        fitTags.push('Ngã Ba & Góc Khuất Rộng');
-      }
-
-      let nightText = 'Hồng ngoại thông minh tầm xa 30m';
-      if (name.includes('wizcolor') || name.includes('full-color') || name.includes('đêm có màu') || name.includes('color') || name.includes('pv')) {
-        techTags.push('WizColor / Full-Color Ban Đêm Có Màu 24/7');
-        nightText = 'Đèn LED trợ sáng có màu 24/7 + Hồng ngoại 30m';
-      } else {
-        techTags.push('Hồng Ngoại Ban Đêm Smart IR 30m');
-      }
-
-      let ptText = 'Ống kính cố định góc rộng 108°';
-      if (name.includes('quay quét') || name.includes('360') || name.includes('pts') || name.includes('pt') || name.includes('ranger') || name.includes('cruiser') || name.includes('c8c') || name.includes('h80x') || name.includes('h3') || name.includes('h5') || name.includes('p3') || name.includes('p5')) {
-        techTags.push('Quay Quét 360° Toàn Cảnh', 'Tự Động Bám Đuổi Chuyển Động');
-        ptText = 'Quay ngang 355 độ, Quay dọc 90 độ (Bao quát toàn cảnh)';
-      }
-
-      if (name.includes('ai') || name.includes('pro') || name.includes('nhận diện') || name.includes('human')) {
-        techTags.push('AI Nhận Diện Người & Phương Tiện');
-      } else {
-        techTags.push('Phát Hiện Chuyển Động Thông Minh');
-      }
-
-      let audioText = 'Tích hợp Micro lọc ồn ghi âm';
-      if (name.includes('loa') || name.includes('mic') || name.includes('đàm thoại') || name.includes('2 chiều') || name.includes('pv')) {
-        techTags.push('Đàm Thoại Âm Thanh 2 Chiều', 'Còi Hú & Đèn Chớp Báo Động');
-        audioText = 'Đàm thoại 2 chiều (Loa to + Micro khử ồn AI)';
-      }
-
-      let connText = 'Wi-Fi 2.4GHz + Cổng LAN RJ45';
-      if (name.includes('wifi 6')) {
-        techTags.push('Chuẩn Wi-Fi 6 Siêu Tốc Bắt Sóng Xa');
-        connText = 'Wi-Fi 6 thế hệ mới (2.4GHz) + Cổng LAN RJ45';
-      } else if (name.includes('poe')) {
-        techTags.push('Cấp Nguồn PoE Qua Dây Mạng');
-        connText = 'Cáp mạng LAN PoE (Cấp nguồn và tín hiệu 1 dây)';
-      } else if (name.includes('4g') || name.includes('sim')) {
-        techTags.push('Lắp SIM 4G LTE Không Cần Mạng Dây');
-        connText = 'SIM 4G LTE (Hỗ trợ tất cả nhà mạng Viettel, Vina, Mobi)';
-      }
-
-      let powerText = 'DC 12V/1A (Kèm củ nguồn chính hãng)';
-      if (name.includes('solar') || name.includes('năng lượng mặt trời') || name.includes('pin') || name.includes('cell')) {
-        techTags.push('Pin Sạc Năng Lượng Mặt Trời');
-        powerText = 'Pin Lithium dung lượng lớn + Tấm sạc Solar tự nạp';
-        fitTags.push('Trang Trại & Vườn Cây Không Có Điện');
-      } else if (name.includes('poe')) {
-        powerText = 'PoE 48V (IEEE 802.3af) hoặc Nguồn phụ DC 12V';
-      }
-
-      techTags.push('Chuẩn Nén Video H.265 Tiết Kiệm Bộ Nhớ');
-      techTags.push('Khe Cắm Thẻ Nhớ MicroSD Tối Đa 256GB');
-
-      const isOutdoor = cat.includes('ngoài trời') || parent.includes('ngoài trời') || name.includes('ngoài trời') || name.includes('cruiser') || name.includes('bullet') || name.includes('hfw') || name.includes('h80x') || name.includes('c8c');
-
-      if (isOutdoor) {
-        materialTags.push('Vỏ Kim Loại + Nhựa Chống Cháy Cao Cấp', 'Kháng Nước & Bụi Chuẩn IP66 / IP67', 'Chân Đế Kim Loại Kháng Gỉ Sét', 'Chống Chịu Nắng Mưa & Bão Gió');
-        fitTags.push('Cổng Nhà & Sân Vườn Biệt Thự', 'Bãi Đỗ Xe & Nhà Xe Công Ty', 'Mặt Tiền Cửa Hàng & Shop Thời Trang', 'Kho Bãi, Xưởng Sản Xuất & Trang Trại');
-      } else {
-        materialTags.push('Nhựa ABS Nguyên Sinh Cao Cấp', 'Chống Cháy & Bền Màu Không Bạc', 'Thiết Kế Hiện Đại, Nhỏ Gọn Tinh Tế', 'Khớp Xoay Êm Ái Không Phát Tiếng Ồn');
-        fitTags.push('Phòng Khách & Cửa Chính Gia Đình', 'Phòng Trẻ Nhỏ & Người Lớn Tuổi', 'Quầy Thu Ngân & Kệ Hàng Cửa Hàng', 'Văn Phòng Làm Việc & Lớp Học');
-      }
-
-      specsTable.push(
-        { k: 'Cảm biến & Độ phân giải', v: resText },
-        { k: 'Góc quan sát & Xoay quét', v: ptText },
-        { k: 'Tầm nhìn ban đêm', v: nightText },
-        { k: 'Âm thanh & Báo động', v: audioText },
-        { k: 'Công nghệ thông minh', v: 'AI phát hiện dáng người/xe, Cảnh báo âm thanh bất thường' },
-        { k: 'Chuẩn nén hình ảnh', v: 'H.265 / H.264 (Tiết kiệm 50% dung lượng thẻ nhớ & băng thông)' },
-        { k: 'Phương thức lưu trữ', v: 'Khe thẻ nhớ MicroSD tối đa 256GB, Lưu trữ Cloud hoặc Đầu ghi NVR' },
-        { k: 'Kết nối mạng', v: connText },
-        { k: 'Chất liệu vỏ máy', v: isOutdoor ? 'Vỏ kim loại + nhựa kỹ thuật, Kháng nước IP67' : 'Nhựa ABS cao cấp chống cháy' },
-        { k: 'Nguồn điện hoạt động', v: powerText },
-        { k: 'Nhiệt độ môi trường', v: '-30°C đến +60°C (Độ ẩm dưới 95%)' },
-        { k: 'Chính sách bảo hành', v: '24 tháng 1 đổi 1 tận nơi chính hãng' }
-      );
+    if (prod.brand) techTags.push(prod.brand);
+    if (prod.categoryName) techTags.push(prod.categoryName);
+    if (prod.parentGroup && prod.parentGroup !== prod.categoryName) {
+      techTags.push(prod.parentGroup);
     }
 
-    return { techTags, fitTags, materialTags, specsTable };
+    // Không còn tag "chất liệu" / "không gian phù hợp" bịa -> để rỗng.
+    const fitTags = [];
+    const materialTags = [];
+
+    return { techTags, fitTags, materialTags, specsTable, description, features };
+  }
+
+  // ---------------------------------------------------------------------------
+  // AI / SEO HELPERS
+  // Toàn bộ nội dung sinh ra dưới đây CHỈ dùng dữ liệu thật của sản phẩm.
+  // Mục tiêu: cấu trúc ngữ nghĩa rõ ràng để máy tìm kiếm & AI (Google SGE,
+  // Bing Copilot, ChatGPT...) có thể trích xuất chính xác thông tin.
+  // ---------------------------------------------------------------------------
+
+  function escapeHtml(str) {
+    const AMP = String.fromCharCode(38) + 'amp;';
+    const LT = String.fromCharCode(38) + 'lt;';
+    const GT = String.fromCharCode(38) + 'gt;';
+    const QUOT = String.fromCharCode(38) + 'quot;';
+    const APOS = String.fromCharCode(38) + '#39;';
+    return String(str == null ? '' : str)
+      .replace(/&/g, AMP)
+      .replace(/</g, LT)
+      .replace(/>/g, GT)
+      .replace(/"/g, QUOT)
+      .replace(/'/g, APOS);
+  }
+
+  // Tách mô tả thô thành các đoạn văn sạch (bỏ dòng trống, gộp câu rời).
+  function splitDescriptionParagraphs(description) {
+    if (!description) return [];
+    return String(description)
+      .split(/\n{2,}|\r\n\r\n/)
+      .map(p => p.replace(/\s+/g, ' ').trim())
+      .filter(p => p.length > 0);
+  }
+
+  // Render mô tả theo cấu trúc ngữ nghĩa: heading có từ khóa + đoạn văn.
+  function renderSemanticDescription(prod, richMeta) {
+    const paragraphs = splitDescriptionParagraphs(richMeta.description);
+    if (paragraphs.length === 0) return '';
+
+    const name = escapeHtml(prod.name || '');
+    const brand = escapeHtml(prod.brand || '');
+    const category = escapeHtml(prod.categoryName || '');
+
+    let html = '';
+    // Heading chính chứa tên sản phẩm (từ khóa chính cho tìm kiếm)
+    html += `<h3 class="desc-heading">Giới thiệu ${name}</h3>`;
+
+    paragraphs.forEach((p, idx) => {
+      // Đoạn đầu tiên là mô tả tổng quan -> giữ nguyên
+      html += `<p>${escapeHtml(p)}</p>`;
+      // Sau đoạn đầu, chèn heading phụ có từ khóa để chia khối nội dung
+      if (idx === 0 && paragraphs.length > 1) {
+        html += `<h4 class="desc-subheading">Đặc điểm nổi bật của ${name}</h4>`;
+      }
+    });
+
+    // Khối thông tin định danh dạng danh sách (AI dễ trích xuất)
+    const facts = [];
+    if (brand) facts.push(`Thương hiệu: ${brand}`);
+    if (category) facts.push(`Danh mục: ${category}`);
+    if (prod.sku) facts.push(`Mã sản phẩm (SKU): ${escapeHtml(prod.sku)}`);
+    if (prod.warranty) facts.push(`Bảo hành: ${escapeHtml(prod.warranty)}`);
+    if (facts.length > 0) {
+      html += `<h4 class="desc-subheading">Thông tin sản phẩm ${name}</h4>`;
+      html += '<ul class="desc-fact-list">';
+      facts.forEach(f => {
+        html += `<li>${f}</li>`;
+      });
+      html += '</ul>';
+    }
+
+    return html;
+  }
+
+  // Khối "Tóm tắt nhanh" — các dữ kiện cốt lõi, dạng bảng key-value.
+  function renderKeyFacts(prod, richMeta) {
+    const rows = [];
+    if (prod.brand) rows.push(['Thương hiệu', prod.brand]);
+    if (prod.categoryName) rows.push(['Danh mục', prod.categoryName]);
+    if (prod.sku) rows.push(['Mã sản phẩm', prod.sku]);
+    if (prod.warranty) rows.push(['Bảo hành', prod.warranty]);
+    if (prod.unit) rows.push(['Đơn vị', prod.unit]);
+    if (prod.inStock === false) rows.push(['Tình trạng', 'Tạm hết hàng']);
+    else rows.push(['Tình trạng', 'Còn hàng']);
+
+    // Lấy thêm vài thông số kỹ thuật đầu tiên (dữ liệu thật)
+    const topSpecs = (richMeta.specsTable || []).slice(0, 4);
+    topSpecs.forEach(s => {
+      if (s && s.k && s.v) rows.push([s.k, s.v]);
+    });
+
+    if (rows.length === 0) return '';
+
+    let html = '<h3 class="desc-heading">Tóm tắt nhanh</h3>';
+    html += '<table class="desc-facts-table"><tbody>';
+    rows.forEach(([k, v]) => {
+      html += `<tr><th scope="row">${escapeHtml(k)}</th><td>${escapeHtml(v)}</td></tr>`;
+    });
+    html += '</tbody></table>';
+    return html;
+  }
+
+  // FAQ tự sinh từ dữ liệu THẬT — giúp AI trả lời câu hỏi người dùng.
+  function buildFaqItems(prod, richMeta) {
+    const items = [];
+    const name = prod.name || 'sản phẩm này';
+    const brand = prod.brand || '';
+
+    if (brand) {
+      items.push({
+        q: `${name} là sản phẩm của hãng nào?`,
+        a: `${name} là sản phẩm chính hãng của thương hiệu ${brand}.`,
+      });
+    }
+
+    if (prod.warranty) {
+      items.push({
+        q: `Chế độ bảo hành của ${name} như thế nào?`,
+        a: `${name} được bảo hành ${prod.warranty}.`,
+      });
+    }
+
+    if (richMeta.specsTable && richMeta.specsTable.length > 0) {
+      const top = richMeta.specsTable.slice(0, 5);
+      const specText = top.map(s => `${s.k}: ${s.v}`).join('; ');
+      items.push({
+        q: `Thông số kỹ thuật chính của ${name} là gì?`,
+        a: `Các thông số kỹ thuật chính của ${name} gồm: ${specText}.`,
+      });
+    }
+
+    if (richMeta.features && richMeta.features.length > 0) {
+      items.push({
+        q: `${name} có những tính năng nổi bật nào?`,
+        a: richMeta.features.slice(0, 4).join(' '),
+      });
+    }
+
+    if (prod.categoryName) {
+      items.push({
+        q: `${name} phù hợp lắp đặt cho nhu cầu nào?`,
+        a: `${name} thuộc danh mục ${prod.categoryName}, phù hợp cho nhu cầu lắp đặt và sử dụng tương ứng.`,
+      });
+    }
+
+    return items;
+  }
+
+  function renderFaq(prod, richMeta) {
+    const items = buildFaqItems(prod, richMeta);
+    if (items.length === 0) return '';
+    let html = '<h3 class="desc-heading">Câu hỏi thường gặp</h3>';
+    html += '<div class="desc-faq">';
+    items.forEach(it => {
+      html += '<div class="desc-faq-item">';
+      html += `<h4 class="desc-faq-q">${escapeHtml(it.q)}</h4>`;
+      html += `<p class="desc-faq-a">${escapeHtml(it.a)}</p>`;
+      html += '</div>';
+    });
+    html += '</div>';
+    return html;
+  }
+
+  // Structured data JSON-LD động: Product + Offer + FAQPage.
+  // Giúp Google/AI hiểu và hiển thị rich result.
+  function injectProductJsonLd(prod, richMeta) {
+    const SITE = 'https://htavietnam.com';
+    const url = `${SITE}/san-pham.html#prod-${prod.id}`;
+
+    const product = {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: prod.name,
+      sku: prod.sku || undefined,
+      description: (richMeta.description || '').slice(0, 500) || undefined,
+      image: (prod.images && prod.images.length ? prod.images : [prod.image]).filter(Boolean),
+      brand: prod.brand ? { '@type': 'Brand', name: prod.brand } : undefined,
+      category: prod.categoryName || undefined,
+      offers: {
+        '@type': 'Offer',
+        url: url,
+        priceCurrency: 'VND',
+        price: prod.retailPrice || undefined,
+        availability:
+          prod.inStock === false
+            ? 'https://schema.org/OutOfStock'
+            : 'https://schema.org/InStock',
+      },
+    };
+
+    // Bổ sung thuộc tính kỹ thuật thật
+    if (richMeta.specsTable && richMeta.specsTable.length > 0) {
+      product.additionalProperty = richMeta.specsTable.slice(0, 20).map(s => ({
+        '@type': 'PropertyValue',
+        name: s.k,
+        value: s.v,
+      }));
+    }
+
+    const faqItems = buildFaqItems(prod, richMeta);
+    const graph = [product];
+    if (faqItems.length > 0) {
+      graph.push({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqItems.map(it => ({
+          '@type': 'Question',
+          name: it.q,
+          acceptedAnswer: { '@type': 'Answer', text: it.a },
+        })),
+      });
+    }
+
+    let tag = document.getElementById('productJsonLd');
+    if (!tag) {
+      tag = document.createElement('script');
+      tag.type = 'application/ld+json';
+      tag.id = 'productJsonLd';
+      document.head.appendChild(tag);
+    }
+    tag.textContent = JSON.stringify(graph.length === 1 ? graph[0] : graph);
+  }
+
+  // Cập nhật meta description + Open Graph động theo sản phẩm.
+  function updateDynamicMeta(prod, richMeta) {
+    const name = prod.name || '';
+    const brand = prod.brand ? `${prod.brand} ` : '';
+    const cat = prod.categoryName ? `${prod.categoryName} - ` : '';
+    const desc =
+      (richMeta.description || '').replace(/\s+/g, ' ').trim().slice(0, 155) ||
+      `${brand}${name} chính hãng, bảo hành ${prod.warranty || 'đầy đủ'}.`;
+
+    const setMeta = (attr, key, content) => {
+      let m = document.head.querySelector(`meta[${attr}="${key}"]`);
+      if (!m) {
+        m = document.createElement('meta');
+        m.setAttribute(attr, key);
+        document.head.appendChild(m);
+      }
+      m.setAttribute('content', content);
+    };
+
+    document.title = `${cat}${name} | HTA Vietnam`;
+    setMeta('name', 'description', desc);
+    setMeta('property', 'og:title', name);
+    setMeta('property', 'og:description', desc);
+    setMeta('property', 'og:type', 'product');
+    setMeta('property', 'og:url', `https://htavietnam.com/san-pham.html#prod-${prod.id}`);
+    if (prod.image) setMeta('property', 'og:image', prod.image);
   }
 
   // Open Quick View Modal
@@ -1380,28 +1510,49 @@
       }
     }
 
-    // Generate Rich Metadata (Tags, Suitability, Material, Detailed Specs)
+    // Generate Rich Metadata (CHỈ dữ liệu thật: tags, mô tả, bảng thông số)
     const richMeta = generateProductRichMetadata(prod);
 
-    // Tab 1: Specs Highlights
+    // Tab 1: Tính năng nổi bật (dữ liệu thật). Nếu không có -> ẩn tab.
+    const realFeatures = richMeta.features;
     if (el.modalSpecsList) {
-      let specs = prod.features || [];
-      if (specs.length === 0) {
-        specs = [
-          `Sản phẩm phân phối chính hãng bởi Chu Gia Security`,
-          `Bảo hành chu đáo 24 tháng theo tiêu chuẩn nhà sản xuất`,
-          `Tặng kèm gói hỗ trợ kỹ thuật cài đặt miễn phí trọn đời`
-        ];
-      }
-      el.modalSpecsList.innerHTML = specs
+      el.modalSpecsList.innerHTML = realFeatures
         .map(
           s =>
             `<li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg><span>${s}</span></li>`
         )
         .join('');
     }
+    setTabVisible('tab-specs', realFeatures.length > 0);
 
-    // Tab 2: Technology, Suitability, and Material Tags
+    // Tab 2: Mô tả sản phẩm thật — trình bày theo cấu trúc thân thiện AI/SEO.
+    // Gồm: Tóm tắt nhanh (bảng dữ kiện) + Giới thiệu (heading có từ khóa) + FAQ.
+    const faqItems = buildFaqItems(prod, richMeta);
+    const hasFacts = !!(prod.brand || prod.categoryName || prod.sku || prod.warranty);
+    const hasDescContent = !!richMeta.description || hasFacts || faqItems.length > 0;
+
+    if (el.modalDescription) {
+      if (hasDescContent) {
+        let descHtml = '';
+        descHtml += renderKeyFacts(prod, richMeta);
+        descHtml += renderSemanticDescription(prod, richMeta);
+        descHtml += renderFaq(prod, richMeta);
+        el.modalDescription.innerHTML = descHtml;
+      } else {
+        el.modalDescription.innerHTML = '';
+      }
+    }
+    setTabVisible('tab-desc', hasDescContent);
+
+    // Structured data + meta động cho máy tìm kiếm / AI
+    injectProductJsonLd(prod, richMeta);
+    updateDynamicMeta(prod, richMeta);
+
+    // Tab 3: Thẻ tag (chỉ thương hiệu / danh mục thật). Nếu rỗng -> ẩn tab.
+    const hasTags =
+      richMeta.techTags.length > 0 ||
+      richMeta.fitTags.length > 0 ||
+      richMeta.materialTags.length > 0;
     if (el.modalTechTags) {
       el.modalTechTags.innerHTML = richMeta.techTags
         .map(t => `<span class="tag-chip chip-tech">#${t}</span>`)
@@ -1417,32 +1568,48 @@
         .map(t => `<span class="tag-chip chip-material">#${t}</span>`)
         .join('');
     }
+    // Ẩn hẳn khối tag nếu không có dữ liệu thật (tránh nhãn rỗng gây hiểu nhầm)
+    const fitBlock = document.getElementById('modalFitTagsBlock');
+    if (fitBlock) fitBlock.style.display = richMeta.fitTags.length > 0 ? '' : 'none';
+    const materialBlock = document.getElementById('modalMaterialTagsBlock');
+    if (materialBlock) materialBlock.style.display = richMeta.materialTags.length > 0 ? '' : 'none';
+    setTabVisible('tab-tags', hasTags);
 
-    // Tab 3: Detailed Tech Specs Table
+    // Tab 4: Bảng thông số kỹ thuật thật. Nếu không có -> ẩn tab.
     if (el.modalTechTable) {
-      el.modalTechTable.innerHTML = `
+      el.modalTechTable.innerHTML = richMeta.specsTable.length
+        ? `
         <table class="tech-table">
           <tbody>
             ${richMeta.specsTable
-              .map(
-                row => `
+          .map(
+            row => `
               <tr>
                 <td class="tech-table-label">${row.k}</td>
                 <td class="tech-table-val">${row.v}</td>
               </tr>
             `
-              )
-              .join('')}
+          )
+          .join('')}
           </tbody>
         </table>
-      `;
+      `
+        : '';
     }
+    setTabVisible('tab-tech', richMeta.specsTable.length > 0);
 
-    // Reset default active tab to 'tab-specs'
+    // Chọn tab mặc định: ưu tiên tab đầu tiên có dữ liệu thật
+    const tabOrder = ['tab-specs', 'tab-desc', 'tab-tags', 'tab-tech'];
+    const firstVisible =
+      tabOrder.find(t => {
+        const btn = document.querySelector(`.modal-tab-btn[data-tab="${t}"]`);
+        return btn && btn.style.display !== 'none';
+      }) || 'tab-specs';
+
     document.querySelectorAll('.modal-tab-btn').forEach(b => b.classList.remove('active'));
     document.querySelectorAll('.modal-tab-pane').forEach(p => p.classList.remove('active'));
-    const defaultTabBtn = document.querySelector('.modal-tab-btn[data-tab="tab-specs"]');
-    const defaultTabPane = document.getElementById('tab-specs');
+    const defaultTabBtn = document.querySelector(`.modal-tab-btn[data-tab="${firstVisible}"]`);
+    const defaultTabPane = document.getElementById(firstVisible);
     if (defaultTabBtn) defaultTabBtn.classList.add('active');
     if (defaultTabPane) defaultTabPane.classList.add('active');
 
