@@ -655,7 +655,26 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function openProductModal(productId) {
-    const product = products.find(p => p.id === productId);
+    let product = products.find(p => String(p.id) === String(productId));
+    if (!product && window.HTA_PRODUCTS_DATA && window.HTA_PRODUCTS_DATA.products) {
+      const hp = window.HTA_PRODUCTS_DATA.products.find(p => String(p.id) === String(productId));
+      if (hp) {
+        product = {
+          id: hp.id,
+          name: hp.name,
+          brand: (hp.brand || 'CHÍNH HÃNG').toLowerCase(),
+          price: hp.retailPrice,
+          oldPrice: hp.originalPrice || Math.round(hp.retailPrice * 1.25),
+          desc: hp.features && hp.features.length > 0 ? hp.features.slice(0, 2).join(' ') : (hp.description || hp.categoryName || ''),
+          image: hp.image || 'images/imou_indoor_ranger.png',
+          specs: [
+            `Mã SKU: ${hp.sku || 'N/A'}`,
+            `Bảo hành: ${hp.warranty || '24 tháng'}`,
+            `Danh mục: ${hp.categoryName || 'Thiết bị an ninh'}`
+          ]
+        };
+      }
+    }
     if (!product || !modalOverlay || !modalBody) return;
 
     const shareUrl = getProductShareUrl(product.id);
@@ -1025,7 +1044,261 @@ document.addEventListener('DOMContentLoaded', () => {
   const previewBtnDetail = document.getElementById('previewBtnDetail');
   const calcSummaryBox = document.getElementById('calcSummaryBox');
   const calcPreviewCta = document.getElementById('calcPreviewCta');
-  const cmsbBtnBook = document.getElementById('cmsbBtnBook');
+  // --- Tab Switcher & Catalog Picker DOM references ---
+  const tabCalcPackage = document.getElementById('tabCalcPackage');
+  const tabCalcCatalog = document.getElementById('tabCalcCatalog');
+  const paneCalcPackage = document.getElementById('paneCalcPackage');
+  const paneCalcCatalog = document.getElementById('paneCalcCatalog');
+
+  const calcCatSearchInput = document.getElementById('calcCatSearchInput');
+  const calcCatClearBtn = document.getElementById('calcCatClearBtn');
+  const calcCatPillsBar = document.getElementById('calcCatPillsBar');
+  const calcCatalogGrid = document.getElementById('calcCatalogGrid');
+  const btnCalcCatLoadMore = document.getElementById('btnCalcCatLoadMore');
+  const calcCatLoadMoreWrap = document.getElementById('calcCatLoadMoreWrap');
+
+  const summaryCustomSection = document.getElementById('summaryCustomSection');
+  const summaryCustomList = document.getElementById('summaryCustomList');
+  const summaryCustomCount = document.getElementById('summaryCustomCount');
+  const summaryCustomPrice = document.getElementById('summaryCustomPrice');
+
+  let activeCalcTab = 'package'; // 'package' hoặc 'catalog'
+  let customProducts = []; // [{id, name, sku, brand, retailPrice, image, qty}]
+  let catFilter = 'all';
+  let catSearchQuery = '';
+  let catPage = 1;
+  const CAT_PAGE_SIZE = 12;
+
+  function loadCustomProductsFromStorage() {
+    try {
+      const saved = localStorage.getItem('chugia_quote_cart');
+      if (saved) {
+        customProducts = JSON.parse(saved);
+        if (!Array.isArray(customProducts)) customProducts = [];
+      }
+    } catch (e) {
+      customProducts = [];
+    }
+  }
+
+  function saveCustomProductsToStorage() {
+    try {
+      localStorage.setItem('chugia_quote_cart', JSON.stringify(customProducts));
+    } catch (e) {}
+  }
+
+  loadCustomProductsFromStorage();
+
+  function switchCalcTab(tab) {
+    activeCalcTab = tab;
+    if (tab === 'package') {
+      if (tabCalcPackage) {
+        tabCalcPackage.classList.add('active');
+        tabCalcPackage.setAttribute('aria-selected', 'true');
+      }
+      if (tabCalcCatalog) {
+        tabCalcCatalog.classList.remove('active');
+        tabCalcCatalog.setAttribute('aria-selected', 'false');
+      }
+      if (paneCalcPackage) paneCalcPackage.style.display = 'block';
+      if (paneCalcCatalog) paneCalcCatalog.style.display = 'none';
+    } else {
+      if (tabCalcPackage) {
+        tabCalcPackage.classList.remove('active');
+        tabCalcPackage.setAttribute('aria-selected', 'false');
+      }
+      if (tabCalcCatalog) {
+        tabCalcCatalog.classList.add('active');
+        tabCalcCatalog.setAttribute('aria-selected', 'true');
+      }
+      if (paneCalcPackage) paneCalcPackage.style.display = 'none';
+      if (paneCalcCatalog) paneCalcCatalog.style.display = 'block';
+      renderCalcCatalog();
+    }
+  }
+
+  function getFilteredCatalogProducts() {
+    if (!window.HTA_PRODUCTS_DATA || !window.HTA_PRODUCTS_DATA.products) return [];
+    let list = window.HTA_PRODUCTS_DATA.products;
+
+    if (catFilter !== 'all') {
+      const catId = parseInt(catFilter, 10);
+      list = list.filter(p => {
+        if (p.primaryCategoryId === catId) return true;
+        if (p.categoryIds && p.categoryIds.includes(catId)) return true;
+        return false;
+      });
+    }
+
+    if (catSearchQuery.trim()) {
+      const q = catSearchQuery.toLowerCase().trim();
+      list = list.filter(p => {
+        const nameMatch = p.name && p.name.toLowerCase().includes(q);
+        const skuMatch = p.sku && p.sku.toLowerCase().includes(q);
+        const brandMatch = p.brand && p.brand.toLowerCase().includes(q);
+        const catMatch = p.categoryName && p.categoryName.toLowerCase().includes(q);
+        return nameMatch || skuMatch || brandMatch || catMatch;
+      });
+    }
+
+    return list;
+  }
+
+  function renderCalcCatalog(resetPage = false) {
+    if (!calcCatalogGrid) return;
+    if (resetPage) catPage = 1;
+
+    const allFiltered = getFilteredCatalogProducts();
+    const visibleCount = catPage * CAT_PAGE_SIZE;
+    const itemsToShow = allFiltered.slice(0, visibleCount);
+
+    if (itemsToShow.length === 0) {
+      calcCatalogGrid.innerHTML = `
+        <div class="calc-cat-empty">
+          <div class="cce-icon">🔍</div>
+          <div class="cce-title">Không tìm thấy thiết bị phù hợp</div>
+          <div class="cce-desc">Thử đổi từ khóa tìm kiếm hoặc chọn danh mục "Tất Cả" để xem trọn bộ 480+ sản phẩm.</div>
+        </div>
+      `;
+      if (calcCatLoadMoreWrap) calcCatLoadMoreWrap.style.display = 'none';
+      return;
+    }
+
+    calcCatalogGrid.innerHTML = itemsToShow.map(p => {
+      const cartItem = customProducts.find(item => item.id === p.id);
+      const qty = cartItem ? cartItem.qty : 0;
+      const isSelected = qty > 0;
+
+      return `
+        <div class="calc-prod-card ${isSelected ? 'selected' : ''}" data-id="${p.id}">
+          <div class="calc-prod-header">
+            <span class="calc-prod-brand">${p.brand || 'CHÍNH HÃNG'}</span>
+            ${p.sku ? `<span class="calc-prod-sku">${p.sku}</span>` : ''}
+          </div>
+          <div class="calc-prod-img-wrap" data-id="${p.id}">
+            <img src="${p.image || 'images/imou_indoor_ranger.png'}" alt="${p.name}" loading="lazy" onerror="this.src='images/imou_indoor_ranger.png'">
+            ${isSelected ? `<span class="calc-prod-qty-badge">${qty}</span>` : ''}
+          </div>
+          <div class="calc-prod-body">
+            <h4 class="calc-prod-title" title="${p.name}" data-id="${p.id}">${p.name}</h4>
+            <div class="calc-prod-price-row">
+              <span class="calc-prod-price">${formatVND(p.retailPrice)}</span>
+              ${p.originalPrice && p.originalPrice > p.retailPrice ? `<span class="calc-prod-orig-price">${formatVND(p.originalPrice)}</span>` : ''}
+            </div>
+          </div>
+          <div class="calc-prod-actions">
+            ${qty === 0 ? `
+              <button type="button" class="btn-calc-prod-add" data-id="${p.id}">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                <span>+ Thêm vào dự toán</span>
+              </button>
+            ` : `
+              <div class="calc-prod-stepper">
+                <button type="button" class="cps-btn minus" data-id="${p.id}" aria-label="Giảm">−</button>
+                <span class="cps-qty">${qty}</span>
+                <button type="button" class="cps-btn plus" data-id="${p.id}" aria-label="Tăng">+</button>
+              </div>
+            `}
+            <button type="button" class="btn-calc-prod-quickview" data-id="${p.id}" title="Xem chi tiết sản phẩm">
+              <span>Chi tiết</span>
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    if (calcCatLoadMoreWrap) {
+      calcCatLoadMoreWrap.style.display = (visibleCount < allFiltered.length) ? 'block' : 'none';
+    }
+
+    bindCalcCatalogItemEvents();
+  }
+
+  function bindCalcCatalogItemEvents() {
+    if (!calcCatalogGrid) return;
+
+    // Nút thêm vào dự toán
+    calcCatalogGrid.querySelectorAll('.btn-calc-prod-add').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const id = parseInt(btn.getAttribute('data-id'), 10);
+        if (id) addCatalogProductToCalc(id);
+      });
+    });
+
+    // Stepper giảm
+    calcCatalogGrid.querySelectorAll('.cps-btn.minus').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const id = parseInt(btn.getAttribute('data-id'), 10);
+        if (id) changeCatalogProductQty(id, -1);
+      });
+    });
+
+    // Stepper tăng
+    calcCatalogGrid.querySelectorAll('.cps-btn.plus').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const id = parseInt(btn.getAttribute('data-id'), 10);
+        if (id) changeCatalogProductQty(id, 1);
+      });
+    });
+
+    // Xem chi tiết
+    calcCatalogGrid.querySelectorAll('.btn-calc-prod-quickview, .calc-prod-img-wrap, .calc-prod-title').forEach(el => {
+      el.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const id = el.getAttribute('data-id');
+        if (id) openProductModal(id);
+      });
+    });
+  }
+
+  function addCatalogProductToCalc(prodId) {
+    if (!window.HTA_PRODUCTS_DATA || !window.HTA_PRODUCTS_DATA.products) return;
+    const prod = window.HTA_PRODUCTS_DATA.products.find(p => p.id === prodId);
+    if (!prod) return;
+
+    const existing = customProducts.find(item => item.id === prodId);
+    if (existing) {
+      existing.qty += 1;
+    } else {
+      customProducts.push({
+        id: prod.id,
+        name: prod.name,
+        sku: prod.sku || '',
+        brand: prod.brand || '',
+        retailPrice: prod.retailPrice,
+        image: prod.image || '',
+        qty: 1
+      });
+    }
+
+    saveCustomProductsToStorage();
+    renderCalcCatalog();
+    updateCalculator();
+    showToast(`Đã thêm "${prod.name}" vào dự toán!`);
+  }
+
+  function changeCatalogProductQty(prodId, delta) {
+    const idx = customProducts.findIndex(item => item.id === prodId);
+    if (idx < 0) return;
+    customProducts[idx].qty += delta;
+    if (customProducts[idx].qty <= 0) {
+      customProducts.splice(idx, 1);
+    }
+    saveCustomProductsToStorage();
+    renderCalcCatalog();
+    updateCalculator();
+  }
+
+  function removeCatalogProductFromCalc(prodId) {
+    customProducts = customProducts.filter(item => item.id !== prodId);
+    saveCustomProductsToStorage();
+    renderCalcCatalog();
+    updateCalculator();
+  }
 
   let currentStorageMode = 'card'; // 'card' hoặc 'nvr'
 
@@ -1418,8 +1691,69 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // 4. Totals
-    const grandTotal = totalCamCount > 0 ? (totalCamPrice + totalStorage + totalInstall) : 0;
+    // 3.5. Tính toán & hiển thị thiết bị chọn thêm từ gian hàng
+    const totalCustomPrice = customProducts.reduce((acc, item) => acc + (item.qty * item.retailPrice), 0);
+    const totalCustomCount = customProducts.reduce((acc, item) => acc + item.qty, 0);
+
+    if (summaryCustomSection) {
+      if (totalCustomCount > 0) {
+        summaryCustomSection.style.display = 'block';
+        if (summaryCustomCount) summaryCustomCount.textContent = totalCustomCount;
+        if (summaryCustomPrice) summaryCustomPrice.textContent = formatVND(totalCustomPrice);
+
+        if (summaryCustomList) {
+          summaryCustomList.innerHTML = customProducts.map(item => `
+            <div class="summary-custom-item">
+              <div class="sci-info">
+                <div class="sci-name" title="${item.name}">${item.name}</div>
+                <div class="sci-price-row">
+                  <span class="sci-unit-price">${formatVND(item.retailPrice)}</span>
+                  ${item.sku ? `<span class="sci-sku">${item.sku}</span>` : ''}
+                </div>
+              </div>
+              <div class="sci-actions">
+                <div class="sci-stepper">
+                  <button type="button" class="sci-btn minus" data-id="${item.id}" aria-label="Giảm">−</button>
+                  <span class="sci-qty">${item.qty}</span>
+                  <button type="button" class="sci-btn plus" data-id="${item.id}" aria-label="Tăng">+</button>
+                </div>
+                <div class="sci-subtotal">${formatVND(item.qty * item.retailPrice)}</div>
+                <button type="button" class="sci-remove-btn" data-id="${item.id}" title="Xóa thiết bị này">✕</button>
+              </div>
+            </div>
+          `).join('');
+
+          summaryCustomList.querySelectorAll('.sci-btn.minus').forEach(b => {
+            b.addEventListener('click', (e) => {
+              e.stopPropagation();
+              const id = parseInt(b.getAttribute('data-id'), 10);
+              if (id) changeCatalogProductQty(id, -1);
+            });
+          });
+          summaryCustomList.querySelectorAll('.sci-btn.plus').forEach(b => {
+            b.addEventListener('click', (e) => {
+              e.stopPropagation();
+              const id = parseInt(b.getAttribute('data-id'), 10);
+              if (id) changeCatalogProductQty(id, 1);
+            });
+          });
+          summaryCustomList.querySelectorAll('.sci-remove-btn').forEach(b => {
+            b.addEventListener('click', (e) => {
+              e.stopPropagation();
+              const id = parseInt(b.getAttribute('data-id'), 10);
+              if (id) removeCatalogProductFromCalc(id);
+            });
+          });
+        }
+      } else {
+        summaryCustomSection.style.display = 'none';
+        if (summaryCustomList) summaryCustomList.innerHTML = '';
+      }
+    }
+
+    // 4. Totals (Camera Package + Thiết Bị Gian Hàng)
+    const packageTotal = totalCamCount > 0 ? (totalCamPrice + totalStorage + totalInstall) : 0;
+    const grandTotal = packageTotal + totalCustomPrice;
     const formattedGrandTotal = formatVND(grandTotal);
 
     if (summaryTotalPrice) summaryTotalPrice.textContent = formattedGrandTotal;
@@ -1428,25 +1762,51 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. Cập nhật thẻ Live Preview đầu bảng tính
     const primaryCam = selectedCams[0]?.data || CAMERAS_DATA['imou-ranger-2'];
 
-    if (calcPreviewImg) calcPreviewImg.src = primaryCam.img;
+    if (calcPreviewImg) {
+      if (totalCamCount > 0) {
+        calcPreviewImg.src = primaryCam.img;
+      } else if (customProducts.length > 0 && customProducts[0].image) {
+        calcPreviewImg.src = customProducts[0].image;
+      } else {
+        calcPreviewImg.src = primaryCam.img;
+      }
+    }
 
-    if (totalCamCount === 0) {
-      if (calcPreviewBadge) calcPreviewBadge.textContent = 'CHƯA CHỌN CAMERA';
-      if (calcPreviewName) calcPreviewName.textContent = 'Vui lòng bấm "+ Thêm mắt" ở Bước 1';
+    if (totalCamCount === 0 && totalCustomCount === 0) {
+      if (calcPreviewBadge) calcPreviewBadge.textContent = 'CHƯA CHỌN THIẾT BỊ';
+      if (calcPreviewName) calcPreviewName.textContent = 'Vui lòng chọn camera hoặc thiết bị từ gian hàng';
       if (calcPreviewSpecs) {
         calcPreviewSpecs.innerHTML = `<span class="preview-chip" style="background:#FEE2E2;color:#DC2626;border-color:#FECACA;">Chưa có thiết bị nào trong gói</span>`;
       }
+    } else if (totalCamCount === 0 && totalCustomCount > 0) {
+      if (calcPreviewBadge) calcPreviewBadge.textContent = `THIẾT BỊ TỰ CHỌN (${totalCustomCount} MÓN)`;
+      if (calcPreviewName) {
+        calcPreviewName.textContent = customProducts.map(p => p.sku || p.name).slice(0, 2).join(' + ') + (customProducts.length > 2 ? ' ...' : '');
+      }
+      if (calcPreviewSpecs) {
+        const prodChips = customProducts.slice(0, 3).map(c => `<span class="preview-chip">${c.qty}x ${c.sku || c.name}</span>`);
+        if (customProducts.length > 3) {
+          prodChips.push(`<span class="preview-chip">+${customProducts.length - 3} món khác</span>`);
+        }
+        calcPreviewSpecs.innerHTML = prodChips.join('');
+      }
     } else {
       if (calcPreviewBadge) {
-        if (selectedCams.length === 1) {
+        if (selectedCams.length === 1 && totalCustomCount === 0) {
           calcPreviewBadge.textContent = selectedCams[0].data.badge;
+        } else if (totalCustomCount > 0) {
+          calcPreviewBadge.textContent = `GÓI CAMERA (${totalCamCount} MẮT) + ${totalCustomCount} THIẾT BỊ`;
         } else {
           calcPreviewBadge.textContent = `GÓI LẮP ĐẶT (${totalCamCount} MẮT)`;
         }
       }
 
       if (calcPreviewName) {
-        calcPreviewName.textContent = `${totalCamCount} Mắt: ${breakdownShort}`;
+        let nameDesc = `${totalCamCount} Mắt: ${breakdownShort}`;
+        if (totalCustomCount > 0) {
+          nameDesc += ` (+ ${totalCustomCount} thiết bị gian hàng)`;
+        }
+        calcPreviewName.textContent = nameDesc;
       }
 
       if (calcPreviewSpecs) {
@@ -1455,14 +1815,24 @@ document.addEventListener('DOMContentLoaded', () => {
           `<span class="preview-chip">${storageChipText}</span>`,
           `<span class="preview-chip">${isSelfInstall ? 'Tự lắp đặt (0đ)' : `Công lắp ${totalCamCount} mắt`}</span>`
         ];
+        if (totalCustomCount > 0) {
+          otherChips.push(`<span class="preview-chip" style="background:#ECFDF5;color:#059669;border-color:#A7F3D0;font-weight:700;">+ ${totalCustomCount} thiết bị gian hàng</span>`);
+        }
         calcPreviewSpecs.innerHTML = [...camChips, ...otherChips].join('');
       }
     }
 
     // 6. Cập nhật Mobile Sticky Bar
-    if (cmsbCamImg) cmsbCamImg.src = primaryCam.img;
+    if (cmsbCamImg) {
+      if (totalCamCount > 0) cmsbCamImg.src = primaryCam.img;
+      else if (customProducts.length > 0 && customProducts[0].image) cmsbCamImg.src = customProducts[0].image;
+      else cmsbCamImg.src = primaryCam.img;
+    }
     if (cmsbCamName) {
-      cmsbCamName.textContent = totalCamCount > 0 ? `${totalCamCount} Cam (${breakdownShort})` : 'Chưa chọn camera';
+      let mobileTitle = '';
+      if (totalCamCount > 0) mobileTitle += `${totalCamCount} Cam (${breakdownShort})`;
+      if (totalCustomCount > 0) mobileTitle += `${mobileTitle ? ' + ' : ''}${totalCustomCount} Thiết bị`;
+      cmsbCamName.textContent = mobileTitle || 'Chưa chọn thiết bị';
     }
     if (cmsbTotalPrice) cmsbTotalPrice.textContent = formattedGrandTotal;
 
@@ -1632,64 +2002,116 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', handleCalcStickyBarVisibility, { passive: true });
   window.addEventListener('resize', handleCalcStickyBarVisibility, { passive: true });
 
-  // Khởi tạo trạng thái ban đầu cho các thẻ camera
+  // Khởi tạo trạng thái ban đầu cho các thẻ camera & kho sản phẩm
   Object.keys(camQuantities).forEach(id => updateCardUI(id));
+
+  // Lắng nghe sự kiện chuyển Tab dự toán
+  if (tabCalcPackage) tabCalcPackage.addEventListener('click', () => switchCalcTab('package'));
+  if (tabCalcCatalog) tabCalcCatalog.addEventListener('click', () => switchCalcTab('catalog'));
+
+  // Lọc Danh Mục trên Tab 2
+  if (calcCatPillsBar) {
+    calcCatPillsBar.querySelectorAll('.calc-cat-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        calcCatPillsBar.querySelectorAll('.calc-cat-pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        catFilter = pill.getAttribute('data-cat') || 'all';
+        renderCalcCatalog(true);
+      });
+    });
+  }
+
+  // Tìm kiếm sản phẩm trên Tab 2
+  if (calcCatSearchInput) {
+    let searchDebounce = null;
+    calcCatSearchInput.addEventListener('input', () => {
+      clearTimeout(searchDebounce);
+      searchDebounce = setTimeout(() => {
+        catSearchQuery = calcCatSearchInput.value.trim();
+        if (calcCatClearBtn) {
+          calcCatClearBtn.style.display = catSearchQuery ? 'flex' : 'none';
+        }
+        renderCalcCatalog(true);
+      }, 150);
+    });
+  }
+
+  if (calcCatClearBtn) {
+    calcCatClearBtn.addEventListener('click', () => {
+      if (calcCatSearchInput) calcCatSearchInput.value = '';
+      catSearchQuery = '';
+      calcCatClearBtn.style.display = 'none';
+      renderCalcCatalog(true);
+      if (calcCatSearchInput) calcCatSearchInput.focus();
+    });
+  }
+
+  if (btnCalcCatLoadMore) {
+    btnCalcCatLoadMore.addEventListener('click', () => {
+      catPage += 1;
+      renderCalcCatalog(false);
+    });
+  }
+
+  // Render kho sản phẩm Tab 2 và cập nhật bảng tính
+  renderCalcCatalog();
   updateCalculator();
 
   // Xử lý gửi trọn gói dự toán sang tin nhắn Zalo kèm cấu hình chi tiết khách chọn
   function handleBookPackageZalo() {
     const totalCount = getTotalCamCount();
-    if (totalCount === 0) {
-      alert('Vui lòng chọn ít nhất 1 mắt camera ở Bước 1 để tính dự toán và đặt lịch!');
+    const totalCustomCount = customProducts.reduce((acc, item) => acc + item.qty, 0);
+
+    if (totalCount === 0 && totalCustomCount === 0) {
+      alert('Vui lòng chọn ít nhất 1 mắt camera hoặc 1 thiết bị từ gian hàng để tính dự toán và đặt lịch!');
       return;
     }
 
-    const camLines = [];
-    let totalCamPriceCalc = 0;
-    Object.entries(camQuantities).forEach(([id, q]) => {
-      if (q > 0) {
-        const cam = CAMERAS_DATA[id];
-        const subtotal = q * cam.price;
-        totalCamPriceCalc += subtotal;
-        camLines.push(`• ${q}x ${cam.fullName || cam.name} (${formatVND(cam.price)}/mắt) = ${formatVND(subtotal)}`);
+    let sections = [];
+
+    if (totalCount > 0) {
+      const camLines = [];
+      let totalCamPriceCalc = 0;
+      Object.entries(camQuantities).forEach(([id, q]) => {
+        if (q > 0) {
+          const cam = CAMERAS_DATA[id];
+          const subtotal = q * cam.price;
+          totalCamPriceCalc += subtotal;
+          camLines.push(`• ${q}x ${cam.fullName || cam.name} (${formatVND(cam.price)}/mắt) = ${formatVND(subtotal)}`);
+        }
+      });
+
+      let storageLine = '';
+      if (currentStorageMode === 'card') {
+        const cardRadio = document.querySelector('input[name="calc_storage"]:checked');
+        const cardPrice = cardRadio ? parseInt(cardRadio.value, 10) : 320000;
+        const cardLbl = cardRadio ? cardRadio.getAttribute('data-label') : 'Thẻ nhớ 64GB';
+        const totalCardPrice = cardPrice * totalCount;
+        storageLine = `• Thẻ nhớ MicroSD: ${totalCount}x ${cardLbl} (${formatVND(cardPrice)}/thẻ) = ${formatVND(totalCardPrice)}`;
+      } else {
+        const nvrRadio = document.querySelector('input[name="calc_nvr"]:checked');
+        const hddRadio = document.querySelector('input[name="calc_hdd"]:checked');
+        const nvrLbl = nvrRadio ? nvrRadio.getAttribute('data-label') : 'Đầu ghi NVR';
+        const nvrPrice = nvrRadio ? parseInt(nvrRadio.value, 10) : 1235000;
+        const hddLbl = hddRadio ? hddRadio.getAttribute('data-label') : 'Ổ cứng 500GB';
+        const hddPrice = hddRadio ? parseInt(hddRadio.value, 10) : 850000;
+        const hddGB = hddRadio ? hddRadio.getAttribute('data-gb') : '500';
+        const days = calc247Days(parseInt(hddGB, 10), totalCount);
+        storageLine = `• Đầu ghi hình: ${nvrLbl} (${formatVND(nvrPrice)})\n• Ổ cứng chuyên dụng 24/7: ${hddLbl} (${formatVND(hddPrice)} - Lưu liên tục ~${days} ngày)`;
       }
-    });
 
-    let storageLine = '';
-    if (currentStorageMode === 'card') {
-      const cardRadio = document.querySelector('input[name="calc_storage"]:checked');
-      const cardPrice = cardRadio ? parseInt(cardRadio.value, 10) : 320000;
-      const cardLbl = cardRadio ? cardRadio.getAttribute('data-label') : 'Thẻ nhớ 64GB';
-      const totalCardPrice = cardPrice * totalCount;
-      storageLine = `• Thẻ nhớ MicroSD: ${totalCount}x ${cardLbl} (${formatVND(cardPrice)}/thẻ) = ${formatVND(totalCardPrice)}`;
-    } else {
-      const nvrRadio = document.querySelector('input[name="calc_nvr"]:checked');
-      const hddRadio = document.querySelector('input[name="calc_hdd"]:checked');
-      const nvrLbl = nvrRadio ? nvrRadio.getAttribute('data-label') : 'Đầu ghi NVR';
-      const nvrPrice = nvrRadio ? parseInt(nvrRadio.value, 10) : 1235000;
-      const hddLbl = hddRadio ? hddRadio.getAttribute('data-label') : 'Ổ cứng 500GB';
-      const hddPrice = hddRadio ? parseInt(hddRadio.value, 10) : 850000;
-      const hddGB = hddRadio ? hddRadio.getAttribute('data-gb') : '500';
-      const days = calc247Days(parseInt(hddGB, 10), totalCount);
-      storageLine = `• Đầu ghi hình: ${nvrLbl} (${formatVND(nvrPrice)})\n• Ổ cứng chuyên dụng 24/7: ${hddLbl} (${formatVND(hddPrice)} - Lưu liên tục ~${days} ngày)`;
-    }
+      const installRadio = document.querySelector('input[name="calc_install"]:checked');
+      const isSelf = installRadio && parseInt(installRadio.value, 10) === 0;
+      let installLine = '';
+      if (isSelf) {
+        installLine = '• Dịch vụ: Tự lắp đặt tại nhà (Chu Gia hỗ trợ cài đặt đồng bộ sẵn, 0 đ)';
+      } else {
+        const installTotal = 200000 * totalCount;
+        installLine = `• Dịch vụ: Trọn gói lắp đặt thẩm mỹ tận nhà ${totalCount} mắt (200k/mắt) = ${formatVND(installTotal)}\n  (Bao gồm: Công thợ thẩm mỹ, hộp kỹ thuật, nẹp dây, nguồn nối dài & bảo hành tận nơi 24 tháng)`;
+      }
 
-    const installRadio = document.querySelector('input[name="calc_install"]:checked');
-    const isSelf = installRadio && parseInt(installRadio.value, 10) === 0;
-    let installLine = '';
-    if (isSelf) {
-      installLine = '• Dịch vụ: Tự lắp đặt tại nhà (Chu Gia hỗ trợ cài đặt đồng bộ sẵn, 0 đ)';
-    } else {
-      const installTotal = 200000 * totalCount;
-      installLine = `• Dịch vụ: Trọn gói lắp đặt thẩm mỹ tận nhà ${totalCount} mắt (200k/mắt) = ${formatVND(installTotal)}\n  (Bao gồm: Công thợ thẩm mỹ, hộp kỹ thuật, nẹp dây, nguồn nối dài & bảo hành tận nơi 24 tháng)`;
-    }
-
-    const grandTotalText = summaryTotalPrice ? summaryTotalPrice.textContent : '';
-
-    const zaloMsg = 
-`Xin chào Chu Gia Security! Tôi muốn đặt lịch tư vấn & lắp đặt gói camera theo dự toán trên website:
-
-📸 1. CAMERA ĐÃ CHỌN (${totalCount} MẮT):
+      sections.push(
+`📸 1. CAMERA ĐÃ CHỌN (${totalCount} MẮT):
 ${camLines.join('\n')}
 👉 Tiền camera: ${summaryCamPrice ? summaryCamPrice.textContent : formatVND(totalCamPriceCalc)}
 
@@ -1697,11 +2119,31 @@ ${camLines.join('\n')}
 ${storageLine}
 
 🛠️ 3. GÓI DỊCH VỤ LẮP ĐẶT:
-${installLine}
+${installLine}`
+      );
+    }
+
+    if (totalCustomCount > 0) {
+      const totalCustomPrice = customProducts.reduce((acc, item) => acc + (item.qty * item.retailPrice), 0);
+      const customLines = customProducts.map(item => `• ${item.qty}x ${item.name} (${item.sku ? `Mã: ${item.sku} - ` : ''}${formatVND(item.retailPrice)}/món) = ${formatVND(item.qty * item.retailPrice)}`);
+      const secNum = totalCount > 0 ? '4' : '1';
+      sections.push(
+`📦 ${secNum}. THIẾT BỊ CHỌN THÊM TỪ GIAN HÀNG (${totalCustomCount} SẢN PHẨM):
+${customLines.join('\n')}
+👉 Tiền thiết bị gian hàng: ${formatVND(totalCustomPrice)}`
+      );
+    }
+
+    const grandTotalText = summaryTotalPrice ? summaryTotalPrice.textContent : '';
+
+    const zaloMsg = 
+`Xin chào Chu Gia Security! Tôi muốn đặt lịch tư vấn & báo giá theo dự toán trên website:
+
+${sections.join('\n\n')}
 
 💰 TỔNG DỰ KIẾN TRỌN GÓI: ${grandTotalText}
 
-Nhờ Chu Gia liên hệ tư vấn và xếp lịch khảo sát / lắp đặt sớm giúp tôi nhé. Cảm ơn!`;
+Nhờ Chu Gia liên hệ tư vấn và xác nhận đơn hàng sớm giúp tôi nhé. Cảm ơn!`;
 
     // Tự động sao chép nội dung gói dự toán vào clipboard
     if (navigator.clipboard && navigator.clipboard.writeText) {

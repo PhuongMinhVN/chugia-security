@@ -351,6 +351,26 @@
       </div>
 
       <div class="calculator-card">
+        <!-- TAB SWITCHER: Camera Gia Đình vs Gian Hàng 480+ Thiết Bị -->
+        <div class="calc-main-tabs" id="calcMainTabs" role="tablist">
+          <button type="button" class="calc-main-tab active" data-tab="package" id="tabCalcPackage" role="tab" aria-selected="true">
+            <span class="cmt-icon">📹</span>
+            <div class="cmt-info">
+              <span class="cmt-title">Camera Gia Đình</span>
+              <span class="cmt-desc">Trọn gói combo lắp đặt</span>
+            </div>
+            <span class="cmt-badge">Combo Chuẩn</span>
+          </button>
+          <button type="button" class="calc-main-tab" data-tab="catalog" id="tabCalcCatalog" role="tab" aria-selected="false">
+            <span class="cmt-icon">🛍️</span>
+            <div class="cmt-info">
+              <span class="cmt-title">Gian Hàng &amp; Danh Mục</span>
+              <span class="cmt-desc">Kho 480+ thiết bị tự chọn</span>
+            </div>
+            <span class="cmt-badge cmt-badge-hot">Báo Giá Tự Chọn</span>
+          </button>
+        </div>
+
         <!-- Live Preview Bar: Hiển thị ngay ảnh và giá camera đang chọn -->
         <div class="calc-live-preview-box" id="calcLivePreview">
           <div class="calc-preview-left">
@@ -394,8 +414,10 @@
         </div>
 
         <div class="calculator-grid">
-          <div>
-            <!-- Step 1: Chọn Tùy Biến Hoặc Phối Hợp Nhiều Camera (Trong Nhà & Ngoài Trời) -->
+          <div class="calc-main-content">
+            <!-- TAB PANE 1: Camera Gia Đình Trọn Gói -->
+            <div class="calc-tab-pane active" id="paneCalcPackage">
+              <!-- Step 1: Chọn Tùy Biến Hoặc Phối Hợp Nhiều Camera (Trong Nhà & Ngoài Trời) -->
             <div class="calc-step">
               <div class="calc-step-title" style="justify-content: space-between; flex-wrap: wrap; gap: 8px;">
                 <div style="display: flex; align-items: center; gap: 8px;">
@@ -756,25 +778,95 @@
               </div>
             </div>
           </div>
+          <!-- /#paneCalcPackage -->
 
-          <!-- Summary Box -->
-          <div class="calc-summary-box" id="calcSummaryBox">
-            <div>
-              <div class="calc-summary-title">Dự Toán Chi Phí Trọn Gói</div>
-
-              <!-- Danh sách camera đã chọn chi tiết -->
-              <div class="summary-cam-section">
-                <div class="summary-sec-title">
-                  <span>Camera đã chọn (<strong id="summaryTotalCamCount">2</strong> mắt):</span>
-                </div>
-                <div class="summary-cam-list" id="summaryCamList">
-                  <!-- Rendered dynamically -->
-                </div>
-                <div class="summary-line summary-subtotal-line">
-                  <span>Tiền camera:</span>
-                  <span id="summaryCamPrice">1.280.000 đ</span>
-                </div>
+          <!-- TAB PANE 2: Chọn Thiết Bị Từ Gian Hàng & Danh Mục (480+ Mẫu) -->
+          <div class="calc-tab-pane" id="paneCalcCatalog" style="display: none;">
+            <!-- Toolbar: Search & Store Link -->
+            <div class="calc-cat-toolbar">
+              <div class="calc-cat-search-box">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="text" id="calcCatSearchInput" placeholder="Tìm camera wifi, switch poe, omada, đầu ghi, khóa cửa, SKU..." autocomplete="off">
+                <button type="button" id="calcCatClearBtn" class="calc-search-clear-btn" style="display: none;" title="Xóa tìm kiếm">✕</button>
               </div>
+              <a href="san-pham.html" class="btn-goto-store" target="_blank" rel="noopener">
+                <span>Đi vào Gian Hàng ↗</span>
+              </a>
+            </div>
+
+            <!-- Dải Danh Mục Lọc Nhanh -->
+            <div class="calc-cat-pills-bar" id="calcCatPillsBar">
+              <button type="button" class="calc-cat-pill active" data-cat="all">Tất Cả (485)</button>
+              <button type="button" class="calc-cat-pill" data-cat="53999">📶 Omada WiFi</button>
+              <button type="button" class="calc-cat-pill" data-cat="52930">📷 Wifi IMOU</button>
+              <button type="button" class="calc-cat-pill" data-cat="52929">📷 Wifi DAHUA</button>
+              <button type="button" class="calc-cat-pill" data-cat="52943">📷 Wifi TAPO</button>
+              <button type="button" class="calc-cat-pill" data-cat="52932">📹 IP DAHUA</button>
+              <button type="button" class="calc-cat-pill" data-cat="52936">📹 IP HIKVISION</button>
+              <button type="button" class="calc-cat-pill" data-cat="52945">🔌 Switch PoE</button>
+              <button type="button" class="calc-cat-pill" data-cat="52948">🌐 Mạng RUIJIE</button>
+              <button type="button" class="calc-cat-pill" data-cat="52941">🔐 Khóa Điện Tử</button>
+              <button type="button" class="calc-cat-pill" data-cat="52940">🔔 Chuông Có Hình</button>
+              <button type="button" class="calc-cat-pill" data-cat="53301">💾 Ổ Cứng HDD</button>
+            </div>
+
+            <!-- Lời Nhắn Hướng Dẫn Tự Động Tính Giá -->
+            <div class="calc-cat-guide-box">
+              <div class="ccgb-icon">💡</div>
+              <div class="ccgb-text">
+                <strong>Tự do chọn thiết bị vào dự toán:</strong> Bấm <strong>"+ Thêm vào dự toán"</strong> để cộng dồn vào bảng tính chi phí và gửi Zalo. Mọi sản phẩm thêm ở đây hoặc trong giỏ của <a href="san-pham.html" target="_blank">Gian Hàng</a> đều được tự động đồng bộ và tính vào phần dự toán!
+              </div>
+            </div>
+
+            <!-- Danh sách sản phẩm dạng lưới -->
+            <div class="calc-cat-grid" id="calcCatalogGrid">
+              <!-- Được JS render tự động từ HTA_PRODUCTS_DATA -->
+            </div>
+
+            <!-- Phân trang / Xem thêm -->
+            <div class="calc-cat-loadmore-wrap" id="calcCatLoadMoreWrap">
+              <button type="button" class="btn-calc-cat-loadmore" id="btnCalcCatLoadMore">
+                <span>Xem Thêm Sản Phẩm Khác</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+            </div>
+          </div>
+          <!-- /#paneCalcCatalog -->
+        </div>
+        <!-- /.calc-main-content -->
+
+        <!-- Summary Box -->
+        <div class="calc-summary-box" id="calcSummaryBox">
+          <div>
+            <div class="calc-summary-title">Dự Toán Chi Phí Trọn Gói</div>
+
+            <!-- Danh sách camera đã chọn chi tiết -->
+            <div class="summary-cam-section">
+              <div class="summary-sec-title">
+                <span>Camera đã chọn (<strong id="summaryTotalCamCount">2</strong> mắt):</span>
+              </div>
+              <div class="summary-cam-list" id="summaryCamList">
+                <!-- Rendered dynamically -->
+              </div>
+              <div class="summary-line summary-subtotal-line">
+                <span>Tiền camera:</span>
+                <span id="summaryCamPrice">1.280.000 đ</span>
+              </div>
+            </div>
+
+            <!-- Thiết bị chọn thêm từ gian hàng -->
+            <div class="summary-custom-section" id="summaryCustomSection" style="display: none;">
+              <div class="summary-sec-title">
+                <span>Thiết bị gian hàng (<strong id="summaryCustomCount">0</strong> món):</span>
+              </div>
+              <div class="summary-custom-list" id="summaryCustomList">
+                <!-- Rendered dynamically -->
+              </div>
+              <div class="summary-line summary-subtotal-line">
+                <span>Tiền thiết bị gian hàng:</span>
+                <span id="summaryCustomPrice">0 đ</span>
+              </div>
+            </div>
 
               <div class="summary-items" style="border-top: 1px dashed #E2E8F0; padding-top: 10px; margin-top: 10px;">
                 <div class="summary-line" id="lineSummaryCard">
@@ -1157,7 +1249,8 @@
 
   <div class="toast-msg" id="toastMsg">Yêu cầu đã được gửi thành công!</div>
 
-  <!-- QR Scripts tải lười theo nhu cầu qua main.js khi người dùng bấm chia sẻ -->
-  <script src="js/main.js?v=20260913_2315" defer></script>
+  <!-- Dữ liệu kho 480+ sản phẩm & Omada WiFi -->
+  <script src="js/hta-products-data.js?v=20260914" defer></script>
+  <script src="js/main.js?v=20260914_0100" defer></script>
 </body>
 </html>

@@ -3403,6 +3403,739 @@ a.floating-hud-badge.hud-top-right:hover {
   color: #FF7A00;
 }
 
+/* ================= DUAL TAB SYSTEM CHO BẢNG DỰ TOÁN ================= */
+.calc-main-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.calc-main-tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: #F8FAFC;
+  border: 2px solid #E2E8F0;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: left;
+  font-family: inherit;
+  user-select: none;
+  position: relative;
+}
+
+.calc-main-tab:hover {
+  border-color: #93C5FD;
+  background: #EFF6FF;
+  transform: translateY(-1px);
+}
+
+.calc-main-tab.active {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  border-color: #0084FF;
+  box-shadow: 0 6px 18px rgba(0, 132, 255, 0.18);
+}
+
+.cmt-icon {
+  font-size: 1.55rem;
+  line-height: 1;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.cmt-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.cmt-title {
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: #0F172A;
+  line-height: 1.25;
+  transition: color 0.2s;
+}
+
+.calc-main-tab.active .cmt-title {
+  color: #FFFFFF;
+}
+
+.cmt-desc {
+  font-size: 0.74rem;
+  color: #64748B;
+  margin-top: 2px;
+  transition: color 0.2s;
+}
+
+.calc-main-tab.active .cmt-desc {
+  color: #94A3B8;
+}
+
+.cmt-badge {
+  margin-left: auto;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: #E2E8F0;
+  color: #334155;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+  transition: all 0.2s;
+}
+
+.calc-main-tab.active .cmt-badge {
+  background: rgba(0, 132, 255, 0.25);
+  color: #38BDF8;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+}
+
+.cmt-badge-hot {
+  background: #FEF3C7;
+  color: #B45309;
+}
+
+.calc-main-tab.active .cmt-badge-hot {
+  background: #FF7A00;
+  color: #FFFFFF;
+  border: none;
+  box-shadow: 0 2px 8px rgba(255, 122, 0, 0.35);
+}
+
+@media (max-width: 680px) {
+  .calc-main-tabs {
+    gap: 8px;
+  }
+  .calc-main-tab {
+    padding: 10px 10px;
+    gap: 8px;
+    border-radius: 10px;
+  }
+  .cmt-icon {
+    font-size: 1.25rem;
+  }
+  .cmt-title {
+    font-size: 0.82rem;
+  }
+  .cmt-desc {
+    display: none;
+  }
+  .cmt-badge {
+    display: none;
+  }
+}
+
+/* Tab Pane Transitions */
+.calc-tab-pane {
+  animation: fadeInPane 0.22s ease forwards;
+}
+
+@keyframes fadeInPane {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= TAB 2: KHO GIAN HÀNG 480+ THIẾT BỊ ================= */
+.calc-cat-toolbar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.calc-cat-search-box {
+  flex: 1;
+  min-width: 240px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.calc-cat-search-box svg {
+  position: absolute;
+  left: 12px;
+  color: #94A3B8;
+  pointer-events: none;
+}
+
+.calc-cat-search-box input {
+  width: 100%;
+  padding: 10px 36px 10px 38px;
+  border: 1.5px solid #CBD5E1;
+  border-radius: 10px;
+  font-size: 0.86rem;
+  font-family: inherit;
+  color: #0F172A;
+  background: #FFFFFF;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.calc-cat-search-box input:focus {
+  border-color: #0084FF;
+  box-shadow: 0 0 0 3px rgba(0, 132, 255, 0.12);
+}
+
+.calc-search-clear-btn {
+  position: absolute;
+  right: 10px;
+  background: #E2E8F0;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #475569;
+  font-weight: 800;
+  transition: all 0.15s;
+}
+
+.calc-search-clear-btn:hover {
+  background: #CBD5E1;
+  color: #0F172A;
+}
+
+.btn-goto-store {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: #080D1A;
+  color: #38BDF8;
+  border: 1.5px solid #0284C7;
+  border-radius: 10px;
+  font-size: 0.80rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.btn-goto-store:hover {
+  background: #0284C7;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Category Pills */
+.calc-cat-pills-bar {
+  display: flex;
+  gap: 7px;
+  overflow-x: auto;
+  padding: 2px 2px 10px 2px;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+
+.calc-cat-pill {
+  background: #F1F5F9;
+  border: 1px solid #E2E8F0;
+  color: #475569;
+  padding: 6px 13px;
+  border-radius: 20px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  user-select: none;
+}
+
+.calc-cat-pill:hover {
+  background: #EFF6FF;
+  color: #0084FF;
+  border-color: #BFDBFE;
+}
+
+.calc-cat-pill.active {
+  background: #0F172A;
+  color: #34D399;
+  border-color: #10B981;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.25);
+}
+
+/* Guide box */
+.calc-cat-guide-box {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  background: #F0FDF4;
+  border: 1px solid #BBF7D0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+  font-size: 0.78rem;
+  color: #166534;
+  line-height: 1.4;
+}
+
+.ccgb-icon {
+  font-size: 1.15rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.ccgb-text a {
+  color: #059669;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Products Grid */
+.calc-cat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 900px) {
+  .calc-cat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .calc-cat-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.calc-prod-card {
+  border: 1.5px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 12px;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  box-sizing: border-box;
+}
+
+.calc-prod-card:hover {
+  border-color: #0084FF;
+  box-shadow: 0 6px 18px rgba(0, 132, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.calc-prod-card.selected {
+  border-color: #10B981;
+  background: #F0FDF4;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25), 0 4px 14px rgba(16, 185, 129, 0.1);
+}
+
+.calc-prod-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.calc-prod-brand {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #0284C7;
+  background: #E0F2FE;
+  padding: 2px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.3px;
+}
+
+.calc-prod-sku {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #64748B;
+  background: #F1F5F9;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.calc-prod-img-wrap {
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 8px;
+  background: #F8FAFC;
+  border-radius: 8px;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.calc-prod-img-wrap img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+.calc-prod-card:hover .calc-prod-img-wrap img {
+  transform: scale(1.06);
+}
+
+.calc-prod-qty-badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: #10B981;
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 800;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.4);
+}
+
+.calc-prod-body {
+  margin-bottom: 10px;
+}
+
+.calc-prod-title {
+  font-size: 0.80rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0 0 6px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 38px;
+  line-height: 1.35;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.calc-prod-title:hover {
+  color: #0084FF;
+}
+
+.calc-prod-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.calc-prod-price {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #FF6600;
+}
+
+.calc-prod-orig-price {
+  font-size: 0.72rem;
+  color: #94A3B8;
+  text-decoration: line-through;
+}
+
+.calc-prod-actions {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.btn-calc-prod-add {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 7px 8px;
+  background: #0084FF;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.btn-calc-prod-add:hover {
+  background: #006ED4;
+  box-shadow: 0 2px 8px rgba(0, 132, 255, 0.35);
+}
+
+.calc-prod-stepper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #10B981;
+  border-radius: 8px;
+  padding: 2px 4px;
+  box-sizing: border-box;
+}
+
+.cps-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, transform 0.1s;
+  font-family: inherit;
+}
+
+.cps-btn:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.cps-btn:active {
+  transform: scale(0.92);
+}
+
+.cps-qty {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  min-width: 22px;
+  text-align: center;
+}
+
+.btn-calc-prod-quickview {
+  padding: 7px 9px;
+  background: #F1F5F9;
+  color: #475569;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.btn-calc-prod-quickview:hover {
+  background: #E2E8F0;
+  color: #0F172A;
+}
+
+/* Empty state */
+.calc-cat-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 32px 16px;
+  background: #F8FAFC;
+  border: 1px dashed #CBD5E1;
+  border-radius: 12px;
+}
+
+.cce-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.cce-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 4px;
+}
+
+.cce-desc {
+  font-size: 0.78rem;
+  color: #64748B;
+}
+
+/* Load more */
+.calc-cat-loadmore-wrap {
+  text-align: center;
+  margin-top: 14px;
+}
+
+.btn-calc-cat-loadmore {
+  padding: 9px 24px;
+  background: #FFFFFF;
+  border: 1.5px solid #0084FF;
+  color: #0084FF;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.btn-calc-cat-loadmore:hover {
+  background: #0084FF;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(0, 132, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+/* ================= SUMMARY BOX: THIẾT BỊ TỰ CHỌN GIAN HÀNG ================= */
+.summary-custom-section {
+  border-top: 1px dashed #E2E8F0;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.summary-custom-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 6px;
+  margin-bottom: 8px;
+  max-height: 220px;
+  overflow-y: auto;
+  padding-right: 2px;
+  scrollbar-width: thin;
+}
+
+.summary-custom-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  font-size: 0.76rem;
+}
+
+.sci-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.sci-name {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #0F172A;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sci-price-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.70rem;
+  color: #64748B;
+  margin-top: 2px;
+}
+
+.sci-unit-price {
+  color: #FF6600;
+  font-weight: 700;
+}
+
+.sci-sku {
+  background: #E2E8F0;
+  padding: 1px 4px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.sci-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.sci-stepper {
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.sci-btn {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: #F1F5F9;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #334155;
+  transition: background 0.15s;
+  font-family: inherit;
+}
+
+.sci-btn:hover {
+  background: #E2E8F0;
+}
+
+.sci-qty {
+  min-width: 18px;
+  text-align: center;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+.sci-subtotal {
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: #0F172A;
+  min-width: 65px;
+  text-align: right;
+}
+
+.sci-remove-btn {
+  border: none;
+  background: transparent;
+  color: #94A3B8;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 2px 5px;
+  border-radius: 4px;
+  transition: all 0.15s;
+}
+
+.sci-remove-btn:hover {
+  color: #EF4444;
+  background: #FEE2E2;
+}
+
 /* ---------------- 470+ CATALOG BANNER (BELOW CALCULATOR) ---------------- */
 .calc-catalog-banner-wrap {
   margin-top: 36px;
