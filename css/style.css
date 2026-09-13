@@ -3545,7 +3545,17 @@ a.floating-hud-badge.hud-top-right:hover {
 
   .hero-slide-grid {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 20px;
+  }
+
+  .hero-visual {
+    order: 1;
+    width: 100%;
+  }
+
+  .hero-content {
+    order: 2;
+    width: 100%;
   }
 
   .hero-prev-btn {
@@ -3557,7 +3567,7 @@ a.floating-hud-badge.hud-top-right:hover {
   }
 
   .hero-progress-nav {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 8px;
     margin-top: 20px;
   }
@@ -3617,7 +3627,11 @@ a.floating-hud-badge.hud-top-right:hover {
 
   .hero-grid,
   .hero-slide-grid {
-    gap: 16px;
+    gap: 14px;
+  }
+
+  .hero-content {
+    gap: 12px;
   }
 
   .hero-title {
