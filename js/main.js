@@ -869,7 +869,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const calcStorage = document.querySelectorAll('input[name="calc_storage"]');
   const calcNvr = document.querySelectorAll('input[name="calc_nvr"]');
   const calcHdd = document.querySelectorAll('input[name="calc_hdd"]');
-  const calcInstall = document.getElementById('calcInstall');
+  const calcInstall = document.querySelectorAll('input[name="calc_install"]');
 
   const tabModeCard = document.getElementById('tabModeCard');
   const tabModeNVR = document.getElementById('tabModeNVR');
@@ -1171,8 +1171,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 3. Installation
-    const isInstallChecked = calcInstall ? calcInstall.checked : true;
-    const installPricePerCam = isInstallChecked ? 200000 : 0;
+    let installPricePerCam = 200000;
+    let selectedInstallLabel = 'Lắp đặt thẩm mỹ (200k/mắt)';
+    let isSelfInstall = false;
+
+    calcInstall.forEach(radio => {
+      if (radio.checked) {
+        installPricePerCam = parseInt(radio.value, 10);
+        selectedInstallLabel = radio.getAttribute('data-label') || '';
+        if (installPricePerCam === 0) {
+          isSelfInstall = true;
+        }
+      }
+    });
+
+    document.querySelectorAll('.install-option').forEach(opt => {
+      const input = opt.querySelector('input');
+      if (input && input.checked) opt.classList.add('selected');
+      else opt.classList.remove('selected');
+    });
+
     const totalInstall = installPricePerCam * currentQty;
 
     // 4. Totals
@@ -1182,7 +1200,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (summaryCamName) summaryCamName.textContent = selectedCamLabel;
     if (summaryCamQty) summaryCamQty.textContent = `${currentQty} Mắt`;
     if (summaryCamPrice) summaryCamPrice.textContent = formatVND(totalCam);
-    if (summaryInstallPrice) summaryInstallPrice.textContent = isInstallChecked ? formatVND(totalInstall) : '0 đ';
+    if (summaryInstallPrice) {
+      summaryInstallPrice.textContent = isSelfInstall ? '0 đ (Tự lắp)' : formatVND(totalInstall);
+    }
     if (summaryTotalPrice) summaryTotalPrice.textContent = formatVND(grandTotal);
 
     if (calcCamQty) calcCamQty.textContent = currentQty;
@@ -1204,7 +1224,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   calcCameraType.forEach(radio => radio.addEventListener('change', updateCalculator));
-  if (calcInstall) calcInstall.addEventListener('change', updateCalculator);
+  calcInstall.forEach(radio => {
+    radio.addEventListener('change', updateCalculator);
+    radio.addEventListener('click', updateCalculator);
+  });
+  document.querySelectorAll('.install-option').forEach(label => {
+    label.addEventListener('click', () => {
+      setTimeout(updateCalculator, 10);
+    });
+  });
 
   updateCalculator();
 
@@ -1225,7 +1253,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const days = calc247Days(parseInt(hddGB, 10), currentQty);
         storageNote = `${nvrLbl} + Ổ cứng ${hddGB}GB (Lưu 24/7 ~${days} ngày)`;
       }
-      scrollToContact(`${currentQty} mắt ${camName} + ${storageNote} (Dự toán: ${total})`);
+      const installRadio = document.querySelector('input[name="calc_install"]:checked');
+      const isSelf = installRadio && parseInt(installRadio.value, 10) === 0;
+      const installNote = isSelf ? 'Tự lắp đặt tại nhà (0 đ)' : `Công lắp trọn gói (${summaryInstallPrice ? summaryInstallPrice.textContent : '400.000 đ'})`;
+      scrollToContact(`${currentQty} mắt ${camName} + ${storageNote} + ${installNote} (Dự toán: ${total})`);
     });
   }
 
