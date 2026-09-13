@@ -974,17 +974,17 @@ a.floating-hud-badge.hud-top-right:hover {
   box-shadow: 0 0 25px rgba(255, 122, 0, 0.5);
 }
 
-/* Imou-style Segmented Progress Navigation (7 items) */
+/* Imou-style Segmented Progress Navigation (8 items) */
 .hero-progress-nav {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 8px;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 7px;
   margin-top: 24px;
   position: relative;
   z-index: 15;
 }
 
-@media (max-width: 1180px) and (min-width: 769px) {
+@media (max-width: 1280px) and (min-width: 769px) {
   .hero-progress-nav {
     grid-template-columns: repeat(4, 1fr);
     gap: 8px;
