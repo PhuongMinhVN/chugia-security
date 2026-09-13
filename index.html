@@ -266,79 +266,173 @@
       </div>
 
       <div class="calculator-card">
+        <!-- Live Preview Bar: Hiển thị ngay ảnh và giá camera đang chọn -->
+        <div class="calc-live-preview-box" id="calcLivePreview">
+          <div class="calc-preview-left">
+            <div class="calc-preview-img-wrap">
+              <img src="images/imou_indoor_ranger.png" alt="Camera đang chọn" id="calcPreviewImg" class="calc-preview-img">
+            </div>
+            <div class="calc-preview-details">
+              <div class="calc-preview-badge" id="calcPreviewBadge">🔥 GÓI BÁN CHẠY NHẤT</div>
+              <h3 class="calc-preview-name" id="calcPreviewName">Imou Ranger 2 (Trong Nhà 360° AI)</h3>
+              <div class="calc-preview-specs" id="calcPreviewSpecs">
+                <span class="preview-chip">Xoay 360°</span>
+                <span class="preview-chip">Bám theo người</span>
+                <span class="preview-chip">Đàm thoại 2 chiều</span>
+              </div>
+            </div>
+          </div>
+          <div class="calc-preview-right">
+            <div class="calc-preview-price-group">
+              <div class="calc-preview-price-label">Tổng Dự Kiến Trọn Gói:</div>
+              <div class="calc-preview-total" id="calcLiveTotalPrice">2.220.000 đ</div>
+            </div>
+            <button type="button" class="btn btn-primary btn-sm calc-preview-cta" onclick="document.getElementById('btnBookCalc').click()">
+              <span>Đặt Lịch Gói Này</span>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
+
         <div class="calculator-grid">
           <div>
-            <!-- Step 1 -->
+            <!-- Step 1: Chọn Loại Camera với Hình Ảnh & Thẻ Trực Quan -->
             <div class="calc-step">
-              <div class="calc-step-title">
-                <span class="step-num">1</span>
-                <span>Chọn loại camera:</span>
+              <div class="calc-step-title" style="justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span class="step-num">1</span>
+                  <span>Chọn loại camera (Có ảnh thật):</span>
+                </div>
+                <span style="font-size: 0.72rem; color: #0084ff; font-weight: 700;">Chạm vào thẻ để đổi</span>
               </div>
-              <div class="calc-options-grid">
-                <label class="calc-option cam-type-option">
-                  <input type="radio" name="calc_cam_type" value="490000" data-label="Trong Nhà Siêu Rộng (490k)">
-                  <div>
-                    <strong>Trong Nhà Góc Rộng - 490k</strong>
-                    <div style="font-size: 0.75rem; color: #64748b;">Đế hít nam châm, góc rộng 108°</div>
+              <div class="calc-cam-grid">
+                <!-- 1. Imou Cue 2C -->
+                <label class="calc-cam-card cam-type-option" data-img="images/imou_indoor_cue.png" data-name="Imou Cue 2C (Trong Nhà Góc Rộng)" data-badge="GIÁ SỐC 490K" data-specs="Góc rộng 108°|Đế nam châm|Đàm thoại 2C">
+                  <input type="radio" name="calc_cam_type" value="490000" data-label="Trong Nhà Siêu Rộng (490k)" data-img="images/imou_indoor_cue.png" data-name="Imou Cue 2C (Trong Nhà Góc Rộng)" data-badge="GIÁ SỐC 490K" data-specs="Góc rộng 108°|Đế nam châm|Đàm thoại 2C">
+                  <span class="calc-cam-tag">GIÁ TỐT 490K</span>
+                  <div class="calc-cam-img-wrap">
+                    <img src="images/imou_indoor_cue.png" alt="Trong Nhà Góc Rộng" loading="lazy">
+                  </div>
+                  <div class="calc-cam-info">
+                    <div class="calc-cam-title">Trong Nhà Góc Rộng</div>
+                    <div class="calc-cam-desc">Đế nam châm, góc rộng 108°</div>
+                    <div class="calc-cam-price">490.000 đ</div>
+                  </div>
+                  <div class="calc-cam-check">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   </div>
                 </label>
 
-                <label class="calc-option cam-type-option selected">
-                  <input type="radio" name="calc_cam_type" value="590000" data-label="Trong Nhà 360° (590k)" checked>
-                  <div>
-                    <strong>Trong Nhà 360° - 590k (Hot)</strong>
-                    <div style="font-size: 0.75rem; color: #64748b;">Quay quét 360°, bám theo người</div>
+                <!-- 2. Imou Ranger 2 360 -->
+                <label class="calc-cam-card cam-type-option selected" data-img="images/imou_indoor_ranger.png" data-name="Imou Ranger 2 (Trong Nhà 360° AI)" data-badge="BÁN CHẠY NHẤT 🔥" data-specs="Xoay 360°|Bám theo người|Còi báo động">
+                  <input type="radio" name="calc_cam_type" value="590000" data-label="Trong Nhà 360° (590k)" data-img="images/imou_indoor_ranger.png" data-name="Imou Ranger 2 (Trong Nhà 360° AI)" data-badge="BÁN CHẠY NHẤT 🔥" data-specs="Xoay 360°|Bám theo người|Còi báo động" checked>
+                  <span class="calc-cam-tag hot">BÁN CHẠY 🔥</span>
+                  <div class="calc-cam-img-wrap">
+                    <img src="images/imou_indoor_ranger.png" alt="Trong Nhà 360°" loading="lazy">
+                  </div>
+                  <div class="calc-cam-info">
+                    <div class="calc-cam-title">Trong Nhà 360° AI</div>
+                    <div class="calc-cam-desc">Quay quét 360°, bám theo người</div>
+                    <div class="calc-cam-price">590.000 đ</div>
+                  </div>
+                  <div class="calc-cam-check">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   </div>
                 </label>
 
-                <label class="calc-option cam-type-option">
-                  <input type="radio" name="calc_cam_type" value="850000" data-label="Trong Nhà 2K AI (850k)">
-                  <div>
-                    <strong>Trong Nhà 2K AI - 850k</strong>
-                    <div style="font-size: 0.75rem; color: #64748b;">Nét chuẩn 2K, đàm thoại 2 chiều</div>
+                <!-- 3. EZVIZ C6N 4K -->
+                <label class="calc-cam-card cam-type-option" data-img="images/ezviz_indoor_c6n_4k.png" data-name="EZVIZ C6N G1 (Trong Nhà 2K/4K AI)" data-badge="SIÊU NÉT 2K AI ✨" data-specs="Chuẩn nét 2K/4K|Xoay 360°|Đàm thoại 2C">
+                  <input type="radio" name="calc_cam_type" value="850000" data-label="Trong Nhà 2K AI (850k)" data-img="images/ezviz_indoor_c6n_4k.png" data-name="EZVIZ C6N (Trong Nhà 2K/4K AI)" data-badge="SIÊU NÉT 2K AI ✨" data-specs="Chuẩn nét 2K/4K|Xoay 360°|Đàm thoại 2C">
+                  <span class="calc-cam-tag quality">SIÊU NÉT 2K</span>
+                  <div class="calc-cam-img-wrap">
+                    <img src="images/ezviz_indoor_c6n_4k.png" alt="Trong Nhà 2K AI" loading="lazy">
+                  </div>
+                  <div class="calc-cam-info">
+                    <div class="calc-cam-title">Trong Nhà 2K AI</div>
+                    <div class="calc-cam-desc">Nét chuẩn 2K, đàm thoại 2 chiều</div>
+                    <div class="calc-cam-price">850.000 đ</div>
+                  </div>
+                  <div class="calc-cam-check">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   </div>
                 </label>
 
-                <label class="calc-option cam-type-option">
-                  <input type="radio" name="calc_cam_type" value="690000" data-label="Ngoài Trời Chuẩn IP67 (690k)">
-                  <div>
-                    <strong>Ngoài Trời Chuẩn IP67 - 690k</strong>
-                    <div style="font-size: 0.75rem; color: #64748b;">Thân trụ chịu mưa nắng bền bỉ</div>
+                <!-- 4. Imou Bullet 2C Outdoor -->
+                <label class="calc-cam-card cam-type-option" data-img="images/imou_outdoor_bullet_2c.png" data-name="Imou Bullet 2C (Ngoài Trời IP67)" data-badge="CHỐNG NƯỚC IP67 🌧️" data-specs="Chống nước IP67|Hồng ngoại 30m|Anten thu xa">
+                  <input type="radio" name="calc_cam_type" value="690000" data-label="Ngoài Trời Chuẩn IP67 (690k)" data-img="images/imou_outdoor_bullet_2c.png" data-name="Imou Bullet 2C (Ngoài Trời IP67)" data-badge="CHỐNG NƯỚC IP67 🌧️" data-specs="Chống nước IP67|Hồng ngoại 30m|Anten thu xa">
+                  <span class="calc-cam-tag outdoor">CHỐNG NƯỚC IP67</span>
+                  <div class="calc-cam-img-wrap">
+                    <img src="images/imou_outdoor_bullet_2c.png" alt="Ngoài Trời Chuẩn IP67" loading="lazy">
+                  </div>
+                  <div class="calc-cam-info">
+                    <div class="calc-cam-title">Ngoài Trời IP67</div>
+                    <div class="calc-cam-desc">Thân trụ chịu mưa nắng bền bỉ</div>
+                    <div class="calc-cam-price">690.000 đ</div>
+                  </div>
+                  <div class="calc-cam-check">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   </div>
                 </label>
 
-                <label class="calc-option cam-type-option">
-                  <input type="radio" name="calc_cam_type" value="1650000" data-label="Ngoài Trời 3K 360° (1.650k)">
-                  <div>
-                    <strong>Ngoài Trời 3K 360° - 1.650k</strong>
-                    <div style="font-size: 0.75rem; color: #64748b;">Ban đêm có màu, còi hú răn đe</div>
+                <!-- 5. Imou Cruiser 2 Outdoor 360 -->
+                <label class="calc-cam-card cam-type-option" data-img="images/imou_outdoor_cruiser.png" data-name="Imou Cruiser 2 (Ngoài Trời 3K 360° AI)" data-badge="ĐÊM CÓ MÀU 30M 🌙" data-specs="Xoay 360° ngoài trời|Đêm có màu 30m|Còi hú chớp đèn">
+                  <input type="radio" name="calc_cam_type" value="1650000" data-label="Ngoài Trời 3K 360° (1.650k)" data-img="images/imou_outdoor_cruiser.png" data-name="Imou Cruiser 2 (Ngoài Trời 3K 360°)" data-badge="ĐÊM CÓ MÀU 30M 🌙" data-specs="Xoay 360° ngoài trời|Đêm có màu 30m|Còi hú chớp đèn">
+                  <span class="calc-cam-tag premium">ĐÊM CÓ MÀU 🌙</span>
+                  <div class="calc-cam-img-wrap">
+                    <img src="images/imou_outdoor_cruiser.png" alt="Ngoài Trời 3K 360°" loading="lazy">
+                  </div>
+                  <div class="calc-cam-info">
+                    <div class="calc-cam-title">Ngoài Trời 3K 360°</div>
+                    <div class="calc-cam-desc">Ban đêm có màu, còi hú răn đe</div>
+                    <div class="calc-cam-price">1.650.000 đ</div>
+                  </div>
+                  <div class="calc-cam-check">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   </div>
                 </label>
 
-                <label class="calc-option cam-type-option">
-                  <input type="radio" name="calc_cam_type" value="3690000" data-label="Pin Solar 4G (3.690k)">
-                  <div>
-                    <strong>Pin Solar 4G - 3.690k</strong>
-                    <div style="font-size: 0.75rem; color: #64748b;">Không cần kéo dây điện / wifi</div>
+                <!-- 6. Pin Solar 4G -->
+                <label class="calc-cam-card cam-type-option" data-img="images/ezviz_solar_eb3_4g.png" data-name="Camera Pin Solar 4G Năng Lượng Mặt Trời" data-badge="PIN SOLAR 4G KHÔNG DÂY ☀️" data-specs="Pin năng lượng MT|Sim 4G không cần wifi|Không cần kéo dây">
+                  <input type="radio" name="calc_cam_type" value="3690000" data-label="Pin Solar 4G (3.690k)" data-img="images/ezviz_solar_eb3_4g.png" data-name="Camera Pin Solar 4G" data-badge="PIN SOLAR 4G KHÔNG DÂY ☀️" data-specs="Pin năng lượng MT|Sim 4G không cần wifi|Không cần kéo dây">
+                  <span class="calc-cam-tag solar">PIN SOLAR 4G ☀️</span>
+                  <div class="calc-cam-img-wrap">
+                    <img src="images/ezviz_solar_eb3_4g.png" alt="Pin Solar 4G" loading="lazy">
+                  </div>
+                  <div class="calc-cam-info">
+                    <div class="calc-cam-title">Pin Solar 4G</div>
+                    <div class="calc-cam-desc">Không cần kéo dây điện / wifi</div>
+                    <div class="calc-cam-price">3.690.000 đ</div>
+                  </div>
+                  <div class="calc-cam-check">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   </div>
                 </label>
               </div>
             </div>
 
-            <!-- Step 2 -->
+            <!-- Step 2: Chọn Số Lượng Camera (Quick Preset Chips) -->
             <div class="calc-step">
               <div class="calc-step-title">
                 <span class="step-num">2</span>
                 <span>Số lượng camera:</span>
               </div>
-              <div class="qty-stepper">
-                <button type="button" class="qty-btn" id="calcQtyMinus">-</button>
-                <span class="qty-val" id="calcCamQty">2</span>
-                <button type="button" class="qty-btn" id="calcQtyPlus">+</button>
+              <div class="qty-control-wrapper">
+                <div class="qty-preset-chips" id="qtyPresets">
+                  <button type="button" class="qty-preset-chip" data-qty="1">1 Mắt</button>
+                  <button type="button" class="qty-preset-chip active" data-qty="2">2 Mắt (Phổ biến)</button>
+                  <button type="button" class="qty-preset-chip" data-qty="4">4 Mắt (Gia đình)</button>
+                  <button type="button" class="qty-preset-chip" data-qty="6">6 Mắt</button>
+                  <button type="button" class="qty-preset-chip" data-qty="8">8 Mắt</button>
+                </div>
+                <div class="qty-stepper">
+                  <button type="button" class="qty-btn" id="calcQtyMinus" aria-label="Giảm">-</button>
+                  <span class="qty-val" id="calcCamQty">2</span>
+                  <button type="button" class="qty-btn" id="calcQtyPlus" aria-label="Tăng">+</button>
+                </div>
               </div>
             </div>
 
-            <!-- Step 3: Phương Thức Lưu Trữ -->
+            <!-- Step 3: Phương Thức Lưu Trữ (2 Cột Gọn Gàng) -->
             <div class="calc-step">
               <div class="calc-step-title" style="justify-content: space-between; flex-wrap: wrap; gap: 8px;">
                 <div style="display: flex; align-items: center; gap: 8px;">
@@ -355,38 +449,38 @@
                 </div>
               </div>
 
-              <!-- LỰA CHỌN A: THẺ NHỚ MICROSD -->
+              <!-- LỰA CHỌN A: THẺ NHỚ MICROSD (LƯỚI 2 CỘT GỌN GÀNG) -->
               <div id="storageCardsGroup" class="storage-group-panel">
                 <div style="font-size: 0.76rem; color: #64748b; margin-bottom: 8px;">
                   Gắn trực tiếp từng thẻ vào mỗi camera (Lưu theo chuyển động AI tiết kiệm dung lượng):
                 </div>
-                <div class="calc-options-grid">
+                <div class="storage-grid-2x2">
                   <label class="calc-option storage-card-option">
                     <input type="radio" name="calc_storage" value="220000" data-label="Thẻ nhớ 32GB">
                     <div>
                       <strong>Thẻ 32GB (220k)</strong>
-                      <div style="font-size: 0.72rem; color: #64748b;">Lưu chuyển động 3–5 ngày</div>
+                      <div style="font-size: 0.72rem; color: #64748b;">Lưu 3–5 ngày</div>
                     </div>
                   </label>
                   <label class="calc-option storage-card-option selected">
                     <input type="radio" name="calc_storage" value="320000" data-label="Thẻ nhớ 64GB" checked>
                     <div>
                       <strong>Thẻ 64GB - 320k (Hot)</strong>
-                      <div style="font-size: 0.72rem; color: #64748b;">Lưu chuyển động 7–10 ngày</div>
+                      <div style="font-size: 0.72rem; color: #64748b;">Lưu 7–10 ngày</div>
                     </div>
                   </label>
                   <label class="calc-option storage-card-option">
                     <input type="radio" name="calc_storage" value="520000" data-label="Thẻ nhớ 128GB">
                     <div>
                       <strong>Thẻ 128GB (520k)</strong>
-                      <div style="font-size: 0.72rem; color: #64748b;">Lưu chuyển động 15–20 ngày</div>
+                      <div style="font-size: 0.72rem; color: #64748b;">Lưu 15–20 ngày</div>
                     </div>
                   </label>
                   <label class="calc-option storage-card-option">
                     <input type="radio" name="calc_storage" value="890000" data-label="Thẻ nhớ 256GB">
                     <div>
                       <strong>Thẻ 256GB (890k)</strong>
-                      <div style="font-size: 0.72rem; color: #64748b;">Lưu chuyển động ~30 ngày</div>
+                      <div style="font-size: 0.72rem; color: #64748b;">Lưu ~30 ngày</div>
                     </div>
                   </label>
                 </div>
@@ -394,68 +488,74 @@
 
               <!-- LỰA CHỌN B: ĐẦU GHI HÌNH NVR & Ổ CỨNG HDD 24/7 -->
               <div id="storageNVRGroup" class="storage-group-panel" style="margin-top: 14px; display: none;">
-                <!-- 1. Chọn Đầu Ghi Hình NVR -->
-                <div style="font-size: 0.8rem; font-weight: 700; color: #0F172A; margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
-                  <span>1. Chọn Đầu Ghi Hình Không Dây NVR (Quản lý tập trung &amp; Xuất màn hình TV):</span>
+                <!-- 1. Chọn Đầu Ghi Hình NVR Có Ảnh Minh Họa -->
+                <div style="font-size: 0.8rem; font-weight: 700; color: #0F172A; margin-bottom: 6px;">
+                  1. Chọn Đầu Ghi Không Dây NVR (Xuất màn hình TV &amp; Quản lý tập trung):
                 </div>
-                <div class="nvr-grid-3" style="margin-bottom: 12px;">
+                <div class="nvr-grid-cards" style="margin-bottom: 12px;">
                   <label class="calc-option nvr-brand-option">
                     <input type="radio" name="calc_nvr" value="1235000" data-brand="imou" data-label="Đầu ghi IMOU NVR-N110W (10 kênh)">
-                    <div>
-                      <strong>IMOU NVR-N110W (10 Kênh)</strong>
-                      <div style="font-size: 0.74rem; color: #FF6600; font-weight: 700; margin-top: 1px;">1.235.000 đ</div>
-                      <div style="font-size: 0.70rem; color: #64748b;">Wifi 10 kênh, nhận diện tự động</div>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                      <img src="images/nvr_imou_n110w.png" alt="NVR IMOU" style="width: 38px; height: 38px; object-fit: contain;">
+                      <div>
+                        <strong>IMOU N110W (10 Kênh)</strong>
+                        <div style="font-size: 0.74rem; color: #FF6600; font-weight: 700;">1.235.000 đ</div>
+                      </div>
                     </div>
                   </label>
                   <label class="calc-option nvr-brand-option">
                     <input type="radio" name="calc_nvr" value="1365000" data-brand="ezviz" data-label="Đầu ghi EZVIZ X5S-8W (8 kênh)">
-                    <div>
-                      <strong>EZVIZ X5S-8W (8 Kênh)</strong>
-                      <div style="font-size: 0.74rem; color: #FF6600; font-weight: 700; margin-top: 1px;">1.365.000 đ</div>
-                      <div style="font-size: 0.70rem; color: #64748b;">Wifi 8 kênh tầm xa, xuất TV HDMI</div>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                      <img src="images/nvr_ezviz_x5s.png" alt="NVR EZVIZ" style="width: 38px; height: 38px; object-fit: contain;">
+                      <div>
+                        <strong>EZVIZ X5S (8 Kênh)</strong>
+                        <div style="font-size: 0.74rem; color: #FF6600; font-weight: 700;">1.365.000 đ</div>
+                      </div>
                     </div>
                   </label>
                   <label class="calc-option nvr-brand-option">
                     <input type="radio" name="calc_nvr" value="1625000" data-brand="imou-18" data-label="Đầu ghi IMOU NVR-N118W (18 kênh)">
-                    <div>
-                      <strong>IMOU NVR-N118W (18 Kênh)</strong>
-                      <div style="font-size: 0.74rem; color: #FF6600; font-weight: 700; margin-top: 1px;">1.625.000 đ</div>
-                      <div style="font-size: 0.70rem; color: #64748b;">Wifi 18 kênh, hỗ trợ nhiều mắt</div>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                      <img src="images/nvr_imou_n118w.png" alt="NVR IMOU 18" style="width: 38px; height: 38px; object-fit: contain;">
+                      <div>
+                        <strong>IMOU N118W (18 Kênh)</strong>
+                        <div style="font-size: 0.74rem; color: #FF6600; font-weight: 700;">1.625.000 đ</div>
+                      </div>
                     </div>
                   </label>
                 </div>
 
-                <!-- 2. Chọn Ổ Cứng HDD Chuyên Dụng -->
-                <div style="font-size: 0.8rem; font-weight: 700; color: #0F172A; margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
-                  <span>2. Chọn Ổ Cứng HDD Chuyên Dụng (Seagate SkyHawk / WD Purple):</span>
+                <!-- 2. Chọn Ổ Cứng HDD (Lưới 2 Cột Gọn Gàng) -->
+                <div style="font-size: 0.8rem; font-weight: 700; color: #0F172A; margin-bottom: 6px;">
+                  2. Chọn Ổ Cứng HDD Chuyên Dụng Lưu 24/7 Liên Tục (SkyHawk / WD Purple):
                 </div>
-                <div class="calc-options-grid">
+                <div class="storage-grid-2x2">
                   <label class="calc-option hdd-option selected">
-                    <input type="radio" name="calc_hdd" value="850000" data-label="Ổ cứng 500GB" checked>
+                    <input type="radio" name="calc_hdd" value="850000" data-gb="500" data-label="Ổ cứng 500GB" checked>
                     <div>
-                      <strong>Ổ Cứng 500GB (850k)</strong>
-                      <div style="font-size: 0.70rem; color: #64748b;">Lưu liên tục 24/7 ~5–7 ngày</div>
+                      <strong>Ổ 500GB (850k)</strong>
+                      <div class="hdd-live-days" id="days500GB">Lưu 24/7 ~7 ngày</div>
                     </div>
                   </label>
                   <label class="calc-option hdd-option">
-                    <input type="radio" name="calc_hdd" value="1150000" data-label="Ổ cứng 1TB (1000GB)">
+                    <input type="radio" name="calc_hdd" value="1150000" data-gb="1000" data-label="Ổ cứng 1TB (1000GB)">
                     <div>
-                      <strong>Ổ Cứng 1TB - 1.150k (Khuyên Dùng)</strong>
-                      <div style="font-size: 0.70rem; color: #64748b;">Lưu liên tục 24/7 ~12–15 ngày</div>
+                      <strong>Ổ 1TB - 1.150k (Hot)</strong>
+                      <div class="hdd-live-days" id="days1000GB">Lưu 24/7 ~15 ngày</div>
                     </div>
                   </label>
                   <label class="calc-option hdd-option">
-                    <input type="radio" name="calc_hdd" value="1650000" data-label="Ổ cứng 2TB (2000GB)">
+                    <input type="radio" name="calc_hdd" value="1650000" data-gb="2000" data-label="Ổ cứng 2TB (2000GB)">
                     <div>
-                      <strong>Ổ Cứng 2TB (1.650k)</strong>
-                      <div style="font-size: 0.70rem; color: #64748b;">Lưu liên tục 24/7 ~25–30 ngày</div>
+                      <strong>Ổ 2TB (1.650k)</strong>
+                      <div class="hdd-live-days" id="days2000GB">Lưu 24/7 ~30 ngày</div>
                     </div>
                   </label>
                   <label class="calc-option hdd-option">
-                    <input type="radio" name="calc_hdd" value="2650000" data-label="Ổ cứng 4TB (4000GB)">
+                    <input type="radio" name="calc_hdd" value="2650000" data-gb="4000" data-label="Ổ cứng 4TB (4000GB)">
                     <div>
-                      <strong>Ổ Cứng 4TB (2.650k)</strong>
-                      <div style="font-size: 0.70rem; color: #64748b;">Lưu liên tục 24/7 ~50–60 ngày</div>
+                      <strong>Ổ 4TB (2.650k)</strong>
+                      <div class="hdd-live-days" id="days4000GB">Lưu 24/7 ~60 ngày</div>
                     </div>
                   </label>
                 </div>
@@ -473,7 +573,7 @@
                   <input type="radio" name="calc_install" value="200000" data-label="Trọn gói lắp đặt thẩm mỹ (200k/mắt)" checked>
                   <div>
                     <strong>Lắp Đặt Thẩm Mỹ Tận Nhà - 200k/mắt</strong>
-                    <div style="font-size: 0.72rem; color: #64748b;">Bao gồm: Công thợ thẩm mỹ, hộp kỹ thuật chống cháy, nẹp/ống luồn dây, dây nguồn nối dài &amp; bảo hành 1 đổi 1 tận nơi 24 tháng</div>
+                    <div style="font-size: 0.72rem; color: #64748b;">Bao gồm: Công thợ thẩm mỹ, hộp kỹ thuật, nẹp dây, nguồn nối dài &amp; bảo hành tận nơi 24 tháng</div>
                   </div>
                 </label>
                 <label class="calc-option install-option">
@@ -775,6 +875,23 @@
     <button class="float-btn float-top" id="floatTop" title="Lên đầu">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
     </button>
+  </div>
+
+  <!-- ================= MOBILE STICKY LIVE PRICE BAR (DỰ TOÁN NHANH) ================= -->
+  <div class="calc-mobile-sticky-bar" id="calcMobileStickyBar">
+    <div class="cmsb-content">
+      <div class="cmsb-cam-info">
+        <img src="images/imou_indoor_ranger.png" alt="Camera" id="cmsbCamImg" class="cmsb-img">
+        <div class="cmsb-text">
+          <div class="cmsb-name" id="cmsbCamName">Imou Ranger 2 (2 Mắt)</div>
+          <div class="cmsb-price" id="cmsbTotalPrice">2.220.000 đ</div>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary cmsb-btn" id="cmsbBtnBook" onclick="document.getElementById('btnBookCalc').click()">
+        <span>Đặt Lịch Ngay</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div>
   </div>
 
   <!-- ================= MOBILE BOTTOM NAV ================= -->

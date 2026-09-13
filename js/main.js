@@ -897,6 +897,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const summaryTotalPrice = document.getElementById('summaryTotalPrice');
   const btnBookCalc = document.getElementById('btnBookCalc');
 
+  const calcPreviewImg = document.getElementById('calcPreviewImg');
+  const calcPreviewBadge = document.getElementById('calcPreviewBadge');
+  const calcPreviewName = document.getElementById('calcPreviewName');
+  const calcPreviewSpecs = document.getElementById('calcPreviewSpecs');
+  const calcLiveTotalPrice = document.getElementById('calcLiveTotalPrice');
+
+  const calcMobileStickyBar = document.getElementById('calcMobileStickyBar');
+  const cmsbCamImg = document.getElementById('cmsbCamImg');
+  const cmsbCamName = document.getElementById('cmsbCamName');
+  const cmsbTotalPrice = document.getElementById('cmsbTotalPrice');
+
+  const qtyPresetChips = document.querySelectorAll('.qty-preset-chip');
+
   let currentQty = 2;
   let currentStorageMode = 'card'; // 'card' hoặc 'nvr'
 
@@ -1081,21 +1094,41 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateCalculator() {
     updateHddLiveLabels();
 
-    // 1. Camera Type
+    // 1. Camera Type & Live Visual Preview
     let selectedCamPrice = 590000;
     let selectedCamLabel = 'Trong Nhà 360° (590k)';
+    let selectedCamName = 'Imou Ranger 2 (Trong Nhà 360° AI)';
+    let selectedCamImg = 'images/imou_indoor_ranger.png';
+    let selectedCamBadge = 'BÁN CHẠY NHẤT 🔥';
+    let selectedCamSpecs = ['Xoay 360°', 'Bám theo người', 'Còi hú báo động'];
+
     calcCameraType.forEach(radio => {
       if (radio.checked) {
         selectedCamPrice = parseInt(radio.value, 10);
-        selectedCamLabel = radio.getAttribute('data-label');
+        selectedCamLabel = radio.getAttribute('data-label') || selectedCamLabel;
+        selectedCamName = radio.getAttribute('data-name') || selectedCamLabel;
+        selectedCamImg = radio.getAttribute('data-img') || selectedCamImg;
+        selectedCamBadge = radio.getAttribute('data-badge') || selectedCamBadge;
+        const specsAttr = radio.getAttribute('data-specs');
+        if (specsAttr) {
+          selectedCamSpecs = specsAttr.split('|').filter(Boolean);
+        }
       }
     });
 
     document.querySelectorAll('.cam-type-option').forEach(opt => {
       const input = opt.querySelector('input');
-      if (input.checked) opt.classList.add('selected');
+      if (input && input.checked) opt.classList.add('selected');
       else opt.classList.remove('selected');
     });
+
+    // Cập nhật thẻ Live Preview đầu bảng tính
+    if (calcPreviewImg) calcPreviewImg.src = selectedCamImg;
+    if (calcPreviewName) calcPreviewName.textContent = selectedCamName;
+    if (calcPreviewBadge) calcPreviewBadge.textContent = selectedCamBadge;
+    if (calcPreviewSpecs) {
+      calcPreviewSpecs.innerHTML = selectedCamSpecs.map(s => `<span class="preview-chip">${s}</span>`).join('');
+    }
 
     // 2. Storage Mode Calculation
     let totalStorage = 0;
@@ -1148,9 +1181,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      document.querySelectorAll('.nvr-hdd-option').forEach(opt => {
+      document.querySelectorAll('.hdd-option, .nvr-hdd-option').forEach(opt => {
         const input = opt.querySelector('input');
-        if (input.checked) opt.classList.add('selected');
+        if (input && input.checked) opt.classList.add('selected');
         else opt.classList.remove('selected');
       });
 
@@ -1196,6 +1229,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. Totals
     const totalCam = selectedCamPrice * currentQty;
     const grandTotal = totalCam + totalStorage + totalInstall;
+    const formattedGrandTotal = formatVND(grandTotal);
 
     if (summaryCamName) summaryCamName.textContent = selectedCamLabel;
     if (summaryCamQty) summaryCamQty.textContent = `${currentQty} Mắt`;
@@ -1203,7 +1237,23 @@ document.addEventListener('DOMContentLoaded', () => {
     if (summaryInstallPrice) {
       summaryInstallPrice.textContent = isSelfInstall ? '0 đ (Tự lắp)' : formatVND(totalInstall);
     }
-    if (summaryTotalPrice) summaryTotalPrice.textContent = formatVND(grandTotal);
+    if (summaryTotalPrice) summaryTotalPrice.textContent = formattedGrandTotal;
+    if (calcLiveTotalPrice) calcLiveTotalPrice.textContent = formattedGrandTotal;
+
+    // Cập nhật Mobile Sticky Bar
+    if (cmsbCamImg) cmsbCamImg.src = selectedCamImg;
+    if (cmsbCamName) cmsbCamName.textContent = `${selectedCamName} (${currentQty} Mắt)`;
+    if (cmsbTotalPrice) cmsbTotalPrice.textContent = formattedGrandTotal;
+
+    // Cập nhật trạng thái active cho các nút Preset số lượng
+    qtyPresetChips.forEach(chip => {
+      const q = parseInt(chip.getAttribute('data-qty'), 10);
+      if (q === currentQty) {
+        chip.classList.add('active');
+      } else {
+        chip.classList.remove('active');
+      }
+    });
 
     if (calcCamQty) calcCamQty.textContent = currentQty;
   }
@@ -1223,6 +1273,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Click vào preset chips số lượng
+  qtyPresetChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const q = parseInt(chip.getAttribute('data-qty'), 10);
+      if (q && q >= 1 && q <= 16) {
+        currentQty = q;
+        updateCalculator();
+      }
+    });
+  });
+
+  // Tương tác chạm thẻ camera
+  document.querySelectorAll('.calc-cam-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const radio = card.querySelector('input[type="radio"]');
+      if (radio && !radio.checked) {
+        radio.checked = true;
+        updateCalculator();
+      }
+    });
+  });
+
   calcCameraType.forEach(radio => radio.addEventListener('change', updateCalculator));
   calcInstall.forEach(radio => {
     radio.addEventListener('change', updateCalculator);
@@ -1233,6 +1305,25 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(updateCalculator, 10);
     });
   });
+
+  // Điều khiển ẩn/hiện Mobile Sticky Live Price Bar khi cuộn qua bảng dự toán
+  function handleCalcStickyBarVisibility() {
+    if (!calcMobileStickyBar) return;
+    if (window.innerWidth > 768) {
+      calcMobileStickyBar.classList.remove('visible');
+      document.body.classList.remove('has-calc-sticky-visible');
+      return;
+    }
+    const calcSection = document.getElementById('du-toan');
+    if (!calcSection) return;
+    const rect = calcSection.getBoundingClientRect();
+    const inView = (rect.top <= window.innerHeight * 0.75) && (rect.bottom >= 140);
+    calcMobileStickyBar.classList.toggle('visible', inView);
+    document.body.classList.toggle('has-calc-sticky-visible', inView);
+  }
+
+  window.addEventListener('scroll', handleCalcStickyBarVisibility, { passive: true });
+  window.addEventListener('resize', handleCalcStickyBarVisibility, { passive: true });
 
   updateCalculator();
 
