@@ -566,10 +566,9 @@
           else el.searchHeroClear.classList.remove('active');
         }
 
-        // Khi người dùng chủ động gõ từ khóa mới (khác tên danh mục đang chọn),
-        // tự động chuyển về "Tất cả sản phẩm" để tìm kiếm trên toàn bộ 469 sản phẩm
-        const activeCat = state.categories.find(c => c.id === state.selectedCategoryId);
-        if (activeCat && val.toLowerCase() !== activeCat.name.toLowerCase()) {
+        // Khi người dùng chủ động gõ từ khóa tìm kiếm,
+        // nếu đang ở trong 1 danh mục cụ thể thì tự động chuyển về "Tất cả sản phẩm" để tìm trên toàn bộ kho
+        if (state.selectedCategoryId !== -1) {
           state.selectedCategoryId = -1;
           if (el.quickPills) {
             el.quickPills.querySelectorAll('.quick-pill').forEach(btn => {
@@ -793,24 +792,10 @@
     state.selectedCategoryId = catId;
     state.currentPage = 1;
 
-    // Khi người dùng chọn danh mục (đặc biệt khi vừa tìm kiếm không thấy sản phẩm):
-    // Xóa từ khóa vừa tìm và thay thế bằng từ khóa/tên của danh mục người dùng vừa click
-    if (catId === -1) {
-      // Chọn "Tất cả sản phẩm" -> Xóa từ khóa tìm kiếm
-      state.searchQuery = '';
-      if (el.searchHeroInput) el.searchHeroInput.value = '';
-      if (el.searchHeroClear) el.searchHeroClear.classList.remove('active');
-    } else {
-      // Chọn danh mục cụ thể -> Thay thế từ khóa tìm kiếm bằng tên danh mục
-      const cat = state.categories.find(c => c.id === catId);
-      const catName = cat ? cat.name : '';
-      state.searchQuery = catName;
-      if (el.searchHeroInput) el.searchHeroInput.value = catName;
-      if (el.searchHeroClear) {
-        if (catName) el.searchHeroClear.classList.add('active');
-        else el.searchHeroClear.classList.remove('active');
-      }
-    }
+    // Tự động xóa bộ lọc tìm kiếm khi click sang danh mục sản phẩm khác
+    state.searchQuery = '';
+    if (el.searchHeroInput) el.searchHeroInput.value = '';
+    if (el.searchHeroClear) el.searchHeroClear.classList.remove('active');
 
     // Xóa tham số search trên URL để tránh bị giữ từ khóa cũ khi tải lại trang
     try {
@@ -891,18 +876,14 @@
     // 4. Search Query
     if (state.searchQuery) {
       const q = state.searchQuery.toLowerCase().trim();
-      const currentCat = state.categories.find(c => c.id === state.selectedCategoryId);
-      // Nếu từ khóa tìm kiếm trùng khớp với tên danh mục đang chọn, danh mục đã được lọc chính xác 100%
-      if (!currentCat || q !== currentCat.name.toLowerCase().trim()) {
-        list = list.filter(p => {
-          return (
-            p.name.toLowerCase().includes(q) ||
-            (p.sku && p.sku.toLowerCase().includes(q)) ||
-            (p.brand && p.brand.toLowerCase().includes(q)) ||
-            (p.categoryName && p.categoryName.toLowerCase().includes(q))
-          );
-        });
-      }
+      list = list.filter(p => {
+        return (
+          p.name.toLowerCase().includes(q) ||
+          (p.sku && p.sku.toLowerCase().includes(q)) ||
+          (p.brand && p.brand.toLowerCase().includes(q)) ||
+          (p.categoryName && p.categoryName.toLowerCase().includes(q))
+        );
+      });
     }
 
     state.filteredProducts = list;
@@ -982,9 +963,7 @@
         `;
       }
 
-      // Chỉ hiển thị tag từ khóa nếu từ khóa khác với tên danh mục đang chọn để không bị trùng 2 tag
-      const activeCat = state.categories.find(c => c.id === state.selectedCategoryId);
-      if (state.searchQuery && (!activeCat || state.searchQuery.toLowerCase().trim() !== activeCat.name.toLowerCase().trim())) {
+      if (state.searchQuery) {
         tagsHtml += `
           <span class="active-tag">
             "${state.searchQuery}" 
@@ -1017,13 +996,14 @@
     if (el.searchHeroInput) el.searchHeroInput.value = '';
     state.searchQuery = '';
     if (el.searchHeroClear) el.searchHeroClear.classList.remove('active');
-    // Nếu danh mục đang chọn trùng với từ khóa vừa xóa, reset về xem toàn bộ
-    if (state.selectedCategoryId !== -1) {
-      setCategory(-1);
-    } else {
-      state.currentPage = 1;
-      applyFilters();
-    }
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.delete('search');
+      url.searchParams.delete('q');
+      window.history.replaceState(null, '', url.pathname + (url.search ? url.search : ''));
+    } catch (e) {}
+    state.currentPage = 1;
+    applyFilters();
   };
 
   // Render Products Grid
