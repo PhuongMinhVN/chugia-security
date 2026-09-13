@@ -267,7 +267,113 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
       scope: 'Khách sạn 3-5 sao, khu nghỉ dưỡng cao cấp Resort, condotel, homestay không người vận hành.'
     },
-    // DAHUA TECHNOLOGY SOLUTIONS
+    // DAHUA TECHNOLOGY SOLUTIONS - 4 CỘT TRỤ GIẢI PHÁP ĐÔ THỊ (CITY SOLUTIONS)
+    {
+      id: 'dahua-thanh-pho-thong-minh',
+      brand: 'dahua',
+      brandName: 'DAHUA CITY',
+      isCity: true,
+      category: 'ĐÔ THỊ THÔNG MINH',
+      day: '13',
+      month: 'Th9',
+      title: 'Giải pháp Thành phố thông minh & Trung tâm điều hành IOC – Dahua',
+      image: 'images/solutions/dahua_smart_city.jpg',
+      excerpt: 'Hệ sinh thái an ninh đô thị toàn diện: Giám sát toàn cảnh diện rộng, nhận diện khuôn mặt AI truy vết tội phạm, kiểm soát an ninh cơ quan hành chính công và chỉ huy tác chiến trên bản đồ số GIS.',
+      highlights: [
+        'Camera Multi-Sensor Panorama 180°/360° kết hợp PTZ 32x bám đuổi mục tiêu',
+        'Trung tâm chỉ huy thông minh Dahua ICC tích hợp bản đồ số GIS thời gian thực',
+        'Kiểm soát ra vào cơ quan hành chính công bằng FaceID, Flap Barrier & Soi chiếu X-Ray'
+      ],
+      architectureDesc: 'Hệ thống xây dựng theo mô hình 4 tầng hợp nhất: Tầng cảm biến biên (Camera AI toàn cảnh, PTZ tầm xa 250m, chuông cửa IP VTO, cổng FaceID), Tầng truyền dẫn cáp quang đô thị bảo mật cao, Tầng máy chủ xử lý dữ liệu lớn AI (Dahua IVSS & NVR Enterprise 64 kênh) và Tầng ứng dụng trung tâm chỉ huy IOC hiển thị trên Video Wall cỡ lớn.',
+      components: [
+        { name: 'Camera Dahua DH-SD6CE232GB-HNR', role: 'IP PTZ 2MP Zoom quang học 32x, hồng ngoại 250m WizMind AI', productId: '1168703' },
+        { name: 'Đầu ghi AI Dahua DHI-NVR5464-EI2', role: 'Đầu ghi dự án 64 kênh 4K, hỗ trợ 4 HDD, AI WizSense/WizMind', productId: '1168686' },
+        { name: 'Chuông cửa thông minh DHI-VTO2201F-P-S2', role: 'Nút nhấn Intercom IP kim loại góc rộng 140° mở khóa từ xa', productId: '1168276' },
+        { name: 'Camera Panorama Multi-Sensor 180°', role: 'Bao quát toàn cảnh quảng trường, công viên, tuyến phố đi bộ' },
+        { name: 'Cổng phân làn Flap Barrier ASGB & FaceID', role: 'Kiểm soát an ninh tòa nhà UBND và cơ quan hành chính' },
+        { name: 'Nền tảng quản lý tập trung Dahua ICC / DSS Pro', role: 'Điều hành bản đồ GIS, liên thông thoại khẩn cấp và cứu hộ' }
+      ],
+      scope: 'Trung tâm giám sát điều hành đô thị thông minh IOC, UBND tỉnh/thành phố, trụ sở công an, quảng trường trung tâm và các khu đại đô thị sinh thái.'
+    },
+    {
+      id: 'dahua-giao-thong-thong-minh-its',
+      brand: 'dahua',
+      brandName: 'DAHUA CITY',
+      isCity: true,
+      category: 'GIAO THÔNG THÔNG MINH',
+      day: '13',
+      month: 'Th9',
+      title: 'Giải pháp Quản lý giao thông thông minh ITS & Phạt nguội – Dahua',
+      image: 'images/solutions/dahua_traffic_its.jpg',
+      excerpt: 'Hệ thống camera giao thông chuyên dụng ứng dụng AI ANPR đọc biển số chính xác >99%, giám sát tốc độ cao tốc bằng Radar, bắt phạt nguội tự động và điều khiển đèn tín hiệu thích ứng chống ùn tắc.',
+      highlights: [
+        'Camera AI ANPR chụp phạt nguội vượt đèn đỏ, đi sai làn, chạy quá tốc độ',
+        'Cụm Radar cao tốc phát hiện xe dừng đỗ trái phép, đi ngược chiều và sự cố hầm',
+        'Điều khiển tín hiệu đèn giao thông thông minh thích ứng theo lưu lượng xe thực tế'
+      ],
+      architectureDesc: 'Cụm thiết bị lắp đặt tại các nút giao trọng điểm và tuyến cao tốc gồm: Camera ANPR độ phân giải 9MP/4MP, Radar vi ba đo tốc độ chính xác từng làn đường, Đèn chớp flash LED trợ sáng đồng bộ cực đại chống lóa đèn xe, kết nối trực tiếp về Trung tâm điều hành giao thông qua phần mềm DSS Traffic.',
+      components: [
+        { name: 'Camera ANPR Phạt Nguội Dahua ITC952 / ITC431', role: 'Đọc biển số xe máy & ô tô tốc độ cao, nhận diện vi phạm tự động' },
+        { name: 'Radar đo tốc độ đa làn đường vi ba', role: 'Đo vận tốc phương tiện chính xác sai số < 1km/h trên cao tốc' },
+        { name: 'Camera AI Dahua DH-IPC-HFW2849TL-S-PRO', role: 'Thân sắt 8MP 4K WizColor ghi hình màu chi tiết ban đêm', productId: '1168708' },
+        { name: 'Đầu ghi hình chuyên dụng DHI-NVR5432-EI2', role: 'Lưu trữ 32 kênh dữ liệu phạt nguội và video đối soát', productId: '1168687' },
+        { name: 'Cảm biến đo đếm lưu lượng xe AI & Bảng LED VMS', role: 'Điều tiết chu kỳ đèn xanh thông minh và thông báo cảnh báo tắc đường' }
+      ],
+      scope: 'Tuyến đường cao tốc, quốc lộ, đại lộ đô thị, các nút giao thông ngã tư phức tạp, cầu vượt và hầm chui cơ giới.'
+    },
+    {
+      id: 'dahua-van-tai-smart-transit',
+      brand: 'dahua',
+      brandName: 'DAHUA CITY',
+      isCity: true,
+      category: 'VẬN TẢI & LOGISTICS',
+      day: '13',
+      month: 'Th9',
+      title: 'Giải pháp Vận tải thông minh, Sân bay, Cảng biển & Metro – Dahua',
+      image: 'images/solutions/dahua_smart_transit.jpg',
+      excerpt: 'Giải pháp an ninh đa tầng cho hạ tầng giao thông vận tải: Hàng rào ảnh nhiệt chu vi sân bay, camera vỏ thép 316L chống ăn mòn cảng biển đọc mã container và giám sát đoàn xe buýt bằng AI ADAS/DSM.',
+      highlights: [
+        'Camera nhiệt Thermal bảo vệ chu vi đường băng sân bay bất kể sương mù, mưa bão',
+        'Camera chuyên dụng vỏ thép 316L chống ăn mòn muối biển, tự động đọc mã container (ACCR)',
+        'Hệ thống trên xe Mobile NVR kết hợp camera AI ADAS (cảnh báo va chạm) và DSM (chống ngủ gật)'
+      ],
+      architectureDesc: 'Đối với hạ tầng cảng biển và sân bay, hệ thống sử dụng camera chuyên dụng chuẩn chống ăn mòn NEMA-4X/IP68 kết hợp phân tích nhiệt quang học. Đối với vận tải công cộng đường bộ, triển khai thiết bị Mobile NVR chuẩn rung xóc quân đội EN50155, tích hợp định vị GPS 4G và thuật toán AI giám sát tài xế.',
+      components: [
+        { name: 'Camera chống ăn mòn cảng biển Dahua DH-EPC230U', role: 'Vỏ thép không gỉ 316L chịu mặn, sương muối, gió bão biển' },
+        { name: 'Camera ảnh nhiệt hàng rào Thermal TPC-BF5421', role: 'Phát hiện xâm nhập chu vi sân bay và kho bãi hàng không' },
+        { name: 'Đầu ghi trên xe Dahua Mobile NVR MNVR4104', role: 'Gắn trên xe buýt, xe khách, xe đầu kéo tải nặng, chống sốc tuyệt đối' },
+        { name: 'Camera kép AI ADAS + DSM trên xe', role: 'Cảnh báo chệch làn đường, phát hiện tài xế ngáp, hút thuốc, nghe máy' },
+        { name: 'Camera PTZ Dahua DH-SD5A225GB-HNR', role: 'Quay quét 360° Zoom 25x giám sát ke ga và bến bãi logistics', productId: '1168705' }
+      ],
+      scope: 'Cảng hàng không quốc tế, cảng biển nước sâu, ga đường sắt đô thị Metro, tổng công ty vận tải hành khách & logistics container.'
+    },
+    {
+      id: 'dahua-moi-truong-sinh-thai',
+      brand: 'dahua',
+      brandName: 'DAHUA CITY',
+      isCity: true,
+      category: 'MÔI TRƯỜNG SINH THÁI',
+      day: '13',
+      month: 'Th9',
+      title: 'Giải pháp Môi trường sinh thái, Đo mực nước ngập & Cháy rừng – Dahua',
+      image: 'images/solutions/dahua_smart_ecology.jpg',
+      excerpt: 'Ứng dụng công nghệ thị giác AI bảo vệ tài nguyên thiên nhiên và đô thị: Tự động đo mực nước sông ngòi & cảnh báo ngập lụt hầm chui, phát hiện sớm cháy rừng tầm xa 10km bằng camera nhiệt kép.',
+      highlights: [
+        'Camera AI đo mực nước tự động tại sông hồ & điểm đen ngập úng đô thị, báo động khẩn',
+        'Camera nhiệt Bi-spectrum PTZ tầm xa quét 360° phát hiện sớm đốm lửa cháy rừng cách 5 - 10km',
+        'Trạm cảm biến quan trắc môi trường kết hợp camera giám sát chất lượng không khí PM2.5'
+      ],
+      architectureDesc: 'Triển khai các trạm quan trắc năng lượng mặt trời Solar 4G độc lập tại lưu vực sông, đê điều, rừng quốc gia và các cửa hầm chui đô thị. Dữ liệu mực nước, nhiệt độ và hình ảnh viễn thám được phân tích AI tại biên và truyền thẳng về máy chủ quản lý thiên tai và cảnh báo sớm cho người dân qua ứng dụng di động.',
+      components: [
+        { name: 'Cụm Camera nhiệt Bi-spectrum PTZ Dahua TPC-SD8621B', role: 'Tầm quét quang nhiệt 10km, thuật toán phát hiện khói lửa tự động' },
+        { name: 'Camera AI đo mực nước sông ngòi Dahua Water-Level', role: 'Đọc vạch thước đo thủy triều và đo cao độ mặt nước tự động' },
+        { name: 'Camera Solar 4G Dahua độc lập', role: 'Tự cấp nguồn năng lượng mặt trời hoạt động liên tục tại vùng rừng núi' },
+        { name: 'Hệ thống NVR Dự Án Dahua DHI-NVR5216-EI', role: 'Ghi hình 16 kênh AI, quản lý cảnh báo phân tích môi trường', productId: '1168690' },
+        { name: 'Cảm biến khí tượng IoT (Bụi PM2.5, Hướng gió, Nhiệt độ)', role: 'Quan trắc môi trường và phát thanh cảnh báo tự động' }
+      ],
+      scope: 'Chi cục Thủy lợi và Phòng chống thiên tai, Ban quản lý rừng phòng hộ/quốc gia, Trung tâm quan trắc môi trường, BQL hầm đường bộ đô thị.'
+    },
+    // DAHUA TECHNOLOGY SOLUTIONS - KHỐI DOANH NGHIỆP & THƯƠNG MẠI
     {
       id: 'dahua-kho-van-logistics',
       brand: 'dahua',
@@ -478,7 +584,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Lọc theo Brand
     if (brand !== 'all') {
-      filtered = filtered.filter(s => s.brand === brand);
+      if (brand === 'dahua-city') {
+        filtered = filtered.filter(s => s.isCity || s.brand === 'dahua-city');
+      } else if (brand === 'dahua') {
+        filtered = filtered.filter(s => s.brand === 'dahua' || s.brand === 'dahua-city');
+      } else {
+        filtered = filtered.filter(s => s.brand === brand);
+      }
     }
 
     // Lọc theo từ khóa tìm kiếm
@@ -493,9 +605,17 @@ document.addEventListener('DOMContentLoaded', () => {
       );
     }
 
-    // Cập nhật số lượng trên tab Tất Cả
-    const allCount = document.getElementById('countAll');
-    if (allCount) allCount.textContent = solutionsData.length;
+    // Cập nhật số lượng trên các tab bộ lọc
+    document.querySelectorAll('.sol-tab-btn').forEach(btn => {
+      const b = btn.getAttribute('data-brand');
+      const counter = btn.querySelector('.tab-counter');
+      if (counter) {
+        if (b === 'all') counter.textContent = solutionsData.length;
+        else if (b === 'dahua-city') counter.textContent = solutionsData.filter(s => s.isCity || s.brand === 'dahua-city').length;
+        else if (b === 'dahua') counter.textContent = solutionsData.filter(s => s.brand === 'dahua' || s.brand === 'dahua-city').length;
+        else counter.textContent = solutionsData.filter(s => s.brand === b).length;
+      }
+    });
 
     if (filtered.length === 0) {
       solutionsGrid.innerHTML = `
@@ -614,8 +734,16 @@ document.addEventListener('DOMContentLoaded', () => {
         </h4>
         <div class="modal-components-grid">
           ${item.components.map(c => `
-            <div class="modal-component-card">
-              <div class="modal-component-name">${c.name}</div>
+            <div class="modal-component-card ${c.productId ? 'has-product-link' : ''}">
+              <div class="modal-component-name">
+                <span>${c.name}</span>
+                ${c.productId ? `
+                  <a href="san-pham.html?product=${c.productId}" target="_blank" class="component-view-prod-btn" title="Xem giá và thông số sản phẩm trong kho Chu Gia">
+                    <span>Xem Sản Phẩm</span>
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </a>
+                ` : ''}
+              </div>
               <div class="modal-component-role">${c.role}</div>
             </div>
           `).join('')}
@@ -688,6 +816,20 @@ document.addEventListener('DOMContentLoaded', () => {
       renderSolutions(currentBrand, currentSearch);
     });
   });
+
+  // Nút Lọc Giải Pháp Đô Thị Từ Banner Spotlight
+  const btnFilterCity = document.getElementById('btnFilterCitySolutions');
+  if (btnFilterCity) {
+    btnFilterCity.addEventListener('click', () => {
+      tabButtons.forEach(b => b.classList.toggle('active', b.getAttribute('data-brand') === 'dahua-city'));
+      currentBrand = 'dahua-city';
+      renderSolutions('dahua-city', currentSearch);
+      const target = document.getElementById('solutionsGrid') || document.querySelector('.solutions-toolbar');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  }
 
   // ---------------- XỬ LÝ Ô TÌM KIẾM NHANH ----------------
   if (searchInput) {

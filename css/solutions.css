@@ -969,3 +969,177 @@
   flex-wrap: wrap;
   gap: 14px;
 }
+
+/* ===================================================
+   DAHUA CITY SOLUTIONS SPOTLIGHT BANNER & ENHANCEMENTS
+   =================================================== */
+
+.dahua-city-spotlight {
+  position: relative;
+  padding: 35px 0 25px;
+  background: #0B1120;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.city-spotlight-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.09) 0%, rgba(3, 105, 161, 0.16) 50%, rgba(15, 23, 42, 0.8) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 18px;
+  padding: 36px 40px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.city-spotlight-card::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.22) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.city-spotlight-content {
+  position: relative;
+  z-index: 2;
+  max-width: 820px;
+}
+
+.city-badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px;
+  background: rgba(14, 165, 233, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  border-radius: 20px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #38BDF8;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+}
+
+.city-spotlight-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.25;
+  margin-bottom: 12px;
+  letter-spacing: -0.3px;
+}
+
+.city-spotlight-desc {
+  font-size: 0.95rem;
+  color: #94A3B8;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.city-spotlight-chips {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.city-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #E2E8F0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.city-chip:hover {
+  background: rgba(14, 165, 233, 0.18);
+  border-color: rgba(56, 189, 248, 0.4);
+  color: #38BDF8;
+  transform: translateY(-1px);
+}
+
+.city-spotlight-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+/* Brand Chip for Dahua City */
+.sol-brand-chip.dahua-city {
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(3, 105, 161, 0.35);
+}
+
+/* Component Product Link Button in Modal */
+.modal-component-card.has-product-link {
+  border-color: rgba(14, 165, 233, 0.3);
+  background: #F8FAFC;
+}
+
+.modal-component-card.has-product-link:hover {
+  border-color: #0284C7;
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.12);
+}
+
+.modal-component-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.component-view-prod-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(14, 165, 233, 0.1);
+  color: #0284C7;
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  border-radius: 6px;
+  padding: 3px 9px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.component-view-prod-btn:hover {
+  background: #0284C7;
+  color: #FFFFFF;
+  border-color: #0284C7;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(14, 165, 233, 0.3);
+}
+
+@media (max-width: 768px) {
+  .city-spotlight-card {
+    padding: 24px 20px;
+  }
+  .city-spotlight-title {
+    font-size: 1.45rem;
+  }
+  .city-spotlight-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .city-spotlight-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
