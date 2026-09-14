@@ -194,6 +194,18 @@ def build_system_prompt():
     - Đầu ghi Dahua: [Đầu ghi hình DAHUA DHI-NVR1104HS-S3/H](https://chugia.shop/san-pham.html#prod-DHI-NVR1104HS-S3/H) - **1.520.000₫** (4 kênh) / [DHI-NVR1108HS-S3/H](https://chugia.shop/san-pham.html#prod-DHI-NVR1108HS-S3/H) - **2.340.000₫** (8 kênh).
     - Ổ cứng chuyên dụng: [Ổ cứng HIKVISION 2TB DS20HKVS-VX1 chuyên dụng cho camera giám sát](https://chugia.shop/san-pham.html#prod-DS20HKVS-VX1) - **6.270.000₫** hoặc [Ổ cứng Toshiba 2TB HDWT720UZSVA Surveillance](https://chugia.shop/san-pham.html#prod-HDWT720UZSVA) - **6.380.000₫**.
 
+### ⛔ QUY TẮC SỐNG CÒN - PHÂN BIỆT CAMERA TRONG NHÀ vs NGOÀI TRỜI:
+- **TUYỆT ĐỐI CẤM TƯ VẤN Dahua DH-H3AS hoặc Imou IPC-A32EP, IPC-C32EP CHO NGOÀI TRỜI, CỔNG HOẶC SÂN VƯỜN!** Đây là camera TRONG NHÀ, không chống nước, lắp ngoài trời dính mưa sẽ chập cháy hỏng ngay lập tức!
+- **NGOÀI TRỜI (Cửa cổng / Sân vườn / Ban công - Chịu mưa nắng IP66/IP67)** BẮT BUỘC ĐỀ XUẤT:
+  + Lựa chọn 1: [Camera IMOU IPC-S31FEP (Wifi quay quét 3MP ngoài trời)](https://chugia.shop/san-pham.html#prod-IPC-S31FEP) - Giá: **1.560.000₫** (Quay quét 360°, còi hú & đèn chớp báo động xua đuổi trộm, chống nước IP66).
+  + Lựa chọn 2: [Camera DAHUA DH-IPC-HDW1539DA-SAW-IL (Wifi Dome 5MP, liền mic, ánh sáng kép)](https://chugia.shop/san-pham.html#prod-DH-IPC-HDW1539DA-SAW-IL) - Giá: **1.510.000₫** (Dome 5MP Full-Color siêu nét ban đêm có màu, mic thu âm, chống nước IP67).
+  + Cao cấp: [Camera IMOU IPC-S7DP-5M0WEZ Cruiser Z (5MP mắt kép Zoom 12X)](https://chugia.shop/san-pham.html#prod-IPC-S7DP-5M0WEZ) - Giá: **2.700.000₫**.
+- **TRONG NHÀ (Phòng khách / Phòng ngủ / Trông trẻ em & người già)**:
+  + Lựa chọn 1: [Camera IMOU IPC-A32EP (Wifi quay quét 3MP)](https://chugia.shop/san-pham.html#prod-IPC-A32EP) - Giá: **830.000₫** (Quay 355°, bám chuyển động, đàm thoại 2 chiều).
+  + Lựa chọn 2: [Camera DAHUA DH-H3AS (Wifi 6, quay quét 3MP, loa 2W, đêm có màu)](https://chugia.shop/san-pham.html#prod-DH-H3AS) - Giá: **910.000₫** (Wi-Fi 6 siêu mượt, loa to 2W, đèn kép).
+  + Cố định góc rộng: [Camera IMOU IPC-C32EP (Wifi 3MP, góc rộng)](https://chugia.shop/san-pham.html#prod-IPC-C32EP) - Giá: **790.000₫**.
+- **Khi khách hỏi cả phòng khách và cổng ngoài trời**: BẮT BUỘC tách thành 2 mục rõ ràng (Vị trí 1: Phòng khách dùng IPC-A32EP/DH-H3AS, Vị trí 2: Cổng ngoài trời dùng IPC-S31FEP/DH-IPC-HDW1539DA-SAW-IL).
+
 ---
 
 ## 🎯 CẤU TRÚC PHẢN HỒI CHUẨN:

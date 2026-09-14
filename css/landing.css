@@ -104,9 +104,75 @@ body {
 .landing-header {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding: 16px 28px;
+  justify-content: space-between;
+  padding: 14px 28px;
   gap: 12px;
+  position: relative;
+  z-index: 90;
+  transition: all 0.3s ease;
+}
+
+.landing-header-brand {
+  display: none; /* Only visible in chat mode */
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.landing-header-brand img {
+  height: 30px;
+  width: auto;
+  filter: drop-shadow(0 0 16px rgba(16, 185, 129, 0.25));
+}
+
+.landing-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.landing-btn-newchat {
+  display: none; /* Shown in chat mode */
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: var(--radius-full);
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  color: var(--text-primary);
+  font-size: 12.5px;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  white-space: nowrap;
+}
+.landing-btn-newchat:hover {
+  background: var(--bg-glass-hover);
+  border-color: var(--accent-emerald);
+  color: var(--accent-emerald);
+  transform: translateY(-1px);
+}
+
+/* Chat mode sticky header */
+.landing-wrapper.has-chat .landing-header {
+  position: sticky;
+  top: 0;
+  background: rgba(10, 15, 26, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 8px 24px;
+  min-height: 48px;
+}
+.landing-wrapper.has-chat .landing-header-brand {
+  display: flex;
+}
+.landing-wrapper.has-chat .landing-btn-newchat {
+  display: inline-flex;
 }
 
 .landing-header-link {
@@ -118,6 +184,7 @@ body {
   border-radius: var(--radius-full);
   transition: all 0.25s ease;
   letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 .landing-header-link:hover {
   color: var(--text-primary);
@@ -127,7 +194,7 @@ body {
   background: var(--gradient-emerald);
   color: #fff;
   font-weight: 600;
-  padding: 8px 20px;
+  padding: 8px 18px;
 }
 .landing-header-link.cta:hover {
   box-shadow: 0 4px 20px var(--accent-emerald-glow);
@@ -147,7 +214,14 @@ body {
 
 .landing-center.has-chat {
   justify-content: flex-start;
-  padding-top: 40px;
+  padding-top: 16px;
+}
+
+.landing-center.has-chat .landing-logo-wrap,
+.landing-center.has-chat .landing-search-wrap,
+.landing-center.has-chat .landing-suggestions,
+.landing-center.has-chat .chat-header-actions {
+  display: none !important;
 }
 
 /* Logo */
@@ -673,32 +747,51 @@ body {
   }
 
   .landing-header {
-    padding: 10px 14px;
-    gap: 8px;
-    justify-content: center;
-    flex-wrap: wrap;
+    padding: 8px 12px;
+    gap: 6px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+  }
+  .landing-header-brand img {
+    height: 24px;
+  }
+  .landing-header-actions {
+    gap: 6px;
   }
   .landing-header-link {
-    font-size: 11.5px;
-    padding: 5px 10px;
+    font-size: 11px;
+    padding: 5px 8px;
+    white-space: nowrap;
   }
   .landing-header-link.cta {
-    padding: 5px 14px;
-    font-size: 11.5px;
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+  .landing-header-link.nav-desktop-link {
+    display: none !important;
+  }
+  .landing-btn-newchat {
+    font-size: 11px;
+    padding: 5px 9px;
+    gap: 4px;
+  }
+  .landing-wrapper.has-chat .landing-header {
+    padding: 6px 12px;
+    min-height: 44px;
   }
 
   .landing-center {
     padding: 0 12px;
   }
   .landing-center.has-chat {
-    padding-top: 10px;
+    padding-top: 6px;
   }
-  .landing-center.has-chat .landing-logo-wrap {
-    transform: scale(0.65);
-    margin-bottom: 6px;
-  }
-  .landing-center.has-chat .landing-tagline {
-    display: none;
+  .landing-center.has-chat .landing-logo-wrap,
+  .landing-center.has-chat .landing-search-wrap,
+  .landing-center.has-chat .landing-suggestions,
+  .landing-center.has-chat .chat-header-actions {
+    display: none !important;
   }
 
   .landing-logo {
@@ -797,21 +890,29 @@ body {
 
 @media (max-width: 480px) {
   .landing-header {
-    gap: 6px;
-    padding: 8px 10px;
+    gap: 4px;
+    padding: 6px 8px;
+  }
+  .landing-header-brand img {
+    height: 20px;
   }
   .landing-header-link {
-    font-size: 11px;
-    padding: 4px 8px;
+    font-size: 10.5px;
+    padding: 4px 6px;
   }
   .landing-header-link.cta {
-    font-size: 11px;
-    padding: 5px 10px;
+    font-size: 10.5px;
+    padding: 4px 8px;
+  }
+  .landing-btn-newchat {
+    font-size: 10.5px;
+    padding: 4px 6px;
+    gap: 3px;
   }
   .chat-bubble {
     padding: 10px 12px;
     font-size: 13px;
-    max-width: 90%;
+    max-width: 92%;
   }
   .chat-product-card {
     padding: 8px;
