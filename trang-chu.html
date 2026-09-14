@@ -561,14 +561,14 @@ Luôn chốt bằng câu ngắn gọn: "Anh/Chị có muốn em lên bảng dự
         // Product Links: [Tên sản phẩm](https://chugia.shop/san-pham.html#prod-SKU) or [Tên sản phẩm](#prod-SKU)
         .replace(/\[([^\]]+)\]\((?:https?:\/\/chugia\.shop\/san-pham\.html)?#prod-([^)]+)\)/g, (match, title, sku) => {
           const url = getProductChugiaUrl(sku);
-          return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="chat-prod-link" data-sku="${sku}" title="Xem chi tiết ${title} trên chugia.shop">🌐 <strong>${title}</strong> <span class="chat-prod-badge">chugia.shop ↗</span></a>`;
+          return `<a href="${url}" class="chat-prod-link" data-sku="${sku}" title="Bấm xem ảnh & chi tiết ${title}">📸 <strong>${title}</strong> <span class="chat-prod-badge">🔍 Xem ảnh &amp; giá</span></a>`;
         })
         // Standard Links: [text](url)
         .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
-        // Auto-enhance SKU mentions: SKU: AR180 or Mã SKU: AR180 -> direct link to chugia.shop
+        // Auto-enhance SKU mentions: SKU: AR180 or Mã SKU: AR180 -> direct link
         .replace(/(SKU|Mã SKU):\s*([A-Za-z0-9\-_/]+)/gi, (match, prefix, sku) => {
           const url = getProductChugiaUrl(sku);
-          return `<strong>${prefix}:</strong> ${sku} <a href="${url}" target="_blank" rel="noopener noreferrer" class="chat-prod-quickbtn" data-sku="${sku}" title="Xem ${sku} trên chugia.shop">🌐 chugia.shop ↗</a>`;
+          return `<strong>${prefix}:</strong> ${sku} <a href="${url}" class="chat-prod-quickbtn" data-sku="${sku}" title="Xem ảnh ${sku}">📸 Xem ảnh</a>`;
         })
         // Headings ### and ####
         .replace(/^#### (.+)$/gm, '<h4>$1</h4>')
@@ -812,17 +812,123 @@ Luôn chốt bằng câu ngắn gọn: "Anh/Chị có muốn em lên bảng dự
       }
     });
 
-    // Intercept clicks on product links inside chat: direct to official chugia.shop product page
+    // ── Toggle Inline Product Preview right inside chat bubble ──
+    function toggleInlineProductPreview(linkEl, skuQuery) {
+      if (!linkEl || !skuQuery) return;
+      const cleanSku = String(skuQuery).trim().replace(/^#prod-/, '').replace(/^https?:\/\/chugia\.shop\/san-pham\.html#prod-/, '');
+      const parentContainer = linkEl.closest('li') || linkEl.parentElement;
+      const existingPreview = parentContainer ? parentContainer.querySelector(`.chat-inline-preview[data-sku="${cleanSku}"]`) : null;
+
+      if (existingPreview) {
+        // Toggle close
+        existingPreview.style.transition = 'all 0.25s ease';
+        existingPreview.style.opacity = '0';
+        existingPreview.style.transform = 'translateY(-8px) scale(0.96)';
+        setTimeout(() => existingPreview.remove(), 250);
+        return;
+      }
+
+      // Query product
+      const prod = findProduct(cleanSku);
+
+      let name = cleanSku;
+      let brand = 'CHÍNH HÃNG';
+      let sku = cleanSku;
+      let price = 'Liên hệ báo giá';
+      let imgSrc = 'images/hero_security.jpg';
+      let warranty = '24 Tháng 1 đổi 1';
+
+      if (prod) {
+        name = prod.name || cleanSku;
+        brand = prod.brand || 'CHÍNH HÃNG';
+        sku = prod.sku || cleanSku;
+        price = formatVND(prod.retailPrice);
+        imgSrc = prod.image || (prod.images && prod.images[0]) || 'images/hero_security.jpg';
+        warranty = prod.warranty || '24 Tháng 1 đổi 1';
+      } else {
+        const strongEl = linkEl.querySelector('strong');
+        if (strongEl) name = strongEl.textContent.trim();
+      }
+
+      const previewDiv = document.createElement('div');
+      previewDiv.className = 'chat-inline-preview';
+      previewDiv.dataset.sku = cleanSku;
+      previewDiv.innerHTML = `
+        <div class="inline-preview-header">
+          <div class="inline-preview-badge">
+            <span class="inline-preview-dot"></span>
+            <span>${brand} • ${sku}</span>
+          </div>
+          <button type="button" class="inline-preview-close" title="Tắt ảnh (✕)" aria-label="Tắt ảnh">✕</button>
+        </div>
+        <div class="inline-preview-content">
+          <div class="inline-preview-img-box" data-sku="${sku}" title="Bấm xem ảnh lớn & thông số">
+            <img src="${imgSrc}" alt="${name}" class="inline-preview-img" onerror="this.onerror=null;this.src='images/hero_security.jpg';" />
+            <div class="inline-preview-watermark">CHU GIA SECURITY</div>
+          </div>
+          <div class="inline-preview-info">
+            <div class="inline-preview-name">${name}</div>
+            <div class="inline-preview-price-row">
+              <span class="inline-preview-price">${price}</span>
+              <span class="inline-preview-warranty">🛡️ ${warranty}</span>
+            </div>
+            <div class="inline-preview-actions">
+              <button type="button" class="btn-inline-quickview" data-sku="${sku}" title="Xem chi tiết & thông số">
+                📋 Bảng thông số kỹ thuật ↗
+              </button>
+              <button type="button" class="btn-inline-dismiss" title="Tắt ảnh này">
+                ✕ Tắt ảnh
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+
+      if (linkEl.nextSibling) {
+        linkEl.parentNode.insertBefore(previewDiv, linkEl.nextSibling);
+      } else {
+        linkEl.parentNode.appendChild(previewDiv);
+      }
+
+      // Scroll smoothly so the image is fully in view
+      ensureVisibleBottom();
+    }
+
+    // Intercept clicks inside chatArea: toggle inline image or open full specs
     chatArea.addEventListener('click', (e) => {
+      // 1. Close inline preview
+      const closeBtn = e.target.closest('.inline-preview-close, .btn-inline-dismiss');
+      if (closeBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        const previewCard = closeBtn.closest('.chat-inline-preview');
+        if (previewCard) {
+          previewCard.style.transition = 'all 0.25s ease';
+          previewCard.style.opacity = '0';
+          previewCard.style.transform = 'translateY(-8px) scale(0.96)';
+          setTimeout(() => previewCard.remove(), 250);
+        }
+        return;
+      }
+
+      // 2. Open full modal specs from inline preview
+      const modalBtn = e.target.closest('.btn-inline-quickview, .inline-preview-img-box');
+      if (modalBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        const sku = modalBtn.dataset.sku || modalBtn.closest('.chat-inline-preview')?.dataset.sku;
+        if (sku) openProductQuickView(sku);
+        return;
+      }
+
+      // 3. Product link clicked -> show image right in chat!
       const link = e.target.closest('.chat-prod-link, .chat-prod-quickbtn, a[href*="chugia.shop/san-pham.html"], a[href^="#prod-"]');
       if (link) {
         e.preventDefault();
+        e.stopPropagation();
         const rawHref = link.getAttribute('href') || '';
         const sku = link.dataset.sku || rawHref.replace(/^.*#prod-/, '');
-        const targetUrl = getProductChugiaUrl(sku || rawHref);
-        if (targetUrl) {
-          window.open(targetUrl, '_blank', 'noopener,noreferrer');
-        }
+        toggleInlineProductPreview(link, sku);
       }
     });
 
