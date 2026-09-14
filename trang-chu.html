@@ -109,6 +109,13 @@
         </button>
       </div>
 
+      <!-- Chat Header Actions (New Chat) -->
+      <div class="chat-header-actions" id="chatHeaderActions" style="display: none;">
+        <button type="button" class="btn-new-chat" id="btnNewChat" title="Bắt đầu đoạn chat mới">
+          <span>＋ Cuộc trò chuyện mới</span>
+        </button>
+      </div>
+
       <!-- Chat Messages (dynamically rendered) -->
       <div class="landing-chat-area" id="chatArea" style="display: none;"></div>
 
@@ -159,6 +166,9 @@
     const replySendBtn = document.getElementById('replySendBtn');
     const suggestions = document.getElementById('suggestions');
     const landingCenter = document.getElementById('landingCenter');
+    const chatHeaderActions = document.getElementById('chatHeaderActions');
+    const btnNewChat = document.getElementById('btnNewChat');
+    const landingWrapper = document.querySelector('.landing-wrapper');
 
     // ── State ──
     let isWaiting = false;
@@ -168,6 +178,57 @@
     const API_URL = window.location.protocol.startsWith('http') 
       ? `${window.location.origin}/api/chat` 
       : 'http://127.0.0.1:8000/api/chat';
+
+    // ── Robust Auto-Scrolling to Latest Message ──
+    function scrollToChatBottom(smooth = true) {
+      requestAnimationFrame(() => {
+        const behavior = smooth ? 'smooth' : 'auto';
+        const maxScroll = Math.max(
+          document.documentElement.scrollHeight,
+          document.body.scrollHeight
+        );
+        window.scrollTo({ top: maxScroll, behavior: behavior });
+
+        if (replyBar && replyBar.style.display !== 'none') {
+          replyBar.scrollIntoView({ behavior: behavior, block: 'end' });
+        }
+      });
+    }
+
+    function ensureVisibleBottom() {
+      scrollToChatBottom(true);
+      setTimeout(() => scrollToChatBottom(true), 120);
+      setTimeout(() => scrollToChatBottom(false), 350);
+    }
+
+    // ── New Chat button click ──
+    if (btnNewChat) {
+      btnNewChat.addEventListener('click', () => {
+        conversationHistory = [];
+        chatArea.innerHTML = '';
+        chatArea.style.display = 'none';
+        replyBar.style.display = 'none';
+        if (chatHeaderActions) chatHeaderActions.style.display = 'none';
+        landingCenter.classList.remove('has-chat');
+        if (landingWrapper) landingWrapper.classList.remove('has-chat');
+        chatInput.value = '';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        setTimeout(() => chatInput.focus(), 150);
+      });
+    }
+
+    // ── Mobile Virtual Keyboard Resize Handler ──
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', () => {
+        if (landingCenter.classList.contains('has-chat')) {
+          ensureVisibleBottom();
+        }
+      });
+    }
+
+    replyInput.addEventListener('focus', () => {
+      setTimeout(ensureVisibleBottom, 250);
+    });
 
     // ── Show/hide top send button ──
     chatInput.addEventListener('input', () => {
@@ -241,21 +302,22 @@
       // Show chat area & reply bar, activate "has-chat" mode
       chatArea.style.display = 'flex';
       replyBar.style.display = 'block';
+      if (chatHeaderActions) chatHeaderActions.style.display = 'flex';
       landingCenter.classList.add('has-chat');
+      if (landingWrapper) landingWrapper.classList.add('has-chat');
 
       // Add user message
       appendMessage('user', text);
+      ensureVisibleBottom();
 
       // Store in conversation history
       conversationHistory.push({ role: 'user', content: text });
 
       // Show typing indicator
       const typingEl = appendTypingIndicator();
-      setTimeout(() => {
-        replyBar.scrollIntoView({ behavior: 'smooth', block: 'end' });
-      }, 50);
+      ensureVisibleBottom();
 
-      // Call API (tries local server first, falls back to direct DeepSeek API for static chugia.shop)
+      // Call API (tries local server first if on localhost, direct DeepSeek on static production)
       fetchAiReply(text)
         .then(reply => {
           typingEl.remove();
@@ -264,21 +326,21 @@
           conversationHistory.push({ role: 'assistant', content: cleanReply });
           isWaiting = false;
           replySendBtn.disabled = false;
-          setTimeout(() => {
-            replyBar.scrollIntoView({ behavior: 'smooth', block: 'end' });
+          ensureVisibleBottom();
+
+          // Auto-focus input only on desktop (avoid popping up keyboard and covering answer on mobile)
+          const isMobile = window.innerWidth <= 768 || 'ontouchstart' in window;
+          if (!isMobile) {
             replyInput.focus();
-          }, 80);
+          }
         })
         .catch(err => {
           console.error('Chat error:', err);
           typingEl.remove();
-          appendMessage('ai', '⚠️ Không thể kết nối tới trợ lý AI lúc này. Quý khách vui lòng liên hệ hotline để được hỗ trợ tức thì:\n\n**Hotline / Zalo tư vấn 24/7:** 📞 [0941 204 125](tel:0941204125) • [Chát Zalo Kỹ Thuật](https://zalo.me/0941204125)');
+          appendMessage('ai', '⚠️ Không thể kết nối tới trợ lý AI lúc này. Quý khách vui lòng liên hệ trực tiếp hotline để được hỗ trợ tức thì:\n\n**Hotline / Zalo tư vấn 24/7:** 📞 [0941 204 125](tel:0941204125) • [Chát Zalo Kỹ Thuật](https://zalo.me/0941204125)');
           isWaiting = false;
           replySendBtn.disabled = false;
-          setTimeout(() => {
-            replyBar.scrollIntoView({ behavior: 'smooth', block: 'end' });
-            replyInput.focus();
-          }, 80);
+          ensureVisibleBottom();
         });
     }
 
@@ -363,27 +425,33 @@ Ví dụ:
 Luôn chốt bằng câu ngắn gọn: "Anh/Chị có muốn em lên bảng dự toán trọn gói thiết bị & công lắp đặt chi tiết không ạ? Hotline/Zalo kỹ thuật: 0941 204 125."`;
     }
 
-    // ── Fetch AI reply with fallback ──
+    // ── Fetch AI reply with smart local/cloud routing ──
     async function fetchAiReply(text) {
-      // 1. Try local server first (if available)
-      try {
-        const res = await fetch(API_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            message: text,
-            history: conversationHistory.slice(-10)
-          })
-        });
-        if (res.ok) {
-          const data = await res.json();
-          if (data && data.reply) return data.reply;
+      const isLocal = window.location.hostname === 'localhost' || 
+                      window.location.hostname === '127.0.0.1' || 
+                      window.location.hostname === '0.0.0.0';
+
+      // 1. Try local Python backend ONLY when running on localhost
+      if (isLocal) {
+        try {
+          const res = await fetch(API_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              message: text,
+              history: conversationHistory.slice(-10)
+            })
+          });
+          if (res.ok) {
+            const data = await res.json();
+            if (data && data.reply) return data.reply;
+          }
+        } catch (e) {
+          console.warn('Local Python backend unreachable, falling back to direct DeepSeek API...');
         }
-      } catch (e) {
-        // Backend not available (e.g. running on GitHub Pages)
       }
 
-      // 2. Direct DeepSeek API fallback (works 24/7 on https://chugia.shop)
+      // 2. Direct DeepSeek API (always works 24/7 on https://chugia.shop on mobile & desktop)
       const apiKey = atob('c2stY2I4YzNiNzNhMjI4NDQ3NDk3YjQ3YmY0YjE4ZjU1NWI=');
       const systemPrompt = getClientSystemPrompt();
       const messages = [
@@ -435,11 +503,7 @@ Luôn chốt bằng câu ngắn gọn: "Anh/Chị có muốn em lên bảng dự
       msgDiv.appendChild(bubble);
       chatArea.appendChild(msgDiv);
 
-      // Scroll to bottom
-      setTimeout(() => {
-        msgDiv.scrollIntoView({ behavior: 'smooth', block: 'end' });
-      }, 50);
-
+      ensureVisibleBottom();
       return msgDiv;
     }
 
@@ -460,7 +524,7 @@ Luôn chốt bằng câu ngắn gọn: "Anh/Chị có muốn em lên bảng dự
       msgDiv.appendChild(indicator);
       chatArea.appendChild(msgDiv);
 
-      msgDiv.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      ensureVisibleBottom();
       return msgDiv;
     }
 
