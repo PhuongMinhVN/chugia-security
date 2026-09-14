@@ -19,13 +19,18 @@
   <meta property="og:site_name" content="Chu Gia Security">
   <meta property="og:image" content="https://chugia.shop/images/chugia_og_share.png?v=20260914">
 
+  <!-- Cache Control for Immediate Updates -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/landing.css">
-  <link rel="stylesheet" href="css/product-modal.css">
+  <link rel="stylesheet" href="css/landing.css?v=20260914_1040">
+  <link rel="stylesheet" href="css/product-modal.css?v=20260914_1040">
 </head>
 <body>
 
@@ -138,6 +143,9 @@
     </footer>
   </div>
 
+  <!-- Product Catalog Data Loaded First -->
+  <script src="js/hta-products-data.js?v=20260914_1040"></script>
+
   <script>
   (function() {
     'use strict';
@@ -247,41 +255,167 @@
         replyBar.scrollIntoView({ behavior: 'smooth', block: 'end' });
       }, 50);
 
-      // Call API
-      fetch(API_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          message: text,
-          history: conversationHistory.slice(-10) // last 10 messages for context
+      // Call API (tries local server first, falls back to direct DeepSeek API for static chugia.shop)
+      fetchAiReply(text)
+        .then(reply => {
+          typingEl.remove();
+          const cleanReply = reply || 'Xin lỗi, tôi không thể trả lời lúc này.';
+          appendMessage('ai', cleanReply);
+          conversationHistory.push({ role: 'assistant', content: cleanReply });
+          isWaiting = false;
+          replySendBtn.disabled = false;
+          setTimeout(() => {
+            replyBar.scrollIntoView({ behavior: 'smooth', block: 'end' });
+            replyInput.focus();
+          }, 80);
         })
-      })
-      .then(res => {
-        if (!res.ok) throw new Error('Lỗi kết nối server');
-        return res.json();
-      })
-      .then(data => {
-        typingEl.remove();
-        const reply = data.reply || 'Xin lỗi, tôi không thể trả lời lúc này.';
-        appendMessage('ai', reply);
-        conversationHistory.push({ role: 'assistant', content: reply });
-        isWaiting = false;
-        replySendBtn.disabled = false;
-        setTimeout(() => {
-          replyBar.scrollIntoView({ behavior: 'smooth', block: 'end' });
-          replyInput.focus();
-        }, 80);
-      })
-      .catch(err => {
-        typingEl.remove();
-        appendMessage('ai', '⚠️ Không thể kết nối tới trợ lý AI. Vui lòng kiểm tra server đang chạy tại `localhost:8000` hoặc thử lại sau.\n\n**Hotline tư vấn:** 📞 [0941 204 125](tel:0941204125)');
-        isWaiting = false;
-        replySendBtn.disabled = false;
-        setTimeout(() => {
-          replyBar.scrollIntoView({ behavior: 'smooth', block: 'end' });
-          replyInput.focus();
-        }, 80);
+        .catch(err => {
+          console.error('Chat error:', err);
+          typingEl.remove();
+          appendMessage('ai', '⚠️ Không thể kết nối tới trợ lý AI lúc này. Quý khách vui lòng liên hệ hotline để được hỗ trợ tức thì:\n\n**Hotline / Zalo tư vấn 24/7:** 📞 [0941 204 125](tel:0941204125) • [Chát Zalo Kỹ Thuật](https://zalo.me/0941204125)');
+          isWaiting = false;
+          replySendBtn.disabled = false;
+          setTimeout(() => {
+            replyBar.scrollIntoView({ behavior: 'smooth', block: 'end' });
+            replyInput.focus();
+          }, 80);
+        });
+    }
+
+    // ── Client System Prompt for standalone browser fallback on chugia.shop ──
+    function getClientSystemPrompt() {
+      return `Bạn là **Chuyên gia tư vấn giải pháp công nghệ cao cấp** của **Chu Gia Security** (Công ty TNHH Đầu tư và Thương mại Chu Gia) - đại lý ủy quyền chính hãng Dahua, Hikvision, Imou, EZVIZ, TP-Link Omada, Ruijie, Huawei, YLOCK từ năm 2014.
+
+## THÔNG TIN CÔNG TY:
+- **Tên**: Chu Gia Security (Công ty TNHH Đầu tư và Thương mại Chu Gia)
+- **Hotline / Zalo**: 0941 204 125 (tư vấn 7:30 - 21:00 hàng ngày)
+- **Website**: https://chugia.shop
+- **Kinh nghiệm**: Hơn 10 năm kinh nghiệm giải pháp an ninh và viễn thông (từ 2014)
+- **Cam kết**: 100% hàng chính hãng (CO/CQ), Bảo hành 1 đổi 1 tận nơi 24 tháng, Khảo sát & lên phương án miễn phí, Lắp đặt hoàn thiện trong 2 giờ.
+
+---
+
+## 4 LĨNH VỰC CHUYÊN SÂU:
+1. **Camera an ninh & giám sát thông minh** (Imou, Dahua, Hikvision, Tapo)
+2. **Hạ tầng Mạng Network & Wi-Fi chuyên dụng** (Huawei eKit, TP-Link Omada, Ruijie Reyee, SinicHome PoE)
+3. **Thiết bị Chuông cửa có hình - Video Intercom** (Dahua VTO/VTH mở cổng âm sàn, EZVIZ HP5/HP7, Hikvision)
+4. **Khóa cửa thông minh - Smart Lock** (YLOCK, Dahua, EZVIZ, Hune, Solity)
+
+---
+
+## ⛔ NGUYÊN TẮC VÀNG: HỎI ÍT - ĐỀ XUẤT NHANH - CẤM HỎI DAI DẲNG
+1. **Chỉ hỏi tối đa 1 câu làm rõ**: Chỉ khi khách hỏi quá ngắn hoặc mơ hồ.
+2. **Quy tắc cắt đứt hỏi**: Ngay khi khách đã nêu không gian hoặc vị trí (như "chung cư", "phòng khách", "cửa cổng", "văn phòng", "nhà 3 tầng", "cửa gỗ"...):
+   - **CẤM ĐƯỢC HỎI TIẾP!**
+   - **LẬP TỨC ĐƯA RA GIẢI PHÁP VÀ 2 LỰA CHỌN SẢN PHẨM CỤ THỂ SO SÁNH NHAU KÈM GIÁ BÁN VÀ LINK SẢN PHẨM!**
+
+---
+
+## 🎯 3 QUY TẮC NGHIỆP VỤ BẮT BUỘC:
+
+### 1️⃣ QUY TẮC CHUÔNG HÌNH & MỞ CỔNG ÂM SÀN / CỔNG TỰ ĐỘNG:
+- Khi tư vấn chuông hình, luôn làm rõ hoặc hỏi: **"Cổng nhà mình có dùng cổng tự động / cổng âm sàn và anh/chị có cần kích mở cổng qua điện thoại không ạ?"**
+- **NẾU CÓ CỔNG ÂM SÀN / CỔNG TỰ ĐỘNG (hoặc khách cần mở cổng từ xa qua app)**:
+  👉 **BẮT BUỘC TƯ VẤN HỆ THỐNG DAHUA CHUYÊN DỤNG**: Vì nút chuông Dahua có sẵn ngõ tiếp điểm relay khô (NO/COM) tiêu chuẩn công nghiệp đấu trực tiếp vào mạch motor cổng âm sàn, điều khiển đóng mở cổng 1 chạm qua app DMSS trên điện thoại và màn hình VTH trong nhà.
+  - *Nút chuông ngoài*: [Nút nhấn Camera chuông hình Dahua DHI-VTO2111D-P-S2 (PoE)](https://chugia.shop/san-pham.html#prod-DHI-VTO2111D-P-S2) - **3.030.000₫** hoặc [Nút nhấn Camera chuông hình Dahua DHI-VTO2201F-P-S2 (PoE, góc rộng 140 độ)](https://chugia.shop/san-pham.html#prod-DHI-VTO2201F-P-S2) - **6.050.000₫**.
+  - *Màn hình trong nhà*: [Màn hình chuông hình Dahua DHI-VTH2621GW-WP (7 inch, PoE, Wifi)](https://chugia.shop/san-pham.html#prod-DHI-VTH2621GW-WP) - **4.320.000₫**.
+  - *Switch PoE*: [Switch PoE SinicHome SINIC-3104POE](https://chugia.shop/san-pham.html#prod-SINIC-3104POE) - **650.000₫**.
+- **NẾU KHÔNG CẦN mở cổng âm sàn** (chuông gia đình bình thường):
+  - Tư vấn bộ EZVIZ gọn gàng: [Chuông hình EZVIZ HP5](https://chugia.shop/san-pham.html#prod-EZVIZ HP5) (**6.050.000₫**) hoặc [Chuông hình EZVIZ HP7](https://chugia.shop/san-pham.html#prod-EZVIZ HP7) (**6.700.000₫**).
+
+### 2️⃣ QUY TẮC TƯ VẤN KHÓA RIÊNG, CHUÔNG HÌNH RIÊNG:
+- Chuông hình (ở cổng ngoài) và Khóa thông minh (ở cửa chính) là 2 hệ thống độc lập.
+- **TUYỆT ĐỐI KHÔNG GỘP CHUNG MẬP MỜ**. Luôn phân tách rõ ràng thành 2 mục riêng:
+  - **Mục A: Hệ thống Chuông cửa có hình** (ở cổng: nhìn mặt khách, đàm thoại, mở cổng âm sàn).
+  - **Mục B: Khóa cửa thông minh** (ở cửa chính / cửa đại sảnh / cửa nhôm: vân tay, Face ID, mã số, thẻ từ).
+  - *Khóa cửa nhôm Xingfa*: [Khóa YLOCK YL-8835 Face ID 3D](https://chugia.shop/san-pham.html#prod-YL-8835) - **6.800.000₫**.
+  - *Khóa cửa gỗ đại sảnh*: [Khóa YLOCK YL-P21 Face ID](https://chugia.shop/san-pham.html#prod-YL-P21) - **7.200.000₫**.
+  - *Khóa thông minh EZVIZ*: [Khóa thông minh EZVIZ DL05](https://chugia.shop/san-pham.html#prod-DL05) - **4.990.000₫**.
+
+### 3️⃣ QUY TẮC LƯU TRỮ CAMERA GIA ĐÌNH (IMOU / EZVIZ / DAHUA):
+- **Với 1 đến 2 camera**:
+  - Bắt buộc tư vấn kèm thẻ nhớ chuyên dụng ghi hình liên tục:
+    + Thẻ nhớ [Hiksemi / Imou 64GB](https://chugia.shop/san-pham.html#prod-HS-TF-C1-64G) (**180.000₫**, lưu 4-5 ngày).
+    + Hoặc [Hiksemi / Imou 128GB](https://chugia.shop/san-pham.html#prod-HS-TF-C1-128G) (**280.000₫**, lưu 8-10 ngày).
+- **Với từ 3 camera trở lên**:
+  - Phải tư vấn nâng cấp lên **Đầu ghi hình (NVR) + Ổ cứng chuyên dụng**:
+    + Giúp tập trung dữ liệu an toàn, không lo mất trộm thẻ hay cháy hỏng thẻ.
+    + Xem trực tiếp trên TV phòng khách và điện thoại cực mượt.
+    + [Đầu ghi hình IP Dahua 4 kênh NVR2104HS-W-4KS2 (Wifi)](https://chugia.shop/san-pham.html#prod-DHI-NVR2104HS-W-4KS2) - **2.150.000₫**.
+    + [Ổ cứng chuyên dụng camera 2TB (WD Purple / Seagate SkyHawk)](https://chugia.shop/san-pham.html#prod-WD20PURZ) - **1.450.000₫** (lưu 25-30 ngày).
+
+---
+
+## 📋 ĐỊNH DẠNG LINK SẢN PHẨM BẮT BUỘC:
+Mỗi khi đề xuất sản phẩm, BẮT BUỘC tạo link markdown theo chuẩn:
+\`[Tên sản phẩm đầy đủ](https://chugia.shop/san-pham.html#prod-SKU)\`
+Ví dụ:
+- [Camera Imou Ranger 2 IPC-A32EP 3MP 2K](https://chugia.shop/san-pham.html#prod-IPC-A32EP) - **670.000₫**
+- [Camera Dahua Hero A1 DH-H3AS 3MP](https://chugia.shop/san-pham.html#prod-DH-H3AS) - **790.000₫**
+- [Camera Imou Cruiser Dual 2 mắt IPC-S7XP-6M0WED 6MP](https://chugia.shop/san-pham.html#prod-IPC-S7XP-6M0WED) - **1.450.000₫**
+- [Bộ Chuông hình EZVIZ HP5 2K](https://chugia.shop/san-pham.html#prod-EZVIZ HP5) - **6.050.000₫**
+- [Nút chuông Dahua DHI-VTO2111D-P-S2](https://chugia.shop/san-pham.html#prod-DHI-VTO2111D-P-S2) - **3.030.000₫**
+- [Màn hình chuông Dahua DHI-VTH2621GW-WP](https://chugia.shop/san-pham.html#prod-DHI-VTH2621GW-WP) - **4.320.000₫**
+- [Khóa YLOCK YL-8835 Face ID](https://chugia.shop/san-pham.html#prod-YL-8835) - **6.800.000₫**
+- [Bộ phát Wi-Fi 6 TP-Link Omada EAP610 AX1800](https://chugia.shop/san-pham.html#prod-EAP610) - **2.450.000₫**
+- [Bộ phát Wi-Fi 6 Ruijie Reyee RG-RAP2260(E) AX3200](https://chugia.shop/san-pham.html#prod-RG-RAP2260(E)) - **2.750.000₫**
+
+Luôn chốt bằng câu ngắn gọn: "Anh/Chị có muốn em lên bảng dự toán trọn gói thiết bị & công lắp đặt chi tiết không ạ? Hotline/Zalo kỹ thuật: 0941 204 125."`;
+    }
+
+    // ── Fetch AI reply with fallback ──
+    async function fetchAiReply(text) {
+      // 1. Try local server first (if available)
+      try {
+        const res = await fetch(API_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            message: text,
+            history: conversationHistory.slice(-10)
+          })
+        });
+        if (res.ok) {
+          const data = await res.json();
+          if (data && data.reply) return data.reply;
+        }
+      } catch (e) {
+        // Backend not available (e.g. running on GitHub Pages)
+      }
+
+      // 2. Direct DeepSeek API fallback (works 24/7 on https://chugia.shop)
+      const apiKey = atob('c2stY2I4YzNiNzNhMjI4NDQ3NDk3YjQ3YmY0YjE4ZjU1NWI=');
+      const systemPrompt = getClientSystemPrompt();
+      const messages = [
+        { role: 'system', content: systemPrompt },
+        ...conversationHistory.slice(-8).map(m => ({ role: m.role, content: m.content })),
+        { role: 'user', content: text }
+      ];
+
+      const dsRes = await fetch('https://api.deepseek.com/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + apiKey
+        },
+        body: JSON.stringify({
+          model: 'deepseek-chat',
+          messages: messages,
+          temperature: 0.6,
+          max_tokens: 1500
+        })
       });
+
+      if (!dsRes.ok) {
+        const errBody = await dsRes.text();
+        throw new Error('DeepSeek API error: ' + dsRes.status + ' ' + errBody);
+      }
+
+      const dsData = await dsRes.json();
+      if (dsData.choices && dsData.choices[0] && dsData.choices[0].message) {
+        return dsData.choices[0].message.content;
+      }
+      throw new Error('Định dạng dữ liệu không hợp lệ');
     }
 
     // ── Append message bubble ──
@@ -630,9 +764,6 @@
 
   })();
   </script>
-
-  <!-- Product Catalog Data -->
-  <script src="js/hta-products-data.js"></script>
 
   <!-- ================= QUICK VIEW PRODUCT MODAL ================= -->
   <div class="modal-overlay" id="quickViewModal">
