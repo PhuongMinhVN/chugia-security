@@ -2485,10 +2485,210 @@
   padding: 0 20px;
 }
 
+/* Multi-Brand Switcher Nav (Omada / Ruijie / Huawei) */
+.wifi-brand-nav {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 14px;
+  max-width: 1140px;
+  margin: 0 auto 36px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.wifi-brand-btn {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 12px 18px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.wifi-brand-btn:hover {
+  background: rgba(15, 23, 42, 0.95);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.wifi-brand-btn .brand-btn-logo {
+  width: 54px;
+  height: 38px;
+  object-fit: contain;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 4px 6px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.wifi-brand-btn .brand-btn-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.wifi-brand-btn .brand-btn-text strong {
+  font-size: 0.95rem;
+  color: #F8FAFC;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wifi-brand-btn .brand-btn-text small {
+  font-size: 0.74rem;
+  color: #94A3B8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Active brand states */
+.wifi-brand-btn[data-brand="omada"].active {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.22) 0%, rgba(6, 182, 212, 0.1) 100%);
+  border-color: #10B981;
+  box-shadow: 0 0 22px rgba(16, 185, 129, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+.wifi-brand-btn[data-brand="omada"].active .brand-btn-text strong {
+  color: #34D399;
+}
+
+.wifi-brand-btn[data-brand="ruijie"].active {
+  background: linear-gradient(135deg, rgba(230, 0, 18, 0.22) 0%, rgba(37, 99, 235, 0.12) 100%);
+  border-color: #E60012;
+  box-shadow: 0 0 22px rgba(230, 0, 18, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+.wifi-brand-btn[data-brand="ruijie"].active .brand-btn-text strong {
+  color: #FF7875;
+}
+
+.wifi-brand-btn[data-brand="huawei"].active {
+  background: linear-gradient(135deg, rgba(225, 20, 10, 0.22) 0%, rgba(207, 10, 44, 0.12) 100%);
+  border-color: #E1140A;
+  box-shadow: 0 0 22px rgba(225, 20, 10, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+.wifi-brand-btn[data-brand="huawei"].active .brand-btn-text strong {
+  color: #FF7875;
+}
+
+/* Brand Theme Overrides: Ruijie */
+.omada-combos-section[data-brand="ruijie"] {
+  border-top-color: rgba(230, 0, 18, 0.25);
+  border-bottom-color: rgba(230, 0, 18, 0.2);
+}
+.omada-combos-section[data-brand="ruijie"]::before {
+  background: radial-gradient(circle, rgba(230, 0, 18, 0.14) 0%, rgba(37, 99, 235, 0.06) 50%, transparent 75%);
+}
+.omada-combos-section[data-brand="ruijie"] .omada-badge-tag {
+  background: rgba(230, 0, 18, 0.12);
+  border-color: rgba(230, 0, 18, 0.35);
+  color: #FF7875;
+  box-shadow: 0 0 16px rgba(230, 0, 18, 0.2);
+}
+.omada-combos-section[data-brand="ruijie"] .omada-badge-tag .pulse-beacon {
+  background: #E60012;
+  box-shadow: 0 0 8px #E60012;
+}
+.omada-combos-section[data-brand="ruijie"] .omada-tab-btn:hover {
+  border-color: rgba(230, 0, 18, 0.45);
+}
+.omada-combos-section[data-brand="ruijie"] .omada-tab-btn.active {
+  background: linear-gradient(135deg, rgba(230, 0, 18, 0.2) 0%, rgba(37, 99, 235, 0.1) 100%);
+  border-color: #E60012;
+  box-shadow: 0 0 24px rgba(230, 0, 18, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+.omada-combos-section[data-brand="ruijie"] .combo-card-badge {
+  background: rgba(230, 0, 18, 0.15);
+  border-color: rgba(230, 0, 18, 0.35);
+  color: #FF7875;
+}
+.omada-combos-section[data-brand="ruijie"] .combo-guarantees-list svg {
+  stroke: #E60012;
+}
+.omada-combos-section[data-brand="ruijie"] .btn-combo-cart {
+  background: linear-gradient(135deg, #E60012 0%, #C4000F 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 18px rgba(230, 0, 18, 0.4);
+}
+.omada-combos-section[data-brand="ruijie"] .btn-combo-cart:hover {
+  background: linear-gradient(135deg, #FF1A2E 0%, #E60012 100%);
+  box-shadow: 0 8px 26px rgba(230, 0, 18, 0.55);
+}
+.omada-combos-section[data-brand="ruijie"] .btn-combo-explore:hover {
+  border-color: rgba(230, 0, 18, 0.5);
+  color: #FF7875;
+  background: rgba(230, 0, 18, 0.08);
+}
+
+/* Brand Theme Overrides: Huawei */
+.omada-combos-section[data-brand="huawei"] {
+  border-top-color: rgba(225, 20, 10, 0.25);
+  border-bottom-color: rgba(225, 20, 10, 0.2);
+}
+.omada-combos-section[data-brand="huawei"]::before {
+  background: radial-gradient(circle, rgba(225, 20, 10, 0.14) 0%, rgba(207, 10, 44, 0.06) 50%, transparent 75%);
+}
+.omada-combos-section[data-brand="huawei"] .omada-badge-tag {
+  background: rgba(225, 20, 10, 0.12);
+  border-color: rgba(225, 20, 10, 0.35);
+  color: #FF7875;
+  box-shadow: 0 0 16px rgba(225, 20, 10, 0.2);
+}
+.omada-combos-section[data-brand="huawei"] .omada-badge-tag .pulse-beacon {
+  background: #E1140A;
+  box-shadow: 0 0 8px #E1140A;
+}
+.omada-combos-section[data-brand="huawei"] .omada-tab-btn:hover {
+  border-color: rgba(225, 20, 10, 0.45);
+}
+.omada-combos-section[data-brand="huawei"] .omada-tab-btn.active {
+  background: linear-gradient(135deg, rgba(225, 20, 10, 0.2) 0%, rgba(207, 10, 44, 0.1) 100%);
+  border-color: #E1140A;
+  box-shadow: 0 0 24px rgba(225, 20, 10, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+.omada-combos-section[data-brand="huawei"] .combo-card-badge {
+  background: rgba(225, 20, 10, 0.15);
+  border-color: rgba(225, 20, 10, 0.35);
+  color: #FF7875;
+}
+.omada-combos-section[data-brand="huawei"] .combo-guarantees-list svg {
+  stroke: #E1140A;
+}
+.omada-combos-section[data-brand="huawei"] .btn-combo-cart {
+  background: linear-gradient(135deg, #CF0A2C 0%, #A50521 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 18px rgba(207, 10, 44, 0.4);
+}
+.omada-combos-section[data-brand="huawei"] .btn-combo-cart:hover {
+  background: linear-gradient(135deg, #E1140A 0%, #CF0A2C 100%);
+  box-shadow: 0 8px 26px rgba(207, 10, 44, 0.55);
+}
+.omada-combos-section[data-brand="huawei"] .btn-combo-explore:hover {
+  border-color: rgba(225, 20, 10, 0.5);
+  color: #FF7875;
+  background: rgba(225, 20, 10, 0.08);
+}
+
 .omada-combos-header {
   text-align: center;
-  max-width: 920px;
-  margin: 0 auto 36px;
+  max-width: 880px;
+  margin: 0 auto 30px;
+  box-sizing: border-box;
 }
 
 .omada-badge-tag {
@@ -2541,26 +2741,31 @@
   color: #F1F5F9;
 }
 
-/* 4 Tabs Selector Bar */
+/* 4 Tabs Selector Bar - Perfectly Symmetrical & Aligned with Brand Nav */
 .omada-tabs-nav {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-  margin: 0 auto;
+  gap: 14px;
+  max-width: 1140px;
+  margin: 0 auto 30px;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .omada-tab-btn {
   display: flex;
   align-items: center;
   gap: 12px;
-  background: rgba(15, 23, 42, 0.7);
+  background: rgba(15, 23, 42, 0.75);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 14px;
-  padding: 14px 18px;
+  padding: 12px 14px;
   cursor: pointer;
   text-align: left;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   backdrop-filter: blur(8px);
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .omada-tab-btn:hover {
@@ -2576,43 +2781,116 @@
   box-shadow: 0 0 24px rgba(16, 185, 129, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
+/* Standardized 44x44px Glass Icon Container - Guarantees 100% Equal Baseline & Spacing */
 .omada-tab-btn .tab-icon {
-  font-size: 1.65rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.45rem;
   flex-shrink: 0;
-  transition: transform 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  transition: all 0.25s ease;
 }
 
 .omada-tab-btn:hover .tab-icon {
-  transform: scale(1.15);
+  transform: scale(1.08);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.omada-tab-btn.active .tab-icon {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
 }
 
 .omada-tab-btn .tab-text {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 3px;
   min-width: 0;
+  flex: 1;
 }
 
 .omada-tab-btn .tab-text strong {
-  font-size: 0.94rem;
+  font-size: 0.90rem;
   color: #F8FAFC;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 700;
+  line-height: 1.25;
 }
 
 .omada-tab-btn .tab-text small {
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   color: #94A3B8;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  line-height: 1.25;
+  transition: color 0.2s ease;
 }
 
-.omada-tab-btn.active .tab-text small {
+/* Brand-aware active subtitle & icon states */
+.omada-combos-section[data-brand="omada"] .omada-tab-btn.active .tab-text small {
   color: #34D399;
   font-weight: 600;
+}
+.omada-combos-section[data-brand="omada"] .omada-tab-btn.active .tab-icon {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.35);
+}
+
+.omada-combos-section[data-brand="ruijie"] .omada-tab-btn.active .tab-text small {
+  color: #FF7875;
+  font-weight: 600;
+}
+.omada-combos-section[data-brand="ruijie"] .omada-tab-btn.active .tab-icon {
+  background: rgba(230, 0, 18, 0.15);
+  border-color: rgba(230, 0, 18, 0.35);
+}
+
+.omada-combos-section[data-brand="huawei"] .omada-tab-btn.active .tab-text small {
+  color: #FF7875;
+  font-weight: 600;
+}
+.omada-combos-section[data-brand="huawei"] .omada-tab-btn.active .tab-icon {
+  background: rgba(225, 20, 10, 0.15);
+  border-color: rgba(225, 20, 10, 0.35);
+}
+
+.intercom-combos-section[data-brand="hikvision"] .omada-tab-btn.active .tab-text small {
+  color: #FFA39E;
+  font-weight: 600;
+}
+.intercom-combos-section[data-brand="hikvision"] .omada-tab-btn.active .tab-icon {
+  background: rgba(216, 30, 6, 0.15);
+  border-color: rgba(216, 30, 6, 0.35);
+}
+
+.intercom-combos-section[data-brand="dahua"] .omada-tab-btn.active .tab-text small {
+  color: #70BAFF;
+  font-weight: 600;
+}
+.intercom-combos-section[data-brand="dahua"] .omada-tab-btn.active .tab-icon {
+  background: rgba(0, 114, 255, 0.15);
+  border-color: rgba(0, 114, 255, 0.35);
+}
+
+.intercom-combos-section[data-brand="ezviz"] .omada-tab-btn.active .tab-text small {
+  color: #FDBA74;
+  font-weight: 600;
+}
+.intercom-combos-section[data-brand="ezviz"] .omada-tab-btn.active .tab-icon {
+  background: rgba(245, 130, 32, 0.15);
+  border-color: rgba(245, 130, 32, 0.35);
 }
 
 /* Dynamic Combo Display Wrap */
@@ -2622,7 +2900,7 @@
 
 .omada-combo-card {
   display: grid;
-  grid-template-columns: 1fr 400px;
+  grid-template-columns: minmax(0, 1fr) 400px;
   gap: 28px;
   background: rgba(11, 19, 43, 0.75);
   border: 1px solid rgba(16, 185, 129, 0.28);
@@ -2631,6 +2909,9 @@
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(16, 185, 129, 0.08);
   backdrop-filter: blur(12px);
   animation: fadeInCombo 0.35s ease-out;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 @keyframes fadeInCombo {
@@ -2643,6 +2924,9 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .combo-header-box {
@@ -2860,10 +3144,415 @@
   color: #34D399;
 }
 
+/* Button View Detail on Combo Hardware Card */
+.btn-hw-detail {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  color: #38BDF8;
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-hw-detail:hover {
+  background: rgba(56, 189, 248, 0.22);
+  border-color: #38BDF8;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.35);
+}
+
+.btn-hw-detail svg {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.btn-hw-detail:hover svg {
+  transform: scale(1.15);
+}
+
+/* Brand-specific accents for .btn-hw-detail */
+.omada-combos-section[data-brand="omada"] .btn-hw-detail {
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: #34D399;
+}
+.omada-combos-section[data-brand="omada"] .btn-hw-detail:hover {
+  background: rgba(16, 185, 129, 0.22);
+  border-color: #10B981;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+}
+
+.omada-combos-section[data-brand="ruijie"] .btn-hw-detail {
+  background: rgba(230, 0, 18, 0.08);
+  border-color: rgba(230, 0, 18, 0.3);
+  color: #FF7875;
+}
+.omada-combos-section[data-brand="ruijie"] .btn-hw-detail:hover {
+  background: rgba(230, 0, 18, 0.22);
+  border-color: #E60012;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(230, 0, 18, 0.4);
+}
+
+.omada-combos-section[data-brand="huawei"] .btn-hw-detail {
+  background: rgba(225, 20, 10, 0.08);
+  border-color: rgba(225, 20, 10, 0.3);
+  color: #FF7875;
+}
+.omada-combos-section[data-brand="huawei"] .btn-hw-detail:hover {
+  background: rgba(225, 20, 10, 0.22);
+  border-color: #E1140A;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(225, 20, 10, 0.4);
+}
+
+/* Clickable triggers in combo-hw-card */
+.combo-hw-img-wrap {
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.combo-hw-img-wrap:hover {
+  transform: scale(1.05);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.combo-hw-name {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.combo-hw-name:hover {
+  color: #38BDF8;
+}
+.omada-combos-section[data-brand="omada"] .combo-hw-name:hover {
+  color: #34D399;
+}
+.omada-combos-section[data-brand="ruijie"] .combo-hw-name:hover,
+.omada-combos-section[data-brand="huawei"] .combo-hw-name:hover {
+  color: #FF7875;
+}
+
+.combo-hw-sku {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.combo-hw-sku:hover {
+  opacity: 0.85;
+}
+
+/* ===================== COMBO HARDWARE ACTIONS & QUANTITY STEPPER ===================== */
+.combo-hw-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.combo-qty-stepper {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 2px 4px;
+  gap: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.btn-qty-step {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #F1F5F9;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+  line-height: 1;
+}
+
+.btn-qty-step:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.22);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.35);
+  transform: scale(1.06);
+}
+
+.btn-qty-step:active:not(:disabled) {
+  transform: scale(0.92);
+}
+
+.btn-qty-step:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.combo-qty-value {
+  min-width: 22px;
+  text-align: center;
+  font-size: 0.84rem;
+  font-weight: 800;
+  color: #F8FAFC;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Item muted state when quantity is zero */
+.combo-hw-card.item-muted {
+  opacity: 0.42;
+  filter: grayscale(0.5);
+  background: rgba(15, 23, 42, 0.3);
+  border-color: rgba(255, 255, 255, 0.04);
+}
+.combo-hw-card.item-muted:hover {
+  opacity: 0.75;
+  filter: grayscale(0.2);
+}
+.combo-hw-card.item-muted .combo-hw-img-wrap {
+  border-color: rgba(255, 255, 255, 0.05);
+}
+.combo-hw-card.item-muted .combo-hw-qty-badge {
+  background: #64748B;
+  color: #F8FAFC;
+}
+.muted-text {
+  color: #64748B !important;
+  font-style: italic;
+}
+
+/* Nav Link Highlight for Intercom in Header */
+.nav-link-intercom-highlight {
+  position: relative;
+  transition: all 0.25s ease;
+}
+.nav-link-intercom-highlight:hover {
+  text-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
+  color: #7dd3fc !important;
+}
+
+/* ===================== INTERCOM COMBOS BRAND THEMES ===================== */
+/* Hikvision (Red & Dark Silver Theme) */
+.intercom-combos-section[data-brand="hikvision"] {
+  border-top-color: rgba(216, 30, 6, 0.25);
+  border-bottom-color: rgba(216, 30, 6, 0.2);
+}
+.intercom-combos-section[data-brand="hikvision"]::before {
+  background: radial-gradient(circle, rgba(216, 30, 6, 0.14) 0%, rgba(220, 38, 38, 0.05) 50%, transparent 75%);
+}
+.intercom-combos-section[data-brand="hikvision"] .omada-badge-tag {
+  background: rgba(216, 30, 6, 0.12);
+  border-color: rgba(216, 30, 6, 0.35);
+  color: #FFA39E;
+  box-shadow: 0 0 16px rgba(216, 30, 6, 0.2);
+}
+.intercom-combos-section[data-brand="hikvision"] .omada-badge-tag .pulse-beacon {
+  background: #D81E06;
+  box-shadow: 0 0 8px #D81E06;
+}
+.intercom-combos-section[data-brand="hikvision"] .omada-tab-btn:hover {
+  border-color: rgba(216, 30, 6, 0.45);
+}
+.intercom-combos-section[data-brand="hikvision"] .omada-tab-btn.active {
+  background: linear-gradient(135deg, rgba(216, 30, 6, 0.2) 0%, rgba(185, 28, 28, 0.1) 100%);
+  border-color: #D81E06;
+  box-shadow: 0 0 24px rgba(216, 30, 6, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+.intercom-combos-section[data-brand="hikvision"] .combo-card-badge {
+  background: rgba(216, 30, 6, 0.15);
+  border-color: rgba(216, 30, 6, 0.35);
+  color: #FFA39E;
+}
+.intercom-combos-section[data-brand="hikvision"] .combo-guarantees-list svg {
+  stroke: #D81E06;
+}
+.intercom-combos-section[data-brand="hikvision"] .btn-combo-cart {
+  background: linear-gradient(135deg, #D81E06 0%, #A81403 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 18px rgba(216, 30, 6, 0.4);
+}
+.intercom-combos-section[data-brand="hikvision"] .btn-combo-cart:hover {
+  background: linear-gradient(135deg, #F5222D 0%, #D81E06 100%);
+  box-shadow: 0 8px 26px rgba(216, 30, 6, 0.55);
+}
+.intercom-combos-section[data-brand="hikvision"] .btn-combo-explore:hover {
+  border-color: rgba(216, 30, 6, 0.5);
+  color: #FFA39E;
+  background: rgba(216, 30, 6, 0.08);
+}
+.intercom-combos-section[data-brand="hikvision"] .btn-hw-detail {
+  background: rgba(216, 30, 6, 0.08);
+  border-color: rgba(216, 30, 6, 0.3);
+  color: #FFA39E;
+}
+.intercom-combos-section[data-brand="hikvision"] .btn-hw-detail:hover {
+  background: rgba(216, 30, 6, 0.22);
+  border-color: #D81E06;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(216, 30, 6, 0.4);
+}
+.intercom-combos-section[data-brand="hikvision"] .combo-hw-name:hover {
+  color: #FFA39E;
+}
+.intercom-combos-section[data-brand="hikvision"] .combo-pricing-card {
+  border-color: rgba(216, 30, 6, 0.38);
+}
+
+/* Dahua (Cobalt Blue & Cyan Theme) */
+.intercom-combos-section[data-brand="dahua"] {
+  border-top-color: rgba(0, 114, 255, 0.25);
+  border-bottom-color: rgba(0, 114, 255, 0.2);
+}
+.intercom-combos-section[data-brand="dahua"]::before {
+  background: radial-gradient(circle, rgba(0, 114, 255, 0.14) 0%, rgba(2, 132, 199, 0.06) 50%, transparent 75%);
+}
+.intercom-combos-section[data-brand="dahua"] .omada-badge-tag {
+  background: rgba(0, 114, 255, 0.12);
+  border-color: rgba(0, 114, 255, 0.35);
+  color: #70BAFF;
+  box-shadow: 0 0 16px rgba(0, 114, 255, 0.2);
+}
+.intercom-combos-section[data-brand="dahua"] .omada-badge-tag .pulse-beacon {
+  background: #0072FF;
+  box-shadow: 0 0 8px #0072FF;
+}
+.intercom-combos-section[data-brand="dahua"] .omada-tab-btn:hover {
+  border-color: rgba(0, 114, 255, 0.45);
+}
+.intercom-combos-section[data-brand="dahua"] .omada-tab-btn.active {
+  background: linear-gradient(135deg, rgba(0, 114, 255, 0.2) 0%, rgba(2, 132, 199, 0.1) 100%);
+  border-color: #0072FF;
+  box-shadow: 0 0 24px rgba(0, 114, 255, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+.intercom-combos-section[data-brand="dahua"] .combo-card-badge {
+  background: rgba(0, 114, 255, 0.15);
+  border-color: rgba(0, 114, 255, 0.35);
+  color: #70BAFF;
+}
+.intercom-combos-section[data-brand="dahua"] .combo-guarantees-list svg {
+  stroke: #0072FF;
+}
+.intercom-combos-section[data-brand="dahua"] .btn-combo-cart {
+  background: linear-gradient(135deg, #0072FF 0%, #0052B3 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 18px rgba(0, 114, 255, 0.4);
+}
+.intercom-combos-section[data-brand="dahua"] .btn-combo-cart:hover {
+  background: linear-gradient(135deg, #1A85FF 0%, #0072FF 100%);
+  box-shadow: 0 8px 26px rgba(0, 114, 255, 0.55);
+}
+.intercom-combos-section[data-brand="dahua"] .btn-combo-explore:hover {
+  border-color: rgba(0, 114, 255, 0.5);
+  color: #70BAFF;
+  background: rgba(0, 114, 255, 0.08);
+}
+.intercom-combos-section[data-brand="dahua"] .btn-hw-detail {
+  background: rgba(0, 114, 255, 0.08);
+  border-color: rgba(0, 114, 255, 0.3);
+  color: #70BAFF;
+}
+.intercom-combos-section[data-brand="dahua"] .btn-hw-detail:hover {
+  background: rgba(0, 114, 255, 0.22);
+  border-color: #0072FF;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(0, 114, 255, 0.4);
+}
+.intercom-combos-section[data-brand="dahua"] .combo-hw-name:hover {
+  color: #70BAFF;
+}
+.intercom-combos-section[data-brand="dahua"] .combo-pricing-card {
+  border-color: rgba(0, 114, 255, 0.38);
+}
+
+/* EZVIZ (Warm Amber & Tangerine Theme) */
+.intercom-combos-section[data-brand="ezviz"] {
+  border-top-color: rgba(245, 130, 32, 0.25);
+  border-bottom-color: rgba(245, 130, 32, 0.2);
+}
+.intercom-combos-section[data-brand="ezviz"]::before {
+  background: radial-gradient(circle, rgba(245, 130, 32, 0.14) 0%, rgba(217, 119, 6, 0.06) 50%, transparent 75%);
+}
+.intercom-combos-section[data-brand="ezviz"] .omada-badge-tag {
+  background: rgba(245, 130, 32, 0.12);
+  border-color: rgba(245, 130, 32, 0.35);
+  color: #FDBA74;
+  box-shadow: 0 0 16px rgba(245, 130, 32, 0.2);
+}
+.intercom-combos-section[data-brand="ezviz"] .omada-badge-tag .pulse-beacon {
+  background: #F58220;
+  box-shadow: 0 0 8px #F58220;
+}
+.intercom-combos-section[data-brand="ezviz"] .omada-tab-btn:hover {
+  border-color: rgba(245, 130, 32, 0.45);
+}
+.intercom-combos-section[data-brand="ezviz"] .omada-tab-btn.active {
+  background: linear-gradient(135deg, rgba(245, 130, 32, 0.2) 0%, rgba(217, 119, 6, 0.1) 100%);
+  border-color: #F58220;
+  box-shadow: 0 0 24px rgba(245, 130, 32, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+.intercom-combos-section[data-brand="ezviz"] .combo-card-badge {
+  background: rgba(245, 130, 32, 0.15);
+  border-color: rgba(245, 130, 32, 0.35);
+  color: #FDBA74;
+}
+.intercom-combos-section[data-brand="ezviz"] .combo-guarantees-list svg {
+  stroke: #F58220;
+}
+.intercom-combos-section[data-brand="ezviz"] .btn-combo-cart {
+  background: linear-gradient(135deg, #F58220 0%, #C8610D 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 18px rgba(245, 130, 32, 0.4);
+}
+.intercom-combos-section[data-brand="ezviz"] .btn-combo-cart:hover {
+  background: linear-gradient(135deg, #FF9538 0%, #F58220 100%);
+  box-shadow: 0 8px 26px rgba(245, 130, 32, 0.55);
+}
+.intercom-combos-section[data-brand="ezviz"] .btn-combo-explore:hover {
+  border-color: rgba(245, 130, 32, 0.5);
+  color: #FDBA74;
+  background: rgba(245, 130, 32, 0.08);
+}
+.intercom-combos-section[data-brand="ezviz"] .btn-hw-detail {
+  background: rgba(245, 130, 32, 0.08);
+  border-color: rgba(245, 130, 32, 0.3);
+  color: #FDBA74;
+}
+.intercom-combos-section[data-brand="ezviz"] .btn-hw-detail:hover {
+  background: rgba(245, 130, 32, 0.22);
+  border-color: #F58220;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(245, 130, 32, 0.4);
+}
+.intercom-combos-section[data-brand="ezviz"] .combo-hw-name:hover {
+  color: #FDBA74;
+}
+.intercom-combos-section[data-brand="ezviz"] .combo-pricing-card {
+  border-color: rgba(245, 130, 32, 0.38);
+}
+
+
 /* Right Column (Pricing & CTAs) */
 .combo-side-col {
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .combo-pricing-card {
@@ -3097,7 +3786,7 @@
 /* Responsive Media Queries for Omada Combos */
 @media (max-width: 1100px) {
   .omada-combo-card {
-    grid-template-columns: 1fr 340px;
+    grid-template-columns: minmax(0, 1fr) 340px;
     padding: 24px;
     gap: 20px;
   }
@@ -3107,22 +3796,346 @@
 }
 
 @media (max-width: 860px) {
+  .wifi-brand-nav {
+    gap: 8px;
+    margin-bottom: 24px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .wifi-brand-btn {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+  .wifi-brand-btn .brand-btn-logo {
+    width: 32px;
+    height: 32px;
+    padding: 3px;
+  }
+  .wifi-brand-btn .brand-btn-text strong {
+    font-size: 0.84rem;
+  }
+  .wifi-brand-btn .brand-btn-text small {
+    font-size: 0.68rem;
+  }
   .omada-combos-section {
-    padding: 40px 0;
+    padding: 36px 0;
+  }
+  .omada-combos-container {
+    padding: 0 14px;
   }
   .omada-section-title {
     font-size: 1.55rem;
   }
   .omada-combo-card {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 16px;
+    gap: 20px;
+    border-radius: 18px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .combo-main-col,
+  .combo-side-col {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   .combo-pricing-card {
     position: static;
+    width: 100%;
+    box-sizing: border-box;
   }
   .combo-stats-strip {
     grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
   }
   .omada-tabs-nav {
     grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .combo-hw-card {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .combo-hw-info {
+    min-width: 0;
+  }
+  .combo-hw-name {
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-break: break-word;
+  }
+  .combo-hw-pricing {
+    flex-wrap: wrap;
+    gap: 6px 12px;
+  }
+  .btn-combo-cart,
+  .btn-combo-zalo,
+  .btn-combo-explore {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 600px) {
+  .wifi-brand-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    margin-bottom: 18px;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .wifi-brand-btn {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 8px 4px;
+    gap: 5px;
+    border-radius: 10px;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .wifi-brand-btn .brand-btn-logo {
+    width: 28px;
+    height: 28px;
+    padding: 3px;
+  }
+  .wifi-brand-btn .brand-btn-text {
+    align-items: center;
+    width: 100%;
+  }
+  .wifi-brand-btn .brand-btn-text strong {
+    font-size: 0.70rem;
+    white-space: normal;
+    line-height: 1.2;
+    text-align: center;
+  }
+  .wifi-brand-btn .brand-btn-text small {
+    display: none;
+  }
+  .omada-combos-section {
+    padding: 28px 0;
+  }
+  .omada-combos-container {
+    padding: 0 10px;
+  }
+  .omada-badge-tag {
+    font-size: 0.68rem;
+    padding: 4px 10px;
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.35;
+  }
+  .omada-section-title {
+    font-size: 1.25rem;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+  .omada-section-sub {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  .omada-tabs-nav {
+    gap: 8px;
+  }
+  .omada-tab-btn {
+    padding: 10px 12px;
+    gap: 10px;
+    border-radius: 12px;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .omada-tab-btn .tab-icon {
+    font-size: 1.35rem;
+  }
+  .omada-tab-btn .tab-text strong {
+    font-size: 0.86rem;
+    white-space: normal;
+    line-height: 1.25;
+  }
+  .omada-tab-btn .tab-text small {
+    font-size: 0.70rem;
+    white-space: normal;
+    line-height: 1.2;
+  }
+  .omada-combo-card {
+    padding: 16px 12px;
+    gap: 16px;
+    border-radius: 16px;
+  }
+  .combo-header-box {
+    padding-bottom: 14px;
+  }
+  .combo-card-badge {
+    font-size: 0.68rem;
+    padding: 3px 8px;
+  }
+  .combo-card-title {
+    font-size: 1.18rem;
+    line-height: 1.35;
+    word-break: break-word;
+  }
+  .combo-card-subtitle {
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+  .combo-stats-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    width: 100%;
+  }
+  .combo-stat-pill {
+    padding: 8px;
+    border-radius: 8px;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .combo-stat-pill small {
+    font-size: 0.65rem;
+  }
+  .combo-stat-pill strong {
+    font-size: 0.78rem;
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.25;
+  }
+  .combo-hw-header {
+    flex-wrap: wrap;
+    gap: 4px;
+    font-size: 0.72rem;
+  }
+  .combo-hw-grid {
+    gap: 8px;
+    padding-right: 2px;
+    max-height: 420px;
+  }
+  .combo-hw-card {
+    padding: 8px 10px;
+    gap: 10px;
+    border-radius: 10px;
+  }
+  .combo-hw-img-wrap {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    padding: 2px;
+  }
+  .combo-hw-top {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .combo-hw-sku {
+    font-size: 0.68rem;
+    padding: 1px 5px;
+  }
+  .combo-hw-role {
+    font-size: 0.68rem;
+  }
+  .combo-hw-name {
+    font-size: 0.80rem;
+    line-height: 1.3;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-break: break-word;
+    margin: 2px 0;
+  }
+  .combo-hw-pricing {
+    flex-wrap: wrap;
+    gap: 4px 8px;
+    font-size: 0.72rem;
+  }
+  .combo-hw-actions {
+    gap: 5px;
+    align-items: flex-end;
+  }
+  .combo-qty-stepper {
+    padding: 1px 3px;
+    gap: 2px;
+    border-radius: 6px;
+  }
+  .btn-qty-step {
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+    border-radius: 4px;
+  }
+  .combo-qty-value {
+    min-width: 18px;
+    font-size: 0.74rem;
+  }
+  .btn-hw-detail {
+    padding: 4px 7px;
+    font-size: 0.66rem;
+    gap: 3px;
+    border-radius: 6px;
+  }
+  .combo-pricing-card {
+    padding: 16px 12px;
+    border-radius: 14px;
+    gap: 14px;
+  }
+  .combo-price-head {
+    padding-bottom: 10px;
+  }
+  .price-head-label {
+    font-size: 0.70rem;
+  }
+  .price-save-badge {
+    font-size: 0.74rem;
+    padding: 3px 8px;
+  }
+  .combo-retail-price {
+    font-size: 0.78rem;
+  }
+  .combo-final-price .label {
+    font-size: 0.80rem;
+  }
+  .combo-final-price .val-num {
+    font-size: 1.55rem;
+    word-break: break-word;
+  }
+  .combo-guarantees-list {
+    gap: 8px;
+    padding: 10px 0;
+  }
+  .combo-guarantees-list li {
+    font-size: 0.74rem;
+    line-height: 1.35;
+    gap: 6px;
+  }
+  .btn-combo-cart {
+    padding: 11px 12px;
+    font-size: 0.84rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .btn-combo-zalo {
+    padding: 10px 12px;
+    font-size: 0.80rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .btn-combo-explore {
+    padding: 8px 10px;
+    font-size: 0.76rem;
+    width: 100%;
+    box-sizing: border-box;
   }
 }

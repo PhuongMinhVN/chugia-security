@@ -2150,6 +2150,15 @@ a.floating-hud-badge.hud-top-right:hover {
   padding: 24px;
   max-width: 900px;
   margin: 0 auto;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 640px) {
+  .calculator-card {
+    padding: 14px 10px;
+    border-radius: 16px;
+  }
 }
 
 /* --- Live Top Preview Box --- */
@@ -2376,6 +2385,8 @@ a.floating-hud-badge.hud-top-right:hover {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   margin-bottom: 6px;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .calc-cam-card {
@@ -2392,6 +2403,8 @@ a.floating-hud-badge.hud-top-right:hover {
   text-align: center;
   user-select: none;
   overflow: hidden;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .calc-cam-card input[type="radio"] {
@@ -2650,39 +2663,75 @@ a.floating-hud-badge.hud-top-right:hover {
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
   }
+  .calc-cam-card {
+    padding: 8px 6px 8px;
+  }
   .calc-cam-tag {
-    font-size: 0.58rem;
-    padding: 1.5px 4.5px;
+    font-size: 0.56rem;
+    padding: 1.5px 4px;
+    letter-spacing: 0.2px;
   }
   .calc-cam-qty-badge {
-    min-width: 20px;
-    height: 20px;
-    font-size: 0.68rem;
+    min-width: 18px;
+    height: 18px;
+    font-size: 0.65rem;
+    top: 3px;
+    right: 3px;
   }
   .calc-cam-img-wrap {
-    height: 66px;
-    margin: 12px 0 4px 0;
+    height: 60px;
+    margin: 8px 0 4px 0;
   }
   .calc-cam-img-wrap img {
-    max-height: 60px;
+    max-height: 54px;
   }
   .calc-cam-title {
-    font-size: 0.76rem;
+    font-size: 0.72rem;
+    line-height: 1.25;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 28px;
+  }
+  .calc-cam-desc {
+    font-size: 0.62rem;
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .calc-cam-price {
+    font-size: 0.82rem;
+  }
+  .calc-cam-actions {
+    margin-top: 6px;
   }
   .cam-add-btn {
-    font-size: 0.70rem;
-    padding: 4px 6px;
+    font-size: 0.68rem;
+    padding: 5px 4px;
+    gap: 3px;
+  }
+  .cam-stepper {
+    padding: 2px;
   }
   .cam-stepper-btn {
     width: 20px;
     height: 20px;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
+  }
+  .cam-stepper-val {
+    font-size: 0.80rem;
+    min-width: 14px;
   }
   .cam-detail-btn {
-    font-size: 0.67rem;
-    padding: 4px 6px;
-    margin-top: 5px;
+    font-size: 0.64rem;
+    padding: 4px;
+    margin-top: 4px;
     border-radius: 6px;
+    gap: 2px;
   }
 }
 
@@ -3094,10 +3143,18 @@ a.floating-hud-badge.hud-top-right:hover {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 28px;
+  min-width: 0;
+}
+
+.calc-main-content {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .calc-step {
   margin-bottom: 18px;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .calc-step-title {
@@ -3107,6 +3164,9 @@ a.floating-hud-badge.hud-top-right:hover {
   display: flex;
   align-items: center;
   gap: 8px;
+  min-width: 0;
+  max-width: 100%;
+  flex-wrap: wrap;
 }
 
 .step-num {
@@ -3120,12 +3180,14 @@ a.floating-hud-badge.hud-top-right:hover {
   justify-content: center;
   font-size: 0.7rem;
   font-weight: 700;
+  flex-shrink: 0;
 }
 
 .calc-options-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 8px;
+  min-width: 0;
 }
 
 .calc-option {
@@ -3138,6 +3200,22 @@ a.floating-hud-badge.hud-top-right:hover {
   align-items: center;
   gap: 8px;
   font-size: 0.82rem;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.calc-option > div {
+  min-width: 0;
+  word-break: break-word;
+}
+
+@media (max-width: 640px) {
+  .calc-options-grid {
+    grid-template-columns: 1fr;
+  }
+  .storage-grid-2x2 {
+    grid-template-columns: 1fr;
+  }
 }
 
 .calc-option:hover {
@@ -3158,6 +3236,28 @@ a.floating-hud-badge.hud-top-right:hover {
   padding: 4px;
   gap: 6px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.04);
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .storage-mode-toggle {
+    display: flex;
+    width: 100%;
+    border-radius: 12px;
+    padding: 3px;
+    gap: 4px;
+  }
+  .storage-tab-btn {
+    flex: 1;
+    justify-content: center;
+    padding: 6px 6px;
+    font-size: 0.70rem;
+    gap: 4px;
+    border-radius: 8px;
+    white-space: nowrap;
+  }
 }
 
 .storage-tab-btn {
@@ -3340,6 +3440,31 @@ a.floating-hud-badge.hud-top-right:hover {
   align-self: start;
   border: 1.5px solid transparent;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .calc-summary-box {
+    padding: 14px 10px;
+    border-radius: 14px;
+    margin-top: 14px;
+    position: static;
+  }
+  #btnBookCalc {
+    width: 100% !important;
+    padding: 12px 14px !important;
+    font-size: 0.88rem !important;
+    font-weight: 700 !important;
+    border-radius: 10px !important;
+    white-space: normal !important;
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+  }
 }
 
 @keyframes summaryPulse {
@@ -3531,6 +3656,8 @@ a.floating-hud-badge.hud-top-right:hover {
 /* Tab Pane Transitions */
 .calc-tab-pane {
   animation: fadeInPane 0.22s ease forwards;
+  min-width: 0;
+  max-width: 100%;
 }
 
 @keyframes fadeInPane {
@@ -3545,11 +3672,14 @@ a.floating-hud-badge.hud-top-right:hover {
   align-items: center;
   margin-bottom: 12px;
   flex-wrap: wrap;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .calc-cat-search-box {
   flex: 1;
-  min-width: 240px;
+  min-width: 200px;
+  max-width: 100%;
   position: relative;
   display: flex;
   align-items: center;
@@ -3628,6 +3758,22 @@ a.floating-hud-badge.hud-top-right:hover {
   transform: translateY(-1px);
 }
 
+@media (max-width: 540px) {
+  .calc-cat-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .calc-cat-search-box {
+    width: 100%;
+    min-width: 0;
+  }
+  .btn-goto-store {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 /* Category Pills */
 .calc-cat-pills-bar {
   display: flex;
@@ -3636,6 +3782,9 @@ a.floating-hud-badge.hud-top-right:hover {
   padding: 2px 2px 10px 2px;
   scrollbar-width: thin;
   -webkit-overflow-scrolling: touch;
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
 }
 
 .calc-cat-pill {
@@ -3680,6 +3829,14 @@ a.floating-hud-badge.hud-top-right:hover {
   font-size: 0.78rem;
   color: #166534;
   line-height: 1.4;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.ccgb-text {
+  min-width: 0;
+  word-break: break-word;
 }
 
 .ccgb-icon {
@@ -3700,17 +3857,61 @@ a.floating-hud-badge.hud-top-right:hover {
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
   margin-bottom: 16px;
+  min-width: 0;
+  max-width: 100%;
 }
 
 @media (max-width: 900px) {
   .calc-cat-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .calc-cat-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .calc-prod-card {
+    padding: 8px;
+  }
+  .calc-prod-img-wrap {
+    height: 80px;
+    margin-bottom: 6px;
+  }
+  .calc-prod-title {
+    font-size: 0.72rem;
+    min-height: 32px;
+    line-height: 1.25;
+  }
+  .calc-prod-price {
+    font-size: 0.82rem;
+  }
+  .calc-prod-orig-price {
+    font-size: 0.65rem;
+  }
+  .calc-prod-actions {
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+  }
+  .btn-calc-prod-add {
+    width: 100%;
+    padding: 6px 2px;
+    font-size: 0.66rem;
+    gap: 3px;
+    letter-spacing: -0.2px;
+    justify-content: center;
+  }
+  .btn-calc-prod-quickview {
+    width: 100%;
+    justify-content: center;
+    padding: 4px 6px;
+    font-size: 0.65rem;
+  }
+  .calc-prod-stepper {
+    width: 100%;
   }
 }
 
@@ -3725,6 +3926,8 @@ a.floating-hud-badge.hud-top-right:hover {
   transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .calc-prod-card:hover {
@@ -3852,10 +4055,12 @@ a.floating-hud-badge.hud-top-right:hover {
   display: flex;
   gap: 6px;
   align-items: center;
+  min-width: 0;
 }
 
 .btn-calc-prod-add {
   flex: 1;
+  min-width: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3873,6 +4078,12 @@ a.floating-hud-badge.hud-top-right:hover {
   white-space: nowrap;
 }
 
+.btn-calc-prod-add span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .btn-calc-prod-add:hover {
   background: #006ED4;
   box-shadow: 0 2px 8px rgba(0, 132, 255, 0.35);
@@ -3880,6 +4091,7 @@ a.floating-hud-badge.hud-top-right:hover {
 
 .calc-prod-stepper {
   flex: 1;
+  min-width: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -4029,6 +4241,21 @@ a.floating-hud-badge.hud-top-right:hover {
   border: 1px solid #E2E8F0;
   border-radius: 8px;
   font-size: 0.76rem;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 540px) {
+  .summary-custom-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    padding: 8px;
+  }
+  .sci-actions {
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 .sci-info {

@@ -39,8 +39,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
   <link rel="preconnect" href="https://statics.vncdn.vn">
-  <link rel="stylesheet" href="css/style.css?v=20260913_2315">
-  <link rel="stylesheet" href="css/products.css?v=20260913_2315">
+  <link rel="stylesheet" href="css/style.css?v=20260914_0750">
+  <link rel="stylesheet" href="css/products.css?v=20260914_0750">
 </head>
 
 <body>
@@ -85,7 +85,8 @@
       <nav class="nav-menu" id="navMenu">
         <a href="index.html" class="nav-link">Trang Chủ</a>
         <a href="san-pham.html" class="nav-link active">Kho 480+ Thiết Bị</a>
-        <a href="#omadaCombos" class="nav-link nav-link-omada-highlight" style="color: #34D399; font-weight: 700;">Combo Omada WiFi 🔥</a>
+        <a href="#omadaCombos" class="nav-link nav-link-omada-highlight" style="color: #34D399; font-weight: 700;">Combo WiFi Chuyên Dụng 🔥</a>
+        <a href="#intercomCombos" class="nav-link nav-link-intercom-highlight" style="color: #38bdf8; font-weight: 700;">Combo Khóa &amp; Chuông Hình 🔔</a>
         <a href="index.html#du-toan" class="nav-link">Dự Toán Chi Phí</a>
         <a href="giai-phap.html" class="nav-link">Giải Pháp Doanh Nghiệp ↗</a>
         <a href="index.html#the-manh" class="nav-link">Vì Sao Chọn Chu Gia</a>
@@ -169,56 +170,109 @@
     </div>
   </div>
 
-  <!-- ================= OMADA NETWORK COMBOS SHOWCASE ================= -->
+  <!-- ================= WI-FI NETWORK COMBOS SHOWCASE (OMADA / RUIJIE / HUAWEI) ================= -->
   <section class="omada-combos-section" id="omadaCombos">
     <div class="container omada-combos-container">
+
+      <!-- Brand Switcher Bar -->
+      <div class="wifi-brand-nav" id="wifiBrandNav">
+        <button class="wifi-brand-btn active" data-brand="omada" type="button">
+          <img src="images/logo_omada.svg" alt="TP-Link Omada" class="brand-btn-logo">
+          <div class="brand-btn-text">
+            <strong>TP-Link Omada SDN</strong>
+            <small>Đám Mây • 4 Gói Combo</small>
+          </div>
+        </button>
+        <button class="wifi-brand-btn" data-brand="ruijie" type="button">
+          <img src="images/logo_ruijie.svg" alt="Ruijie Reyee" class="brand-btn-logo">
+          <div class="brand-btn-text">
+            <strong>Ruijie Reyee Cloud</strong>
+            <small>Wi-Fi 6/7 • 4 Gói Combo</small>
+          </div>
+        </button>
+        <button class="wifi-brand-btn" data-brand="huawei" type="button">
+          <img src="images/logo_huawei.svg" alt="Huawei eKit" class="brand-btn-logo">
+          <div class="brand-btn-text">
+            <strong>Huawei eKit Enterprise</strong>
+            <small>Wi-Fi 7 2.5GE • 4 Gói Combo</small>
+          </div>
+        </button>
+      </div>
+
       <div class="omada-combos-header">
-        <div class="omada-badge-tag">
+        <div class="omada-badge-tag" id="wifiBadgeTag">
           <span class="pulse-beacon"></span>
-          <span>HỆ THỐNG MẠNG &amp; WI-FI 6 DOANH NGHIỆP • TP-LINK OMADA SDN</span>
+          <span id="wifiBadgeText">HỆ THỐNG MẠNG &amp; WI-FI 6 DOANH NGHIỆP • TP-LINK OMADA SDN</span>
         </div>
-        <h2 class="omada-section-title">
+        <h2 class="omada-section-title" id="wifiSectionTitle">
           Combo Giải Pháp Wi-Fi 6 &amp; Mạng Chuyên Dụng Từng Phân Khúc
         </h2>
-        <p class="omada-section-sub">
+        <p class="omada-section-sub" id="wifiSectionSub">
           Được kỹ sư Chu Gia Security thiết kế và tối ưu thông số chịu tải thực chiến: <strong>Nhà ở thông minh, Biệt thự Villa, Văn phòng doanh nghiệp</strong> và <strong>Nhà máy sản xuất</strong>. Chuyển vùng Seamless Roaming không ngắt cuộc gọi, cân bằng tải Multi-WAN gộp nhiều đường truyền Internet và quản trị Cloud 24/7.
         </p>
+      </div>
 
-        <!-- Segment Selector Tabs -->
-        <div class="omada-tabs-nav" id="omadaTabsNav">
-          <button class="omada-tab-btn active" data-combo="home" type="button">
-            <span class="tab-icon">🏠</span>
-            <div class="tab-text">
-              <strong>Nhà Ở &amp; Căn Hộ</strong>
-              <small>30 – 50 Thiết bị • 100-250m²</small>
-            </div>
-          </button>
-          <button class="omada-tab-btn" data-combo="villa" type="button">
-            <span class="tab-icon">🏰</span>
-            <div class="tab-text">
-              <strong>Biệt Thự &amp; Villa Sân Vườn</strong>
-              <small>80 – 150 Thiết bị • IP67 Ngoài Trời</small>
-            </div>
-          </button>
-          <button class="omada-tab-btn" data-combo="office" type="button">
-            <span class="tab-icon">🏢</span>
-            <div class="tab-text">
-              <strong>Văn Phòng Doanh Nghiệp</strong>
-              <small>150 – 200 User • Cổng 2.5GE</small>
-            </div>
-          </button>
-          <button class="omada-tab-btn" data-combo="factory" type="button">
-            <span class="tab-icon">🏭</span>
-            <div class="tab-text">
-              <strong>Doanh Nghiệp Sản Xuất &amp; Xưởng</strong>
-              <small>Trục 10G SFP+ • 500+ Thiết bị</small>
-            </div>
-          </button>
-        </div>
+      <!-- Segment Selector Tabs -->
+      <div class="omada-tabs-nav" id="omadaTabsNav">
+        <!-- Dynamically populated per active brand -->
       </div>
 
       <!-- Active Combo Dynamic Display Card -->
       <div class="omada-combo-display-wrap" id="omadaComboDisplay">
+        <!-- Rendered dynamically by js/products-catalog.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= VIDEO INTERCOM & SMART LOCK COMBOS SHOWCASE ================= -->
+  <section class="omada-combos-section intercom-combos-section" id="intercomCombos" data-brand="hikvision">
+    <div class="container omada-combos-container">
+
+      <!-- Intercom Brand Switcher Bar -->
+      <div class="wifi-brand-nav intercom-brand-nav" id="intercomBrandNav">
+        <button class="wifi-brand-btn active" data-brand="hikvision" type="button">
+          <img src="images/logo_hikvision.svg" alt="Hikvision IP Intercom" class="brand-btn-logo">
+          <div class="brand-btn-text">
+            <strong>Hikvision Intercom</strong>
+            <small>IP Intercom • 4 Gói Combo</small>
+          </div>
+        </button>
+        <button class="wifi-brand-btn" data-brand="dahua" type="button">
+          <img src="images/logo_dahua.svg" alt="Dahua IP Intercom" class="brand-btn-logo">
+          <div class="brand-btn-text">
+            <strong>Dahua IP Intercom</strong>
+            <small>Góc Rộng 140° • 4 Gói Combo</small>
+          </div>
+        </button>
+        <button class="wifi-brand-btn" data-brand="ezviz" type="button">
+          <img src="images/logo_ezviz.png" alt="EZVIZ Smart Living" class="brand-btn-logo">
+          <div class="brand-btn-text">
+            <strong>EZVIZ Smart Living</strong>
+            <small>1 App Đồng Bộ • 4 Gói Combo</small>
+          </div>
+        </button>
+      </div>
+
+      <div class="omada-combos-header">
+        <div class="omada-badge-tag" id="intercomBadgeTag">
+          <span class="pulse-beacon"></span>
+          <span id="intercomBadgeText">HỆ THỐNG CHUÔNG HÌNH IP &amp; AN NINH RA VÀO • HIKVISION</span>
+        </div>
+        <h2 class="omada-section-title" id="intercomSectionTitle">
+          Combo Chuông Cửa Có Hình &amp; Khóa Thông Minh Chính Hãng
+        </h2>
+        <p class="omada-section-sub" id="intercomSectionSub">
+          Nút nhấn camera chuông hình kết nối đồng bộ 100% chuẩn giao thức với màn hình trong nhà cùng hãng. Đàm thoại 2 chiều sắc nét, mở khóa cổng từ xa qua màn hình và app điện thoại.
+        </p>
+      </div>
+
+      <!-- Segment Selector Tabs -->
+      <div class="omada-tabs-nav intercom-tabs-nav" id="intercomTabsNav">
+        <!-- Dynamically populated per active brand -->
+      </div>
+
+      <!-- Active Combo Dynamic Display Card -->
+      <div class="omada-combo-display-wrap" id="intercomComboDisplay">
         <!-- Rendered dynamically by js/products-catalog.js -->
       </div>
     </div>
@@ -779,7 +833,7 @@
   <!-- Scripts -->
   <script src="js/qrcode.min.js"></script>
   <script src="js/hta-products-data.js?v=20260913_2315"></script>
-  <script src="js/products-catalog.js?v=20260913_2315"></script>
+  <script src="js/products-catalog.js?v=20260914_0750"></script>
   <script>
     // Header Mobile Menu Toggle
     const mobileToggle = document.getElementById('mobileToggle');
