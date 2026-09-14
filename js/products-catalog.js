@@ -2321,8 +2321,15 @@
       }
 
       if (targetProdId) {
-        const pid = parseInt(targetProdId, 10);
-        const target = state.products.find(p => p.id === pid || String(p.id) === String(targetProdId) || p.sku === targetProdId);
+        let cleanId = targetProdId;
+        try { cleanId = decodeURIComponent(targetProdId).trim(); } catch (e) {}
+        const pid = parseInt(cleanId, 10);
+        const target = state.products.find(p => 
+          (!isNaN(pid) && p.id === pid) || 
+          String(p.id) === cleanId || 
+          p.sku === cleanId ||
+          (p.sku && p.sku.toLowerCase() === cleanId.toLowerCase())
+        );
         if (target) {
           setTimeout(() => openQuickView(target), 350);
         }

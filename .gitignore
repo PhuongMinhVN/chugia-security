@@ -4,3 +4,10 @@ scratch_solutions.json
 *.log
 .DS_Store
 Thumbs.db
+
+# Environment secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
