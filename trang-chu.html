@@ -29,8 +29,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/landing.css?v=20260914_1040">
-  <link rel="stylesheet" href="css/product-modal.css?v=20260914_1040">
+  <link rel="stylesheet" href="css/landing.css?v=20260915_0819">
+  <link rel="stylesheet" href="css/product-modal.css?v=20260915_0926">
 </head>
 <body>
 
@@ -43,8 +43,8 @@
 
     <!-- Top Header -->
     <header class="landing-header" id="landingHeader">
-      <a href="index.html" class="landing-header-brand" id="headerBrand" title="Chu Gia Security - Trang chủ">
-        <img src="images/logo_chugia_horizontal.svg" alt="Chu Gia Security">
+      <a href="du-toan.html" class="landing-header-brand" id="headerBrand" title="Chu Gia Security - Trang chủ" target="_blank" rel="noopener noreferrer">
+        <img src="images/logo_chugia_horizontal.svg?v=20260915_0815" alt="Chu Gia Security">
       </a>
       <div class="landing-header-actions">
         <button type="button" class="landing-btn-newchat" id="btnNewChat" title="Bắt đầu đoạn chat mới">
@@ -55,7 +55,8 @@
           <span>Chat mới</span>
         </button>
         <a href="tel:0941204125" class="landing-header-link nav-hotline">📞 0941 204 125</a>
-        <a href="san-pham.html" class="landing-header-link nav-desktop-link">Kho 470+ Thiết Bị</a>
+        <a href="du-toan.html" class="landing-header-link nav-desktop-link" target="_blank" rel="noopener noreferrer">🏠 Trang Chủ</a>
+        <a href="san-pham.html" class="landing-header-link nav-desktop-link">Kho 540+ Thiết Bị</a>
         <a href="giai-phap.html" class="landing-header-link nav-desktop-link">Gói Giải Pháp</a>
         <a href="du-toan.html" class="landing-header-link cta">Dự Toán →</a>
       </div>
@@ -66,8 +67,10 @@
 
       <!-- Logo -->
       <div class="landing-logo-wrap">
-        <img src="images/logo_chugia_horizontal.svg" alt="Chu Gia Security" class="landing-logo">
-        <p class="landing-tagline">Trợ lý AI tư vấn <strong>An Ninh & Smarthome</strong> • Since 2014</p>
+        <h1 class="sr-only">Chu Gia Security - Trợ Lý AI Tư Vấn An Ninh &amp; Smarthome</h1>
+        <img src="images/logo_chugia_horizontal.svg?v=20260915_0815" alt="Chu Gia Security" class="landing-logo">
+        <p class="landing-tagline">Trợ lý AI tư vấn <strong>An Ninh &amp; Smarthome</strong> • Since 2014</p>
+        <a href="du-toan.html" class="landing-home-btn" target="_blank" rel="noopener noreferrer">🏠 Trang Chủ — chugia.shop</a>
       </div>
 
       <!-- Search / Chat Input -->
@@ -83,6 +86,7 @@
             id="chatInput"
             placeholder="Hỏi bất kỳ điều gì về camera, mạng, smarthome..."
             autocomplete="off"
+            onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();window.cgSend&&window.cgSend();}"
           >
           <button class="search-send-btn" id="sendBtn" title="Gửi" type="button">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -95,28 +99,52 @@
 
       <!-- Suggestion Chips -->
       <div class="landing-suggestions" id="suggestions">
-        <button class="suggestion-chip" data-query="Tôi muốn mua camera giám sát cho gia đình">
-          <span class="chip-icon">🎥</span>
+        <button class="suggestion-chip chip-camera" type="button" onclick="window.cgSendChip(this)" data-query="Tôi muốn mua camera giám sát cho gia đình">
+          <span class="chip-icon">
+            <svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          </span>
           <span>Mua camera cho gia đình</span>
         </button>
-        <button class="suggestion-chip" data-query="Tư vấn nâng cấp mạng Wi-Fi cho nhà ở 3 tầng">
-          <span class="chip-icon">🏠</span>
+        <button class="suggestion-chip chip-home-wifi" type="button" onclick="window.cgSendChip(this)" data-query="Tư vấn nâng cấp mạng Wi-Fi cho nhà ở 3 tầng">
+          <span class="chip-icon">
+            <svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+          </span>
           <span>Nâng cấp mạng nhà ở</span>
         </button>
-        <button class="suggestion-chip" data-query="Tư vấn giải pháp mạng cho văn phòng 50 người dùng">
-          <span class="chip-icon">🏢</span>
+        <button class="suggestion-chip chip-office-net" type="button" onclick="window.cgSendChip(this)" data-query="Tư vấn giải pháp mạng cho văn phòng 50 người dùng">
+          <span class="chip-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+          </span>
           <span>Mạng cho văn phòng</span>
         </button>
-        <button class="suggestion-chip" data-query="Tôi muốn tìm hiểu về smarthome, khóa cửa thông minh và camera AI">
-          <span class="chip-icon">💡</span>
-          <span>Tìm hiểu Smarthome</span>
+        <button class="suggestion-chip chip-smarthome" type="button" onclick="window.cgSendChip(this)" data-query="Tư vấn combo smarthome rất chuẩn: công tắc Tuya, khóa thông minh Tenon, chuông hình Dahua mở cổng âm sàn, camera Dahua WizColor, đầu ghi 5108, POE và hệ thống mạng Ruijie tích hợp Home Assistant">
+          <span class="chip-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg>
+          </span>
+          <span>Gói Smarthome &amp; HASS</span>
         </button>
-        <button class="suggestion-chip" data-query="Tư vấn chuông cửa có hình và khóa vân tay cho biệt thự">
-          <span class="chip-icon">🔔</span>
-          <span>Chuông hình & Khóa cửa</span>
+        <button class="suggestion-chip chip-intercom" type="button" onclick="window.cgSendChip(this)" data-query="Tư vấn chuông cửa có hình Dahua có tiếp điểm mở cổng âm sàn và xem qua điện thoại">
+          <span class="chip-icon">
+            <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/><circle cx="12" cy="8" r="1.5"/></svg>
+          </span>
+          <span>Chuông hình thông minh</span>
         </button>
-        <button class="suggestion-chip" data-query="Tư vấn hệ thống camera và mạng cho doanh nghiệp sản xuất">
-          <span class="chip-icon">🏭</span>
+        <button class="suggestion-chip chip-lock" type="button" onclick="window.cgSendChip(this)" data-query="Tư vấn khóa cửa thông minh Tenon vân tay, Face ID 3D cho cửa nhôm Xingfa và cửa gỗ">
+          <span class="chip-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1.2"/><path d="M12 17.2v2.3"/></svg>
+          </span>
+          <span>Khóa cửa thông minh</span>
+        </button>
+        <button class="suggestion-chip chip-electric" type="button" onclick="window.cgSendChip(this)" data-query="Tư vấn hệ thống thiết bị điện thông minh Tuya: công tắc cơ, cảm ứng viền kim loại, công tắc công suất lớn bình nóng lạnh và cảm biến hiện diện radar">
+          <span class="chip-icon">
+            <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </span>
+          <span>Điện thông minh</span>
+        </button>
+        <button class="suggestion-chip chip-enterprise" type="button" onclick="window.cgSendChip(this)" data-query="Tư vấn hệ thống camera và mạng cho doanh nghiệp sản xuất">
+          <span class="chip-icon">
+            <svg viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M5 20V8l7-5 7 5v12"/><path d="M9 12h6"/><path d="M9 16h6"/></svg>
+          </span>
           <span>Giải pháp doanh nghiệp</span>
         </button>
       </div>
@@ -157,12 +185,43 @@
     </footer>
   </div>
 
-  <!-- Product Catalog Data Loaded First -->
+  <!-- Product Catalog Data (async - không block UI) -->
+  <script>
+  // Bootstrap: expose handlers NGAY trước khi data file load xong
+  (function bootstrap() {
+    var _queue = [];
+    var _ready = false;
+
+    function tryInit() {
+      if (!document.getElementById('chatInput')) return;
+      _ready = true;
+      _queue.forEach(function(fn) { try { fn(); } catch(e) { console.error(e); } });
+      _queue = [];
+    }
+
+    // Expose stub trước: khi user click chip trước khi IIFE load xong
+    window.cgSendChip = function(chipEl) {
+      if (!_ready) return;
+      if (window._cgSendChipFull) window._cgSendChipFull(chipEl);
+    };
+    window.cgSend = function() {
+      if (!_ready) return;
+      if (window._cgSendFull) window._cgSendFull();
+    };
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', tryInit);
+    } else {
+      tryInit();
+    }
+  })();
+  </script>
+
   <script src="js/hta-products-data.js?v=20260914_1040"></script>
 
   <script>
-  (function() {
-    'use strict';
+  document.addEventListener('DOMContentLoaded', function() {
+  try {
 
     // ── DOM Elements ──
     const chatInput = document.getElementById('chatInput');
@@ -271,14 +330,18 @@
     // ── Bottom reply send button click ──
     replySendBtn.addEventListener('click', sendReplyMessage);
 
-    // ── Suggestion chips ──
-    suggestions.addEventListener('click', (e) => {
-      const chip = e.target.closest('.suggestion-chip');
-      if (chip && !isWaiting) {
-        const query = chip.dataset.query;
-        sendMessageWithText(query);
-      }
-    });
+    // ── Expose chip sender globally ──
+    window._cgSendChipFull = function(chipEl) {
+      if (isWaiting) return;
+      var query = chipEl ? chipEl.dataset.query : null;
+      if (!query) return;
+      sendMessageWithText(query);
+    };
+    window.cgSendChip = window._cgSendChipFull;
+
+    // ── Expose Enter sender globally ──
+    window._cgSendFull = sendMessage;
+    window.cgSend = sendMessage;
 
     // ── Send from top box ──
     function sendMessage() {
@@ -353,143 +416,55 @@
 
     // ── Client System Prompt for standalone browser fallback on chugia.shop ──
     function getClientSystemPrompt() {
-      return `Bạn là **Chuyên gia tư vấn giải pháp bán hàng công nghệ cao cấp** của **Chu Gia Security** (Công ty TNHH Đầu tư và Thương mại Chu Gia) - đại lý phân phối chính hãng Dahua, Hikvision, Imou, EZVIZ, TP-Link, Ruijie, Huawei, YLOCK từ năm 2014.
+      return "Bạn là trợ lý tư vấn AI của **Chu Gia Security** (chugia.shop) — đại lý phân phối chính hãng Dahua, Hikvision, Imou, EZVIZ, Ruijie, Huawei, YLOCK, Tenon, Tuya, SinicHome từ 2014. Hotline/Zalo: 0941 204 125.\n\n" +
 
-## THÔNG TIN CÔNG TY:
-- **Tên**: Chu Gia Security (Công ty TNHH Đầu tư và Thương mại Chu Gia)
-- **Hotline / Zalo kỹ thuật 24/7**: 0941 204 125
-- **Website**: https://chugia.shop
-- **Kinh nghiệm**: Hơn 10 năm kinh nghiệm giải pháp an ninh, mạng viễn thông & nhà thông minh (từ 2014)
-- **Cam kết vàng**: 100% hàng chính hãng (CO/CQ), Bảo hành 1 đổi 1 tận nơi 24 tháng, Khảo sát & lên phương án miễn phí, Lắp đặt hoàn thiện trong 2 giờ.
+"## PHONG CÁCH TRẢ LỜI (BẮT BUỘC):\n" +
+"- Trả lời NGẮN GỌN, súc tích (120-180 từ). Viết như chuyên gia chat Zalo, KHÔNG viết bài luận dài dòng.\n" +
+"- Đề xuất rõ ràng, đúng nhu cầu (1 tiết kiệm + 1 nâng cấp, hoặc cấu trúc combo 7 phần).\n" +
+"- Dùng bullet ngắn gọn, KHÔNG dùng bảng table phức tạp.\n" +
+"- Kết thúc bằng câu mời khảo sát thực địa miễn phí hoặc lên dự toán trọn gói.\n\n" +
 
----
+"## ⛔ NGUYÊN TẮC BẮT BUỘC VỀ LINK SẢN PHẨM (SỐNG CÒN):\n" +
+"- BẮT BUỘC 100% MỌI SẢN PHẨM/THIẾT BỊ ĐỀ XUẤT ĐỀU PHẢI DÙNG CÚ PHÁP MARKDOWN LINK DẪN VỀ CHUGIA.SHOP: [Tên sản phẩm](https://chugia.shop/san-pham.html#prod-MÃ_SKU).\n" +
+"- CẤM TUYỆT ĐỐI VIẾT TÊN SẢN PHẨM DẠNG CHỮ THƯỜNG KHÔNG LINK! Ví dụ: Bắt buộc viết [Camera IMOU IPC-A32EP (Wifi 3MP)](https://chugia.shop/san-pham.html#prod-IPC-A32EP), KHÔNG được viết 'IMOU IPC-A32EP'.\n\n" +
 
-## ⛔ 1. NGUYÊN TẮC VÀNG: HỎI ÍT - ĐỀ XUẤT NHANH - CẤM HỎI DAI DẲNG
-1. **Khách hàng tìm đến Chu Gia để xem giải pháp cụ thể kèm thiết bị và giá bán niêm yết**, KHÔNG muốn bị hỏi vặn vẹo khảo sát 3-5 lần.
-2. Nếu câu hỏi của khách quá ngắn (VD: "Tôi muốn mua camera"): Chỉ hỏi TỐI ĐA 1 CÂU để biết không gian (chung cư, nhà phố hay văn phòng).
-3. **QUY TẮC CẮT ĐỨT HỎI (STOP ASKING RULE)**:
-   👉 **NGAY KHI KHÁCH ĐÃ NÊU KHÔNG GIAN HOẶC VỊ TRÍ** (VD: "phòng khách", "cửa cổng", "ban công", "ngoài trời", "chung cư", "văn phòng", "nhà 3 tầng", "cửa gỗ", "cửa nhôm"...):
-   - **CẤM ĐƯỢC HỎI THÊM BẤT KỲ CÂU NÀO NỮA!**
-   - **LẬP TỨC ĐƯA RA GIẢI PHÁP VÀ 2 LỰA CHỌN SẢN PHẨM CỤ THỂ KÈM GIÁ BÁN LẺ NIÊM YẾT VÀ LINK SẢN PHẨM!**
+"## CÁC QUY TẮC NGHIỆP VỤ & SẢN PHẨM CHUẨN:\n" +
+"1. COMBO SMARTHOME RẤT CHUẨN KẾT HỢP HOME ASSISTANT (HASS):\n" +
+"Khi khách hỏi về Smarthome, gói nhà thông minh hoặc điện thông minh, BẮT BUỘC tư vấn đúng bộ combo smarthome chuẩn chỉ đỉnh cao sau (kèm link chuẩn):\n" +
+"- **Điện thông minh Tuya Zigbee**: [Công tắc cơ Tuya Zigbee US-KN](https://chugia.shop/san-pham.html#prod-TUYA-ZIGBEE-US-KN) (1.300k) hoặc [Công tắc cảm ứng Tuya SHP-ZLUS](https://chugia.shop/san-pham.html#prod-TUYA-SHP-ZLUS) (1.000k), [Công tắc bình nóng lạnh 20A ZFW2-US](https://chugia.shop/san-pham.html#prod-TUYA-ZFW2-US) (1.180k), [Cảm biến radar hiện diện mmWave Tuya CBHD-Mini](https://chugia.shop/san-pham.html#prod-TUYA-CBHD-MINI) (420k).\n" +
+"- **Khóa thông minh Tenon**: [Khóa Tenon AL5 Pro cửa nhôm Xingfa IP65](https://chugia.shop/san-pham.html#prod-TENON-AL5-PRO) (16.000k), [Khóa Tenon A7x Face ID 3D camera](https://chugia.shop/san-pham.html#prod-TENON-A7X) (18.000k), [Khóa vân tay Tenon K50](https://chugia.shop/san-pham.html#prod-TENON-K50) (6.800k). Mở khóa siêu tốc, đồng bộ trạng thái về HASS.\n" +
+"- **Chuông hình Dahua PoE mở cổng âm sàn**: [Nút chuông Dahua DHI-VTO2201F-P-S2](https://chugia.shop/san-pham.html#prod-DHI-VTO2201F-P-S2) góc rộng 140° (6.050k) hoặc [DHI-VTO2111D-P-S2](https://chugia.shop/san-pham.html#prod-DHI-VTO2111D-P-S2) (3.030k) + [Màn hình chuông hình Dahua DHI-VTH2621GW-WP](https://chugia.shop/san-pham.html#prod-DHI-VTH2621GW-WP) (4.320k). Tích hợp sẵn tiếp điểm relay khô NO/COM kích mở cổng an toàn qua app DMSS và HASS.\n" +
+"- **Camera Dahua WizColor / WizSense**: [Camera Dahua DH-IPC-HFW2449S-S-IL 4MP thân](https://chugia.shop/san-pham.html#prod-DH-IPC-HFW2449S-S-IL) (3.350k) hoặc [Camera Dahua DH-IPC-HDW2449T-S-IL 4MP dome](https://chugia.shop/san-pham.html#prod-DH-IPC-HDW2449T-S-IL) (3.140k). Đêm có màu 24/7 như ban ngày, AI phân biệt người & xe, đèn rọi sáng ấm.\n" +
+"- **Đầu ghi hình Dahua 5108**: [Đầu ghi hình IP Dahua DHI-NVR5108HS-4KS3 (8 kênh 4K WizSense)](https://chugia.shop/san-pham.html#prod-DHI-NVR5108HS-4KS3) (4.850k). Xử lý AI tại đầu ghi, giải mã 4K băng thông 384Mbps, truyền luồng RTSP mượt mà vào Home Assistant mà không làm giật lag Wi-Fi gia đình.\n" +
+"- **Hạ tầng Switch PoE**: [Switch PoE SinicHome SINIC-3104POE](https://chugia.shop/san-pham.html#prod-SINIC-3104POE) (650k) hoặc [SINIC-3108POE](https://chugia.shop/san-pham.html#prod-SINIC-3108POE) (870k) cấp nguồn PoE đồng bộ cho camera, chuông hình, màn hình qua 1 sợi cáp LAN.\n" +
+"- **Hệ thống mạng Wi-Fi Ruijie**: [Router cân bằng tải Ruijie RG-EG105G-P-V3](https://chugia.shop/san-pham.html#prod-RG-EG105G-P-V3) (4.430k) hoặc RG-EG210G-P-V3 + [Bộ phát Wi-Fi 6 gắn trần Ruijie RG-RAP2260(G)](https://chugia.shop/san-pham.html#prod-RG-RAP2260(G)) (5.510k). Phân tách VLAN IoT riêng cho smarthome, chịu tải 100+ thiết bị mượt mà.\n" +
+"- **Bộ não Home Assistant**: Mini PC x86 / HASS Green + USB Zigbee Dongle Plus điều khiển Local 100% không phụ thuộc internet.\n\n" +
 
----
+"2. CAMERA LẮP LẺ & GIA ĐÌNH:\n" +
+"- Trong nhà: [Camera IMOU IPC-A32EP (Wifi quay quét 3MP)](https://chugia.shop/san-pham.html#prod-IPC-A32EP) (830k) hoặc [Camera DAHUA DH-H3AS (Wifi 6 3MP)](https://chugia.shop/san-pham.html#prod-DH-H3AS) (910k). CẤM đưa ra ngoài trời!\n" +
+"- Ngoài trời: [Camera DAHUA DH-IPC-HDW1539DA-SAW-IL (5MP)](https://chugia.shop/san-pham.html#prod-DH-IPC-HDW1539DA-SAW-IL) (1.510k) hoặc [Camera IMOU IPC-S31FEP (Wifi ngoài trời 3MP)](https://chugia.shop/san-pham.html#prod-IPC-S31FEP) (1.560k).\n" +
+"- Lưu trữ: 1-2 cam dùng [Thẻ nhớ DAHUA MicroSD 64Gb](https://chugia.shop/san-pham.html#prod-MicroSD64G-DHI-TF-C100/64GB) (570k) hoặc [Thẻ nhớ DAHUA MicroSD 128Gb](https://chugia.shop/san-pham.html#prod-MicroSD128G-DHI-TF-C100/128GB) (910k). Từ 3 cam trở lên khuyên dùng [Đầu ghi hình Dahua DHI-NVR1104HS-S3/H](https://chugia.shop/san-pham.html#prod-DHI-NVR1104HS-S3/H) (1.520k) hoặc [Đầu ghi hình IP Dahua 5108 4K](https://chugia.shop/san-pham.html#prod-DHI-NVR5108HS-4KS3) (4.850k) + [Ổ cứng chuyên dụng 2TB](https://chugia.shop/san-pham.html#prod-DS20HKVS-VX1).\n" +
+"- Khóa thông minh cửa chính và chuông hình ở cổng là 2 hệ thống độc lập, luôn tư vấn tách bạch.\n\n" +
 
-## 🎯 2. BA QUY TẮC NGHIỆP VỤ BẮT BUỘC TUÂN THỦ:
-
-### 🔔 QUY TẮC 1: CHUÔNG CỬA CÓ HÌNH (INTERCOM) & MỞ CỔNG ÂM SÀN / CỔNG TỰ ĐỘNG
-1. Khi khách hỏi chuông hình cho nhà phố, biệt thự có cổng:
-   - Nếu chưa rõ, hỏi 1 câu then chốt: **"Cổng nhà mình có dùng motor cổng âm sàn / cổng tự động và anh/chị có nhu cầu kích mở cổng từ xa qua điện thoại không ạ?"**
-2. **NẾU CÓ CỔNG ÂM SÀN / CỔNG TỰ ĐỘNG (hoặc cần mở cổng qua điện thoại)**:
-   👉 **BẮT BUỘC TƯ VẤN HỆ THỐNG DAHUA CHUYÊN DỤNG**: Vì nút chuông IP Dahua tích hợp sẵn tiếp điểm khô relay (NO/COM) tiêu chuẩn công nghiệp kết nối an toàn với bo mạch cổng âm sàn, mở cổng 1 chạm trên app DMSS điện thoại và màn hình VTH trong nhà.
-   - *Nút chuông ngoài*: [Nút nhấn Camera chuông hình Dahua DHI-VTO2111D-P-S2 (PoE)](https://chugia.shop/san-pham.html#prod-DHI-VTO2111D-P-S2) - **3.030.000₫** hoặc [Nút nhấn Camera chuông hình Dahua DHI-VTO2201F-P-S2 (PoE, góc rộng 140 độ)](https://chugia.shop/san-pham.html#prod-DHI-VTO2201F-P-S2) - **6.050.000₫**.
-   - *Màn hình trong nhà*: [Màn hình chuông hình Dahua DHI-VTH2621GW-WP (7 inch, PoE, Wifi)](https://chugia.shop/san-pham.html#prod-DHI-VTH2621GW-WP) - **4.320.000₫**.
-   - *Switch PoE cấp nguồn*: [Switch PoE SinicHome SINIC-3104POE](https://chugia.shop/san-pham.html#prod-SINIC-3104POE) - **650.000₫**.
-3. **NẾU KHÔNG CẦN mở cổng âm sàn** (chuông gia đình bình thường):
-   - Tư vấn bộ EZVIZ không dây: [Chuông hình EZVIZ HP5](https://chugia.shop/san-pham.html#prod-EZVIZ HP5) (**6.050.000₫**) hoặc [Chuông hình EZVIZ HP7 có vân tay](https://chugia.shop/san-pham.html#prod-EZVIZ HP7) (**6.700.000₫**).
-
-### 🔐 QUY TẮC 2: TƯ VẤN KHÓA RIÊNG, CHUÔNG HÌNH RIÊNG BIỆT
-- Khóa cửa thông minh (lắp cửa chính) và Chuông cửa có hình (lắp tại cổng ngoài) là 2 hệ thống độc lập.
-- **TUYỆT ĐỐI KHÔNG GỘP CHUNG MẬP MỜ**. Luôn tách bạch thành 2 mục rõ ràng:
-  - **Mục A: Hệ thống Chuông cửa có hình** (ở cổng ngoài: quan sát khách bấm chuông, đàm thoại 2 chiều, kích mở cổng âm sàn).
-  - **Mục B: Khóa cửa thông minh Smart Lock** (ở cửa chính: mở cửa cho thành viên bằng vân tay, mã số, thẻ từ, chìa cơ, app).
-
-### 📹 QUY TẮC 3: LƯU TRỮ CAMERA GIA ĐÌNH (IMOU / EZVIZ / DAHUA)
-1. **Lắp 1 – 2 Camera (lắp lẻ)**:
-   - BẮT BUỘC tư vấn kèm **Thẻ nhớ chuyên dụng camera**:
-     + [Thẻ nhớ DAHUA MicroSD 64Gb DHI-TF-C100/64GB](https://chugia.shop/san-pham.html#prod-MicroSD64G-DHI-TF-C100/64GB) - **570.000₫** (lưu 6-8 ngày, ghi đè liên tục, tốc độ cao chống giật).
-     + [Thẻ nhớ DAHUA MicroSD 128Gb DHI-TF-C100/128GB](https://chugia.shop/san-pham.html#prod-MicroSD128G-DHI-TF-C100/128GB) - **910.000₫** (lưu 12-15 ngày).
-     + [Thẻ nhớ CUSU U1 V10 MicroSD 64Gb M1064GB](https://chugia.shop/san-pham.html#prod-MicroSD64G-M1064GB) - **520.000₫**.
-2. **Lắp từ 3 Camera trở lên (hoặc nhà nhiều tầng / diện tích rộng)**:
-   - BẮT BUỘC tư vấn **ĐẦU GHI HÌNH (NVR) + Ổ CỨNG CHUYÊN DỤNG CAMERA (HDD 24/7)** thay vì mua nhiều thẻ nhớ rời!
-   - *Lý do*: Ổ cứng chuyên dụng camera chạy 24/7 bền bỉ 4-5 năm (không bị cháy chai thẻ nhớ sau 1 năm), không nghẽn sóng Wi-Fi của nhà, quản lý tập trung trên Tivi phòng khách và điện thoại, an toàn dữ liệu tuyệt đối dù camera bị tháo cắp.
-   - *Đầu ghi Wi-Fi Imou*: [Đầu ghi hình IMOU NVR-N110W-8A0E (Wifi 10 kênh)](https://chugia.shop/san-pham.html#prod-NVR-N110W-8A0E) - **2.060.000₫**.
-   - *Đầu ghi Wi-Fi EZVIZ*: [Đầu ghi hình EZVIZ X5S-8W (Wifi 8 kênh)](https://chugia.shop/san-pham.html#prod-EZVIZ X5S-8W) - **2.270.000₫**.
-   - *Đầu ghi IP Dahua*: [Đầu ghi hình DAHUA DHI-NVR1104HS-S3/H](https://chugia.shop/san-pham.html#prod-DHI-NVR1104HS-S3/H) - **1.520.000₫** (4 kênh) / [DHI-NVR1108HS-S3/H](https://chugia.shop/san-pham.html#prod-DHI-NVR1108HS-S3/H) - **2.340.000₫** (8 kênh).
-   - *Ổ cứng chuyên dụng camera 24/7*:
-     + [Ổ cứng HIKVISION 2TB DS20HKVS-VX1 chuyên dụng cho camera giám sát](https://chugia.shop/san-pham.html#prod-DS20HKVS-VX1) - **6.270.000₫** (lưu 3-4 camera cả tháng).
-     + [Ổ cứng Toshiba 2TB HDWT720UZSVA Surveillance](https://chugia.shop/san-pham.html#prod-HDWT720UZSVA) - **6.380.000₫**.
-
----
-
-## 🛡️ 3. MA TRẬN 4 MẢNG SẢN PHẨM & BÀI TOÁN THỰC TẾ CHU GIA:
-
-### 📹 MẢNG 1: CAMERA GIÁM SÁT AN NINH
-
-#### 🏠 A. KHÔNG GIAN TRONG NHÀ (Phòng khách / Chung cư / Trông trẻ em / Trông người già):
-- **Lựa chọn 1 (Bán chạy & Tiết kiệm nhất)**:
-  - [Camera IMOU IPC-A32EP (Wifi quay quét 3MP)](https://chugia.shop/san-pham.html#prod-IPC-A32EP) - Giá: **830.000₫** (SKU: `IPC-A32EP`)
-  - *Điểm mạnh*: Độ phân giải 3MP 2K sắc nét, quay ngang 355° bao quát toàn bộ phòng, tự động bám theo chuyển động (Smart Tracking), đàm thoại 2 chiều, app IMOU Life tiếng Việt.
-- **Lựa chọn 2 (Nâng cấp Wi-Fi 6 & Loa to 2W)**:
-  - [Camera DAHUA DH-H3AS (Wifi 6, quay quét 3MP, loa 2W, đêm có màu)](https://chugia.shop/san-pham.html#prod-DH-H3AS) - Giá: **910.000₫** (SKU: `DH-H3AS`)
-  - *Điểm mạnh*: Chuẩn Wi-Fi 6 mượt mà không lo nghẽn mạng chung cư, loa 2W đàm thoại to rõ như nghe điện thoại, đèn kép ban đêm có màu. *(Lưu ý: Chỉ lắp trong nhà, không chống nước)*.
-- **Lựa chọn góc cố định rộng**:
-  - [Camera IMOU IPC-C32EP (Wifi 3MP, góc rộng)](https://chugia.shop/san-pham.html#prod-IPC-C32EP) - Giá: **790.000₫** (SKU: `IPC-C32EP`)
-
-#### 🌧️ B. KHÔNG GIAN NGOÀI TRỜI (Cửa cổng / Sân vườn / Ngoài trời / Ban công - Chống nước mưa IP66/IP67):
-- **Lựa chọn 1 (Quay quét 360° ngoài trời, còi hú & đèn chớp báo động)**:
-  - [Camera IMOU IPC-S31FEP (Wifi quay quét 3MP ngoài trời)](https://chugia.shop/san-pham.html#prod-IPC-S31FEP) - Giá: **1.560.000₫** (SKU: `IPC-S31FEP`)
-  - *Điểm mạnh*: Quay quét 360° toàn cảnh sân vườn, còi hú & đèn chớp chủ động xua đuổi trộm, đàm thoại 2 chiều, chống nước chuẩn IP66 chịu mưa nắng.
-- **Lựa chọn 2 (Dome 5MP Full-Color siêu nét ban đêm có màu)**:
-  - [Camera DAHUA DH-IPC-HDW1539DA-SAW-IL (Wifi Dome 5MP, liền mic, ánh sáng kép)](https://chugia.shop/san-pham.html#prod-DH-IPC-HDW1539DA-SAW-IL) - Giá: **1.510.000₫** (SKU: `DH-IPC-HDW1539DA-SAW-IL`)
-  - *Điểm mạnh*: Độ phân giải 5MP siêu nét, đèn LED Full-Color nhìn đêm có màu rõ biển số xe và quần áo, mic thu âm thanh, chuẩn chống nước IP67.
-- **Lựa chọn cao cấp (Mắt kép Zoom quang 12X)**:
-  - [Camera IMOU IPC-S7DP-5M0WEZ Cruiser Z (5MP mắt kép Zoom 12X)](https://chugia.shop/san-pham.html#prod-IPC-S7DP-5M0WEZ) - Giá: **2.700.000₫** (SKU: `IPC-S7DP-5M0WEZ`)
-
-#### ⛔ QUY TẮC SỐNG CÒN VỀ CAMERA:
-- **TUYỆT ĐỐI CẤM TƯ VẤN Dahua DH-H3AS hoặc Imou IPC-A32EP, IPC-C32EP CHO NGOÀI TRỜI, CỔNG HOẶC SÂN VƯỜN!** Đây là camera TRONG NHÀ, không chống nước, lắp ngoài trời dính mưa sẽ chập cháy hỏng ngay lập tức!
-- **Khi khách hỏi cả phòng khách và ngoài trời/cổng**: BẮT BUỘC tách thành 2 mục rõ ràng:
-  + Vị trí 1 (Trong nhà): Đề xuất IPC-A32EP (830.000₫) hoặc DH-H3AS (910.000₫).
-  + Vị trí 2 (Ngoài trời): Đề xuất IPC-S31FEP (1.560.000₫) hoặc DH-IPC-HDW1539DA-SAW-IL (1.510.000₫).
-  + Kèm lưu trữ: Thẻ nhớ chuyên dụng Dahua 64GB/128GB hoặc Đầu ghi + Ổ cứng.
-
----
-
-### 🌐 MẢNG 2: MẠNG NETWORK & WI-FI CHUYÊN DỤNG
-- **Văn phòng 20–50 user / Quán Cafe**:
-  - Router cân bằng tải: [Modem Router Wifi cân bằng tải Huawei eKit AR180](https://chugia.shop/san-pham.html#prod-AR180) - **5.190.000₫** (Wi-Fi 7, WAN 2.5GE, 100 user).
-  - Bộ phát Wi-Fi 6 gắn trần: [Bộ phát Wifi Huawei gắn trần AP361 (Wifi 6, AX1800)](https://chugia.shop/san-pham.html#prod-AP361) - **3.640.000₫** hoặc [Access Point Gắn Trần Siêu Mỏng TP-Link Omada EAP653 Wi-Fi 6 AX3000 Gigabit PoE+](https://chugia.shop/san-pham.html#prod-EAP653) - **4.430.000₫**.
-  - Switch PoE: [Switch PoE SinicHome SINIC-3104POE](https://chugia.shop/san-pham.html#prod-SINIC-3104POE) - **650.000₫** hoặc [Switch PoE Ruijie RG-ES210GC-LP (8 PoE Gigabit, 70W)](https://chugia.shop/san-pham.html#prod-RG-ES210GC-LP) - **4.030.000₫**.
-- **Nhà phố 2–4 tầng / Căn hộ rộng**:
-  - [Bộ phát Wifi Ruijie RG-EW1300G (1300Mbps, 5 ăng ten)](https://chugia.shop/san-pham.html#prod-RG-EW1300G) - **1.520.000₫**.
-  - [Bộ phát Wifi Ruijie RG-EW1200 (1167Mbps)](https://chugia.shop/san-pham.html#prod-RG-EW1200) - **1.030.000₫**.
-
----
-
-### 🔔 MẢNG 3: THIẾT BỊ CHUÔNG CỬA CÓ HÌNH (INTERCOM)
-- **Khi có cổng âm sàn / cổng tự động**:
-  - Nút chuông ngoài: [Nút nhấn Camera chuông hình Dahua DHI-VTO2111D-P-S2 (PoE)](https://chugia.shop/san-pham.html#prod-DHI-VTO2111D-P-S2) - **3.030.000₫** hoặc [Nút nhấn Camera chuông hình Dahua DHI-VTO2201F-P-S2 (PoE, góc rộng 140 độ)](https://chugia.shop/san-pham.html#prod-DHI-VTO2201F-P-S2) - **6.050.000₫**.
-  - Màn hình trong nhà: [Màn hình chuông hình Dahua DHI-VTH2621GW-WP (7 inch, PoE, Wifi)](https://chugia.shop/san-pham.html#prod-DHI-VTH2621GW-WP) - **4.320.000₫**.
-- **Chuông hình gia đình không cần mở cổng âm sàn**:
-  - [Chuông hình EZVIZ HP5 (Màn 7 inch, Wifi, Camera 2MP góc 134°)](https://chugia.shop/san-pham.html#prod-EZVIZ HP5) - **6.050.000₫**.
-  - [Chuông hình EZVIZ HP7 (Màn 7 inch, Wifi, Camera 4MP góc 162°)](https://chugia.shop/san-pham.html#prod-EZVIZ HP7) - **6.700.000₫** (Có mở cửa vân tay tại cổng).
-
----
-
-### 🔐 MẢNG 4: KHÓA CỬA THÔNG MINH (SMART LOCK)
-- **Cửa gỗ / Cửa chống cháy chung cư & nhà phố**:
-  - [Khóa cửa điện tử YLOCK YL-8835](https://chugia.shop/san-pham.html#prod-YL-8835) - **3.890.000₫** (Vân tay, mã số, thẻ từ, cơ).
-  - [Khóa cửa điện tử HUNE 918-62A-F](https://chugia.shop/san-pham.html#prod-HUNE-918-62A-F) - **5.400.000₫** (Inox 304 nguyên khối).
-  - [Khóa cửa điện tử Dahua ASL8112R-B màu đồng](https://chugia.shop/san-pham.html#prod-ASL8112R-B) - **4.970.000₫**.
-  - [Khóa cửa điện tử EZVIZ DL05 (APP, Vân tay, mật mã, thẻ từ, chìa cơ)](https://chugia.shop/san-pham.html#prod-EZVIZ DL05) - **5.400.000₫**.
-- **Cửa nhôm Xingfa / Cửa sắt đố hẹp**:
-  - [Khóa cửa điện tử YLOCK cửa nhôm cửa sắt YL-3118-S (màu bạc)](https://chugia.shop/san-pham.html#prod-YL-3118-S) - **3.240.000₫**.
-- **Cửa kính văn phòng / Shop kinh doanh**:
-  - [Khóa cửa điện tử YLOCK cửa kính YL-8832-RM (Vân tay, Thẻ từ, Mật mã, Remote)](https://chugia.shop/san-pham.html#prod-YL-8832-RM) - **5.400.000₫**.
-
----
-
-## 📋 ĐỊNH DẠNG BẮT BUỘC:
-1. Mọi sản phẩm đề xuất BẮT BUỘC phải dùng cú pháp markdown link dẫn về https://chugia.shop theo đúng mã SKU:
-   \`[Tên sản phẩm](https://chugia.shop/san-pham.html#prod-SKU)\`
-2. Kèm giá bán lẻ niêm yết chuẩn, nêu ngắn gọn 2 ưu điểm kỹ thuật nổi bật nhất.
-3. Luôn kết thúc bằng: *"Anh/Chị có muốn em lên bảng dự toán trọn gói thiết bị & công lắp đặt chi tiết không ạ? Hotline/Zalo kỹ thuật 24/7: 0941 204 125."*`;
+"## VÍ DỤ TƯ VẤN CAMERA GIA ĐÌNH CHUẨN (MẪU BẮT BUỘC THEO LINK):\n" +
+"Khách: Tôi muốn mua camera giám sát cho gia đình\n" +
+"Trả lời: Dạ để tư vấn đúng nhu cầu, anh/chị cho em biết lắp trong nhà hay ngoài trời và cần mấy mắt ạ? Em gợi ý sẵn phương án phổ biến kèm link xem ảnh & giá trực tiếp:\n" +
+"**Phương án tiết kiệm (1–2 cam):**\n" +
+"- Trong nhà: [Camera IMOU IPC-A32EP (Wifi quay quét 3MP)](https://chugia.shop/san-pham.html#prod-IPC-A32EP) (830k) hoặc [Camera DAHUA DH-H3AS (Wifi 6 3MP)](https://chugia.shop/san-pham.html#prod-DH-H3AS) (910k) — xoay 360°, đàm thoại 2 chiều.\n" +
+"- Ngoài trời: [Camera DAHUA DH-IPC-HDW1539DA-SAW-IL (5MP)](https://chugia.shop/san-pham.html#prod-DH-IPC-HDW1539DA-SAW-IL) (1.510k) hoặc [Camera IMOU IPC-S31FEP (Wifi ngoài trời 3MP)](https://chugia.shop/san-pham.html#prod-IPC-S31FEP) (1.560k) — đêm có màu, chống nước IP67.\n" +
+"- Lưu trữ: [Thẻ nhớ DAHUA MicroSD 64Gb](https://chugia.shop/san-pham.html#prod-MicroSD64G-DHI-TF-C100/64GB) (570k) đủ cho 1–2 cam.\n" +
+"**Phương án nâng cấp (từ 3 cam trở lên):**\n" +
+"- Camera WizColor: [Camera Dahua DH-IPC-HFW2449S-S-IL 4MP thân](https://chugia.shop/san-pham.html#prod-DH-IPC-HFW2449S-S-IL) (3.350k) hoặc [Camera Dahua DH-IPC-HDW2449T-S-IL 4MP dome](https://chugia.shop/san-pham.html#prod-DH-IPC-HDW2449T-S-IL) (3.140k) đêm có màu 24/7, AI người/xe.\n" +
+"- Quản lý tập trung: [Đầu ghi hình IP Dahua DHI-NVR5108HS-4KS3 (8 kênh 4K)](https://chugia.shop/san-pham.html#prod-DHI-NVR5108HS-4KS3) (4.850k) + [Ổ cứng chuyên dụng 2TB](https://chugia.shop/san-pham.html#prod-DS20HKVS-VX1).\n" +
+"Anh/chị cho em biết số mắt và vị trí lắp để em lên dự toán trọn gói kèm khảo sát thực địa miễn phí ngay ạ!";
     }
 
     // ── Fetch AI reply with smart local/cloud routing ──
     async function fetchAiReply(text) {
       const isLocal = window.location.hostname === 'localhost' || 
                       window.location.hostname === '127.0.0.1' || 
-                      window.location.hostname === '0.0.0.0';
+                      window.location.hostname === '0.0.0.0' ||
+                      window.location.protocol === 'file:';
 
       // 1. Try local Python backend ONLY when running on localhost
       if (isLocal) {
@@ -529,8 +504,8 @@
         body: JSON.stringify({
           model: 'deepseek-chat',
           messages: messages,
-          temperature: 0.6,
-          max_tokens: 1500
+          temperature: 0.4,
+          max_tokens: 500
         })
       });
 
@@ -564,6 +539,19 @@
       chatArea.appendChild(msgDiv);
 
       ensureVisibleBottom();
+
+      // ── Auto-expand preview for the first product link in AI response ──
+      if (role === 'ai') {
+        setTimeout(() => {
+          const firstProdLink = msgDiv.querySelector('.chat-prod-link');
+          if (firstProdLink) {
+            const rawHref = firstProdLink.getAttribute('href') || '';
+            const sku = firstProdLink.dataset.sku || rawHref.replace(/^.*#prod-/, '');
+            toggleInlineProductPreview(firstProdLink, sku);
+          }
+        }, 300);
+      }
+
       return msgDiv;
     }
 
@@ -605,9 +593,76 @@
       return `https://chugia.shop/san-pham.html#prod-${encodeURIComponent(clean)}`;
     }
 
+    // ── Automatic Product Linker Rules ──
+    // Automatically wraps mentioned model numbers and common product phrases into clickable links
+    const AUTO_PRODUCT_RULES = [
+      // Tuya Smart Home
+      { pat: /(?:Công tắc\s+(?:cơ\s+)?(?:Tuya\s+)?Zigbee\s+)?US-KN|TUYA-ZIGBEE-US-KN/gi, sku: 'TUYA-ZIGBEE-US-KN', name: 'Công tắc cơ Tuya Zigbee US-KN' },
+      { pat: /(?:Công tắc\s+cảm ứng\s+(?:Tuya\s+)?)?SHP-ZLUS|TUYA-SHP-ZLUS/gi, sku: 'TUYA-SHP-ZLUS', name: 'Công tắc cảm ứng Tuya Zigbee SHP-ZLUS' },
+      { pat: /(?:Công tắc\s+(?:bình nóng lạnh\s+)?20A\s+)?ZFW2-US|TUYA-ZFW2-US/gi, sku: 'TUYA-ZFW2-US', name: 'Công tắc bình nóng lạnh 20A Tuya ZFW2-US' },
+      { pat: /(?:Cảm biến\s+(?:hiện diện\s+)?(?:radar\s+)?)?CBHD-Mini|TUYA-CBHD-MINI/gi, sku: 'TUYA-CBHD-MINI', name: 'Cảm biến radar hiện diện mmWave Tuya CBHD-Mini' },
+
+      // Tenon Smart Locks
+      { pat: /Tenon\s+AL5\s*Pro|TENON-AL5-PRO/gi, sku: 'TENON-AL5-PRO', name: 'Khóa thông minh Tenon AL5 Pro' },
+      { pat: /Tenon\s+A7x|TENON-A7X/gi, sku: 'TENON-A7X', name: 'Khóa thông minh Tenon A7x (Face ID 3D)' },
+      { pat: /Tenon\s+K50|TENON-K50/gi, sku: 'TENON-K50', name: 'Khóa thông minh Tenon K50' },
+
+      // Dahua Intercom
+      { pat: /DHI-VTO2201F-P-S2|VTO2201F/gi, sku: 'DHI-VTO2201F-P-S2', name: 'Nút chuông Dahua DHI-VTO2201F-P-S2' },
+      { pat: /DHI-VTO2111D-P-S2|VTO2111D/gi, sku: 'DHI-VTO2111D-P-S2', name: 'Nút chuông Dahua DHI-VTO2111D-P-S2' },
+      { pat: /DHI-VTH2621GW-WP|VTH2621/gi, sku: 'DHI-VTH2621GW-WP', name: 'Màn hình chuông hình Dahua DHI-VTH2621GW-WP' },
+
+      // Dahua WizColor & 5108 NVR
+      { pat: /Camera\s+Dahua\s+WizColor\s+4MP/gi, sku: 'DH-IPC-HFW2449S-S-IL', name: 'Camera Dahua WizColor 4MP Full-color' },
+      { pat: /(?:Camera\s+)?(?:Dahua\s+)?DH-IPC-HFW2449S-S-IL|HFW2449S/gi, sku: 'DH-IPC-HFW2449S-S-IL', name: 'Camera Dahua DH-IPC-HFW2449S-S-IL (4MP thân)' },
+      { pat: /(?:Camera\s+)?(?:Dahua\s+)?DH-IPC-HDW2449T-S-IL|HDW2449T/gi, sku: 'DH-IPC-HDW2449T-S-IL', name: 'Camera Dahua DH-IPC-HDW2449T-S-IL (4MP dome)' },
+      { pat: /DHI-NVR5108HS-4KS3|Đầu ghi\s+(?:hình\s+)?(?:IP\s+)?(?:Dahua\s+)?5108|NVR5108/gi, sku: 'DHI-NVR5108HS-4KS3', name: 'Đầu ghi hình IP Dahua 5108 (8 kênh 4K)' },
+
+      // Family & Outdoor Cameras
+      { pat: /(?:Camera\s+)?IMOU\s+IPC-A32EP|IPC-A32EP/gi, sku: 'IPC-A32EP', name: 'Camera IMOU IPC-A32EP (Wifi quay quét 3MP)' },
+      { pat: /(?:Camera\s+)?(?:Dahua\s+)?DH-H3AS|DH-H3AS/gi, sku: 'DH-H3AS', name: 'Camera DAHUA DH-H3AS (Wifi 6 3MP)' },
+      { pat: /(?:Camera\s+)?(?:Dahua\s+)?DH-IPC-HDW1539DA-SAW-IL|HDW1539DA-SAW-IL/gi, sku: 'DH-IPC-HDW1539DA-SAW-IL', name: 'Camera DAHUA DH-IPC-HDW1539DA-SAW-IL (5MP)' },
+      { pat: /(?:Camera\s+)?IMOU\s+IPC-S31FEP|IPC-S31FEP/gi, sku: 'IPC-S31FEP', name: 'Camera IMOU IPC-S31FEP (Wifi ngoài trời 3MP)' },
+      { pat: /(?:Camera\s+)?IMOU\s+IPC-C32EP|IPC-C32EP/gi, sku: 'IPC-C32EP', name: 'Camera IMOU IPC-C32EP (Wifi 3MP góc rộng)' },
+
+      // Storage & NVR
+      { pat: /(?:thẻ nhớ|Thẻ nhớ)?\s*(?:Dahua\s+)?(?:MicroSD\s+)?64GB/gi, sku: 'MicroSD64G-DHI-TF-C100/64GB', name: 'Thẻ nhớ DAHUA MicroSD 64Gb' },
+      { pat: /(?:thẻ nhớ|Thẻ nhớ)?\s*(?:Dahua\s+)?(?:MicroSD\s+)?128GB/gi, sku: 'MicroSD128G-DHI-TF-C100/128GB', name: 'Thẻ nhớ DAHUA MicroSD 128Gb' },
+      { pat: /DHI-NVR1104HS-S3\/H/gi, sku: 'DHI-NVR1104HS-S3/H', name: 'Đầu ghi hình Dahua DHI-NVR1104HS-S3/H (4 kênh)' },
+      { pat: /DHI-NVR1108HS-S3\/H/gi, sku: 'DHI-NVR1108HS-S3/H', name: 'Đầu ghi hình Dahua DHI-NVR1108HS-S3/H (8 kênh)' },
+      { pat: /ổ cứng\s+(?:chuyên dụng\s+)?2TB|Ổ cứng\s+(?:chuyên dụng\s+)?2TB/gi, sku: 'DS20HKVS-VX1', name: 'Ổ cứng camera chuyên dụng 2TB' },
+
+      // SinicHome PoE & Ruijie Reyee
+      { pat: /SINIC-3104POE|SinicHome\s+3104/gi, sku: 'SINIC-3104POE', name: 'Switch PoE SinicHome SINIC-3104POE' },
+      { pat: /SINIC-3108POE|SinicHome\s+3108/gi, sku: 'SINIC-3108POE', name: 'Switch PoE SinicHome SINIC-3108POE' },
+      { pat: /RG-EG105G-P-V3|EG105G-P/gi, sku: 'RG-EG105G-P-V3', name: 'Router cân bằng tải Ruijie RG-EG105G-P-V3' },
+      { pat: /RG-RAP2260\(G\)|RAP2260/gi, sku: 'RG-RAP2260(G)', name: 'Bộ phát Wi-Fi 6 Ruijie RG-RAP2260(G)' }
+    ];
+
+    function autoLinkProductText(text) {
+      if (!text || typeof text !== 'string') return text;
+      let result = text;
+      AUTO_PRODUCT_RULES.forEach(rule => {
+        result = result.replace(rule.pat, (match, offset, fullStr) => {
+          const before = fullStr.slice(0, offset);
+          const after = fullStr.slice(offset + match.length);
+          const openBracket = before.lastIndexOf('[');
+          const closeBracket = before.lastIndexOf(']');
+          const openParen = before.lastIndexOf('(');
+          const closeParen = before.lastIndexOf(')');
+          // Inside markdown link [ ... ] or ( ... )
+          if (openBracket > closeBracket && after.indexOf(']') !== -1) return match;
+          if (openParen > closeParen && after.indexOf(')') !== -1) return match;
+          return `[${rule.name}](https://chugia.shop/san-pham.html#prod-${rule.sku})`;
+        });
+      });
+      return result;
+    }
+
     // ── Enhanced markdown formatter with chugia.shop product links ──
     function formatMarkdown(text) {
-      let html = text
+      const preLinked = autoLinkProductText(text);
+      let html = preLinked
         // Escape HTML
         .replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')
@@ -621,7 +676,8 @@
         // Product Links: [Tên sản phẩm](https://chugia.shop/san-pham.html#prod-SKU) or [Tên sản phẩm](#prod-SKU)
         .replace(/\[([^\]]+)\]\((?:https?:\/\/chugia\.shop\/san-pham\.html)?#prod-([^)]+)\)/g, (match, title, sku) => {
           const url = getProductChugiaUrl(sku);
-          return `<a href="${url}" class="chat-prod-link" data-sku="${sku}" title="Bấm xem ảnh & chi tiết ${title}">📸 <strong>${title}</strong> <span class="chat-prod-badge">🔍 Xem ảnh &amp; giá</span></a>`;
+          const cleanTitle = title.replace(/"/g, '&quot;');
+          return `<a href="${url}" class="chat-prod-link" data-sku="${sku}" data-name="${cleanTitle}" title="Bấm xem ảnh & chi tiết ${cleanTitle}">📸 <strong>${title}</strong> <span class="chat-prod-badge">🔍 Xem ảnh &amp; giá</span> <span class="chat-prod-buy-btn" data-sku="${sku}" data-name="${cleanTitle}" title="Mua ngay qua Zalo 0941 204 125">⚡ Mua ngay</span></a>`;
         })
         // Standard Links: [text](url)
         .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
@@ -933,6 +989,9 @@
               <span class="inline-preview-warranty">🛡️ ${warranty}</span>
             </div>
             <div class="inline-preview-actions">
+              <button type="button" class="btn-inline-buy-zalo" data-sku="${sku}" data-name="${name.replace(/"/g, '&quot;')}" title="Mua ngay qua Zalo 0941 204 125">
+                ⚡ Mua ngay qua Zalo
+              </button>
               <button type="button" class="btn-inline-quickview" data-sku="${sku}" title="Xem chi tiết & thông số">
                 📋 Bảng thông số kỹ thuật ↗
               </button>
@@ -954,8 +1013,32 @@
       ensureVisibleBottom();
     }
 
-    // Intercept clicks inside chatArea: toggle inline image or open full specs
+    // Intercept clicks inside chatArea: buy now via Zalo, toggle inline image, or open full specs
     chatArea.addEventListener('click', (e) => {
+      // 0. Buy now via Zalo clicked!
+      const buyBtn = e.target.closest('.chat-prod-buy-btn, .btn-inline-buy-zalo');
+      if (buyBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        const sku = buyBtn.dataset.sku || '';
+        let prodName = buyBtn.dataset.name || '';
+        if (!prodName && sku) {
+          const prod = findProduct(sku);
+          if (prod && prod.name) prodName = prod.name;
+        }
+        if (!prodName) {
+          const linkEl = buyBtn.closest('.chat-prod-link');
+          const strongEl = linkEl ? linkEl.querySelector('strong') : null;
+          if (strongEl) prodName = strongEl.textContent.trim();
+        }
+        if (!prodName) prodName = sku || 'thiết bị an ninh';
+
+        const zaloText = `Xin chào, tôi muốn mua "${prodName}". Bạn tư vấn giúp tôi.`;
+        const zaloUrl = `https://zalo.me/0941204125?text=${encodeURIComponent(zaloText)}`;
+        window.open(zaloUrl, '_blank');
+        return;
+      }
+
       // 1. Close inline preview
       const closeBtn = e.target.closest('.inline-preview-close, .btn-inline-dismiss');
       if (closeBtn) {
@@ -992,7 +1075,10 @@
       }
     });
 
-  })();
+  } catch(e) {
+    console.error('CG Chat init error:', e);
+  }
+  }); // end DOMContentLoaded
   </script>
 
   <!-- ================= QUICK VIEW PRODUCT MODAL ================= -->

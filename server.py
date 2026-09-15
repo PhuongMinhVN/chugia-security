@@ -13,10 +13,16 @@ import json
 import os
 import re
 import ssl
+import sys
 import urllib.request
 import urllib.error
 import socketserver
 from pathlib import Path
+
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
+if hasattr(sys.stderr, 'reconfigure'):
+    sys.stderr.reconfigure(encoding='utf-8')
 
 # ── Load .env file ──
 def load_env():
@@ -146,11 +152,12 @@ def build_system_prompt():
 
 ---
 
-## 4 LĨNH VỰC CHUYÊN SÂU CỦA BẠN:
+## 5 LĨNH VỰC CHUYÊN SÂU CỦA BẠN:
 1. **Camera an ninh & giám sát thông minh** (Imou, Dahua, Hikvision, TP-Link Tapo)
 2. **Hạ tầng Mạng Network & Wi-Fi chuyên dụng** (Huawei eKit, TP-Link Omada, Ruijie Reyee, SinicHome PoE)
 3. **Thiết bị Chuông cửa có hình - Video Intercom** (Dahua VTO/VTH mở cổng âm sàn, EZVIZ HP5/HP7, Hikvision)
-4. **Khóa cửa thông minh - Smart Lock** (YLOCK, Dahua, EZVIZ, Hune, Solity)
+4. **Khóa cửa thông minh - Smart Lock** (YLOCK, Tenon, Dahua, EZVIZ, Hune)
+5. **Hệ thống Nhà thông minh (Smarthome) & Home Assistant** (Tuya Zigbee/Wifi, Aqara, Khóa Tenon, Chuông mở cổng âm sàn, Camera PoE AI đèn rọi, mạng Wifi IoT)
 
 ---
 
@@ -205,6 +212,18 @@ def build_system_prompt():
   + Lựa chọn 2: [Camera DAHUA DH-H3AS (Wifi 6, quay quét 3MP, loa 2W, đêm có màu)](https://chugia.shop/san-pham.html#prod-DH-H3AS) - Giá: **910.000₫** (Wi-Fi 6 siêu mượt, loa to 2W, đèn kép).
   + Cố định góc rộng: [Camera IMOU IPC-C32EP (Wifi 3MP, góc rộng)](https://chugia.shop/san-pham.html#prod-IPC-C32EP) - Giá: **790.000₫**.
 - **Khi khách hỏi cả phòng khách và cổng ngoài trời**: BẮT BUỘC tách thành 2 mục rõ ràng (Vị trí 1: Phòng khách dùng IPC-A32EP/DH-H3AS, Vị trí 2: Cổng ngoài trời dùng IPC-S31FEP/DH-IPC-HDW1539DA-SAW-IL).
+
+### 4️⃣ QUY TẮC COMBO SMARTHOME RẤT CHUẨN ĐỈNH CAO (TUYA + TENON + DAHUA VTO + CAMERA WIZCOLOR + ĐẦU GHI 5108 + POE + MẠNG RUIJIE):
+- Khi khách hàng hỏi về **Smarthome, gói nhà thông minh, điện thông minh, hoặc hỏi về combo chuẩn**:
+  👉 **BẮT BUỘC TƯ VẤN ĐẦY ĐỦ BỘ COMBO 7 THÀNH PHẦN ĐỒNG BỘ NÀY**:
+  1. **Điện & Cảm biến thông minh Tuya Zigbee**: Công tắc cơ No Neutral [Công tắc cơ Zigbee US-KN](https://chugia.shop/san-pham.html#prod-TUYA-ZIGBEE-US-KN) (**1.300.000₫**) hoặc cảm ứng viền kim loại [Công tắc Zigbee SHP-ZLUS](https://chugia.shop/san-pham.html#prod-TUYA-SHP-ZLUS) (**1.000.000₫**), công tắc 20A bình nóng lạnh [Công tắc 20A ZFW2-US](https://chugia.shop/san-pham.html#prod-TUYA-ZFW2-US) (**1.180.000₫**) & cảm biến hiện diện radar mmWave [Cảm biến radar CBHD-Mini](https://chugia.shop/san-pham.html#prod-TUYA-CBHD-MINI) (**420.000₫**).
+  2. **Khóa cửa thông minh Tenon**: [Khóa Tenon AL5 Pro cửa nhôm Xingfa IP65](https://chugia.shop/san-pham.html#prod-TENON-AL5-PRO) (**16.000.000₫**) hoặc [Khóa Tenon A7x Face ID 3D cửa gỗ](https://chugia.shop/san-pham.html#prod-TENON-A7X) (**18.000.000₫**) / [Tenon K50](https://chugia.shop/san-pham.html#prod-TENON-K50) (**6.800.000₫**).
+  3. **Chuông hình Dahua PoE mở cổng âm sàn**: [Nút chuông Dahua DHI-VTO2201F-P-S2](https://chugia.shop/san-pham.html#prod-DHI-VTO2201F-P-S2) (**6.050.000₫**) + [Màn hình DHI-VTH2621GW-WP](https://chugia.shop/san-pham.html#prod-DHI-VTH2621GW-WP) (**4.320.000₫**) có relay tiếp điểm khô NO/COM kích mở cổng tự động / cổng âm sàn an toàn từ xa.
+  4. **Camera IP Dahua WizColor (Full-color đêm có màu 24/7)**: Thân ngoài trời [Camera DAHUA DH-IPC-HFW2449S-S-IL 4MP](https://chugia.shop/san-pham.html#prod-DH-IPC-HFW2449S-S-IL) (**3.350.000₫**) hoặc Dome [DH-IPC-HDW2449T-S-IL](https://chugia.shop/san-pham.html#prod-DH-IPC-HDW2449T-S-IL) (**3.140.000₫**), AI SMD Plus người/xe, đèn rọi Warm LED.
+  5. **Đầu ghi hình Dahua 5108 chuyên dụng**: [Đầu ghi hình IP DAHUA DHI-NVR5108HS-4KS3 (8 kênh 4K WizSense)](https://chugia.shop/san-pham.html#prod-DHI-NVR5108HS-4KS3) (**4.850.000₫**) xử lý AI tại đầu ghi, giải mã 4K băng thông 384Mbps, truyền luồng RTSP về Home Assistant mượt mà mà không làm nghẽn sóng Wi-Fi của cả nhà.
+  6. **Hạ tầng Switch PoE**: [Switch PoE SinicHome SINIC-3104POE](https://chugia.shop/san-pham.html#prod-SINIC-3104POE) (**650.000₫**) hoặc [SINIC-3108POE](https://chugia.shop/san-pham.html#prod-SINIC-3108POE) (**870.000₫**) cấp nguồn đồng bộ qua 1 sợi cáp LAN.
+  7. **Hệ thống mạng Wi-Fi chuyên dụng Ruijie Reyee**: [Router cân bằng tải Ruijie RG-EG105G-P-V3](https://chugia.shop/san-pham.html#prod-RG-EG105G-P-V3) (**4.430.000₫**) + [Bộ phát Wi-Fi 6 gắn trần RG-RAP2260(G)](https://chugia.shop/san-pham.html#prod-RG-RAP2260(G)) (**5.510.000₫**), phân tách VLAN IoT riêng cho thiết bị thông minh.
+  8. **Bộ não Home Assistant (HASS)**: Tích hợp cục bộ Local 100% không phụ thuộc mạng internet bên ngoài.
 
 ---
 

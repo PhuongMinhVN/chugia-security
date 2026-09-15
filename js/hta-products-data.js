@@ -1,26 +1,22 @@
 /**
- * Chu Gia Security - Dữ Liệu Sản Phẩm Đồng Bộ Từ Sapo Landing Order
- * Nguồn: https://htavietnam.sapopage.com/
- * Quy tắc giá: Giá nhập x 130% (+30%) ra Giá bán lẻ niêm yết
- * Mô tả & thông số kỹ thuật: dữ liệu THẬT cào từ trang nguồn
- * (đã loại bỏ toàn bộ số điện thoại / thông tin liên hệ)
- * Tổng số sản phẩm: 469
+ * Chu Gia Security - Dữ Liệu Sản Phẩm Đồng Bộ Từ Sapo Landing Order, Smarthome Catalog, Tenon Tech VN, Zitech Tuya, Tuya.vn & Dahua NVR 5108
+ * Tổng số sản phẩm: 615
  */
 
 window.HTA_PRODUCTS_DATA = {
-  "total": 485,
+  "total": 615,
   "generatedAt": "2026-09-13 11:54:50",
   "categories": [
     {
       "id": 52932,
       "name": "Camera IP DAHUA",
-      "count": 36,
+      "count": 38,
       "parentGroup": "Camera IP & Đầu Ghi Chuyên Dụng"
     },
     {
       "id": 52945,
       "name": "Switch POE thông dụng",
-      "count": 50,
+      "count": 34,
       "parentGroup": "Thiết Bị Mạng & Switch PoE"
     },
     {
@@ -38,7 +34,7 @@ window.HTA_PRODUCTS_DATA = {
     {
       "id": 52936,
       "name": "Camera IP HIKVISION",
-      "count": 28,
+      "count": 31,
       "parentGroup": "Camera IP & Đầu Ghi Chuyên Dụng"
     },
     {
@@ -50,7 +46,7 @@ window.HTA_PRODUCTS_DATA = {
     {
       "id": 52941,
       "name": "Khóa cửa điện tử",
-      "count": 25,
+      "count": 44,
       "parentGroup": "Khóa Cửa Thông Minh"
     },
     {
@@ -190,6 +186,30 @@ window.HTA_PRODUCTS_DATA = {
       "name": "Omada WiFi",
       "count": 16,
       "parentGroup": "Thiết Bị Mạng & Switch PoE"
+    },
+    {
+      "id": 54001,
+      "name": "Công tắc & Cảm biến TUYA Smarthome",
+      "count": 87,
+      "parentGroup": "Nhà Thông Minh & Smarthome"
+    },
+    {
+      "id": 54002,
+      "name": "Thiết bị Smarthome AQARA",
+      "count": 12,
+      "parentGroup": "Nhà Thông Minh & Smarthome"
+    },
+    {
+      "id": 54003,
+      "name": "Khóa thông minh TENON",
+      "count": 23,
+      "parentGroup": "Khóa Cửa Thông Minh"
+    },
+    {
+      "id": 54004,
+      "name": "Bộ não Home Assistant & Zigbee",
+      "count": 2,
+      "parentGroup": "Nhà Thông Minh & Smarthome"
     }
   ],
   "products": [
@@ -47890,6 +47910,9266 @@ window.HTA_PRODUCTS_DATA = {
         {
           "k": "Phạm vi phủ sóng",
           "v": "Bán kính ngoài trời lên tới 250m – 300m"
+        }
+      ]
+    },
+    {
+      "id": 1197561,
+      "name": "Công tắc thông minh TUYA Zigbee mặt chữ nhật phím cơ 1 nút (trắng)",
+      "sku": "TUYA-SW-REC-M-W1",
+      "costPrice": 182000,
+      "retailPrice": 280000,
+      "originalPrice": 350000,
+      "discountPercent": 20,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Chữ Nhật (120x72mm đế US Sino/Panasonic), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Phím Cơ bấm nảy êm tay, màu sắc trắng tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 1 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt chữ nhật phím cơ 1 nút (trắng) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-REC-M-W1"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Chữ Nhật (120x72mm đế US Sino/Panasonic)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Phím Cơ bấm nảy êm tay"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "1 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Trắng"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197562,
+      "name": "Công tắc thông minh TUYA Zigbee mặt chữ nhật phím cơ 2 nút (trắng)",
+      "sku": "TUYA-SW-REC-M-W2",
+      "costPrice": 208000,
+      "retailPrice": 320000,
+      "originalPrice": 400000,
+      "discountPercent": 20,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Chữ Nhật (120x72mm đế US Sino/Panasonic), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Phím Cơ bấm nảy êm tay, màu sắc trắng tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 2 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt chữ nhật phím cơ 2 nút (trắng) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-REC-M-W2"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Chữ Nhật (120x72mm đế US Sino/Panasonic)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Phím Cơ bấm nảy êm tay"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "2 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Trắng"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197563,
+      "name": "Công tắc thông minh TUYA Zigbee mặt chữ nhật phím cơ 3 nút (trắng)",
+      "sku": "TUYA-SW-REC-M-W3",
+      "costPrice": 234000,
+      "retailPrice": 360000,
+      "originalPrice": 450000,
+      "discountPercent": 20,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Chữ Nhật (120x72mm đế US Sino/Panasonic), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Phím Cơ bấm nảy êm tay, màu sắc trắng tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 3 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt chữ nhật phím cơ 3 nút (trắng) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-REC-M-W3"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Chữ Nhật (120x72mm đế US Sino/Panasonic)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Phím Cơ bấm nảy êm tay"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "3 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Trắng"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197564,
+      "name": "Công tắc thông minh TUYA Zigbee mặt chữ nhật phím cơ 4 nút (trắng)",
+      "sku": "TUYA-SW-REC-M-W4",
+      "costPrice": 266500,
+      "retailPrice": 410000,
+      "originalPrice": 520000,
+      "discountPercent": 21,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Chữ Nhật (120x72mm đế US Sino/Panasonic), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Phím Cơ bấm nảy êm tay, màu sắc trắng tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 4 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt chữ nhật phím cơ 4 nút (trắng) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-REC-M-W4"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Chữ Nhật (120x72mm đế US Sino/Panasonic)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Phím Cơ bấm nảy êm tay"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "4 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Trắng"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197565,
+      "name": "Công tắc thông minh TUYA Zigbee mặt chữ nhật phím cơ 1 nút (đen)",
+      "sku": "TUYA-SW-REC-M-B1",
+      "costPrice": 188500,
+      "retailPrice": 290000,
+      "originalPrice": 360000,
+      "discountPercent": 19,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Chữ Nhật (120x72mm đế US Sino/Panasonic), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Phím Cơ bấm nảy êm tay, màu sắc đen tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 1 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt chữ nhật phím cơ 1 nút (đen) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-REC-M-B1"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Chữ Nhật (120x72mm đế US Sino/Panasonic)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Phím Cơ bấm nảy êm tay"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "1 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Đen"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197566,
+      "name": "Công tắc thông minh TUYA Zigbee mặt chữ nhật phím cơ 2 nút (đen)",
+      "sku": "TUYA-SW-REC-M-B2",
+      "costPrice": 214500,
+      "retailPrice": 330000,
+      "originalPrice": 410000,
+      "discountPercent": 20,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Chữ Nhật (120x72mm đế US Sino/Panasonic), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Phím Cơ bấm nảy êm tay, màu sắc đen tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 2 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt chữ nhật phím cơ 2 nút (đen) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-REC-M-B2"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Chữ Nhật (120x72mm đế US Sino/Panasonic)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Phím Cơ bấm nảy êm tay"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "2 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Đen"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197567,
+      "name": "Công tắc thông minh TUYA Zigbee mặt chữ nhật phím cơ 3 nút (đen)",
+      "sku": "TUYA-SW-REC-M-B3",
+      "costPrice": 240500,
+      "retailPrice": 370000,
+      "originalPrice": 460000,
+      "discountPercent": 20,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Chữ Nhật (120x72mm đế US Sino/Panasonic), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Phím Cơ bấm nảy êm tay, màu sắc đen tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 3 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt chữ nhật phím cơ 3 nút (đen) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-REC-M-B3"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Chữ Nhật (120x72mm đế US Sino/Panasonic)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Phím Cơ bấm nảy êm tay"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "3 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Đen"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197568,
+      "name": "Công tắc thông minh TUYA Zigbee mặt chữ nhật phím cơ 4 nút (đen)",
+      "sku": "TUYA-SW-REC-M-B4",
+      "costPrice": 273000,
+      "retailPrice": 420000,
+      "originalPrice": 530000,
+      "discountPercent": 21,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Chữ Nhật (120x72mm đế US Sino/Panasonic), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Phím Cơ bấm nảy êm tay, màu sắc đen tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 4 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt chữ nhật phím cơ 4 nút (đen) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-REC-M-B4"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Chữ Nhật (120x72mm đế US Sino/Panasonic)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Phím Cơ bấm nảy êm tay"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "4 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Đen"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197569,
+      "name": "Công tắc thông minh TUYA Zigbee mặt chữ nhật cảm ứng kính 1 nút (trắng)",
+      "sku": "TUYA-SW-REC-T-W1",
+      "costPrice": 195000,
+      "retailPrice": 300000,
+      "originalPrice": 370000,
+      "discountPercent": 19,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Chữ Nhật (120x72mm đế US Sino/Panasonic), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Cảm Ứng mặt kính cường lực viền kim loại, màu sắc trắng tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 1 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt chữ nhật cảm ứng kính 1 nút (trắng) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-REC-T-W1"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Chữ Nhật (120x72mm đế US Sino/Panasonic)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Cảm Ứng mặt kính cường lực viền kim loại"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "1 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Trắng"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197570,
+      "name": "Công tắc thông minh TUYA Zigbee mặt chữ nhật cảm ứng kính 2 nút (trắng)",
+      "sku": "TUYA-SW-REC-T-W2",
+      "costPrice": 221000,
+      "retailPrice": 340000,
+      "originalPrice": 420000,
+      "discountPercent": 19,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Chữ Nhật (120x72mm đế US Sino/Panasonic), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Cảm Ứng mặt kính cường lực viền kim loại, màu sắc trắng tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 2 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt chữ nhật cảm ứng kính 2 nút (trắng) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-REC-T-W2"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Chữ Nhật (120x72mm đế US Sino/Panasonic)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Cảm Ứng mặt kính cường lực viền kim loại"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "2 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Trắng"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197571,
+      "name": "Công tắc thông minh TUYA Zigbee mặt chữ nhật cảm ứng kính 3 nút (trắng)",
+      "sku": "TUYA-SW-REC-T-W3",
+      "costPrice": 247000,
+      "retailPrice": 380000,
+      "originalPrice": 470000,
+      "discountPercent": 19,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Chữ Nhật (120x72mm đế US Sino/Panasonic), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Cảm Ứng mặt kính cường lực viền kim loại, màu sắc trắng tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 3 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt chữ nhật cảm ứng kính 3 nút (trắng) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-REC-T-W3"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Chữ Nhật (120x72mm đế US Sino/Panasonic)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Cảm Ứng mặt kính cường lực viền kim loại"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "3 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Trắng"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197572,
+      "name": "Công tắc thông minh TUYA Zigbee mặt chữ nhật cảm ứng kính 4 nút (trắng)",
+      "sku": "TUYA-SW-REC-T-W4",
+      "costPrice": 279500,
+      "retailPrice": 430000,
+      "originalPrice": 540000,
+      "discountPercent": 20,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Chữ Nhật (120x72mm đế US Sino/Panasonic), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Cảm Ứng mặt kính cường lực viền kim loại, màu sắc trắng tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 4 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt chữ nhật cảm ứng kính 4 nút (trắng) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-REC-T-W4"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Chữ Nhật (120x72mm đế US Sino/Panasonic)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Cảm Ứng mặt kính cường lực viền kim loại"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "4 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Trắng"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197573,
+      "name": "Công tắc thông minh TUYA Zigbee mặt chữ nhật cảm ứng kính 1 nút (đen)",
+      "sku": "TUYA-SW-REC-T-B1",
+      "costPrice": 201500,
+      "retailPrice": 310000,
+      "originalPrice": 380000,
+      "discountPercent": 18,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Chữ Nhật (120x72mm đế US Sino/Panasonic), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Cảm Ứng mặt kính cường lực viền kim loại, màu sắc đen tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 1 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt chữ nhật cảm ứng kính 1 nút (đen) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-REC-T-B1"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Chữ Nhật (120x72mm đế US Sino/Panasonic)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Cảm Ứng mặt kính cường lực viền kim loại"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "1 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Đen"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197574,
+      "name": "Công tắc thông minh TUYA Zigbee mặt chữ nhật cảm ứng kính 2 nút (đen)",
+      "sku": "TUYA-SW-REC-T-B2",
+      "costPrice": 227500,
+      "retailPrice": 350000,
+      "originalPrice": 430000,
+      "discountPercent": 19,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Chữ Nhật (120x72mm đế US Sino/Panasonic), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Cảm Ứng mặt kính cường lực viền kim loại, màu sắc đen tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 2 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt chữ nhật cảm ứng kính 2 nút (đen) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-REC-T-B2"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Chữ Nhật (120x72mm đế US Sino/Panasonic)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Cảm Ứng mặt kính cường lực viền kim loại"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "2 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Đen"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197575,
+      "name": "Công tắc thông minh TUYA Zigbee mặt chữ nhật cảm ứng kính 3 nút (đen)",
+      "sku": "TUYA-SW-REC-T-B3",
+      "costPrice": 253500,
+      "retailPrice": 390000,
+      "originalPrice": 480000,
+      "discountPercent": 19,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Chữ Nhật (120x72mm đế US Sino/Panasonic), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Cảm Ứng mặt kính cường lực viền kim loại, màu sắc đen tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 3 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt chữ nhật cảm ứng kính 3 nút (đen) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-REC-T-B3"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Chữ Nhật (120x72mm đế US Sino/Panasonic)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Cảm Ứng mặt kính cường lực viền kim loại"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "3 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Đen"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197576,
+      "name": "Công tắc thông minh TUYA Zigbee mặt chữ nhật cảm ứng kính 4 nút (đen)",
+      "sku": "TUYA-SW-REC-T-B4",
+      "costPrice": 286000,
+      "retailPrice": 440000,
+      "originalPrice": 550000,
+      "discountPercent": 20,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Chữ Nhật (120x72mm đế US Sino/Panasonic), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Cảm Ứng mặt kính cường lực viền kim loại, màu sắc đen tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 4 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt chữ nhật cảm ứng kính 4 nút (đen) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-REC-T-B4"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Chữ Nhật (120x72mm đế US Sino/Panasonic)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Cảm Ứng mặt kính cường lực viền kim loại"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "4 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Đen"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197577,
+      "name": "Công tắc thông minh TUYA Zigbee mặt vuông phím cơ 1 nút (trắng)",
+      "sku": "TUYA-SW-SQ-M-W1",
+      "costPrice": 182000,
+      "retailPrice": 280000,
+      "originalPrice": 350000,
+      "discountPercent": 20,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Vuông (86x86mm chuẩn EU), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Phím Cơ bấm nảy êm tay, màu sắc trắng tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 1 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt vuông phím cơ 1 nút (trắng) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-SQ-M-W1"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Vuông (86x86mm chuẩn EU)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Phím Cơ bấm nảy êm tay"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "1 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Trắng"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197578,
+      "name": "Công tắc thông minh TUYA Zigbee mặt vuông phím cơ 2 nút (trắng)",
+      "sku": "TUYA-SW-SQ-M-W2",
+      "costPrice": 208000,
+      "retailPrice": 320000,
+      "originalPrice": 400000,
+      "discountPercent": 20,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Vuông (86x86mm chuẩn EU), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Phím Cơ bấm nảy êm tay, màu sắc trắng tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 2 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt vuông phím cơ 2 nút (trắng) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-SQ-M-W2"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Vuông (86x86mm chuẩn EU)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Phím Cơ bấm nảy êm tay"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "2 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Trắng"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197579,
+      "name": "Công tắc thông minh TUYA Zigbee mặt vuông phím cơ 3 nút (trắng)",
+      "sku": "TUYA-SW-SQ-M-W3",
+      "costPrice": 234000,
+      "retailPrice": 360000,
+      "originalPrice": 450000,
+      "discountPercent": 20,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Vuông (86x86mm chuẩn EU), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Phím Cơ bấm nảy êm tay, màu sắc trắng tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 3 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt vuông phím cơ 3 nút (trắng) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-SQ-M-W3"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Vuông (86x86mm chuẩn EU)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Phím Cơ bấm nảy êm tay"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "3 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Trắng"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197580,
+      "name": "Công tắc thông minh TUYA Zigbee mặt vuông phím cơ 4 nút (trắng)",
+      "sku": "TUYA-SW-SQ-M-W4",
+      "costPrice": 266500,
+      "retailPrice": 410000,
+      "originalPrice": 520000,
+      "discountPercent": 21,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Vuông (86x86mm chuẩn EU), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Phím Cơ bấm nảy êm tay, màu sắc trắng tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 4 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt vuông phím cơ 4 nút (trắng) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-SQ-M-W4"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Vuông (86x86mm chuẩn EU)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Phím Cơ bấm nảy êm tay"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "4 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Trắng"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197581,
+      "name": "Công tắc thông minh TUYA Zigbee mặt vuông phím cơ 1 nút (đen)",
+      "sku": "TUYA-SW-SQ-M-B1",
+      "costPrice": 188500,
+      "retailPrice": 290000,
+      "originalPrice": 360000,
+      "discountPercent": 19,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Vuông (86x86mm chuẩn EU), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Phím Cơ bấm nảy êm tay, màu sắc đen tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 1 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt vuông phím cơ 1 nút (đen) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-SQ-M-B1"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Vuông (86x86mm chuẩn EU)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Phím Cơ bấm nảy êm tay"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "1 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Đen"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197582,
+      "name": "Công tắc thông minh TUYA Zigbee mặt vuông phím cơ 2 nút (đen)",
+      "sku": "TUYA-SW-SQ-M-B2",
+      "costPrice": 214500,
+      "retailPrice": 330000,
+      "originalPrice": 410000,
+      "discountPercent": 20,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Vuông (86x86mm chuẩn EU), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Phím Cơ bấm nảy êm tay, màu sắc đen tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 2 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt vuông phím cơ 2 nút (đen) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-SQ-M-B2"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Vuông (86x86mm chuẩn EU)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Phím Cơ bấm nảy êm tay"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "2 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Đen"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197583,
+      "name": "Công tắc thông minh TUYA Zigbee mặt vuông phím cơ 3 nút (đen)",
+      "sku": "TUYA-SW-SQ-M-B3",
+      "costPrice": 240500,
+      "retailPrice": 370000,
+      "originalPrice": 460000,
+      "discountPercent": 20,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Vuông (86x86mm chuẩn EU), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Phím Cơ bấm nảy êm tay, màu sắc đen tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 3 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt vuông phím cơ 3 nút (đen) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-SQ-M-B3"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Vuông (86x86mm chuẩn EU)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Phím Cơ bấm nảy êm tay"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "3 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Đen"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197584,
+      "name": "Công tắc thông minh TUYA Zigbee mặt vuông phím cơ 4 nút (đen)",
+      "sku": "TUYA-SW-SQ-M-B4",
+      "costPrice": 273000,
+      "retailPrice": 420000,
+      "originalPrice": 530000,
+      "discountPercent": 21,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Vuông (86x86mm chuẩn EU), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Phím Cơ bấm nảy êm tay, màu sắc đen tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 4 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt vuông phím cơ 4 nút (đen) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-SQ-M-B4"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Vuông (86x86mm chuẩn EU)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Phím Cơ bấm nảy êm tay"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "4 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Đen"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197585,
+      "name": "Công tắc thông minh TUYA Zigbee mặt vuông cảm ứng kính 1 nút (trắng)",
+      "sku": "TUYA-SW-SQ-T-W1",
+      "costPrice": 195000,
+      "retailPrice": 300000,
+      "originalPrice": 370000,
+      "discountPercent": 19,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Vuông (86x86mm chuẩn EU), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Cảm Ứng mặt kính cường lực viền kim loại, màu sắc trắng tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 1 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt vuông cảm ứng kính 1 nút (trắng) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-SQ-T-W1"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Vuông (86x86mm chuẩn EU)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Cảm Ứng mặt kính cường lực viền kim loại"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "1 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Trắng"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197586,
+      "name": "Công tắc thông minh TUYA Zigbee mặt vuông cảm ứng kính 2 nút (trắng)",
+      "sku": "TUYA-SW-SQ-T-W2",
+      "costPrice": 221000,
+      "retailPrice": 340000,
+      "originalPrice": 420000,
+      "discountPercent": 19,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Vuông (86x86mm chuẩn EU), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Cảm Ứng mặt kính cường lực viền kim loại, màu sắc trắng tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 2 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt vuông cảm ứng kính 2 nút (trắng) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-SQ-T-W2"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Vuông (86x86mm chuẩn EU)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Cảm Ứng mặt kính cường lực viền kim loại"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "2 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Trắng"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197587,
+      "name": "Công tắc thông minh TUYA Zigbee mặt vuông cảm ứng kính 3 nút (trắng)",
+      "sku": "TUYA-SW-SQ-T-W3",
+      "costPrice": 247000,
+      "retailPrice": 380000,
+      "originalPrice": 470000,
+      "discountPercent": 19,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Vuông (86x86mm chuẩn EU), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Cảm Ứng mặt kính cường lực viền kim loại, màu sắc trắng tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 3 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt vuông cảm ứng kính 3 nút (trắng) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-SQ-T-W3"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Vuông (86x86mm chuẩn EU)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Cảm Ứng mặt kính cường lực viền kim loại"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "3 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Trắng"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197588,
+      "name": "Công tắc thông minh TUYA Zigbee mặt vuông cảm ứng kính 4 nút (trắng)",
+      "sku": "TUYA-SW-SQ-T-W4",
+      "costPrice": 279500,
+      "retailPrice": 430000,
+      "originalPrice": 540000,
+      "discountPercent": 20,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Vuông (86x86mm chuẩn EU), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Cảm Ứng mặt kính cường lực viền kim loại, màu sắc trắng tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 4 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt vuông cảm ứng kính 4 nút (trắng) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-SQ-T-W4"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Vuông (86x86mm chuẩn EU)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Cảm Ứng mặt kính cường lực viền kim loại"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "4 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Trắng"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197589,
+      "name": "Công tắc thông minh TUYA Zigbee mặt vuông cảm ứng kính 1 nút (đen)",
+      "sku": "TUYA-SW-SQ-T-B1",
+      "costPrice": 201500,
+      "retailPrice": 310000,
+      "originalPrice": 380000,
+      "discountPercent": 18,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Vuông (86x86mm chuẩn EU), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Cảm Ứng mặt kính cường lực viền kim loại, màu sắc đen tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 1 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt vuông cảm ứng kính 1 nút (đen) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-SQ-T-B1"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Vuông (86x86mm chuẩn EU)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Cảm Ứng mặt kính cường lực viền kim loại"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "1 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Đen"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197590,
+      "name": "Công tắc thông minh TUYA Zigbee mặt vuông cảm ứng kính 2 nút (đen)",
+      "sku": "TUYA-SW-SQ-T-B2",
+      "costPrice": 227500,
+      "retailPrice": 350000,
+      "originalPrice": 430000,
+      "discountPercent": 19,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Vuông (86x86mm chuẩn EU), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Cảm Ứng mặt kính cường lực viền kim loại, màu sắc đen tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 2 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt vuông cảm ứng kính 2 nút (đen) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-SQ-T-B2"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Vuông (86x86mm chuẩn EU)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Cảm Ứng mặt kính cường lực viền kim loại"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "2 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Đen"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197591,
+      "name": "Công tắc thông minh TUYA Zigbee mặt vuông cảm ứng kính 3 nút (đen)",
+      "sku": "TUYA-SW-SQ-T-B3",
+      "costPrice": 253500,
+      "retailPrice": 390000,
+      "originalPrice": 480000,
+      "discountPercent": 19,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Vuông (86x86mm chuẩn EU), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Cảm Ứng mặt kính cường lực viền kim loại, màu sắc đen tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 3 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt vuông cảm ứng kính 3 nút (đen) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-SQ-T-B3"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Vuông (86x86mm chuẩn EU)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Cảm Ứng mặt kính cường lực viền kim loại"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "3 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Đen"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197592,
+      "name": "Công tắc thông minh TUYA Zigbee mặt vuông cảm ứng kính 4 nút (đen)",
+      "sku": "TUYA-SW-SQ-T-B4",
+      "costPrice": 286000,
+      "retailPrice": 440000,
+      "originalPrice": 550000,
+      "discountPercent": 20,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Mặt công tắc kiểu dáng Vuông (86x86mm chuẩn EU), hoàn toàn tương thích đế âm tường tiêu chuẩn Việt Nam.",
+        "Thiết kế Cảm Ứng mặt kính cường lực viền kim loại, màu sắc đen tinh tế với đèn nền LED dịu mắt ban đêm.",
+        "Điều khiển 4 nút độc lập, hỗ trợ kết nối Zigbee 3.0 siêu ổn định, liên kết hoàn hảo với Home Assistant (Z2M/ZHA) và app Tuya/Smart Life.",
+        "Hỗ trợ hẹn giờ, kịch bản tự động hóa, phản hồi trạng thái bật/tắt tức thì trên điện thoại và Dashboard HASS."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh TUYA Zigbee mặt vuông cảm ứng kính 4 nút (đen) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Mã sản phẩm (SKU)",
+          "v": "TUYA-SW-SQ-T-B4"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Vuông (86x86mm chuẩn EU)"
+        },
+        {
+          "k": "Loại phím",
+          "v": "Cảm Ứng mặt kính cường lực viền kim loại"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "4 nút"
+        },
+        {
+          "k": "Màu sắc",
+          "v": "Màu Đen"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (cần Hub Zigbee / Home Assistant)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100V - 240V AC 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút (đèn LED, quạt, đèn sợi đốt)"
+        },
+        {
+          "k": "Tích hợp",
+          "v": "Home Assistant, Apple HomeKit, Google Home, Alexa, Tuya"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ]
+    },
+    {
+      "id": 1197593,
+      "name": "Cảm biến hiện diện người TUYA Zigbee mmWave Radar (24GHz gắn trần)",
+      "sku": "TUYA-SN-MMWAVE-ZB",
+      "costPrice": 280000,
+      "retailPrice": 450000,
+      "originalPrice": 580000,
+      "discountPercent": 22,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/sensor_hub.png",
+      "images": [
+        "images/sensor_hub.png"
+      ],
+      "features": [
+        "Công nghệ sóng Radar mmWave 24GHz nhận diện chuyển động vi mô siêu nhạy, phát hiện người cả khi ngồi đọc sách, xem tivi hoặc thiền không cử động.",
+        "Tự động duy trì sáng đèn phòng khách, phòng tắm, văn phòng khi có người, tự động tắt khi người rời đi.",
+        "Tích hợp cảm biến cường độ ánh sáng Lux, kết nối trực tiếp Home Assistant qua Zigbee2MQTT để tự động hóa ngữ cảnh."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Cảm biến hiện diện người TUYA Zigbee mmWave Radar (24GHz gắn trần) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Model",
+          "v": "TUYA-SN-MMWAVE-ZB"
+        },
+        {
+          "k": "Tần số Radar",
+          "v": "24GHz mmWave"
+        },
+        {
+          "k": "Góc quét",
+          "v": "120 độ, bán kính quét 6 mét"
+        },
+        {
+          "k": "Cảm biến ánh sáng",
+          "v": "0 - 2000 Lux"
+        },
+        {
+          "k": "Giao thức",
+          "v": "Zigbee 3.0"
+        },
+        {
+          "k": "Nguồn cấp",
+          "v": "Type-C 5V 1A"
+        }
+      ]
+    },
+    {
+      "id": 1197594,
+      "name": "Cảm biến cửa từ thông minh TUYA Zigbee (Báo động mở cửa & Kích hoạt ngữ cảnh)",
+      "sku": "TUYA-SN-DOOR-ZB",
+      "costPrice": 95000,
+      "retailPrice": 160000,
+      "originalPrice": 210000,
+      "discountPercent": 24,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/sensor_hub.png",
+      "images": [
+        "images/sensor_hub.png"
+      ],
+      "features": [
+        "Gắn cửa chính, cửa sổ, cửa ban công để phát hiện đóng/mở cửa tức thì.",
+        "Kích hoạt ngữ cảnh: Mở cửa thì bật đèn phòng khách, tắt báo động; mở cửa ban đêm thì hú còi báo trộm.",
+        "Pin nút CR2032 tuổi thọ 1-2 năm, thông báo pin yếu về điện thoại và Home Assistant."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Cảm biến cửa từ thông minh TUYA Zigbee (Báo động mở cửa & Kích hoạt ngữ cảnh) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Model",
+          "v": "TUYA-SN-DOOR-ZB"
+        },
+        {
+          "k": "Giao thức",
+          "v": "Zigbee 3.0"
+        },
+        {
+          "k": "Khoảng cách kích hoạt",
+          "v": "15mm"
+        },
+        {
+          "k": "Loại pin",
+          "v": "CR2032 (thời lượng 18 tháng)"
+        }
+      ]
+    },
+    {
+      "id": 1197595,
+      "name": "Cảm biến nhiệt độ & độ ẩm TUYA Zigbee có màn hình LCD",
+      "sku": "TUYA-SN-TEMP-ZB",
+      "costPrice": 130000,
+      "retailPrice": 220000,
+      "originalPrice": 290000,
+      "discountPercent": 24,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/sensor_hub.png",
+      "images": [
+        "images/sensor_hub.png"
+      ],
+      "features": [
+        "Hiển thị nhiệt độ và độ ẩm phòng theo thời gian thực trên màn hình LCD sắc nét.",
+        "Tự động kích hoạt bật/tắt điều hòa, máy hút ẩm qua Home Assistant hoặc Tuya IR Controller.",
+        "Cảm biến độ chính xác cao Thụy Sĩ Sensirion, cập nhật liên tục không độ trễ."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Cảm biến nhiệt độ & độ ẩm TUYA Zigbee có màn hình LCD chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Model",
+          "v": "TUYA-SN-TEMP-ZB"
+        },
+        {
+          "k": "Màn hình",
+          "v": "LCD hiển thị số to rõ"
+        },
+        {
+          "k": "Độ chính xác nhiệt độ",
+          "v": "±0.3°C"
+        },
+        {
+          "k": "Độ chính xác độ ẩm",
+          "v": "±3% RH"
+        }
+      ]
+    },
+    {
+      "id": 1197596,
+      "name": "Cảm biến chuyển động hồng ngoại TUYA Zigbee PIR",
+      "sku": "TUYA-SN-PIR-ZB",
+      "costPrice": 110000,
+      "retailPrice": 190000,
+      "originalPrice": 250000,
+      "discountPercent": 24,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/sensor_hub.png",
+      "images": [
+        "images/sensor_hub.png"
+      ],
+      "features": [
+        "Góc quét rộng 120 độ, khoảng cách phát hiện 5-7 mét.",
+        "Tự động bật đèn cầu thang, hành lang khi phát hiện có bước chân đi qua.",
+        "Chống báo động giả thú cưng dưới 15kg, gắn tường linh hoạt với khớp xoay 360 độ."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Cảm biến chuyển động hồng ngoại TUYA Zigbee PIR chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Model",
+          "v": "TUYA-SN-PIR-ZB"
+        },
+        {
+          "k": "Góc quét",
+          "v": "120°"
+        },
+        {
+          "k": "Khoảng cách",
+          "v": "5 - 7m"
+        }
+      ]
+    },
+    {
+      "id": 1197597,
+      "name": "Cảm biến rò rỉ tràn nước TUYA Zigbee",
+      "sku": "TUYA-SN-WATER-ZB",
+      "costPrice": 125000,
+      "retailPrice": 210000,
+      "originalPrice": 280000,
+      "discountPercent": 25,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/sensor_hub.png",
+      "images": [
+        "images/sensor_hub.png"
+      ],
+      "features": [
+        "Đặt tại sàn nhà vệ sinh, dưới chậu rửa bát, máy giặt để phát hiện nước tràn tức thì.",
+        "Tự động đóng van nước thông minh qua Home Assistant khi có sự cố bục vỡ ống nước.",
+        "Tiêu chuẩn chống nước IP67 ngâm nước không hỏng, còi báo tại chỗ và gửi thông báo điện thoại."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Cảm biến rò rỉ tràn nước TUYA Zigbee chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Model",
+          "v": "TUYA-SN-WATER-ZB"
+        },
+        {
+          "k": "Chống nước",
+          "v": "IP67"
+        }
+      ]
+    },
+    {
+      "id": 1197598,
+      "name": "Cảm biến báo khói báo cháy thông minh TUYA Zigbee",
+      "sku": "TUYA-SN-SMOKE-ZB",
+      "costPrice": 220000,
+      "retailPrice": 350000,
+      "originalPrice": 450000,
+      "discountPercent": 22,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "images/sensor_hub.png",
+      "images": [
+        "images/sensor_hub.png"
+      ],
+      "features": [
+        "Cảm biến quang điện phát hiện khói sớm ngay khi đám cháy vừa âm ỉ bốc khói.",
+        "Còi hú to 85dB tại chỗ kết hợp gửi cảnh báo khẩn cấp tới toàn bộ điện thoại thành viên gia đình.",
+        "Tích hợp Home Assistant: Tự động bật đèn thoát hiểm và kích hoạt hệ thống báo động an ninh."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Cảm biến báo khói báo cháy thông minh TUYA Zigbee chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA"
+        },
+        {
+          "k": "Model",
+          "v": "TUYA-SN-SMOKE-ZB"
+        },
+        {
+          "k": "Âm lượng còi hú",
+          "v": "85dB ở cự ly 3m"
+        }
+      ]
+    },
+    {
+      "id": 1197599,
+      "name": "Bộ điều khiển trung tâm AQARA Hub M2 (Zigbee 3.0, Apple HomeKit, Matter, IR 360°)",
+      "sku": "AQARA-HUB-M2",
+      "costPrice": 850000,
+      "retailPrice": 1250000,
+      "originalPrice": 1490000,
+      "discountPercent": 16,
+      "unit": "Cái",
+      "primaryCategoryId": 54002,
+      "categoryIds": [
+        54002
+      ],
+      "categoryName": "Thiết bị Smarthome AQARA",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "AQARA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Trung tâm điều khiển kết nối hơn 128 thiết bị Aqara Zigbee 3.0 tốc độ cao, ổn định.",
+        "Tích hợp hồng ngoại IR 360 độ điều khiển mọi điều hòa, TV, quạt không cần remote.",
+        "Hỗ trợ cổng mạng LAN RJ45 chống giật lag, tương thích 100% Apple HomeKit, Google Assistant và Home Assistant."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Bộ điều khiển trung tâm AQARA Hub M2 (Zigbee 3.0, Apple HomeKit, Matter, IR 360°) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "AQARA"
+        },
+        {
+          "k": "Model",
+          "v": "Aqara Hub M2 (HM2-G01)"
+        },
+        {
+          "k": "Giao thức",
+          "v": "Zigbee 3.0, Wi-Fi 2.4GHz, Ethernet RJ45, BLE 5.0, IR 360°"
+        },
+        {
+          "k": "Hệ sinh thái",
+          "v": "Apple HomeKit, Google Home, Home Assistant, Alexa, Aqara Home"
+        }
+      ]
+    },
+    {
+      "id": 1197600,
+      "name": "Bộ điều khiển trung tâm cao cấp AQARA Hub M3 (Matter Controller, Thread, Zigbee, Local HASS, PoE)",
+      "sku": "AQARA-HUB-M3",
+      "costPrice": 1950000,
+      "retailPrice": 2850000,
+      "originalPrice": 3400000,
+      "discountPercent": 16,
+      "unit": "Cái",
+      "primaryCategoryId": 54002,
+      "categoryIds": [
+        54002
+      ],
+      "categoryName": "Thiết bị Smarthome AQARA",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "AQARA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Hub thế hệ mới nhất của Aqara đóng vai trò Matter Controller & Thread Border Router.",
+        "Hỗ trợ cấp nguồn PoE tiện lợi qua cáp mạng, lưu trữ ngữ cảnh tự động cục bộ 100% ngay cả khi mất mạng internet.",
+        "Loa cảnh báo to 95dB, cảm biến hồng ngoại 360 độ, tương thích tối đa với Home Assistant."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Bộ điều khiển trung tâm cao cấp AQARA Hub M3 (Matter Controller, Thread, Zigbee, Local HASS, PoE) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "AQARA"
+        },
+        {
+          "k": "Model",
+          "v": "Aqara Hub M3 (HM-G01E)"
+        },
+        {
+          "k": "Nguồn cấp",
+          "v": "PoE (IEEE 802.3af) hoặc Type-C 5V 2A"
+        },
+        {
+          "k": "Giao thức",
+          "v": "Matter, Thread, Zigbee 3.0, Wi-Fi 2.4/5GHz, Bluetooth 5.1"
+        }
+      ]
+    },
+    {
+      "id": 1197601,
+      "name": "Bộ điều khiển trung tâm mini AQARA Hub E1 (Zigbee 3.0, USB nhỏ gọn)",
+      "sku": "AQARA-HUB-E1",
+      "costPrice": 350000,
+      "retailPrice": 520000,
+      "originalPrice": 650000,
+      "discountPercent": 20,
+      "unit": "Cái",
+      "primaryCategoryId": 54002,
+      "categoryIds": [
+        54002
+      ],
+      "categoryName": "Thiết bị Smarthome AQARA",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "AQARA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Thiết kế dạng thanh USB cắm trực tiếp vào củ sạc, cổng USB router hoặc ổ cắm.",
+        "Kết nối đến 128 thiết bị con Zigbee Aqara, hoạt động như một bộ mở rộng sóng Wi-Fi Repeater.",
+        "Giá kinh tế, thích hợp cho căn hộ 1-2 phòng ngủ hoặc phòng đơn."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Bộ điều khiển trung tâm mini AQARA Hub E1 (Zigbee 3.0, USB nhỏ gọn) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "AQARA"
+        },
+        {
+          "k": "Model",
+          "v": "Aqara Hub E1 (HE1-G01)"
+        },
+        {
+          "k": "Chân cắm",
+          "v": "USB-A xoay 210 độ"
+        }
+      ]
+    },
+    {
+      "id": 1197602,
+      "name": "Công tắc thông minh AQARA D1 phím cơ 1 nút (Mặt vuông EU, Zigbee)",
+      "sku": "AQARA-SW-D1-1G",
+      "costPrice": 380000,
+      "retailPrice": 550000,
+      "originalPrice": 690000,
+      "discountPercent": 20,
+      "unit": "Cái",
+      "primaryCategoryId": 54002,
+      "categoryIds": [
+        54002
+      ],
+      "categoryName": "Thiết bị Smarthome AQARA",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "AQARA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Phím bấm cơ nảy cao cấp độ bền 100.000 lần bấm, thiết kế vuông 86x86 sang trọng.",
+        "Tích hợp chip bảo vệ quá nhiệt, quá tải tự ngắt nguồn an toàn tuyệt đối.",
+        "Đồng bộ tức thì lên Home Assistant qua Zigbee2MQTT / ZHA và Apple HomeKit."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh AQARA D1 phím cơ 1 nút (Mặt vuông EU, Zigbee) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "AQARA"
+        },
+        {
+          "k": "Model",
+          "v": "Aqara D1 1 Gang (QBKG21LM / QBKG24LM)"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Mặt vuông 86x86mm chuẩn EU"
+        }
+      ]
+    },
+    {
+      "id": 1197603,
+      "name": "Công tắc thông minh AQARA D1 phím cơ 2 nút (Mặt vuông EU, Zigbee)",
+      "sku": "AQARA-SW-D1-2G",
+      "costPrice": 430000,
+      "retailPrice": 620000,
+      "originalPrice": 780000,
+      "discountPercent": 21,
+      "unit": "Cái",
+      "primaryCategoryId": 54002,
+      "categoryIds": [
+        54002
+      ],
+      "categoryName": "Thiết bị Smarthome AQARA",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "AQARA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "2 nút bấm cơ êm ái, bề mặt nhựa chống cháy PC cao cấp không ngả ố theo thời gian.",
+        "Hỗ trợ đo điện năng tiêu thụ, bật/tắt hẹn giờ và điều khiển ngữ cảnh thông minh.",
+        "Kết nối mượt mà với Home Assistant không độ trễ."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh AQARA D1 phím cơ 2 nút (Mặt vuông EU, Zigbee) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "AQARA"
+        },
+        {
+          "k": "Model",
+          "v": "Aqara D1 2 Gang (QBKG22LM / QBKG25LM)"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Mặt vuông 86x86mm chuẩn EU"
+        }
+      ]
+    },
+    {
+      "id": 1197604,
+      "name": "Công tắc thông minh AQARA D1 phím cơ 3 nút (Mặt vuông EU, Zigbee)",
+      "sku": "AQARA-SW-D1-3G",
+      "costPrice": 480000,
+      "retailPrice": 690000,
+      "originalPrice": 850000,
+      "discountPercent": 19,
+      "unit": "Cái",
+      "primaryCategoryId": 54002,
+      "categoryIds": [
+        54002
+      ],
+      "categoryName": "Thiết bị Smarthome AQARA",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "AQARA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "3 nút bấm cơ tiện dụng điều khiển 3 lộ đèn trên cùng một mặt công tắc.",
+        "Độ phản hồi cực nhanh, thiết kế tinh tế hài hòa với nội thất hiện đại.",
+        "Tương thích Home Assistant, Apple HomeKit, Google Home."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc thông minh AQARA D1 phím cơ 3 nút (Mặt vuông EU, Zigbee) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "AQARA"
+        },
+        {
+          "k": "Model",
+          "v": "Aqara D1 3 Gang (QBKG23LM / QBKG26LM)"
+        },
+        {
+          "k": "Kiểu dáng",
+          "v": "Mặt vuông 86x86mm chuẩn EU"
+        }
+      ]
+    },
+    {
+      "id": 1197605,
+      "name": "Công tắc cao cấp AQARA H1 Pro 1 nút viền kim loại xám (Mặt vuông, Zigbee)",
+      "sku": "AQARA-SW-H1-1G",
+      "costPrice": 620000,
+      "retailPrice": 890000,
+      "originalPrice": 1100000,
+      "discountPercent": 19,
+      "unit": "Cái",
+      "primaryCategoryId": 54002,
+      "categoryIds": [
+        54002
+      ],
+      "categoryName": "Thiết bị Smarthome AQARA",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "AQARA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Dòng công tắc cao cấp bậc nhất của Aqara với khung viền kim loại cắt vát CNC sang trọng.",
+        "Phím bấm hành trình ngắn cực êm, bề mặt chống bám vân tay cao cấp.",
+        "Hỗ trợ chế độ chuyển đổi nút nhấn không dây (Wireless Switch) cực kỳ linh hoạt trong Home Assistant."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc cao cấp AQARA H1 Pro 1 nút viền kim loại xám (Mặt vuông, Zigbee) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "AQARA"
+        },
+        {
+          "k": "Model",
+          "v": "Aqara H1 Pro 1 Gang (WS-EUK01)"
+        },
+        {
+          "k": "Chất liệu",
+          "v": "Khung hợp kim nhôm Anodized + Nhựa PC chống cháy"
+        }
+      ]
+    },
+    {
+      "id": 1197606,
+      "name": "Công tắc cao cấp AQARA H1 Pro 2 nút viền kim loại xám (Mặt vuông, Zigbee)",
+      "sku": "AQARA-SW-H1-2G",
+      "costPrice": 660000,
+      "retailPrice": 950000,
+      "originalPrice": 1190000,
+      "discountPercent": 20,
+      "unit": "Cái",
+      "primaryCategoryId": 54002,
+      "categoryIds": [
+        54002
+      ],
+      "categoryName": "Thiết bị Smarthome AQARA",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "AQARA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "2 nút điều khiển độc lập trên mặt vuông viền kim loại xám thời thượng.",
+        "Rơ-le Omron siêu bền chịu tải công suất cao không sợ dính tiếp điểm.",
+        "Đo điện năng tiêu thụ chuẩn xác, hiển thị trực quan trên Dashboard Home Assistant."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc cao cấp AQARA H1 Pro 2 nút viền kim loại xám (Mặt vuông, Zigbee) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "AQARA"
+        },
+        {
+          "k": "Model",
+          "v": "Aqara H1 Pro 2 Gang (WS-EUK02)"
+        },
+        {
+          "k": "Chất liệu",
+          "v": "Khung hợp kim nhôm Anodized cao cấp"
+        }
+      ]
+    },
+    {
+      "id": 1197607,
+      "name": "Công tắc AQARA Z1 Pro phím cơ kiêm thanh trượt cảm ứng (Zigbee 3.0, Matter)",
+      "sku": "AQARA-SW-Z1-PRO",
+      "costPrice": 790000,
+      "retailPrice": 1150000,
+      "originalPrice": 1400000,
+      "discountPercent": 18,
+      "unit": "Cái",
+      "primaryCategoryId": 54002,
+      "categoryIds": [
+        54002
+      ],
+      "categoryName": "Thiết bị Smarthome AQARA",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "AQARA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Đột phá công nghệ: Tích hợp thanh trượt cảm ứng cạnh phím bấm để vuốt điều chỉnh độ sáng đèn hoặc đóng mở rèm cửa.",
+        "Hỗ trợ giao thức Zigbee 3.0 và Matter, tương thích sâu với Home Assistant.",
+        "Đo đếm điện năng chi tiết, thiết kế siêu mỏng tinh xảo."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Công tắc AQARA Z1 Pro phím cơ kiêm thanh trượt cảm ứng (Zigbee 3.0, Matter) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "AQARA"
+        },
+        {
+          "k": "Model",
+          "v": "Aqara Z1 Pro Smart Switch (ZNQBKG42LM)"
+        },
+        {
+          "k": "Tính năng độc quyền",
+          "v": "Thanh trượt cảm ứng đa năng (Touch Slider)"
+        }
+      ]
+    },
+    {
+      "id": 1197608,
+      "name": "Cảm biến hiện diện người AQARA FP2 mmWave Radar (Định vị đa vùng, theo dõi nhiều người)",
+      "sku": "AQARA-SN-FP2",
+      "costPrice": 1350000,
+      "retailPrice": 1950000,
+      "originalPrice": 2450000,
+      "discountPercent": 20,
+      "unit": "Cái",
+      "primaryCategoryId": 54002,
+      "categoryIds": [
+        54002
+      ],
+      "categoryName": "Thiết bị Smarthome AQARA",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "AQARA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Đỉnh cao cảm biến hiện diện: Sử dụng sóng mmWave chia căn phòng thành tối đa 30 vùng phát hiện độc lập (vùng giường, vùng bàn làm việc, vùng sofa).",
+        "Theo dõi vị trí của tối đa 3 người cùng lúc trong phòng trong thời gian thực.",
+        "Tích hợp phát hiện té ngã cho người già, cảm biến ánh sáng, kết nối trực tiếp Home Assistant qua Apple HomeKit Controller hoặc HASS Integration."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Cảm biến hiện diện người AQARA FP2 mmWave Radar (Định vị đa vùng, theo dõi nhiều người) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "AQARA"
+        },
+        {
+          "k": "Model",
+          "v": "Aqara Presence Sensor FP2 (PS-S02D)"
+        },
+        {
+          "k": "Công nghệ",
+          "v": "Radar sóng milimet mmWave 60-64GHz"
+        },
+        {
+          "k": "Số vùng định vị",
+          "v": "Lên đến 30 vùng (Multi-zone Positioning)"
+        }
+      ]
+    },
+    {
+      "id": 1197609,
+      "name": "Cảm biến cửa từ AQARA Door & Window Sensor P2 (Giao thức Thread & Matter)",
+      "sku": "AQARA-SN-DOOR-P2",
+      "costPrice": 360000,
+      "retailPrice": 520000,
+      "originalPrice": 650000,
+      "discountPercent": 20,
+      "unit": "Cái",
+      "primaryCategoryId": 54002,
+      "categoryIds": [
+        54002
+      ],
+      "categoryName": "Thiết bị Smarthome AQARA",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "AQARA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Cảm biến cửa từ chuẩn kết nối Thread & Matter tiên tiến nhất hiện nay, kết nối trực tiếp Home Assistant không cần Hub Aqara.",
+        "Phản hồi siêu tốc trong mili-giây, phạm vi phủ sóng xa và không tốn pin.",
+        "Pin CR123A dung lượng lớn cho thời gian sử dụng đến 3 năm mới phải thay pin."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Cảm biến cửa từ AQARA Door & Window Sensor P2 (Giao thức Thread & Matter) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "AQARA"
+        },
+        {
+          "k": "Model",
+          "v": "Aqara Door & Window Sensor P2 (DW-S02D)"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Thread / Matter"
+        }
+      ]
+    },
+    {
+      "id": 1197610,
+      "name": "Động cơ rèm thông minh AQARA Curtain Driver E1 (Dạng ray tròn / ray chữ U)",
+      "sku": "AQARA-CURTAIN-E1",
+      "costPrice": 1150000,
+      "retailPrice": 1650000,
+      "originalPrice": 2100000,
+      "discountPercent": 21,
+      "unit": "Cái",
+      "primaryCategoryId": 54002,
+      "categoryIds": [
+        54002
+      ],
+      "categoryName": "Thiết bị Smarthome AQARA",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "AQARA",
+      "image": "images/smart_device.png",
+      "images": [
+        "images/smart_device.png"
+      ],
+      "features": [
+        "Biến rèm vải truyền thống thành rèm thông minh trong 5 phút mà không cần thay ray hay đi lại dây điện.",
+        "Tích hợp pin sạc dung lượng cao 6000mAh dùng 8-12 tháng cho một lần sạc qua cổng Type-C.",
+        "Kéo rèm siêu êm ái lực kéo 12kg, hỗ trợ đóng/mở theo lịch trình mặt trời mọc/lặn hoặc kịch bản Home Assistant."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Động cơ rèm thông minh AQARA Curtain Driver E1 (Dạng ray tròn / ray chữ U) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "AQARA"
+        },
+        {
+          "k": "Model",
+          "v": "Aqara Curtain Driver E1 (CM-M01)"
+        },
+        {
+          "k": "Pin",
+          "v": "Lithium 6000mAh sạc Type-C"
+        }
+      ]
+    },
+    {
+      "id": 1197611,
+      "name": "Khóa thông minh kéo đẩy Tenon A7x Face ID 3D (Camera chuông hình, Nhận diện khuôn mặt 3D hồng ngoại, Vân tay FPC, Mật mã, Thẻ, Chìa cơ, Wifi)",
+      "sku": "TENON-A7X",
+      "costPrice": 8900000,
+      "retailPrice": 18000000,
+      "originalPrice": 20700000,
+      "discountPercent": 13,
+      "unit": "Bộ",
+      "primaryCategoryId": 54003,
+      "categoryIds": [
+        54003,
+        52941
+      ],
+      "categoryName": "Khóa thông minh TENON",
+      "parentGroup": "Khóa Cửa Thông Minh",
+      "brand": "TENON",
+      "image": "https://tenontech.vn/wp-content/uploads/2022/11/a7x2-scaled.jpeg",
+      "images": [
+        "https://tenontech.vn/wp-content/uploads/2022/11/a7x2-scaled.jpeg",
+        "https://tenontech.vn/wp-content/uploads/2022/11/a7x1-scaled.jpeg",
+        "https://tenontech.vn/wp-content/uploads/2022/11/a7x3-scaled.jpeg",
+        "https://tenontech.vn/wp-content/uploads/2022/11/a7x4-scaled.jpeg",
+        "https://tenontech.vn/wp-content/uploads/2022/11/a7x5-scaled.jpeg"
+      ],
+      "features": [
+        "Model: TENON A7X – Cửa gỗ tự nhiên",
+        "Phương thức mở: Face ID 3D hồng ngoại, Camera chuông hình sắc nét, Vân tay FPC Thụy Điển, Mật mã ảo, Thẻ từ RFID, Chìa cơ vi tính, App Wifi",
+        "Kháng nước: IP54 chuyên dụng cửa chính căn hộ và biệt thự",
+        "Điểm nổi bật: Đỉnh cao công nghệ: Face ID 3D nhận diện khuôn mặt tức thì chỉ với một ánh nhìn",
+        "Tính năng: Màn hình IPS quan sát bên trong và chuông hình đàm thoại qua điện thoại",
+        "Bảo hành: 24 tháng chính hãng Tenon tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tenon",
+      "inStock": true,
+      "description": "Khóa thông minh cao cấp A7x chính hãng TENON – Đột phá an ninh công nghệ cao với tính năng nhận diện khuôn mặt Face ID 3D hồng ngoại chống nhận diện ảnh giả, kết hợp camera chuông hình góc rộng quan sát khách bấm chuông trực tiếp. Phù hợp cho Cửa gỗ / Cửa thép chống cháy. Tích hợp đầy đủ các phương thức mở khóa: Face ID 3D, Vân tay FPC Thụy Điển, Mật mã ảo, Thẻ từ RFID, Chìa cơ và quản lý qua App điện thoại. Phân phối chính hãng bởi Chu Gia Security.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TENON (Chính hãng phân phối bởi Chu Gia)"
+        },
+        {
+          "k": "Model",
+          "v": "A7X"
+        },
+        {
+          "k": "Loại cửa phù hợp",
+          "v": "Cửa gỗ tự nhiên, Cửa gỗ công nghiệp, Cửa thép chống cháy căn hộ & biệt thự (dày 40-100mm)"
+        },
+        {
+          "k": "Phương thức mở khóa",
+          "v": "Face ID 3D hồng ngoại, Camera chuông hình sắc nét, Vân tay FPC Thụy Điển, Mật mã ảo, Thẻ từ RFID, Chìa cơ vi tính, App Wifi"
+        },
+        {
+          "k": "Tiêu chuẩn kháng nước / bụi",
+          "v": "IP54 chuyên dụng cửa chính căn hộ và biệt thự"
+        },
+        {
+          "k": "Nguồn điện hoạt động",
+          "v": "Pin sạc Lithium 4200mAh tháo rời tiện lợi, sạc Type-C"
+        },
+        {
+          "k": "Dung lượng lưu trữ",
+          "v": "50 Khuôn mặt 3D, 100 Vân tay, 100 Thẻ từ, 100 Mật mã"
+        },
+        {
+          "k": "Cảm biến vân tay",
+          "v": "Sinh trắc học bán dẫn FPC Thụy Điển (nhận diện < 0.5 giây)"
+        },
+        {
+          "k": "Mật mã bảo mật",
+          "v": "Mật khẩu ảo 16-32 ký tự chống nhìn trộm"
+        },
+        {
+          "k": "Thẻ từ",
+          "v": "Thẻ chip RFID chống sao chép tần số cao 13.56MHz"
+        },
+        {
+          "k": "Cảnh báo an ninh",
+          "v": "Cảnh báo cạy khóa, nhập sai mã 5 lần, cảnh báo pin yếu"
+        },
+        {
+          "k": "Chế độ tự động khóa",
+          "v": "Tự động phóng chốt khóa ngay sau khi khép cửa"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 trong 30 ngày bởi Chu Gia Security"
+        }
+      ],
+      "tenonUrl": "https://tenontech.vn/a7x-nhan-dien-khuon-mat-3d/"
+    },
+    {
+      "id": 1197612,
+      "name": "Khóa cửa vân tay thông minh TENON K5 (Tay gạt siêu bền bỉ, Vân tay FPC, Thẻ từ, Mã số ảo, Chìa cơ)",
+      "sku": "TENON-K5",
+      "costPrice": 3100000,
+      "retailPrice": 4800000,
+      "originalPrice": 5900000,
+      "discountPercent": 19,
+      "unit": "Cái",
+      "primaryCategoryId": 54003,
+      "categoryIds": [
+        54003
+      ],
+      "categoryName": "Khóa thông minh TENON",
+      "parentGroup": "Khóa Cửa Thông Minh",
+      "brand": "TENON",
+      "image": "images/smart_lock.png",
+      "images": [
+        "images/smart_lock.png"
+      ],
+      "features": [
+        "Thiết kế tay gạt truyền thống với cấu trúc trợ lực ổ bi cơ học siêu bền, chịu tải 300.000 lần gạt mở không xệ tay cầm.",
+        "Cảm biến vân tay bán dẫn FPC Thụy Điển nhận diện chính xác kể cả vân tay người lớn tuổi mờ hoặc tay dính nước.",
+        "Bàn phím cảm ứng chống nhìn trộm với tính năng nhập mã số ảo trước và sau mật khẩu thật.",
+        "Ruột khóa inox 304 tiêu chuẩn an toàn cấp C chống cưa cắt phá hoại, kết nối đồng bộ Home Assistant."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Khóa cửa vân tay thông minh TENON K5 (Tay gạt siêu bền bỉ, Vân tay FPC, Thẻ từ, Mã số ảo, Chìa cơ) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TENON"
+        },
+        {
+          "k": "Model",
+          "v": "Tenon K5 Smart Lock"
+        },
+        {
+          "k": "Phương thức mở khóa",
+          "v": "Vân tay FPC, Mật mã ảo, Thẻ từ, Chìa cơ dự phòng"
+        },
+        {
+          "k": "Chất liệu",
+          "v": "Hợp kim kẽm đúc nguyên khối, mặt phủ kính cường lực"
+        },
+        {
+          "k": "Nguồn điện",
+          "v": "4 pin AA 1.5V (sử dụng 12 tháng)"
+        },
+        {
+          "k": "Cảnh báo",
+          "v": "Cảnh báo pin yếu, cảnh báo cạy khóa, cảnh báo nhập sai 5 lần"
+        },
+        {
+          "k": "Thích hợp cho cửa",
+          "v": "Cửa gỗ, cửa chống cháy, cửa thép (độ dày cửa 38 - 100mm)"
+        }
+      ]
+    },
+    {
+      "id": 1197613,
+      "name": "Khóa cửa thông minh TENON E3 dạng Push-Pull hiện đại (Vân tay 1 chạm, Chuông cửa tích hợp)",
+      "sku": "TENON-E3",
+      "costPrice": 3600000,
+      "retailPrice": 5600000,
+      "originalPrice": 6900000,
+      "discountPercent": 19,
+      "unit": "Cái",
+      "primaryCategoryId": 54003,
+      "categoryIds": [
+        54003
+      ],
+      "categoryName": "Khóa thông minh TENON",
+      "parentGroup": "Khóa Cửa Thông Minh",
+      "brand": "TENON",
+      "image": "images/smart_lock.png",
+      "images": [
+        "images/smart_lock.png"
+      ],
+      "features": [
+        "Dạng tay kéo đẩy Push-Pull thời thượng, mở cửa bằng một thao tác đẩy nhẹ nhàng, hiện đại chuẩn phong cách căn hộ cao cấp.",
+        "Cảm biến vân tay nằm ngay trên vị trí ngón tay cái của tay nắm kéo đẩy, mở khóa 1 chạm siêu nhanh.",
+        "Tích hợp sẵn chuông cửa âm thanh lớn ngay trên mặt khóa ngoài, không cần lắp thêm chuông phụ.",
+        "Kết nối điện thoại quản lý lịch sử mở cửa theo thời gian thực, cấp mật mã tạm thời cho người quen."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Khóa cửa thông minh TENON E3 dạng Push-Pull hiện đại (Vân tay 1 chạm, Chuông cửa tích hợp) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TENON"
+        },
+        {
+          "k": "Model",
+          "v": "Tenon E3 Push-Pull Lock"
+        },
+        {
+          "k": "Phương thức mở khóa",
+          "v": "Vân tay, Mật khẩu, Thẻ từ, Chìa cơ, App điện thoại"
+        },
+        {
+          "k": "Dạng tay cầm",
+          "v": "Kéo - Đẩy (Push - Pull)"
+        },
+        {
+          "k": "Chuông cửa",
+          "v": "Tích hợp sẵn trên mặt khóa"
+        }
+      ]
+    },
+    {
+      "id": 1197614,
+      "name": "Khóa cửa thông minh TENON A5 bán tự động chống cạy phá (Cửa gỗ & Cửa chống cháy)",
+      "sku": "TENON-A5",
+      "costPrice": 2500000,
+      "retailPrice": 3900000,
+      "originalPrice": 4800000,
+      "discountPercent": 19,
+      "unit": "Cái",
+      "primaryCategoryId": 54003,
+      "categoryIds": [
+        54003
+      ],
+      "categoryName": "Khóa thông minh TENON",
+      "parentGroup": "Khóa Cửa Thông Minh",
+      "brand": "TENON",
+      "image": "images/smart_lock.png",
+      "images": [
+        "images/smart_lock.png"
+      ],
+      "features": [
+        "Mẫu khóa thông minh phân khúc tối ưu chi phí nhưng độ bền bỉ cơ học cực cao của thương hiệu Tenon.",
+        "Vân tay bán dẫn độ nhạy cao, bàn phím số chống trầy, thân khóa hợp kim chắc chắn.",
+        "Bảo mật đa lớp: Tự động khóa chốt khi đóng cửa, phát âm thanh cảnh báo khi có kẻ gian cạy nạy mặt khóa."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Khóa cửa thông minh TENON A5 bán tự động chống cạy phá (Cửa gỗ & Cửa chống cháy) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TENON"
+        },
+        {
+          "k": "Model",
+          "v": "Tenon A5 Smart Lock"
+        },
+        {
+          "k": "Phương thức mở khóa",
+          "v": "Vân tay, Mật mã, Thẻ từ, Chìa cơ"
+        }
+      ]
+    },
+    {
+      "id": 1197615,
+      "name": "Bộ điều khiển trung tâm Home Assistant Green (Chính hãng Nabu Casa, HASS OS cài sẵn)",
+      "sku": "HASS-GREEN",
+      "costPrice": 1950000,
+      "retailPrice": 2850000,
+      "originalPrice": 3500000,
+      "discountPercent": 19,
+      "unit": "Cái",
+      "primaryCategoryId": 54004,
+      "categoryIds": [
+        54004
+      ],
+      "categoryName": "Bộ não Home Assistant & Zigbee",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "Home Assistant",
+      "image": "images/sensor_hub.png",
+      "images": [
+        "images/sensor_hub.png"
+      ],
+      "features": [
+        "Bộ não trung tâm Smarthome hoàn hảo nhất: Chạy hệ điều hành Home Assistant OS nguyên bản, kiểm soát 100% thiết bị tại chỗ (Local Control) mà không phụ thuộc cloud hay internet.",
+        "Phần cứng tối ưu: Vi xử lý Rockchip RK3566 Quad-Core 1.8GHz, 4GB RAM, 32GB bộ nhớ eMMC độ bền công nghiệp.",
+        "Cổng mạng Gigabit LAN, tích hợp sâu mọi thiết bị Tuya, Aqara, Khóa Tenon, Camera Dahua/Hikvision, Chuông hình mở cổng vào một giao diện Dashboard duy nhất."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Bộ điều khiển trung tâm Home Assistant Green (Chính hãng Nabu Casa, HASS OS cài sẵn) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "Home Assistant (Nabu Casa)"
+        },
+        {
+          "k": "Model",
+          "v": "Home Assistant Green (NC-GREEN-1175)"
+        },
+        {
+          "k": "Vi xử lý",
+          "v": "Quad-core Cortex-A55 1.8GHz"
+        },
+        {
+          "k": "Bộ nhớ RAM",
+          "v": "4GB LPDDR4X"
+        },
+        {
+          "k": "Bộ nhớ trong",
+          "v": "32GB eMMC Flash"
+        },
+        {
+          "k": "Hệ điều hành",
+          "v": "Home Assistant OS nguyên bản"
+        },
+        {
+          "k": "Cổng kết nối",
+          "v": "Gigabit Ethernet, 2 cổng USB 2.0, khe thẻ nhớ microSD"
+        }
+      ]
+    },
+    {
+      "id": 1197616,
+      "name": "USB Zigbee 3.0 Dongle Plus SONOFF ZBDongle-P (Antenna 20dBm, Tương thích Z2M & ZHA)",
+      "sku": "SONOFF-ZBDONGLE-P",
+      "costPrice": 320000,
+      "retailPrice": 490000,
+      "originalPrice": 620000,
+      "discountPercent": 21,
+      "unit": "Cái",
+      "primaryCategoryId": 54004,
+      "categoryIds": [
+        54004
+      ],
+      "categoryName": "Bộ não Home Assistant & Zigbee",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "Home Assistant",
+      "image": "images/sensor_hub.png",
+      "images": [
+        "images/sensor_hub.png"
+      ],
+      "features": [
+        "Bộ thu phát sóng Zigbee 3.0 mạnh nhất dùng chip Texas Instruments CC2652P, công suất phát khuếch đại lên đến 20dBm.",
+        "Vỏ nhôm tản nhiệt nguyên khối kèm ăng-ten rời giúp phủ sóng xuyên tường cực tốt trong nhà nhiều tầng.",
+        "Tương thích hoàn hảo với Zigbee2MQTT và ZHA trên Home Assistant để kết nối hàng trăm công tắc Tuya, cảm biến Aqara mà không cần mua Hub chính hãng."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "USB Zigbee 3.0 Dongle Plus SONOFF ZBDongle-P (Antenna 20dBm, Tương thích Z2M & ZHA) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "SONOFF"
+        },
+        {
+          "k": "Model",
+          "v": "ZBDongle-P (TI CC2652P)"
+        },
+        {
+          "k": "Công suất phát",
+          "v": "20dBm (kèm ăng-ten ngoài xoay 360°)"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0"
+        },
+        {
+          "k": "Giao diện",
+          "v": "USB-A (cắm vào Home Assistant Green / Mini PC)"
+        }
+      ]
+    },
+    {
+      "id": 1197617,
+      "name": "Camera DAHUA DH-IPC-HDW2249T-S-IL (Dome PoE 2MP, Ánh sáng kép thông minh, AI SMD Plus, Liền Mic)",
+      "sku": "DH-IPC-HDW2249T-S-IL",
+      "costPrice": 950000,
+      "retailPrice": 1450000,
+      "originalPrice": 1850000,
+      "discountPercent": 22,
+      "unit": "Cái",
+      "primaryCategoryId": 52932,
+      "categoryIds": [
+        52932
+      ],
+      "categoryName": "Camera IP DAHUA",
+      "parentGroup": "Camera IP & Đầu Ghi Chuyên Dụng",
+      "brand": "DAHUA",
+      "image": "images/cam_outdoor.jpg",
+      "images": [
+        "images/cam_outdoor.jpg"
+      ],
+      "features": [
+        "Công nghệ Ánh sáng kép thông minh Smart Dual Light: Bình thường ghi hình hồng ngoại vô hình, khi AI phát hiện người lập tức bật đèn rọi LED rực rỡ để ghi hình màu sắc nét và răn đe.",
+        "Cấp nguồn qua dây mạng PoE (IEEE 802.3af), không cần kéo nguồn điện 220V rời, an toàn và thẩm mỹ cao.",
+        "AI SMD Plus phân loại chính xác người và phương tiện, lọc 99% báo động giả do chó mèo, lá cây, mưa gió.",
+        "Tích hợp micro thu âm thanh trung thực, tiêu chuẩn chống nước IP67 lắp đặt thoải mái trong nhà và ngoài trời."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Camera DAHUA DH-IPC-HDW2249T-S-IL (Dome PoE 2MP, Ánh sáng kép thông minh, AI SMD Plus, Liền Mic) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "DAHUA"
+        },
+        {
+          "k": "Model (SKU)",
+          "v": "DH-IPC-HDW2249T-S-IL"
+        },
+        {
+          "k": "Độ phân giải",
+          "v": "2MP (1920 × 1080) Full HD"
+        },
+        {
+          "k": "Công nghệ ánh sáng",
+          "v": "Smart Dual Light (Hồng ngoại 30m + Đèn LED rọi ấm 30m)"
+        },
+        {
+          "k": "Nguồn cấp",
+          "v": "PoE (802.3af) hoặc 12 VDC"
+        },
+        {
+          "k": "Tính năng AI",
+          "v": "SMD Plus phát hiện người & phương tiện"
+        },
+        {
+          "k": "Âm thanh",
+          "v": "Tích hợp Mic thu âm"
+        }
+      ]
+    },
+    {
+      "id": 1197618,
+      "name": "Camera DAHUA DH-IPC-HFW3449E-AS-TIOC (Thân 4MP TiOC 3-trong-1, Còi hú báo động & Đèn rọi chớp xanh đỏ xua trộm, PoE)",
+      "sku": "DH-IPC-HFW3449E-AS-TIOC",
+      "costPrice": 1850000,
+      "retailPrice": 2850000,
+      "originalPrice": 3600000,
+      "discountPercent": 21,
+      "unit": "Cái",
+      "primaryCategoryId": 52932,
+      "categoryIds": [
+        52932
+      ],
+      "categoryName": "Camera IP DAHUA",
+      "parentGroup": "Camera IP & Đầu Ghi Chuyên Dụng",
+      "brand": "DAHUA",
+      "image": "images/cam_outdoor.jpg",
+      "images": [
+        "images/cam_outdoor.jpg"
+      ],
+      "features": [
+        "Dòng camera đỉnh cao TiOC (Three-in-One Camera) kết hợp: Giám sát có màu 24/7 Full-Color + AI phát hiện người chính xác + Báo động chủ động bằng còi hú to và đèn chớp xanh đỏ.",
+        "Khi có người lạ đột nhập hàng rào / cổng vào ban đêm: Camera tự động bật đèn rọi cực sáng, chớp đèn cảnh sát xanh đỏ và hú còi cảnh cáo xua đuổi trộm ngay từ cổng.",
+        "Loa to công suất lớn và mic chống ồn hỗ trợ đàm thoại 2 chiều trực tiếp qua điện thoại và Home Assistant.",
+        "Độ phân giải 4MP siêu nét 2K, cấp nguồn PoE tiện lợi, vỏ kim loại chống nước IP67 bền bỉ."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Camera DAHUA DH-IPC-HFW3449E-AS-TIOC (Thân 4MP TiOC 3-trong-1, Còi hú báo động & Đèn rọi chớp xanh đỏ xua trộm, PoE) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "DAHUA"
+        },
+        {
+          "k": "Model (SKU)",
+          "v": "DH-IPC-HFW3449E-AS-TIOC"
+        },
+        {
+          "k": "Độ phân giải",
+          "v": "4MP (2688 × 1520) 2K"
+        },
+        {
+          "k": "Tính năng răn đe",
+          "v": "Còi hú báo động 110dB + Đèn chớp xanh đỏ răn đe chủ động"
+        },
+        {
+          "k": "Ánh sáng ban đêm",
+          "v": "Full-color ban đêm có màu 24/7 (Đèn rọi 30m)"
+        },
+        {
+          "k": "Nguồn cấp",
+          "v": "PoE (802.3af) hoặc 12 VDC"
+        },
+        {
+          "k": "Đàm thoại",
+          "v": "Mic và Loa tích hợp đàm thoại 2 chiều"
+        }
+      ]
+    },
+    {
+      "id": 1197619,
+      "name": "Camera HIKVISION DS-2CD1327G0-L (Dome 2MP ColorVu ban đêm có màu 24/7, Đèn rọi LED ấm, PoE)",
+      "sku": "DS-2CD1327G0-L",
+      "costPrice": 920000,
+      "retailPrice": 1420000,
+      "originalPrice": 1790000,
+      "discountPercent": 21,
+      "unit": "Cái",
+      "primaryCategoryId": 52936,
+      "categoryIds": [
+        52936
+      ],
+      "categoryName": "Camera IP HIKVISION",
+      "parentGroup": "Camera IP & Đầu Ghi Chuyên Dụng",
+      "brand": "HIKVISION",
+      "image": "images/cam_outdoor.jpg",
+      "images": [
+        "images/cam_outdoor.jpg"
+      ],
+      "features": [
+        "Công nghệ ColorVu độc quyền Hikvision với khẩu độ siêu lớn F1.0 thu sáng gấp 4 lần camera thường, cho hình ảnh ban đêm luôn luôn có màu rực rỡ như ban ngày.",
+        "Trang bị đèn rọi ánh sáng trắng dịu nhẹ tầm xa 30 mét hỗ trợ quan sát rõ mặt người, biển số xe trong bóng tối hoàn toàn.",
+        "Cấp nguồn PoE tiêu chuẩn qua cáp mạng LAN, chống nước tiêu chuẩn IP67.",
+        "Truyền luồng RTSP chuẩn xác mượt mà vào Home Assistant để hiển thị trên Dashboard trung tâm."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Camera HIKVISION DS-2CD1327G0-L (Dome 2MP ColorVu ban đêm có màu 24/7, Đèn rọi LED ấm, PoE) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "HIKVISION"
+        },
+        {
+          "k": "Model (SKU)",
+          "v": "DS-2CD1327G0-L"
+        },
+        {
+          "k": "Độ phân giải",
+          "v": "2MP (1920 × 1080) Full HD"
+        },
+        {
+          "k": "Công nghệ màu đêm",
+          "v": "ColorVu 24/7 (Khẩu độ F1.0 + Đèn rọi ánh sáng ấm 30m)"
+        },
+        {
+          "k": "Nguồn cấp",
+          "v": "PoE (802.3af) hoặc 12 VDC"
+        },
+        {
+          "k": "Tiêu chuẩn bảo vệ",
+          "v": "IP67 chống nước mưa ngoài trời"
+        }
+      ]
+    },
+    {
+      "id": 1197620,
+      "name": "Camera HIKVISION DS-2CD2047G2-LU (Thân 4MP ColorVu + AcuSense AI phát hiện người/xe, Đèn rọi Warm Light, Mic, PoE)",
+      "sku": "DS-2CD2047G2-LU",
+      "costPrice": 1550000,
+      "retailPrice": 2390000,
+      "originalPrice": 2990000,
+      "discountPercent": 20,
+      "unit": "Cái",
+      "primaryCategoryId": 52936,
+      "categoryIds": [
+        52936
+      ],
+      "categoryName": "Camera IP HIKVISION",
+      "parentGroup": "Camera IP & Đầu Ghi Chuyên Dụng",
+      "brand": "HIKVISION",
+      "image": "images/cam_outdoor.jpg",
+      "images": [
+        "images/cam_outdoor.jpg"
+      ],
+      "features": [
+        "Sự kết hợp hoàn mỹ giữa ColorVu thế hệ 2 (đêm có màu 24/7) và thuật toán trí tuệ nhân tạo AcuSense AI nhận diện chính xác người và phương tiện.",
+        "Độ phân giải 4MP 2K siêu nét, khẩu độ siêu sáng F1.0, đèn rọi trợ sáng ban đêm 40 mét.",
+        "Tích hợp micro thu âm thanh thực địa rõ ràng, hỗ trợ chống ngược sáng thực WDR 130dB.",
+        "Cấp nguồn PoE, vỏ hợp kim nguyên khối IP67 chuyên dụng cho cổng nhà, sân vườn biệt thự."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Camera HIKVISION DS-2CD2047G2-LU (Thân 4MP ColorVu + AcuSense AI phát hiện người/xe, Đèn rọi Warm Light, Mic, PoE) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "HIKVISION"
+        },
+        {
+          "k": "Model (SKU)",
+          "v": "DS-2CD2047G2-LU"
+        },
+        {
+          "k": "Độ phân giải",
+          "v": "4MP (2688 × 1520) 2K"
+        },
+        {
+          "k": "Công nghệ AI",
+          "v": "AcuSense Deep Learning phân loại người và phương tiện"
+        },
+        {
+          "k": "Đèn rọi ban đêm",
+          "v": "Warm Light rực sáng tầm xa 40 mét"
+        },
+        {
+          "k": "Nguồn cấp",
+          "v": "PoE (802.3af) hoặc 12 VDC"
+        },
+        {
+          "k": "Microphone",
+          "v": "Tích hợp sẵn micro thu âm"
+        }
+      ]
+    },
+    {
+      "id": 1197621,
+      "name": "Camera HIKVISION DS-2CD2347G2-LSU/SL (Dome 4MP Live-Guard ColorVu AcuSense: Còi hú + Đèn chớp răn đe + Đàm thoại 2 chiều, PoE)",
+      "sku": "DS-2CD2347G2-LSU/SL",
+      "costPrice": 2050000,
+      "retailPrice": 3150000,
+      "originalPrice": 3950000,
+      "discountPercent": 20,
+      "unit": "Cái",
+      "primaryCategoryId": 52936,
+      "categoryIds": [
+        52936
+      ],
+      "categoryName": "Camera IP HIKVISION",
+      "parentGroup": "Camera IP & Đầu Ghi Chuyên Dụng",
+      "brand": "HIKVISION",
+      "image": "images/cam_outdoor.jpg",
+      "images": [
+        "images/cam_outdoor.jpg"
+      ],
+      "features": [
+        "Hệ thống Live-Guard răn đe chủ động cao cấp nhất của Hikvision: Phát hiện người xâm nhập -> Bật đèn rọi nhấp nháy liên tục + Phát âm thanh còi hú báo động xua đuổi kẻ gian.",
+        "Độ phân giải 4MP sắc nét, công nghệ ColorVu ban đêm có màu 24/7 với đèn rọi tầm xa 30 mét.",
+        "Tích hợp cả loa và micro hỗ trợ đàm thoại 2 chiều trực tiếp qua điện thoại hoặc Home Assistant.",
+        "Cấp nguồn PoE tiện lợi, thiết kế dạng bán cầu kim loại sang trọng chống va đập và chống nước IP67."
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Camera HIKVISION DS-2CD2347G2-LSU/SL (Dome 4MP Live-Guard ColorVu AcuSense: Còi hú + Đèn chớp răn đe + Đàm thoại 2 chiều, PoE) chính hãng phân phối bởi Chu Gia Security. Bảo hành 1 đổi 1 trong 24 tháng, hỗ trợ tích hợp hoàn hảo với hệ thống Home Assistant và Smarthome.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "HIKVISION"
+        },
+        {
+          "k": "Model (SKU)",
+          "v": "DS-2CD2347G2-LSU/SL"
+        },
+        {
+          "k": "Độ phân giải",
+          "v": "4MP (2688 × 1520)"
+        },
+        {
+          "k": "Tính năng răn đe Live-Guard",
+          "v": "Đèn chớp nhấp nháy cảnh báo + Còi hú âm thanh lớn"
+        },
+        {
+          "k": "Đàm thoại",
+          "v": "Tích hợp cả Loa và Micro đàm thoại 2 chiều"
+        },
+        {
+          "k": "Nguồn cấp",
+          "v": "PoE (802.3af) hoặc 12 VDC"
+        }
+      ]
+    },
+    {
+      "id": 990001,
+      "name": "Khóa điện tử Tenon AL5 Pro (Chống nước IP65 chuyên Cửa nhôm Xingfa, Vân tay, Thẻ từ, Mã số, Chìa cơ, App TTLock)",
+      "sku": "TENON-AL5-PRO",
+      "costPrice": 4200000,
+      "retailPrice": 16000000,
+      "originalPrice": 18400000,
+      "discountPercent": 13,
+      "unit": "Bộ",
+      "primaryCategoryId": 54003,
+      "categoryIds": [
+        54003,
+        52941
+      ],
+      "categoryName": "Khóa thông minh TENON",
+      "parentGroup": "Khóa Cửa Thông Minh",
+      "brand": "TENON",
+      "image": "https://tenontech.vn/wp-content/uploads/2024/06/AL5-Pro-bac-2-2.png",
+      "images": [
+        "https://tenontech.vn/wp-content/uploads/2024/06/AL5-Pro-bac-2-2.png",
+        "https://tenontech.vn/wp-content/uploads/2024/06/AL5-Pro-den-5.png",
+        "https://tenontech.vn/wp-content/uploads/2024/06/AL5-Pro-cua-1.png",
+        "https://tenontech.vn/wp-content/uploads/2024/06/AL5-PRO-cua.png"
+      ],
+      "features": [
+        "Model: TENON AL5-PRO – Cửa nhôm hệ Xingfa",
+        "Phương thức mở: Vân tay FPC Thụy Điển, Thẻ từ RFID, Mật mã ảo, Chìa cơ vi tính, App TTLock / Bluetooth (Mở rộng Gateway Wifi)",
+        "Kháng nước: IP65 Kháng nước, chống bụi hoàn hảo khi lắp cửa chính ngoài ban công / hiên nhà",
+        "Điểm nổi bật: Chuẩn chống nước ngoài trời IP65",
+        "Tính năng: Vân tay FPC siêu nhạy < 0.5s",
+        "Bảo hành: 24 tháng chính hãng Tenon tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tenon",
+      "inStock": true,
+      "description": "Khóa thông minh AL5 Pro chính hãng TENON – Giải pháp kiểm soát an ninh tối tân cho Cửa nhôm Xingfa / Đố hẹp. Sản phẩm được trang bị cảm biến vân tay FPC bán dẫn Thụy Điển độ chính xác cao nhận diện <0.5s, tích hợp mã số ảo chống nhìn trộm, thẻ từ RFID tần số cao, chìa khóa cơ dự phòng chống sao chép và khả năng quản lý từ xa qua App điện thoại. Khóa được phân phối và bảo hành chính hãng 24 tháng bởi Chu Gia Security.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TENON (Chính hãng phân phối bởi Chu Gia)"
+        },
+        {
+          "k": "Model",
+          "v": "AL5-PRO"
+        },
+        {
+          "k": "Loại cửa phù hợp",
+          "v": "Cửa nhôm hệ Xingfa, Cửa nhôm kính đố hẹp (đố cửa ≥ 50mm, dày 35-90mm)"
+        },
+        {
+          "k": "Phương thức mở khóa",
+          "v": "Vân tay FPC Thụy Điển, Thẻ từ RFID, Mật mã ảo, Chìa cơ vi tính, App TTLock / Bluetooth (Mở rộng Gateway Wifi)"
+        },
+        {
+          "k": "Tiêu chuẩn kháng nước / bụi",
+          "v": "IP65 Kháng nước, chống bụi hoàn hảo khi lắp cửa chính ngoài ban công / hiên nhà"
+        },
+        {
+          "k": "Nguồn điện hoạt động",
+          "v": "4 pin AA 1.5V Alkaline (thời lượng 10-12 tháng), cổng sạc khẩn cấp Type-C"
+        },
+        {
+          "k": "Dung lượng lưu trữ",
+          "v": "100 Vân tay, 100 Mật mã, 100 Thẻ từ RFID"
+        },
+        {
+          "k": "Cảm biến vân tay",
+          "v": "Sinh trắc học bán dẫn FPC Thụy Điển (nhận diện < 0.5 giây)"
+        },
+        {
+          "k": "Mật mã bảo mật",
+          "v": "Mật khẩu ảo 16-32 ký tự chống nhìn trộm"
+        },
+        {
+          "k": "Thẻ từ",
+          "v": "Thẻ chip RFID chống sao chép tần số cao 13.56MHz"
+        },
+        {
+          "k": "Cảnh báo an ninh",
+          "v": "Cảnh báo cạy khóa, nhập sai mã 5 lần, cảnh báo pin yếu"
+        },
+        {
+          "k": "Chế độ tự động khóa",
+          "v": "Tự động phóng chốt khóa ngay sau khi khép cửa"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 trong 30 ngày bởi Chu Gia Security"
+        }
+      ],
+      "tenonUrl": "https://tenontech.vn/khoa-thong-minh-al5-pro/"
+    },
+    {
+      "id": 990002,
+      "name": "Khóa điện tử Tenon AL8 Face ID (Chuyên Cửa nhôm Xingfa, Nhận diện khuôn mặt 3D, Chuông hình, Vân tay, Mật mã, Thẻ, Chìa cơ)",
+      "sku": "TENON-AL8",
+      "costPrice": 6500000,
+      "retailPrice": 26600000,
+      "originalPrice": 30589999,
+      "discountPercent": 13,
+      "unit": "Bộ",
+      "primaryCategoryId": 54003,
+      "categoryIds": [
+        54003,
+        52941
+      ],
+      "categoryName": "Khóa thông minh TENON",
+      "parentGroup": "Khóa Cửa Thông Minh",
+      "brand": "TENON",
+      "image": "https://tenontech.vn/wp-content/uploads/2023/07/7-2.png",
+      "images": [
+        "https://tenontech.vn/wp-content/uploads/2023/07/7-2.png",
+        "https://tenontech.vn/wp-content/uploads/2023/07/8.png",
+        "https://tenontech.vn/wp-content/uploads/2023/07/9-2.png",
+        "https://tenontech.vn/wp-content/uploads/2023/07/AL8.png"
+      ],
+      "features": [
+        "Model: TENON AL8 – Cửa nhôm hệ Xingfa",
+        "Phương thức mở: Face ID nhận diện khuôn mặt 3D, Vân tay FPC, Camera chuông hình đàm thoại, Mật mã, Thẻ từ, Chìa cơ, App Tenon Smart / Wifi",
+        "Kháng nước: IP54 chống nước hắt nhẹ trong nhà hoặc có mái che",
+        "Điểm nổi bật: Nhận diện Face ID 3D hồng ngoại không lo ngược sáng hay bóng đêm",
+        "Tính năng: Tích hợp màn hình chuông hình đàm thoại 2 chiều",
+        "Bảo hành: 24 tháng chính hãng Tenon tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tenon",
+      "inStock": true,
+      "description": "Khóa thông minh cao cấp AL8 chính hãng TENON – Đột phá an ninh công nghệ cao với tính năng nhận diện khuôn mặt Face ID 3D hồng ngoại chống nhận diện ảnh giả, kết hợp camera chuông hình góc rộng quan sát khách bấm chuông trực tiếp. Phù hợp cho Cửa nhôm Xingfa / Đố hẹp. Tích hợp đầy đủ các phương thức mở khóa: Face ID 3D, Vân tay FPC Thụy Điển, Mật mã ảo, Thẻ từ RFID, Chìa cơ và quản lý qua App điện thoại. Phân phối chính hãng bởi Chu Gia Security.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TENON (Chính hãng phân phối bởi Chu Gia)"
+        },
+        {
+          "k": "Model",
+          "v": "AL8"
+        },
+        {
+          "k": "Loại cửa phù hợp",
+          "v": "Cửa nhôm hệ Xingfa, Cửa nhôm đố hẹp (đố cửa ≥ 55mm, dày 35-100mm)"
+        },
+        {
+          "k": "Phương thức mở khóa",
+          "v": "Face ID nhận diện khuôn mặt 3D, Vân tay FPC, Camera chuông hình đàm thoại, Mật mã, Thẻ từ, Chìa cơ, App Tenon Smart / Wifi"
+        },
+        {
+          "k": "Tiêu chuẩn kháng nước / bụi",
+          "v": "IP54 chống nước hắt nhẹ trong nhà hoặc có mái che"
+        },
+        {
+          "k": "Nguồn điện hoạt động",
+          "v": "Pin sạc Lithium dung lượng cao 4200mAh kèm cáp sạc Type-C"
+        },
+        {
+          "k": "Dung lượng lưu trữ",
+          "v": "50 Khuôn mặt Face ID 3D, 100 Vân tay, 100 Mật mã, 100 Thẻ từ"
+        },
+        {
+          "k": "Cảm biến vân tay",
+          "v": "Sinh trắc học bán dẫn FPC Thụy Điển (nhận diện < 0.5 giây)"
+        },
+        {
+          "k": "Mật mã bảo mật",
+          "v": "Mật khẩu ảo 16-32 ký tự chống nhìn trộm"
+        },
+        {
+          "k": "Thẻ từ",
+          "v": "Thẻ chip RFID chống sao chép tần số cao 13.56MHz"
+        },
+        {
+          "k": "Cảnh báo an ninh",
+          "v": "Cảnh báo cạy khóa, nhập sai mã 5 lần, cảnh báo pin yếu"
+        },
+        {
+          "k": "Chế độ tự động khóa",
+          "v": "Tự động phóng chốt khóa ngay sau khi khép cửa"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 trong 30 ngày bởi Chu Gia Security"
+        }
+      ],
+      "tenonUrl": "https://tenontech.vn/khoa-thong-minh-al8/"
+    },
+    {
+      "id": 990003,
+      "name": "Khóa điện tử Tenon AL5 (Chuyên Cửa nhôm hệ Xingfa đố hẹp, Vân tay trên tay cầm, Mã số ảo, Thẻ RFID, Chìa cơ, App)",
+      "sku": "TENON-AL5",
+      "costPrice": 3600000,
+      "retailPrice": 12300000,
+      "originalPrice": 14144999,
+      "discountPercent": 13,
+      "unit": "Bộ",
+      "primaryCategoryId": 54003,
+      "categoryIds": [
+        54003,
+        52941
+      ],
+      "categoryName": "Khóa thông minh TENON",
+      "parentGroup": "Khóa Cửa Thông Minh",
+      "brand": "TENON",
+      "image": "https://tenontech.vn/wp-content/uploads/2023/04/HB-CN86-Black-avt.png",
+      "images": [
+        "https://tenontech.vn/wp-content/uploads/2023/04/HB-CN86-Black-avt.png",
+        "https://tenontech.vn/wp-content/uploads/2023/04/al5-lg.png",
+        "https://tenontech.vn/wp-content/uploads/2023/04/AL5-1.png"
+      ],
+      "features": [
+        "Model: TENON AL5 – Cửa nhôm Xingfa",
+        "Phương thức mở: Vân tay trên tay nắm, Thẻ từ RFID, Mật mã ảo, Chìa cơ, App TTLock",
+        "Kháng nước: IP54 trong nhà hoặc ban công có mái che",
+        "Điểm nổi bật: Cảm biến vân tay 360 độ ngay trên tay gạt mở cửa 1 chạm",
+        "Tính năng: Thiết kế đố hẹp tinh tế ôm sát khung nhôm",
+        "Bảo hành: 24 tháng chính hãng Tenon tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tenon",
+      "inStock": true,
+      "description": "Khóa thông minh AL5 chính hãng TENON – Giải pháp kiểm soát an ninh tối tân cho Cửa nhôm Xingfa / Đố hẹp. Sản phẩm được trang bị cảm biến vân tay FPC bán dẫn Thụy Điển độ chính xác cao nhận diện <0.5s, tích hợp mã số ảo chống nhìn trộm, thẻ từ RFID tần số cao, chìa khóa cơ dự phòng chống sao chép và khả năng quản lý từ xa qua App điện thoại. Khóa được phân phối và bảo hành chính hãng 24 tháng bởi Chu Gia Security.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TENON (Chính hãng phân phối bởi Chu Gia)"
+        },
+        {
+          "k": "Model",
+          "v": "AL5"
+        },
+        {
+          "k": "Loại cửa phù hợp",
+          "v": "Cửa nhôm Xingfa, Cửa nhôm kính đố mỏng (đố cửa ≥ 50mm)"
+        },
+        {
+          "k": "Phương thức mở khóa",
+          "v": "Vân tay trên tay nắm, Thẻ từ RFID, Mật mã ảo, Chìa cơ, App TTLock"
+        },
+        {
+          "k": "Tiêu chuẩn kháng nước / bụi",
+          "v": "IP54 trong nhà hoặc ban công có mái che"
+        },
+        {
+          "k": "Nguồn điện hoạt động",
+          "v": "4 pin AA Alkaline 1.5V, cổng cấp nguồn khẩn cấp Type-C"
+        },
+        {
+          "k": "Dung lượng lưu trữ",
+          "v": "100 Vân tay, 100 Mã số, 100 Thẻ từ"
+        },
+        {
+          "k": "Cảm biến vân tay",
+          "v": "Sinh trắc học bán dẫn FPC Thụy Điển (nhận diện < 0.5 giây)"
+        },
+        {
+          "k": "Mật mã bảo mật",
+          "v": "Mật khẩu ảo 16-32 ký tự chống nhìn trộm"
+        },
+        {
+          "k": "Thẻ từ",
+          "v": "Thẻ chip RFID chống sao chép tần số cao 13.56MHz"
+        },
+        {
+          "k": "Cảnh báo an ninh",
+          "v": "Cảnh báo cạy khóa, nhập sai mã 5 lần, cảnh báo pin yếu"
+        },
+        {
+          "k": "Chế độ tự động khóa",
+          "v": "Tự động phóng chốt khóa ngay sau khi khép cửa"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 trong 30 ngày bởi Chu Gia Security"
+        }
+      ],
+      "tenonUrl": "https://tenontech.vn/khoa-cua-nhom-kinh-thong-minh-tenon-al5/"
+    },
+    {
+      "id": 990004,
+      "name": "Khóa điện tử Tenon AL10 (Cửa nhôm trượt lùa & mở quay, Đố siêu mỏng, Vân tay FPC, Thẻ từ, Mã số ảo, Chìa cơ)",
+      "sku": "TENON-AL10",
+      "costPrice": 4500000,
+      "retailPrice": 5200000,
+      "originalPrice": 5980000,
+      "discountPercent": 13,
+      "unit": "Bộ",
+      "primaryCategoryId": 54003,
+      "categoryIds": [
+        54003,
+        52941
+      ],
+      "categoryName": "Khóa thông minh TENON",
+      "parentGroup": "Khóa Cửa Thông Minh",
+      "brand": "TENON",
+      "image": "https://tenontech.vn/wp-content/uploads/2026/03/AL10-1-1.png",
+      "images": [
+        "https://tenontech.vn/wp-content/uploads/2026/03/AL10-1-1.png",
+        "https://tenontech.vn/wp-content/uploads/2026/03/AL10-7.png"
+      ],
+      "features": [
+        "Model: TENON AL10 – Cửa nhôm trượt lùa",
+        "Phương thức mở: Vân tay FPC, Thẻ từ RFID, Mật mã ảo, Chìa cơ vi tính, App điện thoại",
+        "Kháng nước: IP54 trong nhà",
+        "Điểm nổi bật: Lắp đặt chuyên biệt cho cửa lùa trượt và mở quay",
+        "Tính năng: Đầu đọc vân tay bán dẫn độ phản hồi tức thì",
+        "Bảo hành: 24 tháng chính hãng Tenon tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tenon",
+      "inStock": true,
+      "description": "Khóa thông minh AL10 chính hãng TENON – Giải pháp kiểm soát an ninh tối tân cho Cửa nhôm Xingfa / Đố hẹp. Sản phẩm được trang bị cảm biến vân tay FPC bán dẫn Thụy Điển độ chính xác cao nhận diện <0.5s, tích hợp mã số ảo chống nhìn trộm, thẻ từ RFID tần số cao, chìa khóa cơ dự phòng chống sao chép và khả năng quản lý từ xa qua App điện thoại. Khóa được phân phối và bảo hành chính hãng 24 tháng bởi Chu Gia Security.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TENON (Chính hãng phân phối bởi Chu Gia)"
+        },
+        {
+          "k": "Model",
+          "v": "AL10"
+        },
+        {
+          "k": "Loại cửa phù hợp",
+          "v": "Cửa nhôm trượt lùa, Cửa nhôm mở quay hệ Xingfa / Việt Pháp (đố ≥ 45mm)"
+        },
+        {
+          "k": "Phương thức mở khóa",
+          "v": "Vân tay FPC, Thẻ từ RFID, Mật mã ảo, Chìa cơ vi tính, App điện thoại"
+        },
+        {
+          "k": "Tiêu chuẩn kháng nước / bụi",
+          "v": "IP54 trong nhà"
+        },
+        {
+          "k": "Nguồn điện hoạt động",
+          "v": "4 pin AA Alkaline, hỗ trợ kích nguồn dự phòng Type-C"
+        },
+        {
+          "k": "Dung lượng lưu trữ",
+          "v": "100 Vân tay, 100 Mật mã, 100 Thẻ từ"
+        },
+        {
+          "k": "Cảm biến vân tay",
+          "v": "Sinh trắc học bán dẫn FPC Thụy Điển (nhận diện < 0.5 giây)"
+        },
+        {
+          "k": "Mật mã bảo mật",
+          "v": "Mật khẩu ảo 16-32 ký tự chống nhìn trộm"
+        },
+        {
+          "k": "Thẻ từ",
+          "v": "Thẻ chip RFID chống sao chép tần số cao 13.56MHz"
+        },
+        {
+          "k": "Cảnh báo an ninh",
+          "v": "Cảnh báo cạy khóa, nhập sai mã 5 lần, cảnh báo pin yếu"
+        },
+        {
+          "k": "Chế độ tự động khóa",
+          "v": "Tự động phóng chốt khóa ngay sau khi khép cửa"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 trong 30 ngày bởi Chu Gia Security"
+        }
+      ],
+      "tenonUrl": "https://tenontech.vn/khoa-thong-minh-tenon-al10/"
+    },
+    {
+      "id": 990005,
+      "name": "Khóa điện tử Tenon AL4 Bảo Mật Kép (Chuyên Cửa nhôm kính đố mỏng, Vân tay FPC, Mật mã ảo, Thẻ chip, Chìa cơ)",
+      "sku": "TENON-AL4",
+      "costPrice": 3900000,
+      "retailPrice": 9200000,
+      "originalPrice": 10580000,
+      "discountPercent": 13,
+      "unit": "Bộ",
+      "primaryCategoryId": 54003,
+      "categoryIds": [
+        54003,
+        52941
+      ],
+      "categoryName": "Khóa thông minh TENON",
+      "parentGroup": "Khóa Cửa Thông Minh",
+      "brand": "TENON",
+      "image": "https://tenontech.vn/wp-content/uploads/2025/04/AL4-2.png",
+      "images": [
+        "https://tenontech.vn/wp-content/uploads/2025/04/AL4-2.png",
+        "https://tenontech.vn/wp-content/uploads/2025/04/AL4-1.png",
+        "https://tenontech.vn/wp-content/uploads/2025/04/AL4-3.png",
+        "https://tenontech.vn/wp-content/uploads/2025/04/AL4-4.png",
+        "https://tenontech.vn/wp-content/uploads/2025/04/Al419.png"
+      ],
+      "features": [
+        "Model: TENON AL4 – Cửa nhôm Xingfa",
+        "Phương thức mở: Vân tay, Mật mã ảo, Thẻ từ, Chìa cơ, App TTLock",
+        "Kháng nước: IP54",
+        "Điểm nổi bật: Cơ chế bảo mật kép an toàn tuyệt đối",
+        "Tính năng: Hợp kim kẽm nguyên khối mạ điện phân chống oxy hóa",
+        "Bảo hành: 24 tháng chính hãng Tenon tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tenon",
+      "inStock": true,
+      "description": "Khóa thông minh AL4 chính hãng TENON – Giải pháp kiểm soát an ninh tối tân cho Cửa nhôm Xingfa / Đố hẹp. Sản phẩm được trang bị cảm biến vân tay FPC bán dẫn Thụy Điển độ chính xác cao nhận diện <0.5s, tích hợp mã số ảo chống nhìn trộm, thẻ từ RFID tần số cao, chìa khóa cơ dự phòng chống sao chép và khả năng quản lý từ xa qua App điện thoại. Khóa được phân phối và bảo hành chính hãng 24 tháng bởi Chu Gia Security.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TENON (Chính hãng phân phối bởi Chu Gia)"
+        },
+        {
+          "k": "Model",
+          "v": "AL4"
+        },
+        {
+          "k": "Loại cửa phù hợp",
+          "v": "Cửa nhôm Xingfa, Cửa sắt hộp đố mỏng (đố ≥ 50mm, dày 35-80mm)"
+        },
+        {
+          "k": "Phương thức mở khóa",
+          "v": "Vân tay, Mật mã ảo, Thẻ từ, Chìa cơ, App TTLock"
+        },
+        {
+          "k": "Tiêu chuẩn kháng nước / bụi",
+          "v": "IP54"
+        },
+        {
+          "k": "Nguồn điện hoạt động",
+          "v": "4 pin AA Alkaline, cổng sạc Type-C dự phòng"
+        },
+        {
+          "k": "Dung lượng lưu trữ",
+          "v": "100 Vân tay, 100 Thẻ từ, 100 Mật khẩu"
+        },
+        {
+          "k": "Cảm biến vân tay",
+          "v": "Sinh trắc học bán dẫn FPC Thụy Điển (nhận diện < 0.5 giây)"
+        },
+        {
+          "k": "Mật mã bảo mật",
+          "v": "Mật khẩu ảo 16-32 ký tự chống nhìn trộm"
+        },
+        {
+          "k": "Thẻ từ",
+          "v": "Thẻ chip RFID chống sao chép tần số cao 13.56MHz"
+        },
+        {
+          "k": "Cảnh báo an ninh",
+          "v": "Cảnh báo cạy khóa, nhập sai mã 5 lần, cảnh báo pin yếu"
+        },
+        {
+          "k": "Chế độ tự động khóa",
+          "v": "Tự động phóng chốt khóa ngay sau khi khép cửa"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 trong 30 ngày bởi Chu Gia Security"
+        }
+      ],
+      "tenonUrl": "https://tenontech.vn/tenon-al4-bao-mat-kep-dinh-cao/"
+    },
+    {
+      "id": 990007,
+      "name": "Khóa thông minh Tenon A20 Pro Face ID (Nhận diện khuôn mặt 3D, Màn hình quan sát chuông hình góc rộng, Kéo đẩy tự động, Vân tay, Thẻ từ, Chìa cơ)",
+      "sku": "TENON-A20-PRO",
+      "costPrice": 7500000,
+      "retailPrice": 24600000,
+      "originalPrice": 28289999,
+      "discountPercent": 13,
+      "unit": "Bộ",
+      "primaryCategoryId": 54003,
+      "categoryIds": [
+        54003,
+        52941
+      ],
+      "categoryName": "Khóa thông minh TENON",
+      "parentGroup": "Khóa Cửa Thông Minh",
+      "brand": "TENON",
+      "image": "https://tenontech.vn/wp-content/uploads/2025/02/z6351302252185_9c731e0574ed3a1518e4bf4024d19426.jpg",
+      "images": [
+        "https://tenontech.vn/wp-content/uploads/2025/02/z6351302252185_9c731e0574ed3a1518e4bf4024d19426.jpg"
+      ],
+      "features": [
+        "Model: TENON A20-PRO – Cửa gỗ căn hộ",
+        "Phương thức mở: Face ID 3D, Màn hình quan sát chuông hình góc rộng, Vân tay FPC, Thẻ từ RFID, Mật mã số, Chìa cơ, App Tuya/Tenon Wifi",
+        "Kháng nước: IP54",
+        "Điểm nổi bật: Mở khóa không chạm với nhận diện khuôn mặt Face ID 3D",
+        "Tính năng: Camera chuông cửa góc siêu rộng 160 độ hiển thị sắc nét",
+        "Bảo hành: 24 tháng chính hãng Tenon tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tenon",
+      "inStock": true,
+      "description": "Khóa thông minh cao cấp A20 Pro chính hãng TENON – Đột phá an ninh công nghệ cao với tính năng nhận diện khuôn mặt Face ID 3D hồng ngoại chống nhận diện ảnh giả, kết hợp camera chuông hình góc rộng quan sát khách bấm chuông trực tiếp. Phù hợp cho Cửa gỗ / Cửa thép chống cháy. Tích hợp đầy đủ các phương thức mở khóa: Face ID 3D, Vân tay FPC Thụy Điển, Mật mã ảo, Thẻ từ RFID, Chìa cơ và quản lý qua App điện thoại. Phân phối chính hãng bởi Chu Gia Security.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TENON (Chính hãng phân phối bởi Chu Gia)"
+        },
+        {
+          "k": "Model",
+          "v": "A20-PRO"
+        },
+        {
+          "k": "Loại cửa phù hợp",
+          "v": "Cửa gỗ căn hộ, Cửa thép vân gỗ, Biệt thự cao cấp (dày 40-100mm)"
+        },
+        {
+          "k": "Phương thức mở khóa",
+          "v": "Face ID 3D, Màn hình quan sát chuông hình góc rộng, Vân tay FPC, Thẻ từ RFID, Mật mã số, Chìa cơ, App Tuya/Tenon Wifi"
+        },
+        {
+          "k": "Tiêu chuẩn kháng nước / bụi",
+          "v": "IP54"
+        },
+        {
+          "k": "Nguồn điện hoạt động",
+          "v": "Pin sạc Lithium 5000mAh, cổng Type-C"
+        },
+        {
+          "k": "Dung lượng lưu trữ",
+          "v": "50 Face ID, 100 Vân tay, 100 Thẻ từ, 100 Mật khẩu"
+        },
+        {
+          "k": "Cảm biến vân tay",
+          "v": "Sinh trắc học bán dẫn FPC Thụy Điển (nhận diện < 0.5 giây)"
+        },
+        {
+          "k": "Mật mã bảo mật",
+          "v": "Mật khẩu ảo 16-32 ký tự chống nhìn trộm"
+        },
+        {
+          "k": "Thẻ từ",
+          "v": "Thẻ chip RFID chống sao chép tần số cao 13.56MHz"
+        },
+        {
+          "k": "Cảnh báo an ninh",
+          "v": "Cảnh báo cạy khóa, nhập sai mã 5 lần, cảnh báo pin yếu"
+        },
+        {
+          "k": "Chế độ tự động khóa",
+          "v": "Tự động phóng chốt khóa ngay sau khi khép cửa"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 trong 30 ngày bởi Chu Gia Security"
+        }
+      ],
+      "tenonUrl": "https://tenontech.vn/tenon-a20-pro-mo-khoa-de-dang-voi-mot-anh-nhin/"
+    },
+    {
+      "id": 990008,
+      "name": "Khóa thông minh Tenon A5 Pro Kéo Đẩy Tự Động (Thiết kế siêu mỏng Luxury, Cảm biến FPC Thụy Điển, Mật mã ảo, Thẻ chip RFID, Chìa cơ, App Tenon)",
+      "sku": "TENON-A5-PRO",
+      "costPrice": 5500000,
+      "retailPrice": 24600000,
+      "originalPrice": 28289999,
+      "discountPercent": 13,
+      "unit": "Bộ",
+      "primaryCategoryId": 54003,
+      "categoryIds": [
+        54003,
+        52941
+      ],
+      "categoryName": "Khóa thông minh TENON",
+      "parentGroup": "Khóa Cửa Thông Minh",
+      "brand": "TENON",
+      "image": "https://tenontech.vn/wp-content/uploads/2025/09/Chua-co-ten-1280-x-1920-px-1920-x-1920-px-2.png",
+      "images": [
+        "https://tenontech.vn/wp-content/uploads/2025/09/Chua-co-ten-1280-x-1920-px-1920-x-1920-px-2.png",
+        "https://tenontech.vn/wp-content/uploads/2025/09/A5PRo-cua.png",
+        "https://tenontech.vn/wp-content/uploads/2025/09/kich-thuoc.png"
+      ],
+      "features": [
+        "Model: TENON A5-PRO – Cửa gỗ chung cư",
+        "Phương thức mở: Vân tay FPC Thụy Điển trên tay cầm Push-Pull, Mật khẩu ảo, Thẻ chip RFID, Chìa cơ vi tính, App Tenon",
+        "Kháng nước: IP54",
+        "Điểm nổi bật: Thiết kế Push-Pull siêu mỏng Luxury thời thượng",
+        "Tính năng: Mô tơ tự động đóng mở êm ái, giảm tiếng ồn tối đa",
+        "Bảo hành: 24 tháng chính hãng Tenon tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tenon",
+      "inStock": true,
+      "description": "Khóa thông minh A5 Pro chính hãng TENON – Giải pháp kiểm soát an ninh tối tân cho Cửa gỗ / Cửa thép chống cháy. Sản phẩm được trang bị cảm biến vân tay FPC bán dẫn Thụy Điển độ chính xác cao nhận diện <0.5s, tích hợp mã số ảo chống nhìn trộm, thẻ từ RFID tần số cao, chìa khóa cơ dự phòng chống sao chép và khả năng quản lý từ xa qua App điện thoại. Khóa được phân phối và bảo hành chính hãng 24 tháng bởi Chu Gia Security.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TENON (Chính hãng phân phối bởi Chu Gia)"
+        },
+        {
+          "k": "Model",
+          "v": "A5-PRO"
+        },
+        {
+          "k": "Loại cửa phù hợp",
+          "v": "Cửa gỗ chung cư, Cửa thép chống cháy, Căn hộ cao cấp (dày 40-100mm)"
+        },
+        {
+          "k": "Phương thức mở khóa",
+          "v": "Vân tay FPC Thụy Điển trên tay cầm Push-Pull, Mật khẩu ảo, Thẻ chip RFID, Chìa cơ vi tính, App Tenon"
+        },
+        {
+          "k": "Tiêu chuẩn kháng nước / bụi",
+          "v": "IP54"
+        },
+        {
+          "k": "Nguồn điện hoạt động",
+          "v": "Pin Lithium sạc lại dung lượng cao, cổng sạc Type-C"
+        },
+        {
+          "k": "Dung lượng lưu trữ",
+          "v": "100 Vân tay, 100 Mật mã, 100 Thẻ từ"
+        },
+        {
+          "k": "Cảm biến vân tay",
+          "v": "Sinh trắc học bán dẫn FPC Thụy Điển (nhận diện < 0.5 giây)"
+        },
+        {
+          "k": "Mật mã bảo mật",
+          "v": "Mật khẩu ảo 16-32 ký tự chống nhìn trộm"
+        },
+        {
+          "k": "Thẻ từ",
+          "v": "Thẻ chip RFID chống sao chép tần số cao 13.56MHz"
+        },
+        {
+          "k": "Cảnh báo an ninh",
+          "v": "Cảnh báo cạy khóa, nhập sai mã 5 lần, cảnh báo pin yếu"
+        },
+        {
+          "k": "Chế độ tự động khóa",
+          "v": "Tự động phóng chốt khóa ngay sau khi khép cửa"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 trong 30 ngày bởi Chu Gia Security"
+        }
+      ],
+      "tenonUrl": "https://tenontech.vn/khoa-thong-minh-tenon-a5pro/"
+    },
+    {
+      "id": 990009,
+      "name": "Khóa thông minh Tenon A30 Kéo Đẩy Cao Cấp (Vân tay đa điểm FPC, Thẻ từ RFID, Mật mã ảo, Chìa cơ dự phòng, App TTLock)",
+      "sku": "TENON-A30",
+      "costPrice": 4800000,
+      "retailPrice": 12600000,
+      "originalPrice": 14489999,
+      "discountPercent": 13,
+      "unit": "Bộ",
+      "primaryCategoryId": 54003,
+      "categoryIds": [
+        54003,
+        52941
+      ],
+      "categoryName": "Khóa thông minh TENON",
+      "parentGroup": "Khóa Cửa Thông Minh",
+      "brand": "TENON",
+      "image": "https://tenontech.vn/wp-content/uploads/2025/09/A30-2-1-scaled.png",
+      "images": [
+        "https://tenontech.vn/wp-content/uploads/2025/09/A30-2-1-scaled.png",
+        "https://tenontech.vn/wp-content/uploads/2025/09/A30-1-1-2-scaled.png",
+        "https://tenontech.vn/wp-content/uploads/2025/09/A30-den-cua-1.png",
+        "https://tenontech.vn/wp-content/uploads/2025/09/A30-cua-1.png"
+      ],
+      "features": [
+        "Model: TENON A30 – Cửa gỗ",
+        "Phương thức mở: Vân tay FPC, Thẻ từ RFID, Mật mã chống trộm, Chìa cơ, App TTLock / Bluetooth",
+        "Kháng nước: IP54",
+        "Điểm nổi bật: Tay nắm kéo đẩy Push-Pull đúc nguyên khối chống va đập",
+        "Tính năng: Vân tay đa điểm FPC nhận diện chính xác kể cả vân tay mờ",
+        "Bảo hành: 24 tháng chính hãng Tenon tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tenon",
+      "inStock": true,
+      "description": "Khóa thông minh A30 chính hãng TENON – Giải pháp kiểm soát an ninh tối tân cho Cửa gỗ / Cửa thép chống cháy. Sản phẩm được trang bị cảm biến vân tay FPC bán dẫn Thụy Điển độ chính xác cao nhận diện <0.5s, tích hợp mã số ảo chống nhìn trộm, thẻ từ RFID tần số cao, chìa khóa cơ dự phòng chống sao chép và khả năng quản lý từ xa qua App điện thoại. Khóa được phân phối và bảo hành chính hãng 24 tháng bởi Chu Gia Security.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TENON (Chính hãng phân phối bởi Chu Gia)"
+        },
+        {
+          "k": "Model",
+          "v": "A30"
+        },
+        {
+          "k": "Loại cửa phù hợp",
+          "v": "Cửa gỗ, Cửa thép chống cháy căn hộ (dày 38-100mm)"
+        },
+        {
+          "k": "Phương thức mở khóa",
+          "v": "Vân tay FPC, Thẻ từ RFID, Mật mã chống trộm, Chìa cơ, App TTLock / Bluetooth"
+        },
+        {
+          "k": "Tiêu chuẩn kháng nước / bụi",
+          "v": "IP54"
+        },
+        {
+          "k": "Nguồn điện hoạt động",
+          "v": "4 hoặc 8 pin AA Alkaline, cổng cấp nguồn khẩn cấp Type-C"
+        },
+        {
+          "k": "Dung lượng lưu trữ",
+          "v": "100 Vân tay, 100 Mật khẩu, 100 Thẻ từ"
+        },
+        {
+          "k": "Cảm biến vân tay",
+          "v": "Sinh trắc học bán dẫn FPC Thụy Điển (nhận diện < 0.5 giây)"
+        },
+        {
+          "k": "Mật mã bảo mật",
+          "v": "Mật khẩu ảo 16-32 ký tự chống nhìn trộm"
+        },
+        {
+          "k": "Thẻ từ",
+          "v": "Thẻ chip RFID chống sao chép tần số cao 13.56MHz"
+        },
+        {
+          "k": "Cảnh báo an ninh",
+          "v": "Cảnh báo cạy khóa, nhập sai mã 5 lần, cảnh báo pin yếu"
+        },
+        {
+          "k": "Chế độ tự động khóa",
+          "v": "Tự động phóng chốt khóa ngay sau khi khép cửa"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 trong 30 ngày bởi Chu Gia Security"
+        }
+      ],
+      "tenonUrl": "https://tenontech.vn/khoa-thong-minh-tenon-a30/"
+    },
+    {
+      "id": 990010,
+      "name": "Khóa kéo đẩy tự động Tenon A9 Pro (Cửa gỗ căn hộ cao cấp, Vân tay nhận diện <0.5s, Mật khẩu chống nhìn trộm, Thẻ từ, Chìa cơ)",
+      "sku": "TENON-A9-PRO",
+      "costPrice": 6200000,
+      "retailPrice": 28000000,
+      "originalPrice": 32199999,
+      "discountPercent": 13,
+      "unit": "Bộ",
+      "primaryCategoryId": 54003,
+      "categoryIds": [
+        54003,
+        52941
+      ],
+      "categoryName": "Khóa thông minh TENON",
+      "parentGroup": "Khóa Cửa Thông Minh",
+      "brand": "TENON",
+      "image": "https://tenontech.vn/wp-content/uploads/2025/09/Chua-co-ten-1280-x-1920-px-1920-x-1920-px-1.jpg",
+      "images": [
+        "https://tenontech.vn/wp-content/uploads/2025/09/Chua-co-ten-1280-x-1920-px-1920-x-1920-px-1.jpg",
+        "https://tenontech.vn/wp-content/uploads/2025/09/3.png",
+        "https://tenontech.vn/wp-content/uploads/2025/09/A9pro-9.jpg"
+      ],
+      "features": [
+        "Model: TENON A9-PRO – Cửa gỗ biệt thự",
+        "Phương thức mở: Vân tay FPC, Mật mã ảo, Thẻ từ RFID, Chìa cơ, App quản lý từ xa",
+        "Kháng nước: IP54",
+        "Điểm nổi bật: Dòng kéo đẩy cao cấp phân khúc Luxury",
+        "Tính năng: Vân tay nhận diện siêu tốc < 0.5s",
+        "Bảo hành: 24 tháng chính hãng Tenon tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tenon",
+      "inStock": true,
+      "description": "Khóa thông minh A9 Pro chính hãng TENON – Giải pháp kiểm soát an ninh tối tân cho Cửa gỗ / Cửa thép chống cháy. Sản phẩm được trang bị cảm biến vân tay FPC bán dẫn Thụy Điển độ chính xác cao nhận diện <0.5s, tích hợp mã số ảo chống nhìn trộm, thẻ từ RFID tần số cao, chìa khóa cơ dự phòng chống sao chép và khả năng quản lý từ xa qua App điện thoại. Khóa được phân phối và bảo hành chính hãng 24 tháng bởi Chu Gia Security.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TENON (Chính hãng phân phối bởi Chu Gia)"
+        },
+        {
+          "k": "Model",
+          "v": "A9-PRO"
+        },
+        {
+          "k": "Loại cửa phù hợp",
+          "v": "Cửa gỗ biệt thự, Cửa thép chống cháy chung cư cao cấp (dày 40-100mm)"
+        },
+        {
+          "k": "Phương thức mở khóa",
+          "v": "Vân tay FPC, Mật mã ảo, Thẻ từ RFID, Chìa cơ, App quản lý từ xa"
+        },
+        {
+          "k": "Tiêu chuẩn kháng nước / bụi",
+          "v": "IP54"
+        },
+        {
+          "k": "Nguồn điện hoạt động",
+          "v": "Pin sạc Lithium, cổng Type-C"
+        },
+        {
+          "k": "Dung lượng lưu trữ",
+          "v": "100 Vân tay, 100 Mật mã, 100 Thẻ từ"
+        },
+        {
+          "k": "Cảm biến vân tay",
+          "v": "Sinh trắc học bán dẫn FPC Thụy Điển (nhận diện < 0.5 giây)"
+        },
+        {
+          "k": "Mật mã bảo mật",
+          "v": "Mật khẩu ảo 16-32 ký tự chống nhìn trộm"
+        },
+        {
+          "k": "Thẻ từ",
+          "v": "Thẻ chip RFID chống sao chép tần số cao 13.56MHz"
+        },
+        {
+          "k": "Cảnh báo an ninh",
+          "v": "Cảnh báo cạy khóa, nhập sai mã 5 lần, cảnh báo pin yếu"
+        },
+        {
+          "k": "Chế độ tự động khóa",
+          "v": "Tự động phóng chốt khóa ngay sau khi khép cửa"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 trong 30 ngày bởi Chu Gia Security"
+        }
+      ],
+      "tenonUrl": "https://tenontech.vn/khoa-thong-minh-tenon-a9pro/"
+    },
+    {
+      "id": 990011,
+      "name": "Khóa thông minh Tenon K50 Tay Gạt (Vân tay một chạm trên tay cầm, Mật khẩu ảo, Thẻ từ RFID, Chìa cơ vi tính, Quản lý qua App)",
+      "sku": "TENON-K50",
+      "costPrice": 2900000,
+      "retailPrice": 6800000,
+      "originalPrice": 7819999,
+      "discountPercent": 13,
+      "unit": "Bộ",
+      "primaryCategoryId": 54003,
+      "categoryIds": [
+        54003,
+        52941
+      ],
+      "categoryName": "Khóa thông minh TENON",
+      "parentGroup": "Khóa Cửa Thông Minh",
+      "brand": "TENON",
+      "image": "https://tenontech.vn/wp-content/uploads/2024/05/K50-7-2.png",
+      "images": [
+        "https://tenontech.vn/wp-content/uploads/2024/05/K50-7-2.png",
+        "https://tenontech.vn/wp-content/uploads/2024/05/Ban-ve-san-pham-12.png"
+      ],
+      "features": [
+        "Model: TENON K50 – Cửa gỗ tự nhiên",
+        "Phương thức mở: Vân tay một chạm trên trục tay gạt, Mật mã số ảo, Thẻ từ RFID, Chìa cơ vi tính, App Tuya / TTLock",
+        "Kháng nước: IP54",
+        "Điểm nổi bật: Vân tay tích hợp ngay trên trục xoay của tay gạt – Đặt ngón tay và gạt mở trong 1 thao tác",
+        "Tính năng: Thiết kế tay gạt truyền thống thân thiện cho người già và trẻ nhỏ",
+        "Bảo hành: 24 tháng chính hãng Tenon tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tenon",
+      "inStock": true,
+      "description": "Khóa thông minh K50 chính hãng TENON – Giải pháp kiểm soát an ninh tối tân cho Cửa gỗ / Cửa thép chống cháy. Sản phẩm được trang bị cảm biến vân tay FPC bán dẫn Thụy Điển độ chính xác cao nhận diện <0.5s, tích hợp mã số ảo chống nhìn trộm, thẻ từ RFID tần số cao, chìa khóa cơ dự phòng chống sao chép và khả năng quản lý từ xa qua App điện thoại. Khóa được phân phối và bảo hành chính hãng 24 tháng bởi Chu Gia Security.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TENON (Chính hãng phân phối bởi Chu Gia)"
+        },
+        {
+          "k": "Model",
+          "v": "K50"
+        },
+        {
+          "k": "Loại cửa phù hợp",
+          "v": "Cửa gỗ tự nhiên, Cửa gỗ công nghiệp, Cửa thép chống cháy (đố ≥ 90mm, dày 38-80mm)"
+        },
+        {
+          "k": "Phương thức mở khóa",
+          "v": "Vân tay một chạm trên trục tay gạt, Mật mã số ảo, Thẻ từ RFID, Chìa cơ vi tính, App Tuya / TTLock"
+        },
+        {
+          "k": "Tiêu chuẩn kháng nước / bụi",
+          "v": "IP54"
+        },
+        {
+          "k": "Nguồn điện hoạt động",
+          "v": "4 pin AA 1.5V Alkaline (thời lượng 12 tháng), cổng sạc Type-C"
+        },
+        {
+          "k": "Dung lượng lưu trữ",
+          "v": "100 Vân tay, 100 Mật mã, 100 Thẻ từ"
+        },
+        {
+          "k": "Cảm biến vân tay",
+          "v": "Sinh trắc học bán dẫn FPC Thụy Điển (nhận diện < 0.5 giây)"
+        },
+        {
+          "k": "Mật mã bảo mật",
+          "v": "Mật khẩu ảo 16-32 ký tự chống nhìn trộm"
+        },
+        {
+          "k": "Thẻ từ",
+          "v": "Thẻ chip RFID chống sao chép tần số cao 13.56MHz"
+        },
+        {
+          "k": "Cảnh báo an ninh",
+          "v": "Cảnh báo cạy khóa, nhập sai mã 5 lần, cảnh báo pin yếu"
+        },
+        {
+          "k": "Chế độ tự động khóa",
+          "v": "Tự động phóng chốt khóa ngay sau khi khép cửa"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 trong 30 ngày bởi Chu Gia Security"
+        }
+      ],
+      "tenonUrl": "https://tenontech.vn/k50-mo-khoa-da-dang-quan-ly-tu-xa/"
+    },
+    {
+      "id": 990012,
+      "name": "Khóa thông minh Tenon K60 Tay Gạt (Cảm biến FPC Thụy Điển chống sao chép, Mật mã số, Thẻ từ, Chìa cơ, Quản lý App)",
+      "sku": "TENON-K60",
+      "costPrice": 3400000,
+      "retailPrice": 6800000,
+      "originalPrice": 7819999,
+      "discountPercent": 13,
+      "unit": "Bộ",
+      "primaryCategoryId": 54003,
+      "categoryIds": [
+        54003,
+        52941
+      ],
+      "categoryName": "Khóa thông minh TENON",
+      "parentGroup": "Khóa Cửa Thông Minh",
+      "brand": "TENON",
+      "image": "https://tenontech.vn/wp-content/uploads/2024/12/K60-xam-bac.png",
+      "images": [
+        "https://tenontech.vn/wp-content/uploads/2024/12/K60-xam-bac.png",
+        "https://tenontech.vn/wp-content/uploads/2024/12/K60-den.png",
+        "https://tenontech.vn/wp-content/uploads/2024/12/K60-dong-2.png"
+      ],
+      "features": [
+        "Model: TENON K60 – Cửa gỗ",
+        "Phương thức mở: Vân tay bán dẫn FPC Thụy Điển, Mật mã số, Thẻ từ RFID, Chìa cơ, App điện thoại",
+        "Kháng nước: IP54",
+        "Điểm nổi bật: Cảm biến sinh trắc FPC chống làm giả bằng vân tay cao su",
+        "Tính năng: Tay gạt trợ lực mở cửa nhẹ nhàng",
+        "Bảo hành: 24 tháng chính hãng Tenon tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tenon",
+      "inStock": true,
+      "description": "Khóa thông minh K60 chính hãng TENON – Giải pháp kiểm soát an ninh tối tân cho Cửa gỗ / Cửa thép chống cháy. Sản phẩm được trang bị cảm biến vân tay FPC bán dẫn Thụy Điển độ chính xác cao nhận diện <0.5s, tích hợp mã số ảo chống nhìn trộm, thẻ từ RFID tần số cao, chìa khóa cơ dự phòng chống sao chép và khả năng quản lý từ xa qua App điện thoại. Khóa được phân phối và bảo hành chính hãng 24 tháng bởi Chu Gia Security.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TENON (Chính hãng phân phối bởi Chu Gia)"
+        },
+        {
+          "k": "Model",
+          "v": "K60"
+        },
+        {
+          "k": "Loại cửa phù hợp",
+          "v": "Cửa gỗ, Cửa gỗ composite, Cửa thép vân gỗ (dày 38-80mm)"
+        },
+        {
+          "k": "Phương thức mở khóa",
+          "v": "Vân tay bán dẫn FPC Thụy Điển, Mật mã số, Thẻ từ RFID, Chìa cơ, App điện thoại"
+        },
+        {
+          "k": "Tiêu chuẩn kháng nước / bụi",
+          "v": "IP54"
+        },
+        {
+          "k": "Nguồn điện hoạt động",
+          "v": "4 pin AA Alkaline, cổng sạc dự phòng Type-C"
+        },
+        {
+          "k": "Dung lượng lưu trữ",
+          "v": "100 Vân tay, 100 Mật mã, 100 Thẻ từ"
+        },
+        {
+          "k": "Cảm biến vân tay",
+          "v": "Sinh trắc học bán dẫn FPC Thụy Điển (nhận diện < 0.5 giây)"
+        },
+        {
+          "k": "Mật mã bảo mật",
+          "v": "Mật khẩu ảo 16-32 ký tự chống nhìn trộm"
+        },
+        {
+          "k": "Thẻ từ",
+          "v": "Thẻ chip RFID chống sao chép tần số cao 13.56MHz"
+        },
+        {
+          "k": "Cảnh báo an ninh",
+          "v": "Cảnh báo cạy khóa, nhập sai mã 5 lần, cảnh báo pin yếu"
+        },
+        {
+          "k": "Chế độ tự động khóa",
+          "v": "Tự động phóng chốt khóa ngay sau khi khép cửa"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 trong 30 ngày bởi Chu Gia Security"
+        }
+      ],
+      "tenonUrl": "https://tenontech.vn/k60-van-tay-ban-dan-chong-sao-chep-an-toan-2/"
+    },
+    {
+      "id": 990013,
+      "name": "Khóa thông minh Tenon K70 Plus Tay Gạt Cao Cấp (Mặt kính cường lực sang trọng, Vân tay FPC, Mã số ảo, Thẻ chip, Chìa cơ, App Tuya/TTLock)",
+      "sku": "TENON-K70-PLUS",
+      "costPrice": 3800000,
+      "retailPrice": 5900000,
+      "originalPrice": 6784999,
+      "discountPercent": 13,
+      "unit": "Bộ",
+      "primaryCategoryId": 54003,
+      "categoryIds": [
+        54003,
+        52941
+      ],
+      "categoryName": "Khóa thông minh TENON",
+      "parentGroup": "Khóa Cửa Thông Minh",
+      "brand": "TENON",
+      "image": "https://tenontech.vn/wp-content/uploads/2024/12/K60-dong-2.png",
+      "images": [
+        "https://tenontech.vn/wp-content/uploads/2024/12/K60-dong-2.png",
+        "https://tenontech.vn/wp-content/uploads/2024/12/K60-den.png",
+        "https://tenontech.vn/wp-content/uploads/2024/12/K60-xam-bac.png"
+      ],
+      "features": [
+        "Model: TENON K70-PLUS – Cửa gỗ",
+        "Phương thức mở: Vân tay FPC, Mặt kính cường lực cảm ứng sang trọng, Mật mã ảo, Thẻ chip RFID, Chìa cơ, App Tuya/TTLock",
+        "Kháng nước: IP54",
+        "Điểm nổi bật: Mặt kính cường lực 2.5D chống trầy xước và bám vân tay",
+        "Tính năng: Cảm biến FPC nhận diện siêu nhạy mọi góc độ",
+        "Bảo hành: 24 tháng chính hãng Tenon tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tenon",
+      "inStock": true,
+      "description": "Khóa thông minh K70 Plus chính hãng TENON – Giải pháp kiểm soát an ninh tối tân cho Cửa gỗ / Cửa thép chống cháy. Sản phẩm được trang bị cảm biến vân tay FPC bán dẫn Thụy Điển độ chính xác cao nhận diện <0.5s, tích hợp mã số ảo chống nhìn trộm, thẻ từ RFID tần số cao, chìa khóa cơ dự phòng chống sao chép và khả năng quản lý từ xa qua App điện thoại. Khóa được phân phối và bảo hành chính hãng 24 tháng bởi Chu Gia Security.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TENON (Chính hãng phân phối bởi Chu Gia)"
+        },
+        {
+          "k": "Model",
+          "v": "K70-PLUS"
+        },
+        {
+          "k": "Loại cửa phù hợp",
+          "v": "Cửa gỗ, Cửa thép chống cháy căn hộ cao cấp (dày 40-90mm)"
+        },
+        {
+          "k": "Phương thức mở khóa",
+          "v": "Vân tay FPC, Mặt kính cường lực cảm ứng sang trọng, Mật mã ảo, Thẻ chip RFID, Chìa cơ, App Tuya/TTLock"
+        },
+        {
+          "k": "Tiêu chuẩn kháng nước / bụi",
+          "v": "IP54"
+        },
+        {
+          "k": "Nguồn điện hoạt động",
+          "v": "4 pin AA Alkaline, cổng Type-C"
+        },
+        {
+          "k": "Dung lượng lưu trữ",
+          "v": "100 Vân tay, 100 Mật mã, 100 Thẻ từ"
+        },
+        {
+          "k": "Cảm biến vân tay",
+          "v": "Sinh trắc học bán dẫn FPC Thụy Điển (nhận diện < 0.5 giây)"
+        },
+        {
+          "k": "Mật mã bảo mật",
+          "v": "Mật khẩu ảo 16-32 ký tự chống nhìn trộm"
+        },
+        {
+          "k": "Thẻ từ",
+          "v": "Thẻ chip RFID chống sao chép tần số cao 13.56MHz"
+        },
+        {
+          "k": "Cảnh báo an ninh",
+          "v": "Cảnh báo cạy khóa, nhập sai mã 5 lần, cảnh báo pin yếu"
+        },
+        {
+          "k": "Chế độ tự động khóa",
+          "v": "Tự động phóng chốt khóa ngay sau khi khép cửa"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 trong 30 ngày bởi Chu Gia Security"
+        }
+      ],
+      "tenonUrl": "https://tenontech.vn/khoa-thong-minh-tenon-k70plus/"
+    },
+    {
+      "id": 990014,
+      "name": "Khóa thông minh Tenon K3 (Thiết kế tay gạt tối giản nhỏ gọn, Vân tay trên tay cầm, Mật khẩu ảo, Thẻ từ RFID, Chìa cơ)",
+      "sku": "TENON-K3",
+      "costPrice": 2500000,
+      "retailPrice": 5500000,
+      "originalPrice": 6324999,
+      "discountPercent": 13,
+      "unit": "Bộ",
+      "primaryCategoryId": 54003,
+      "categoryIds": [
+        54003,
+        52941
+      ],
+      "categoryName": "Khóa thông minh TENON",
+      "parentGroup": "Khóa Cửa Thông Minh",
+      "brand": "TENON",
+      "image": "https://tenontech.vn/wp-content/uploads/woocommerce-placeholder-600x600.png",
+      "images": [
+        "https://tenontech.vn/wp-content/uploads/woocommerce-placeholder-600x600.png"
+      ],
+      "features": [
+        "Model: TENON K3 – Cửa gỗ thông phòng",
+        "Phương thức mở: Vân tay trên tay nắm, Mật khẩu số, Thẻ từ RFID, Chìa cơ",
+        "Kháng nước: IP54",
+        "Điểm nổi bật: Thiết kế tối giản, nhỏ gọn hoàn hảo cho cửa phòng ngủ và thông phòng",
+        "Tính năng: Mở khóa vân tay một chạm siêu tiện lợi",
+        "Bảo hành: 24 tháng chính hãng Tenon tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tenon",
+      "inStock": true,
+      "description": "Khóa thông minh K3 chính hãng TENON – Giải pháp kiểm soát an ninh tối tân cho Cửa gỗ / Cửa thép chống cháy. Sản phẩm được trang bị cảm biến vân tay FPC bán dẫn Thụy Điển độ chính xác cao nhận diện <0.5s, tích hợp mã số ảo chống nhìn trộm, thẻ từ RFID tần số cao, chìa khóa cơ dự phòng chống sao chép và khả năng quản lý từ xa qua App điện thoại. Khóa được phân phối và bảo hành chính hãng 24 tháng bởi Chu Gia Security.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TENON (Chính hãng phân phối bởi Chu Gia)"
+        },
+        {
+          "k": "Model",
+          "v": "K3"
+        },
+        {
+          "k": "Loại cửa phù hợp",
+          "v": "Cửa gỗ thông phòng, Cửa gỗ phòng ngủ, Cửa căn hộ mini (dày 35-70mm)"
+        },
+        {
+          "k": "Phương thức mở khóa",
+          "v": "Vân tay trên tay nắm, Mật khẩu số, Thẻ từ RFID, Chìa cơ"
+        },
+        {
+          "k": "Tiêu chuẩn kháng nước / bụi",
+          "v": "IP54"
+        },
+        {
+          "k": "Nguồn điện hoạt động",
+          "v": "4 pin AA Alkaline, cổng sạc Type-C"
+        },
+        {
+          "k": "Dung lượng lưu trữ",
+          "v": "50 Vân tay, 50 Mật mã, 50 Thẻ từ"
+        },
+        {
+          "k": "Cảm biến vân tay",
+          "v": "Sinh trắc học bán dẫn FPC Thụy Điển (nhận diện < 0.5 giây)"
+        },
+        {
+          "k": "Mật mã bảo mật",
+          "v": "Mật khẩu ảo 16-32 ký tự chống nhìn trộm"
+        },
+        {
+          "k": "Thẻ từ",
+          "v": "Thẻ chip RFID chống sao chép tần số cao 13.56MHz"
+        },
+        {
+          "k": "Cảnh báo an ninh",
+          "v": "Cảnh báo cạy khóa, nhập sai mã 5 lần, cảnh báo pin yếu"
+        },
+        {
+          "k": "Chế độ tự động khóa",
+          "v": "Tự động phóng chốt khóa ngay sau khi khép cửa"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 trong 30 ngày bởi Chu Gia Security"
+        }
+      ],
+      "tenonUrl": "https://tenontech.vn/k3-sieu-pham-khoa-dien-tu-thong-minh/"
+    },
+    {
+      "id": 990015,
+      "name": "Khóa cổng thông minh ngoài trời Tenon G3 (Chuẩn chống nước IP68, 2 mặt vân tay trước-sau, Thẻ từ, Mã số ảo, Chìa cơ vi tính, Remote/App)",
+      "sku": "TENON-G3",
+      "costPrice": 5500000,
+      "retailPrice": 8000000,
+      "originalPrice": 9200000,
+      "discountPercent": 13,
+      "unit": "Bộ",
+      "primaryCategoryId": 54003,
+      "categoryIds": [
+        54003,
+        52941
+      ],
+      "categoryName": "Khóa thông minh TENON",
+      "parentGroup": "Khóa Cửa Thông Minh",
+      "brand": "TENON",
+      "image": "https://tenontech.vn/wp-content/uploads/2025/09/G3-mau-2-1.png",
+      "images": [
+        "https://tenontech.vn/wp-content/uploads/2025/09/G3-mau-2-1.png",
+        "https://tenontech.vn/wp-content/uploads/2025/09/G3-mau-3-1.png",
+        "https://tenontech.vn/wp-content/uploads/2025/09/G3-2026-cua.png"
+      ],
+      "features": [
+        "Model: TENON G3 – Cửa cổng sắt",
+        "Phương thức mở: 2 mặt vân tay FPC (trong & ngoài), Thẻ từ RFID 2 mặt, Mật mã ảo 2 mặt, Chìa cơ vi tính chống đoản, App TTLock / Remote từ xa",
+        "Kháng nước: IP68 Tiêu chuẩn chống nước chống bụi cao nhất ",
+        "Điểm nổi bật: Bảo vệ an ninh tuyệt đối: Mở khóa bằng vân tay ở CẢ 2 MẶT (trong và ngoài) chống thò tay qua khe cổng",
+        "Tính năng: Tiêu chuẩn chống nước chống bụi IP68 chịu mưa nắng trực tiếp quanh năm",
+        "Bảo hành: 24 tháng chính hãng Tenon tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tenon",
+      "inStock": true,
+      "description": "Khóa thông minh G3 chính hãng TENON – Giải pháp kiểm soát an ninh tối tân cho Cửa cổng ngoài trời / Cửa sắt. Sản phẩm được trang bị cảm biến vân tay FPC bán dẫn Thụy Điển độ chính xác cao nhận diện <0.5s, tích hợp mã số ảo chống nhìn trộm, thẻ từ RFID tần số cao, chìa khóa cơ dự phòng chống sao chép và khả năng quản lý từ xa qua App điện thoại. Khóa được phân phối và bảo hành chính hãng 24 tháng bởi Chu Gia Security.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TENON (Chính hãng phân phối bởi Chu Gia)"
+        },
+        {
+          "k": "Model",
+          "v": "G3"
+        },
+        {
+          "k": "Loại cửa phù hợp",
+          "v": "Cửa cổng sắt, Cửa cổng inox, Cửa cổng biệt thự ngoài trời (chịu mưa nắng 100%)"
+        },
+        {
+          "k": "Phương thức mở khóa",
+          "v": "2 mặt vân tay FPC (trong & ngoài), Thẻ từ RFID 2 mặt, Mật mã ảo 2 mặt, Chìa cơ vi tính chống đoản, App TTLock / Remote từ xa"
+        },
+        {
+          "k": "Tiêu chuẩn kháng nước / bụi",
+          "v": "IP68 Tiêu chuẩn chống nước chống bụi cao nhất – Hoạt động bền bỉ dưới mọi thời tiết mưa bão"
+        },
+        {
+          "k": "Nguồn điện hoạt động",
+          "v": "4 pin AA Alkaline (hoặc adapter nguồn trực tiếp 12V), có cổng sạc ngoài Type-C"
+        },
+        {
+          "k": "Dung lượng lưu trữ",
+          "v": "100 Vân tay 2 mặt, 100 Mật khẩu, 100 Thẻ từ"
+        },
+        {
+          "k": "Cảm biến vân tay",
+          "v": "Sinh trắc học bán dẫn FPC Thụy Điển (nhận diện < 0.5 giây)"
+        },
+        {
+          "k": "Mật mã bảo mật",
+          "v": "Mật khẩu ảo 16-32 ký tự chống nhìn trộm"
+        },
+        {
+          "k": "Thẻ từ",
+          "v": "Thẻ chip RFID chống sao chép tần số cao 13.56MHz"
+        },
+        {
+          "k": "Cảnh báo an ninh",
+          "v": "Cảnh báo cạy khóa, nhập sai mã 5 lần, cảnh báo pin yếu"
+        },
+        {
+          "k": "Chế độ tự động khóa",
+          "v": "Tự động phóng chốt khóa ngay sau khi khép cửa"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 trong 30 ngày bởi Chu Gia Security"
+        }
+      ],
+      "tenonUrl": "https://tenontech.vn/khoa-cua-cong-thong-minh-g3-2026/"
+    },
+    {
+      "id": 990016,
+      "name": "Khóa cổng Tenon G5 Cắt CNC Nguyên Khối (Chuẩn chống nước tuyệt đối IP68, 2 mặt vân tay, Thẻ từ RFID, Mật mã, Chìa cơ, App Bluetooth/Wifi)",
+      "sku": "TENON-G5",
+      "costPrice": 6500000,
+      "retailPrice": 8900000,
+      "originalPrice": 10235000,
+      "discountPercent": 13,
+      "unit": "Bộ",
+      "primaryCategoryId": 54003,
+      "categoryIds": [
+        54003,
+        52941
+      ],
+      "categoryName": "Khóa thông minh TENON",
+      "parentGroup": "Khóa Cửa Thông Minh",
+      "brand": "TENON",
+      "image": "https://tenontech.vn/wp-content/uploads/2025/10/9.png",
+      "images": [
+        "https://tenontech.vn/wp-content/uploads/2025/10/9.png",
+        "https://tenontech.vn/wp-content/uploads/2025/10/7-1.png",
+        "https://tenontech.vn/wp-content/uploads/2025/10/8-2.png",
+        "https://tenontech.vn/wp-content/uploads/2025/10/G5cong.png"
+      ],
+      "features": [
+        "Model: TENON G5 – Cổng biệt thự nhôm đúc",
+        "Phương thức mở: 2 mặt vân tay, Thẻ từ RFID, Mật mã ảo, Chìa cơ, App Bluetooth/Wifi",
+        "Kháng nước: IP68 Chống nước tuyệt đối ngoài trời",
+        "Điểm nổi bật: Gia công cắt CNC nguyên khối đẳng cấp cho cổng biệt thự",
+        "Tính năng: Chống nước tiêu chuẩn IP68 tuyệt đối",
+        "Bảo hành: 24 tháng chính hãng Tenon tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tenon",
+      "inStock": true,
+      "description": "Khóa thông minh G5 chính hãng TENON – Giải pháp kiểm soát an ninh tối tân cho Cửa cổng ngoài trời / Cửa sắt. Sản phẩm được trang bị cảm biến vân tay FPC bán dẫn Thụy Điển độ chính xác cao nhận diện <0.5s, tích hợp mã số ảo chống nhìn trộm, thẻ từ RFID tần số cao, chìa khóa cơ dự phòng chống sao chép và khả năng quản lý từ xa qua App điện thoại. Khóa được phân phối và bảo hành chính hãng 24 tháng bởi Chu Gia Security.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TENON (Chính hãng phân phối bởi Chu Gia)"
+        },
+        {
+          "k": "Model",
+          "v": "G5"
+        },
+        {
+          "k": "Loại cửa phù hợp",
+          "v": "Cổng biệt thự nhôm đúc, Cổng sắt mỹ thuật ngoài trời (chịu mưa nắng trực tiếp)"
+        },
+        {
+          "k": "Phương thức mở khóa",
+          "v": "2 mặt vân tay, Thẻ từ RFID, Mật mã ảo, Chìa cơ, App Bluetooth/Wifi"
+        },
+        {
+          "k": "Tiêu chuẩn kháng nước / bụi",
+          "v": "IP68 Chống nước tuyệt đối ngoài trời"
+        },
+        {
+          "k": "Nguồn điện hoạt động",
+          "v": "Pin AA hoặc nguồn điện 12V trực tiếp"
+        },
+        {
+          "k": "Dung lượng lưu trữ",
+          "v": "100 Vân tay, 100 Thẻ từ, 100 Mật mã"
+        },
+        {
+          "k": "Cảm biến vân tay",
+          "v": "Sinh trắc học bán dẫn FPC Thụy Điển (nhận diện < 0.5 giây)"
+        },
+        {
+          "k": "Mật mã bảo mật",
+          "v": "Mật khẩu ảo 16-32 ký tự chống nhìn trộm"
+        },
+        {
+          "k": "Thẻ từ",
+          "v": "Thẻ chip RFID chống sao chép tần số cao 13.56MHz"
+        },
+        {
+          "k": "Cảnh báo an ninh",
+          "v": "Cảnh báo cạy khóa, nhập sai mã 5 lần, cảnh báo pin yếu"
+        },
+        {
+          "k": "Chế độ tự động khóa",
+          "v": "Tự động phóng chốt khóa ngay sau khi khép cửa"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 trong 30 ngày bởi Chu Gia Security"
+        }
+      ],
+      "tenonUrl": "https://tenontech.vn/tenon-g5-cong-nghe-cat-cnc-tieu-chuan-chong-nuoc-ip68/"
+    },
+    {
+      "id": 990017,
+      "name": "Khóa điện tử Tenon G4 chuyên Cửa Kính Cường Lực (Lắp đặt không khoan kính, Cảm biến vân tay siêu nhạy, Mã số ảo, Thẻ từ, Chìa cơ, Chuông cửa)",
+      "sku": "TENON-G4",
+      "costPrice": 2600000,
+      "retailPrice": 6800000,
+      "originalPrice": 7819999,
+      "discountPercent": 13,
+      "unit": "Bộ",
+      "primaryCategoryId": 54003,
+      "categoryIds": [
+        54003,
+        52941
+      ],
+      "categoryName": "Khóa thông minh TENON",
+      "parentGroup": "Khóa Cửa Thông Minh",
+      "brand": "TENON",
+      "image": "https://tenontech.vn/wp-content/uploads/2024/03/G4-3.png",
+      "images": [
+        "https://tenontech.vn/wp-content/uploads/2024/03/G4-3.png",
+        "https://tenontech.vn/wp-content/uploads/2024/03/G4-1-1.png",
+        "https://tenontech.vn/wp-content/uploads/2024/03/G4-gold-3.png",
+        "https://tenontech.vn/wp-content/uploads/2024/03/G4-gold.png"
+      ],
+      "features": [
+        "Model: TENON G4 – Cửa kính cường lực văn phòng",
+        "Phương thức mở: Vân tay FPC Thụy Điển, Mật mã ảo, Thẻ từ RFID, Chìa cơ, Chuông cửa tích hợp, Remote điều khiển từ xa",
+        "Kháng nước: IP54 dùng trong nhà văn phòng",
+        "Điểm nổi bật: Lắp đặt cực nhanh không cần khoan đục hay cắt kính cường lực",
+        "Tính năng: Bàn phím cảm ứng chống nhìn trộm kết hợp chuông cửa thông minh",
+        "Bảo hành: 24 tháng chính hãng Tenon tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tenon",
+      "inStock": true,
+      "description": "Khóa thông minh G4 chính hãng TENON – Giải pháp kiểm soát an ninh tối tân cho Cửa kính cường lực. Sản phẩm được trang bị cảm biến vân tay FPC bán dẫn Thụy Điển độ chính xác cao nhận diện <0.5s, tích hợp mã số ảo chống nhìn trộm, thẻ từ RFID tần số cao, chìa khóa cơ dự phòng chống sao chép và khả năng quản lý từ xa qua App điện thoại. Khóa được phân phối và bảo hành chính hãng 24 tháng bởi Chu Gia Security.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TENON (Chính hãng phân phối bởi Chu Gia)"
+        },
+        {
+          "k": "Model",
+          "v": "G4"
+        },
+        {
+          "k": "Loại cửa phù hợp",
+          "v": "Cửa kính cường lực văn phòng, Cửa kính thủy lực cửa hàng (dày kính 10-12mm)"
+        },
+        {
+          "k": "Phương thức mở khóa",
+          "v": "Vân tay FPC Thụy Điển, Mật mã ảo, Thẻ từ RFID, Chìa cơ, Chuông cửa tích hợp, Remote điều khiển từ xa"
+        },
+        {
+          "k": "Tiêu chuẩn kháng nước / bụi",
+          "v": "IP54 dùng trong nhà văn phòng"
+        },
+        {
+          "k": "Nguồn điện hoạt động",
+          "v": "4 pin AA Alkaline (12 tháng sử dụng), cổng kích nguồn Type-C"
+        },
+        {
+          "k": "Dung lượng lưu trữ",
+          "v": "100 Vân tay, 100 Mật khẩu, 100 Thẻ từ"
+        },
+        {
+          "k": "Cảm biến vân tay",
+          "v": "Sinh trắc học bán dẫn FPC Thụy Điển (nhận diện < 0.5 giây)"
+        },
+        {
+          "k": "Mật mã bảo mật",
+          "v": "Mật khẩu ảo 16-32 ký tự chống nhìn trộm"
+        },
+        {
+          "k": "Thẻ từ",
+          "v": "Thẻ chip RFID chống sao chép tần số cao 13.56MHz"
+        },
+        {
+          "k": "Cảnh báo an ninh",
+          "v": "Cảnh báo cạy khóa, nhập sai mã 5 lần, cảnh báo pin yếu"
+        },
+        {
+          "k": "Chế độ tự động khóa",
+          "v": "Tự động phóng chốt khóa ngay sau khi khép cửa"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 trong 30 ngày bởi Chu Gia Security"
+        }
+      ],
+      "tenonUrl": "https://tenontech.vn/khoa-thong-minh-cua-kinh-g4/"
+    },
+    {
+      "id": 990018,
+      "name": "Khóa cửa kính thông minh Tenon G4 Pro (Không khoan cắt kính, Tích hợp chuông cửa + Quản lý App TTLock, Vân tay, Thẻ từ, Mã số)",
+      "sku": "TENON-G4-PRO",
+      "costPrice": 3100000,
+      "retailPrice": 8000000,
+      "originalPrice": 9200000,
+      "discountPercent": 13,
+      "unit": "Bộ",
+      "primaryCategoryId": 54003,
+      "categoryIds": [
+        54003,
+        52941
+      ],
+      "categoryName": "Khóa thông minh TENON",
+      "parentGroup": "Khóa Cửa Thông Minh",
+      "brand": "TENON",
+      "image": "https://tenontech.vn/wp-content/uploads/2026/03/G4pro-1.png",
+      "images": [
+        "https://tenontech.vn/wp-content/uploads/2026/03/G4pro-1.png",
+        "https://tenontech.vn/wp-content/uploads/2026/03/G4pro-3.png",
+        "https://tenontech.vn/wp-content/uploads/2026/03/G4pro-4.png",
+        "https://tenontech.vn/wp-content/uploads/2026/03/G4pro-2.png"
+      ],
+      "features": [
+        "Model: TENON G4-PRO – Cửa kính cường lực không khoan văn phòng",
+        "Phương thức mở: Vân tay FPC, Thẻ từ RFID, Mật mã ảo, Tích hợp chuông cửa + App TTLock quản lý chấm công / lịch sử",
+        "Kháng nước: IP54",
+        "Điểm nổi bật: Phiên bản nâng cấp Pro hỗ trợ chấm công và xem lịch sử ra vào trên App",
+        "Tính năng: Không khoan cắt kính giữ nguyên vẹn thẩm mỹ mặt bằng",
+        "Bảo hành: 24 tháng chính hãng Tenon tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tenon",
+      "inStock": true,
+      "description": "Khóa thông minh G4 Pro chính hãng TENON – Giải pháp kiểm soát an ninh tối tân cho Cửa kính cường lực. Sản phẩm được trang bị cảm biến vân tay FPC bán dẫn Thụy Điển độ chính xác cao nhận diện <0.5s, tích hợp mã số ảo chống nhìn trộm, thẻ từ RFID tần số cao, chìa khóa cơ dự phòng chống sao chép và khả năng quản lý từ xa qua App điện thoại. Khóa được phân phối và bảo hành chính hãng 24 tháng bởi Chu Gia Security.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TENON (Chính hãng phân phối bởi Chu Gia)"
+        },
+        {
+          "k": "Model",
+          "v": "G4-PRO"
+        },
+        {
+          "k": "Loại cửa phù hợp",
+          "v": "Cửa kính cường lực không khoan văn phòng, Showroom, Cửa hàng (dày 10-12mm)"
+        },
+        {
+          "k": "Phương thức mở khóa",
+          "v": "Vân tay FPC, Thẻ từ RFID, Mật mã ảo, Tích hợp chuông cửa + App TTLock quản lý chấm công / lịch sử"
+        },
+        {
+          "k": "Tiêu chuẩn kháng nước / bụi",
+          "v": "IP54"
+        },
+        {
+          "k": "Nguồn điện hoạt động",
+          "v": "4 pin AA Alkaline, cổng sạc Type-C"
+        },
+        {
+          "k": "Dung lượng lưu trữ",
+          "v": "100 Vân tay, 100 Mật mã, 100 Thẻ từ"
+        },
+        {
+          "k": "Cảm biến vân tay",
+          "v": "Sinh trắc học bán dẫn FPC Thụy Điển (nhận diện < 0.5 giây)"
+        },
+        {
+          "k": "Mật mã bảo mật",
+          "v": "Mật khẩu ảo 16-32 ký tự chống nhìn trộm"
+        },
+        {
+          "k": "Thẻ từ",
+          "v": "Thẻ chip RFID chống sao chép tần số cao 13.56MHz"
+        },
+        {
+          "k": "Cảnh báo an ninh",
+          "v": "Cảnh báo cạy khóa, nhập sai mã 5 lần, cảnh báo pin yếu"
+        },
+        {
+          "k": "Chế độ tự động khóa",
+          "v": "Tự động phóng chốt khóa ngay sau khi khép cửa"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 trong 30 ngày bởi Chu Gia Security"
+        }
+      ],
+      "tenonUrl": "https://tenontech.vn/khoa-thong-minh-g4-pro/"
+    },
+    {
+      "id": 990019,
+      "name": "Khóa đại sảnh biệt thự Tenon F8 Tân Cổ Điển Hoàng Gia (Đồng đúc nguyên khối, Nắp trượt tự động, Vân tay bán dẫn FPC, Mật khẩu ảo, Thẻ chip, Chìa cơ)",
+      "sku": "TENON-F8",
+      "costPrice": 18500000,
+      "retailPrice": 27200000,
+      "originalPrice": 31279999,
+      "discountPercent": 13,
+      "unit": "Bộ",
+      "primaryCategoryId": 54003,
+      "categoryIds": [
+        54003,
+        52941
+      ],
+      "categoryName": "Khóa thông minh TENON",
+      "parentGroup": "Khóa Cửa Thông Minh",
+      "brand": "TENON",
+      "image": "https://tenontech.vn/wp-content/uploads/2022/11/F8-1-scaled.jpeg",
+      "images": [
+        "https://tenontech.vn/wp-content/uploads/2022/11/F8-1-scaled.jpeg",
+        "https://tenontech.vn/wp-content/uploads/2022/11/F8-2-scaled.jpeg",
+        "https://tenontech.vn/wp-content/uploads/2022/11/F8-3-scaled.jpeg",
+        "https://tenontech.vn/wp-content/uploads/2022/11/F8-4-scaled.jpeg"
+      ],
+      "features": [
+        "Model: TENON F8 – Cửa gỗ đại sảnh biệt thự",
+        "Phương thức mở: Vân tay bán dẫn FPC dưới nắp trượt cơ điện, Mật khẩu ảo bảo vệ nhiều lớp, Thẻ chip RFID, Chìa cơ vi tính chống đoản",
+        "Kháng nước: IP55 phong cách biệt thự hoàng gia",
+        "Điểm nổi bật: Đồng đúc nguyên khối phong cách hoàng gia tân cổ điển quý tộc",
+        "Tính năng: Nắp trượt bảo vệ tự động đóng mở bảo vệ đầu đọc vân tay và bàn phím",
+        "Bảo hành: 24 tháng chính hãng Tenon tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tenon",
+      "inStock": true,
+      "description": "Khóa thông minh F8 chính hãng TENON – Giải pháp kiểm soát an ninh tối tân cho Biệt thự tân cổ điển / Đại sảnh. Sản phẩm được trang bị cảm biến vân tay FPC bán dẫn Thụy Điển độ chính xác cao nhận diện <0.5s, tích hợp mã số ảo chống nhìn trộm, thẻ từ RFID tần số cao, chìa khóa cơ dự phòng chống sao chép và khả năng quản lý từ xa qua App điện thoại. Khóa được phân phối và bảo hành chính hãng 24 tháng bởi Chu Gia Security.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TENON (Chính hãng phân phối bởi Chu Gia)"
+        },
+        {
+          "k": "Model",
+          "v": "F8"
+        },
+        {
+          "k": "Loại cửa phù hợp",
+          "v": "Cửa gỗ đại sảnh biệt thự, Cửa gỗ đôi cổ điển, Lâu đài tân cổ điển hoàng gia (đố cửa ≥ 120mm, dày 45-120mm)"
+        },
+        {
+          "k": "Phương thức mở khóa",
+          "v": "Vân tay bán dẫn FPC dưới nắp trượt cơ điện, Mật khẩu ảo bảo vệ nhiều lớp, Thẻ chip RFID, Chìa cơ vi tính chống đoản"
+        },
+        {
+          "k": "Tiêu chuẩn kháng nước / bụi",
+          "v": "IP55 phong cách biệt thự hoàng gia"
+        },
+        {
+          "k": "Nguồn điện hoạt động",
+          "v": "8 pin AA Alkaline dung lượng lớn (hoặc pin sạc Lithium), cổng sạc dự phòng Type-C"
+        },
+        {
+          "k": "Dung lượng lưu trữ",
+          "v": "100 Vân tay, 100 Mật mã, 100 Thẻ từ"
+        },
+        {
+          "k": "Cảm biến vân tay",
+          "v": "Sinh trắc học bán dẫn FPC Thụy Điển (nhận diện < 0.5 giây)"
+        },
+        {
+          "k": "Mật mã bảo mật",
+          "v": "Mật khẩu ảo 16-32 ký tự chống nhìn trộm"
+        },
+        {
+          "k": "Thẻ từ",
+          "v": "Thẻ chip RFID chống sao chép tần số cao 13.56MHz"
+        },
+        {
+          "k": "Cảnh báo an ninh",
+          "v": "Cảnh báo cạy khóa, nhập sai mã 5 lần, cảnh báo pin yếu"
+        },
+        {
+          "k": "Chế độ tự động khóa",
+          "v": "Tự động phóng chốt khóa ngay sau khi khép cửa"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 trong 30 ngày bởi Chu Gia Security"
+        }
+      ],
+      "tenonUrl": "https://tenontech.vn/f8-thiet-ke-co-dien-sang-trong/"
+    },
+    {
+      "id": 990020,
+      "name": "Khóa thông minh tân cổ điển Tenon V5 (Thiết kế phong cách châu Âu quý tộc, Cảm biến FPC, Mã số ảo, Thẻ từ RFID, Chìa cơ, App Tenon)",
+      "sku": "TENON-V5",
+      "costPrice": 12500000,
+      "retailPrice": 23800000,
+      "originalPrice": 27369999,
+      "discountPercent": 13,
+      "unit": "Bộ",
+      "primaryCategoryId": 54003,
+      "categoryIds": [
+        54003,
+        52941
+      ],
+      "categoryName": "Khóa thông minh TENON",
+      "parentGroup": "Khóa Cửa Thông Minh",
+      "brand": "TENON",
+      "image": "https://tenontech.vn/wp-content/uploads/2026/01/V5.jpg",
+      "images": [
+        "https://tenontech.vn/wp-content/uploads/2026/01/V5.jpg",
+        "https://tenontech.vn/wp-content/uploads/2026/01/V5-13-1.png"
+      ],
+      "features": [
+        "Model: TENON V5 – Cửa gỗ tân cổ điển biệt thự",
+        "Phương thức mở: Vân tay FPC, Mật mã số ảo, Thẻ từ RFID, Chìa khóa cơ vi tính, App điện thoại",
+        "Kháng nước: IP54",
+        "Điểm nổi bật: Kiểu dáng tân cổ điển châu Âu thanh lịch, đường nét chạm trổ tinh xảo",
+        "Tính năng: Cảm biến vân tay một chạm siêu tốc",
+        "Bảo hành: 24 tháng chính hãng Tenon tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tenon",
+      "inStock": true,
+      "description": "Khóa thông minh V5 chính hãng TENON – Giải pháp kiểm soát an ninh tối tân cho Biệt thự tân cổ điển / Đại sảnh. Sản phẩm được trang bị cảm biến vân tay FPC bán dẫn Thụy Điển độ chính xác cao nhận diện <0.5s, tích hợp mã số ảo chống nhìn trộm, thẻ từ RFID tần số cao, chìa khóa cơ dự phòng chống sao chép và khả năng quản lý từ xa qua App điện thoại. Khóa được phân phối và bảo hành chính hãng 24 tháng bởi Chu Gia Security.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TENON (Chính hãng phân phối bởi Chu Gia)"
+        },
+        {
+          "k": "Model",
+          "v": "V5"
+        },
+        {
+          "k": "Loại cửa phù hợp",
+          "v": "Cửa gỗ tân cổ điển biệt thự, Cửa gỗ đôi đại sảnh (đố cửa ≥ 110mm, dày 40-100mm)"
+        },
+        {
+          "k": "Phương thức mở khóa",
+          "v": "Vân tay FPC, Mật mã số ảo, Thẻ từ RFID, Chìa khóa cơ vi tính, App điện thoại"
+        },
+        {
+          "k": "Tiêu chuẩn kháng nước / bụi",
+          "v": "IP54"
+        },
+        {
+          "k": "Nguồn điện hoạt động",
+          "v": "8 pin AA Alkaline, cổng sạc khẩn cấp Type-C"
+        },
+        {
+          "k": "Dung lượng lưu trữ",
+          "v": "100 Vân tay, 100 Mật mã, 100 Thẻ từ"
+        },
+        {
+          "k": "Cảm biến vân tay",
+          "v": "Sinh trắc học bán dẫn FPC Thụy Điển (nhận diện < 0.5 giây)"
+        },
+        {
+          "k": "Mật mã bảo mật",
+          "v": "Mật khẩu ảo 16-32 ký tự chống nhìn trộm"
+        },
+        {
+          "k": "Thẻ từ",
+          "v": "Thẻ chip RFID chống sao chép tần số cao 13.56MHz"
+        },
+        {
+          "k": "Cảnh báo an ninh",
+          "v": "Cảnh báo cạy khóa, nhập sai mã 5 lần, cảnh báo pin yếu"
+        },
+        {
+          "k": "Chế độ tự động khóa",
+          "v": "Tự động phóng chốt khóa ngay sau khi khép cửa"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 trong 30 ngày bởi Chu Gia Security"
+        }
+      ],
+      "tenonUrl": "https://tenontech.vn/khoa-thong-minh-tenon-v5/"
+    },
+    {
+      "id": 995001,
+      "name": "Cáp chuyển tín hiệu điều khiển cửa cuốn Zitech ZT-06 / ZT-08 (Cắm giắc không cắt dây)",
+      "sku": "TUYA-CAP-ZT-06-08",
+      "costPrice": 50000,
+      "retailPrice": 95000,
+      "originalPrice": 112100,
+      "discountPercent": 15,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA / ZITECH",
+      "image": "https://zitech.vn/wp-content/uploads/2026/08/cap-ZT-06.jpg",
+      "images": [
+        "https://zitech.vn/wp-content/uploads/2026/08/cap-ZT-06.jpg"
+      ],
+      "features": [
+        "Model: Cáp 8 chân (ZT-08 dùng cho hộp nhận YH) hoặc Cáp 6 chân (ZT-06 dùng cho hộp nhận CH)",
+        "Giao thức: Cắm giắc chuyển tiếp chuẩn xác 100%, không cần cắt nối dây điện giữ trọn vẹn bảo hành motor",
+        "Tính năng nổi bật: 12 tháng chính hãng",
+        "Tương thích: Ứng dụng Tuya Smart / Smart Life & Home Assistant (Zigbee2MQTT / ZHA)",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Sử dụng lắp đặt Basic cho cửa cuốn mà không cần cắt nối dây Phù hợp với hầu hết với các hộp nhận thông dụng trên thị trường Cáp 8 chân (ZT-08) : dùng cho các loại hộp nhận YH hoặc tương đương Cáp 6 chân (ZT-06) : dùng cho các loại hộp nhận CH hoặc tương đương",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "ZITECH (Chính hãng)"
+        },
+        {
+          "k": "Phân loại",
+          "v": "Cáp 8 chân (ZT-08 dùng cho hộp nhận YH) hoặc Cáp 6 chân (ZT-06 dùng cho hộp nhận CH)"
+        },
+        {
+          "k": "Ưu điểm kỹ thuật",
+          "v": "Cắm giắc chuyển tiếp chuẩn xác 100%, không cần cắt nối dây điện giữ trọn vẹn bảo hành motor"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "12 tháng chính hãng"
+        }
+      ],
+      "zitechUrl": "https://zitech.vn/san-pham/phu-kien/cap-chuyen-tin-hieu/"
+    },
+    {
+      "id": 995002,
+      "name": "Module công tắc thông minh mini Tuya Zigbee 3 kênh ZMW-ZB3 (Giấu đế âm tường, tải 10A)",
+      "sku": "TUYA-ZMW-ZB3",
+      "costPrice": 175000,
+      "retailPrice": 290000,
+      "originalPrice": 342200,
+      "discountPercent": 15,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA / ZITECH",
+      "image": "https://zitech.vn/wp-content/uploads/2026/08/mini-sw-3gang-zigbee.jpg",
+      "images": [
+        "https://zitech.vn/wp-content/uploads/2026/08/mini-sw-3gang-zigbee.jpg"
+      ],
+      "features": [
+        "Model: ZMW-ZB3",
+        "Giao thức: Zigbee 3.0",
+        "Tính năng nổi bật: 3 kênh độc lập",
+        "Tương thích: Ứng dụng Tuya Smart / Smart Life & Home Assistant (Zigbee2MQTT / ZHA)",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Kết nối: Zigbee Nguồn điện: 110–240VAC, 50/60Hz Công suất: dòng tải tối đa 10A Vỏ: nhựa trắng Hỗ trợ kết nối công tắc cơ để điều khiển",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA / ZITECH (Chính hãng)"
+        },
+        {
+          "k": "Model",
+          "v": "ZMW-ZB3"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0"
+        },
+        {
+          "k": "Số kênh điều khiển",
+          "v": "3 kênh độc lập"
+        },
+        {
+          "k": "Dòng tải",
+          "v": "Tối đa 10A (tổng 2300W)"
+        },
+        {
+          "k": "Tính năng",
+          "v": "Giải pháp thông minh giấu kín cho mặt 3 nút cơ, điều khiển độc lập 3 đèn qua app và giọng nói"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ],
+      "zitechUrl": "https://zitech.vn/san-pham/module-cong-tac-mini/cong-tac-mini-da-nang-zigbee-3-kenh/"
+    },
+    {
+      "id": 995003,
+      "name": "Module công tắc thông minh mini Tuya Zigbee 2 kênh ZMW-ZB2 (Giấu đế âm tường, tải 16A)",
+      "sku": "TUYA-ZMW-ZB2",
+      "costPrice": 145000,
+      "retailPrice": 240000,
+      "originalPrice": 283200,
+      "discountPercent": 15,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA / ZITECH",
+      "image": "https://zitech.vn/wp-content/uploads/2026/08/mini-sw-2gang-zigbee.jpg",
+      "images": [
+        "https://zitech.vn/wp-content/uploads/2026/08/mini-sw-2gang-zigbee.jpg"
+      ],
+      "features": [
+        "Model: ZMW-ZB2",
+        "Giao thức: Zigbee 3.0",
+        "Tính năng nổi bật: 2 kênh độc lập (điều khiển 2 bóng đèn riêng biệt)",
+        "Tương thích: Ứng dụng Tuya Smart / Smart Life & Home Assistant (Zigbee2MQTT / ZHA)",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Kết nối: Zigbee Nguồn điện: 110–240VAC, 50/60Hz Công suất: dòng tải tối đa 16A Vỏ: nhựa trắng Hỗ trợ kết nối công tắc cơ để điều khiển",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA / ZITECH (Chính hãng)"
+        },
+        {
+          "k": "Model",
+          "v": "ZMW-ZB2"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0"
+        },
+        {
+          "k": "Số kênh điều khiển",
+          "v": "2 kênh độc lập (điều khiển 2 bóng đèn riêng biệt)"
+        },
+        {
+          "k": "Dòng tải tối đa",
+          "v": "16A (3680W)"
+        },
+        {
+          "k": "Tính năng",
+          "v": "Đấu nối song song với 2 nút công tắc cơ, hỗ trợ kịch bản tự động hóa trên Home Assistant"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ],
+      "zitechUrl": "https://zitech.vn/san-pham/module-cong-tac-mini/cong-tac-mini-da-nang-zigbee-2-kenh/"
+    },
+    {
+      "id": 995004,
+      "name": "Module công tắc thông minh mini Tuya Zigbee 1 kênh ZMW-ZB1 (Giấu đế âm tường, tải 16A)",
+      "sku": "TUYA-ZMW-ZB1",
+      "costPrice": 115000,
+      "retailPrice": 190000,
+      "originalPrice": 224200,
+      "discountPercent": 15,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA / ZITECH",
+      "image": "https://zitech.vn/wp-content/uploads/2026/08/mini-sw-1-gang-zigbee.jpg",
+      "images": [
+        "https://zitech.vn/wp-content/uploads/2026/08/mini-sw-1-gang-zigbee.jpg"
+      ],
+      "features": [
+        "Model: ZMW-ZB1",
+        "Giao thức: Zigbee 3.0",
+        "Tính năng nổi bật: 39.2 × 39.2 × 18mm (Nhét vừa mọi loại đế âm tường Sino, Panasonic, clipsal)",
+        "Tương thích: Ứng dụng Tuya Smart / Smart Life & Home Assistant (Zigbee2MQTT / ZHA)",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Kết nối: Zigbee Nguồn điện: 110–240VAC, 50/60Hz Công suất: dòng tải tối đa 16A Vỏ: nhựa trắng Hỗ trợ kết nối công tắc cơ để điều khiển",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA / ZITECH (Chính hãng)"
+        },
+        {
+          "k": "Model",
+          "v": "ZMW-ZB1"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0"
+        },
+        {
+          "k": "Kích thước siêu nhỏ",
+          "v": "39.2 × 39.2 × 18mm (Nhét vừa mọi loại đế âm tường Sino, Panasonic, clipsal)"
+        },
+        {
+          "k": "Dòng tải tối đa",
+          "v": "16A (3680W)"
+        },
+        {
+          "k": "Đặc điểm nổi bật",
+          "v": "Giữ nguyên mặt công tắc cơ nguyên bản của ngôi nhà, biến thành công tắc thông minh điều khiển 2 chiều"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ],
+      "zitechUrl": "https://zitech.vn/san-pham/module-cong-tac-mini/cong-tac-mini-da-nang-zigbee-1-kenh/"
+    },
+    {
+      "id": 995005,
+      "name": "Module công tắc thông minh mini Tuya Wifi 1 kênh ZMW-WF1 (Không cần Hub, tải 16A)",
+      "sku": "TUYA-ZMW-WF1",
+      "costPrice": 110000,
+      "retailPrice": 180000,
+      "originalPrice": 212400,
+      "discountPercent": 15,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA / ZITECH",
+      "image": "https://zitech.vn/wp-content/uploads/2026/08/mini-switch-wifi-da-nang-1-3.jpg",
+      "images": [
+        "https://zitech.vn/wp-content/uploads/2026/08/mini-switch-wifi-da-nang-1-3.jpg",
+        "https://zitech.vn/wp-content/uploads/2026/08/mini-switch-wifi-da-nang-1-1024x1024.png",
+        "https://zitech.vn/wp-content/uploads/2026/08/mini-switch-wifi-da-nang-1-2-1024x1024.png"
+      ],
+      "features": [
+        "Model: ZMW-WF1",
+        "Giao thức: Wifi 2.4GHz 802.11 b/g/n",
+        "Tính năng nổi bật: 16A (3680W)",
+        "Tương thích: Ứng dụng Tuya Smart / Smart Life & Home Assistant (Zigbee2MQTT / ZHA)",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Module công tắc thông minh mini Tuya Wifi 1 kênh ZMW-WF1 (Không cần Hub, tải 16A) chính hãng Zitech / Tuya Smart. Giải pháp thiết bị nhà thông minh tiêu chuẩn quốc tế, kết nối ổn định, tương thích hoàn hảo với ứng dụng Smart Life / Tuya Smart và hệ thống điều khiển trung tâm Home Assistant (HASS).",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA / ZITECH (Chính hãng)"
+        },
+        {
+          "k": "Model",
+          "v": "ZMW-WF1"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Wifi 2.4GHz 802.11 b/g/n (Kết nối trực tiếp router Wifi)"
+        },
+        {
+          "k": "Dòng tải tối đa",
+          "v": "16A (3680W)"
+        },
+        {
+          "k": "Tính năng",
+          "v": "Không cần hub trung tâm, lắp đặt trực tiếp vào đế âm, điều khiển qua Smart Life app"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ],
+      "zitechUrl": "https://zitech.vn/san-pham/module-cong-tac-mini/cong-tac-mini-da-nang-wifi-1-kenh/"
+    },
+    {
+      "id": 995006,
+      "name": "Cảm biến hiện diện người siêu nhỏ Tuya mmWave Radar CBHD-Mini (Phát hiện tĩnh vi mô, 24GHz)",
+      "sku": "TUYA-CBHD-MINI",
+      "costPrice": 260000,
+      "retailPrice": 420000,
+      "originalPrice": 495600,
+      "discountPercent": 15,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA / ZITECH",
+      "image": "https://zitech.vn/wp-content/uploads/2026/08/CBHDM1.png",
+      "images": [
+        "https://zitech.vn/wp-content/uploads/2026/08/CBHDM1.png",
+        "https://zitech.vn/wp-content/uploads/2026/08/CBHDM5-542x1024.png",
+        "https://zitech.vn/wp-content/uploads/2026/08/CBHDM6-668x1024.png",
+        "https://zitech.vn/wp-content/uploads/2026/08/CBHDM7-682x1024.png",
+        "https://zitech.vn/wp-content/uploads/2026/08/CBHDM8-542x1024.png",
+        "https://zitech.vn/wp-content/uploads/2026/08/CBHDM9-542x1024.png",
+        "https://zitech.vn/wp-content/uploads/2026/08/CBHDM10-578x1024.png",
+        "https://zitech.vn/wp-content/uploads/2026/08/CBHDm4-626x1024.png"
+      ],
+      "features": [
+        "Model: CBHD-MINI",
+        "Giao thức: Sóng Radar mmWave 24GHz độ nhạy cực cao",
+        "Tính năng nổi bật: Zigbee 3.0 / Wifi",
+        "Tương thích: Ứng dụng Tuya Smart / Smart Life & Home Assistant (Zigbee2MQTT / ZHA)",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Tóm tắt thông số kỹ thuật Thông số Giá trị Loại sản phẩm Cảm biến hiện diện người mmWave Radar Kết nối Zigbee Tần số 5.8 GHz Điện áp hoạt động DC 5V Khoảng cách phát hiện 1–10 m , có thể điều chỉnh Góc điều chỉnh vùng phát hiện Dọc 300° , ngang 360° Độ nhạy 10–100% , có thể điều chỉnh Thời gian trễ 5–7200 giây , có thể điều chỉnh Phương thức lắp đặt Đặt bàn, gắn tường hoặc gắn trần Chiều cao lắp đặt bên Khoảng 1,5 m Kích thước Khoảng 47,5 × 47,5 × 20 mm Tính năng Phát hiện hiện diện, phát hiện chuyển động nhỏ, cảm biến ánh sáng kỹ thuật số Ứng dụng Nhà thông minh, phòng ngủ, phòng khách, văn phòng, phòng họp, khách sạn… Điểm nổi bật mmWave Radar giúp phát hiện cả sự hiện diện tĩnh và chuyển động nhỏ , không chỉ phát hiện chuyển động lớn như PIR. Có thể tùy chỉnh khoảng cách phát hiện 1–10 m trên Tuya App. Hỗ trợ điều chỉnh độ nhạy và thời gian trễ . Góc lắp đặt linh hoạt, có thể đặt bàn, gắn tường hoặc gắn trần . Có cảm biến ánh sáng , hỗ trợ xây dựng các kịch bản tự động hóa theo điều kiện ánh sáng. Có thể kết hợp với các thiết bị Tuya để tự động điều khiển đèn, điều hòa, quạt, rèm, thiết bị điện…",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA / ZITECH (Chính hãng)"
+        },
+        {
+          "k": "Model",
+          "v": "CBHD-MINI"
+        },
+        {
+          "k": "Công nghệ cảm biến",
+          "v": "Sóng Radar mmWave 24GHz độ nhạy cực cao"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 / Wifi"
+        },
+        {
+          "k": "Khả năng nhận diện",
+          "v": "Phát hiện hơi thở và nhịp tim vi mô của người ngồi yên đọc sách, làm việc hoặc ngủ"
+        },
+        {
+          "k": "Ứng dụng",
+          "v": "Khắc phục triệt để nhược điểm tắt đèn oan của cảm biến hồng ngoại PIR cũ trong phòng làm việc, WC"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ],
+      "zitechUrl": "https://zitech.vn/san-pham/cam-bien-hien-dien/cam-bien-hien-dien-mini/"
+    },
+    {
+      "id": 995007,
+      "name": "Cảm biến hiện diện âm trần có Relay Tuya mmWave Radar CBHD-AT (Đóng cắt đèn trực tiếp)",
+      "sku": "TUYA-CBHD-AT",
+      "costPrice": 305000,
+      "retailPrice": 490000,
+      "originalPrice": 578200,
+      "discountPercent": 15,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA / ZITECH",
+      "image": "https://zitech.vn/wp-content/uploads/2026/08/CBHDA2.png",
+      "images": [
+        "https://zitech.vn/wp-content/uploads/2026/08/CBHDA2.png"
+      ],
+      "features": [
+        "Model: CBHD-AT",
+        "Giao thức: Khoét lỗ âm trần thạch cao đường kính 55-65mm siêu thẩm mỹ",
+        "Tính năng nổi bật: Đóng cắt trực tiếp tải đèn 220V mà không cần module trung gian",
+        "Tương thích: Ứng dụng Tuya Smart / Smart Life & Home Assistant (Zigbee2MQTT / ZHA)",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Thông số kỹ thuật Model: DG35-DT-24G – Phiên bản nâng cấp mới nhất (nhạy và chống nhiễu tốt hơn) Loại sản phẩm: Cảm biến hiện diện vi chuyển động (Human Presence Sensor) Công nghệ: Microwave Radar 24GHz Góc phát hiện: 120° × 120° Khoảng cách phát hiện: 0,5–9 m Độ nhạy: 9 mức , từ 0–9 Thời gian trễ: 0,5 giây–25 phút , có thể điều chỉnh Kiểu lắp đặt: Lắp âm trần Chiều cao lắp đặt: 2–4 m Kích thước: Mặt trước 75 mm , đường kính phủ bì 92 mm ; chiều sâu 57 mm , phủ bì 62 mm Kích thước lỗ khoét: 60–65 mm Nguồn điện: AC 110–265V Tính năng nổi bật: Phát hiện hiện diện và vi chuyển động, hỗ trợ phát hiện người đứng/ngồi yên, có khả năng xuyên qua một số vật liệu như kính, nhựa, quần áo và gỗ mỏng; hỗ trợ điều chỉnh các thông số để phù hợp từng không gian.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA / ZITECH (Chính hãng)"
+        },
+        {
+          "k": "Model",
+          "v": "CBHD-AT"
+        },
+        {
+          "k": "Kiểu lắp đặt",
+          "v": "Khoét lỗ âm trần thạch cao đường kính 55-65mm siêu thẩm mỹ"
+        },
+        {
+          "k": "Tích hợp sẵn Relay",
+          "v": "Đóng cắt trực tiếp tải đèn 220V mà không cần module trung gian"
+        },
+        {
+          "k": "Công nghệ",
+          "v": "Radar sóng milimet mmWave 24GHz + Cảm biến ánh sáng Lux"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ],
+      "zitechUrl": "https://zitech.vn/san-pham/cam-bien-hien-dien/cam-bien-hien-dien-am-tran-co-relay/"
+    },
+    {
+      "id": 995008,
+      "name": "Cảm biến hiện diện gắn nổi trần có Relay Tuya mmWave Radar CBHD-NT (Bắt trần bê tông, có Relay)",
+      "sku": "TUYA-CBHD-NT",
+      "costPrice": 325000,
+      "retailPrice": 520000,
+      "originalPrice": 613600,
+      "discountPercent": 15,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA / ZITECH",
+      "image": "https://zitech.vn/wp-content/uploads/2026/08/CBHD13.png",
+      "images": [
+        "https://zitech.vn/wp-content/uploads/2026/08/CBHD13.png",
+        "https://zitech.vn/wp-content/uploads/2026/08/CBHD12.png"
+      ],
+      "features": [
+        "Model: CBHD-NT",
+        "Giao thức: Gắn nổi trên trần bê tông hoặc tường, không cần khoét lỗ",
+        "Tính năng nổi bật: Relay 10A đóng cắt đèn trực tiếp",
+        "Tương thích: Ứng dụng Tuya Smart / Smart Life & Home Assistant (Zigbee2MQTT / ZHA)",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Loại sản phẩm: Cảm biến hiện diện vi sóng 24GHz – Phiên bản nâng cấp mới nhất (nhạy và chống nhiễu tốt hơn) Model: DG75-DT-24G Nguồn cấp: 220VAC/50Hz Phương thức lắp đặt: Lắp âm trần , hỗ trợ lắp đặt cố định bằng vít; chiều cao lắp đặt khuyến nghị 2–4 m . Góc phát hiện: 120° × 120° . Phạm vi phát hiện: 0,5–9 m , hỗ trợ phát hiện chuyển động và hiện diện vi chuyển động . Độ nhạy: Có thể điều chỉnh 0–9 , từ mức thấp đến cao. Thời gian trễ: Có thể điều chỉnh 0,5 giây–25 phút ; hỗ trợ nhiều trạng thái phát hiện hiện diện. Kích thước: Ø105 × 27 mm ; tích hợp cảm biến ánh sáng, LED trạng thái , khả năng chống nhiễu và hoạt động ổn định trong nhiều môi trường. Đặc điểm nổi bật: Công nghệ Microwave cho phép phát hiện cả người đứng yên hoặc chuyển động rất nhẹ , phù hợp cho nhà thông minh, khách sạn, văn phòng, phòng họp và hệ thống chiếu sáng tự động .",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA / ZITECH (Chính hãng)"
+        },
+        {
+          "k": "Model",
+          "v": "CBHD-NT"
+        },
+        {
+          "k": "Kiểu lắp đặt",
+          "v": "Gắn nổi trên trần bê tông hoặc tường, không cần khoét lỗ"
+        },
+        {
+          "k": "Tích hợp Relay",
+          "v": "Relay 10A đóng cắt đèn trực tiếp"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ],
+      "zitechUrl": "https://zitech.vn/san-pham/cam-bien-hien-dien/cam-bien-hien-dien-gan-noi-tran-co-relay/"
+    },
+    {
+      "id": 995009,
+      "name": "Cảm biến cửa từ thông minh Tuya Zigbee 4 trạng thái ngữ cảnh CBC-ZB (Pin 2 năm)",
+      "sku": "TUYA-CBC-ZB",
+      "costPrice": 115000,
+      "retailPrice": 190000,
+      "originalPrice": 224200,
+      "discountPercent": 15,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA / ZITECH",
+      "image": "https://zitech.vn/wp-content/uploads/2026/08/CBC1.jpg",
+      "images": [
+        "https://zitech.vn/wp-content/uploads/2026/08/CBC1.jpg"
+      ],
+      "features": [
+        "Model: CBC-ZB",
+        "Giao thức: Zigbee 3.0",
+        "Tính năng nổi bật: Hỗ trợ 4 trạng thái: Đóng cửa, Mở cửa, Cửa mở hé quá lâu, Báo động tháo gỡ cạy phá",
+        "Tương thích: Ứng dụng Tuya Smart / Smart Life & Home Assistant (Zigbee2MQTT / ZHA)",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Thông số kỹ thuật Thông số Chi tiết Loại sản phẩm Cảm biến cửa thông minh Kết nối không dây Zigbee Pin 1 × CR2032 Số trạng thái để tạo kịch bản 4 trạng thái Phát hiện trạng thái Đóng / Mở Khoảng cách kích hoạt 20 ± 5 mm Phương thức lắp đặt Dán bằng băng keo hai mặt Ứng dụng Theo dõi trạng thái cửa, cửa sổ và các vị trí cần giám sát Thông báo Thông báo khi cửa mở / đóng Cảnh báo pin yếu Có Lịch sử hoạt động Ghi nhận lịch sử mở/đóng Điều khiển từ xa Theo dõi trạng thái thông qua ứng dụng Tạo kịch bản thông minh Có, hỗ trợ sử dụng trạng thái cảm biến làm điều kiện cho kịch bản Gateway yêu cầu Cần Zigbee Gateway để kết nối với hệ thống nhà thông minh Tính năng nổi bật Zigbee giúp kết nối ổn định với hệ thống nhà thông minh. 4 trạng thái có thể sử dụng làm điều kiện để thiết lập các kịch bản tự động . Theo dõi trạng thái đóng/mở cửa theo thời gian thực trên ứng dụng. Có thông báo khi cửa mở hoặc đóng . Cảnh báo pin yếu để chủ động thay pin. Lưu lịch sử mở/đóng trong 7 ngày Lắp đặt đơn giản bằng băng keo hai mặt , không cần đi dây. Khoảng cách kích hoạt được khuyến nghị 20 ± 5 mm . Có thể ứng dụng cho cửa ra vào, cửa sổ, cửa tủ, cửa thú cưng, ngăn kéo… Lưu ý: Sản phẩm cần Zigbee Gateway để kết nối với ứng dụng/hệ thống nhà thông minh.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA / ZITECH (Chính hãng)"
+        },
+        {
+          "k": "Model",
+          "v": "CBC-ZB"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0"
+        },
+        {
+          "k": "Tính năng thông minh",
+          "v": "Hỗ trợ 4 trạng thái: Đóng cửa, Mở cửa, Cửa mở hé quá lâu, Báo động tháo gỡ cạy phá"
+        },
+        {
+          "k": "Pin",
+          "v": "Pin CR2032 tuổi thọ 2 năm, cảnh báo pin yếu trên điện thoại"
+        },
+        {
+          "k": "Tác vụ tự động hóa",
+          "v": "Mở cửa tự động bật đèn và kích hoạt camera an ninh ghi hình"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ],
+      "zitechUrl": "https://zitech.vn/san-pham/cam-bien-cua/cam-bien-cua-zigbee-4-trang-thai-ngu-canh/"
+    },
+    {
+      "id": 995010,
+      "name": "Bộ điều khiển hồng ngoại thông minh Tuya Wifi IR-WF-01 (Điều khiển Điều hòa, TV, Quạt)",
+      "sku": "TUYA-IR-WF-01",
+      "costPrice": 135000,
+      "retailPrice": 220000,
+      "originalPrice": 259600,
+      "discountPercent": 15,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA / ZITECH",
+      "image": "https://zitech.vn/wp-content/uploads/2026/08/IR10.png",
+      "images": [
+        "https://zitech.vn/wp-content/uploads/2026/08/IR10.png"
+      ],
+      "features": [
+        "Model: IR-WF-01",
+        "Giao thức: 38KHz đa hướng 360 độ bán kính 8-10 mét",
+        "Tính năng nổi bật: Hỗ trợ hơn 80.000 thiết bị điều hòa (Daikin, Panasonic, Casper, LG, Mitsubishi), Tivi (Sony, Samsung, LG), Quạt điện",
+        "Tương thích: Ứng dụng Tuya Smart / Smart Life & Home Assistant (Zigbee2MQTT / ZHA)",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Thông số kỹ thuật – Bộ điều khiển IR Tuya Thông số Chi tiết Loại sản phẩm Điều khiển từ xa hồng ngoại đa năng Tuya Nguồn cấp DC 5V – 1A Công suất chờ ≤ 0,5W Tần số IR 38 KHz Góc phát IR Đa hướng Khoảng cách điều khiển IR Khoảng 8 m, không có vật cản Kết nối WiFi WiFi 2.4GHz Nhiệt độ hoạt động 0 ~ 50°C Độ ẩm hoạt động ≤ 85% RH Ứng dụng Tuya Smart / Smart Life Hệ điều hành Android 4.0 trở lên / iOS 8.0 trở lên Thiết bị hỗ trợ Điều hòa, TV, TV Box, DVD, Audio, đầu thu và các thiết bị sử dụng remote IR Số lượng thiết bị hỗ trợ Hơn 50.000 thiết bị IR Học lệnh IR Có, hỗ trợ học remote tùy chỉnh khi không có model tương ứng Điều khiển giọng nói Amazon Alexa / Google Home RF Không hỗ trợ RF, chỉ hỗ trợ IR 38KHz Kích thước sản phẩm 62 × 62 × 24 mm Trọng lượng sản phẩm 22,6 g Tính năng chính Điều khiển các thiết bị hồng ngoại bằng Tuya Smart hoặc Smart Life từ bất cứ đâu. Hỗ trợ cơ sở dữ liệu IR lớn, bao phủ nhiều model thiết bị. Có khả năng tự động cập nhật cơ sở dữ liệu trên cloud . Hỗ trợ học lệnh IR DIY khi thiết bị không có trong cơ sở dữ liệu. Có thể gom nhiều remote hồng ngoại vào một ứng dụng trên điện thoại . Hỗ trợ điều khiển bằng Alexa và Google Home . Chỉ hỗ trợ WiFi 2.4GHz và IR 38KHz; không hỗ trợ RF.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA / ZITECH (Chính hãng)"
+        },
+        {
+          "k": "Model",
+          "v": "IR-WF-01"
+        },
+        {
+          "k": "Tần số hồng ngoại",
+          "v": "38KHz đa hướng 360 độ bán kính 8-10 mét"
+        },
+        {
+          "k": "Cơ sở dữ liệu đám mây",
+          "v": "Hỗ trợ hơn 80.000 thiết bị điều hòa (Daikin, Panasonic, Casper, LG, Mitsubishi), Tivi (Sony, Samsung, LG), Quạt điện"
+        },
+        {
+          "k": "Học lệnh thông minh",
+          "v": "Học lệnh từ bất kỳ remote hồng ngoại nào"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ],
+      "zitechUrl": "https://zitech.vn/san-pham/dieu-khien-hong-ngoai-ir/bo-dieu-khien-hong-ngoai-wifi/"
+    },
+    {
+      "id": 995011,
+      "name": "Bộ điều khiển hồng ngoại Mini Tuya Zigbee & Wifi IR-Mini (Kích thước bỏ túi)",
+      "sku": "TUYA-IR-MINI-ZB",
+      "costPrice": 160000,
+      "retailPrice": 260000,
+      "originalPrice": 306800,
+      "discountPercent": 15,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA / ZITECH",
+      "image": "https://zitech.vn/wp-content/uploads/2026/08/IR1.png",
+      "images": [
+        "https://zitech.vn/wp-content/uploads/2026/08/IR1.png"
+      ],
+      "features": [
+        "Model: IR-MINI-ZB",
+        "Giao thức: Zigbee 3.0 / Wifi",
+        "Tính năng nổi bật: Kích thước mini giấu kín tinh tế, cấp nguồn Micro USB / Type-C 5V",
+        "Tương thích: Ứng dụng Tuya Smart / Smart Life & Home Assistant (Zigbee2MQTT / ZHA)",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Thông số Chi tiết Kết nối WiFi / Zigbee 3.0 Nguồn cấp DC 5V – 1A Khoảng cách IR Khoảng 15 m Góc điều khiển 720° Tần số IR 20–60 KHz Nhiệt độ hoạt động -10°C ~ 55°C Kích thước 5,9 × 3,65 × 1,15 cm Cổng kết nối USB Type-C Nền tảng Tuya Trợ lý giọng nói Amazon Alexa / Google Assistant Thiết bị tương thích TV, điều hòa và thiết bị sử dụng remote IR",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA / ZITECH (Chính hãng)"
+        },
+        {
+          "k": "Model",
+          "v": "IR-MINI-ZB"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 / Wifi"
+        },
+        {
+          "k": "Thiết kế",
+          "v": "Kích thước mini giấu kín tinh tế, cấp nguồn Micro USB / Type-C 5V"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ],
+      "zitechUrl": "https://zitech.vn/san-pham/dieu-khien-hong-ngoai-ir/bo-dieu-khien-hong-ngoai-mini-wifi-zigbee/"
+    },
+    {
+      "id": 995012,
+      "name": "Remote RF 433MHz 3 nút dán tường không dây Zitech (Dán bất kỳ vị trí nào)",
+      "sku": "TUYA-REMOTE-RF-3",
+      "costPrice": 70000,
+      "retailPrice": 120000,
+      "originalPrice": 141600,
+      "discountPercent": 15,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA / ZITECH",
+      "image": "https://zitech.vn/wp-content/uploads/2026/08/rm3-2.png",
+      "images": [
+        "https://zitech.vn/wp-content/uploads/2026/08/rm3-2.png"
+      ],
+      "features": [
+        "Model: RF 433MHz",
+        "Giao thức: 3 nút nảy êm tay có đèn LED phản hồi",
+        "Tính năng nổi bật: Dán tường bằng keo 3M kèm theo ở đầu giường, bàn làm việc hoặc cửa ra vào",
+        "Tương thích: Ứng dụng Tuya Smart / Smart Life & Home Assistant (Zigbee2MQTT / ZHA)",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Remote RF 433MHz 3 nút dán tường không dây Zitech (Dán bất kỳ vị trí nào) chính hãng Zitech / Tuya Smart. Giải pháp thiết bị nhà thông minh tiêu chuẩn quốc tế, kết nối ổn định, tương thích hoàn hảo với ứng dụng Smart Life / Tuya Smart và hệ thống điều khiển trung tâm Home Assistant (HASS).",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "ZITECH (Chính hãng)"
+        },
+        {
+          "k": "Tần số sóng",
+          "v": "RF 433MHz"
+        },
+        {
+          "k": "Phím bấm",
+          "v": "3 nút nảy êm tay có đèn LED phản hồi"
+        },
+        {
+          "k": "Lắp đặt",
+          "v": "Dán tường bằng keo 3M kèm theo ở đầu giường, bàn làm việc hoặc cửa ra vào"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "12 tháng chính hãng"
+        }
+      ],
+      "zitechUrl": "https://zitech.vn/san-pham/dieu-khien-tu-xa-rf-remote-rf/remote-rf-3-nut-dan-tuong/"
+    },
+    {
+      "id": 995013,
+      "name": "Remote RF 4 nút mã nhảy chống nước Zitech (Móc khóa xe máy/ô tô mở cổng)",
+      "sku": "TUYA-REMOTE-RF-4",
+      "costPrice": 105000,
+      "retailPrice": 180000,
+      "originalPrice": 212400,
+      "discountPercent": 15,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA / ZITECH",
+      "image": "https://zitech.vn/wp-content/uploads/2026/08/rm4-1.png",
+      "images": [
+        "https://zitech.vn/wp-content/uploads/2026/08/rm4-1.png"
+      ],
+      "features": [
+        "Model: Rolling Code (Mã nhảy) chống hoàn toàn máy dò mã và sao chép",
+        "Giao thức: Kháng nước, vỏ kim loại kết hợp nhựa ABS chống va đập",
+        "Tính năng nổi bật: 12 tháng chính hãng",
+        "Tương thích: Ứng dụng Tuya Smart / Smart Life & Home Assistant (Zigbee2MQTT / ZHA)",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Remote RF 4 nút mã nhảy chống nước Zitech (Móc khóa xe máy/ô tô mở cổng) chính hãng Zitech / Tuya Smart. Giải pháp thiết bị nhà thông minh tiêu chuẩn quốc tế, kết nối ổn định, tương thích hoàn hảo với ứng dụng Smart Life / Tuya Smart và hệ thống điều khiển trung tâm Home Assistant (HASS).",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "ZITECH (Chính hãng)"
+        },
+        {
+          "k": "Công nghệ mã hóa",
+          "v": "Rolling Code (Mã nhảy) chống hoàn toàn máy dò mã và sao chép"
+        },
+        {
+          "k": "Tiêu chuẩn",
+          "v": "Kháng nước, vỏ kim loại kết hợp nhựa ABS chống va đập"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "12 tháng chính hãng"
+        }
+      ],
+      "zitechUrl": "https://zitech.vn/san-pham/dieu-khien-tu-xa-rf-remote-rf/remote-rf-4-nut-ma-nhay-chong-nuoc/"
+    },
+    {
+      "id": 995014,
+      "name": "Bộ điều khiển Cửa / Cổng tự động thông minh ZiTech RF (USB RF nhỏ gọn)",
+      "sku": "TUYA-ZT-RF-USB",
+      "costPrice": 210000,
+      "retailPrice": 350000,
+      "originalPrice": 413000,
+      "discountPercent": 15,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA / ZITECH",
+      "image": "https://zitech.vn/wp-content/uploads/2026/08/Zitech-RF.jpg",
+      "images": [
+        "https://zitech.vn/wp-content/uploads/2026/08/Zitech-RF.jpg",
+        "https://zitech.vn/wp-content/uploads/2026/08/Zitech-USB-RF-1024x722.png",
+        "https://zitech.vn/wp-content/uploads/2026/08/HDSD-Zitech-RF1-01-1024x576.jpg"
+      ],
+      "features": [
+        "Model: ZT-RF-USB",
+        "Giao thức: Cổng cắm nguồn USB 5V siêu tiện dụng, nhỏ gọn trong lòng bàn tay",
+        "Tính năng nổi bật: RF 433MHz / 315MHz học lệnh remote cổng tự động và cửa cuốn",
+        "Tương thích: Ứng dụng Tuya Smart / Smart Life & Home Assistant (Zigbee2MQTT / ZHA)",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Bộ điều khiển Cửa cuốn/Cổng tự động – ZiTech RF (USB RF) ZiTech RF – USB RF là bộ điều khiển RF thông minh giúp kết nối cửa cuốn, cổng tự động và nhiều thiết bị sử dụng remote RF với hệ thống nhà thông minh. Thiết bị hoạt động như một remote RF thông minh , cho phép điều khiển bằng điện thoại, giọng nói hoặc thiết lập tự động hóa. ⭐ Tính năng nổi bật Không cần đấu nối vào mạch điều khiển: ZiTech RF điều khiển thiết bị thông qua sóng RF , không cần can thiệp vào mạch điện của cửa/cổng, giúp giữ nguyên các chức năng và cơ chế điều khiển hiện có. Điều khiển bằng điện thoại: Kết nối WiFi, Bluetooth hoặc Zigbee và điều khiển thông qua ứng dụng Smart Life trên Android/iOS. Hỗ trợ nhiều loại cửa và cổng: Có thể sử dụng với nhiều dòng cửa cuốn, cổng tự động, xe ô tô… có mã điều khiển tương thích. Lập trình bằng máy TY300: Thiết bị được nạp mã bằng máy TY300, hỗ trợ các thiết bị có mã điều khiển nằm trong danh sách của máy. Hỗ trợ sao chép nhiều loại remote: Ngoài các thiết bị có sẵn trong TY300, máy còn có thể sao chép nhiều loại remote mã cố định, mã gạt… không có trong danh sách. Sử dụng song song với hệ thống cũ: Vẫn có thể sử dụng remote RF và nút bấm cũ của cửa/cổng. Giữ nguyên các tính năng an toàn: Không làm mất các chức năng quan trọng của hệ thống, chẳng hạn gặp vật cản tự dừng . Điều khiển bằng giọng nói: Hỗ trợ Google Assistant, Alexa và Siri. Tự động hóa thông minh: Hỗ trợ hẹn giờ, kịch bản tự động và liên kết với các thiết bị nhà thông minh sử dụng nền tảng TUYA . * 4 nút điều khiển Thiết bị hỗ trợ 4 chức năng điều khiển: Đóng – Mở – Khóa/Mở khóa – Dừng * Các phương thức điều khiển Điều khiển trực tiếp bằng remote RF Điều khiển bằng điện thoại qua Smart Life Điều khiển bằng giọng nói Hẹn giờ và thiết lập kịch bản tự động Kết hợp với các thiết bị nhà thông minh nền tảng TUYA * Kết nối không dây Tùy phiên bản, ZiTech RF – USB RF hỗ trợ: WiFi + Bluetooth hoặc Zigbee ⚙️ Khoảng cách điều khiển thực tế phụ thuộc vào môi trường sử dụng, vật cản, nhiễu sóng và độ nhạy của bộ thu RF. Trong điều kiện không vật cản và ít nhiễu, khoảng cách có thể đạt 5–50 m . * Giải pháp nâng cấp cửa/cổng thông minh đơn giản ZiTech RF – USB RF phù hợp khi muốn đưa cửa cuốn hoặc cổng tự động lên hệ thống nhà thông minh mà không muốn can thiệp vào mạch điều khiển hiện tại . Chỉ cần cấp nguồn 5VDC , kết nối với hệ thống nhà thông minh và cấu hình mã RF tương thích, người dùng có thể tiếp tục sử dụng hệ thống điều khiển cũ đồng thời bổ sung khả năng điều khiển bằng điện thoại, giọng nói và tự động hóa .",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "ZITECH (Chính hãng)"
+        },
+        {
+          "k": "Model",
+          "v": "ZT-RF-USB"
+        },
+        {
+          "k": "Chuẩn cắm",
+          "v": "Cổng cắm nguồn USB 5V siêu tiện dụng, nhỏ gọn trong lòng bàn tay"
+        },
+        {
+          "k": "Tần số sóng RF",
+          "v": "RF 433MHz / 315MHz học lệnh remote cổng tự động và cửa cuốn"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ],
+      "zitechUrl": "https://zitech.vn/san-pham/dieu-khien-cua-cuon/bo-dieu-khien-cua-cong-tu-dong-zitech-rf-usb-rf/"
+    },
+    {
+      "id": 995015,
+      "name": "Bộ điều khiển Cửa cuốn ZiTech Pro 2026 (Kéo % độ mở, đồng bộ remote gốc, cảm biến chống xô)",
+      "sku": "TUYA-ZT-PRO-2026",
+      "costPrice": 730000,
+      "retailPrice": 1150000,
+      "originalPrice": 1357000,
+      "discountPercent": 15,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA / ZITECH",
+      "image": "https://zitech.vn/wp-content/uploads/2026/08/Pro2.png",
+      "images": [
+        "https://zitech.vn/wp-content/uploads/2026/08/Pro2.png",
+        "https://zitech.vn/wp-content/uploads/2026/08/dong-bo-remote-goc-zitech-pro-1024x683.png",
+        "https://zitech.vn/wp-content/uploads/2026/08/canh-bao-Zitech-Pro-1024x683.png"
+      ],
+      "features": [
+        "Model: ZT-PRO-2026",
+        "Giao thức: Thanh trượt điều khiển mở cửa theo tỷ lệ phần trăm",
+        "Tính năng nổi bật: Tích hợp cảm biến dừng khi gặp vật cản, cảm biến chống xô cửa cuốn",
+        "Tương thích: Ứng dụng Tuya Smart / Smart Life & Home Assistant (Zigbee2MQTT / ZHA)",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Zitech Pro 2026 – Bộ điều khiển cửa cuốn thông minh Zitech Pro 2026 là bộ điều khiển thông minh giúp nâng cấp cửa cuốn hiện có, mang đến khả năng điều khiển bằng điện thoại và đặc biệt là đồng bộ trạng thái % đóng/mở của cửa ngay cả khi cửa được điều khiển bằng remote gốc . ⭐ Tính năng nổi bật ? ĐỒNG BỘ TRẠNG THÁI % CỬA – NGAY CẢ KHI DÙNG REMOTE GỐC Zitech Pro 2026 có khả năng theo dõi trạng thái hoạt động của cửa và cập nhật lên điện thoại. Khi cửa được điều khiển bằng remote gốc, trạng thái % đóng/mở vẫn được đồng bộ trên ứng dụng. Trên điện thoại, người dùng có thể: Theo dõi trực quan cửa đang đóng/mở bao nhiêu % . Kéo thanh % để điều khiển cửa đến vị trí mong muốn. Theo dõi trạng thái cửa ngay cả khi cửa được điều khiển bằng remote gốc. Đây là điểm nổi bật giúp Zitech Pro 2026 không chỉ là bộ điều khiển cửa qua WiFi, mà còn kết hợp điều khiển thông minh và theo dõi trạng thái cửa trong cùng một hệ thống . Các tính năng khác Điều khiển cửa bằng điện thoại qua ứng dụng Smart Life / TUYA trên Android & iOS. Hẹn giờ đóng/mở theo lịch trình. Lưu lịch sử điều khiển và trạng thái thiết bị. Kết nối WiFi 2.4GHz, Bluetooth và RF433 . Hỗ trợ remote RF , tối đa 10 remote. Cảnh báo chống trộm khi cửa bị mở/cạy, kết hợp cảm biến Zitech RF. Chống xô không dây , tự dừng khi cửa bị kẹt và cảnh báo qua điện thoại/còi hú. Tự động mở cửa khi có cháy khi kết hợp cảm biến báo cháy Zitech Fire. Chia sẻ quyền điều khiển cho nhiều thành viên trong gia đình. Thông số kỹ thuật Nguồn vào: 110–240VAC ~ 50Hz Đầu ra: Kết nối tín hiệu điều khiển <500mA Kết nối: WiFi 2.4GHz / Bluetooth / RF433 Ứng dụng: Smart Life/TUYA – Android & iOS Lưu ý tương thích Zitech Pro 2026 sử dụng cho cửa cuốn động cơ AC220V , loại hệ thống nút bấm tường có nút STOP là tiếp điểm thường đóng (NC) .",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "ZITECH (Chính hãng phân phối bởi Chu Gia)"
+        },
+        {
+          "k": "Model",
+          "v": "ZT-PRO-2026"
+        },
+        {
+          "k": "Đột phá công nghệ",
+          "v": "Thanh trượt điều khiển mở cửa theo tỷ lệ phần trăm (%), theo dõi trạng thái cửa đồng bộ cả khi bấm remote gốc"
+        },
+        {
+          "k": "Cảm biến an toàn",
+          "v": "Tích hợp cảm biến dừng khi gặp vật cản, cảm biến chống xô cửa cuốn"
+        },
+        {
+          "k": "Quản lý",
+          "v": "Ứng dụng Smart Life / Tuya Smart, hỗ trợ ra lệnh bằng giọng nói Siri / Google Assistant"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ],
+      "zitechUrl": "https://zitech.vn/san-pham/dieu-khien-cua-cuon/bo-dieu-khien-cua-cuon-zitech-pro-new/"
+    },
+    {
+      "id": 995016,
+      "name": "Công tắc cảm ứng Tuya Zigbee 1 nút Công Suất Cao 16A/20A ZLUX-ZA1-HP (Bình nóng lạnh, Bếp từ, Máy bơm)",
+      "sku": "TUYA-ZLUX-ZA1-HP",
+      "costPrice": 290000,
+      "retailPrice": 480000,
+      "originalPrice": 566400,
+      "discountPercent": 15,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA / ZITECH",
+      "image": "https://zitech.vn/wp-content/uploads/2026/08/1-nut-to.png",
+      "images": [
+        "https://zitech.vn/wp-content/uploads/2026/08/1-nut-to.png"
+      ],
+      "features": [
+        "Model: ZLUX-ZA1-HP",
+        "Giao thức: Zigbee 3.0",
+        "Tính năng nổi bật: Dòng tải tối đa 20A (4000W) với Relay chịu dòng khởi động lớn",
+        "Tương thích: Ứng dụng Tuya Smart / Smart Life & Home Assistant (Zigbee2MQTT / ZHA)",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "CÔNG TẮC CẢM ỨNG 1 NÚT ZIGBEE – CÔNG SUẤT CAO Công tắc cảm ứng thông minh Zigbee – Điều khiển linh hoạt, tự động hóa thông minh C ông tắc cảm ứng thông minh 1 – Công suất cao nút sử dụng Zigbee , được thiết kế cho hệ thống nhà thông minh và điều khiển chiếu sáng. Sản phẩm kết hợp mặt kính cường lực và khung hợp kim nhôm , mang thiết kế hiện đại, tối giản và phù hợp với nhiều không gian nội thất. Công tắc hỗ trợ điều khiển trực tiếp bằng cảm ứng, điều khiển qua ứng dụng và điều khiển bằng giọng nói thông qua hệ sinh thái tương thích. Bên cạnh các chức năng thông minh như lịch trình, đếm ngược và tự động tắt, sản phẩm nổi bật với tính năng Trễ tắt thông minh – cho phép mô phỏng cách hoạt động của hệ thống chiếu sáng sử dụng cảm biến chuyển động hoặc cảm biến hiện diện mà không cần lắp thêm cảm biến. ĐIỀU KHIỂN ĐA PHƯƠNG THỨC Điều khiển cảm ứng Bật/tắt trực tiếp trên bề mặt cảm ứng của công tắc. Thiết kế mặt kính liền mạch mang lại trải nghiệm sử dụng hiện đại và thuận tiện. Điều khiển qua ứng dụng Sau khi kết nối với Zigbee Hub/Gateway, người dùng có thể điều khiển và cấu hình công tắc thông qua ứng dụng: Bật/tắt từ xa. Kiểm tra trạng thái thiết bị. Thiết lập lịch trình. Đếm ngược. Tự động tắt. Thiết lập thời gian trễ tắt. Tùy chỉnh đèn nền. Quản lý các thiết lập của công tắc. Điều khiển bằng giọng nói Tương thích với các nền tảng điều khiển bằng giọng nói: Google Home / Google Assistant Amazon Alexa Apple Home / Siri Cho phép điều khiển thiết bị bằng giọng nói khi được tích hợp vào hệ thống tương thích. ZIGBEE 3.0 – KẾT NỐI NHÀ THÔNG MINH Sử dụng Zigbee 3.0 để kết nối với hệ thống nhà thông minh thông qua Zigbee Hub/Gateway . Zigbee hỗ trợ mô hình mạng Mesh, cho phép các thiết bị trong hệ thống phối hợp với nhau để xây dựng mạng lưới thiết bị thông minh. Sau khi kết nối, công tắc có thể được sử dụng để: Điều khiển từ xa. Tạo lịch trình. Thiết lập tự động hóa. Tạo ngữ cảnh. Liên kết với các thiết bị thông minh khác. Điều khiển bằng giọng nói thông qua nền tảng tương thích. Hệ sinh thái tương thích Tuya • Smart Life • Google Home • Amazon Alexa • Apple Home LỊCH TRÌNH VÀ TỰ ĐỘNG HÓA Lịch trình Thiết lập thời gian để công tắc tự động bật hoặc tắt theo lịch. Ví dụ: Tự động bật đèn lúc 18:00 và tắt lúc 23:00 mỗi ngày. Đếm ngược Thiết lập khoảng thời gian để công tắc tự động đảo trạng thái hiện tại sau khi hết thời gian đếm ngược. Ví dụ: Đèn đang bật → đặt đếm ngược 30 phút → sau 30 phút đèn tắt. Hoặc: Đèn đang tắt → đặt đếm ngược 30 phút → sau 30 phút đèn bật. Tự động tắt Cho phép thiết lập để công tắc tự động tắt sau một khoảng thời gian nhất định. Ví dụ: Bật đèn → sau 30 phút → đèn tự động tắt. TÙY CHỈNH ĐÈN NỀN Công tắc được trang bị đèn nền giúp nhận biết vị trí công tắc và tăng tính thẩm mỹ cho không gian. Thông qua ứng dụng, người dùng có thể tùy chỉnh: Bật/tắt đèn nền. Điều chỉnh độ sáng. Thiết lập màu đèn nền khi công tắc bật. Thiết lập màu đèn nền khi công tắc tắt. Thiết lập trạng thái đèn nền khi công tắc đang tắt. Đèn nền giúp dễ dàng xác định vị trí công tắc trong điều kiện ánh sáng yếu. QUẢN LÝ TRẠNG THÁI THÔNG MINH Trạng thái khi khởi động lại Cho phép thiết lập trạng thái của công tắc sau khi thiết bị được cấp điện trở lại. Tùy theo cấu hình, công tắc có thể: Tắt. Bật. Khôi phục trạng thái trước đó. Lịch sử bật/tắt Theo dõi lịch sử hoạt động của công tắc trên ứng dụng, giúp người dùng dễ dàng kiểm tra quá trình sử dụng. KHÓA TRẺ EM Chức năng Khóa trẻ em cho phép vô hiệu hóa thao tác cảm ứng trực tiếp trên công tắc nhằm hạn chế việc trẻ em hoặc người dùng vô tình thay đổi trạng thái thiết bị. Chức năng này đặc biệt hữu ích tại gia đình có trẻ nhỏ hoặc những khu vực cần hạn chế thao tác trực tiếp. THIẾT KẾ HIỆN ĐẠI Mặt kính cường lực Bề mặt kính phẳng, liền mạch, dễ vệ sinh và phù hợp với các không gian nội thất hiện đại. Khung hợp kim nhôm Khung hợp kim nhôm tạo cảm giác chắc chắn và tăng tính thẩm mỹ cho sản phẩm. Thiết kế cảm ứng Bề mặt điều khiển liền mạch, không sử dụng nút cơ học nhô ra, tạo vẻ ngoài tối giản và hiện đại. THÔNG SỐ KỸ THUẬT Đặc tính Thông số Model ZV-US-H* Tên sản phẩm Công tắc cảm ứng 1 nút Zigbee Loại thiết bị Công tắc cảm ứng thông minh Giao thức không dây Zigbee 3.0 Tần số hoạt động 2.4 GHz Nguồn điện đầu vào 110–240VAC, 50/60Hz Số nút điều khiển 1 nút Tải LED ≤ 500W/kênh Tải thuần trở ≤ 3500W/kênh Phương thức điều khiển Cảm ứng / Ứng dụng / Giọng nói Kết nối hệ thống Zigbee Hub/Gateway Nền tảng Tuya / Smart Life Điều khiển giọng nói Google Asistant / Amazon Alexa / Apple Siri Mặt công tắc Kính cường lực Khung Hợp kim nhôm Đèn nền Có, tùy chỉnh Kích thước 72 × 120 × 24 mm Kiểu lắp đặt Lắp đặt đế âm tường tiêu chuẩn ỨNG DỤNG Công tắc phù hợp cho nhiều không gian và công trình: Nhà ở Căn hộ Phòng khách Phòng ngủ Phòng làm việc Hành lang Cầu thang Nhà vệ sinh Khách sạn Căn hộ dịch vụ Văn phòng Công trình sử dụng hệ thống nhà thông minh TỔNG HỢP TÍNH NĂNG Công tắc nổi bật với: Zigbee 3.0 Điều khiển cảm ứng Điều khiển qua ứng dụng Điều khiển bằng giọng nói Tuya / Smart Life Google Home/Asistant Amazon Alexa Apple Home/Siri Lịch trình bật/tắt Đếm ngược Tự động tắt Lịch sử bật/tắt Thiết lập trạng thái khi khởi động lại Tùy chỉnh đèn nền Điều chỉnh độ sáng đèn nền Tùy chỉnh màu đèn nền Khóa trẻ em Tự động hóa và ngữ cảnh Mặt kính cường lực Khung hợp kim nhôm",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA / ZITECH (Chính hãng)"
+        },
+        {
+          "k": "Model",
+          "v": "ZLUX-ZA1-HP"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0"
+        },
+        {
+          "k": "Công suất chịu tải",
+          "v": "Dòng tải tối đa 20A (4000W) với Relay chịu dòng khởi động lớn"
+        },
+        {
+          "k": "Ứng dụng chuyên dụng",
+          "v": "Bình nước nóng, điều hòa cây, bếp từ, máy bơm nước công suất lớn"
+        },
+        {
+          "k": "Vật liệu",
+          "v": "Kính cường lực cách điện an toàn tuyệt đối chống ẩm giật điện"
+        },
+        {
+          "k": "Tính năng",
+          "v": "Hẹn giờ bật trước bình nóng lạnh, tự động ngắt sau 20 phút bảo vệ an toàn và tiết kiệm điện"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ],
+      "zitechUrl": "https://zitech.vn/san-pham/cong-tac-cam-ung/cong-tac-cam-ung-1-nut-zigbee-cong-suat-cao/"
+    },
+    {
+      "id": 995017,
+      "name": "Bộ điều khiển trung tâm Tuya Gateway Zigbee 3.0 & Bluetooth Mesh (Kết nối Wifi)",
+      "sku": "TUYA-HUB-ZGB-WF-BLE",
+      "costPrice": 310000,
+      "retailPrice": 490000,
+      "originalPrice": 578200,
+      "discountPercent": 15,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA / ZITECH",
+      "image": "https://zitech.vn/wp-content/uploads/2026/08/O1CN01EXoiai274oEIiRXAW_3244507744-0-cib.jpg",
+      "images": [
+        "https://zitech.vn/wp-content/uploads/2026/08/O1CN01EXoiai274oEIiRXAW_3244507744-0-cib.jpg"
+      ],
+      "features": [
+        "Model: HUB-ZGB-WF-BLE",
+        "Giao thức: Zigbee 3.0 + Bluetooth BLE Mesh + Wifi 2.4GHz",
+        "Tính năng nổi bật: Quản lý đồng thời 50+ thiết bị cảm biến và công tắc con",
+        "Tương thích: Ứng dụng Tuya Smart / Smart Life & Home Assistant (Zigbee2MQTT / ZHA)",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Bộ điều khiển trung tâm Tuya Zigbee (Wifi-Bluetooth) là “bộ não” quản lý toàn bộ hệ thống nhà thông minh của bạn. Thiết bị này chịu trách nhiệm kết nối, điều phối các cảm biến, công tắc Zigbee/Bluetooth và truyền lệnh điều khiển về ứng dụng trên điện thoại qua sóng Wifi. Các tính năng nổi bật của sản phẩm Hỗ trợ kết nối các thiết bị Zigbee và Bluetooth Mở rộng kết nối lớn: Hỗ trợ quản lý đồng thời 50 thiết bị con Tín hiệu siêu ổn định: Công nghệ mạng lưới (Mesh) giúp các thiết bị Zigbee tự động tiếp sóng cho nhau. Hoạt động ngoại tuyến mượt mà: Các kịch bản tự động hóa vẫn chạy bình thường ngay cả khi nhà bạn mất kết nối Internet . Phản hồi siêu tốc: Tốc độ truyền lệnh qua sóng Zigbee nhanh gấp nhiều lần và tiết kiệm pin hơn hẳn Wifi truyền thống. Điều khiển thông minh: Quản lý từ xa qua ứng dụng Smart Life / Tuya Smart và hỗ trợ ra lệnh bằng giọng nói qua Alexa hoặc Google Home.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA / ZITECH (Chính hãng)"
+        },
+        {
+          "k": "Model",
+          "v": "HUB-ZGB-WF-BLE"
+        },
+        {
+          "k": "Giao thức không dây",
+          "v": "Zigbee 3.0 + Bluetooth BLE Mesh + Wifi 2.4GHz"
+        },
+        {
+          "k": "Số lượng kết nối",
+          "v": "Quản lý đồng thời 50+ thiết bị cảm biến và công tắc con"
+        },
+        {
+          "k": "Khả năng chạy Local",
+          "v": "Tự động kích hoạt kịch bản liên kết nội bộ ngay cả khi mất internet"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ],
+      "zitechUrl": "https://zitech.vn/san-pham/bo-dieu-khien-trung-tam/bo-dieu-khien-trung-tam-zigbee-bluetooth-wifi/"
+    },
+    {
+      "id": 995018,
+      "name": "Bộ điều khiển trung tâm Tuya Zigbee cổng LAN RJ45 có Ăng-ten tăng cường sóng (128 thiết bị)",
+      "sku": "TUYA-HUB-ZGB-LAN-ANT",
+      "costPrice": 530000,
+      "retailPrice": 850000,
+      "originalPrice": 1003000,
+      "discountPercent": 15,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA / ZITECH",
+      "image": "https://zitech.vn/wp-content/uploads/2026/08/O1CN01qeDCsO26Gt1l0gXap_2209780547635-0-cib.jpg",
+      "images": [
+        "https://zitech.vn/wp-content/uploads/2026/08/O1CN01qeDCsO26Gt1l0gXap_2209780547635-0-cib.jpg"
+      ],
+      "features": [
+        "Model: HUB-ZGB-LAN-ANT",
+        "Giao thức: Cáp mạng LAN RJ45 siêu ổn định không lo chập chờn sóng Wifi",
+        "Tính năng nổi bật: Ăng-ten khuếch đại sóng Zigbee công suất cao, độ phủ xuyên tường 30 – 35 mét",
+        "Tương thích: Ứng dụng Tuya Smart / Smart Life & Home Assistant (Zigbee2MQTT / ZHA)",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Bộ điều khiển trung tâm Zigbee (LAN) – Có anten tăng cường sóng Giới thiệu Bộ điều khiển trung tâm Zigbee giúp kết nối và quản lý tập trung toàn bộ thiết bị Zigbee trong gia đình như cảm biến cửa, cảm biến chuyển động, cảm biến nhiệt độ – độ ẩm, cảm biến khí gas, cảm biến nước, đầu báo khói… Sản phẩm sử dụng kết nối mạng có dây (Ethernet) để đảm bảo tín hiệu ổn định, hạn chế tối đa tình trạng mất kết nối hay giật lag thường gặp ở các gateway kết nối Wi-Fi thông thường. Thiết bị tương thích với Tuya, Smart Life và chuẩn Zigbee, phù hợp cho cả lắp đặt dân dụng lẫn các dự án Tính năng nổi bật Ăng-ten khuếch đại tín hiệu cao, phủ sóng xuyên tường 30–35 mét. Gateway được trang bị ăng-ten băng tần kép (dual-band) độ khuếch đại cao, giúp tín hiệu xuyên tường tốt và ổn định, phủ sóng bán kính lên đến 30–35 mét, đảm bảo phủ đều toàn bộ diện tích căn hộ, nhà phố hoặc biệt thự nhiều phòng. Kết nối tối đa 128 thiết bị Zigbee. Một gateway có thể quản lý đồng thời tới 128 thiết bị con Zigbee, cho phép xây dựng hệ sinh thái nhà thông minh toàn diện: cảm biến cửa/cửa sổ, cảm biến chuyển động, cảm biến nhiệt độ và độ ẩm, cảm biến khí gas, cảm biến rò rỉ nước, đầu báo khói và nhiều thiết bị khác. Kết nối có dây ổn định, mượt mà. Nhờ sử dụng cổng mạng có dây (LAN/Ethernet) thay vì chỉ dựa vào Wi-Fi, thiết bị loại bỏ tình trạng mạng chập chờn, phản hồi lệnh nhanh và mượt, mang lại trải nghiệm điều khiển nhà thông minh liên tục, không gián đoạn. Thiết kế hiện đại, tương thích đa nền tảng. Vỏ nhôm phay hai tông màu bạc – trắng, thiết kế vuông vắn, tinh gọn, dễ dàng đặt ở bất kỳ vị trí nào trong nhà. Hỗ trợ tương thích với ứng dụng Smart Life và nền tảng Tuya, dễ dàng tích hợp vào các hệ sinh thái nhà thông minh phổ biến hiện nay. Thông số kỹ thuật chính Chuẩn kết nối: Zigbee (gateway có dây/Ethernet) Ăng-ten: Băng tần kép (dual-band), độ khuếch đại cao Phạm vi phủ sóng: 30–35 mét (xuyên tường) Số thiết bị con hỗ trợ: Tối đa 128 thiết bị Zigbee Nền tảng tương thích: Tuya, Smart Life Cổng kết nối: Cổng mạng LAN (Ethernet) + cổng nguồn USB-C Kiểu kết nối: Có dây, ổn định, không phụ thuộc hoàn toàn vào Wi-Fi Thiết bị Zigbee tương thích Gateway có thể kết nối và điều khiển các loại cảm biến/thiết bị Zigbee sau: Cảm biến cửa (Door sensor) Cảm biến chuyển động (Motion sensor) Cảm biến nhiệt độ & độ ẩm (Temperature & humidity sensor) Cảm biến khí gas (Gas sensor) Cảm biến nước/rò rỉ (Water sensor) Đầu báo khói (Smoke detector) Công tắc thông minh Và nhiều thiết bị Zigbee khác trong cùng hệ sinh thái Điểm mạnh cần nhấn mạnh khi bán hàng Kết nối có dây giúp gateway hoạt động ổn định 24/7, phù hợp cho các không gian cần độ tin cậy cao như nhà thông minh trọn gói, căn hộ cho thuê, hoặc hệ thống an ninh giám sát liên tục. Khả năng quản lý tới 128 thiết bị con giúp một gateway duy nhất có thể phủ toàn bộ ngôi nhà mà không cần lắp thêm bộ mở rộng, tiết kiệm chi phí đầu tư ban đầu.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA / ZITECH (Chính hãng)"
+        },
+        {
+          "k": "Model",
+          "v": "HUB-ZGB-LAN-ANT"
+        },
+        {
+          "k": "Cổng kết nối",
+          "v": "Cáp mạng LAN RJ45 siêu ổn định không lo chập chờn sóng Wifi"
+        },
+        {
+          "k": "Ăng-ten ngoài",
+          "v": "Ăng-ten khuếch đại sóng Zigbee công suất cao, độ phủ xuyên tường 30 – 35 mét"
+        },
+        {
+          "k": "Số lượng kết nối",
+          "v": "Hỗ trợ quản lý đồng thời lên đến 128 thiết bị Zigbee"
+        },
+        {
+          "k": "Tương thích",
+          "v": "Tích hợp hoàn hảo Home Assistant qua chuẩn giao thức nội bộ"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ],
+      "zitechUrl": "https://zitech.vn/san-pham/bo-dieu-khien-trung-tam/bo-dieu-khien-trung-tam-zigbee-lan-co-anten-tang-cuong-song/"
+    },
+    {
+      "id": 995019,
+      "name": "Bộ điều khiển trung tâm Zemismart M6 Matter Gateway (LAN + Apple Home qua chuẩn Matter)",
+      "sku": "TUYA-HUB-MATTER-M6",
+      "costPrice": 720000,
+      "retailPrice": 1150000,
+      "originalPrice": 1357000,
+      "discountPercent": 15,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA / ZITECH",
+      "image": "https://zitech.vn/wp-content/uploads/2026/08/H9d45f4caa96343398d17cd4b9ebb0b174.jpg",
+      "images": [
+        "https://zitech.vn/wp-content/uploads/2026/08/H9d45f4caa96343398d17cd4b9ebb0b174.jpg"
+      ],
+      "features": [
+        "Model: M6 Matter Gateway",
+        "Giao thức: Matter over Ethernet",
+        "Tính năng nổi bật: Đưa toàn bộ thiết bị Zigbee Tuya hiển thị nguyên bản trên Apple HomeKit, Google Home, Alexa và Home Assistant",
+        "Tương thích: Ứng dụng Tuya Smart / Smart Life & Home Assistant (Zigbee2MQTT / ZHA)",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Bộ Điều Khiển Trung Tâm Zemismart M6 Matter Gateway – “Bộ Não” Cầu Nối Vạn Năng Cho Nhà Thông Minh Zemismart M6 là thế hệ bộ điều khiển trung tâm (Hub/Gateway) tiên tiến mới nhất, đóng vai trò như “bộ não” quản lý toàn bộ hệ sinh thái nhà thông minh. Với sự kết hợp đột phá giữa sóng Zigbee và tiêu chuẩn kết nối toàn cầu Matter Bridge, Zemismart M6 giải quyết triệt để bài toán bất đồng bộ giữa các thiết bị thông minh hiện nay. Sản phẩm cho phép đưa các thiết bị Zigbee Tuya hiển thị mượt mà trên tất cả các hệ sinh thái lớn như Apple Home, Google Home, và Samsung SmartThings. Các Đặc Điểm Nổi Bật Của Sản Phẩm Hỗ trợ công nghệ Matter Bridge tiên tiến: Đóng vai trò cầu nối vạn năng đưa các thiết bị con chạy chuẩn Tuya Zigbee lên các nền tảng quốc tế được chứng nhận Matter một cách mượt mà. Tương thích đa nền tảng tuyệt đối: Giúp bạn tự do điều khiển thiết bị qua các app Apple Home, Google Home, Amazon Alexa hay SmartThings mà không lo giới hạn hệ sinh thái. Kết nối khủng lên đến 128 thiết bị: Khả năng kết nối, quản lý đồng thời 128 thiết bị ngoại vi cùng lúc (công tắc, cảm biến, rèm cửa, đèn thông minh…), đáp ứng trọn vẹn cho cả nhà phố lẫn căn hộ diện tích lớn. Ăng-ten ngoài siêu nhạy, xuyên tường cực đỉnh: Bộ thu phát sóng cải tiến với ăng-ten ngoài chuyên dụng giúp phủ sóng rộng, giữ kết nối ổn định và không chập chờn xuyên qua các tầng lầu. Tự động hóa cục bộ (Local Management): Các kịch bản tự động hóa và điều khiển nội bộ được lưu trữ và vận hành trực tiếp trên Hub. Hệ thống chạy cực nhanh và không bị gián đoạn ngay cả khi nhà bạn mất kết nối Internet mạng ngoài. Điều khiển giọng nói thông minh: Ra lệnh bật/tắt thiết bị hoặc kích hoạt ngữ cảnh rảnh tay thông qua các trợ lý ảo hàng đầu như Siri, Google Assistant, Alexa. Nâng cấp từ xa qua OTA: Thiết bị tự động cập nhật các tính năng và bản vá bảo mật mới nhất từ nhà sản xuất qua mạng từ xa.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "ZEMISMART / ZITECH (Chính hãng)"
+        },
+        {
+          "k": "Model",
+          "v": "M6 Matter Gateway"
+        },
+        {
+          "k": "Chuẩn giao thức mới nhất",
+          "v": "Matter over Ethernet (LAN) + Zigbee 3.0 + Thread Border Router"
+        },
+        {
+          "k": "Cầu nối đa nền tảng",
+          "v": "Đưa toàn bộ thiết bị Zigbee Tuya hiển thị nguyên bản trên Apple HomeKit, Google Home, Alexa và Home Assistant"
+        },
+        {
+          "k": "Chịu tải",
+          "v": "Quản lý 128 thiết bị con với tốc độ phản hồi tính bằng mili-giây"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ],
+      "zitechUrl": "https://zitech.vn/san-pham/bo-dieu-khien-trung-tam/bo-dieu-khien-trung-tam-zigbee-lan-ket-noi-apple-home-qua-matter/"
+    },
+    {
+      "id": 995020,
+      "name": "Còi báo động thông minh Zitech có nút chỉnh âm lượng (Điện áp 5/12/24V, 115dB, đèn chớp)",
+      "sku": "TUYA-COI-ALARM-VOL",
+      "costPrice": 110000,
+      "retailPrice": 190000,
+      "originalPrice": 224200,
+      "discountPercent": 15,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA / ZITECH",
+      "image": "https://zitech.vn/wp-content/uploads/2026/08/coi.jpg",
+      "images": [
+        "https://zitech.vn/wp-content/uploads/2026/08/coi.jpg"
+      ],
+      "features": [
+        "Model: 5V / 12V / 24V DC linh hoạt",
+        "Giao thức: 115 ± 3 dB",
+        "Tính năng nổi bật: Tích hợp đèn chớp LED đỏ xua đuổi trộm ban đêm",
+        "Tương thích: Ứng dụng Tuya Smart / Smart Life & Home Assistant (Zigbee2MQTT / ZHA)",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "Điện áp: 5/12/24V Áp suất âm thanh: 115+/-3(dB/1m) Kích thước tổng thể: 125*75*45mm Hỗ trợ đèn chớp: có Trọng lượng: 100g",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "ZITECH (Chính hãng)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "5V / 12V / 24V DC linh hoạt"
+        },
+        {
+          "k": "Áp suất âm thanh",
+          "v": "115 ± 3 dB (Có nút xoay chỉnh âm lượng to nhỏ tùy không gian)"
+        },
+        {
+          "k": "Đèn chớp cảnh báo",
+          "v": "Tích hợp đèn chớp LED đỏ xua đuổi trộm ban đêm"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "12 tháng chính hãng"
+        }
+      ],
+      "zitechUrl": "https://zitech.vn/san-pham/phu-kien/coi-bao-dong-co-nut-chinh-am-luong/"
+    },
+    {
+      "id": 995021,
+      "name": "Bộ điều khiển Cửa cuốn / Cổng tự động thông minh ZiTech BASIC 3.0 (Wifi + Bluetooth + RF433)",
+      "sku": "TUYA-ZT-BASIC-3.0",
+      "costPrice": 410000,
+      "retailPrice": 650000,
+      "originalPrice": 767000,
+      "discountPercent": 15,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA / ZITECH",
+      "image": "https://zitech.vn/wp-content/uploads/2026/08/1784541890163_2145839061888008250_8546263865904608871_b64dafa06f5e471149f9798620091fab-1.jpg",
+      "images": [
+        "https://zitech.vn/wp-content/uploads/2026/08/1784541890163_2145839061888008250_8546263865904608871_b64dafa06f5e471149f9798620091fab-1.jpg"
+      ],
+      "features": [
+        "Model: ZT-BASIC-3.0",
+        "Giao thức: Wifi 2.4GHz + Bluetooth",
+        "Tính năng nổi bật: Điều khiển 1 cánh / 2 cánh / 50% / 100%, tích hợp cảm biến hành trình báo trạng thái đóng/mở chính xác",
+        "Tương thích: Ứng dụng Tuya Smart / Smart Life & Home Assistant (Zigbee2MQTT / ZHA)",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "BỘ ĐIỀU KHIỂN CỬA CUỐN / CỔNG TỰ ĐỘNG THÔNG MINH Zitech BASIC 3.0 Điều khiển cửa cuốn, cổng tự động từ xa qua điện thoại – kết nối WiFi, Bluetooth và RF433 mã nhảy ZT-BASIC 3.0 là bộ điều khiển thông minh được thiết kế để nâng cấp các hệ thống cửa cuốn, cổng tự động, mái che, giếng trời và các thiết bị sử dụng tín hiệu điều khiển tương tự thành hệ thống có khả năng điều khiển và giám sát thông minh. Thiết bị cho phép người dùng điều khiển cửa/cổng từ xa bằng điện thoại , theo dõi trạng thái hoạt động, thiết lập lịch trình và xây dựng các kịch bản tự động hóa thông qua ứng dụng Smart Life/TUYA trên Android và iOS. Bên cạnh điều khiển qua ứng dụng, ZT-BASIC 3.0 còn hỗ trợ Remote RF, cảm biến cửa/chống trộm, cảm biến chống xô không dây và cảm biến báo cháy , giúp mở rộng hệ thống theo nhu cầu thực tế. ĐIỀU KHIỂN CỬA CUỐN, CỔNG TỰ ĐỘNG TỪ XA Không cần có mặt tại vị trí cửa, người dùng có thể điều khiển cửa/cổng trực tiếp trên điện thoại thông qua ứng dụng Smart Life . Các nút điều khiển có thể được cấu hình phù hợp với từng loại thiết bị, chẳng hạn: Mở Dừng Đóng Điều khiển 1 cánh / 2 cánh / 50% / 100%… Điều khiển theo mức mở Các kiểu điều khiển khác tùy cấu hình của hệ thống cửa/cổng ZT-BASIC 3.0 hỗ trợ nhiều kiểu giao diện điều khiển để phù hợp với các hệ thống cửa cuốn và cổng tự động khác nhau. GIÁM SÁT TRẠNG THÁI CỬA ZT-BASIC 3.0 có thể kết hợp với cảm biến cửa Zitech RF để thông báo trạng thái đóng/mở của cửa. Khi được kết nối với cảm biến phù hợp, hệ thống có thể hiển thị trạng thái cửa trên ứng dụng, giúp người dùng dễ dàng kiểm tra cửa đang đóng hay mở. Đây là tính năng đặc biệt hữu ích khi người dùng muốn kiểm tra cửa từ xa mà không cần trực tiếp đến vị trí cửa. CẢNH BÁO KHI CỬA BỊ MỞ HOẶC CẠY ZT-BASIC 3.0 có thể kết nối với cảm biến báo trộm Zitech RF . Khi chức năng cảnh báo được kích hoạt, nếu cửa bị mở hoặc cạy, điện thoại có thể phát cảnh báo để người dùng nhận biết sự cố. Giải pháp này giúp kết hợp điều khiển cửa và giám sát an ninh trên cùng một hệ thống. TỰ ĐỘNG MỞ CỬA KHI CÓ CẢNH BÁO CHÁY ZT-BASIC 3.0 hỗ trợ kết nối với cảm biến báo cháy không dây . Khi tính năng được kích hoạt và hệ thống nhận tín hiệu từ cảm biến báo cháy, cửa có thể tự động mở , đồng thời điện thoại nhận cảnh báo. Tính năng này có thể được sử dụng để xây dựng giải pháp cửa có khả năng phản ứng tự động trong tình huống khẩn cấp. HẸN GIỜ VÀ TỰ ĐỘNG HÓA ZT-BASIC 3.0 hỗ trợ hẹn giờ để thiết bị hoạt động theo lịch trình . Người dùng có thể xây dựng các lịch điều khiển phù hợp với nhu cầu sử dụng thực tế, giúp giảm thao tác thủ công và tăng tính tự động cho hệ thống cửa/cổng. Ví dụ: Buổi sáng: cửa tự động mở theo lịch. Buổi tối: cửa tự động đóng theo lịch. Tính năng lịch trình đặc biệt phù hợp với nhà ở, cửa hàng, văn phòng, nhà xưởng và các công trình cần vận hành cửa theo thời gian cố định. LƯU LỊCH SỬ ĐIỀU KHIỂN ZT-BASIC 3.0 hỗ trợ lịch sử điều khiển/trạng thái của thiết bị , giúp người dùng theo dõi hoạt động của hệ thống trên ứng dụng. Đây là cơ sở để kiểm tra quá trình vận hành và thuận tiện hơn trong việc quản lý hệ thống cửa/cổng. KẾT NỐI REMOTE RF Không chỉ điều khiển bằng điện thoại, ZT-BASIC 3.0 còn hỗ trợ kết nối Remote RF Zitech . Người dùng có thể đưa Remote RF vào chế độ học và thêm trực tiếp vào bộ điều khiển. Thiết bị hỗ trợ tối đa 10 Remote RF . Điều này cho phép hệ thống kết hợp cả: Điều khiển truyền thống bằng Remote + Điều khiển thông minh bằng điện thoại. Người dùng không nhất thiết phải thay đổi hoàn toàn thói quen sử dụng cửa hiện tại. HỖ TRỢ CẢM BIẾN RF VÀ MỞ RỘNG HỆ THỐNG ZT-BASIC 3.0 có khả năng kết nối nhiều loại phụ kiện RF để mở rộng chức năng. Theo tài liệu sản phẩm, hệ thống hỗ trợ: Remote RF Zitech: tối đa 10 thiết bị. Cảm biến báo trộm/chống xô không dây: tối đa 1 cảm biến. Cảm biến báo cháy: tối đa 10 cảm biến. Khi cần thay đổi hệ thống, người dùng có thể thêm hoặc xóa các thiết bị RF đã kết nối thông qua ứng dụng. CHẾ ĐỘ KHÓA REMOTE ZT-BASIC 3.0 có chức năng vô hiệu hóa các Remote đã được thêm vào . Khi kích hoạt, các Remote đã đăng ký sẽ không thể điều khiển cửa, trong khi các thiết bị cảm biến như cảm biến trộm hoặc báo cháy vẫn hoạt động bình thường. Tính năng này phù hợp trong những trường hợp cần tạm thời vô hiệu hóa điều khiển bằng Remote. HỖ TRỢ NHIỀU LOẠI CỬA VÀ CỔNG TỰ ĐỘNG Một trong những điểm đáng chú ý của ZT-BASIC 3.0 là khả năng lựa chọn giao diện điều khiển phù hợp với từng loại hệ thống. Thiết bị có thể sử dụng cho: Cửa cuốn Hỗ trợ các hệ thống có kiểu điều khiển khác nhau, bao gồm trường hợp nút STOP sử dụng tiếp điểm thường đóng (NC) hoặc thường mở (NO) . Cổng tự động Có thể ứng dụng cho nhiều loại cổng như: Cổng 1 cánh Cổng 2 cánh Cổng trượt Cổng tự động Các hệ thống sử dụng điều khiển Mở – Dừng – Đóng Các hệ thống sử dụng 1 cánh – 2 cánh hoặc mức mở 50% – 100% Do mỗi hãng và mỗi loại cổng có cách đấu nối khác nhau, cần lựa chọn giao diện điều khiển tương ứng với đầu vào của bộ điều khiển cổng. Mái che, rèm và các hệ thống tương tự Tài liệu cũng xác định nhiều giao diện của ZT-BASIC 3.0 có thể sử dụng cho cổng tự động, mái che, rèm… KẾT NỐI KHÔNG DÂY ĐA NỀN TẢNG ZT-BASIC 3.0 được trang bị nhiều phương thức kết nối không dây: WiFi 2.4GHz + Bluetooth + RF433 Trong đó: WiFi 2.4GHz: kết nối hệ thống với mạng và điều khiển qua ứng dụng. Bluetooth: hỗ trợ quá trình kết nối/cấu hình thiết bị. RF433: kết nối Remote và các cảm biến RF tương thích. Thông số kết nối này được nêu trực tiếp trong tài liệu kỹ thuật của sản phẩm. ĐIỀU KHIỂN TRÊN SMART LIFE/TUYA ZT-BASIC 3.0 sử dụng ứng dụng Smart Life/TUYA trên: Android iOS Người dùng có thể cài đặt ứng dụng, đăng ký tài khoản và thêm thiết bị vào hệ thống để bắt đầu điều khiển. Sau khi thêm thiết bị, ứng dụng còn hỗ trợ chia sẻ quyền điều khiển cho điện thoại khác hoặc thêm thành viên vào nhà để các thành viên cùng quản lý thiết bị. Điều này phù hợp với gia đình, văn phòng hoặc các công trình có nhiều người cùng sử dụng cửa/cổng. KHÔNG CẦN THAY ĐỔI TOÀN BỘ HỆ THỐNG CỬA ZT-BASIC 3.0 được thiết kế để nâng cấp hệ thống cửa/cổng hiện có , thay vì phải thay mới toàn bộ bộ điều khiển. Đối với một số hệ thống cửa cuốn, sản phẩm có thể sử dụng cáp chuyển tín hiệu để kết nối mà không cần cắt dây đấu nối. Tài liệu hướng dẫn mô tả cách kết nối thông qua cáp chuyển tiếp với các loại jack tương ứng. Ngoài ra, tài liệu cung cấp các phương án đấu nối cho: Động cơ 220VAC. Hệ thống có hộp điều khiển RF. Động cơ 12/24VDC. Tùy từng hệ thống thực tế sẽ lựa chọn phương án đấu nối phù hợp. THÔNG SỐ KỸ THUẬT Đặc tính Thông số Model ZT-BASIC 3.0 Loại sản phẩm Bộ điều khiển cửa / cổng thông minh Nguồn điện 110–240VAC ~ 50Hz Đầu ra Tiếp điểm khô, điều khiển tín hiệu <500mA Kết nối không dây WiFi 2.4GHz, Bluetooth, RF433 Ứng dụng Smart Life / TUYA Hệ điều hành Android & iOS Remote RF Tối đa 10 Remote Cảm biến trộm/chống xô RF Tối đa 1 cảm biến Cảm biến báo cháy RF Tối đa 10 cảm biến ỨNG DỤNG THỰC TẾ ZT-BASIC 3.0 có thể được sử dụng để nâng cấp nhiều hệ thống: * Nhà ở Điều khiển cửa cuốn, kiểm tra trạng thái cửa và quản lý cửa từ xa bằng điện thoại. * Văn phòng Quản lý cửa ra vào, chia sẻ quyền điều khiển cho nhiều thành viên. * Cửa hàng Điều khiển cửa theo lịch trình, kết hợp Remote và điện thoại. * Nhà xưởng Điều khiển cổng tự động và xây dựng lịch vận hành phù hợp. * Gara Điều khiển cửa gara từ điện thoại và kết hợp cảm biến để giám sát trạng thái. GIẢI PHÁP NÂNG CẤP CỬA THÔNG MINH ZT-BASIC 3.0 không chỉ bổ sung khả năng điều khiển cửa bằng điện thoại , mà còn mở rộng hệ thống với nhiều lớp chức năng: Điều khiển từ xa ↓ Giám sát trạng thái ↓ Hẹn giờ ↓ Lịch sử hoạt động ↓ Remote RF ↓ Cảm biến chống trộm / chống xô ↓ Cảm biến báo cháy ↓ Tự động hóa Nhờ đó, một hệ thống cửa cuốn hoặc cổng tự động thông thường có thể được nâng cấp thành hệ thống cửa thông minh có khả năng điều khiển, giám sát và mở rộng . ZT-BASIC 3.0 – BIẾN CỬA THƯỜNG THÀNH CỬA THÔNG MINH Điều khiển cửa từ xa. Giám sát trạng thái. Hẹn giờ. Kết nối Remote và cảm biến. Mở rộng hệ thống an ninh. Với khả năng kết nối WiFi 2.4GHz, Bluetooth và RF433 mã nhảy , hỗ trợ ứng dụng Smart Life/TUYA , cùng khả năng kết nối nhiều phụ kiện RF, ZT-BASIC 3.0 là giải pháp phù hợp để nâng cấp cửa cuốn, cổng tự động và các hệ thống điều khiển tương thích lên mô hình thông minh mà không nhất thiết phải thay thế toàn bộ hệ thống hiện có. ZT-BASIC 3.0 Điều khiển thông minh – Giám sát chủ động – Mở rộng linh hoạt.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "ZITECH (Chính hãng phân phối bởi Chu Gia)"
+        },
+        {
+          "k": "Model",
+          "v": "ZT-BASIC-3.0"
+        },
+        {
+          "k": "Kết nối đa kênh",
+          "v": "Wifi 2.4GHz + Bluetooth (mở cửa khi mất mạng) + Tần số RF433 mã nhảy chống sao chép"
+        },
+        {
+          "k": "Tính năng",
+          "v": "Điều khiển 1 cánh / 2 cánh / 50% / 100%, tích hợp cảm biến hành trình báo trạng thái đóng/mở chính xác"
+        },
+        {
+          "k": "Bảo mật",
+          "v": "Thông báo tức thì khi có người bấm remote hoặc mở cửa, hẹn giờ tự động khóa"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ],
+      "zitechUrl": "https://zitech.vn/san-pham/dieu-khien-cua-cuon/bo-dieu-khien-cua-cong-zt-basic-3-0/"
+    },
+    {
+      "id": 995022,
+      "name": "Công tắc điều khiển cửa cuốn / cổng tự động ZLUX-WD (Mặt kính cảm ứng, Wifi + Bluetooth)",
+      "sku": "TUYA-ZLUX-WD",
+      "costPrice": 295000,
+      "retailPrice": 480000,
+      "originalPrice": 566400,
+      "discountPercent": 15,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA / ZITECH",
+      "image": "https://zitech.vn/wp-content/uploads/2026/08/CC14.png",
+      "images": [
+        "https://zitech.vn/wp-content/uploads/2026/08/CC14.png"
+      ],
+      "features": [
+        "Model: ZLUX-WD",
+        "Giao thức: Wifi 2.4GHz + Bluetooth",
+        "Tính năng nổi bật: 3 phím cảm ứng: Lên (Open) - Dừng (Stop) - Xuống (Close) và Khóa an toàn",
+        "Tương thích: Ứng dụng Tuya Smart / Smart Life & Home Assistant (Zigbee2MQTT / ZHA)",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "ZLUX-WD là dòng điều khiển cửa cuốn/cổng tự động phổ thông, dễ lắp đặt, tương thích với hầu hết các loại cửa cuốn trên thị trường. Tài liệu chi tiết đang được cập nhật",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA / ZITECH (Chính hãng)"
+        },
+        {
+          "k": "Model",
+          "v": "ZLUX-WD"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Wifi 2.4GHz + Bluetooth"
+        },
+        {
+          "k": "Phím điều khiển",
+          "v": "3 phím cảm ứng: Lên (Open) - Dừng (Stop) - Xuống (Close) và Khóa an toàn"
+        },
+        {
+          "k": "Tương thích",
+          "v": "Hầu hết các dòng motor cửa cuốn xích kéo, motor ống và motor cổng tự động"
+        },
+        {
+          "k": "Tính năng",
+          "v": "Mở/đóng cửa cuốn từ xa trên điện thoại, chia sẻ cho nhiều thành viên gia đình, thông báo trạng thái"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ],
+      "zitechUrl": "https://zitech.vn/san-pham/dieu-khien-cua-cuon/bo-dieu-khien-cua-cuon-zlux-wd/"
+    },
+    {
+      "id": 995023,
+      "name": "Hộp nhận điều khiển cửa cuốn thông minh Zitech BOX (Thay thế hộp nhận cũ, tích hợp Wifi/RF)",
+      "sku": "TUYA-ZT-BOX",
+      "costPrice": 540000,
+      "retailPrice": 850000,
+      "originalPrice": 1003000,
+      "discountPercent": 15,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA / ZITECH",
+      "image": "https://zitech.vn/wp-content/uploads/2026/08/Boxx1.jpg",
+      "images": [
+        "https://zitech.vn/wp-content/uploads/2026/08/Boxx1.jpg"
+      ],
+      "features": [
+        "Model: ZT-BOX",
+        "Giao thức: Thay thế hoàn toàn hộp nhận cửa cuốn truyền thống hoặc cắm song song, điều khiển đồng thời qua điện thoại và remote mã nhảy",
+        "Tính năng nổi bật: Motor xích AC 220V ngoài hoặc motor ống",
+        "Tương thích: Ứng dụng Tuya Smart / Smart Life & Home Assistant (Zigbee2MQTT / ZHA)",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "ZITECH BOX – HỘP NHẬN CỬA CUỐN THÔNG MINH Biến hộp nhận cửa cuốn truyền thống thành hệ thống điều khiển thông minh Zitech Box là bộ điều khiển cửa cuốn thông minh được thiết kế để thay thế hộp nhận cửa cuốn truyền thống cho các động cơ 220V tương thích. Thiết bị giữ lại chức năng điều khiển cửa cơ bản, đồng thời bổ sung kết nối WiFi 2.4GHz, Bluetooth và RF433 , cho phép điều khiển cửa bằng điện thoại và kết nối với các phụ kiện RF. Thông qua ứng dụng Smart Life trên Android và iOS , người dùng có thể điều khiển cửa, theo dõi trạng thái đóng/mở, xem lịch sử hoạt động, thiết lập lịch trình và cấu hình nhiều chức năng thông minh khác. ĐIỀU KHIỂN CỬA CUỐN BẰNG ĐIỆN THOẠI Không cần có mặt tại vị trí cửa, người dùng có thể điều khiển cửa cuốn trực tiếp trên điện thoại thông qua ứng dụng Smart Life. Giao diện điều khiển cung cấp các nút: Mở Dừng Đóng Khóa/Mở khóa Ngoài ra, ứng dụng còn hiển thị thanh phần trăm đóng/mở , cho phép theo dõi mức độ mở của cửa và có thể kéo thanh phần trăm để điều khiển cửa theo vị trí mong muốn. ĐỒNG BỘ TRẠNG THÁI CỬA Một điểm nổi bật của Zitech Box là khả năng đồng bộ trạng thái cửa . Hệ thống có thể báo cáo trạng thái đóng/mở của cửa ngay cả khi cửa được điều khiển bằng: Nút bấm tường. Remote. Ứng dụng điện thoại. Nhờ đó, trạng thái hiển thị trên ứng dụng được cập nhật theo quá trình vận hành thực tế của cửa. HIỂN THỊ % ĐÓNG/MỞ CỬA Zitech Box hỗ trợ hiển thị trực quan mức độ đóng/mở của cửa theo phần trăm . Người dùng có thể theo dõi cửa đang ở mức bao nhiêu phần trăm và sử dụng thanh % trên ứng dụng để điều khiển vị trí cửa. Thời gian từ khi cửa đóng hoàn toàn đến khi mở hết có thể được thiết lập để đồng bộ thanh phần trăm và hình ảnh mô phỏng trạng thái cửa trên ứng dụng. KẾT NỐI WIFI + BLUETOOTH + RF433 Zitech Box được trang bị ba phương thức kết nối không dây: WiFi 2.4GHz Kết nối thiết bị với mạng WiFi để điều khiển và quản lý cửa thông qua ứng dụng. Bluetooth Hỗ trợ quá trình kết nối và cấu hình thiết bị với điện thoại. RF433 Kết nối với Remote RF và các phụ kiện RF tương thích. Thông số kết nối không dây của thiết bị gồm WiFi 2.4GHz, Bluetooth và RF433 . HỖ TRỢ REMOTE RF Zitech Box cho phép kết nối Remote RF Zitech , giúp người dùng tiếp tục sử dụng điều khiển từ xa bên cạnh phương thức điều khiển bằng điện thoại. Thiết bị hỗ trợ tối đa 10 Remote RF . Khi thêm Remote, chỉ cần đưa Zitech Box vào chế độ thêm thiết bị RF và nhấn một nút bất kỳ trên Remote. Điều này giúp hệ thống có thể kết hợp linh hoạt: Điều khiển bằng Remote + Điều khiển bằng điện thoại KẾT NỐI CẢM BIẾN VÀ PHỤ KIỆN RF Ngoài Remote, Zitech Box hỗ trợ mở rộng với các phụ kiện RF như: Cảm biến cửa Zitech RF Cảm biến báo trộm Chống xô không dây Cảm biến báo cháy Cảm biến cửa Zitech RF có thể được sử dụng để thông báo trạng thái đóng/mở cửa, đồng thời có thể đảm nhiệm chức năng cảm biến chống xô không dây hoặc cảm biến báo trộm. Hệ thống có thể kết nối tối đa 10 Remote RF và 1 cảm biến trộm tích hợp chống xô không dây . CẢNH BÁO KHI CỬA BỊ MỞ HOẶC CẠY Khi kết hợp Zitech Box với cảm biến báo trộm Zitech RF , người dùng có thể bật chức năng cảnh báo trên ứng dụng. Nếu cửa bị mở hoặc cạy trái phép , điện thoại sẽ phát cảnh báo để người dùng kịp thời nhận biết. Đây là giải pháp phù hợp để bổ sung thêm lớp giám sát cho cửa cuốn gia đình, cửa hàng, văn phòng hoặc các khu vực cần kiểm soát an ninh. TỰ ĐỘNG MỞ CỬA KHI CÓ CHÁY Zitech Box hỗ trợ kết nối với cảm biến báo cháy . Khi cảm biến báo cháy được thêm vào hệ thống và phát hiện tình trạng cháy, cửa có thể tự động mở , đồng thời điện thoại nhận được cảnh báo. Tính năng này có thể giúp cửa phản ứng tự động trong tình huống khẩn cấp, hỗ trợ tạo lối thoát và giảm sự phụ thuộc vào thao tác thủ công. HẸN GIỜ VÀ TỰ ĐỘNG HÓA Zitech Box hỗ trợ hẹn giờ để cửa hoạt động theo lịch trình . Người dùng có thể thiết lập lịch phù hợp với nhu cầu sử dụng, chẳng hạn: Buổi sáng: tự động mở cửa theo lịch. Buổi tối: tự động đóng cửa theo lịch. Tính năng này phù hợp với nhà ở, cửa hàng, văn phòng và các công trình có thời gian vận hành cố định. LỊCH SỬ ĐIỀU KHIỂN Ứng dụng hỗ trợ lịch sử điều khiển/trạng thái của thiết bị , giúp người dùng theo dõi hoạt động của cửa trong quá trình sử dụng. Đây là công cụ hữu ích để kiểm tra lịch sử vận hành và quản lý cửa thuận tiện hơn. KHÓA REMOTE KHI CẦN THIẾT Zitech Box có chức năng vô hiệu hóa Remote đã được thêm vào hệ thống . Khi kích hoạt chức năng này, các Remote đã đăng ký sẽ không thể điều khiển cửa, trong khi các thiết bị khác như cảm biến trộm và cảm biến báo cháy vẫn hoạt động bình thường. Tính năng này hữu ích khi cần tạm thời khóa quyền điều khiển bằng Remote. HỖ TRỢ MẠNG WIFI DỰ PHÒNG Zitech Box hỗ trợ thiết lập mạng WiFi dự phòng . Khi mạng WiFi chính gặp sự cố, thiết bị có thể tự động chuyển sang mạng WiFi dự phòng đã được cài đặt trước, giúp duy trì kết nối mạng cho thiết bị. Đây là một tính năng hữu ích đối với những hệ thống cửa cần duy trì khả năng điều khiển qua mạng ổn định. CHIA SẺ QUYỀN ĐIỀU KHIỂN Zitech Box hỗ trợ chia sẻ quyền điều khiển cho các thành viên khác thông qua Smart Life. Có thể: Chia sẻ riêng quyền điều khiển thiết bị. Thêm thành viên vào “Nhà” để thành viên có thể điều khiển các thiết bị được chia sẻ. Điều này phù hợp với gia đình hoặc các công trình có nhiều người cùng sử dụng cửa. LẮP ĐẶT ĐƠN GIẢN Zitech Box được thiết kế để lắp đặt tương tự hộp nhận cửa cuốn truyền thống . Với các động cơ sử dụng Jack 8 chân , thiết bị có thể kết nối thông qua cáp tương ứng. Với một số loại Jack 6 chân , có thể sử dụng cáp chuyển đổi để lắp đặt. Điều này giúp Zitech Box trở thành giải pháp phù hợp để nâng cấp các hệ thống cửa cuốn hiện có lên khả năng điều khiển thông minh. Lưu ý: Việc lắp đặt cần được thực hiện đúng sơ đồ và phù hợp với loại động cơ/hộp nhận đang sử dụng. ỨNG DỤNG THỰC TẾ Nhà ở Điều khiển cửa cuốn bằng điện thoại, kiểm tra trạng thái cửa và sử dụng Remote như bình thường. Gara Điều khiển cửa từ xa và theo dõi mức độ đóng/mở. Cửa hàng Thiết lập lịch mở/đóng cửa theo thời gian hoạt động của cửa hàng. Văn phòng Chia sẻ quyền điều khiển cho nhiều thành viên. Nhà xưởng Kết hợp điều khiển cửa với cảnh báo và các phụ kiện RF để xây dựng hệ thống quản lý cửa phù hợp. THÔNG SỐ KỸ THUẬT Đặc tính Thông số Tên sản phẩm Điều khiển cửa cuốn – Hộp nhận thông minh Zitech Box Loại thiết bị Hộp nhận điều khiển cửa cuốn thông minh Nguồn điện 110–240VAC ~ 50Hz Đầu ra Điều khiển tín hiệu <500mA Kết nối không dây WiFi 2.4GHz / Bluetooth / RF433 Ứng dụng Smart Life Hệ điều hành Android & iOS Remote RF Tối đa 10 Remote Cảm biến RF Tối đa 1 cảm biến trộm – tích hợp chống xô không dây Tương thích lắp đặt Hộp nhận Jack 8 chân; Jack 6 chân sử dụng cáp chuyển đổi Các thông số nguồn, đầu ra, kết nối không dây và ứng dụng được nêu trong tài liệu kỹ thuật của Zitech Box. TỔNG HỢP TÍNH NĂNG Zitech Box nổi bật với: Điều khiển cửa cuốn bằng điện thoại. WiFi 2.4GHz. Bluetooth. RF433 mã nhảy Điều khiển bằng Remote RF. Hỗ trợ tối đa 10 Remote. Hiển thị trạng thái đóng/mở cửa. Hiển thị % đóng/mở. Điều khiển vị trí cửa theo thanh %. Đồng bộ trạng thái khi điều khiển bằng nút tường hoặc Remote. Hẹn giờ theo lịch trình. Lịch sử điều khiển/trạng thái. Cảnh báo khi cửa bị mở/cạy khi kết hợp cảm biến báo trộm. Tự động mở cửa khi có tín hiệu báo cháy. Hỗ trợ chống xô không dây. Vô hiệu hóa Remote. WiFi dự phòng. Chia sẻ quyền điều khiển cho thành viên. Ứng dụng Smart Life trên Android và iOS. ZITECH BOX – NÂNG CẤP CỬA CUỐN THÀNH CỬA THÔNG MINH Zitech Box không chỉ thay thế một hộp nhận cửa cuốn thông thường mà còn mở rộng khả năng của hệ thống với điều khiển bằng điện thoại, đồng bộ trạng thái, hiển thị % đóng/mở, hẹn giờ, lịch sử hoạt động, Remote RF và các phụ kiện an ninh . Từ một hệ thống cửa cuốn truyền thống, người dùng có thể từng bước nâng cấp thành một hệ thống điều khiển thông minh, linh hoạt và có khả năng mở rộng . ZITECH BOX – Điều khiển thông minh cho cửa cuốn, kết nối linh hoạt cho cuộc sống hiện đại.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "ZITECH (Chính hãng)"
+        },
+        {
+          "k": "Model",
+          "v": "ZT-BOX"
+        },
+        {
+          "k": "Chức năng",
+          "v": "Thay thế hoàn toàn hộp nhận cửa cuốn truyền thống hoặc cắm song song, điều khiển đồng thời qua điện thoại và remote mã nhảy"
+        },
+        {
+          "k": "Tương thích motor",
+          "v": "Motor xích AC 220V ngoài hoặc motor ống"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ],
+      "zitechUrl": "https://zitech.vn/san-pham/dieu-khien-cua-cuon/bo-dieu-khien-cua-cuon-zt-box/"
+    },
+    {
+      "id": 995024,
+      "name": "Công tắc cảm ứng thông minh Tuya Zigbee 4 nút ZLUX-ZA4 (Mặt kính cường lực viền nhôm, chuẩn US/EU)",
+      "sku": "TUYA-ZLUX-ZA4",
+      "costPrice": 275000,
+      "retailPrice": 450000,
+      "originalPrice": 531000,
+      "discountPercent": 15,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA / ZITECH",
+      "image": "https://zitech.vn/wp-content/uploads/2026/08/4nut11.png",
+      "images": [
+        "https://zitech.vn/wp-content/uploads/2026/08/4nut11.png",
+        "https://zitech.vn/wp-content/uploads/2026/08/Kich-Thuoc-CT-1.png",
+        "https://zitech.vn/wp-content/uploads/2026/08/tin-tuc-tre-tat-thong-minh-khi-cong-tac-co-the-mo-phong-cam-303.png",
+        "https://zitech.vn/wp-content/uploads/2026/08/tin-tuc-tre-tat-thong-minh-khi-cong-tac-co-the-mo-phong-cam-301.png"
+      ],
+      "features": [
+        "Model: ZLUX-ZA4",
+        "Giao thức: Zigbee 3.0",
+        "Tính năng nổi bật: 4 nút cảm ứng riêng biệt trên 1 mặt công tắc",
+        "Tương thích: Ứng dụng Tuya Smart / Smart Life & Home Assistant (Zigbee2MQTT / ZHA)",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "CÔNG TẮC CẢM ỨNG 4 NÚT ZIGBEE – ZLUX-ZA4 Công tắc cảm ứng thông minh Zigbee – Điều khiển linh hoạt, tự động hóa thông minh ZLUX-ZA4 là công tắc cảm ứng thông minh 4 nút sử dụng Zigbee , được thiết kế cho hệ thống nhà thông minh và điều khiển chiếu sáng. Sản phẩm kết hợp mặt kính cường lực và khung hợp kim nhôm , mang thiết kế hiện đại, tối giản và phù hợp với nhiều không gian nội thất. ZLUX-ZA4 hỗ trợ điều khiển trực tiếp bằng cảm ứng, điều khiển qua ứng dụng và điều khiển bằng giọng nói thông qua hệ sinh thái tương thích. Bên cạnh các chức năng thông minh như lịch trình, đếm ngược và tự động tắt, sản phẩm nổi bật với tính năng Trễ tắt thông minh – cho phép mô phỏng cách hoạt động của hệ thống chiếu sáng sử dụng cảm biến chuyển động hoặc cảm biến hiện diện mà không cần lắp thêm cảm biến. TRỄ TẮT THÔNG MINH – ĐIỂM KHÁC BIỆT NỔI BẬT Nhấn tắt – đèn chưa tắt ngay ZLUX-ZA tiên phong tích hợp tính năng Trễ tắt trực tiếp trên công tắc , mang đến một cách điều khiển ánh sáng khác biệt so với công tắc thông thường. Khi người dùng thực hiện thao tác tắt bằng nút cảm ứng hoặc trên ứng dụng , đèn không tắt ngay lập tức . Công tắc sẽ duy trì đèn sáng trong khoảng thời gian trễ đã được thiết lập. Khi hết thời gian này, đèn mới thực sự tắt. Cơ chế hoạt động Bấm TẮT ↓ Đèn tiếp tục sáng ↓ Chờ khoảng thời gian đã cài đặt ↓ Đèn tự động TẮT Ví dụ, thiết lập thời gian trễ 60 giây : Nhấn tắt → đèn tiếp tục sáng trong 60 giây → sau 60 giây đèn mới tắt. Mô phỏng trải nghiệm của cảm biến hiện diện Cơ chế Trễ tắt được thiết kế để mô phỏng cách hoạt động của hệ thống chiếu sáng sử dụng cảm biến chuyển động hoặc cảm biến hiện diện . Thay vì tắt đèn ngay khi người dùng nhấn nút, hệ thống duy trì ánh sáng thêm một khoảng thời gian trước khi tắt. Điều này đặc biệt hữu ích trong những khu vực mà người dùng cần thêm thời gian di chuyển sau khi thực hiện thao tác tắt đèn. Ứng dụng thực tế Nhà vệ sinh: đặc biệt khi hệ thống hút mùi vẫn làm việc sau 1 thời gian trước khi tắt đảm bảo không khí được tươi mới Hành lang: đèn tiếp tục sáng sau khi người dùng rời khỏi vị trí công tắc. Cầu thang: duy trì ánh sáng trong thời gian cần thiết trước khi tắt. Phòng ngủ: tắt công tắc nhưng đèn vẫn sáng thêm một khoảng thời gian trước khi phòng tối hoàn toàn. Nhà vệ sinh: tạo trải nghiệm tương tự hệ thống chiếu sáng sử dụng cảm biến hiện diện. Phòng khách và phòng làm việc: thiết lập thời gian trễ phù hợp với thói quen sử dụng. Không cần cảm biến, vẫn có thể tạo hiệu ứng trễ tắt tương tự hệ thống chiếu sáng sử dụng cảm biến. ĐIỀU KHIỂN ĐA PHƯƠNG THỨC Điều khiển cảm ứng Bật/tắt trực tiếp trên bề mặt cảm ứng của công tắc. Thiết kế mặt kính liền mạch mang lại trải nghiệm sử dụng hiện đại và thuận tiện. Điều khiển qua ứng dụng Sau khi kết nối với Zigbee Hub/Gateway, người dùng có thể điều khiển và cấu hình công tắc thông qua ứng dụng: Bật/tắt từ xa. Kiểm tra trạng thái thiết bị. Thiết lập lịch trình. Đếm ngược. Tự động tắt. Thiết lập thời gian trễ tắt. Tùy chỉnh đèn nền. Quản lý các thiết lập của công tắc. Điều khiển bằng giọng nói ZLUX-ZA tương thích với các nền tảng điều khiển bằng giọng nói: Google Home / Google Assistant Amazon Alexa Apple Home / Siri Cho phép điều khiển thiết bị bằng giọng nói khi được tích hợp vào hệ thống tương thích. ZIGBEE 3.0 – KẾT NỐI NHÀ THÔNG MINH ZLUX-ZA sử dụng Zigbee 3.0 để kết nối với hệ thống nhà thông minh thông qua Zigbee Hub/Gateway . Zigbee hỗ trợ mô hình mạng Mesh, cho phép các thiết bị trong hệ thống phối hợp với nhau để xây dựng mạng lưới thiết bị thông minh. Sau khi kết nối, ZLUX-ZA có thể được sử dụng để: Điều khiển từ xa. Tạo lịch trình. Thiết lập tự động hóa. Tạo ngữ cảnh. Liên kết với các thiết bị thông minh khác. Điều khiển bằng giọng nói thông qua nền tảng tương thích. Hệ sinh thái tương thích Tuya • Smart Life • Google Home • Amazon Alexa • Apple Home LỊCH TRÌNH VÀ TỰ ĐỘNG HÓA Lịch trình Thiết lập thời gian để công tắc tự động bật hoặc tắt theo lịch. Ví dụ: Tự động bật đèn lúc 18:00 và tắt lúc 23:00 mỗi ngày. Đếm ngược Thiết lập khoảng thời gian để công tắc tự động đảo trạng thái hiện tại sau khi hết thời gian đếm ngược. Ví dụ: Đèn đang bật → đặt đếm ngược 30 phút → sau 30 phút đèn tắt. Hoặc: Đèn đang tắt → đặt đếm ngược 30 phút → sau 30 phút đèn bật. Tự động tắt Cho phép thiết lập để công tắc tự động tắt sau một khoảng thời gian nhất định. Ví dụ: Bật đèn → sau 30 phút → đèn tự động tắt. Phân biệt Trễ tắt và Tự động tắt Tự động tắt: Bật → chờ → tắt. Trễ tắt: Tắt → chờ → mới tắt. Tính năng Trễ tắt của ZLUX-ZA được thiết kế nhằm tạo trải nghiệm tương tự cơ chế duy trì ánh sáng của hệ thống cảm biến chuyển động hoặc cảm biến hiện diện. TÙY CHỈNH ĐÈN NỀN ZLUX-ZA được trang bị đèn nền giúp nhận biết vị trí công tắc và tăng tính thẩm mỹ cho không gian. Thông qua ứng dụng, người dùng có thể tùy chỉnh: Bật/tắt đèn nền. Điều chỉnh độ sáng. Thiết lập màu đèn nền khi công tắc bật. Thiết lập màu đèn nền khi công tắc tắt. Thiết lập trạng thái đèn nền khi công tắc đang tắt. Đèn nền giúp dễ dàng xác định vị trí công tắc trong điều kiện ánh sáng yếu. QUẢN LÝ TRẠNG THÁI THÔNG MINH Trạng thái khi khởi động lại Cho phép thiết lập trạng thái của công tắc sau khi thiết bị được cấp điện trở lại. Tùy theo cấu hình, công tắc có thể: Tắt. Bật. Khôi phục trạng thái trước đó. Lịch sử bật/tắt Theo dõi lịch sử hoạt động của công tắc trên ứng dụng, giúp người dùng dễ dàng kiểm tra quá trình sử dụng. KHÓA TRẺ EM Chức năng Khóa trẻ em cho phép vô hiệu hóa thao tác cảm ứng trực tiếp trên công tắc nhằm hạn chế việc trẻ em hoặc người dùng vô tình thay đổi trạng thái thiết bị. Chức năng này đặc biệt hữu ích tại gia đình có trẻ nhỏ hoặc những khu vực cần hạn chế thao tác trực tiếp. THIẾT KẾ HIỆN ĐẠI Mặt kính cường lực Bề mặt kính phẳng, liền mạch, dễ vệ sinh và phù hợp với các không gian nội thất hiện đại. Khung hợp kim nhôm Khung hợp kim nhôm tạo cảm giác chắc chắn và tăng tính thẩm mỹ cho sản phẩm. Thiết kế cảm ứng Bề mặt điều khiển liền mạch, không sử dụng nút cơ học nhô ra, tạo vẻ ngoài tối giản và hiện đại. THÔNG SỐ KỸ THUẬT Đặc tính Thông số Model ZLUX-ZA4 Tên sản phẩm Công tắc cảm ứng 1 nút Zigbee Loại thiết bị Công tắc cảm ứng thông minh Giao thức không dây Zigbee 3.0 Tần số hoạt động 2.4 GHz Nguồn điện đầu vào 110–240VAC, 50/60Hz Số nút điều khiển 4 nút Tải LED ≤ 150W/kênh Tải thuần trở ≤ 750W/kênh Phương thức điều khiển Cảm ứng / Ứng dụng / Giọng nói Kết nối hệ thống Zigbee Hub/Gateway Nền tảng Tuya / Smart Life Điều khiển giọng nói Google Asistant / Amazon Alexa / Apple Siri Mặt công tắc Kính cường lực Khung Hợp kim nhôm Đèn nền Có, tùy chỉnh Kích thước 72 × 120 × 24 mm Kiểu lắp đặt Lắp đặt đế âm tường tiêu chuẩn ỨNG DỤNG ZLUX-ZA phù hợp cho nhiều không gian và công trình: Nhà ở Căn hộ Phòng khách Phòng ngủ Phòng làm việc Hành lang Cầu thang Nhà vệ sinh Khách sạn Căn hộ dịch vụ Văn phòng Công trình sử dụng hệ thống nhà thông minh Đặc biệt, tính năng Trễ tắt thông minh giúp ZLUX-ZA phù hợp với những khu vực cần duy trì ánh sáng trong một khoảng thời gian sau khi người dùng thực hiện thao tác tắt. TỔNG HỢP TÍNH NĂNG ZLUX-ZA nổi bật với: Zigbee 3.0 Điều khiển cảm ứng Điều khiển qua ứng dụng Điều khiển bằng giọng nói Tuya / Smart Life Google Home/Asistant Amazon Alexa Apple Home/Siri Trễ tắt thông minh Mô phỏng cơ chế chiếu sáng của cảm biến hiện diện Lịch trình bật/tắt Đếm ngược Tự động tắt Lịch sử bật/tắt Thiết lập trạng thái khi khởi động lại Tùy chỉnh đèn nền Điều chỉnh độ sáng đèn nền Tùy chỉnh màu đèn nền Khóa trẻ em Tự động hóa và ngữ cảnh Mặt kính cường lực Khung hợp kim nhôm",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA / ZITECH (Chính hãng)"
+        },
+        {
+          "k": "Model",
+          "v": "ZLUX-ZA4"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "4 nút cảm ứng riêng biệt trên 1 mặt công tắc"
+        },
+        {
+          "k": "Vật liệu",
+          "v": "Mặt kính cường lực viền nhôm Anode cao cấp"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "110V – 240VAC, 50/60Hz"
+        },
+        {
+          "k": "Tính năng",
+          "v": "Tối ưu hóa không gian đế âm 1 mặt 4 nút, tạo kịch bản rảnh tay, đèn LED đổi màu trạng thái"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ],
+      "zitechUrl": "https://zitech.vn/san-pham/cong-tac-cam-ung/cong-tac-cam-ung-4-nut-zigbee/"
+    },
+    {
+      "id": 995025,
+      "name": "Công tắc cảm ứng thông minh Tuya Zigbee 3 nút ZLUX-ZA3 (Mặt kính cường lực viền nhôm, chuẩn US/EU)",
+      "sku": "TUYA-ZLUX-ZA3",
+      "costPrice": 245000,
+      "retailPrice": 400000,
+      "originalPrice": 472000,
+      "discountPercent": 15,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA / ZITECH",
+      "image": "https://zitech.vn/wp-content/uploads/2026/08/3nut3.png",
+      "images": [
+        "https://zitech.vn/wp-content/uploads/2026/08/3nut3.png",
+        "https://zitech.vn/wp-content/uploads/2026/08/Kich-Thuoc-CT-1.png",
+        "https://zitech.vn/wp-content/uploads/2026/08/tin-tuc-tre-tat-thong-minh-khi-cong-tac-co-the-mo-phong-cam-303.png",
+        "https://zitech.vn/wp-content/uploads/2026/08/tin-tuc-tre-tat-thong-minh-khi-cong-tac-co-the-mo-phong-cam-301.png"
+      ],
+      "features": [
+        "Model: ZLUX-ZA3",
+        "Giao thức: Zigbee 3.0",
+        "Tính năng nổi bật: 3 nút cảm ứng độc lập",
+        "Tương thích: Ứng dụng Tuya Smart / Smart Life & Home Assistant (Zigbee2MQTT / ZHA)",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "CÔNG TẮC CẢM ỨNG 3 NÚT ZIGBEE – ZLUX-ZA3 Công tắc cảm ứng thông minh Zigbee – Điều khiển linh hoạt, tự động hóa thông minh ZLUX-ZA3 là công tắc cảm ứng thông minh 3 nút sử dụng Zigbee , được thiết kế cho hệ thống nhà thông minh và điều khiển chiếu sáng. Sản phẩm kết hợp mặt kính cường lực và khung hợp kim nhôm , mang thiết kế hiện đại, tối giản và phù hợp với nhiều không gian nội thất. ZLUX-ZA3 hỗ trợ điều khiển trực tiếp bằng cảm ứng, điều khiển qua ứng dụng và điều khiển bằng giọng nói thông qua hệ sinh thái tương thích. Bên cạnh các chức năng thông minh như lịch trình, đếm ngược và tự động tắt, sản phẩm nổi bật với tính năng Trễ tắt thông minh – cho phép mô phỏng cách hoạt động của hệ thống chiếu sáng sử dụng cảm biến chuyển động hoặc cảm biến hiện diện mà không cần lắp thêm cảm biến. TRỄ TẮT THÔNG MINH – ĐIỂM KHÁC BIỆT NỔI BẬT Nhấn tắt – đèn chưa tắt ngay ZLUX-ZA tiên phong tích hợp tính năng Trễ tắt trực tiếp trên công tắc , mang đến một cách điều khiển ánh sáng khác biệt so với công tắc thông thường. Khi người dùng thực hiện thao tác tắt bằng nút cảm ứng hoặc trên ứng dụng , đèn không tắt ngay lập tức . Công tắc sẽ duy trì đèn sáng trong khoảng thời gian trễ đã được thiết lập. Khi hết thời gian này, đèn mới thực sự tắt. Cơ chế hoạt động Bấm TẮT ↓ Đèn tiếp tục sáng ↓ Chờ khoảng thời gian đã cài đặt ↓ Đèn tự động TẮT Ví dụ, thiết lập thời gian trễ 60 giây : Nhấn tắt → đèn tiếp tục sáng trong 60 giây → sau 60 giây đèn mới tắt. Mô phỏng trải nghiệm của cảm biến hiện diện Cơ chế Trễ tắt được thiết kế để mô phỏng cách hoạt động của hệ thống chiếu sáng sử dụng cảm biến chuyển động hoặc cảm biến hiện diện . Thay vì tắt đèn ngay khi người dùng nhấn nút, hệ thống duy trì ánh sáng thêm một khoảng thời gian trước khi tắt. Điều này đặc biệt hữu ích trong những khu vực mà người dùng cần thêm thời gian di chuyển sau khi thực hiện thao tác tắt đèn. Ứng dụng thực tế Nhà vệ sinh: đặc biệt khi hệ thống hút mùi vẫn làm việc sau 1 thời gian trước khi tắt đảm bảo không khí được tươi mới Hành lang: đèn tiếp tục sáng sau khi người dùng rời khỏi vị trí công tắc. Cầu thang: duy trì ánh sáng trong thời gian cần thiết trước khi tắt. Phòng ngủ: tắt công tắc nhưng đèn vẫn sáng thêm một khoảng thời gian trước khi phòng tối hoàn toàn. Nhà vệ sinh: tạo trải nghiệm tương tự hệ thống chiếu sáng sử dụng cảm biến hiện diện. Phòng khách và phòng làm việc: thiết lập thời gian trễ phù hợp với thói quen sử dụng. Không cần cảm biến, vẫn có thể tạo hiệu ứng trễ tắt tương tự hệ thống chiếu sáng sử dụng cảm biến. ĐIỀU KHIỂN ĐA PHƯƠNG THỨC Điều khiển cảm ứng Bật/tắt trực tiếp trên bề mặt cảm ứng của công tắc. Thiết kế mặt kính liền mạch mang lại trải nghiệm sử dụng hiện đại và thuận tiện. Điều khiển qua ứng dụng Sau khi kết nối với Zigbee Hub/Gateway, người dùng có thể điều khiển và cấu hình công tắc thông qua ứng dụng: Bật/tắt từ xa. Kiểm tra trạng thái thiết bị. Thiết lập lịch trình. Đếm ngược. Tự động tắt. Thiết lập thời gian trễ tắt. Tùy chỉnh đèn nền. Quản lý các thiết lập của công tắc. Điều khiển bằng giọng nói ZLUX-ZA tương thích với các nền tảng điều khiển bằng giọng nói: Google Home / Google Assistant Amazon Alexa Apple Home / Siri Cho phép điều khiển thiết bị bằng giọng nói khi được tích hợp vào hệ thống tương thích. ZIGBEE 3.0 – KẾT NỐI NHÀ THÔNG MINH ZLUX-ZA sử dụng Zigbee 3.0 để kết nối với hệ thống nhà thông minh thông qua Zigbee Hub/Gateway . Zigbee hỗ trợ mô hình mạng Mesh, cho phép các thiết bị trong hệ thống phối hợp với nhau để xây dựng mạng lưới thiết bị thông minh. Sau khi kết nối, ZLUX-ZA có thể được sử dụng để: Điều khiển từ xa. Tạo lịch trình. Thiết lập tự động hóa. Tạo ngữ cảnh. Liên kết với các thiết bị thông minh khác. Điều khiển bằng giọng nói thông qua nền tảng tương thích. Hệ sinh thái tương thích Tuya • Smart Life • Google Home • Amazon Alexa • Apple Home LỊCH TRÌNH VÀ TỰ ĐỘNG HÓA Lịch trình Thiết lập thời gian để công tắc tự động bật hoặc tắt theo lịch. Ví dụ: Tự động bật đèn lúc 18:00 và tắt lúc 23:00 mỗi ngày. Đếm ngược Thiết lập khoảng thời gian để công tắc tự động đảo trạng thái hiện tại sau khi hết thời gian đếm ngược. Ví dụ: Đèn đang bật → đặt đếm ngược 30 phút → sau 30 phút đèn tắt. Hoặc: Đèn đang tắt → đặt đếm ngược 30 phút → sau 30 phút đèn bật. Tự động tắt Cho phép thiết lập để công tắc tự động tắt sau một khoảng thời gian nhất định. Ví dụ: Bật đèn → sau 30 phút → đèn tự động tắt. Phân biệt Trễ tắt và Tự động tắt Tự động tắt: Bật → chờ → tắt. Trễ tắt: Tắt → chờ → mới tắt. Tính năng Trễ tắt của ZLUX-ZA được thiết kế nhằm tạo trải nghiệm tương tự cơ chế duy trì ánh sáng của hệ thống cảm biến chuyển động hoặc cảm biến hiện diện. TÙY CHỈNH ĐÈN NỀN ZLUX-ZA được trang bị đèn nền giúp nhận biết vị trí công tắc và tăng tính thẩm mỹ cho không gian. Thông qua ứng dụng, người dùng có thể tùy chỉnh: Bật/tắt đèn nền. Điều chỉnh độ sáng. Thiết lập màu đèn nền khi công tắc bật. Thiết lập màu đèn nền khi công tắc tắt. Thiết lập trạng thái đèn nền khi công tắc đang tắt. Đèn nền giúp dễ dàng xác định vị trí công tắc trong điều kiện ánh sáng yếu. QUẢN LÝ TRẠNG THÁI THÔNG MINH Trạng thái khi khởi động lại Cho phép thiết lập trạng thái của công tắc sau khi thiết bị được cấp điện trở lại. Tùy theo cấu hình, công tắc có thể: Tắt. Bật. Khôi phục trạng thái trước đó. Lịch sử bật/tắt Theo dõi lịch sử hoạt động của công tắc trên ứng dụng, giúp người dùng dễ dàng kiểm tra quá trình sử dụng. KHÓA TRẺ EM Chức năng Khóa trẻ em cho phép vô hiệu hóa thao tác cảm ứng trực tiếp trên công tắc nhằm hạn chế việc trẻ em hoặc người dùng vô tình thay đổi trạng thái thiết bị. Chức năng này đặc biệt hữu ích tại gia đình có trẻ nhỏ hoặc những khu vực cần hạn chế thao tác trực tiếp. THIẾT KẾ HIỆN ĐẠI Mặt kính cường lực Bề mặt kính phẳng, liền mạch, dễ vệ sinh và phù hợp với các không gian nội thất hiện đại. Khung hợp kim nhôm Khung hợp kim nhôm tạo cảm giác chắc chắn và tăng tính thẩm mỹ cho sản phẩm. Thiết kế cảm ứng Bề mặt điều khiển liền mạch, không sử dụng nút cơ học nhô ra, tạo vẻ ngoài tối giản và hiện đại. THÔNG SỐ KỸ THUẬT Đặc tính Thông số Model ZLUX-ZA3 Tên sản phẩm Công tắc cảm ứng 3 nút Zigbee Loại thiết bị Công tắc cảm ứng thông minh Giao thức không dây Zigbee 3.0 Tần số hoạt động 2.4 GHz Nguồn điện đầu vào 110–240VAC, 50/60Hz Số nút điều khiển 3 nút Tải LED ≤ 150W/kênh Tải thuần trở ≤ 750W/kênh Phương thức điều khiển Cảm ứng / Ứng dụng / Giọng nói Kết nối hệ thống Zigbee Hub/Gateway Nền tảng Tuya / Smart Life Điều khiển giọng nói Google Asistant / Amazon Alexa / Apple Siri Mặt công tắc Kính cường lực Khung Hợp kim nhôm Đèn nền Có, tùy chỉnh Kích thước 72 × 120 × 24 mm Kiểu lắp đặt Lắp đặt đế âm tường tiêu chuẩn ỨNG DỤNG ZLUX-ZA phù hợp cho nhiều không gian và công trình: Nhà ở Căn hộ Phòng khách Phòng ngủ Phòng làm việc Hành lang Cầu thang Nhà vệ sinh Khách sạn Căn hộ dịch vụ Văn phòng Công trình sử dụng hệ thống nhà thông minh Đặc biệt, tính năng Trễ tắt thông minh giúp ZLUX-ZA phù hợp với những khu vực cần duy trì ánh sáng trong một khoảng thời gian sau khi người dùng thực hiện thao tác tắt. TỔNG HỢP TÍNH NĂNG ZLUX-ZA nổi bật với: Zigbee 3.0 Điều khiển cảm ứng Điều khiển qua ứng dụng Điều khiển bằng giọng nói Tuya / Smart Life Google Home/Asistant Amazon Alexa Apple Home/Siri Trễ tắt thông minh Mô phỏng cơ chế chiếu sáng của cảm biến hiện diện Lịch trình bật/tắt Đếm ngược Tự động tắt Lịch sử bật/tắt Thiết lập trạng thái khi khởi động lại Tùy chỉnh đèn nền Điều chỉnh độ sáng đèn nền Tùy chỉnh màu đèn nền Khóa trẻ em Tự động hóa và ngữ cảnh Mặt kính cường lực Khung hợp kim nhôm hợp không gian cần điều khiển nhiều nhóm đèn hoặc thiết bị điện cùng lúc.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA / ZITECH (Chính hãng)"
+        },
+        {
+          "k": "Model",
+          "v": "ZLUX-ZA3"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "3 nút cảm ứng độc lập"
+        },
+        {
+          "k": "Vật liệu",
+          "v": "Mặt kính cường lực cao cấp viền nhôm xước phay"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "110V – 240VAC, 50/60Hz"
+        },
+        {
+          "k": "Tính năng",
+          "v": "Hẹn giờ, tự động tắt sau khoảng trễ (cho hút mùi vệ sinh, đèn hành lang), điều khiển qua Home Assistant"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ],
+      "zitechUrl": "https://zitech.vn/san-pham/cong-tac-cam-ung/cong-tac-cam-ung-3-nut/"
+    },
+    {
+      "id": 995026,
+      "name": "Công tắc cảm ứng thông minh Tuya Zigbee 2 nút ZLUX-ZA2 (Mặt kính cường lực viền nhôm, chuẩn US/EU)",
+      "sku": "TUYA-ZLUX-ZA2",
+      "costPrice": 220000,
+      "retailPrice": 360000,
+      "originalPrice": 424800,
+      "discountPercent": 15,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA / ZITECH",
+      "image": "https://zitech.vn/wp-content/uploads/2026/08/2nut9.png",
+      "images": [
+        "https://zitech.vn/wp-content/uploads/2026/08/2nut9.png",
+        "https://zitech.vn/wp-content/uploads/2026/08/Kich-Thuoc-CT-1.png",
+        "https://zitech.vn/wp-content/uploads/2026/08/tin-tuc-tre-tat-thong-minh-khi-cong-tac-co-the-mo-phong-cam-303.png",
+        "https://zitech.vn/wp-content/uploads/2026/08/tin-tuc-tre-tat-thong-minh-khi-cong-tac-co-the-mo-phong-cam-301.png"
+      ],
+      "features": [
+        "Model: ZLUX-ZA2",
+        "Giao thức: Zigbee 3.0",
+        "Tính năng nổi bật: 2 nút cảm ứng độc lập có đèn nền ban đêm",
+        "Tương thích: Ứng dụng Tuya Smart / Smart Life & Home Assistant (Zigbee2MQTT / ZHA)",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "CÔNG TẮC CẢM ỨNG 2 NÚT ZIGBEE – ZLUX-ZA2 Công tắc cảm ứng thông minh Zigbee – Điều khiển linh hoạt, tự động hóa thông minh ZLUX-ZA2 là công tắc cảm ứng thông minh 2 nút sử dụng Zigbee , được thiết kế cho hệ thống nhà thông minh và điều khiển chiếu sáng. Sản phẩm kết hợp mặt kính cường lực và khung hợp kim nhôm , mang thiết kế hiện đại, tối giản và phù hợp với nhiều không gian nội thất. ZLUX-ZA2 hỗ trợ điều khiển trực tiếp bằng cảm ứng, điều khiển qua ứng dụng và điều khiển bằng giọng nói thông qua hệ sinh thái tương thích. Bên cạnh các chức năng thông minh như lịch trình, đếm ngược và tự động tắt, sản phẩm nổi bật với tính năng Trễ tắt thông minh – cho phép mô phỏng cách hoạt động của hệ thống chiếu sáng sử dụng cảm biến chuyển động hoặc cảm biến hiện diện mà không cần lắp thêm cảm biến. TRỄ TẮT THÔNG MINH – ĐIỂM KHÁC BIỆT NỔI BẬT Nhấn tắt – đèn chưa tắt ngay ZLUX-ZA tiên phong tích hợp tính năng Trễ tắt trực tiếp trên công tắc , mang đến một cách điều khiển ánh sáng khác biệt so với công tắc thông thường. Khi người dùng thực hiện thao tác tắt bằng nút cảm ứng hoặc trên ứng dụng , đèn không tắt ngay lập tức . Công tắc sẽ duy trì đèn sáng trong khoảng thời gian trễ đã được thiết lập. Khi hết thời gian này, đèn mới thực sự tắt. Cơ chế hoạt động Bấm TẮT ↓ Đèn tiếp tục sáng ↓ Chờ khoảng thời gian đã cài đặt ↓ Đèn tự động TẮT Ví dụ, thiết lập thời gian trễ 60 giây : Nhấn tắt → đèn tiếp tục sáng trong 60 giây → sau 60 giây đèn mới tắt. Mô phỏng trải nghiệm của cảm biến hiện diện Cơ chế Trễ tắt được thiết kế để mô phỏng cách hoạt động của hệ thống chiếu sáng sử dụng cảm biến chuyển động hoặc cảm biến hiện diện . Thay vì tắt đèn ngay khi người dùng nhấn nút, hệ thống duy trì ánh sáng thêm một khoảng thời gian trước khi tắt. Điều này đặc biệt hữu ích trong những khu vực mà người dùng cần thêm thời gian di chuyển sau khi thực hiện thao tác tắt đèn. Ứng dụng thực tế Nhà vệ sinh: đặc biệt khi hệ thống hút mùi vẫn làm việc sau 1 thời gian trước khi tắt đảm bảo không khí được tươi mới Hành lang: đèn tiếp tục sáng sau khi người dùng rời khỏi vị trí công tắc. Cầu thang: duy trì ánh sáng trong thời gian cần thiết trước khi tắt. Phòng ngủ: tắt công tắc nhưng đèn vẫn sáng thêm một khoảng thời gian trước khi phòng tối hoàn toàn. Nhà vệ sinh: tạo trải nghiệm tương tự hệ thống chiếu sáng sử dụng cảm biến hiện diện. Phòng khách và phòng làm việc: thiết lập thời gian trễ phù hợp với thói quen sử dụng. Không cần cảm biến, vẫn có thể tạo hiệu ứng trễ tắt tương tự hệ thống chiếu sáng sử dụng cảm biến. ĐIỀU KHIỂN ĐA PHƯƠNG THỨC Điều khiển cảm ứng Bật/tắt trực tiếp trên bề mặt cảm ứng của công tắc. Thiết kế mặt kính liền mạch mang lại trải nghiệm sử dụng hiện đại và thuận tiện. Điều khiển qua ứng dụng Sau khi kết nối với Zigbee Hub/Gateway, người dùng có thể điều khiển và cấu hình công tắc thông qua ứng dụng: Bật/tắt từ xa. Kiểm tra trạng thái thiết bị. Thiết lập lịch trình. Đếm ngược. Tự động tắt. Thiết lập thời gian trễ tắt. Tùy chỉnh đèn nền. Quản lý các thiết lập của công tắc. Điều khiển bằng giọng nói ZLUX-ZA tương thích với các nền tảng điều khiển bằng giọng nói: Google Home / Google Assistant Amazon Alexa Apple Home / Siri Cho phép điều khiển thiết bị bằng giọng nói khi được tích hợp vào hệ thống tương thích. ZIGBEE 3.0 – KẾT NỐI NHÀ THÔNG MINH ZLUX-ZA sử dụng Zigbee 3.0 để kết nối với hệ thống nhà thông minh thông qua Zigbee Hub/Gateway . Zigbee hỗ trợ mô hình mạng Mesh, cho phép các thiết bị trong hệ thống phối hợp với nhau để xây dựng mạng lưới thiết bị thông minh. Sau khi kết nối, ZLUX-ZA có thể được sử dụng để: Điều khiển từ xa. Tạo lịch trình. Thiết lập tự động hóa. Tạo ngữ cảnh. Liên kết với các thiết bị thông minh khác. Điều khiển bằng giọng nói thông qua nền tảng tương thích. Hệ sinh thái tương thích Tuya • Smart Life • Google Home • Amazon Alexa • Apple Home LỊCH TRÌNH VÀ TỰ ĐỘNG HÓA Lịch trình Thiết lập thời gian để công tắc tự động bật hoặc tắt theo lịch. Ví dụ: Tự động bật đèn lúc 18:00 và tắt lúc 23:00 mỗi ngày. Đếm ngược Thiết lập khoảng thời gian để công tắc tự động đảo trạng thái hiện tại sau khi hết thời gian đếm ngược. Ví dụ: Đèn đang bật → đặt đếm ngược 30 phút → sau 30 phút đèn tắt. Hoặc: Đèn đang tắt → đặt đếm ngược 30 phút → sau 30 phút đèn bật. Tự động tắt Cho phép thiết lập để công tắc tự động tắt sau một khoảng thời gian nhất định. Ví dụ: Bật đèn → sau 30 phút → đèn tự động tắt. Phân biệt Trễ tắt và Tự động tắt Tự động tắt: Bật → chờ → tắt. Trễ tắt: Tắt → chờ → mới tắt. Tính năng Trễ tắt của ZLUX-ZA được thiết kế nhằm tạo trải nghiệm tương tự cơ chế duy trì ánh sáng của hệ thống cảm biến chuyển động hoặc cảm biến hiện diện. TÙY CHỈNH ĐÈN NỀN ZLUX-ZA được trang bị đèn nền giúp nhận biết vị trí công tắc và tăng tính thẩm mỹ cho không gian. Thông qua ứng dụng, người dùng có thể tùy chỉnh: Bật/tắt đèn nền. Điều chỉnh độ sáng. Thiết lập màu đèn nền khi công tắc bật. Thiết lập màu đèn nền khi công tắc tắt. Thiết lập trạng thái đèn nền khi công tắc đang tắt. Đèn nền giúp dễ dàng xác định vị trí công tắc trong điều kiện ánh sáng yếu. QUẢN LÝ TRẠNG THÁI THÔNG MINH Trạng thái khi khởi động lại Cho phép thiết lập trạng thái của công tắc sau khi thiết bị được cấp điện trở lại. Tùy theo cấu hình, công tắc có thể: Tắt. Bật. Khôi phục trạng thái trước đó. Lịch sử bật/tắt Theo dõi lịch sử hoạt động của công tắc trên ứng dụng, giúp người dùng dễ dàng kiểm tra quá trình sử dụng. KHÓA TRẺ EM Chức năng Khóa trẻ em cho phép vô hiệu hóa thao tác cảm ứng trực tiếp trên công tắc nhằm hạn chế việc trẻ em hoặc người dùng vô tình thay đổi trạng thái thiết bị. Chức năng này đặc biệt hữu ích tại gia đình có trẻ nhỏ hoặc những khu vực cần hạn chế thao tác trực tiếp. THIẾT KẾ HIỆN ĐẠI Mặt kính cường lực Bề mặt kính phẳng, liền mạch, dễ vệ sinh và phù hợp với các không gian nội thất hiện đại. Khung hợp kim nhôm Khung hợp kim nhôm tạo cảm giác chắc chắn và tăng tính thẩm mỹ cho sản phẩm. Thiết kế cảm ứng Bề mặt điều khiển liền mạch, không sử dụng nút cơ học nhô ra, tạo vẻ ngoài tối giản và hiện đại. THÔNG SỐ KỸ THUẬT Đặc tính Thông số Model ZLUX-ZA2 Tên sản phẩm Công tắc cảm ứng 2 nút Zigbee Loại thiết bị Công tắc cảm ứng thông minh Giao thức không dây Zigbee 3.0 Tần số hoạt động 2.4 GHz Nguồn điện đầu vào 110–240VAC, 50/60Hz Số nút điều khiển 2 nút Tải LED ≤ 150W/kênh Tải thuần trở ≤ 750W/kênh Phương thức điều khiển Cảm ứng / Ứng dụng / Giọng nói Kết nối hệ thống Zigbee Hub/Gateway Nền tảng Tuya / Smart Life Điều khiển giọng nói Google Asistant / Amazon Alexa / Apple Siri Mặt công tắc Kính cường lực Khung Hợp kim nhôm Đèn nền Có, tùy chỉnh Kích thước 72 × 120 × 24 mm Kiểu lắp đặt Lắp đặt đế âm tường tiêu chuẩn ỨNG DỤNG ZLUX-ZA phù hợp cho nhiều không gian và công trình: Nhà ở Căn hộ Phòng khách Phòng ngủ Phòng làm việc Hành lang Cầu thang Nhà vệ sinh Khách sạn Căn hộ dịch vụ Văn phòng Công trình sử dụng hệ thống nhà thông minh Đặc biệt, tính năng Trễ tắt thông minh giúp ZLUX-ZA phù hợp với những khu vực cần duy trì ánh sáng trong một khoảng thời gian sau khi người dùng thực hiện thao tác tắt. TỔNG HỢP TÍNH NĂNG ZLUX-ZA nổi bật với: Zigbee 3.0 Điều khiển cảm ứng Điều khiển qua ứng dụng Điều khiển bằng giọng nói Tuya / Smart Life Google Home/Asistant Amazon Alexa Apple Home/Siri Trễ tắt thông minh Mô phỏng cơ chế chiếu sáng của cảm biến hiện diện Lịch trình bật/tắt Đếm ngược Tự động tắt Lịch sử bật/tắt Thiết lập trạng thái khi khởi động lại Tùy chỉnh đèn nền Điều chỉnh độ sáng đèn nền Tùy chỉnh màu đèn nền Khóa trẻ em Tự động hóa và ngữ cảnh Mặt kính cường lực Khung hợp kim nhôm",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA / ZITECH (Chính hãng)"
+        },
+        {
+          "k": "Model",
+          "v": "ZLUX-ZA2"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (Hỗ trợ Home Assistant & Tuya Smart)"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "2 nút cảm ứng độc lập có đèn nền ban đêm"
+        },
+        {
+          "k": "Vật liệu",
+          "v": "Mặt kính cường lực chống nước + Viền nhôm nguyên khối"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "110V – 240VAC, 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "600W/kênh sợi đốt, 200W/kênh LED"
+        },
+        {
+          "k": "Tính năng",
+          "v": "Điều khiển từ xa trên smartphone, liên kết kịch bản thông minh, phản hồi trạng thái thời gian thực"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng"
+        }
+      ],
+      "zitechUrl": "https://zitech.vn/san-pham/cong-tac-cam-ung/cong-tac-cam-ung-2-nut-zigbee/"
+    },
+    {
+      "id": 995027,
+      "name": "Công tắc cảm ứng thông minh Tuya Zigbee 1 nút ZLUX-ZA1 (Mặt kính cường lực viền nhôm, chuẩn US/EU)",
+      "sku": "TUYA-ZLUX-ZA1",
+      "costPrice": 195000,
+      "retailPrice": 320000,
+      "originalPrice": 377600,
+      "discountPercent": 15,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA / ZITECH",
+      "image": "https://zitech.vn/wp-content/uploads/2026/08/1nut5.png",
+      "images": [
+        "https://zitech.vn/wp-content/uploads/2026/08/1nut5.png",
+        "https://zitech.vn/wp-content/uploads/2026/08/Kich-Thuoc-CT-1.png",
+        "https://zitech.vn/wp-content/uploads/2026/08/tin-tuc-tre-tat-thong-minh-khi-cong-tac-co-the-mo-phong-cam-303.png",
+        "https://zitech.vn/wp-content/uploads/2026/08/tin-tuc-tre-tat-thong-minh-khi-cong-tac-co-the-mo-phong-cam-301.png"
+      ],
+      "features": [
+        "Model: ZLUX-ZA1",
+        "Giao thức: Zigbee 3.0",
+        "Tính năng nổi bật: 1 nút cảm ứng điện dung viền LED hiển thị",
+        "Tương thích: Ứng dụng Tuya Smart / Smart Life & Home Assistant (Zigbee2MQTT / ZHA)",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 tận nơi bởi Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng",
+      "inStock": true,
+      "description": "CÔNG TẮC CẢM ỨNG 1 NÚT ZIGBEE – ZLUX-ZA1 Công tắc cảm ứng thông minh Zigbee – Điều khiển linh hoạt, tự động hóa thông minh ZLUX-ZA1 là công tắc cảm ứng thông minh 1 nút sử dụng Zigbee , được thiết kế cho hệ thống nhà thông minh và điều khiển chiếu sáng. Sản phẩm kết hợp mặt kính cường lực và khung hợp kim nhôm , mang thiết kế hiện đại, tối giản và phù hợp với nhiều không gian nội thất. ZLUX-ZA1 hỗ trợ điều khiển trực tiếp bằng cảm ứng, điều khiển qua ứng dụng và điều khiển bằng giọng nói thông qua hệ sinh thái tương thích. Bên cạnh các chức năng thông minh như lịch trình, đếm ngược và tự động tắt, sản phẩm nổi bật với tính năng Trễ tắt thông minh – cho phép mô phỏng cách hoạt động của hệ thống chiếu sáng sử dụng cảm biến chuyển động hoặc cảm biến hiện diện mà không cần lắp thêm cảm biến. TRỄ TẮT THÔNG MINH – ĐIỂM KHÁC BIỆT NỔI BẬT Nhấn tắt – đèn chưa tắt ngay ZLUX-ZA tiên phong tích hợp tính năng Trễ tắt trực tiếp trên công tắc , mang đến một cách điều khiển ánh sáng khác biệt so với công tắc thông thường. Khi người dùng thực hiện thao tác tắt bằng nút cảm ứng hoặc trên ứng dụng , đèn không tắt ngay lập tức . Công tắc sẽ duy trì đèn sáng trong khoảng thời gian trễ đã được thiết lập. Khi hết thời gian này, đèn mới thực sự tắt. Cơ chế hoạt động Bấm TẮT ↓ Đèn tiếp tục sáng ↓ Chờ khoảng thời gian đã cài đặt ↓ Đèn tự động TẮT Ví dụ, thiết lập thời gian trễ 60 giây : Nhấn tắt → đèn tiếp tục sáng trong 60 giây → sau 60 giây đèn mới tắt. Mô phỏng trải nghiệm của cảm biến hiện diện Cơ chế Trễ tắt được thiết kế để mô phỏng cách hoạt động của hệ thống chiếu sáng sử dụng cảm biến chuyển động hoặc cảm biến hiện diện . Thay vì tắt đèn ngay khi người dùng nhấn nút, hệ thống duy trì ánh sáng thêm một khoảng thời gian trước khi tắt. Điều này đặc biệt hữu ích trong những khu vực mà người dùng cần thêm thời gian di chuyển sau khi thực hiện thao tác tắt đèn. Ứng dụng thực tế Nhà vệ sinh: đặc biệt khi hệ thống hút mùi vẫn làm việc sau 1 thời gian trước khi tắt đảm bảo không khí được tươi mới Hành lang: đèn tiếp tục sáng sau khi người dùng rời khỏi vị trí công tắc. Cầu thang: duy trì ánh sáng trong thời gian cần thiết trước khi tắt. Phòng ngủ: tắt công tắc nhưng đèn vẫn sáng thêm một khoảng thời gian trước khi phòng tối hoàn toàn. Nhà vệ sinh: tạo trải nghiệm tương tự hệ thống chiếu sáng sử dụng cảm biến hiện diện. Phòng khách và phòng làm việc: thiết lập thời gian trễ phù hợp với thói quen sử dụng. Không cần cảm biến, vẫn có thể tạo hiệu ứng trễ tắt tương tự hệ thống chiếu sáng sử dụng cảm biến. ĐIỀU KHIỂN ĐA PHƯƠNG THỨC Điều khiển cảm ứng Bật/tắt trực tiếp trên bề mặt cảm ứng của công tắc. Thiết kế mặt kính liền mạch mang lại trải nghiệm sử dụng hiện đại và thuận tiện. Điều khiển qua ứng dụng Sau khi kết nối với Zigbee Hub/Gateway, người dùng có thể điều khiển và cấu hình công tắc thông qua ứng dụng: Bật/tắt từ xa. Kiểm tra trạng thái thiết bị. Thiết lập lịch trình. Đếm ngược. Tự động tắt. Thiết lập thời gian trễ tắt. Tùy chỉnh đèn nền. Quản lý các thiết lập của công tắc. Điều khiển bằng giọng nói ZLUX-ZA tương thích với các nền tảng điều khiển bằng giọng nói: Google Home / Google Assistant Amazon Alexa Apple Home / Siri Cho phép điều khiển thiết bị bằng giọng nói khi được tích hợp vào hệ thống tương thích. ZIGBEE 3.0 – KẾT NỐI NHÀ THÔNG MINH ZLUX-ZA sử dụng Zigbee 3.0 để kết nối với hệ thống nhà thông minh thông qua Zigbee Hub/Gateway . Zigbee hỗ trợ mô hình mạng Mesh, cho phép các thiết bị trong hệ thống phối hợp với nhau để xây dựng mạng lưới thiết bị thông minh. Sau khi kết nối, ZLUX-ZA có thể được sử dụng để: Điều khiển từ xa. Tạo lịch trình. Thiết lập tự động hóa. Tạo ngữ cảnh. Liên kết với các thiết bị thông minh khác. Điều khiển bằng giọng nói thông qua nền tảng tương thích. Hệ sinh thái tương thích Tuya • Smart Life • Google Home • Amazon Alexa • Apple Home LỊCH TRÌNH VÀ TỰ ĐỘNG HÓA Lịch trình Thiết lập thời gian để công tắc tự động bật hoặc tắt theo lịch. Ví dụ: Tự động bật đèn lúc 18:00 và tắt lúc 23:00 mỗi ngày. Đếm ngược Thiết lập khoảng thời gian để công tắc tự động đảo trạng thái hiện tại sau khi hết thời gian đếm ngược. Ví dụ: Đèn đang bật → đặt đếm ngược 30 phút → sau 30 phút đèn tắt. Hoặc: Đèn đang tắt → đặt đếm ngược 30 phút → sau 30 phút đèn bật. Tự động tắt Cho phép thiết lập để công tắc tự động tắt sau một khoảng thời gian nhất định. Ví dụ: Bật đèn → sau 30 phút → đèn tự động tắt. Phân biệt Trễ tắt và Tự động tắt Tự động tắt: Bật → chờ → tắt. Trễ tắt: Tắt → chờ → mới tắt. Tính năng Trễ tắt của ZLUX-ZA được thiết kế nhằm tạo trải nghiệm tương tự cơ chế duy trì ánh sáng của hệ thống cảm biến chuyển động hoặc cảm biến hiện diện. TÙY CHỈNH ĐÈN NỀN ZLUX-ZA được trang bị đèn nền giúp nhận biết vị trí công tắc và tăng tính thẩm mỹ cho không gian. Thông qua ứng dụng, người dùng có thể tùy chỉnh: Bật/tắt đèn nền. Điều chỉnh độ sáng. Thiết lập màu đèn nền khi công tắc bật. Thiết lập màu đèn nền khi công tắc tắt. Thiết lập trạng thái đèn nền khi công tắc đang tắt. Đèn nền giúp dễ dàng xác định vị trí công tắc trong điều kiện ánh sáng yếu. QUẢN LÝ TRẠNG THÁI THÔNG MINH Trạng thái khi khởi động lại Cho phép thiết lập trạng thái của công tắc sau khi thiết bị được cấp điện trở lại. Tùy theo cấu hình, công tắc có thể: Tắt. Bật. Khôi phục trạng thái trước đó. Lịch sử bật/tắt Theo dõi lịch sử hoạt động của công tắc trên ứng dụng, giúp người dùng dễ dàng kiểm tra quá trình sử dụng. KHÓA TRẺ EM Chức năng Khóa trẻ em cho phép vô hiệu hóa thao tác cảm ứng trực tiếp trên công tắc nhằm hạn chế việc trẻ em hoặc người dùng vô tình thay đổi trạng thái thiết bị. Chức năng này đặc biệt hữu ích tại gia đình có trẻ nhỏ hoặc những khu vực cần hạn chế thao tác trực tiếp. THIẾT KẾ HIỆN ĐẠI Mặt kính cường lực Bề mặt kính phẳng, liền mạch, dễ vệ sinh và phù hợp với các không gian nội thất hiện đại. Khung hợp kim nhôm Khung hợp kim nhôm tạo cảm giác chắc chắn và tăng tính thẩm mỹ cho sản phẩm. Thiết kế cảm ứng Bề mặt điều khiển liền mạch, không sử dụng nút cơ học nhô ra, tạo vẻ ngoài tối giản và hiện đại. THÔNG SỐ KỸ THUẬT Đặc tính Thông số Model ZLUX-ZA1 Tên sản phẩm Công tắc cảm ứng 1 nút Zigbee Loại thiết bị Công tắc cảm ứng thông minh Giao thức không dây Zigbee 3.0 Tần số hoạt động 2.4 GHz Nguồn điện đầu vào 110–240VAC, 50/60Hz Số nút điều khiển 1 nút Tải LED ≤ 150W/kênh Tải thuần trở ≤ 750W/kênh Phương thức điều khiển Cảm ứng / Ứng dụng / Giọng nói Kết nối hệ thống Zigbee Hub/Gateway Nền tảng Tuya / Smart Life Điều khiển giọng nói Google Asistant / Amazon Alexa / Apple Siri Mặt công tắc Kính cường lực Khung Hợp kim nhôm Đèn nền Có, tùy chỉnh Kích thước 72 × 120 × 24 mm Kiểu lắp đặt Lắp đặt đế âm tường tiêu chuẩn ỨNG DỤNG ZLUX-ZA phù hợp cho nhiều không gian và công trình: Nhà ở Căn hộ Phòng khách Phòng ngủ Phòng làm việc Hành lang Cầu thang Nhà vệ sinh Khách sạn Căn hộ dịch vụ Văn phòng Công trình sử dụng hệ thống nhà thông minh Đặc biệt, tính năng Trễ tắt thông minh giúp ZLUX-ZA phù hợp với những khu vực cần duy trì ánh sáng trong một khoảng thời gian sau khi người dùng thực hiện thao tác tắt. TỔNG HỢP TÍNH NĂNG ZLUX-ZA nổi bật với: Zigbee 3.0 Điều khiển cảm ứng Điều khiển qua ứng dụng Điều khiển bằng giọng nói Tuya / Smart Life Google Home/Asistant Amazon Alexa Apple Home/Siri Trễ tắt thông minh Mô phỏng cơ chế chiếu sáng của cảm biến hiện diện Lịch trình bật/tắt Đếm ngược Tự động tắt Lịch sử bật/tắt Thiết lập trạng thái khi khởi động lại Tùy chỉnh đèn nền Điều chỉnh độ sáng đèn nền Tùy chỉnh màu đèn nền Khóa trẻ em Tự động hóa và ngữ cảnh Mặt kính cường lực Khung hợp kim nhôm",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA / ZITECH (Chính hãng)"
+        },
+        {
+          "k": "Model",
+          "v": "ZLUX-ZA1"
+        },
+        {
+          "k": "Chuẩn kết nối",
+          "v": "Zigbee 3.0 (Kết nối qua Hub Tuya hoặc Zigbee2MQTT / Home Assistant)"
+        },
+        {
+          "k": "Số nút điều khiển",
+          "v": "1 nút cảm ứng điện dung viền LED hiển thị"
+        },
+        {
+          "k": "Kiểu dáng & Kích thước",
+          "v": "Chuẩn chữ nhật US (120 × 72 × 33mm) hoặc Vuông EU (86 × 86mm)"
+        },
+        {
+          "k": "Vật liệu",
+          "v": "Mặt kính cường lực 2.5D chống xước + Khung viền hợp kim nhôm Anode sang trọng"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "110V – 240VAC, 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W/nút cho đèn sợi đốt, 200W/nút cho đèn LED"
+        },
+        {
+          "k": "Tính năng",
+          "v": "Bật/tắt cảm ứng 1 chạm, điều khiển qua app Smart Life / Tuya, hẹn giờ, tạo ngữ cảnh, đồng bộ Home Assistant"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng chính hãng 1 đổi 1"
+        }
+      ],
+      "zitechUrl": "https://zitech.vn/san-pham/cong-tac-cam-ung/cong-tac-cam-ung-1-nut-zigbee/"
+    },
+    {
+      "id": 997001,
+      "name": "Công Tắc Ngữ Cảnh 1 Nút Dán Zigbee Tuya ZNC2.",
+      "sku": "TUYA-ZNC2",
+      "costPrice": 290000,
+      "retailPrice": 580000,
+      "originalPrice": 667000,
+      "discountPercent": 13,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "https://pos.nvncdn.com/52c0ae-95155/ps/20251013_iyqOCIA6tI.png?v=1760327401",
+      "images": [
+        "https://pos.nvncdn.com/52c0ae-95155/ps/20251013_iyqOCIA6tI.png?v=1760327401"
+      ],
+      "features": [
+        "Model: ZNC2 – Chuẩn Zigbee 3.0 Mesh kết nối cực nhạy, ổn định xuyên tường",
+        "Thiết kế: Dán tường không dây (Chuẩn vuông mini) sang trọng, tinh tế nâng tầm đẳng cấp ngôi nhà",
+        "Công suất & Nguồn: Pin nút CR2032 3V DC (Tuổi thọ pin ~1-2 năm) | Điều khiển tín hiệu ngữ cảnh không dây (Không đấu tải trực tiếp)",
+        "Dây nguội (N): Không cần dây điện (Sử dụng pin dán mọi vị trí)",
+        "Hệ sinh thái: Tương thích Tuya Smart, Smart Life & Home Assistant (HASS Zigbee2MQTT / ZHA)",
+        "Giá nhập gốc: 290,000₫ | Giá bán lẻ niêm yết: 580,000₫ (x2)",
+        "Bảo hành: 24 tháng 1 đổi 1 chính hãng Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tuya",
+      "inStock": true,
+      "description": "Công Tắc Ngữ Cảnh 1 Nút Dán Zigbee Tuya ZNC2. chính hãng Tuya Smart. Công Tắc Ngữ Cảnh 1 Nút Dán Zigbee Tuya ZNC2 Dưới đây là các lý do chính: 1. Tối ưu hóa Điều khiển (1 Nút, 3 Ngữ cảnh) Điều khiển đa năng chỉ bằng một chạm: Thay vì phải mở điện thoại hoặc ra lệnh giọng nói cho từng thiết bị (bật đèn, bật máy lạnh, đóng rèm...), công tắc ngữ cảnh cho phép bạn gán cả một \"kịch bản\" hoặc \"ngữ cảnh\" cho một nút bấm duy nhất. Ba thao tác trên mỗi nút: Với 4 nút, bạn có thể thiết lập tới 12 ngữ cảnh khác nhau thông qua các thao tác:",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA SMART (Chính hãng phân phối bởi Chu Gia Security)"
+        },
+        {
+          "k": "Model thiết bị",
+          "v": "ZNC2"
+        },
+        {
+          "k": "Chuẩn truyền thông",
+          "v": "Zigbee 3.0 Mesh (Băng tần 2.4GHz, độ trễ cực thấp < 50ms)"
+        },
+        {
+          "k": "Kiểu dáng thiết kế",
+          "v": "Dán tường không dây (Chuẩn vuông mini)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "Pin nút CR2032 3V DC (Tuổi thọ pin ~1-2 năm)"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Điều khiển tín hiệu ngữ cảnh không dây (Không đấu tải trực tiếp)"
+        },
+        {
+          "k": "Đấu nối dây nguội (N)",
+          "v": "Không cần dây điện (Sử dụng pin dán mọi vị trí)"
+        },
+        {
+          "k": "Kiểu phím & Điều khiển",
+          "v": "1 nút bấm cơ (Hỗ trợ 3 ngữ cảnh: Nhấn 1 lần, Nhấn đúp, Nhấn giữ)"
+        },
+        {
+          "k": "Hệ sinh thái tương thích",
+          "v": "Tuya Smart, Smart Life, Home Assistant (ZHA, Zigbee2MQTT)"
+        },
+        {
+          "k": "Hỗ trợ Home Assistant",
+          "v": "Kết nối trực tiếp qua USB Zigbee Dongle Sonoff / SkyConnect (ZHA / Zigbee2MQTT)"
+        },
+        {
+          "k": "Giá vốn nhập khẩu",
+          "v": "290,000₫ (Giá gốc tuya.vn)"
+        },
+        {
+          "k": "Giá bán lẻ niêm yết",
+          "v": "580,000₫ (Giá bán lẻ niêm yết Chu Gia x2)"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 tận nơi bởi Chu Gia Security"
+        }
+      ],
+      "tuyaUrl": "https://tuya.vn/cong-tac-ngu-canh-1-nut-dan-zigbee-tuya-znc2.-p40702178.html"
+    },
+    {
+      "id": 997002,
+      "name": "Công Tắc Zigbee Module Hỗ Trợ Công Tắc Tay Tuya CH",
+      "sku": "TUYA-MODULE-CH",
+      "costPrice": 330000,
+      "retailPrice": 660000,
+      "originalPrice": 758999,
+      "discountPercent": 13,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "https://pos.nvncdn.com/52c0ae-95155/ps/20220929_n18AsKD6q7vTv8vfw2d6AcC3.png?v=1673595850",
+      "images": [
+        "https://pos.nvncdn.com/52c0ae-95155/ps/20220929_n18AsKD6q7vTv8vfw2d6AcC3.png?v=1673595850"
+      ],
+      "features": [
+        "Model: MODULE-CH – Chuẩn Zigbee 3.0 Mesh kết nối cực nhạy, ổn định xuyên tường",
+        "Thiết kế: Module relay mini âm tường / lắp hộp trần thạch cao sang trọng, tinh tế nâng tầm đẳng cấp ngôi nhà",
+        "Công suất & Nguồn: 100 - 240V AC, 50/60Hz | 16A (Tối đa 3500W tải trở, 600W tải LED)",
+        "Dây nguội (N): Cần dây N (dây nguội) hoặc hỗ trợ công tắc đảo chiều",
+        "Hệ sinh thái: Tương thích Tuya Smart, Smart Life & Home Assistant (HASS Zigbee2MQTT / ZHA)",
+        "Giá nhập gốc: 330,000₫ | Giá bán lẻ niêm yết: 660,000₫ (x2)",
+        "Bảo hành: 24 tháng 1 đổi 1 chính hãng Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tuya",
+      "inStock": true,
+      "description": "Công Tắc Zigbee Module Hỗ Trợ Công Tắc Tay Tuya CH chính hãng Tuya Smart. Công Tắc Zigbee Module Hỗ Trợ Công Tắc Tay Tuya CH ZB Việc sử dụng công tắc thông minh mang lại nhiều lợi ích và bao gồm nhiều tiện lợi: Bạn có thể điều khiển ánh sáng và các thiết bị điện khác từ xa thông qua điện thoại thông minh hoặc thiết bị điều khiển khác mà không cần phải ở gần công tắc.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA SMART (Chính hãng phân phối bởi Chu Gia Security)"
+        },
+        {
+          "k": "Model thiết bị",
+          "v": "MODULE-CH"
+        },
+        {
+          "k": "Chuẩn truyền thông",
+          "v": "Zigbee 3.0 Mesh (Băng tần 2.4GHz, độ trễ cực thấp < 50ms)"
+        },
+        {
+          "k": "Kiểu dáng thiết kế",
+          "v": "Module relay mini âm tường / lắp hộp trần thạch cao"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100 - 240V AC, 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "16A (Tối đa 3500W tải trở, 600W tải LED)"
+        },
+        {
+          "k": "Đấu nối dây nguội (N)",
+          "v": "Cần dây N (dây nguội) hoặc hỗ trợ công tắc đảo chiều"
+        },
+        {
+          "k": "Kiểu phím & Điều khiển",
+          "v": "1 kênh relay thông minh hỗ trợ kết nối công tắc cơ ngoài"
+        },
+        {
+          "k": "Hệ sinh thái tương thích",
+          "v": "Tuya Smart, Smart Life, Home Assistant (ZHA, Zigbee2MQTT)"
+        },
+        {
+          "k": "Hỗ trợ Home Assistant",
+          "v": "Kết nối trực tiếp qua USB Zigbee Dongle Sonoff / SkyConnect (ZHA / Zigbee2MQTT)"
+        },
+        {
+          "k": "Giá vốn nhập khẩu",
+          "v": "330,000₫ (Giá gốc tuya.vn)"
+        },
+        {
+          "k": "Giá bán lẻ niêm yết",
+          "v": "660,000₫ (Giá bán lẻ niêm yết Chu Gia x2)"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 tận nơi bởi Chu Gia Security"
+        }
+      ],
+      "tuyaUrl": "https://tuya.vn/cong-tac-zigbee-module-ho-tro-cong-tac-tay-tuya-ch-p39646157.html"
+    },
+    {
+      "id": 997003,
+      "name": "Công Tắc Ngữ Cảnh 4 Nút Dán Tường Zigbee Tuya ZNC1",
+      "sku": "TUYA-ZNC1",
+      "costPrice": 390000,
+      "retailPrice": 780000,
+      "originalPrice": 896999,
+      "discountPercent": 13,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "https://pos.nvncdn.com/52c0ae-95155/ps/20210304_sDIZlTHJ1uAyqVMzmBFVaB5I.png?v=1674742168",
+      "images": [
+        "https://pos.nvncdn.com/52c0ae-95155/ps/20210304_sDIZlTHJ1uAyqVMzmBFVaB5I.png?v=1674742168"
+      ],
+      "features": [
+        "Model: ZNC1 – Chuẩn Zigbee 3.0 Mesh kết nối cực nhạy, ổn định xuyên tường",
+        "Thiết kế: Dán tường không dây chuẩn vuông 86x86mm sang trọng, tinh tế nâng tầm đẳng cấp ngôi nhà",
+        "Công suất & Nguồn: Pin CR2430 3V DC (Thời lượng pin trên 12 tháng) | Kích hoạt ngữ cảnh tự động hóa smarthome không dây",
+        "Dây nguội (N): Không cần dây điện (Dán tường bằng keo 3M hoặc để bàn)",
+        "Hệ sinh thái: Tương thích Tuya Smart, Smart Life & Home Assistant (HASS Zigbee2MQTT / ZHA)",
+        "Giá nhập gốc: 390,000₫ | Giá bán lẻ niêm yết: 780,000₫ (x2)",
+        "Bảo hành: 24 tháng 1 đổi 1 chính hãng Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tuya",
+      "inStock": true,
+      "description": "Công Tắc Ngữ Cảnh 4 Nút Dán Tường Zigbee Tuya ZNC1 chính hãng Tuya Smart. Công Tắc Ngữ Cảnh 4 Nút Dán Tường Zigbee Tuya ZNC1 Được thiết kế cho việc bật ngữ cảnh đa sự kiểm soát nhà thông minh Tuya. - Thuận tiện cho người già và trẻ nhỏ khi sử dụng điều khiển nhà thông minh. - Thiết kế tiện dụng, dễ dàng cài đặt, sử dụng pin có thể gắn ở bất kỳ nơi nào bạn thích.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA SMART (Chính hãng phân phối bởi Chu Gia Security)"
+        },
+        {
+          "k": "Model thiết bị",
+          "v": "ZNC1"
+        },
+        {
+          "k": "Chuẩn truyền thông",
+          "v": "Zigbee 3.0 Mesh (Băng tần 2.4GHz, độ trễ cực thấp < 50ms)"
+        },
+        {
+          "k": "Kiểu dáng thiết kế",
+          "v": "Dán tường không dây chuẩn vuông 86x86mm"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "Pin CR2430 3V DC (Thời lượng pin trên 12 tháng)"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Kích hoạt ngữ cảnh tự động hóa smarthome không dây"
+        },
+        {
+          "k": "Đấu nối dây nguội (N)",
+          "v": "Không cần dây điện (Dán tường bằng keo 3M hoặc để bàn)"
+        },
+        {
+          "k": "Kiểu phím & Điều khiển",
+          "v": "4 nút bấm ngữ cảnh độc lập (Kích hoạt tối đa 12 ngữ cảnh khác nhau)"
+        },
+        {
+          "k": "Hệ sinh thái tương thích",
+          "v": "Tuya Smart, Smart Life, Home Assistant (ZHA, Zigbee2MQTT)"
+        },
+        {
+          "k": "Hỗ trợ Home Assistant",
+          "v": "Kết nối trực tiếp qua USB Zigbee Dongle Sonoff / SkyConnect (ZHA / Zigbee2MQTT)"
+        },
+        {
+          "k": "Giá vốn nhập khẩu",
+          "v": "390,000₫ (Giá gốc tuya.vn)"
+        },
+        {
+          "k": "Giá bán lẻ niêm yết",
+          "v": "780,000₫ (Giá bán lẻ niêm yết Chu Gia x2)"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 tận nơi bởi Chu Gia Security"
+        }
+      ],
+      "tuyaUrl": "https://tuya.vn/cong-tac-ngu-canh-4-nut-dan-tuong-zigbee-tuya-znc1-p29428574.html"
+    },
+    {
+      "id": 997004,
+      "name": "Công Tắc Thông Minh Kiêm Cảm Biến Radar Zigbee Hình Vuông Tuya ZCTR25-EU",
+      "sku": "TUYA-ZCTR25-EU",
+      "costPrice": 390000,
+      "retailPrice": 780000,
+      "originalPrice": 896999,
+      "discountPercent": 13,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "https://pos.nvncdn.com/52c0ae-95155/ps/20250308_2mmIfncDrg.png?v=1741404560",
+      "images": [
+        "https://pos.nvncdn.com/52c0ae-95155/ps/20250308_2mmIfncDrg.png?v=1741404560"
+      ],
+      "features": [
+        "Model: ZCTR25-EU – Chuẩn Zigbee 3.0 Mesh kết nối cực nhạy, ổn định xuyên tường",
+        "Thiết kế: Âm tường chuẩn vuông EU (86 x 86 x 35 mm) sang trọng, tinh tế nâng tầm đẳng cấp ngôi nhà",
+        "Công suất & Nguồn: 100 - 240V AC, 50/60Hz | 800W / kênh (Tải đèn LED: 300W)",
+        "Dây nguội (N): Cần dây nguội (N) để cấp nguồn nuôi radar liên tục",
+        "Hệ sinh thái: Tương thích Tuya Smart, Smart Life & Home Assistant (HASS Zigbee2MQTT / ZHA)",
+        "Giá nhập gốc: 390,000₫ | Giá bán lẻ niêm yết: 780,000₫ (x2)",
+        "Bảo hành: 24 tháng 1 đổi 1 chính hãng Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tuya",
+      "inStock": true,
+      "description": "Công Tắc Thông Minh Kiêm Cảm Biến Radar Zigbee Hình Vuông Tuya ZCTR25-EU chính hãng Tuya Smart. Công Tắc Thông Minh Kiêm Cảm Biến Radar Zigbee Hình Vuông Tuya ZCTR25EU Việc sử dụng công tắc thông minh mang lại nhiều lợi ích và bao gồm nhiều tiện lợi: Bạn có thể điều khiển ánh sáng và các thiết bị điện khác từ xa thông qua điện thoại thông minh hoặc thiết bị điều khiển khác mà không cần phải ở gần công tắc. Sản phẩm được tích hợp thêm cảm biến radar tiện lợi (tích hợp 2 trong 1) khi lắp tại khu vực như cầu thang, hành lang … tại nhà riêng hoặc các khu vực văn phòng.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA SMART (Chính hãng phân phối bởi Chu Gia Security)"
+        },
+        {
+          "k": "Model thiết bị",
+          "v": "ZCTR25-EU"
+        },
+        {
+          "k": "Chuẩn truyền thông",
+          "v": "Zigbee 3.0 Mesh (Băng tần 2.4GHz, độ trễ cực thấp < 50ms)"
+        },
+        {
+          "k": "Kiểu dáng thiết kế",
+          "v": "Âm tường chuẩn vuông EU (86 x 86 x 35 mm)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100 - 240V AC, 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "800W / kênh (Tải đèn LED: 300W)"
+        },
+        {
+          "k": "Đấu nối dây nguội (N)",
+          "v": "Cần dây nguội (N) để cấp nguồn nuôi radar liên tục"
+        },
+        {
+          "k": "Kiểu phím & Điều khiển",
+          "v": "Công tắc cảm ứng kết hợp cảm biến vi sóng Radar 24GHz tự động bật/tắt đèn"
+        },
+        {
+          "k": "Hệ sinh thái tương thích",
+          "v": "Tuya Smart, Smart Life, Home Assistant (ZHA, Zigbee2MQTT)"
+        },
+        {
+          "k": "Hỗ trợ Home Assistant",
+          "v": "Kết nối trực tiếp qua USB Zigbee Dongle Sonoff / SkyConnect (ZHA / Zigbee2MQTT)"
+        },
+        {
+          "k": "Giá vốn nhập khẩu",
+          "v": "390,000₫ (Giá gốc tuya.vn)"
+        },
+        {
+          "k": "Giá bán lẻ niêm yết",
+          "v": "780,000₫ (Giá bán lẻ niêm yết Chu Gia x2)"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 tận nơi bởi Chu Gia Security"
+        }
+      ],
+      "tuyaUrl": "https://tuya.vn/cong-tac-thong-minh-kiem-cam-bien-radar-zigbee-hinh-vuong-tuya-zctr25eu-p40702130.html"
+    },
+    {
+      "id": 997005,
+      "name": "Remote Ngữ Cảnh 4 Nút Dán Tường Zigbee Tuya ZNC3",
+      "sku": "TUYA-ZNC3",
+      "costPrice": 390000,
+      "retailPrice": 780000,
+      "originalPrice": 896999,
+      "discountPercent": 13,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "https://pos.nvncdn.com/52c0ae-95155/ps/20221103_kr25ymNpHeoDIWTWDen0aLzL.png?v=1673579206",
+      "images": [
+        "https://pos.nvncdn.com/52c0ae-95155/ps/20221103_kr25ymNpHeoDIWTWDen0aLzL.png?v=1673579206"
+      ],
+      "features": [
+        "Model: ZNC3 – Chuẩn Zigbee 3.0 Mesh kết nối cực nhạy, ổn định xuyên tường",
+        "Thiết kế: Remote dán tường di động 4 nút sang trọng, tinh tế nâng tầm đẳng cấp ngôi nhà",
+        "Công suất & Nguồn: Pin CR2032 3V DC | Điều khiển tín hiệu sóng Zigbee Mesh không dây",
+        "Dây nguội (N): Sử dụng pin tiện lợi",
+        "Hệ sinh thái: Tương thích Tuya Smart, Smart Life & Home Assistant (HASS Zigbee2MQTT / ZHA)",
+        "Giá nhập gốc: 390,000₫ | Giá bán lẻ niêm yết: 780,000₫ (x2)",
+        "Bảo hành: 24 tháng 1 đổi 1 chính hãng Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tuya",
+      "inStock": true,
+      "description": "Remote Ngữ Cảnh 4 Nút Dán Tường Zigbee Tuya ZNC3 chính hãng Tuya Smart. Remote Ngữ Cảnh 4 Nút Dán Tường Zigbee Tuya ZNC3 Được thiết kế cho việc bật ngữ cảnh đa sự kiểm soát nhà thông minh Tuya. - Thuận tiện cho người già và trẻ nhỏ khi sử dụng điều khiển nhà thông minh. - Thiết kế tiện dụng, dễ dàng cài đặt, sử dụng pin có thể gắn ở bất kỳ nơi nào bạn thích. - ZNC3 giúp điều khiển nhanh các tác vụ ngữ cảnh nhà thông minh Tuya như làm công tắc 2 chiều đèn cầu thang, hành lang. Kết hợp với trung tâm Zigbee Tuya THA1 , THA5v2, THA5 Mini, THA6, THA7, THA8 và THA11 sử dụng sóng Zigbee cho phép bạn kiểm soát ngữ cảnh từ xa.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA SMART (Chính hãng phân phối bởi Chu Gia Security)"
+        },
+        {
+          "k": "Model thiết bị",
+          "v": "ZNC3"
+        },
+        {
+          "k": "Chuẩn truyền thông",
+          "v": "Zigbee 3.0 Mesh (Băng tần 2.4GHz, độ trễ cực thấp < 50ms)"
+        },
+        {
+          "k": "Kiểu dáng thiết kế",
+          "v": "Remote dán tường di động 4 nút"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "Pin CR2032 3V DC"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Điều khiển tín hiệu sóng Zigbee Mesh không dây"
+        },
+        {
+          "k": "Đấu nối dây nguội (N)",
+          "v": "Sử dụng pin tiện lợi"
+        },
+        {
+          "k": "Kiểu phím & Điều khiển",
+          "v": "4 nút điều khiển ngữ cảnh tiện dụng (12 kịch bản thông minh)"
+        },
+        {
+          "k": "Hệ sinh thái tương thích",
+          "v": "Tuya Smart, Smart Life, Home Assistant (ZHA, Zigbee2MQTT)"
+        },
+        {
+          "k": "Hỗ trợ Home Assistant",
+          "v": "Kết nối trực tiếp qua USB Zigbee Dongle Sonoff / SkyConnect (ZHA / Zigbee2MQTT)"
+        },
+        {
+          "k": "Giá vốn nhập khẩu",
+          "v": "390,000₫ (Giá gốc tuya.vn)"
+        },
+        {
+          "k": "Giá bán lẻ niêm yết",
+          "v": "780,000₫ (Giá bán lẻ niêm yết Chu Gia x2)"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 tận nơi bởi Chu Gia Security"
+        }
+      ],
+      "tuyaUrl": "https://tuya.vn/remote-ngu-canh-4-nut-dan-tuong-zigbee-tuya-znc3-p39861803.html"
+    },
+    {
+      "id": 997006,
+      "name": "Công Tắc Zigbee Viền Kim Loại Điều Khiển Qua App Tuya VKLZ-US",
+      "sku": "TUYA-VKLZ-US",
+      "costPrice": 430000,
+      "retailPrice": 860000,
+      "originalPrice": 988999,
+      "discountPercent": 13,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "https://pos.nvncdn.com/52c0ae-95155/ps/20210304_Cmlj0w1t1s5yZ3mRVra7OAl6.png?v=1674741940",
+      "images": [
+        "https://pos.nvncdn.com/52c0ae-95155/ps/20210304_Cmlj0w1t1s5yZ3mRVra7OAl6.png?v=1674741940"
+      ],
+      "features": [
+        "Model: VKLZ-US – Chuẩn Zigbee 3.0 Mesh kết nối cực nhạy, ổn định xuyên tường",
+        "Thiết kế: Âm tường chuẩn chữ nhật US (120 x 72 x 36 mm) sang trọng, tinh tế nâng tầm đẳng cấp ngôi nhà",
+        "Công suất & Nguồn: 100 - 240V AC, 50/60Hz | 800W / nút (Hỗ trợ đèn sợi đốt, huỳnh quang, LED)",
+        "Dây nguội (N): Hỗ trợ lắp cả có dây N hoặc không dây N (kèm tụ chống chớp)",
+        "Hệ sinh thái: Tương thích Tuya Smart, Smart Life & Home Assistant (HASS Zigbee2MQTT / ZHA)",
+        "Giá nhập gốc: 430,000₫ | Giá bán lẻ niêm yết: 860,000₫ (x2)",
+        "Bảo hành: 24 tháng 1 đổi 1 chính hãng Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tuya",
+      "inStock": true,
+      "description": "Công Tắc Zigbee Viền Kim Loại Điều Khiển Qua App Tuya VKLZ-US chính hãng Tuya Smart. Công Tắc Zigbee Viền Kim Loại Điều Khiển Qua App Tuya VKLZ-US Việc sử dụng công tắc thông minh mang lại nhiều lợi ích và bao gồm nhiều tiện lợi: Bạn có thể điều khiển ánh sáng và các thiết bị điện khác từ xa thông qua điện thoại thông minh hoặc thiết bị điều khiển khác mà không cần phải ở gần công tắc.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA SMART (Chính hãng phân phối bởi Chu Gia Security)"
+        },
+        {
+          "k": "Model thiết bị",
+          "v": "VKLZ-US"
+        },
+        {
+          "k": "Chuẩn truyền thông",
+          "v": "Zigbee 3.0 Mesh (Băng tần 2.4GHz, độ trễ cực thấp < 50ms)"
+        },
+        {
+          "k": "Kiểu dáng thiết kế",
+          "v": "Âm tường chuẩn chữ nhật US (120 x 72 x 36 mm)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100 - 240V AC, 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "800W / nút (Hỗ trợ đèn sợi đốt, huỳnh quang, LED)"
+        },
+        {
+          "k": "Đấu nối dây nguội (N)",
+          "v": "Hỗ trợ lắp cả có dây N hoặc không dây N (kèm tụ chống chớp)"
+        },
+        {
+          "k": "Kiểu phím & Điều khiển",
+          "v": "Cảm ứng điện dung đèn LED nền viền kim loại CNC cao cấp"
+        },
+        {
+          "k": "Hệ sinh thái tương thích",
+          "v": "Tuya Smart, Smart Life, Home Assistant (ZHA, Zigbee2MQTT)"
+        },
+        {
+          "k": "Hỗ trợ Home Assistant",
+          "v": "Kết nối trực tiếp qua USB Zigbee Dongle Sonoff / SkyConnect (ZHA / Zigbee2MQTT)"
+        },
+        {
+          "k": "Giá vốn nhập khẩu",
+          "v": "430,000₫ (Giá gốc tuya.vn)"
+        },
+        {
+          "k": "Giá bán lẻ niêm yết",
+          "v": "860,000₫ (Giá bán lẻ niêm yết Chu Gia x2)"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 tận nơi bởi Chu Gia Security"
+        }
+      ],
+      "tuyaUrl": "https://tuya.vn/cong-tac-zigbee-vien-kim-loai-dieu-khien-qua-app-tuya-vklzus-p29432953.html"
+    },
+    {
+      "id": 997007,
+      "name": "Công Tắc Cơ Zigbee Thông Minh Hình Vuông Tuya ZigbeeEU",
+      "sku": "TUYA-ZIGBEE-EU-M",
+      "costPrice": 450000,
+      "retailPrice": 900000,
+      "originalPrice": 1034999,
+      "discountPercent": 13,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "https://pos.nvncdn.com/52c0ae-95155/ps/20210714_5D612ch3X8WG5UniLv6xKfLx.jpg?v=1673968252",
+      "images": [
+        "https://pos.nvncdn.com/52c0ae-95155/ps/20210714_5D612ch3X8WG5UniLv6xKfLx.jpg?v=1673968252"
+      ],
+      "features": [
+        "Model: ZIGBEE-EU-M – Chuẩn Zigbee 3.0 Mesh kết nối cực nhạy, ổn định xuyên tường",
+        "Thiết kế: Âm tường chuẩn vuông EU (86 x 86 x 35 mm) sang trọng, tinh tế nâng tầm đẳng cấp ngôi nhà",
+        "Công suất & Nguồn: 100 - 240V AC, 50/60Hz | 600W / nút (Đèn LED tối đa 300W / nút)",
+        "Dây nguội (N): Hỗ trợ cả có dây nguội N và không dây nguội (tụ kèm theo)",
+        "Hệ sinh thái: Tương thích Tuya Smart, Smart Life & Home Assistant (HASS Zigbee2MQTT / ZHA)",
+        "Giá nhập gốc: 450,000₫ | Giá bán lẻ niêm yết: 900,000₫ (x2)",
+        "Bảo hành: 24 tháng 1 đổi 1 chính hãng Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tuya",
+      "inStock": true,
+      "description": "Công Tắc Cơ Zigbee Thông Minh Hình Vuông Tuya ZigbeeEU chính hãng Tuya Smart. Công Tắc Cơ Zigbee Thông Minh Hình Vuông Tuya ZigbeeEU Việc sử dụng công tắc thông minh mang lại nhiều lợi ích và bao gồm nhiều tiện lợi: Bạn có thể điều khiển ánh sáng và các thiết bị điện khác từ xa thông qua điện thoại thông minh hoặc thiết bị điều khiển khác mà không cần phải ở gần công tắc.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA SMART (Chính hãng phân phối bởi Chu Gia Security)"
+        },
+        {
+          "k": "Model thiết bị",
+          "v": "ZIGBEE-EU-M"
+        },
+        {
+          "k": "Chuẩn truyền thông",
+          "v": "Zigbee 3.0 Mesh (Băng tần 2.4GHz, độ trễ cực thấp < 50ms)"
+        },
+        {
+          "k": "Kiểu dáng thiết kế",
+          "v": "Âm tường chuẩn vuông EU (86 x 86 x 35 mm)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100 - 240V AC, 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "600W / nút (Đèn LED tối đa 300W / nút)"
+        },
+        {
+          "k": "Đấu nối dây nguội (N)",
+          "v": "Hỗ trợ cả có dây nguội N và không dây nguội (tụ kèm theo)"
+        },
+        {
+          "k": "Kiểu phím & Điều khiển",
+          "v": "Mặt phay xước hợp kim nhôm sang trọng, phím cảm ứng nhạy bén"
+        },
+        {
+          "k": "Hệ sinh thái tương thích",
+          "v": "Tuya Smart, Smart Life, Home Assistant (ZHA, Zigbee2MQTT)"
+        },
+        {
+          "k": "Hỗ trợ Home Assistant",
+          "v": "Kết nối trực tiếp qua USB Zigbee Dongle Sonoff / SkyConnect (ZHA / Zigbee2MQTT)"
+        },
+        {
+          "k": "Giá vốn nhập khẩu",
+          "v": "450,000₫ (Giá gốc tuya.vn)"
+        },
+        {
+          "k": "Giá bán lẻ niêm yết",
+          "v": "900,000₫ (Giá bán lẻ niêm yết Chu Gia x2)"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 tận nơi bởi Chu Gia Security"
+        }
+      ],
+      "tuyaUrl": "https://tuya.vn/cong-tac-co-zigbee-thong-minh-hinh-vuong-tuya-zigbeeeu-p33365924.html"
+    },
+    {
+      "id": 997008,
+      "name": "Công Tắc Zigbee Không Dây Nguội Cảm Ứng Tuya ZCUS",
+      "sku": "TUYA-ZCUS",
+      "costPrice": 455000,
+      "retailPrice": 910000,
+      "originalPrice": 1046499,
+      "discountPercent": 13,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "https://pos.nvncdn.com/52c0ae-95155/ps/20240301_wlRDNQDerk.png?v=1709264757",
+      "images": [
+        "https://pos.nvncdn.com/52c0ae-95155/ps/20240301_wlRDNQDerk.png?v=1709264757"
+      ],
+      "features": [
+        "Model: ZCUS – Chuẩn Zigbee 3.0 Mesh kết nối cực nhạy, ổn định xuyên tường",
+        "Thiết kế: Âm tường chuẩn chữ nhật US (120 x 72 x 36 mm) sang trọng, tinh tế nâng tầm đẳng cấp ngôi nhà",
+        "Công suất & Nguồn: 100 - 240V AC, 50/60Hz | 800W / nút",
+        "Dây nguội (N): Hỗ trợ cả có dây N và không dây N linh hoạt",
+        "Hệ sinh thái: Tương thích Tuya Smart, Smart Life & Home Assistant (HASS Zigbee2MQTT / ZHA)",
+        "Giá nhập gốc: 455,000₫ | Giá bán lẻ niêm yết: 910,000₫ (x2)",
+        "Bảo hành: 24 tháng 1 đổi 1 chính hãng Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tuya",
+      "inStock": true,
+      "description": "Công Tắc Zigbee Không Dây Nguội Cảm Ứng Tuya ZCUS chính hãng Tuya Smart. [Bảo hành 06 tháng]Công Tắc Zigbee Không Dây Nguội Cảm Ứng Tuya ZCUS Việc sử dụng công tắc thông minh mang lại nhiều lợi ích và bao gồm nhiều tiện lợi: Bạn có thể điều khiển ánh sáng và các thiết bị điện khác từ xa thông qua điện thoại thông minh hoặc thiết bị điều khiển khác mà không cần phải ở gần công tắc.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA SMART (Chính hãng phân phối bởi Chu Gia Security)"
+        },
+        {
+          "k": "Model thiết bị",
+          "v": "ZCUS"
+        },
+        {
+          "k": "Chuẩn truyền thông",
+          "v": "Zigbee 3.0 Mesh (Băng tần 2.4GHz, độ trễ cực thấp < 50ms)"
+        },
+        {
+          "k": "Kiểu dáng thiết kế",
+          "v": "Âm tường chuẩn chữ nhật US (120 x 72 x 36 mm)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100 - 240V AC, 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "800W / nút"
+        },
+        {
+          "k": "Đấu nối dây nguội (N)",
+          "v": "Hỗ trợ cả có dây N và không dây N linh hoạt"
+        },
+        {
+          "k": "Kiểu phím & Điều khiển",
+          "v": "Mặt kính cường lực tràn viền nguyên khối chống xước, chống ẩm"
+        },
+        {
+          "k": "Hệ sinh thái tương thích",
+          "v": "Tuya Smart, Smart Life, Home Assistant (ZHA, Zigbee2MQTT)"
+        },
+        {
+          "k": "Hỗ trợ Home Assistant",
+          "v": "Kết nối trực tiếp qua USB Zigbee Dongle Sonoff / SkyConnect (ZHA / Zigbee2MQTT)"
+        },
+        {
+          "k": "Giá vốn nhập khẩu",
+          "v": "455,000₫ (Giá gốc tuya.vn)"
+        },
+        {
+          "k": "Giá bán lẻ niêm yết",
+          "v": "910,000₫ (Giá bán lẻ niêm yết Chu Gia x2)"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 tận nơi bởi Chu Gia Security"
+        }
+      ],
+      "tuyaUrl": "https://tuya.vn/cong-taczigbee-khong-day-nguoi-cam-ungtuya-zcus-p40701985.html"
+    },
+    {
+      "id": 997009,
+      "name": "Công Tắc Dimmer Độ Sáng Đèn Hình Vuông Zigbee Tuya SHP-ZDM3",
+      "sku": "TUYA-SHP-ZDM3",
+      "costPrice": 470000,
+      "retailPrice": 940000,
+      "originalPrice": 1081000,
+      "discountPercent": 13,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "https://pos.nvncdn.com/52c0ae-95155/ps/20210714_WAgY1r7aRpzQ9L9geph4kSWS.jpg?v=1673968874",
+      "images": [
+        "https://pos.nvncdn.com/52c0ae-95155/ps/20210714_WAgY1r7aRpzQ9L9geph4kSWS.jpg?v=1673968874"
+      ],
+      "features": [
+        "Model: SHP-ZDM3 – Chuẩn Zigbee 3.0 Mesh kết nối cực nhạy, ổn định xuyên tường",
+        "Thiết kế: Âm tường chuẩn chữ nhật US / vuông EU mặt kính sang trọng, tinh tế nâng tầm đẳng cấp ngôi nhà",
+        "Công suất & Nguồn: 100 - 240V AC, 50/60Hz | Tải chiết áp Dimmer 300W LED có hỗ trợ dim, 500W đèn sợi đốt",
+        "Dây nguội (N): Cần dây nguội (N) để điều tiết điện áp mượt mà",
+        "Hệ sinh thái: Tương thích Tuya Smart, Smart Life & Home Assistant (HASS Zigbee2MQTT / ZHA)",
+        "Giá nhập gốc: 470,000₫ | Giá bán lẻ niêm yết: 940,000₫ (x2)",
+        "Bảo hành: 24 tháng 1 đổi 1 chính hãng Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tuya",
+      "inStock": true,
+      "description": "Công Tắc Dimmer Độ Sáng Đèn Hình Vuông Zigbee Tuya SHP-ZDM3 chính hãng Tuya Smart. Công Tắc Dimmer Độ Sáng Đèn Hình Vuông Zigbee Tuya SHP-ZDM3 Là thiết bị thông minh nằm trong hệ sinh thái nhà thông minh Tuya cho phép bạn kiểm soát hệ thống chiếu sáng trong gia đình đơn giản và dễ dàng hơn thông qua ứng dụng trên smartphone. Đây được xem là thiết bị không thể thiếu dành cho những người yêu thích các sản phẩm của nhà thông minh. Kết hợp với trung tâm Zigbee Tuya THA1 , THA5 Mini, THA5v2 THA6, THA7, THA, THA9 hay THA11 sử dụng sóng Zigbee tiết kiệm điện năng và tính năng chuyển tiếp sóng Mesh giữa các thiết bị giúp tăng cường độ phủ sóng. Điều khiển bật/tắt, tăng/giảm độ sáng đèn hoặc vặn núm chiết áp theo kiểu cổ điển dễ dàng biến đèn thường thành đèn điều khiển từ xa.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA SMART (Chính hãng phân phối bởi Chu Gia Security)"
+        },
+        {
+          "k": "Model thiết bị",
+          "v": "SHP-ZDM3"
+        },
+        {
+          "k": "Chuẩn truyền thông",
+          "v": "Zigbee 3.0 Mesh (Băng tần 2.4GHz, độ trễ cực thấp < 50ms)"
+        },
+        {
+          "k": "Kiểu dáng thiết kế",
+          "v": "Âm tường chuẩn chữ nhật US / vuông EU mặt kính"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100 - 240V AC, 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tải chiết áp Dimmer 300W LED có hỗ trợ dim, 500W đèn sợi đốt"
+        },
+        {
+          "k": "Đấu nối dây nguội (N)",
+          "v": "Cần dây nguội (N) để điều tiết điện áp mượt mà"
+        },
+        {
+          "k": "Kiểu phím & Điều khiển",
+          "v": "Nút cảm ứng tăng/giảm % ánh sáng hoặc xoay chỉnh mượt mà"
+        },
+        {
+          "k": "Hệ sinh thái tương thích",
+          "v": "Tuya Smart, Smart Life, Home Assistant (ZHA, Zigbee2MQTT)"
+        },
+        {
+          "k": "Hỗ trợ Home Assistant",
+          "v": "Kết nối trực tiếp qua USB Zigbee Dongle Sonoff / SkyConnect (ZHA / Zigbee2MQTT)"
+        },
+        {
+          "k": "Giá vốn nhập khẩu",
+          "v": "470,000₫ (Giá gốc tuya.vn)"
+        },
+        {
+          "k": "Giá bán lẻ niêm yết",
+          "v": "940,000₫ (Giá bán lẻ niêm yết Chu Gia x2)"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 tận nơi bởi Chu Gia Security"
+        }
+      ],
+      "tuyaUrl": "https://tuya.vn/cong-tac-dimmer-do-sang-den-hinh-vuong-zigbee-tuya-shpzdm3-p33352362.html"
+    },
+    {
+      "id": 997010,
+      "name": "Công Tắc Cơ Zigbee Hình Vuông Tuya ZigbeeEU Gray",
+      "sku": "TUYA-ZIGBEE-EU-GRAY",
+      "costPrice": 490000,
+      "retailPrice": 980000,
+      "originalPrice": 1127000,
+      "discountPercent": 13,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "https://pos.nvncdn.com/52c0ae-95155/ps/20250930_fji1ex8dU6.png?v=1759202350",
+      "images": [
+        "https://pos.nvncdn.com/52c0ae-95155/ps/20250930_fji1ex8dU6.png?v=1759202350"
+      ],
+      "features": [
+        "Model: ZIGBEE-EU-GRAY – Chuẩn Zigbee 3.0 Mesh kết nối cực nhạy, ổn định xuyên tường",
+        "Thiết kế: Âm tường chuẩn vuông EU (86 x 86 x 35 mm) tông Xám Titan sang trọng, tinh tế nâng tầm đẳng cấp ngôi nhà",
+        "Công suất & Nguồn: 100 - 240V AC, 50/60Hz | 600W / nút",
+        "Dây nguội (N): Hỗ trợ linh hoạt có dây N hoặc không dây N",
+        "Hệ sinh thái: Tương thích Tuya Smart, Smart Life & Home Assistant (HASS Zigbee2MQTT / ZHA)",
+        "Giá nhập gốc: 490,000₫ | Giá bán lẻ niêm yết: 980,000₫ (x2)",
+        "Bảo hành: 24 tháng 1 đổi 1 chính hãng Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tuya",
+      "inStock": true,
+      "description": "Công Tắc Cơ Zigbee Hình Vuông Tuya ZigbeeEU Gray chính hãng Tuya Smart. Công Tắc Cơ Zigbee Hình Vuông Tuya ZigbeeEU-Gray Ưu điểm của Thiết kế Nút Cơ học Mặc dù là công tắc thông minh, sản phẩm này vẫn sử dụng nút bấm cơ học , mang lại trải nghiệm tiện lợi và quen thuộc: Cảm giác sử dụng quen thuộc: Với nút bấm vật lý, bạn vẫn có cảm giác bấm và phản hồi quen thuộc, dễ sử dụng cho mọi thành viên trong gia đình, đặc biệt là người lớn tuổi. Hạn chế vô tình chạm: Khác với công tắc cảm ứng, nút cơ giúp giảm thiểu việc vô tình chạm vào công tắc và bật/tắt thiết bị ngoài ý muốn. Độ bền cao: Công tắc cơ thường có độ bền cơ học cao (một số sản phẩm được quảng cáo lên đến 50.000 lần nhấn).",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA SMART (Chính hãng phân phối bởi Chu Gia Security)"
+        },
+        {
+          "k": "Model thiết bị",
+          "v": "ZIGBEE-EU-GRAY"
+        },
+        {
+          "k": "Chuẩn truyền thông",
+          "v": "Zigbee 3.0 Mesh (Băng tần 2.4GHz, độ trễ cực thấp < 50ms)"
+        },
+        {
+          "k": "Kiểu dáng thiết kế",
+          "v": "Âm tường chuẩn vuông EU (86 x 86 x 35 mm) tông Xám Titan"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100 - 240V AC, 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "600W / nút"
+        },
+        {
+          "k": "Đấu nối dây nguội (N)",
+          "v": "Hỗ trợ linh hoạt có dây N hoặc không dây N"
+        },
+        {
+          "k": "Kiểu phím & Điều khiển",
+          "v": "Mặt kính cường lực màu xám không gian (Space Gray) cao cấp"
+        },
+        {
+          "k": "Hệ sinh thái tương thích",
+          "v": "Tuya Smart, Smart Life, Home Assistant (ZHA, Zigbee2MQTT)"
+        },
+        {
+          "k": "Hỗ trợ Home Assistant",
+          "v": "Kết nối trực tiếp qua USB Zigbee Dongle Sonoff / SkyConnect (ZHA / Zigbee2MQTT)"
+        },
+        {
+          "k": "Giá vốn nhập khẩu",
+          "v": "490,000₫ (Giá gốc tuya.vn)"
+        },
+        {
+          "k": "Giá bán lẻ niêm yết",
+          "v": "980,000₫ (Giá bán lẻ niêm yết Chu Gia x2)"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 tận nơi bởi Chu Gia Security"
+        }
+      ],
+      "tuyaUrl": "https://tuya.vn/cong-tac-co-zigbee-hinh-vuong-tuya-zigbeeeu-gray-p40702172.html"
+    },
+    {
+      "id": 997011,
+      "name": "Công Tắc ZigBee Viền Kim Loại Mặt Vuông Tuya SHP-VKLZ-EU",
+      "sku": "TUYA-SHP-VKLZ-EU",
+      "costPrice": 500000,
+      "retailPrice": 1000000,
+      "originalPrice": 1150000,
+      "discountPercent": 13,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "https://pos.nvncdn.com/52c0ae-95155/ps/20210304_XvSedL7I82jCtu4IE6bJm73w.png?v=1674741932",
+      "images": [
+        "https://pos.nvncdn.com/52c0ae-95155/ps/20210304_XvSedL7I82jCtu4IE6bJm73w.png?v=1674741932"
+      ],
+      "features": [
+        "Model: SHP-VKLZ-EU – Chuẩn Zigbee 3.0 Mesh kết nối cực nhạy, ổn định xuyên tường",
+        "Thiết kế: Âm tường chuẩn vuông EU (86 x 86 x 35 mm) sang trọng, tinh tế nâng tầm đẳng cấp ngôi nhà",
+        "Công suất & Nguồn: 100 - 240V AC, 50/60Hz | 800W / nút",
+        "Dây nguội (N): Hỗ trợ cả mạng điện có dây N và không có dây N",
+        "Hệ sinh thái: Tương thích Tuya Smart, Smart Life & Home Assistant (HASS Zigbee2MQTT / ZHA)",
+        "Giá nhập gốc: 500,000₫ | Giá bán lẻ niêm yết: 1,000,000₫ (x2)",
+        "Bảo hành: 24 tháng 1 đổi 1 chính hãng Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tuya",
+      "inStock": true,
+      "description": "Công Tắc ZigBee Viền Kim Loại Mặt Vuông Tuya SHP-VKLZ-EU chính hãng Tuya Smart. Giải pháp công tắc và thiết bị thông minh chuẩn Zigbee 3.0 kết nối ổn định, điều khiển từ xa qua smartphone và hệ thống nhà thông minh Home Assistant.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA SMART (Chính hãng phân phối bởi Chu Gia Security)"
+        },
+        {
+          "k": "Model thiết bị",
+          "v": "SHP-VKLZ-EU"
+        },
+        {
+          "k": "Chuẩn truyền thông",
+          "v": "Zigbee 3.0 Mesh (Băng tần 2.4GHz, độ trễ cực thấp < 50ms)"
+        },
+        {
+          "k": "Kiểu dáng thiết kế",
+          "v": "Âm tường chuẩn vuông EU (86 x 86 x 35 mm)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100 - 240V AC, 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "800W / nút"
+        },
+        {
+          "k": "Đấu nối dây nguội (N)",
+          "v": "Hỗ trợ cả mạng điện có dây N và không có dây N"
+        },
+        {
+          "k": "Kiểu phím & Điều khiển",
+          "v": "Viền kim loại cắt kim cương sang trọng kết hợp mặt kính cường lực"
+        },
+        {
+          "k": "Hệ sinh thái tương thích",
+          "v": "Tuya Smart, Smart Life, Home Assistant (ZHA, Zigbee2MQTT)"
+        },
+        {
+          "k": "Hỗ trợ Home Assistant",
+          "v": "Kết nối trực tiếp qua USB Zigbee Dongle Sonoff / SkyConnect (ZHA / Zigbee2MQTT)"
+        },
+        {
+          "k": "Giá vốn nhập khẩu",
+          "v": "500,000₫ (Giá gốc tuya.vn)"
+        },
+        {
+          "k": "Giá bán lẻ niêm yết",
+          "v": "1,000,000₫ (Giá bán lẻ niêm yết Chu Gia x2)"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 tận nơi bởi Chu Gia Security"
+        }
+      ],
+      "tuyaUrl": "https://tuya.vn/cong-tac-zigbee-vien-kim-loai-mat-vuong-tuya-shpvklzeu-p29433167.html"
+    },
+    {
+      "id": 997012,
+      "name": "Công Tắc Zigbee Viền Kim Loại Nút Bấm Lõm Hình Chữ Nhật Tuya SHP-ZLUS",
+      "sku": "TUYA-SHP-ZLUS",
+      "costPrice": 500000,
+      "retailPrice": 1000000,
+      "originalPrice": 1150000,
+      "discountPercent": 13,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "https://pos.nvncdn.com/52c0ae-95155/ps/20260112_vVTiQ7vtTe.png?v=1768187795",
+      "images": [
+        "https://pos.nvncdn.com/52c0ae-95155/ps/20260112_vVTiQ7vtTe.png?v=1768187795"
+      ],
+      "features": [
+        "Model: SHP-ZLUS – Chuẩn Zigbee 3.0 Mesh kết nối cực nhạy, ổn định xuyên tường",
+        "Thiết kế: Âm tường chuẩn chữ nhật US (120 x 72 x 36 mm) sang trọng, tinh tế nâng tầm đẳng cấp ngôi nhà",
+        "Công suất & Nguồn: 100 - 240V AC, 50/60Hz | 1000W / nút",
+        "Dây nguội (N): Hỗ trợ lắp đặt có dây N hoặc không dây N",
+        "Hệ sinh thái: Tương thích Tuya Smart, Smart Life & Home Assistant (HASS Zigbee2MQTT / ZHA)",
+        "Giá nhập gốc: 500,000₫ | Giá bán lẻ niêm yết: 1,000,000₫ (x2)",
+        "Bảo hành: 24 tháng 1 đổi 1 chính hãng Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tuya",
+      "inStock": true,
+      "description": "Công Tắc Zigbee Viền Kim Loại Nút Bấm Lõm Hình Chữ Nhật Tuya SHP-ZLUS chính hãng Tuya Smart. Công Tắc Zigbee Viền Kim Loại Nút Bấm Lõm App Tuya SHP-ZLUS Việc sử dụng công tắc thông minh mang lại nhiều lợi ích, bao gồm: 1 .Tiện lợi: Bạn có thể điều khiển ánh sáng và các thiết bị điện khác từ xa thông qua điện thoại thông minh hoặc thiết bị điều khiển khác mà không cần phải ở gần công tắc. 2.Tiết kiệm năng lượng: Công tắc thông minh có thể được lập lịch hoạt động tự động, giúp tắt/bật thiết bị theo thời gian cố định hoặc theo điều kiện môi trường như ánh sáng tự nhiên hoặc chuyển động. 3.An ninh: Bạn có thể lập lịch để bật đèn trong nhà khi bạn vắng nhà, tạo ra ấn tượng rằng nhà đang có người ở trong, làm tăng tính an toàn và giảm nguy cơ xâm nhập. 4.Linh hoạt: Công tắc thông minh thường tương thích với các hệ thống nhà thông minh khác, cho phép bạn tích hợp chúng vào hệ thống tự động hóa nhà cửa của mình. 5.Giảm chi phí: Mặc dù có chi phí ban đầu cao hơn so với công tắc thông thường, nhưng việc sử dụng công tắc thông minh có thể giúp tiết kiệm năng lượng và giảm hóa đơn tiền điện trong lâu dài. Việc sử dụng công tắc thông minh phụ thuộc vào nhu cầu và tình hình cụ thể của mỗi người. Tuy nhiên, có một số lợi ích khiến việc sử dụng công tắc thông minh trở nên hấp dẫn, như tiết kiệm năng lượng, tiện lợi và tăng tính an toàn. Nếu bạn quan tâm đến các lợi ích này và muốn tận dụng công nghệ để quản lý hiệu quả hơn các thiết bị điện trong nhà, thì việc sử dụng công tắc thông minh có thể là một lựa chọn tốt. Tuy nhiên, bạn cũng cần xem xét về khả năng kỹ thuật và sự thoải mái trong việc sử dụng công nghệ mới",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA SMART (Chính hãng phân phối bởi Chu Gia Security)"
+        },
+        {
+          "k": "Model thiết bị",
+          "v": "SHP-ZLUS"
+        },
+        {
+          "k": "Chuẩn truyền thông",
+          "v": "Zigbee 3.0 Mesh (Băng tần 2.4GHz, độ trễ cực thấp < 50ms)"
+        },
+        {
+          "k": "Kiểu dáng thiết kế",
+          "v": "Âm tường chuẩn chữ nhật US (120 x 72 x 36 mm)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100 - 240V AC, 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "1000W / nút"
+        },
+        {
+          "k": "Đấu nối dây nguội (N)",
+          "v": "Hỗ trợ lắp đặt có dây N hoặc không dây N"
+        },
+        {
+          "k": "Kiểu phím & Điều khiển",
+          "v": "Viền hợp kim nhôm Anodized mạ kim loại cao cấp chống oxy hóa"
+        },
+        {
+          "k": "Hệ sinh thái tương thích",
+          "v": "Tuya Smart, Smart Life, Home Assistant (ZHA, Zigbee2MQTT)"
+        },
+        {
+          "k": "Hỗ trợ Home Assistant",
+          "v": "Kết nối trực tiếp qua USB Zigbee Dongle Sonoff / SkyConnect (ZHA / Zigbee2MQTT)"
+        },
+        {
+          "k": "Giá vốn nhập khẩu",
+          "v": "500,000₫ (Giá gốc tuya.vn)"
+        },
+        {
+          "k": "Giá bán lẻ niêm yết",
+          "v": "1,000,000₫ (Giá bán lẻ niêm yết Chu Gia x2)"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 tận nơi bởi Chu Gia Security"
+        }
+      ],
+      "tuyaUrl": "https://tuya.vn/cong-tac-zigbee-vien-kim-loai-nut-bam-lom-hinh-chu-nhat-tuya-shpzlus-p29433307.html"
+    },
+    {
+      "id": 997013,
+      "name": "Công Tắc Zigbee Viền Kim Loại Nút Bấm Lõm Hình Vuông App Tuya SHP-ZLEU",
+      "sku": "TUYA-SHP-ZLEU",
+      "costPrice": 500000,
+      "retailPrice": 1000000,
+      "originalPrice": 1150000,
+      "discountPercent": 13,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "https://pos.nvncdn.com/52c0ae-95155/ps/20231219_OLrsYGFdTA.png?v=1702974701",
+      "images": [
+        "https://pos.nvncdn.com/52c0ae-95155/ps/20231219_OLrsYGFdTA.png?v=1702974701"
+      ],
+      "features": [
+        "Model: SHP-ZLEU – Chuẩn Zigbee 3.0 Mesh kết nối cực nhạy, ổn định xuyên tường",
+        "Thiết kế: Âm tường chuẩn vuông EU (86 x 86 x 35 mm) sang trọng, tinh tế nâng tầm đẳng cấp ngôi nhà",
+        "Công suất & Nguồn: 100 - 240V AC, 50/60Hz | 1000W / nút",
+        "Dây nguội (N): Hỗ trợ có dây N hoặc không dây N",
+        "Hệ sinh thái: Tương thích Tuya Smart, Smart Life & Home Assistant (HASS Zigbee2MQTT / ZHA)",
+        "Giá nhập gốc: 500,000₫ | Giá bán lẻ niêm yết: 1,000,000₫ (x2)",
+        "Bảo hành: 24 tháng 1 đổi 1 chính hãng Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tuya",
+      "inStock": true,
+      "description": "Công Tắc Zigbee Viền Kim Loại Nút Bấm Lõm Hình Vuông App Tuya SHP-ZLEU chính hãng Tuya Smart. Công Tắc Zigbee Viền Kim Loại Nút Bấm Lõm Hình Vuông App Tuya SHP-ZLEU Việc sử dụng công tắc thông minh mang lại nhiều lợi ích, bao gồm: 1 .Tiện lợi: Bạn có thể điều khiển ánh sáng và các thiết bị điện khác từ xa thông qua điện thoại thông minh hoặc thiết bị điều khiển khác mà không cần phải ở gần công tắc. 2.Tiết kiệm năng lượng: Công tắc thông minh có thể được lập lịch hoạt động tự động, giúp tắt/bật thiết bị theo thời gian cố định hoặc theo điều kiện môi trường như ánh sáng tự nhiên hoặc chuyển động. 3.An ninh: Bạn có thể lập lịch để bật đèn trong nhà khi bạn vắng nhà, tạo ra ấn tượng rằng nhà đang có người ở trong, làm tăng tính an toàn và giảm nguy cơ xâm nhập. 4.Linh hoạt: Công tắc thông minh thường tương thích với các hệ thống nhà thông minh khác, cho phép bạn tích hợp chúng vào hệ thống tự động hóa nhà cửa của mình. 5.Giảm chi phí: Mặc dù có chi phí ban đầu cao hơn so với công tắc thông thường, nhưng việc sử dụng công tắc thông minh có thể giúp tiết kiệm năng lượng và giảm hóa đơn tiền điện trong dài hạn. Việc sử dụng công tắc thông minh phụ thuộc vào nhu cầu và tình hình cụ thể của mỗi người. Tuy nhiên, có một số lợi ích khiến việc sử dụng công tắc thông minh trở nên hấp dẫn, như tiết kiệm năng lượng, tiện lợi và tăng tính an toàn. Nếu bạn quan tâm đến các lợi ích này và muốn tận dụng công nghệ để quản lý hiệu quả hơn các thiết bị điện trong nhà, thì việc sử dụng công tắc thông minh có thể là một lựa chọn tốt. Tuy nhiên, bạn cũng cần xem xét về khả năng kỹ thuật và sự thoải mái trong việc sử dụng công nghệ mới.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA SMART (Chính hãng phân phối bởi Chu Gia Security)"
+        },
+        {
+          "k": "Model thiết bị",
+          "v": "SHP-ZLEU"
+        },
+        {
+          "k": "Chuẩn truyền thông",
+          "v": "Zigbee 3.0 Mesh (Băng tần 2.4GHz, độ trễ cực thấp < 50ms)"
+        },
+        {
+          "k": "Kiểu dáng thiết kế",
+          "v": "Âm tường chuẩn vuông EU (86 x 86 x 35 mm)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100 - 240V AC, 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "1000W / nút"
+        },
+        {
+          "k": "Đấu nối dây nguội (N)",
+          "v": "Hỗ trợ có dây N hoặc không dây N"
+        },
+        {
+          "k": "Kiểu phím & Điều khiển",
+          "v": "Mặt kính viền kim loại cao cấp phong cách Châu Âu hiện đại"
+        },
+        {
+          "k": "Hệ sinh thái tương thích",
+          "v": "Tuya Smart, Smart Life, Home Assistant (ZHA, Zigbee2MQTT)"
+        },
+        {
+          "k": "Hỗ trợ Home Assistant",
+          "v": "Kết nối trực tiếp qua USB Zigbee Dongle Sonoff / SkyConnect (ZHA / Zigbee2MQTT)"
+        },
+        {
+          "k": "Giá vốn nhập khẩu",
+          "v": "500,000₫ (Giá gốc tuya.vn)"
+        },
+        {
+          "k": "Giá bán lẻ niêm yết",
+          "v": "1,000,000₫ (Giá bán lẻ niêm yết Chu Gia x2)"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 tận nơi bởi Chu Gia Security"
+        }
+      ],
+      "tuyaUrl": "https://tuya.vn/cong-tac-zigbee-vien-kim-loai-nut-bam-lom-hinh-vuong-app-tuya-shpzleu-p29433553.html"
+    },
+    {
+      "id": 997014,
+      "name": "Công Tắc Điều Khiển Cửa Cuốn Viền Kim Loại Zigbee Tuya CS1v2-ZB",
+      "sku": "TUYA-CS1V2-ZB",
+      "costPrice": 550000,
+      "retailPrice": 1100000,
+      "originalPrice": 1265000,
+      "discountPercent": 13,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "https://pos.nvncdn.com/52c0ae-95155/ps/20231209_drDT7JNiWF.png?v=1702095673",
+      "images": [
+        "https://pos.nvncdn.com/52c0ae-95155/ps/20231209_drDT7JNiWF.png?v=1702095673"
+      ],
+      "features": [
+        "Model: CS1V2-ZB – Chuẩn Zigbee 3.0 Mesh kết nối cực nhạy, ổn định xuyên tường",
+        "Thiết kế: Âm tường điều khiển rèm (Chuẩn US chữ nhật / Chuẩn EU vuông) sang trọng, tinh tế nâng tầm đẳng cấp ngôi nhà",
+        "Công suất & Nguồn: 100 - 240V AC, 50/60Hz | Động cơ rèm cuốn, rèm vải, cửa cuốn tải tối đa 600W (2.5A)",
+        "Dây nguội (N): Cần dây nguội (N)",
+        "Hệ sinh thái: Tương thích Tuya Smart, Smart Life & Home Assistant (HASS Zigbee2MQTT / ZHA)",
+        "Giá nhập gốc: 550,000₫ | Giá bán lẻ niêm yết: 1,100,000₫ (x2)",
+        "Bảo hành: 24 tháng 1 đổi 1 chính hãng Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tuya",
+      "inStock": true,
+      "description": "Công Tắc Điều Khiển Cửa Cuốn Viền Kim Loại Zigbee Tuya CS1v2-ZB chính hãng Tuya Smart. Công Tắc Điều Khiển Cửa Cuốn Viền Kim Loại Zigbee Tuya CS1v2-ZB Việc sử dụng công tắc thông minh mang lại nhiều lợi ích và bao gồm nhiều tiện lợi: Bạn có thể điều khiển ánh sáng và các thiết bị điện khác từ xa thông qua điện thoại thông minh hoặc thiết bị điều khiển khác mà không cần phải ở gần công tắc.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA SMART (Chính hãng phân phối bởi Chu Gia Security)"
+        },
+        {
+          "k": "Model thiết bị",
+          "v": "CS1V2-ZB"
+        },
+        {
+          "k": "Chuẩn truyền thông",
+          "v": "Zigbee 3.0 Mesh (Băng tần 2.4GHz, độ trễ cực thấp < 50ms)"
+        },
+        {
+          "k": "Kiểu dáng thiết kế",
+          "v": "Âm tường điều khiển rèm (Chuẩn US chữ nhật / Chuẩn EU vuông)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100 - 240V AC, 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Động cơ rèm cuốn, rèm vải, cửa cuốn tải tối đa 600W (2.5A)"
+        },
+        {
+          "k": "Đấu nối dây nguội (N)",
+          "v": "Cần dây nguội (N)"
+        },
+        {
+          "k": "Kiểu phím & Điều khiển",
+          "v": "3 phím cảm ứng: Mở (Open) - Tạm dừng (Pause) - Đóng (Close) & Kéo thanh trượt % trên app"
+        },
+        {
+          "k": "Hệ sinh thái tương thích",
+          "v": "Tuya Smart, Smart Life, Home Assistant (ZHA, Zigbee2MQTT)"
+        },
+        {
+          "k": "Hỗ trợ Home Assistant",
+          "v": "Kết nối trực tiếp qua USB Zigbee Dongle Sonoff / SkyConnect (ZHA / Zigbee2MQTT)"
+        },
+        {
+          "k": "Giá vốn nhập khẩu",
+          "v": "550,000₫ (Giá gốc tuya.vn)"
+        },
+        {
+          "k": "Giá bán lẻ niêm yết",
+          "v": "1,100,000₫ (Giá bán lẻ niêm yết Chu Gia x2)"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 tận nơi bởi Chu Gia Security"
+        }
+      ],
+      "tuyaUrl": "https://tuya.vn/cong-tac-dieu-khien-cua-cuon-vien-kim-loai-zigbee-tuya-cs1v2zb-p40701949.html"
+    },
+    {
+      "id": 997015,
+      "name": "Công Tắc Zigbee Công Suất Lớn 20A Viền Kim Loại Vuông Tuya ZFW2-EU",
+      "sku": "TUYA-ZFW2-EU",
+      "costPrice": 590000,
+      "retailPrice": 1180000,
+      "originalPrice": 1357000,
+      "discountPercent": 13,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "https://pos.nvncdn.com/52c0ae-95155/ps/20210304_lDDIecYxvVHZZmvVzyli3Su7.png?v=1674742085",
+      "images": [
+        "https://pos.nvncdn.com/52c0ae-95155/ps/20210304_lDDIecYxvVHZZmvVzyli3Su7.png?v=1674742085"
+      ],
+      "features": [
+        "Model: ZFW2-EU – Chuẩn Zigbee 3.0 Mesh kết nối cực nhạy, ổn định xuyên tường",
+        "Thiết kế: Âm tường chuẩn vuông EU (86 x 86 x 35 mm) công suất lớn sang trọng, tinh tế nâng tầm đẳng cấp ngôi nhà",
+        "Công suất & Nguồn: 100 - 240V AC, 50/60Hz | Rơ-le công suất lớn 20A (Chịu tải tối đa 4400W)",
+        "Dây nguội (N): Cần dây nguội (N) để đảm bảo dòng tải an toàn",
+        "Hệ sinh thái: Tương thích Tuya Smart, Smart Life & Home Assistant (HASS Zigbee2MQTT / ZHA)",
+        "Giá nhập gốc: 590,000₫ | Giá bán lẻ niêm yết: 1,180,000₫ (x2)",
+        "Bảo hành: 24 tháng 1 đổi 1 chính hãng Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tuya",
+      "inStock": true,
+      "description": "Công Tắc Zigbee Công Suất Lớn 20A Viền Kim Loại Vuông Tuya ZFW2-EU chính hãng Tuya Smart. Công Tắc Zigbee Công Suất Lớn 20A Viền Kim Loại Vuông Tuya ZFW2-EU Việc sử dụng công tắc thông minh mang lại nhiều lợi ích và bao gồm nhiều tiện lợi: Bạn có thể điều khiển ánh sáng và các thiết bị điện khác từ xa thông qua điện thoại thông minh hoặc thiết bị điều khiển khác mà không cần phải ở gần công tắc.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA SMART (Chính hãng phân phối bởi Chu Gia Security)"
+        },
+        {
+          "k": "Model thiết bị",
+          "v": "ZFW2-EU"
+        },
+        {
+          "k": "Chuẩn truyền thông",
+          "v": "Zigbee 3.0 Mesh (Băng tần 2.4GHz, độ trễ cực thấp < 50ms)"
+        },
+        {
+          "k": "Kiểu dáng thiết kế",
+          "v": "Âm tường chuẩn vuông EU (86 x 86 x 35 mm) công suất lớn"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100 - 240V AC, 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Rơ-le công suất lớn 20A (Chịu tải tối đa 4400W)"
+        },
+        {
+          "k": "Đấu nối dây nguội (N)",
+          "v": "Cần dây nguội (N) để đảm bảo dòng tải an toàn"
+        },
+        {
+          "k": "Kiểu phím & Điều khiển",
+          "v": "Cảm ứng viền kim loại chuyên dùng cho Bình nóng lạnh, Bếp điện, Điều hòa"
+        },
+        {
+          "k": "Hệ sinh thái tương thích",
+          "v": "Tuya Smart, Smart Life, Home Assistant (ZHA, Zigbee2MQTT)"
+        },
+        {
+          "k": "Hỗ trợ Home Assistant",
+          "v": "Kết nối trực tiếp qua USB Zigbee Dongle Sonoff / SkyConnect (ZHA / Zigbee2MQTT)"
+        },
+        {
+          "k": "Giá vốn nhập khẩu",
+          "v": "590,000₫ (Giá gốc tuya.vn)"
+        },
+        {
+          "k": "Giá bán lẻ niêm yết",
+          "v": "1,180,000₫ (Giá bán lẻ niêm yết Chu Gia x2)"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 tận nơi bởi Chu Gia Security"
+        }
+      ],
+      "tuyaUrl": "https://tuya.vn/cong-tac-zigbee-cong-suat-lon-20a-vien-kim-loai-vuong-tuya-zfw2eu-p29430189.html"
+    },
+    {
+      "id": 997016,
+      "name": "Công Tắc Zigbee Công Suất Lớn 20A Viền Kim Loại Chữ Nhật Tuya ZFW2-US",
+      "sku": "TUYA-ZFW2-US",
+      "costPrice": 590000,
+      "retailPrice": 1180000,
+      "originalPrice": 1357000,
+      "discountPercent": 13,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "https://pos.nvncdn.com/52c0ae-95155/ps/20210304_GCF9lNmNIVFGg49rFjMZwX6X.png?v=1674742087",
+      "images": [
+        "https://pos.nvncdn.com/52c0ae-95155/ps/20210304_GCF9lNmNIVFGg49rFjMZwX6X.png?v=1674742087"
+      ],
+      "features": [
+        "Model: ZFW2-US – Chuẩn Zigbee 3.0 Mesh kết nối cực nhạy, ổn định xuyên tường",
+        "Thiết kế: Âm tường chuẩn chữ nhật US (120 x 72 x 36 mm) công suất lớn sang trọng, tinh tế nâng tầm đẳng cấp ngôi nhà",
+        "Công suất & Nguồn: 100 - 240V AC, 50/60Hz | Rơ-le công suất lớn 20A (Chịu tải tối đa 4400W)",
+        "Dây nguội (N): Cần dây nguội (N)",
+        "Hệ sinh thái: Tương thích Tuya Smart, Smart Life & Home Assistant (HASS Zigbee2MQTT / ZHA)",
+        "Giá nhập gốc: 590,000₫ | Giá bán lẻ niêm yết: 1,180,000₫ (x2)",
+        "Bảo hành: 24 tháng 1 đổi 1 chính hãng Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tuya",
+      "inStock": true,
+      "description": "Công Tắc Zigbee Công Suất Lớn 20A Viền Kim Loại Chữ Nhật Tuya ZFW2-US chính hãng Tuya Smart. Công Tắc Zigbee Công Suất Lớn 20A Viền Kim Loại Chữ Nhật Tuya ZFW2-US Việc sử dụng công tắc thông minh mang lại nhiều lợi ích và bao gồm nhiều tiện lợi: Bạn có thể điều khiển ánh sáng và các thiết bị điện khác từ xa thông qua điện thoại thông minh hoặc thiết bị điều khiển khác mà không cần phải ở gần công tắc.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA SMART (Chính hãng phân phối bởi Chu Gia Security)"
+        },
+        {
+          "k": "Model thiết bị",
+          "v": "ZFW2-US"
+        },
+        {
+          "k": "Chuẩn truyền thông",
+          "v": "Zigbee 3.0 Mesh (Băng tần 2.4GHz, độ trễ cực thấp < 50ms)"
+        },
+        {
+          "k": "Kiểu dáng thiết kế",
+          "v": "Âm tường chuẩn chữ nhật US (120 x 72 x 36 mm) công suất lớn"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100 - 240V AC, 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Rơ-le công suất lớn 20A (Chịu tải tối đa 4400W)"
+        },
+        {
+          "k": "Đấu nối dây nguội (N)",
+          "v": "Cần dây nguội (N)"
+        },
+        {
+          "k": "Kiểu phím & Điều khiển",
+          "v": "Cảm ứng cao cấp viền kim loại dành cho Bình nước nóng, Điều hòa, Bơm nước"
+        },
+        {
+          "k": "Hệ sinh thái tương thích",
+          "v": "Tuya Smart, Smart Life, Home Assistant (ZHA, Zigbee2MQTT)"
+        },
+        {
+          "k": "Hỗ trợ Home Assistant",
+          "v": "Kết nối trực tiếp qua USB Zigbee Dongle Sonoff / SkyConnect (ZHA / Zigbee2MQTT)"
+        },
+        {
+          "k": "Giá vốn nhập khẩu",
+          "v": "590,000₫ (Giá gốc tuya.vn)"
+        },
+        {
+          "k": "Giá bán lẻ niêm yết",
+          "v": "1,180,000₫ (Giá bán lẻ niêm yết Chu Gia x2)"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 tận nơi bởi Chu Gia Security"
+        }
+      ],
+      "tuyaUrl": "https://tuya.vn/cong-tac-zigbee-cong-suat-lon-20a-vien-kim-loai-chu-nhat-tuya-zfw2us-p29430115.html"
+    },
+    {
+      "id": 997017,
+      "name": "Công Tắc Cơ Không Dây Nguội Zigbee Hình Vuông Tuya ZigBeeEU-KN",
+      "sku": "TUYA-ZIGBEE-EU-KN",
+      "costPrice": 650000,
+      "retailPrice": 1300000,
+      "originalPrice": 1495000,
+      "discountPercent": 13,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "https://pos.nvncdn.com/52c0ae-95155/ps/20220702_g1Vics8pHa5ZKkeo6aNHhUN4.png?v=1673665924",
+      "images": [
+        "https://pos.nvncdn.com/52c0ae-95155/ps/20220702_g1Vics8pHa5ZKkeo6aNHhUN4.png?v=1673665924"
+      ],
+      "features": [
+        "Model: ZIGBEE-EU-KN – Chuẩn Zigbee 3.0 Mesh kết nối cực nhạy, ổn định xuyên tường",
+        "Thiết kế: Âm tường chuẩn vuông EU (86 x 86 x 35 mm) phím cơ đàn hồi sang trọng, tinh tế nâng tầm đẳng cấp ngôi nhà",
+        "Công suất & Nguồn: 100 - 240V AC, 50/60Hz | Tối đa 600W / nút",
+        "Dây nguội (N): Không cần dây nguội (No Neutral) - Lắp đặt thay thế 100% công tắc cơ cũ",
+        "Hệ sinh thái: Tương thích Tuya Smart, Smart Life & Home Assistant (HASS Zigbee2MQTT / ZHA)",
+        "Giá nhập gốc: 650,000₫ | Giá bán lẻ niêm yết: 1,300,000₫ (x2)",
+        "Bảo hành: 24 tháng 1 đổi 1 chính hãng Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tuya",
+      "inStock": true,
+      "description": "Công Tắc Cơ Không Dây Nguội Zigbee Hình Vuông Tuya ZigBeeEU-KN chính hãng Tuya Smart. Công Tắc Cơ Không Dây Nguội Zigbee Hình Vuông Tuya Việc sử dụng công tắc thông minh mang lại nhiều lợi ích và bao gồm nhiều tiện lợi: Bạn có thể điều khiển ánh sáng và các thiết bị điện khác từ xa thông qua điện thoại thông minh hoặc thiết bị điều khiển khác mà không cần phải ở gần công tắc.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA SMART (Chính hãng phân phối bởi Chu Gia Security)"
+        },
+        {
+          "k": "Model thiết bị",
+          "v": "ZIGBEE-EU-KN"
+        },
+        {
+          "k": "Chuẩn truyền thông",
+          "v": "Zigbee 3.0 Mesh (Băng tần 2.4GHz, độ trễ cực thấp < 50ms)"
+        },
+        {
+          "k": "Kiểu dáng thiết kế",
+          "v": "Âm tường chuẩn vuông EU (86 x 86 x 35 mm) phím cơ đàn hồi"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100 - 240V AC, 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W / nút"
+        },
+        {
+          "k": "Đấu nối dây nguội (N)",
+          "v": "Không cần dây nguội (No Neutral) - Lắp đặt thay thế 100% công tắc cơ cũ"
+        },
+        {
+          "k": "Kiểu phím & Điều khiển",
+          "v": "Phím cơ nảy êm ái đàn hồi tự hồi vị, có đèn LED định vị ban đêm"
+        },
+        {
+          "k": "Hệ sinh thái tương thích",
+          "v": "Tuya Smart, Smart Life, Home Assistant (ZHA, Zigbee2MQTT)"
+        },
+        {
+          "k": "Hỗ trợ Home Assistant",
+          "v": "Kết nối trực tiếp qua USB Zigbee Dongle Sonoff / SkyConnect (ZHA / Zigbee2MQTT)"
+        },
+        {
+          "k": "Giá vốn nhập khẩu",
+          "v": "650,000₫ (Giá gốc tuya.vn)"
+        },
+        {
+          "k": "Giá bán lẻ niêm yết",
+          "v": "1,300,000₫ (Giá bán lẻ niêm yết Chu Gia x2)"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 tận nơi bởi Chu Gia Security"
+        }
+      ],
+      "tuyaUrl": "https://tuya.vn/cong-tac-co-khong-day-nguoi-zigbee-hinh-vuong-tuya-zigbeeeukn-p39075226.html"
+    },
+    {
+      "id": 997018,
+      "name": "Công Tắc Cơ Không Dây Nguội Zigbee Hình Chữ Nhật Tuya ZigBeeUS-KN",
+      "sku": "TUYA-ZIGBEE-US-KN",
+      "costPrice": 650000,
+      "retailPrice": 1300000,
+      "originalPrice": 1495000,
+      "discountPercent": 13,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "https://pos.nvncdn.com/52c0ae-95155/ps/20220702_J6GCiST8NpCeIYX1UnT1CTej.png?v=1673665959",
+      "images": [
+        "https://pos.nvncdn.com/52c0ae-95155/ps/20220702_J6GCiST8NpCeIYX1UnT1CTej.png?v=1673665959"
+      ],
+      "features": [
+        "Model: ZIGBEE-US-KN – Chuẩn Zigbee 3.0 Mesh kết nối cực nhạy, ổn định xuyên tường",
+        "Thiết kế: Âm tường chuẩn chữ nhật US (120 x 72 x 36 mm) phím cơ đàn hồi sang trọng, tinh tế nâng tầm đẳng cấp ngôi nhà",
+        "Công suất & Nguồn: 100 - 240V AC, 50/60Hz | Tối đa 600W / nút",
+        "Dây nguội (N): Không cần dây nguội (No Neutral) - Không cần đục tường kéo thêm dây N",
+        "Hệ sinh thái: Tương thích Tuya Smart, Smart Life & Home Assistant (HASS Zigbee2MQTT / ZHA)",
+        "Giá nhập gốc: 650,000₫ | Giá bán lẻ niêm yết: 1,300,000₫ (x2)",
+        "Bảo hành: 24 tháng 1 đổi 1 chính hãng Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tuya",
+      "inStock": true,
+      "description": "Công Tắc Cơ Không Dây Nguội Zigbee Hình Chữ Nhật Tuya ZigBeeUS-KN chính hãng Tuya Smart. Công Tắc Cơ Không Dây Nguội Zigbee Hình Chữ Nhật Tuya ZIGBEEUS-KN Việc sử dụng công tắc thông minh mang lại nhiều lợi ích và bao gồm nhiều tiện lợi: Bạn có thể điều khiển ánh sáng và các thiết bị điện khác từ xa thông qua điện thoại thông minh hoặc thiết bị điều khiển khác mà không cần phải ở gần công tắc.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA SMART (Chính hãng phân phối bởi Chu Gia Security)"
+        },
+        {
+          "k": "Model thiết bị",
+          "v": "ZIGBEE-US-KN"
+        },
+        {
+          "k": "Chuẩn truyền thông",
+          "v": "Zigbee 3.0 Mesh (Băng tần 2.4GHz, độ trễ cực thấp < 50ms)"
+        },
+        {
+          "k": "Kiểu dáng thiết kế",
+          "v": "Âm tường chuẩn chữ nhật US (120 x 72 x 36 mm) phím cơ đàn hồi"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100 - 240V AC, 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Tối đa 600W / nút"
+        },
+        {
+          "k": "Đấu nối dây nguội (N)",
+          "v": "Không cần dây nguội (No Neutral) - Không cần đục tường kéo thêm dây N"
+        },
+        {
+          "k": "Kiểu phím & Điều khiển",
+          "v": "Phím bấm cơ nhẹ nhàng, phản hồi vật lý quen thuộc cho cả người lớn tuổi"
+        },
+        {
+          "k": "Hệ sinh thái tương thích",
+          "v": "Tuya Smart, Smart Life, Home Assistant (ZHA, Zigbee2MQTT)"
+        },
+        {
+          "k": "Hỗ trợ Home Assistant",
+          "v": "Kết nối trực tiếp qua USB Zigbee Dongle Sonoff / SkyConnect (ZHA / Zigbee2MQTT)"
+        },
+        {
+          "k": "Giá vốn nhập khẩu",
+          "v": "650,000₫ (Giá gốc tuya.vn)"
+        },
+        {
+          "k": "Giá bán lẻ niêm yết",
+          "v": "1,300,000₫ (Giá bán lẻ niêm yết Chu Gia x2)"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 tận nơi bởi Chu Gia Security"
+        }
+      ],
+      "tuyaUrl": "https://tuya.vn/cong-tac-co-khong-day-nguoi-zigbee-hinh-chu-nhat-tuya-zigbeeuskn-p39074871.html"
+    },
+    {
+      "id": 997019,
+      "name": "Công Tắc Zigbee Công Suất Lớn 20A Viền Kim Loại Chữ Nhật Tuya 2 Nút ZFW1-US",
+      "sku": "TUYA-ZFW1-US",
+      "costPrice": 690000,
+      "retailPrice": 1380000,
+      "originalPrice": 1586999,
+      "discountPercent": 13,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "https://pos.nvncdn.com/52c0ae-95155/ps/20210531_rNxixdpshh8Z0xtXKdHyn0xN.png?v=1674067540",
+      "images": [
+        "https://pos.nvncdn.com/52c0ae-95155/ps/20210531_rNxixdpshh8Z0xtXKdHyn0xN.png?v=1674067540"
+      ],
+      "features": [
+        "Model: ZFW1-US – Chuẩn Zigbee 3.0 Mesh kết nối cực nhạy, ổn định xuyên tường",
+        "Thiết kế: Âm tường chuẩn chữ nhật US (120 x 72 x 36 mm) 2 nút công suất cao sang trọng, tinh tế nâng tầm đẳng cấp ngôi nhà",
+        "Công suất & Nguồn: 100 - 240V AC, 50/60Hz | 20A / kênh (Tối đa 4400W độc lập mỗi kênh)",
+        "Dây nguội (N): Cần dây nguội (N)",
+        "Hệ sinh thái: Tương thích Tuya Smart, Smart Life & Home Assistant (HASS Zigbee2MQTT / ZHA)",
+        "Giá nhập gốc: 690,000₫ | Giá bán lẻ niêm yết: 1,380,000₫ (x2)",
+        "Bảo hành: 24 tháng 1 đổi 1 chính hãng Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tuya",
+      "inStock": true,
+      "description": "Công Tắc Zigbee Công Suất Lớn 20A Viền Kim Loại Chữ Nhật Tuya 2 Nút ZFW1-US chính hãng Tuya Smart. Công Tắc Zigbee Công Suất Lớn 20A Viền Kim Loại Chữ Nhật Tuya 2 Nút ZFW1-US Việc sử dụng công tắc thông minh mang lại nhiều lợi ích và bao gồm nhiều tiện lợi: Bạn có thể điều khiển ánh sáng và các thiết bị điện khác từ xa thông qua điện thoại thông minh hoặc thiết bị điều khiển khác mà không cần phải ở gần công tắc.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA SMART (Chính hãng phân phối bởi Chu Gia Security)"
+        },
+        {
+          "k": "Model thiết bị",
+          "v": "ZFW1-US"
+        },
+        {
+          "k": "Chuẩn truyền thông",
+          "v": "Zigbee 3.0 Mesh (Băng tần 2.4GHz, độ trễ cực thấp < 50ms)"
+        },
+        {
+          "k": "Kiểu dáng thiết kế",
+          "v": "Âm tường chuẩn chữ nhật US (120 x 72 x 36 mm) 2 nút công suất cao"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100 - 240V AC, 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "20A / kênh (Tối đa 4400W độc lập mỗi kênh)"
+        },
+        {
+          "k": "Đấu nối dây nguội (N)",
+          "v": "Cần dây nguội (N)"
+        },
+        {
+          "k": "Kiểu phím & Điều khiển",
+          "v": "2 nút cảm ứng độc lập điều khiển 2 thiết bị công suất cao cùng lúc"
+        },
+        {
+          "k": "Hệ sinh thái tương thích",
+          "v": "Tuya Smart, Smart Life, Home Assistant (ZHA, Zigbee2MQTT)"
+        },
+        {
+          "k": "Hỗ trợ Home Assistant",
+          "v": "Kết nối trực tiếp qua USB Zigbee Dongle Sonoff / SkyConnect (ZHA / Zigbee2MQTT)"
+        },
+        {
+          "k": "Giá vốn nhập khẩu",
+          "v": "690,000₫ (Giá gốc tuya.vn)"
+        },
+        {
+          "k": "Giá bán lẻ niêm yết",
+          "v": "1,380,000₫ (Giá bán lẻ niêm yết Chu Gia x2)"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 tận nơi bởi Chu Gia Security"
+        }
+      ],
+      "tuyaUrl": "https://tuya.vn/cong-tac-zigbee-cong-suat-lon-20a-vien-kim-loai-chu-nhat-tuya-2-nut-zfw1us-p32217647.html"
+    },
+    {
+      "id": 997020,
+      "name": "Công Tắc Zigbee 6 Cổng 16A 220V Điều Khiển Qua App Tuya ZPN6",
+      "sku": "TUYA-ZPN6",
+      "costPrice": 990000,
+      "retailPrice": 1980000,
+      "originalPrice": 2277000,
+      "discountPercent": 13,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "https://pos.nvncdn.com/52c0ae-95155/ps/20250428_BSalviF8rU.png?v=1745810825",
+      "images": [
+        "https://pos.nvncdn.com/52c0ae-95155/ps/20250428_BSalviF8rU.png?v=1745810825"
+      ],
+      "features": [
+        "Model: ZPN6 – Chuẩn Zigbee 3.0 Mesh kết nối cực nhạy, ổn định xuyên tường",
+        "Thiết kế: Hộp gắn ray DIN tủ điện hoặc gắn hộp kỹ thuật âm trần sang trọng, tinh tế nâng tầm đẳng cấp ngôi nhà",
+        "Công suất & Nguồn: 100 - 240V AC, 50/60Hz | 6 kênh relay độc lập 16A/kênh (Tổng công suất cực lớn)",
+        "Dây nguội (N): Cần dây nguội (N)",
+        "Hệ sinh thái: Tương thích Tuya Smart, Smart Life & Home Assistant (HASS Zigbee2MQTT / ZHA)",
+        "Giá nhập gốc: 990,000₫ | Giá bán lẻ niêm yết: 1,980,000₫ (x2)",
+        "Bảo hành: 24 tháng 1 đổi 1 chính hãng Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tuya",
+      "inStock": true,
+      "description": "Công Tắc Zigbee 6 Cổng 16A 220V Điều Khiển Qua App Tuya ZPN6 chính hãng Tuya Smart. Công Tắc Zigbee 6 Cổng 16A 220V Điều Khiển Qua App Tuya ZPN6 Việc sử dụng công tắc thông minh mang lại nhiều lợi ích, bao gồm: 1 .Tiện lợi: Bạn có thể điều khiển ánh sáng và các thiết bị điện khác từ xa thông qua điện thoại thông minh hoặc thiết bị điều khiển khác mà không cần phải ở gần công tắc. 2.Tiết kiệm năng lượng: Công tắc thông minh có thể được lập lịch hoạt động tự động, giúp tắt/bật thiết bị theo thời gian cố định hoặc theo điều kiện môi trường như ánh sáng tự nhiên hoặc chuyển động.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA SMART (Chính hãng phân phối bởi Chu Gia Security)"
+        },
+        {
+          "k": "Model thiết bị",
+          "v": "ZPN6"
+        },
+        {
+          "k": "Chuẩn truyền thông",
+          "v": "Zigbee 3.0 Mesh (Băng tần 2.4GHz, độ trễ cực thấp < 50ms)"
+        },
+        {
+          "k": "Kiểu dáng thiết kế",
+          "v": "Hộp gắn ray DIN tủ điện hoặc gắn hộp kỹ thuật âm trần"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100 - 240V AC, 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "6 kênh relay độc lập 16A/kênh (Tổng công suất cực lớn)"
+        },
+        {
+          "k": "Đấu nối dây nguội (N)",
+          "v": "Cần dây nguội (N)"
+        },
+        {
+          "k": "Kiểu phím & Điều khiển",
+          "v": "6 ngõ ra relay Zigbee điều khiển toàn bộ lộ đèn hoặc van tưới cảnh quan"
+        },
+        {
+          "k": "Hệ sinh thái tương thích",
+          "v": "Tuya Smart, Smart Life, Home Assistant (ZHA, Zigbee2MQTT)"
+        },
+        {
+          "k": "Hỗ trợ Home Assistant",
+          "v": "Kết nối trực tiếp qua USB Zigbee Dongle Sonoff / SkyConnect (ZHA / Zigbee2MQTT)"
+        },
+        {
+          "k": "Giá vốn nhập khẩu",
+          "v": "990,000₫ (Giá gốc tuya.vn)"
+        },
+        {
+          "k": "Giá bán lẻ niêm yết",
+          "v": "1,980,000₫ (Giá bán lẻ niêm yết Chu Gia x2)"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 tận nơi bởi Chu Gia Security"
+        }
+      ],
+      "tuyaUrl": "https://tuya.vn/cong-tac-zigbee-6-cong-16a-220v-dieu-khien-qua-app-tuya-zpn6-p40702140.html"
+    },
+    {
+      "id": 997021,
+      "name": "Công Tắc Zigbee Cảm Ứng Mặt Kính Hình Vuông 4 Nút Tuya ZE2-4EU",
+      "sku": "TUYA-ZE2-4EU",
+      "costPrice": 1090000,
+      "retailPrice": 2180000,
+      "originalPrice": 2507000,
+      "discountPercent": 13,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "https://pos.nvncdn.com/52c0ae-95155/ps/20210304_GBUJejqnlogPziHDPJCQEQWE.png?v=1674742143",
+      "images": [
+        "https://pos.nvncdn.com/52c0ae-95155/ps/20210304_GBUJejqnlogPziHDPJCQEQWE.png?v=1674742143"
+      ],
+      "features": [
+        "Model: ZE2-4EU – Chuẩn Zigbee 3.0 Mesh kết nối cực nhạy, ổn định xuyên tường",
+        "Thiết kế: Âm tường chuẩn vuông EU (86 x 86 x 35 mm) sang trọng, tinh tế nâng tầm đẳng cấp ngôi nhà",
+        "Công suất & Nguồn: 100 - 240V AC, 50/60Hz | 800W / nút (4 kênh độc lập)",
+        "Dây nguội (N): Hỗ trợ có dây N hoặc không dây N linh hoạt",
+        "Hệ sinh thái: Tương thích Tuya Smart, Smart Life & Home Assistant (HASS Zigbee2MQTT / ZHA)",
+        "Giá nhập gốc: 1,090,000₫ | Giá bán lẻ niêm yết: 2,180,000₫ (x2)",
+        "Bảo hành: 24 tháng 1 đổi 1 chính hãng Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tuya",
+      "inStock": true,
+      "description": "Công Tắc Zigbee Cảm Ứng Mặt Kính Hình Vuông 4 Nút Tuya ZE2-4EU chính hãng Tuya Smart. Giải pháp công tắc và thiết bị thông minh chuẩn Zigbee 3.0 kết nối ổn định, điều khiển từ xa qua smartphone và hệ thống nhà thông minh Home Assistant.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA SMART (Chính hãng phân phối bởi Chu Gia Security)"
+        },
+        {
+          "k": "Model thiết bị",
+          "v": "ZE2-4EU"
+        },
+        {
+          "k": "Chuẩn truyền thông",
+          "v": "Zigbee 3.0 Mesh (Băng tần 2.4GHz, độ trễ cực thấp < 50ms)"
+        },
+        {
+          "k": "Kiểu dáng thiết kế",
+          "v": "Âm tường chuẩn vuông EU (86 x 86 x 35 mm)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100 - 240V AC, 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "800W / nút (4 kênh độc lập)"
+        },
+        {
+          "k": "Đấu nối dây nguội (N)",
+          "v": "Hỗ trợ có dây N hoặc không dây N linh hoạt"
+        },
+        {
+          "k": "Kiểu phím & Điều khiển",
+          "v": "4 nút cảm ứng mặt kính pha lê cường lực phẳng sang trọng"
+        },
+        {
+          "k": "Hệ sinh thái tương thích",
+          "v": "Tuya Smart, Smart Life, Home Assistant (ZHA, Zigbee2MQTT)"
+        },
+        {
+          "k": "Hỗ trợ Home Assistant",
+          "v": "Kết nối trực tiếp qua USB Zigbee Dongle Sonoff / SkyConnect (ZHA / Zigbee2MQTT)"
+        },
+        {
+          "k": "Giá vốn nhập khẩu",
+          "v": "1,090,000₫ (Giá gốc tuya.vn)"
+        },
+        {
+          "k": "Giá bán lẻ niêm yết",
+          "v": "2,180,000₫ (Giá bán lẻ niêm yết Chu Gia x2)"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 tận nơi bởi Chu Gia Security"
+        }
+      ],
+      "tuyaUrl": "https://tuya.vn/cong-tac-zigbee-cam-ung-mat-kinh-hinh-vuong-4-nut-tuya-ze24eu-p29428908.html"
+    },
+    {
+      "id": 997022,
+      "name": "Aptomat Đơn Thông Minh Zigbee Tuya SHP-ZIO2",
+      "sku": "TUYA-SHP-ZIO2",
+      "costPrice": 1090000,
+      "retailPrice": 2180000,
+      "originalPrice": 2507000,
+      "discountPercent": 13,
+      "unit": "Cái",
+      "primaryCategoryId": 54001,
+      "categoryIds": [
+        54001
+      ],
+      "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
+      "parentGroup": "Nhà Thông Minh & Smarthome",
+      "brand": "TUYA",
+      "image": "https://pos.nvncdn.com/52c0ae-95155/ps/20210303_7FqfTDBdu9PjUvAWzu65IVIq.png?v=1674744926",
+      "images": [
+        "https://pos.nvncdn.com/52c0ae-95155/ps/20210303_7FqfTDBdu9PjUvAWzu65IVIq.png?v=1674744926"
+      ],
+      "features": [
+        "Model: SHP-ZIO2 – Chuẩn Zigbee 3.0 Mesh kết nối cực nhạy, ổn định xuyên tường",
+        "Thiết kế: Gắn thanh ray tiêu chuẩn tủ điện DIN-Rail (MCB 1P thông minh) sang trọng, tinh tế nâng tầm đẳng cấp ngôi nhà",
+        "Công suất & Nguồn: 100 - 240V AC, 50/60Hz | Dòng định mức 16A - 63A tùy chỉnh (Bảo vệ ngắn mạch, quá tải, rò điện)",
+        "Dây nguội (N): Đấu nối L và N trực tiếp tại tủ điện tổng",
+        "Hệ sinh thái: Tương thích Tuya Smart, Smart Life & Home Assistant (HASS Zigbee2MQTT / ZHA)",
+        "Giá nhập gốc: 1,090,000₫ | Giá bán lẻ niêm yết: 2,180,000₫ (x2)",
+        "Bảo hành: 24 tháng 1 đổi 1 chính hãng Chu Gia Security"
+      ],
+      "warranty": "24 tháng chính hãng Tuya",
+      "inStock": true,
+      "description": "Aptomat Đơn Thông Minh Zigbee Tuya SHP-ZIO2 chính hãng Tuya Smart. Aptomat Đơn Thông Minh Zigbee Tuya Đo Công Suất Tiêu Thụ Điện SHP-ZIO2 Việc sử dụng Aptomat thông minh mang lại nhiều lợi ích và bao gồm nhiều tiện lợi: Bạn có thể điều khiển ánh sáng và các thiết bị điện khác từ xa thông qua điện thoại thông minh hoặc thiết bị điều khiển khác mà không cần phải ở gần công tắc.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "TUYA SMART (Chính hãng phân phối bởi Chu Gia Security)"
+        },
+        {
+          "k": "Model thiết bị",
+          "v": "SHP-ZIO2"
+        },
+        {
+          "k": "Chuẩn truyền thông",
+          "v": "Zigbee 3.0 Mesh (Băng tần 2.4GHz, độ trễ cực thấp < 50ms)"
+        },
+        {
+          "k": "Kiểu dáng thiết kế",
+          "v": "Gắn thanh ray tiêu chuẩn tủ điện DIN-Rail (MCB 1P thông minh)"
+        },
+        {
+          "k": "Điện áp hoạt động",
+          "v": "100 - 240V AC, 50/60Hz"
+        },
+        {
+          "k": "Công suất tải",
+          "v": "Dòng định mức 16A - 63A tùy chỉnh (Bảo vệ ngắn mạch, quá tải, rò điện)"
+        },
+        {
+          "k": "Đấu nối dây nguội (N)",
+          "v": "Đấu nối L và N trực tiếp tại tủ điện tổng"
+        },
+        {
+          "k": "Kiểu phím & Điều khiển",
+          "v": "Cần gạt cơ khí an toàn + Đóng cắt từ xa bằng app + Đo chỉ số kWh/V/A/W theo thời gian thực"
+        },
+        {
+          "k": "Hệ sinh thái tương thích",
+          "v": "Tuya Smart, Smart Life, Home Assistant (ZHA, Zigbee2MQTT)"
+        },
+        {
+          "k": "Hỗ trợ Home Assistant",
+          "v": "Kết nối trực tiếp qua USB Zigbee Dongle Sonoff / SkyConnect (ZHA / Zigbee2MQTT)"
+        },
+        {
+          "k": "Giá vốn nhập khẩu",
+          "v": "1,090,000₫ (Giá gốc tuya.vn)"
+        },
+        {
+          "k": "Giá bán lẻ niêm yết",
+          "v": "2,180,000₫ (Giá bán lẻ niêm yết Chu Gia x2)"
+        },
+        {
+          "k": "Bảo hành chính hãng",
+          "v": "24 tháng 1 đổi 1 tận nơi bởi Chu Gia Security"
+        }
+      ],
+      "tuyaUrl": "https://tuya.vn/aptomat-don-thong-minh-zigbee-tuya-shpzio2-p29399159.html"
+    },
+    {
+      "id": 1181999,
+      "name": "Đầu ghi hình IP DAHUA DHI-NVR5108HS-4KS3 (8 Kênh 4K WizSense AI, H.265+, Chuyên Camera WizColor)",
+      "sku": "DHI-NVR5108HS-4KS3",
+      "costPrice": 3650000,
+      "retailPrice": 4850000,
+      "originalPrice": 5580000,
+      "discountPercent": 13,
+      "unit": "Chiếc",
+      "primaryCategoryId": 53995,
+      "categoryIds": [
+        53995
+      ],
+      "categoryName": "Đầu Ghi Hình IP DAHUA",
+      "parentGroup": "Camera Quan Sát & CCTV",
+      "brand": "DAHUA",
+      "image": "https://sapo.dktcdn.net/100/825/511/variants/dhi-nvr4108hs-4ks3-1777898865611.jpg",
+      "images": [
+        "https://sapo.dktcdn.net/100/825/511/variants/dhi-nvr4108hs-4ks3-1777898865611.jpg"
+      ],
+      "features": [
+        "Model: DHI-NVR5108HS-4KS3 – Chuẩn 8 Kênh IP 4K chuyên dụng dòng 5108 cao cấp",
+        "Băng thông vào cực lớn 384Mbps giải mã mượt mà toàn bộ Camera WizColor / WizSense 4MP/5MP",
+        "Trí tuệ nhân tạo AI WizSense: Nhận diện khuôn mặt Face Detection, SMD Plus phân biệt người & xe chính xác 98%",
+        "Chuẩn nén Smart H.265+ tiết kiệm 70% dung lượng ổ cứng, hỗ trợ 1 ổ cứng SATA lên đến 16TB",
+        "Bảo hành: 24 tháng chính hãng 1 đổi 1 bởi Chu Gia Security"
+      ],
+      "warranty": "24 Tháng Chính Hãng Dahua",
+      "inStock": true,
+      "description": "Đầu ghi hình IP DAHUA DHI-NVR5108HS-4KS3 (Dòng 5108) là trung tâm ghi hình 8 kênh 4K cao cấp thuộc hệ sinh thái WizSense của Dahua. Thiết bị được tối ưu hóa hoàn hảo cho các dòng camera WizColor và WizSense Full-color, hỗ trợ xử lý AI thông minh tại đầu ghi, quản lý tập trung và tích hợp luồng video RTSP trực tiếp vào Home Assistant mượt mà, ổn định 24/7.",
+      "specsTable": [
+        {
+          "k": "Thương hiệu",
+          "v": "DAHUA TECHNOLOGY (Chính hãng phân phối bởi Chu Gia Security)"
+        },
+        {
+          "k": "Model",
+          "v": "DHI-NVR5108HS-4KS3 (Dòng 5108 WizSense)"
+        },
+        {
+          "k": "Số kênh hỗ trợ",
+          "v": "8 Kênh Camera IP độ phân giải tối đa 4K (12MP/8MP/5MP/4MP/2MP)"
+        },
+        {
+          "k": "Băng thông đầu vào",
+          "v": "384 Mbps (Đảm bảo xem mượt không giật lag)"
+        },
+        {
+          "k": "Tính năng AI tích hợp",
+          "v": "Face Detection (Nhận diện khuôn mặt), SMD Plus (Người & Xe), Bảo vệ chu vi (Hàng rào ảo, xâm nhập)"
+        },
+        {
+          "k": "Cổng xuất hình",
+          "v": "1 HDMI 4K (3840 × 2160) + 1 VGA Full HD xuất đồng thời"
+        },
+        {
+          "k": "Chuẩn nén",
+          "v": "Smart H.265+ / H.265 / Smart H.264+ / H.264"
+        },
+        {
+          "k": "Ổ cứng lưu trữ",
+          "v": "1 Cổng SATA III dung lượng tối đa 16TB"
+        },
+        {
+          "k": "Cổng mạng & USB",
+          "v": "1 Cổng mạng LAN RJ45 Gigabit (1000Mbps), 2 cổng USB 2.0"
+        },
+        {
+          "k": "Tương thích hệ sinh thái",
+          "v": "DMSS, Smart PSS, ONVIF (Profile S/G/T), Home Assistant (HASS)"
+        },
+        {
+          "k": "Bảo hành",
+          "v": "24 tháng 1 đổi 1 tận nơi chính hãng Chu Gia Security"
         }
       ]
     }

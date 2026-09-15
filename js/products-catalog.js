@@ -2429,7 +2429,7 @@
     if (!el.quickPills) return;
 
     // Featured top categories order
-    const featuredOrder = [53999, 52930, 52929, 52931, 52932, 52936, 52945, 52940, 52941, 52948, 53652, 53301];
+    const featuredOrder = [53999, 52930, 52929, 52931, 52932, 52936, 52945, 52940, 52941, 54003, 54001, 54002, 52948, 53652, 53301];
     const sortedCats = [...state.categories].sort((a, b) => {
       const idxA = featuredOrder.indexOf(a.id);
       const idxB = featuredOrder.indexOf(b.id);
@@ -2889,6 +2889,11 @@
           const b = (p.brand || '').toUpperCase();
           return b === 'TP-LINK' || b === 'OMADA' || p.primaryCategoryId === 53999;
         });
+      } else if (brandUpper === 'TUYA' || brandUpper === 'ZITECH') {
+        list = list.filter(p => {
+          const b = (p.brand || '').toUpperCase();
+          return b.includes('TUYA') || b.includes('ZITECH') || p.primaryCategoryId === 54001;
+        });
       } else {
         list = list.filter(p => (p.brand || '').toUpperCase() === brandUpper);
       }
@@ -2918,13 +2923,17 @@
     // 4. Search Query
     if (state.searchQuery) {
       const q = state.searchQuery.toLowerCase().trim();
+      const terms = q.split(/\s+/).filter(Boolean);
       list = list.filter(p => {
-        return (
-          p.name.toLowerCase().includes(q) ||
-          (p.sku && p.sku.toLowerCase().includes(q)) ||
-          (p.brand && p.brand.toLowerCase().includes(q)) ||
-          (p.categoryName && p.categoryName.toLowerCase().includes(q))
-        );
+        const fullText = (
+          p.name + ' ' + 
+          (p.sku || '') + ' ' + 
+          (p.brand || '') + ' ' + 
+          (p.categoryName || '') + ' ' + 
+          (p.description || '') + ' ' + 
+          (p.features ? p.features.join(' ') : '')
+        ).toLowerCase();
+        return terms.every(term => fullText.includes(term));
       });
     }
 
