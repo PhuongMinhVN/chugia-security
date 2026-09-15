@@ -13,8 +13,10 @@
   display: none;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 16px;
   animation: modalOverlayFade 0.25s ease;
+  overflow-y: auto;
+  box-sizing: border-box;
 }
 
 .modal-overlay.active {
@@ -29,8 +31,8 @@
 .modal-card {
   background: #ffffff;
   border-radius: 18px;
-  max-width: 860px;
-  width: 100%;
+  max-width: 880px;
+  width: min(95vw, 880px);
   max-height: 90vh;
   overflow-y: auto;
   overflow-x: hidden;
@@ -39,6 +41,8 @@
   animation: modalPop 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   color: #0f172a;
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  box-sizing: border-box;
+  margin: auto;
 }
 
 @keyframes modalPop {
@@ -80,9 +84,11 @@
 
 .modal-grid {
   display: grid;
-  grid-template-columns: 1fr 1.15fr;
-  gap: 32px;
-  padding: 32px;
+  grid-template-columns: minmax(0, 350px) minmax(0, 1fr);
+  gap: 24px;
+  padding: 24px 28px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 /* Gallery Left */
@@ -184,6 +190,10 @@
 .modal-details {
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .modal-brand-tag {
@@ -197,23 +207,32 @@
 }
 
 .modal-title {
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: #0f172a;
   line-height: 1.35;
   margin-bottom: 12px;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .modal-meta-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 8px;
   background: #f8fafc;
-  padding: 12px 16px;
+  padding: 10px 14px;
   border-radius: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   font-size: 0.82rem;
   border: 1px solid #e2e8f0;
+  box-sizing: border-box;
+}
+
+.modal-meta-item {
+  min-width: 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .modal-meta-item strong {
@@ -224,6 +243,7 @@
 .modal-meta-item span {
   color: #0f172a;
   font-weight: 600;
+  word-break: break-all;
 }
 
 .modal-pricing {
@@ -262,22 +282,42 @@
 /* Modal Tabs Navigation */
 .modal-tabs-nav {
   display: flex;
-  gap: 6px;
+  gap: 4px;
   background: #f1f5f9;
   padding: 4px;
   border-radius: 10px;
   margin-bottom: 14px;
   border: 1px solid #e2e8f0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.modal-tabs-nav::-webkit-scrollbar {
+  display: none;
 }
 
 .modal-tab-btn {
-  flex: 1;
+  flex: 1 0 auto;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 8px 10px;
+  padding: 7px 10px;
   border-radius: 7px;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+  font-family: inherit;
+}
   border: none;
   background: transparent;
   color: #64748b;
@@ -513,27 +553,60 @@
 /* Action Buttons */
 .modal-actions {
   display: flex;
-  gap: 10px;
-  margin-top: auto;
   flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn-modal-chugia {
+  flex: 1 1 170px;
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 0.84rem;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none !important;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+  border: none;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.btn-modal-chugia:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.5);
+  color: #ffffff !important;
 }
 
 .btn-modal-cart {
-  flex: 1.2;
+  flex: 1 1 170px;
+  min-width: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 12px 18px;
+  padding: 10px 14px;
   border-radius: 8px;
   background: #0068ff;
   color: #ffffff;
-  font-size: 0.9rem;
+  font-size: 0.84rem;
   font-weight: 700;
   border: none;
   cursor: pointer;
   transition: opacity 0.2s, transform 0.2s;
   text-decoration: none;
+  white-space: nowrap;
+  box-sizing: border-box;
 }
 
 .btn-modal-cart:hover {
@@ -542,28 +615,31 @@
 }
 
 .modal-actions-subgroup {
+  flex: 1 1 100%;
   display: flex;
-  gap: 8px;
-  flex: 2;
-  min-width: 0;
+  gap: 6px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .btn-modal-zalo {
   flex: 1;
+  min-width: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 12px 14px;
+  padding: 9px 4px;
   border-radius: 8px;
   background: #0084ff;
   color: #ffffff;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
   text-decoration: none;
   border: none;
   cursor: pointer;
   transition: opacity 0.2s;
+  box-sizing: border-box;
 }
 
 .btn-modal-zalo:hover {
@@ -572,18 +648,20 @@
 
 .btn-modal-messenger {
   flex: 1;
+  min-width: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 12px 14px;
+  padding: 9px 4px;
   border-radius: 8px;
   background: #1877f2;
   color: #ffffff;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
   text-decoration: none;
   transition: opacity 0.2s;
+  box-sizing: border-box;
 }
 
 .btn-modal-messenger:hover {
@@ -592,18 +670,20 @@
 
 .btn-modal-call {
   flex: 1;
+  min-width: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 12px 14px;
+  padding: 9px 4px;
   border-radius: 8px;
   background: #f97316;
   color: #ffffff;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
   text-decoration: none;
   transition: opacity 0.2s;
+  box-sizing: border-box;
 }
 
 .btn-modal-call:hover {
@@ -614,13 +694,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
+  width: 38px;
+  height: 38px;
   border-radius: 8px;
   background: #f1f5f9;
   border: 1px solid #cbd5e1;
   color: #475569;
   cursor: pointer;
   transition: all 0.2s;
+  flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .btn-modal-share:hover {
@@ -631,19 +714,27 @@
 /* Chat Product Links in messages */
 .chat-prod-link {
   display: inline-flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   color: #38bdf8 !important;
   text-decoration: none !important;
   font-weight: 600;
-  padding: 2px 10px;
+  padding: 4px 10px;
   background: rgba(56, 189, 248, 0.12);
   border: 1px solid rgba(56, 189, 248, 0.35);
-  border-radius: 6px;
-  margin: 2px 2px;
+  border-radius: 8px;
+  margin: 3px 0;
   transition: all 0.2s ease;
   cursor: pointer;
   vertical-align: middle;
+  max-width: 100%;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+.chat-prod-link strong {
+  word-break: break-word;
 }
 
 .chat-prod-link:hover {
@@ -669,6 +760,7 @@
   vertical-align: middle;
   transition: all 0.2s ease;
   font-family: inherit;
+  white-space: nowrap;
 }
 
 .chat-prod-quickbtn:hover {
@@ -685,12 +777,13 @@
   font-size: 11px;
   background: rgba(56, 189, 248, 0.2);
   color: #38bdf8;
-  padding: 1px 7px;
-  border-radius: 8px;
+  padding: 2px 8px;
+  border-radius: 6px;
   font-weight: 700;
-  margin-left: 5px;
   border: 1px solid rgba(56, 189, 248, 0.35);
   letter-spacing: 0.2px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .chat-prod-buy-btn {
@@ -701,15 +794,15 @@
   background: linear-gradient(135deg, #10b981 0%, #059669 100%);
   color: #ffffff !important;
   padding: 2px 9px;
-  border-radius: 8px;
+  border-radius: 6px;
   font-weight: 700;
-  margin-left: 4px;
   border: 1px solid rgba(16, 185, 129, 0.5);
   box-shadow: 0 2px 6px rgba(16, 185, 129, 0.35);
   letter-spacing: 0.2px;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   white-space: nowrap;
+  flex-shrink: 0;
   vertical-align: middle;
 }
 
@@ -736,7 +829,9 @@
   animation: inlinePreviewSlideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
   position: relative;
   overflow: hidden;
-  max-width: 480px;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @keyframes inlinePreviewSlideDown {
@@ -987,27 +1082,29 @@
   color: #ffffff !important;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 860px) {
   .modal-overlay {
     padding: 8px;
+    align-items: flex-start;
   }
   .modal-card {
     max-height: 94vh;
     border-radius: 16px;
+    width: 100%;
+    margin: auto;
   }
   .modal-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 20px;
+    gap: 18px;
+    padding: 16px;
   }
-  .modal-actions {
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
+  .modal-main-img-wrap {
+    padding-top: 75%;
   }
+  .btn-modal-chugia,
   .btn-modal-cart {
-    width: 100% !important;
-    padding: 12px 14px;
+    width: 100%;
+    flex: 1 1 100%;
   }
   .modal-actions-subgroup {
     width: 100%;
