@@ -1,0 +1,58 @@
+{
+  "id": "/?source=pwa",
+  "name": "Chu Gia Security - An Ninh & Smarthome",
+  "short_name": "Chu Gia",
+  "description": "Trợ lý AI tư vấn Camera, Mạng Wifi, Khóa Thông Minh & Smarthome Chu Gia Security",
+  "start_url": "./index.html?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "portrait-primary",
+  "background_color": "#0a0f1a",
+  "theme_color": "#0a0f1a",
+  "lang": "vi-VN",
+  "categories": ["business", "shopping", "utilities"],
+  "icons": [
+    {
+      "src": "images/pwa-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "images/pwa-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "images/pwa-icon-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Trợ Lý AI Chu Gia",
+      "short_name": "AI Chat",
+      "description": "Tư vấn thiết bị và giải pháp an ninh",
+      "url": "./index.html?source=pwa_shortcut_chat",
+      "icons": [{ "src": "images/pwa-icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Kho Sản Phẩm",
+      "short_name": "Sản phẩm",
+      "description": "Xem danh mục 540+ thiết bị",
+      "url": "./san-pham.html?source=pwa_shortcut_products",
+      "icons": [{ "src": "images/pwa-icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Báo Giá Dự Toán",
+      "short_name": "Dự toán",
+      "description": "Báo giá nhanh dự toán công trình",
+      "url": "./du-toan.html?source=pwa_shortcut_dutoan",
+      "icons": [{ "src": "images/pwa-icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

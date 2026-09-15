@@ -8,7 +8,15 @@
 
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="apple-touch-icon" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+  <!-- PWA Manifest & Mobile Web App Meta Tags -->
+  <link rel="manifest" href="manifest.webmanifest?v=20260915">
+  <meta name="theme-color" content="#0a0f1a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Chu Gia">
+  <meta name="mobile-web-app-capable" content="yes">
 
   <!-- Open Graph -->
   <meta property="og:locale" content="vi_VN">
@@ -29,7 +37,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/landing.css?v=20260915_0955">
+  <link rel="stylesheet" href="css/landing.css?v=20260915_1005">
   <link rel="stylesheet" href="css/product-modal.css?v=20260915_0934">
 </head>
 <body>
@@ -54,6 +62,13 @@
           </svg>
           <span>Chat mới</span>
         </button>
+        <button type="button" class="landing-btn-pwa" id="pwaInstallBtn" title="Cài ứng dụng Chu Gia vào màn hình điện thoại">
+          <svg class="pwa-icon-svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+          </svg>
+          <span>Cài App</span>
+        </button>
         <a href="tel:0941204125" class="landing-header-link nav-hotline">📞 0941 204 125</a>
         <a href="du-toan.html" class="landing-header-link nav-desktop-link" target="_blank" rel="noopener noreferrer">🏠 Trang Chủ</a>
         <a href="san-pham.html" class="landing-header-link nav-desktop-link">Kho 540+ Thiết Bị</a>
@@ -70,7 +85,16 @@
         <h1 class="sr-only">Chu Gia Security - Trợ Lý AI Tư Vấn An Ninh &amp; Smarthome</h1>
         <img src="images/logo_chugia_horizontal.svg?v=20260915_0815" alt="Chu Gia Security" class="landing-logo">
         <p class="landing-tagline">Trợ lý AI tư vấn <strong>An Ninh &amp; Smarthome</strong> • Since 2014</p>
-        <a href="du-toan.html" class="landing-home-btn" target="_blank" rel="noopener noreferrer">🏠 Trang Chủ — chugia.shop</a>
+        <div class="landing-hero-links">
+          <a href="du-toan.html" class="landing-home-btn" target="_blank" rel="noopener noreferrer">🏠 Trang Chủ — chugia.shop</a>
+          <button type="button" class="landing-home-btn landing-pwa-hero-btn" id="pwaHeroBtn" title="Cài đặt Chu Gia App ra màn hình chính">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+              <line x1="12" y1="18" x2="12.01" y2="18"></line>
+            </svg>
+            <span>Cài App Điện Thoại</span>
+          </button>
+        </div>
       </div>
 
       <!-- Search / Chat Input -->
@@ -1236,5 +1260,70 @@
     </div>
   </div>
 
+  <!-- PWA Install Modal (for iOS & Browser instructions) -->
+  <div class="pwa-modal-overlay" id="pwaModal" style="display: none;">
+    <div class="pwa-modal-card">
+      <div class="pwa-modal-header">
+        <div class="pwa-modal-icon-badge">
+          <img src="images/pwa-icon-192.png" alt="Chu Gia Security Logo">
+        </div>
+        <div class="pwa-modal-title-wrap">
+          <h3 class="pwa-modal-title">Cài Đặt App Chu Gia</h3>
+          <p class="pwa-modal-sub">Trải nghiệm ứng dụng an ninh &amp; smarthome toàn màn hình, mượt mà trên điện thoại</p>
+        </div>
+        <button type="button" class="pwa-modal-close" id="pwaModalClose" aria-label="Đóng">✕</button>
+      </div>
+
+      <div class="pwa-modal-body" id="pwaModalBody">
+        <div class="pwa-steps-list ios-steps" id="pwaIosSteps">
+          <div class="pwa-step-item">
+            <span class="pwa-step-num">1</span>
+            <div class="pwa-step-text">
+              Nhấn nút <strong>Chia sẻ</strong> <span class="pwa-share-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> Share</span> ở thanh công cụ Safari.
+            </div>
+          </div>
+          <div class="pwa-step-item">
+            <span class="pwa-step-num">2</span>
+            <div class="pwa-step-text">
+              Cuộn menu xuống và chọn <strong>"Thêm vào MH chính"</strong> (Add to Home Screen <span class="pwa-plus-badge">➕</span>).
+            </div>
+          </div>
+          <div class="pwa-step-item">
+            <span class="pwa-step-num">3</span>
+            <div class="pwa-step-text">
+              Nhấn <strong>"Thêm" (Add)</strong> ở góc trên bên phải. Biểu tượng Chu Gia Security sẽ xuất hiện trên màn hình chính!
+            </div>
+          </div>
+        </div>
+
+        <div class="pwa-steps-list android-steps" id="pwaAndroidSteps" style="display: none;">
+          <div class="pwa-step-item">
+            <span class="pwa-step-num">1</span>
+            <div class="pwa-step-text">
+              Nhấn biểu tượng <strong>Menu (3 chấm ⋮)</strong> ở góc trên bên phải trình duyệt Chrome/Samsung Internet.
+            </div>
+          </div>
+          <div class="pwa-step-item">
+            <span class="pwa-step-num">2</span>
+            <div class="pwa-step-text">
+              Chọn <strong>"Cài đặt ứng dụng"</strong> hoặc <strong>"Thêm vào màn hình chính"</strong>.
+            </div>
+          </div>
+          <div class="pwa-step-item">
+            <span class="pwa-step-num">3</span>
+            <div class="pwa-step-text">
+              Xác nhận <strong>"Cài đặt"</strong> để mở app Chu Gia toàn màn hình như ứng dụng di động gốc!
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pwa-modal-footer">
+        <button type="button" class="pwa-modal-action-btn" id="pwaModalActionBtn">Đã hiểu</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/pwa-install.js?v=20260915"></script>
 </body>
 </html>
