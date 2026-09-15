@@ -89,6 +89,7 @@
   padding: 24px 28px;
   box-sizing: border-box;
   width: 100%;
+  min-width: 0;
 }
 
 /* Gallery Left */
@@ -96,16 +97,21 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .modal-main-img-wrap {
   width: 100%;
+  max-width: 100%;
   padding-top: 90%;
   position: relative;
   background: #f8fafc;
   border-radius: 12px;
   border: 1px solid #e2e8f0;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .modal-img-top-brand {
@@ -162,6 +168,11 @@
   gap: 8px;
   overflow-x: auto;
   padding: 2px 0;
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
 }
 
 .modal-thumb {
@@ -1091,15 +1102,40 @@
     max-height: 94vh;
     border-radius: 16px;
     width: 100%;
+    max-width: 100%;
     margin: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
   }
   .modal-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) !important;
     gap: 18px;
     padding: 16px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+  }
+  .modal-gallery-box,
+  .modal-details {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
   .modal-main-img-wrap {
-    padding-top: 75%;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-top: 80% !important;
+    box-sizing: border-box !important;
+  }
+  .modal-thumbs {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
   }
   .btn-modal-chugia,
   .btn-modal-cart {
@@ -1122,5 +1158,21 @@
   .modal-tab-btn {
     padding: 7px 8px;
     font-size: 0.74rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-img-watermark {
+    width: 135px;
+    bottom: 10px;
+    left: 10px;
+  }
+  .modal-img-top-brand {
+    top: 10px;
+    left: 10px;
+  }
+  .modal-brand-badge-pill {
+    padding: 4px 10px;
+    font-size: 0.68rem;
   }
 }

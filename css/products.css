@@ -1167,6 +1167,11 @@
   display: flex;
   gap: 8px;
   overflow-x: auto;
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
 }
 
 .modal-thumb {
@@ -1927,9 +1932,25 @@
 
   .modal-details,
   .modal-gallery-box {
-    min-width: 0;
-    max-width: 100%;
-    overflow-x: hidden;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .modal-main-img-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .modal-thumbs {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
   }
 
   .modal-tabs-nav {
