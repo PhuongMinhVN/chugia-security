@@ -390,6 +390,7 @@ def main():
     print(f"  Server (Root): http://localhost:{PORT}/")
     print(f"  Trang Chủ AI:  http://localhost:{PORT}/index.html")
     print(f"  Bảng Dự Toán:  http://localhost:{PORT}/du-toan.html")
+    print(f"  Combo Wi-Fi:   http://localhost:{PORT}/combo-wifi.html")
     print(f"  Sản Phẩm:      http://localhost:{PORT}/san-pham.html")
     print(f"  API Key:       {'OK - Loaded' if DEEPSEEK_API_KEY else 'MISSING - Check .env'}")
     print(f"  Products:      Loaded")

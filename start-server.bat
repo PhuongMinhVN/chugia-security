@@ -10,6 +10,7 @@ echo   Dang khoi dong server...
 echo   Trang Chu AI: http://localhost:8000/
 echo   Trang Web:    https://chugia.shop/
 echo   Du Toan:      http://localhost:8000/du-toan.html
+echo   Combo Wi-Fi:  http://localhost:8000/combo-wifi.html
 echo.
 echo   Nhan Ctrl+C de dung server
 echo ============================================================
