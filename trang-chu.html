@@ -38,7 +38,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/landing.css?v=20260915_1005">
-  <link rel="stylesheet" href="css/product-modal.css?v=20260916_0025">
+  <link rel="stylesheet" href="css/product-modal.css?v=20260916_0820">
 </head>
 <body>
 
@@ -905,7 +905,10 @@
       document.querySelectorAll('.modal-tab-pane').forEach(p => p.classList.remove('active'));
       const firstTabBtn = document.querySelector('.modal-tab-btn[data-tab="tab-specs"]');
       const firstTabPane = document.getElementById('tab-specs');
-      if (firstTabBtn) firstTabBtn.classList.add('active');
+      if (firstTabBtn) {
+        firstTabBtn.classList.add('active');
+        if (modalTabsNav) modalTabsNav.scrollLeft = 0;
+      }
       if (firstTabPane) firstTabPane.classList.add('active');
 
       // Open Modal
@@ -914,6 +917,26 @@
     }
 
     window.openProductQuickView = openProductQuickView;
+
+    // Center active tab in scrollable tab navigation
+    function centerModalTab(btn) {
+      if (!btn) return;
+      const nav = btn.closest('.modal-tabs-nav') || modalTabsNav;
+      if (!nav) return;
+      const navRect = nav.getBoundingClientRect();
+      const btnRect = btn.getBoundingClientRect();
+      const currentScroll = nav.scrollLeft;
+      const targetScroll = currentScroll + (btnRect.left - navRect.left) - (navRect.width / 2) + (btnRect.width / 2);
+      nav.scrollTo({
+        left: Math.max(0, targetScroll),
+        behavior: 'smooth'
+      });
+    }
+
+    window.switchProductModalTab = (tabId) => {
+      const btn = document.querySelector(`.modal-tab-btn[data-tab="${tabId}"]`);
+      if (btn) btn.click();
+    };
 
     // Gallery Thumbs Click
     modalThumbs.addEventListener('click', (e) => {
@@ -934,6 +957,7 @@
       btn.classList.add('active');
       const pane = document.getElementById(targetTab);
       if (pane) pane.classList.add('active');
+      centerModalTab(btn);
     });
 
     // Close Modal

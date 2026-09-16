@@ -1277,6 +1277,17 @@
   border-radius: 10px;
   margin-bottom: 14px;
   border: 1px solid #e2e8f0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.modal-tabs-nav::-webkit-scrollbar {
+  display: none;
 }
 
 .modal-tab-btn {
@@ -1958,8 +1969,11 @@
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    scroll-behavior: smooth;
     padding: 4px;
     gap: 4px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .modal-tabs-nav::-webkit-scrollbar {
@@ -1967,10 +1981,11 @@
   }
 
   .modal-tab-btn {
-    flex-shrink: 0;
-    padding: 8px 10px;
+    flex: 0 0 auto;
+    padding: 8px 11px;
     font-size: 0.76rem;
     white-space: nowrap;
+    scroll-margin: 0 20px;
   }
 }
 

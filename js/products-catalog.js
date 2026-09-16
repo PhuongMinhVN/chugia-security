@@ -2735,6 +2735,25 @@
       });
     }
 
+    function centerModalTab(btn, nav) {
+      if (!btn) return;
+      const navEl = nav || btn.closest('.modal-tabs-nav') || el.modalTabsNav;
+      if (!navEl) return;
+      const navRect = navEl.getBoundingClientRect();
+      const btnRect = btn.getBoundingClientRect();
+      const currentScroll = navEl.scrollLeft;
+      const targetScroll = currentScroll + (btnRect.left - navRect.left) - (navRect.width / 2) + (btnRect.width / 2);
+      navEl.scrollTo({
+        left: Math.max(0, targetScroll),
+        behavior: 'smooth'
+      });
+    }
+
+    window.switchProductModalTab = (tabId) => {
+      const btn = document.querySelector(`.modal-tab-btn[data-tab="${tabId}"]`);
+      if (btn) btn.click();
+    };
+
     // Modal Tab Buttons Switcher
     if (el.modalTabsNav) {
       el.modalTabsNav.addEventListener('click', e => {
@@ -2749,6 +2768,7 @@
         btn.classList.add('active');
         const targetPane = document.getElementById(targetTabId);
         if (targetPane) targetPane.classList.add('active');
+        centerModalTab(btn, el.modalTabsNav);
       });
     }
 
@@ -3714,7 +3734,10 @@
     document.querySelectorAll('.modal-tab-pane').forEach(p => p.classList.remove('active'));
     const defaultTabBtn = document.querySelector(`.modal-tab-btn[data-tab="${firstVisible}"]`);
     const defaultTabPane = document.getElementById(firstVisible);
-    if (defaultTabBtn) defaultTabBtn.classList.add('active');
+    if (defaultTabBtn) {
+      defaultTabBtn.classList.add('active');
+      if (el.modalTabsNav) el.modalTabsNav.scrollLeft = 0;
+    }
     if (defaultTabPane) defaultTabPane.classList.add('active');
 
     if (el.quickViewModal) {
