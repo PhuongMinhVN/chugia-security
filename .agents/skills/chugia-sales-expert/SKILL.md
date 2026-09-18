@@ -200,25 +200,27 @@ Một giải pháp Smarthome chuẩn chỉ và ổn định tại Chu Gia Securi
 ---
 
 ### ⭐ GIẢI PHÁP SMARTHOME MOES LUXURY & HOME ASSISTANT CHU GIA SECURITY (ƯU TIÊN TUYỆT ĐỐI):
-Khi khách hàng quan tâm đến giải pháp **Nhà thông minh (Smarthome), công tắc thông minh, cảm biến radar, điều khiển rèm, combo smarthome hoặc tích hợp Home Assistant**, chuyên gia BẮT BUỘC đề xuất hệ sinh thái **MOES Luxury cao cấp** (chuẩn chữ nhật US 120x72mm hoặc vuông EU 86x86mm):
+Khi khách hàng quan tâm đến giải pháp **Nhà thông minh (Smarthome), công tắc thông minh, cảm biến radar, điều khiển rèm, combo smarthome hoặc tích hợp Home Assistant**, chuyên gia BẮT BUỘC đề xuất hệ sinh thái **CÔNG TẮC CƠ MOES LUXURY PUSH BUTTON**:
 > [!IMPORTANT]
-> **TUYỆT ĐỐI CẤM TƯ VẤN CÁC DÒNG TUYA CƠ GIÁ RẺ, THIẾT BỊ CẤP THẤP**. 100% tư vấn thương hiệu **MOES chính hãng cao cấp**: Dòng Flagship Moes Star Feather viền đèn LED chuyển động Flowing Backlight, Mặt kính cường lực 2.5D Arc Glass vát cong sang trọng, Cảm biến radar mmWave 24GHz phát hiện hơi thở vi mô, Màn hình cảm ứng Smart Control Panel 4 inch gắn tường, và Bộ điều khiển trung tâm Moes Gateway Hub cổng LAN RJ45 siêu bền bỉ.
+> **NÓI KHÔNG VỚI CÁC LOẠI CÔNG TẮC CẢM ỨNG RẺ TIỀN**. 100% chuyên gia tư vấn **CÔNG TẮC CƠ ĐÀN HỒI NẢY ÊM PUSH BUTTON (Dòng Star Feather Luxury / Star Grand Series / Màn hình có phím cơ vật lý)**. Khi tư vấn, **BẮT BUỘC PHẢI PHÂN BIỆT RÕ 3 YẾU TỐ**:
+> 1. **MÀU SẮC**: Màu Trắng Tinh Khôi (White - WH) hay Màu Đen Nhám / Xám Khói (Black / Grey - BK/GY) chống bám vân tay.
+> 2. **CHUẨN ĐẾ ÂM**: Chuẩn Chữ Nhật US (120x72mm, phổ biến tại Việt Nam) hay Chuẩn Vuông EU (86x86mm, chuẩn Châu Âu sang trọng).
+> 3. **SỐ LƯỢNG NÚT BẤM CƠ (1 ĐẾN 3 NÚT)**: Bố trí cụ thể 1 nút, 2 nút, 3 nút bấm cho từng vị trí phòng khách, phòng ngủ, nhà vệ sinh. Khách mua combo được tùy ý phối ghép số nút và chọn màu sắc miễn phí!
 
-1. **Dòng Công tắc Flagship Moes Star Feather Luxury Series (Đỉnh cao thẩm mỹ & công nghệ)**:
-   - Đèn nền LED chuyển động viền Flowing Backlight, mặt kính mờ chống chói Anti-Glare siêu sang, tùy chọn chuẩn chữ nhật US hoặc vuông EU:
-     - `[Công tắc thông minh Moes Star Feather Luxury Zigbee US](https://chugia.shop/san-pham.html#prod-ZS-SF-US1-WH-MS)` | SKU: `ZS-SF-US1-WH-MS` | Giá: **1.320.000₫** (Chuẩn chữ nhật US)
-     - `[Công tắc thông minh Moes Star Feather Luxury Zigbee EU](https://chugia.shop/san-pham.html#prod-ZS-SF-EU1-WH-MS)` | SKU: `ZS-SF-EU1-WH-MS` | Giá: **1.320.000₫** (Chuẩn vuông EU)
-     - `[Công tắc Dimmer Moes Star Feather Luxury Zigbee US](https://chugia.shop/san-pham.html#prod-ZS-SF-USD-WH-MS)` | SKU: `ZS-SF-USD-WH-MS` | Giá: **1.390.000₫** (Chiết áp chỉnh độ sáng đèn US)
-     - `[Công tắc Dimmer Moes Star Feather Luxury Zigbee EU](https://chugia.shop/san-pham.html#prod-ZS-SF-EUD-WH-MS)` | SKU: `ZS-SF-EUD-WH-MS` | Giá: **1.390.000₫** (Chiết áp chỉnh độ sáng đèn EU)
-     - `[Công tắc rèm Moes Star Feather Luxury Zigbee US](https://chugia.shop/san-pham.html#prod-ZS-SF-USC-WH-MS)` | SKU: `ZS-SF-USC-WH-MS` | Giá: **1.210.000₫**
-     - `[Công tắc rèm Moes Star Feather Luxury Zigbee EU](https://chugia.shop/san-pham.html#prod-ZS-SF-EUC-WH-MS)` | SKU: `ZS-SF-EUC-WH-MS` | Giá: **1.210.000₫**
+1. **Dòng Công tắc Cơ Flagship Moes Star Feather Luxury Series (Phím cơ nảy êm Push Button 2in1 Light & Scene, Đèn nền Flowing Backlight)**:
+   - **Tùy chọn Chuẩn Chữ Nhật US (120x72mm - Vừa khít đế âm Sino/Panasonic/Schneider)**:
+     - `[Công tắc cơ Moes Star Feather Luxury Zigbee US](https://chugia.shop/san-pham.html#prod-ZS-SF-US1-WH-MS)` | SKU: `ZS-SF-US1-WH-MS` | Giá: **1.320.000₫** (Tùy chọn 1 nút, 2 nút, 3 nút bấm; Màu Trắng WH hoặc Màu Đen BK)
+     - `[Công tắc Dimmer cơ Moes Star Feather Luxury Zigbee US](https://chugia.shop/san-pham.html#prod-ZS-SF-USD-WH-MS)` | SKU: `ZS-SF-USD-WH-MS` | Giá: **1.390.000₫** (Chiết áp chỉnh độ sáng đèn US)
+     - `[Công tắc rèm cơ Moes Star Feather Luxury Zigbee US](https://chugia.shop/san-pham.html#prod-ZS-SF-USC-WH-MS)` | SKU: `ZS-SF-USC-WH-MS` | Giá: **1.210.000₫**
+   - **Tùy chọn Chuẩn Vuông EU (86x86mm - Tiêu chuẩn Châu Âu cho Căn hộ cao cấp & Biệt thự)**:
+     - `[Công tắc cơ Moes Star Feather Luxury Zigbee EU](https://chugia.shop/san-pham.html#prod-ZS-SF-EU1-WH-MS)` | SKU: `ZS-SF-EU1-WH-MS` | Giá: **1.320.000₫** (Tùy chọn 1 nút, 2 nút, 3 nút bấm; Màu Trắng WH hoặc Màu Đen BK)
+     - `[Công tắc Dimmer cơ Moes Star Feather Luxury Zigbee EU](https://chugia.shop/san-pham.html#prod-ZS-SF-EUD-WH-MS)` | SKU: `ZS-SF-EUD-WH-MS` | Giá: **1.390.000₫** (Chiết áp chỉnh độ sáng đèn EU)
+     - `[Công tắc rèm cơ Moes Star Feather Luxury Zigbee EU](https://chugia.shop/san-pham.html#prod-ZS-SF-EUC-WH-MS)` | SKU: `ZS-SF-EUC-WH-MS` | Giá: **1.210.000₫**
 
-2. **Dòng Công tắc Mặt kính cường lực 2.5D Arc Glass & Chuẩn Matter WiFi / Zigbee 3.0**:
-   - `[Công tắc kính cường lực 2.5D MOES Matter WiFi US](https://chugia.shop/san-pham.html#prod-MWS-US1-3D-WH-MS)` | SKU: `MWS-US1-3D-WH-MS` | Giá: **860.000₫**
-   - `[Công tắc kính cường lực 2.5D MOES Matter WiFi EU](https://chugia.shop/san-pham.html#prod-MWS-EU1-3D-WH-MS)` | SKU: `MWS-EU1-3D-WH-MS` | Giá: **860.000₫**
-   - `[Công tắc cảm ứng kính MOES Zigbee US](https://chugia.shop/san-pham.html#prod-ZS-US1-LN-WH-MS)` | SKU: `ZS-US1-LN-WH-MS` | Giá: **820.000₫**
-   - `[Công tắc cảm ứng kính MOES Zigbee EU](https://chugia.shop/san-pham.html#prod-ZS-EU1-WH-MS)` | SKU: `ZS-EU1-WH-MS` | Giá: **1.000.000₫**
-   - `[Công tắc rèm kính 2.5D Arc Glass MOES Zigbee](https://chugia.shop/san-pham.html#prod-MOES-ZRS-EUC-3D-WH-MS)` | SKU: `MOES-ZRS-EUC-3D-WH-MS` | Giá: **960.000₫**
+2. **Dòng Công tắc Cơ Star Grand Matter / WiFi & Màn Hình Tích Hợp Phím Cơ Vật Lý**:
+   - `[Công tắc thông minh Star Grand Matter Full-Touch US](https://chugia.shop/san-pham.html#prod-MWS-SG-US1-WH-MS)` | SKU: `MWS-SG-US1-WH-MS` | Giá: **1.280.000₫** (Phím cơ đàn hồi toàn bề mặt phẳng Full-Touch, tải 10A 2200W, Matter kết nối Apple Home/Google)
+   - `[Màn hình điều khiển Smart Panel 3.5 inch kèm 3 Phím Cơ Vật Lý MOES](https://chugia.shop/san-pham.html#prod-MOES-CCP-S05-EU-GY-MS)` | SKU: `MOES-CCP-S05-EU-GY-MS` | Giá: **5.710.000₫** (Màn hình cảm ứng tích hợp 3 phím bấm cơ vật lý Physical Buttons màu Xám Kim Loại, cực tiện dụng cho người già và trẻ nhỏ)
+   - `[Màn hình AI Desktop Smart Control Panel MOES](https://chugia.shop/san-pham.html#prod-MOES-CCP-5S-EU-MS)` | SKU: `MOES-CCP-5S-EU-MS` | Giá: **7.140.000₫** (Màn hình để bàn tích hợp Alexa & Zigbee Hub)
 
 3. **Công tắc công suất lớn 20A (4400W) cho Bình nóng lạnh, Máy lạnh, Bếp từ**:
    - `[Công tắc bình nóng lạnh 20A cảm ứng MOES Zigbee](https://chugia.shop/san-pham.html#prod-ZS-DL-EUB-WH-MS)` | SKU: `ZS-DL-EUB-WH-MS` | Giá: **1.030.000₫**

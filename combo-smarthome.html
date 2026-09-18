@@ -668,6 +668,106 @@
         grid-template-columns: 1fr;
       }
     }
+  
+    /* MOES Mechanical Switch Showcase */
+    .moes-switch-showcase {
+      padding: 50px 0 20px 0;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.6) 0%, rgba(30, 27, 75, 0.4) 100%);
+      border-top: 1px solid rgba(168, 85, 247, 0.2);
+      border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+      margin-bottom: 40px;
+    }
+    .moes-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 28px;
+    }
+    .moes-card {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      border-radius: 18px;
+      padding: 22px 20px;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .moes-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(168, 85, 247, 0.6);
+      box-shadow: 0 12px 30px rgba(168, 85, 247, 0.2);
+    }
+    .moes-card-img-wrap {
+      width: 100%;
+      height: 180px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      position: relative;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .moes-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .moes-card:hover .moes-card-img {
+      transform: scale(1.05);
+    }
+    .moes-card-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(168, 85, 247, 0.5);
+      color: #e9d5ff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+    .moes-card-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .moes-card-desc {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      line-height: 1.5;
+      margin-bottom: 14px;
+      flex: 1;
+    }
+    .moes-specs-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: auto;
+    }
+    .moes-pill {
+      background: rgba(168, 85, 247, 0.15);
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      color: #d8b4fe;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+    .moes-pill.highlight {
+      background: rgba(16, 185, 129, 0.15);
+      border-color: rgba(16, 185, 129, 0.4);
+      color: #6ee7b7;
+    }
+
   </style>
 </head>
 <body>
@@ -932,6 +1032,108 @@
   </section>
 
   <!-- ================= 4 GÓI COMBO SMARTHOME ================= -->
+  
+  <!-- ================= SHOWCASE CÔNG TẮC CƠ MOES LUXURY PUSH BUTTON ================= -->
+  <section class="moes-switch-showcase" id="cong-tac-co-moes">
+    <div class="container">
+      <div class="sh-combos-title-box" style="margin-bottom: 20px;">
+        <span class="sh-demo-badge" style="background: linear-gradient(135deg, #10b981, #06b6d4);">✨ ĐẶC QUYỀN CÔNG TẮC CƠ MOES LUXURY PUSH BUTTON</span>
+        <h2 style="font-size: 2.1rem; font-weight: 800; color: #ffffff; margin-bottom: 10px;">
+          Hệ Thống Công Tắc Cơ MOES Luxury: Chuẩn Vuông & Chữ Nhật, 1-3 Nút Bấm
+        </h2>
+        <p style="color: #cbd5e1; font-size: 0.98rem; max-width: 860px; margin: 0 auto; line-height: 1.6;">
+          <strong style="color: #f43f5e;">NÓI KHÔNG VỚI CÁC LOẠI CÔNG TẮC CẢM ỨNG RẺ TIỀN.</strong> Chu Gia Security cam kết 100% sử dụng <strong>công tắc cơ đàn hồi nảy êm Push Button</strong> (Star Feather / Star Grand Luxury Series) với đèn nền chuyển động Flowing Backlight, phân chia rõ rệt màu sắc <strong>Trắng (White)</strong> hoặc <strong>Đen (Black)</strong>, chuẩn <strong>Chữ Nhật US</strong> hoặc <strong>Vuông EU</strong>, tùy ý phối ghép <strong>1 nút, 2 nút, 3 nút bấm</strong>.
+        </p>
+      </div>
+
+      <div class="moes-grid-4">
+        <!-- Card 1: Star Feather US Chữ Nhật -->
+        <div class="moes-card">
+          <div class="moes-card-img-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0095/4079/6497/files/ZigBeeSmartSwitchPushButtonWithNeutralLightScene2in1SwitchUSVersion-1.jpg?v=1750670642" alt="Công tắc cơ MOES Star Feather US Chữ Nhật" class="moes-card-img" />
+            <span class="moes-card-badge">CHỮ NHẬT US (120x72mm)</span>
+          </div>
+          <h3 class="moes-card-title">MOES Star Feather US (Chữ Nhật)</h3>
+          <p class="moes-card-desc">
+            Phím cơ Push Button nảy êm 2in1 (Đèn & Ngữ cảnh), viền LED chuyển động Flowing Backlight. Khớp 100% đế âm chữ nhật Sino/Panasonic thông dụng tại Việt Nam.
+          </p>
+          <div class="moes-specs-pills">
+            <span class="moes-pill highlight">⚪ Màu Trắng / ⚫ Màu Đen</span>
+            <span class="moes-pill">1 Nút / 2 Nút / 3 Nút Bấm</span>
+            <span class="moes-pill">Zigbee 3.0 / Matter WiFi</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Star Feather EU Vuông -->
+        <div class="moes-card">
+          <div class="moes-card-img-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0095/4079/6497/files/StarFeathergSeriesZigBeeSmartSwitchPushButtonWithNeutralLightScene2in1SwitchEUVersion-1.jpg?v=1750650935" alt="Công tắc cơ MOES Star Feather EU Vuông" class="moes-card-img" />
+            <span class="moes-card-badge">CHUẨN VUÔNG EU (86x86mm)</span>
+          </div>
+          <h3 class="moes-card-title">MOES Star Feather EU (Chuẩn Vuông)</h3>
+          <p class="moes-card-desc">
+            Thiết kế chuẩn vuông Châu Âu 86x86mm sang trọng, mặt kính mờ chống chói Anti-Glare, phím cơ đàn hồi nhạy bén, phối hợp hoàn hảo cho căn hộ cao cấp & biệt thự.
+          </p>
+          <div class="moes-specs-pills">
+            <span class="moes-pill highlight">⚪ Màu Trắng / ⚫ Màu Đen</span>
+            <span class="moes-pill">1 Nút / 2 Nút / 3 Nút Bấm</span>
+            <span class="moes-pill">Đế âm vuông 86 tiêu chuẩn</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Star Grand Matter Full-Touch Cơ -->
+        <div class="moes-card">
+          <div class="moes-card-img-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0095/4079/6497/files/MOESMatterWiFiSmartSwitch_StarGrandSeriesFull-Touch10A2200WPowerLoad_NeutralRequired.png?v=1778837054" alt="Công tắc MOES Star Grand Matter Full-Touch" class="moes-card-img" />
+            <span class="moes-card-badge">STAR GRAND MATTER</span>
+          </div>
+          <h3 class="moes-card-title">MOES Star Grand Full-Touch 10A</h3>
+          <p class="moes-card-desc">
+            Phím bấm cơ phẳng Full-Touch chịu tải lớn 10A 2200W, kết nối trực tiếp giao thức Matter & WiFi Tuya, điều khiển mượt mà qua Apple Home, Google & Home Assistant.
+          </p>
+          <div class="moes-specs-pills">
+            <span class="moes-pill highlight">⚪ Trắng Tinh Khôi</span>
+            <span class="moes-pill">Tải 10A 2200W</span>
+            <span class="moes-pill">Chuẩn Matter Quốc Tế</span>
+          </div>
+        </div>
+
+        <!-- Card 4: Smart Center Control Panel Physical Buttons -->
+        <div class="moes-card">
+          <div class="moes-card-img-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0095/4079/6497/files/3.5-inSmartCenterControlPanel-1.jpg?v=1753335294" alt="Màn hình MOES Smart Center 3 Phím Cơ Vật Lý" class="moes-card-img" />
+            <span class="moes-card-badge" style="background: rgba(245, 158, 11, 0.85); border-color: #f59e0b;">3 NÚT BẤM CƠ VẬT LÝ</span>
+          </div>
+          <h3 class="moes-card-title">MOES Smart Panel 3.5" (3 Phím Cơ)</h3>
+          <p class="moes-card-desc">
+            Màn hình thông minh trung tâm 3.5" tích hợp 3 nút bấm cơ vật lý (Physical Buttons) màu Xám Kim Loại cực kỳ tiện lợi cho người lớn tuổi và trẻ nhỏ thao tác nhanh.
+          </p>
+          <div class="moes-specs-pills">
+            <span class="moes-pill highlight">🔘 Màu Xám Kim Loại</span>
+            <span class="moes-pill">3 Relays Phím Cơ</span>
+            <span class="moes-pill">BLE Sigmesh Hub Built-in</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Option Matrix Banner -->
+      <div style="margin-top: 24px; background: rgba(30, 41, 59, 0.5); border: 1px dashed rgba(168, 85, 247, 0.4); border-radius: 14px; padding: 16px 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="font-size: 1.6rem;">💡</span>
+          <div>
+            <strong style="color: #ffffff; font-size: 0.95rem;">Tùy chọn phối ghép miễn phí trong mọi Combo:</strong>
+            <div style="color: #94a3b8; font-size: 0.84rem; margin-top: 2px;">
+              Quý khách được tự do chọn Màu Sắc (Trắng / Đen), Chuẩn Đế Âm (Vuông EU / Chữ Nhật US) và chia số lượng 1 Nút, 2 Nút, 3 Nút Bấm theo sơ đồ điện thực tế của nhà.
+            </div>
+          </div>
+        </div>
+        <a href="#cac-goi-combo" style="display: inline-flex; align-items: center; gap: 6px; background: linear-gradient(135deg, #a855f7, #6366f1); color: #fff; font-weight: 700; font-size: 0.85rem; padding: 8px 18px; border-radius: 999px; text-decoration: none;">
+          Xem 4 Gói Combo Bên Dưới ↓
+        </a>
+      </div>
+    </div>
+  </section>
+
   <section class="sh-combos-section" id="cac-goi-combo">
     <div class="container">
       <div class="sh-combos-title-box">
@@ -961,11 +1163,11 @@
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>04 Công tắc cảm ứng MOES Tuya Zigbee 2 nút</strong> (Tùy chọn Chuẩn Chữ Nhật US / Vuông EU).</span>
+              <span><strong>07 Công tắc CƠ MOES Star Feather Luxury Push Button</strong> (Phím cơ đàn hồi nảy êm 2in1 Light &amp; Scene, Đèn nền Flowing Backlight).</span>
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>03 Công tắc cảm ứng MOES Tuya Zigbee 3 nút</strong> điều khiển cụm đèn trần khách, bếp, ban công.</span>
+              <span><strong>Tùy chọn cấu hình miễn phí</strong>: Phân chia 1 nút, 2 nút, 3 nút bấm; Chuẩn Chữ Nhật US hoặc Vuông EU; Màu Trắng WH hoặc Đen BK.</span>
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -1010,15 +1212,15 @@
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>01 Công tắc ngữ cảnh không dây MOES Zigbee 3 Gang 9 Kịch Bản</strong> (kích hoạt Rời nhà, Ngủ...).</span>
+              <span><strong>01 Màn hình thông minh 3.5" MOES tích hợp 3 Phím Cơ Vật Lý</strong> (Physical Buttons, màu Xám Kim Loại cực sang).</span>
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>07 Công tắc cảm ứng MOES Tuya Zigbee 2 nút</strong> (Tùy chọn Chuẩn Chữ Nhật US / Vuông EU).</span>
+              <span><strong>13 Công tắc CƠ MOES Star Feather Luxury Push Button</strong> (Phím cơ bấm nảy êm, chống chói Anti-Glare, phủ khắp các tầng).</span>
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>06 Công tắc cảm ứng MOES Tuya Zigbee 3 nút</strong> phủ kín chiếu sáng hành lang và phòng sinh hoạt.</span>
+              <span><strong>Tự do phối ghép màu sắc &amp; số nút</strong>: Tùy ý chọn 1 nút, 2 nút, 3 nút bấm; Chuẩn Chữ Nhật US hoặc Vuông EU; Màu Trắng hoặc Đen/Xám.</span>
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -1055,19 +1257,19 @@
           <ul class="sh-combo-items-list">
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>01 Smart Control Panel 4 inch Moes cảm ứng gắn tường</strong> đại sảnh tích hợp Zigbee Hub (7.5tr).</span>
+              <span><strong>01 Màn hình trung tâm 3.5" MOES tích hợp 3 Phím Cơ Vật Lý</strong> sảnh chính + <strong>01 Màn hình AI Desktop MOES 5"</strong> phòng Master.</span>
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>01 Moes Gateway Hub LAN dự phòng</strong> đảm bảo mạng Mesh đa tầng thông suốt.</span>
+              <span><strong>01 Moes Wired Gateway Hub LAN RJ45 dự phòng</strong> đảm bảo mạng Mesh đa tầng thông suốt 24/7.</span>
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>10 Công tắc Dimmer MOES Star Feather Luxury</strong> (Tùy chọn Chuẩn Chữ Nhật US / Vuông EU).</span>
+              <span><strong>10 Công tắc Dimmer CƠ MOES Star Feather Luxury</strong> (Chiết áp chỉnh độ sáng đèn, chuẩn Chữ Nhật US hoặc Vuông EU).</span>
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>12 Công tắc cảm ứng MOES Tuya Zigbee 3 nút</strong> phủ kín 7-8 phòng và sân vườn.</span>
+              <span><strong>14 Công tắc CƠ MOES Star Feather Push Button</strong> (Phím cơ nảy êm, tùy chọn phối ghép 1-3 nút, Vuông/Chữ nhật, Trắng/Đen).</span>
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>

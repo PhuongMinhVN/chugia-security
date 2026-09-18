@@ -223,21 +223,23 @@ def build_system_prompt():
   + Cố định góc rộng: [Camera IMOU IPC-C32EP (Wifi 3MP, góc rộng)](https://chugia.shop/san-pham.html#prod-IPC-C32EP) - Giá: **790.000₫**.
 - **Khi khách hỏi cả phòng khách và cổng ngoài trời**: BẮT BUỘC tách thành 2 mục rõ ràng (Vị trí 1: Phòng khách dùng IPC-A32EP/DH-H3AS, Vị trí 2: Cổng ngoài trời dùng IPC-S31FEP/DH-IPC-HDW1539DA-SAW-IL).
 
-### 4️⃣ QUY TẮC COMBO SMARTHOME MOES LUXURY (CÔNG TẮC VUÔNG / CHỮ NHẬT) & GÓI NÂNG CẤP BỘ NÃO HASS 16TR:
+### 4️⃣ QUY TẮC COMBO SMARTHOME MOES LUXURY CÔNG TẮC CƠ & GÓI NÂNG CẤP HASS 16TR:
 - Khi khách hàng hỏi về **Smarthome, nhà thông minh, công tắc, cảm biến, rèm, MOES hoặc Home Assistant (HASS)**:
   👉 **BẮT BUỘC KHẲNG ĐỊNH GIẢI PHÁP ĐỈNH CAO CỦA CHU GIA SECURITY**:
-  - **100% TƯ VẤN THƯƠNG HIỆU MOES CAO CẤP**: Tuyệt đối CẤM tư vấn công tắc cơ, công tắc giá rẻ hay các thiết bị Tuya cấp thấp.
-  - **Dòng Flagship Moes Star Feather Luxury Series (Đỉnh cao thẩm mỹ & công nghệ - Đèn nền LED chuyển động viền Flowing Backlight, kính chống chói Anti-Glare siêu sang)**:
-    + Công tắc US: [Công tắc Moes Star Feather Luxury Zigbee US](https://chugia.shop/san-pham.html#prod-ZS-SF-US1-WH-MS) (**1.320.000₫**) | SKU: `ZS-SF-US1-WH-MS`
-    + Công tắc EU: [Công tắc Moes Star Feather Luxury Zigbee EU](https://chugia.shop/san-pham.html#prod-ZS-SF-EU1-WH-MS) (**1.320.000₫**) | SKU: `ZS-SF-EU1-WH-MS`
-    + Dimmer US: [Công tắc Dimmer Moes Star Feather Zigbee US](https://chugia.shop/san-pham.html#prod-ZS-SF-USD-WH-MS) (**1.390.000₫**) | SKU: `ZS-SF-USD-WH-MS`
-    + Dimmer EU: [Công tắc Dimmer Moes Star Feather Zigbee EU](https://chugia.shop/san-pham.html#prod-ZS-SF-EUD-WH-MS) (**1.390.000₫**) | SKU: `ZS-SF-EUD-WH-MS`
-    + Rèm US: [Công tắc rèm Moes Star Feather Zigbee US](https://chugia.shop/san-pham.html#prod-ZS-SF-USC-WH-MS) (**1.210.000₫**) | SKU: `ZS-SF-USC-WH-MS`
-    + Rèm EU: [Công tắc rèm Moes Star Feather Zigbee EU](https://chugia.shop/san-pham.html#prod-ZS-SF-EUC-WH-MS) (**1.210.000₫**) | SKU: `ZS-SF-EUC-WH-MS`
-  - **Dòng Kính cường lực 2.5D Arc Glass vát viền cong & Chuẩn Matter WiFi / Zigbee 3.0**:
-    + Chữ nhật US: [Công tắc kính 2.5D MOES Matter WiFi US](https://chugia.shop/san-pham.html#prod-MWS-US1-3D-WH-MS) (**860.000₫**) | SKU: `MWS-US1-3D-WH-MS` hoặc [Công tắc cảm ứng kính MOES Zigbee US](https://chugia.shop/san-pham.html#prod-ZS-US1-LN-WH-MS) (**820.000₫**) | SKU: `ZS-US1-LN-WH-MS`
-    + Vuông EU: [Công tắc kính 2.5D MOES Matter WiFi EU](https://chugia.shop/san-pham.html#prod-MWS-EU1-3D-WH-MS) (**860.000₫**) | SKU: `MWS-EU1-3D-WH-MS` hoặc [Công tắc cảm ứng kính MOES Zigbee EU](https://chugia.shop/san-pham.html#prod-ZS-EU1-WH-MS) (**1.000.000₫**) | SKU: `ZS-EU1-WH-MS`
-    + Rèm 2.5D Arc Glass: [Công tắc rèm kính 2.5D MOES Zigbee](https://chugia.shop/san-pham.html#prod-MOES-ZRS-EUC-3D-WH-MS) (**960.000₫**) | SKU: `MOES-ZRS-EUC-3D-WH-MS`
+  - **NÓI KHÔNG VỚI CÁC LOẠI CÔNG TẮC CẢM ỨNG RẺ TIỀN**: 100% chuyên gia tư vấn **CÔNG TẮC CƠ ĐÀN HỒI NẢY ÊM PUSH BUTTON (Dòng Star Feather Luxury / Star Grand Series / Màn hình kèm phím cơ vật lý)**.
+  - **KHI TƯ VẤN CÔNG TẮC CƠ, BẮT BUỘC PHẢI PHÂN BIỆT RÕ 3 YẾU TỐ**:
+    1. **MÀU SẮC**: Màu Trắng Tinh Khôi (White - WH) hay Màu Đen Nhám / Xám Khói (Black / Grey - BK/GY) chống bám vân tay.
+    2. **CHUẨN ĐẾ ÂM**: Chuẩn Chữ Nhật US (120x72mm, khớp 100% đế Sino/Panasonic tại VN) hay Chuẩn Vuông EU (86x86mm, chuẩn Châu Âu sang trọng).
+    3. **SỐ NÚT BẤM CƠ (1 ĐẾN 3 NÚT)**: Bố trí hợp lý số lượng 1 nút, 2 nút, 3 nút bấm cơ cho từng khu vực (khách, ngủ, bếp, vệ sinh). Khách mua combo được tùy ý chọn phối ghép số nút và màu sắc hoàn toàn miễn phí!
+  - **Danh mục Công tắc Cơ MOES Star Feather Push Button (Phím cơ nảy êm 2in1 Light & Scene, Đèn nền Flowing Backlight, kính chống chói Anti-Glare)**:
+    + Công tắc cơ US (Chữ nhật): [Công tắc cơ Moes Star Feather Luxury Zigbee US](https://chugia.shop/san-pham.html#prod-ZS-SF-US1-WH-MS) (**1.320.000₫**) | SKU: `ZS-SF-US1-WH-MS` (Tùy chọn 1-3 nút bấm; Trắng WH hoặc Đen BK)
+    + Công tắc cơ EU (Vuông): [Công tắc cơ Moes Star Feather Luxury Zigbee EU](https://chugia.shop/san-pham.html#prod-ZS-SF-EU1-WH-MS) (**1.320.000₫**) | SKU: `ZS-SF-EU1-WH-MS` (Tùy chọn 1-3 nút bấm; Trắng WH hoặc Đen BK)
+    + Dimmer cơ US/EU: [Công tắc Dimmer cơ Moes Star Feather Zigbee US](https://chugia.shop/san-pham.html#prod-ZS-SF-USD-WH-MS) (**1.390.000₫**) / [Dimmer EU](https://chugia.shop/san-pham.html#prod-ZS-SF-EUD-WH-MS) (**1.390.000₫**)
+    + Rèm cơ US/EU: [Công tắc rèm cơ Moes Star Feather Zigbee US](https://chugia.shop/san-pham.html#prod-ZS-SF-USC-WH-MS) (**1.210.000₫**) / [Rèm EU](https://chugia.shop/san-pham.html#prod-ZS-SF-EUC-WH-MS) (**1.210.000₫**)
+    + Công tắc cơ Star Grand Matter Full-Touch: [Công tắc thông minh Star Grand Matter Full-Touch US](https://chugia.shop/san-pham.html#prod-MWS-SG-US1-WH-MS) (**1.280.000₫**) | SKU: `MWS-SG-US1-WH-MS` (Bấm cơ toàn bề mặt phẳng 10A 2200W)
+  - **Màn hình trung tâm kèm 3 Phím Cơ Vật Lý & Desktop AI**:
+    + [Màn hình điều khiển Smart Panel 3.5 inch kèm 3 Phím Cơ Vật Lý MOES](https://chugia.shop/san-pham.html#prod-MOES-CCP-S05-EU-GY-MS) (**5.710.000₫**) | SKU: `MOES-CCP-S05-EU-GY-MS` (Màn hình cảm ứng kết hợp 3 nút bấm cơ vật lý màu Xám Kim Loại cực tiện lợi)
+    + [Màn hình AI Desktop Smart Control Panel MOES](https://chugia.shop/san-pham.html#prod-MOES-CCP-5S-EU-MS) (**7.140.000₫**) | SKU: `MOES-CCP-5S-EU-MS`
   - **Công tắc công suất lớn 20A chuyên dụng Bình nóng lạnh / Điều hòa**:
     + [Công tắc bình nóng lạnh 20A cảm ứng MOES Zigbee](https://chugia.shop/san-pham.html#prod-ZS-DL-EUB-WH-MS) (**1.030.000₫**) | SKU: `ZS-DL-EUB-WH-MS`
     + [Công tắc bình nóng lạnh 20A MOES Star Ring Zigbee](https://chugia.shop/san-pham.html#prod-ZS-SR-EUB-WH-MS) (**1.070.000₫**) | SKU: `ZS-SR-EUB-WH-MS`
@@ -245,14 +247,13 @@ def build_system_prompt():
     + [Cảm biến hiện diện Radar mmWave 24GHz MOES Zigbee](https://chugia.shop/san-pham.html#prod-MOES-ZSS-HP05-A-MS) (**820.000₫**) | SKU: `MOES-ZSS-HP05-A-MS` (Bắt hơi thở vi mô, không bao giờ bị tắt đèn oan)
     + [Cảm biến mở cửa thông minh MOES Zigbee](https://chugia.shop/san-pham.html#prod-MOES-ZSS-S01-GWM-C-MS) (**500.000₫**) | SKU: `MOES-ZSS-S01-GWM-C-MS`
     + [Bộ điều khiển hồng ngoại IR & Nhiệt ẩm LCD MOES](https://chugia.shop/san-pham.html#prod-MOES-WR-TY-THR-BK-MS) (**1.000.000₫**) | SKU: `MOES-WR-TY-THR-BK-MS`
-  - **Màn hình điều khiển Smart Control Panel & Hub Gateway MOES**:
-    + [Màn hình điều khiển Smart Control Panel 4 inch MOES](https://chugia.shop/san-pham.html#prod-MOES-CCP-TY-EU-LN-MS) (**7.500.000₫**) | SKU: `MOES-CCP-TY-EU-LN-MS` (Màn hình cảm ứng gắn tường sang trọng, tích hợp Zigbee Gateway điều khiển toàn bộ căn nhà)
+  - **Bộ trung tâm Gateway Hub LAN MOES**:
     + [Bộ điều khiển trung tâm Moes Wired Gateway Hub LAN](https://chugia.shop/san-pham.html#prod-MOES-MHUB-MS) (**2.140.000₫**) | SKU: `MOES-MHUB-MS` (Cổng mạng LAN RJ45, ổn định tuyệt đối, chống rớt sóng)
   - **4 Gói Combo Chuẩn kèm Link trực tiếp**:
-    + Căn hộ tối thiểu 3 phòng ngủ: [Combo Căn Hộ 3PN Smarthome MOES Luxury](https://chugia.shop/combo-smarthome.html#cac-goi-combo) (**14.800.000₫**) — 1 Moes Multi-Mode Gateway Zigbee 3.0 + 4 Công tắc 2 nút Moes + 3 Công tắc 3 nút Moes (tùy chọn US/EU) + 2 Công tắc bình nóng lạnh 20A + 3 Cảm biến radar mmWave 24GHz + 3 IR Hub điều hòa nhiệt ẩm.
-    + Nhà phố 5–6 phòng (3–5 tầng): [Combo Nhà Phố 5–6 Phòng Smarthome MOES Luxury](https://chugia.shop/combo-smarthome.html#cac-goi-combo) (**26.500.000₫**) — 1 Moes Gateway LAN Hub + 1 Công tắc ngữ cảnh 9 kịch bản + 7 Công tắc 2 nút Moes + 6 Công tắc 3 nút Moes (US/EU) + 4 Công tắc bình 20A + 5 Radar mmWave + 5 IR Hub điều hòa.
-    + Biệt thự / Villa 7–8 phòng: [Combo Biệt Thự / Villa 7–8 Phòng Smarthome MOES Luxury](https://chugia.shop/combo-smarthome.html#cac-goi-combo) (**79.000.000₫**) — 1 Màn hình Smart Control Panel 4 inch Moes cảm ứng gắn tường + 1 Moes Hub LAN + 10 Công tắc Dimmer Moes Star Feather Luxury + 12 Công tắc 3 nút Moes + 6 Công tắc bình 20A + 8 Radar âm trần + 4 Động cơ rèm Moes + 1 Khóa Face ID Tenon A7x + 6 IR Hub điều hòa.
-    + Gói Nâng Cấp "Bộ Não HASS OS & AI Chatbox Local" (Trọn Gói 16 Tr): [Gói Nâng Cấp Bộ Não HASS & AI Chatbox](https://chugia.shop/combo-smarthome.html#cac-goi-combo) (**16.000.000₫**) — Trọn bộ Server Mini PC Intel N100 x86 + USB Dongle Plus Sonoff-P + Bản quyền phần mềm Trợ lý AI HASS Pro Local trọn đời. Đưa toàn bộ thiết bị sẵn có (Tuya, Moes, Sonoff, Aqara...) sang Local 100%.
+    + Căn hộ tối thiểu 3 phòng ngủ: [Combo Căn Hộ 3PN Smarthome MOES Luxury Phím Cơ](https://chugia.shop/combo-smarthome.html#cac-goi-combo) (**15.800.000₫**) — 1 Moes Multi-Mode Gateway Zigbee 3.0 + 7 Công tắc cơ MOES Star Feather Push Button (Tùy chọn 1-3 nút, Vuông EU / Chữ nhật US, Trắng WH / Đen BK) + 2 Công tắc bình 20A + 3 Cảm biến radar mmWave 24GHz + 3 IR Hub điều hòa nhiệt ẩm.
+    + Nhà phố 5–6 phòng (3–5 tầng): [Combo Nhà Phố 5–6 Phòng Smarthome MOES Luxury Phím Cơ](https://chugia.shop/combo-smarthome.html#cac-goi-combo) (**32.500.000₫**) — 1 Moes Gateway LAN Hub + 1 Màn hình trung tâm 3.5" MOES kèm 3 Phím Cơ Vật Lý (`MOES-CCP-S05-EU-GY-MS`) + 13 Công tắc cơ MOES Star Feather Push Button (1-3 nút, Vuông/Chữ nhật, Trắng/Đen) + 4 Công tắc bình 20A + 5 Radar mmWave + 5 IR Hub điều hòa.
+    + Biệt thự / Villa 7–8 phòng: [Combo Biệt Thự / Villa 7–8 Phòng MOES Phím Cơ & Màn Hình Kép](https://chugia.shop/combo-smarthome.html#cac-goi-combo) (**88.000.000₫**) — 1 Màn hình Smart Control Panel 3.5" kèm 3 Phím Cơ Vật Lý MOES sảnh chính + 1 Màn hình AI Desktop MOES 5" phòng Master + 1 Moes Hub LAN + 10 Công tắc Dimmer cơ Moes Star Feather + 14 Công tắc cơ Moes Star Feather Push Button 1-3 nút + 6 Công tắc bình 20A + 8 Radar âm trần + 4 Động cơ rèm Moes + 1 Khóa Face ID Tenon A7x + 6 IR Hub điều hòa.
+    + Gói Nâng Cấp "Bộ Não HASS OS & AI Chatbox Local" (Trọn Gói 16 Tr): [Gói Nâng Cấp Bộ Não HASS & AI Chatbox](https://chugia.shop/combo-smarthome.html#cac-goi-combo) (**16.000.000₫**) — Trọn bộ Server Mini PC Intel N100 x86 + USB Dongle Plus Sonoff-P + Bản quyền phần mềm Trợ lý AI HASS Pro Local trọn đời. Đưa toàn bộ thiết bị sẵn có sang Local 100%.
     + Xem toàn bộ giải pháp: [Xem Chi Tiết Trang Smarthome MOES Luxury & HASS AI](https://chugia.shop/combo-smarthome.html).
 
 ### 5️⃣ QUY TẮC BẮT BUỘC VỀ KHÓA CỬA THÔNG MINH - 100% TƯ VẤN KHÓA TENON THAY CHO CÁC HÃNG KHÁC:
