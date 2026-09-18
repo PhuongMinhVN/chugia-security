@@ -1119,8 +1119,12 @@ ${shareUrl}
   }
 
   function initWifiCombos() {
-    // Brand Switcher click events
     const brandNav = document.getElementById('wifiBrandNav');
+    const tabsNav = document.getElementById('omadaTabsNav');
+    const container = document.getElementById('omadaComboDisplay');
+    if (!brandNav && !tabsNav && !container) return; // Trang không chứa combo wifi
+
+    // Brand Switcher click events
     if (brandNav) {
       brandNav.addEventListener('click', e => {
         const btn = e.target.closest('.wifi-brand-btn');
@@ -2695,7 +2699,27 @@ ${shareUrl}
 
   function initIntercomCombos() {
     const brandNav = document.getElementById('intercomBrandNav');
+    const tabsNav = document.getElementById('intercomTabsNav');
+    const container = document.getElementById('intercomComboDisplay');
+    if (!brandNav && !tabsNav && !container) return; // Trang không chứa combo chuông khóa
+
+    let initBrand = 'hikvision';
+    let initCombo = 'apartment';
+    try {
+      const p = new URLSearchParams(window.location.search);
+      const b = (p.get('brand') || p.get('intercomBrand') || '').toLowerCase();
+      if (['hikvision', 'dahua', 'ezviz'].includes(b)) initBrand = b;
+      const c = (p.get('combo') || p.get('intercomCombo') || '').toLowerCase();
+      if (window.ALL_INTERCOM_COMBOS[initBrand]?.combos[c]) initCombo = c;
+    } catch (e) {}
+
+    currentActiveIntercomBrand = initBrand;
+    currentActiveIntercomCombo = initCombo;
+
     if (brandNav) {
+      brandNav.querySelectorAll('.wifi-brand-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-brand') === initBrand);
+      });
       brandNav.addEventListener('click', e => {
         const btn = e.target.closest('.wifi-brand-btn');
         if (!btn) return;
@@ -2704,7 +2728,6 @@ ${shareUrl}
       });
     }
 
-    const tabsNav = document.getElementById('intercomTabsNav');
     if (tabsNav) {
       tabsNav.addEventListener('click', e => {
         const btn = e.target.closest('.omada-tab-btn');
@@ -2714,8 +2737,8 @@ ${shareUrl}
       });
     }
 
-    renderIntercomBrandTabs('hikvision');
-    renderIntercomCombo('hikvision', 'apartment');
+    renderIntercomBrandTabs(initBrand);
+    renderIntercomCombo(initBrand, initCombo);
   }
 
   // Global Helpers for Intercom Combos
@@ -3442,6 +3465,18 @@ ${shareUrl}
 
   function initSmarthomeCombos() {
     const tabsNav = document.getElementById('smarthomeTabsNav');
+    const container = document.getElementById('smarthomeComboDisplay');
+    if (!tabsNav && !container) return; // Trang không chứa combo smarthome
+
+    let initCombo = 'apartment';
+    try {
+      const p = new URLSearchParams(window.location.search);
+      const c = (p.get('combo') || p.get('smarthomeCombo') || '').toLowerCase();
+      if (window.ALL_SMARTHOME_COMBOS.combos[c]) initCombo = c;
+    } catch (e) {}
+
+    currentActiveSmarthomeCombo = initCombo;
+
     if (tabsNav) {
       tabsNav.addEventListener('click', e => {
         const btn = e.target.closest('.omada-tab-btn');
@@ -3451,8 +3486,8 @@ ${shareUrl}
       });
     }
 
-    renderSmarthomeTabs('apartment');
-    renderSmarthomeCombo('apartment');
+    renderSmarthomeTabs(initCombo);
+    renderSmarthomeCombo(initCombo);
   }
 
   // Global Helpers for Smarthome Combos

@@ -707,7 +707,7 @@
         <a href="san-pham.html" class="nav-link">Kho 850+ Thiết Bị</a>
         <a href="combo-smarthome.html" class="nav-link active" style="color: #c084fc; font-weight: 800;">Smarthome Tuya &amp; HASS 🤖</a>
         <a href="combo-wifi.html" class="nav-link" style="color: #34D399; font-weight: 600;">Combo Mạng Wi-Fi 🔥</a>
-        <a href="san-pham.html#intercomCombos" class="nav-link" style="color: #38bdf8; font-weight: 600;">Combo Khóa &amp; Chuông Hình 🔔</a>
+        <a href="combo-khoa-chuong.html" class="nav-link" style="color: #38bdf8; font-weight: 600;">Combo Khóa &amp; Chuông Hình 🔔</a>
         <a href="du-toan.html" class="nav-link">Dự Toán Chi Phí</a>
         <a href="lien-he.html" class="nav-link">Liên Hệ</a>
       </nav>
@@ -771,6 +771,29 @@
             <strong>Bảo Hành 1 Đổi 1 Tận Nơi</strong>
             <div style="font-size: 0.74rem; color: #94a3b8;">Hỗ trợ kỹ thuật 24/7 trọn đời</div>
           </div>
+        </div>
+      </div>
+
+      <!-- ================= INTERACTIVE DYNAMIC CONFIGURATOR SECTION ================= -->
+      <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(168, 85, 247, 0.25);" id="smarthomeCombos">
+        <div class="sh-combos-title-box" style="margin-bottom: 24px;">
+          <span class="sh-demo-badge">⚙️ TÙY CHỈNH THIẾT BỊ &amp; DỰ TOÁN TRỰC TIẾP</span>
+          <h3 style="font-size: 1.85rem; font-weight: 800; color: #ffffff; margin-bottom: 8px;">
+            Bảng Cấu Hình Chi Tiết Từng Thiết Bị &amp; Thêm Vào Giỏ Báo Giá
+          </h3>
+          <p style="color: #94a3b8; font-size: 0.95rem;">
+            Bấm chọn từng gói để xem ảnh thực tế, mã SKU Moes, đơn giá và tăng/giảm số lượng thiết bị theo nhu cầu thực tế căn hộ/nhà của bạn.
+          </p>
+        </div>
+
+        <!-- Segment Selector Tabs -->
+        <div class="omada-tabs-nav smarthome-tabs-nav" id="smarthomeTabsNav">
+          <!-- Dynamically populated by js/products-catalog.js -->
+        </div>
+
+        <!-- Active Combo Dynamic Display Card -->
+        <div class="omada-combo-display-wrap smarthome-combo-display-wrap" id="smarthomeComboDisplay">
+          <!-- Rendered dynamically by js/products-catalog.js -->
         </div>
       </div>
     </div>
@@ -1205,6 +1228,11 @@
       <p>&copy; 2026 Chu Gia Security (chugia.shop). Đại lý phân phối chính hãng thiết bị an ninh &amp; Nhà thông minh Home Assistant từ 2014.</p>
     </div>
   </footer>
+
+  <!-- Scripts -->
+  <script src="js/qrcode.min.js"></script>
+  <script src="js/hta-products-data.js?v=20260913_2315"></script>
+  <script src="js/products-catalog.js?v=20260918_1745"></script>
 
   <!-- ================= JAVASCRIPT FOR INTERACTIVE AI DEMO ================= -->
   <script>

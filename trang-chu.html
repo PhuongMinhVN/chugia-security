@@ -71,8 +71,10 @@
         </button>
         <a href="tel:0941204125" class="landing-header-link nav-hotline">📞 0941 204 125</a>
         <a href="du-toan.html" class="landing-header-link nav-desktop-link" target="_blank" rel="noopener noreferrer">🏠 Trang Chủ</a>
-        <a href="san-pham.html" class="landing-header-link nav-desktop-link">Kho 540+ Thiết Bị</a>
+        <a href="san-pham.html" class="landing-header-link nav-desktop-link">Kho 850+ Thiết Bị</a>
         <a href="combo-wifi.html" class="landing-header-link nav-desktop-link" style="color: #34D399; font-weight: 700;">Combo Wi-Fi 🔥</a>
+        <a href="combo-khoa-chuong.html" class="landing-header-link nav-desktop-link" style="color: #38bdf8; font-weight: 700;">Khóa &amp; Chuông 🔔</a>
+        <a href="combo-smarthome.html" class="landing-header-link nav-desktop-link" style="color: #c084fc; font-weight: 700;">Smarthome 🤖</a>
         <a href="giai-phap.html" class="landing-header-link nav-desktop-link">Gói Giải Pháp</a>
         <a href="du-toan.html" class="landing-header-link cta">Dự Toán →</a>
       </div>
@@ -97,7 +99,7 @@
             </svg>
             <span>Gói Wi-Fi Combo 🔥</span>
           </a>
-          <a href="san-pham.html#intercomCombos" class="landing-home-btn landing-intercom-hero-btn" target="_blank" rel="noopener noreferrer" title="Xem 12 Gói Combo Chuông Hình & Khóa Thông Minh Hikvision, Dahua, EZVIZ">
+          <a href="combo-khoa-chuong.html" class="landing-home-btn landing-intercom-hero-btn" target="_blank" rel="noopener noreferrer" title="Xem 12 Gói Combo Chuông Hình & Khóa Thông Minh Hikvision, Dahua, EZVIZ">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
               <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
@@ -468,7 +470,7 @@
         "---\n\n" +
         "✨ **HOẶC XEM NHANH CÁC BỘ GIẢI PHÁP COMBO TRỌN GÓI BÁN CHẠY:**\n" +
         "- 📶 **12 Gói Combo Mạng Wi-Fi Chuyên Dụng:** [Khám Phá Gói Wi-Fi 6/7](https://chugia.shop/combo-wifi.html)\n" +
-        "- 🔔 **12 Gói Combo Chuông Hình & Khóa Thông Minh:** [Khám Phá Gói Chuông & Khóa Tenon](https://chugia.shop/san-pham.html#intercomCombos)\n" +
+        "- 🔔 **12 Gói Combo Chuông Hình & Khóa Thông Minh:** [Khám Phá Gói Chuông & Khóa Tenon](https://chugia.shop/combo-khoa-chuong.html)\n" +
         "- 🤖 **Combo Nhà Thông Minh Tuya & HASS AI:** [Khám Phá Gói Smarthome & HASS AI](https://chugia.shop/san-pham.html#smarthomeCombos)\n" +
         "- 🧮 **Dự toán chi phí & Đăng ký khảo sát 0đ:** [Lập Dự Toán Trọn Gói](https://chugia.shop/du-toan.html)\n\n" +
         "---\n\n" +
@@ -490,7 +492,7 @@
 "## 🎁 NGUYÊN TẮC BẮT BUỘC: GỢI Ý COMBO TRỌN GÓI & CÂU HỎI HÀNH ĐỘNG Ở CUỐI ĐOẠN CHAT:\n" +
 "Sau khi đã đưa ra các sản phẩm đơn lẻ và phương án so sánh, ở CUỐI MỖI CÂU TRẢ LỜI, BẮT BUỘC bạn phải gợi ý 1 Gói Combo trọn gói tương ứng đang có trên website chugia.shop (đã được tối ưu chi phí, đồng bộ kỹ thuật và kèm ưu đãi lắp đặt):\n" +
 "- Nhu cầu Khóa cửa / Chuông hình / Smarthome: Gợi ý các gói Combo Chuông & Khóa Tenon (kèm link):\n" +
-"  + Căn hộ/chung cư: [Combo Chuông Hình Dahua & Khóa Căn Hộ Tenon K50](https://chugia.shop/combo/dahua-apartment.html) (hoặc https://chugia.shop/san-pham.html#intercomCombos)\n" +
+"  + Căn hộ/chung cư: [Combo Chuông Hình Dahua & Khóa Căn Hộ Tenon K50](https://chugia.shop/combo/dahua-apartment.html) (hoặc https://chugia.shop/combo-khoa-chuong.html)\n" +
 "  + Biệt thự / Luxury: [Combo Chuông Dahua & Khóa Face ID Tenon A7x](https://chugia.shop/combo/dahua-villa.html)\n" +
 "  + Cửa nhôm Xingfa: [Combo Chuông Dahua & Khóa Cửa Nhôm Tenon AL5 Pro](https://chugia.shop/combo/dahua-aluminum.html)\n" +
 "  + Văn phòng / cửa kính: [Combo Chuông Dahua & Khóa Cửa Kính Tenon G4](https://chugia.shop/combo/dahua-office.html)\n" +
@@ -637,11 +639,11 @@
 
       // ── Detect combo recommendation & attach interactive action buttons ──
       if (role === 'ai') {
-        const comboLink = bubble.querySelector('a[href*="/combo/"], a[href*="combo-smarthome.html"], a[href*="combo-wifi.html"], a[href*="#intercomCombos"]');
+        const comboLink = bubble.querySelector('a[href*="/combo/"], a[href*="combo-smarthome.html"], a[href*="combo-wifi.html"], a[href*="combo-khoa-chuong.html"]');
         const hasComboQuestion = /bạn\s+(?:có\s+)?muốn\s+tìm\s+hiểu\s+(?:thêm\s+về\s+)?combo\s+này\s+chứ/i.test(text);
 
         if (comboLink || hasComboQuestion) {
-          const comboUrl = comboLink ? comboLink.getAttribute('href') : 'https://chugia.shop/san-pham.html#intercomCombos';
+          const comboUrl = comboLink ? comboLink.getAttribute('href') : 'https://chugia.shop/combo-khoa-chuong.html';
           const comboName = comboLink ? comboLink.textContent.trim() : 'Gói Combo Ưu Đãi';
 
           const actionBox = document.createElement('div');

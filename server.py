@@ -269,7 +269,7 @@ def build_system_prompt():
    Sau khi đưa ra sản phẩm đơn lẻ hoặc 2 phương án so sánh, ở CUỐI MỖI CÂU TRẢ LỜI, BẮT BUỘC bạn phải gợi ý 1 Gói Combo trọn gói tương ứng đang có trên website chugia.shop (đã được tối ưu chi phí, đồng bộ kỹ thuật và kèm ưu đãi lắp đặt):
    - Nhu cầu Smarthome / Nhà thông minh / Tuya / HASS: Gợi ý các gói [Combo Smarthome MOES Luxury](https://chugia.shop/combo-smarthome.html#cac-goi-combo) (Gói Căn Hộ 3PN 14.8tr, Gói Nhà Phố 26.5tr, Gói Biệt Thự 79tr, Gói Nâng Cấp HASS 16tr) hoặc [Giải Pháp Smarthome MOES Luxury & HASS AI](https://chugia.shop/combo-smarthome.html).
    - Nhu cầu Khóa cửa / Chuông hình: Gợi ý các gói Combo Chuông & Khóa Tenon (kèm link):
-     + Căn hộ/chung cư: [Combo Chuông Hình Dahua & Khóa Căn Hộ Tenon K50](https://chugia.shop/combo/dahua-apartment.html) (hoặc https://chugia.shop/san-pham.html#intercomCombos)
+     + Căn hộ/chung cư: [Combo Chuông Hình Dahua & Khóa Căn Hộ Tenon K50](https://chugia.shop/combo/dahua-apartment.html) (hoặc https://chugia.shop/combo-khoa-chuong.html)
      + Biệt thự / Luxury: [Combo Chuông Dahua & Khóa Face ID Tenon A7x](https://chugia.shop/combo/dahua-villa.html)
      + Cửa nhôm Xingfa: [Combo Chuông Dahua & Khóa Cửa Nhôm Tenon AL5 Pro](https://chugia.shop/combo/dahua-aluminum.html)
      + Cửa kính văn phòng: [Combo Chuông Dahua & Khóa Cửa Kính Tenon G4](https://chugia.shop/combo/dahua-office.html)
@@ -357,7 +357,7 @@ def call_deepseek_api(user_message, history=None):
             "---\n\n"
             "✨ **HOẶC XEM NHANH CÁC BỘ GIẢI PHÁP COMBO TRỌN GÓI BÁN CHẠY:**\n"
             "- 📶 **12 Gói Combo Mạng Wi-Fi Chuyên Dụng:** [Khám Phá Gói Wi-Fi 6/7](https://chugia.shop/combo-wifi.html)\n"
-            "- 🔔 **12 Gói Combo Chuông Hình & Khóa Thông Minh:** [Khám Phá Gói Chuông & Khóa Tenon](https://chugia.shop/san-pham.html#intercomCombos)\n"
+            "- 🔔 **12 Gói Combo Chuông Hình & Khóa Thông Minh:** [Khám Phá Gói Chuông & Khóa Tenon](https://chugia.shop/combo-khoa-chuong.html)\n"
             "- 🤖 **Combo Nhà Thông Minh Tuya & HASS AI:** [Khám Phá Gói Smarthome & HASS AI](https://chugia.shop/san-pham.html#smarthomeCombos)\n"
             "- 🧮 **Dự toán chi phí & Đăng ký khảo sát 0đ:** [Lập Dự Toán Trọn Gói](https://chugia.shop/du-toan.html)\n\n"
             "---\n\n"
