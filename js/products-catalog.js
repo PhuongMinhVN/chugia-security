@@ -3416,12 +3416,7 @@ ${shareUrl}
 
   function filterSmarthomeCatalog() {
     setBrand('TUYA');
-    const catalogEl = document.getElementById('catalogMain');
-    if (catalogEl) {
-      const yOffset = -70;
-      const y = catalogEl.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
+    scrollToCatalogProducts();
   }
 
   function initSmarthomeCombos() {
@@ -3663,6 +3658,28 @@ ${shareUrl}
     });
   }
 
+  // Tự động kéo mượt mà danh sách sản phẩm lên tầm mắt người dùng
+  // (Tính toán bù trừ header dính và thanh menu ngang sticky để không bị che khuất)
+  function scrollToCatalogProducts() {
+    const catalogEl = document.getElementById('catalogMain') || document.getElementById('productsGrid');
+    if (!catalogEl) return;
+
+    const header = document.querySelector('.site-header') || document.querySelector('header');
+    const pillsBar = document.querySelector('.quick-pills-bar');
+
+    const headerH = header ? header.offsetHeight : (window.innerWidth <= 991 ? 60 : 68);
+    const pillsH = pillsBar ? pillsBar.offsetHeight : (window.innerWidth <= 991 ? 52 : 58);
+    const totalOffset = headerH + pillsH + 10; // Đệm 10px để toolbar thoáng mắt
+
+    const elementPosition = catalogEl.getBoundingClientRect().top;
+    const targetY = elementPosition + window.pageYOffset - totalOffset;
+
+    window.scrollTo({
+      top: Math.max(0, targetY),
+      behavior: 'smooth'
+    });
+  }
+
   // Update navigation scroll arrow button states (disabled/enabled)
   function updatePillNavButtons() {
     if (!el.quickPills || !el.pillNavPrev || !el.pillNavNext) return;
@@ -3784,7 +3801,7 @@ ${shareUrl}
         isMouseDown = false;
       });
 
-      // Click pill to activate & auto-scroll to center
+      // Click pill to activate & auto-scroll to center & pull products into view
       el.quickPills.addEventListener('click', e => {
         if (hasDragged) {
           e.preventDefault();
@@ -3797,6 +3814,7 @@ ${shareUrl}
         const catId = parseInt(btn.dataset.catId, 10);
         setCategory(catId);
         scrollPillToCenter(btn);
+        scrollToCatalogProducts();
       });
 
       // Update arrow states on scroll & resize
@@ -3825,6 +3843,7 @@ ${shareUrl}
         const catId = parseInt(item.dataset.catId, 10);
         setCategory(catId);
         closeMobileSidebar();
+        scrollToCatalogProducts();
       });
     }
 
@@ -3839,6 +3858,7 @@ ${shareUrl}
         state.currentPage = 1;
         applyFilters();
         closeMobileSidebar();
+        scrollToCatalogProducts();
       });
     }
 
@@ -3849,12 +3869,23 @@ ${shareUrl}
         state.currentPage = 1;
         applyFilters();
         closeMobileSidebar();
+        scrollToCatalogProducts();
       });
     });
 
-    // Hero Search Input with Debounce
+    // Hero Search Input with Debounce & Enter Key
     let searchDebounceTimer = null;
     if (el.searchHeroInput) {
+      el.searchHeroInput.addEventListener('keydown', e => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          clearTimeout(searchDebounceTimer);
+          state.currentPage = 1;
+          applyFilters();
+          scrollToCatalogProducts();
+        }
+      });
+
       el.searchHeroInput.addEventListener('input', e => {
         const val = e.target.value.trim();
         state.searchQuery = val;
@@ -4339,13 +4370,17 @@ ${shareUrl}
   }
 
   // Clear Filter Helpers for tags
-  window.catalogClearCat = () => setCategory(-1);
+  window.catalogClearCat = () => {
+    setCategory(-1);
+    scrollToCatalogProducts();
+  };
   window.catalogClearBrand = () => {
     state.selectedBrand = 'all';
     document.querySelectorAll('.brand-chip').forEach(c => c.classList.remove('active'));
     document.querySelector('.brand-chip[data-brand="all"]')?.classList.add('active');
     state.currentPage = 1;
     applyFilters();
+    scrollToCatalogProducts();
   };
   window.catalogClearPrice = () => {
     state.selectedPriceRange = 'all';
@@ -4353,6 +4388,7 @@ ${shareUrl}
     if (radioAll) radioAll.checked = true;
     state.currentPage = 1;
     applyFilters();
+    scrollToCatalogProducts();
   };
   window.catalogClearSearch = () => {
     if (el.searchHeroInput) el.searchHeroInput.value = '';
@@ -4366,6 +4402,7 @@ ${shareUrl}
     } catch (e) {}
     state.currentPage = 1;
     applyFilters();
+    scrollToCatalogProducts();
   };
 
   // Render Products Grid
@@ -4508,6 +4545,7 @@ ${shareUrl}
     renderQuickPills();
     renderSidebarCategories();
     applyFilters();
+    scrollToCatalogProducts();
   };
 
   // Render Pagination
@@ -4582,11 +4620,7 @@ ${shareUrl}
     state.currentPage = page;
     renderProducts();
     renderPagination();
-
-    const anchor = document.getElementById('catalogMain');
-    if (anchor) {
-      anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    scrollToCatalogProducts();
   };
 
   // Helper: Ẩn/hiện một tab (cả nút tab và pane) theo việc có dữ liệu thật hay không.
