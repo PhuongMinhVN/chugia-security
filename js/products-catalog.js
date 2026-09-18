@@ -3494,7 +3494,7 @@ ${shareUrl}
       if (catParam) {
         const cid = parseInt(catParam, 10);
         if (!isNaN(cid)) {
-          setTimeout(() => setCategory(cid), 150);
+          setTimeout(() => setCategory(cid, false), 150);
         }
       }
       // Xử lý tham số wifiBrand hoặc brand cho combo Wi-Fi
@@ -3512,7 +3512,7 @@ ${shareUrl}
       if (targetWifiBrand) {
         setTimeout(() => {
           if (targetWifiBrand === 'omada') {
-            if (document.getElementById('catalogMain')) setCategory(53999);
+            if (document.getElementById('catalogMain')) setCategory(53999, false);
             switchWifiBrand('omada', comboParam || 'home');
           } else if (targetWifiBrand === 'ruijie') {
             if (document.getElementById('catalogMain')) setBrand('RUIJIE');
@@ -3669,15 +3669,24 @@ ${shareUrl}
 
     const headerH = header ? header.offsetHeight : (window.innerWidth <= 991 ? 60 : 68);
     const pillsH = pillsBar ? pillsBar.offsetHeight : (window.innerWidth <= 991 ? 52 : 58);
-    const totalOffset = headerH + pillsH + 10; // Đệm 10px để toolbar thoáng mắt
+    const totalOffset = headerH + pillsH + 8; // Đệm 8px để toolbar thoáng mắt
 
-    const elementPosition = catalogEl.getBoundingClientRect().top;
-    const targetY = elementPosition + window.pageYOffset - totalOffset;
+    const rect = catalogEl.getBoundingClientRect();
+    const targetY = rect.top + window.pageYOffset - totalOffset;
 
     window.scrollTo({
       top: Math.max(0, targetY),
       behavior: 'smooth'
     });
+
+    // Highlight nhẹ toolbar để người dùng nhận diện ngay danh mục sản phẩm vừa chọn
+    const toolbar = catalogEl.querySelector('.catalog-toolbar');
+    if (toolbar) {
+      toolbar.classList.remove('catalog-toolbar-focused');
+      void toolbar.offsetWidth;
+      toolbar.classList.add('catalog-toolbar-focused');
+      setTimeout(() => toolbar.classList.remove('catalog-toolbar-focused'), 1200);
+    }
   }
 
   // Update navigation scroll arrow button states (disabled/enabled)
@@ -3791,7 +3800,7 @@ ${shareUrl}
         if (!isMouseDown) return;
         const x = e.pageX - el.quickPills.offsetLeft;
         const walk = (x - startX);
-        if (Math.abs(walk) > 5) {
+        if (Math.abs(walk) > 12) {
           hasDragged = true;
         }
         el.quickPills.scrollLeft = scrollLeftStart - walk;
@@ -4146,7 +4155,7 @@ ${shareUrl}
   }
 
   // Set category filter
-  function setCategory(catId) {
+  function setCategory(catId, shouldScroll = true) {
     state.selectedCategoryId = catId;
     state.currentPage = 1;
 
@@ -4202,6 +4211,10 @@ ${shareUrl}
     }
 
     applyFilters();
+
+    if (shouldScroll) {
+      scrollToCatalogProducts();
+    }
   }
 
   // Apply Filter Logic
