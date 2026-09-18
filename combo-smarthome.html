@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combo Smarthome Tuya &amp; Home Assistant (HASS) • Điều Khiển AI Qua Chatbox | Chu Gia Security</title>
+  <meta name="description" content="Giải pháp Nhà Thông Minh Tuya Zigbee 3.0 kết hợp Bộ Não Home Assistant (HASS) Local 100% không cloud, không sợ mất mạng. Tích hợp Trợ lý AI điều khiển toàn bộ thiết bị điện gia đình bằng ngôn ngữ tự nhiên qua 1 ô chatbox. Bảo hành 24 tháng tận nơi. Hotline: 0941 204 125.">
+  
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://chugia.shop/combo-smarthome.html">
+  <meta property="og:title" content="Combo Smarthome Tuya &amp; HASS • Trợ Lý AI Chatbox Điều Khiển Điện | Chu Gia Security">
+  <meta property="og:description" content="Hệ thống Smarthome Local 100% cực nhanh 0.05s, bảo mật tuyệt đối, không phụ thuộc Cloud. Điều khiển điện thông minh qua 1 ô Chatbox AI tự do. Khảo sát 0đ, bảo hành 1 đổi 1 trong 24 tháng.">
+  <meta property="og:site_name" content="Chu Gia Security">
+  <meta property="og:image" content="https://chugia.shop/images/chugia_og_share.png?v=20260918_smarthome">
+  <meta property="og:image:secure_url" content="https://chugia.shop/images/chugia_og_share.png?v=20260918_smarthome">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Google Fonts Preconnect & Display Swap -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css?v=20260918_1310">
+  <link rel="stylesheet" href="css/products.css?v=20260918_1310">
+  <link rel="stylesheet" href="css/product-modal.css?v=20260918_1310">
+  <link rel="stylesheet" href="css/landing.css?v=20260918_1310">
+
+  <style>
+    /* ── Smarthome Dedicated Page Styles ── */
+    :root {
+      --sh-purple: #a855f7;
+      --sh-purple-glow: rgba(168, 85, 247, 0.35);
+      --sh-cyan: #06b6d4;
+      --sh-cyan-glow: rgba(6, 182, 212, 0.35);
+    }
+
+    .sh-hero-section {
+      position: relative;
+      padding: 130px 0 60px;
+      background: radial-gradient(circle at 50% 10%, rgba(168, 85, 247, 0.15) 0%, rgba(6, 182, 212, 0.08) 40%, rgba(15, 23, 42, 0) 70%), #0b1329;
+      color: #ffffff;
+      overflow: hidden;
+    }
+
+    .sh-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(168, 85, 247, 0.15);
+      border: 1px solid rgba(168, 85, 247, 0.4);
+      color: #c084fc;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 18px;
+    }
+
+    .sh-hero-title {
+      font-size: 2.35rem;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .sh-hero-title span {
+      background: linear-gradient(135deg, #c084fc 0%, #38bdf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .sh-hero-desc {
+      font-size: 1.02rem;
+      line-height: 1.7;
+      color: #94a3b8;
+      max-width: 820px;
+      margin-bottom: 28px;
+    }
+
+    .sh-pill-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+
+    .sh-pill-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(30, 41, 59, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 12px 14px;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      backdrop-filter: blur(12px);
+    }
+
+    .sh-pill-item .sh-icon {
+      font-size: 1.3rem;
+    }
+
+    /* ── Live AI Demo Interactive Arena ── */
+    .sh-demo-section {
+      padding: 60px 0;
+      background: #090e1e;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .sh-demo-header {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 40px;
+    }
+
+    .sh-demo-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: rgba(6, 182, 212, 0.15);
+      color: #38bdf8;
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      margin-bottom: 12px;
+    }
+
+    .sh-demo-title {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .sh-demo-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    /* Chatbox Column */
+    .sh-chatbox-card {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 20px rgba(168, 85, 247, 0.1);
+    }
+
+    .sh-chatbox-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      background: rgba(30, 41, 59, 0.7);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .sh-chatbox-status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .sh-status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 10px #10b981;
+      animation: pulse 1.8s infinite;
+    }
+
+    .sh-chat-feed {
+      flex: 1;
+      padding: 18px 20px;
+      overflow-y: auto;
+      min-height: 280px;
+      max-height: 380px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      font-size: 0.9rem;
+    }
+
+    .sh-msg {
+      display: flex;
+      gap: 10px;
+      max-width: 88%;
+    }
+
+    .sh-msg.user {
+      align-self: flex-end;
+      flex-direction: row-reverse;
+    }
+
+    .sh-msg.ai {
+      align-self: flex-start;
+    }
+
+    .sh-msg-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .sh-msg.user .sh-msg-avatar {
+      background: #3b82f6;
+      color: #fff;
+    }
+
+    .sh-msg.ai .sh-msg-avatar {
+      background: linear-gradient(135deg, #a855f7, #6366f1);
+      color: #fff;
+    }
+
+    .sh-msg-bubble {
+      padding: 10px 15px;
+      border-radius: 14px;
+      line-height: 1.55;
+    }
+
+    .sh-msg.user .sh-msg-bubble {
+      background: rgba(59, 130, 246, 0.25);
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      color: #ffffff;
+      border-top-right-radius: 2px;
+    }
+
+    .sh-msg.ai .sh-msg-bubble {
+      background: rgba(30, 41, 59, 0.85);
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      color: #f1f5f9;
+      border-top-left-radius: 2px;
+    }
+
+    /* Suggestion Chips */
+    .sh-quick-prompts {
+      padding: 12px 18px;
+      background: rgba(15, 23, 42, 0.6);
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .sh-prompt-chip {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #cbd5e1;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .sh-prompt-chip:hover {
+      background: rgba(168, 85, 247, 0.2);
+      border-color: rgba(168, 85, 247, 0.5);
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .sh-chat-input-bar {
+      display: flex;
+      gap: 8px;
+      padding: 12px 18px;
+      background: rgba(15, 23, 42, 0.95);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .sh-chat-input {
+      flex: 1;
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 24px;
+      padding: 10px 18px;
+      color: #ffffff;
+      font-size: 0.88rem;
+      outline: none;
+    }
+
+    .sh-chat-input:focus {
+      border-color: #a855f7;
+      box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.3);
+    }
+
+    .sh-chat-send {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #a855f7, #6366f1);
+      border: none;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .sh-chat-send:hover {
+      transform: scale(1.06);
+    }
+
+    /* Device Dashboard Column */
+    .sh-dash-card {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      border-radius: 20px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 20px rgba(6, 182, 212, 0.1);
+    }
+
+    .sh-dash-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 12px;
+    }
+
+    .sh-dash-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #38bdf8;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sh-device-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .sh-dev-item {
+      background: rgba(30, 41, 59, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .sh-dev-item.active {
+      background: rgba(16, 185, 129, 0.12);
+      border-color: rgba(16, 185, 129, 0.4);
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.15);
+    }
+
+    .sh-dev-item.heating {
+      background: rgba(249, 115, 22, 0.12);
+      border-color: rgba(249, 115, 22, 0.4);
+      box-shadow: 0 4px 14px rgba(249, 115, 22, 0.15);
+    }
+
+    .sh-dev-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .sh-dev-icon {
+      font-size: 1.3rem;
+    }
+
+    .sh-dev-badge {
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #94a3b8;
+    }
+
+    .sh-dev-item.active .sh-dev-badge {
+      background: #10b981;
+      color: #ffffff;
+    }
+
+    .sh-dev-item.heating .sh-dev-badge {
+      background: #f97316;
+      color: #ffffff;
+    }
+
+    .sh-dev-name {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #e2e8f0;
+    }
+
+    .sh-dev-sub {
+      font-size: 0.75rem;
+      color: #94a3b8;
+    }
+
+    /* ── 4 Combos Section ── */
+    .sh-combos-section {
+      padding: 80px 0;
+      background: #0b1329;
+    }
+
+    .sh-combos-title-box {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 50px;
+    }
+
+    .sh-combos-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .sh-combo-box {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1.5px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .sh-combo-box:hover {
+      border-color: rgba(168, 85, 247, 0.5);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 24px rgba(168, 85, 247, 0.15);
+    }
+
+    .sh-combo-box.featured {
+      border-color: rgba(168, 85, 247, 0.6);
+      background: linear-gradient(180deg, rgba(168, 85, 247, 0.08) 0%, rgba(15, 23, 42, 0.9) 100%);
+    }
+
+    .sh-combo-tag {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: linear-gradient(135deg, #a855f7, #6366f1);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .sh-combo-name {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 6px;
+      padding-right: 80px;
+    }
+
+    .sh-combo-target {
+      font-size: 0.86rem;
+      color: #38bdf8;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .sh-combo-price-wrap {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 22px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .sh-combo-price {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #34d399;
+    }
+
+    .sh-combo-original-price {
+      font-size: 1.05rem;
+      color: #64748b;
+      text-decoration: line-through;
+    }
+
+    .sh-combo-items-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .sh-combo-items-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: #cbd5e1;
+      line-height: 1.45;
+    }
+
+    .sh-combo-items-list li svg {
+      color: #a855f7;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .sh-combo-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: auto;
+    }
+
+    .sh-btn-zalo {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #a855f7, #6366f1);
+      color: #ffffff !important;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 12px 18px;
+      border-radius: 12px;
+      text-decoration: none !important;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 14px rgba(168, 85, 247, 0.35);
+    }
+
+    .sh-btn-zalo:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(168, 85, 247, 0.55);
+      background: linear-gradient(135deg, #9333ea, #4f46e5);
+    }
+
+    .sh-btn-call {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: rgba(30, 41, 59, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .sh-btn-call:hover {
+      background: rgba(16, 185, 129, 0.2);
+      border-color: #10b981;
+      color: #10b981;
+    }
+
+    /* Comparison Table */
+    .sh-compare-section {
+      padding: 70px 0;
+      background: #080d1a;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .sh-table-wrap {
+      overflow-x: auto;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(15, 23, 42, 0.6);
+    }
+
+    .sh-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+
+    .sh-table th, .sh-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .sh-table th {
+      background: rgba(30, 41, 59, 0.8);
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .sh-table td:first-child {
+      font-weight: 600;
+      color: #e2e8f0;
+      width: 32%;
+    }
+
+    .sh-table td:nth-child(2) {
+      color: #ef4444;
+      width: 34%;
+      background: rgba(239, 68, 68, 0.03);
+    }
+
+    .sh-table td:nth-child(3) {
+      color: #34d399;
+      font-weight: 600;
+      width: 34%;
+      background: rgba(16, 185, 129, 0.06);
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .sh-pill-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .sh-demo-grid {
+        grid-template-columns: 1fr;
+      }
+      .sh-combos-cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .sh-hero-title {
+        font-size: 1.85rem;
+      }
+      .sh-pill-grid {
+        grid-template-columns: 1fr;
+      }
+      .sh-device-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= TOPBAR ================= -->
+  <div class="topbar">
+    <div class="container topbar-container">
+      <div class="topbar-left">
+        <span>🛡️ Chu Gia Security — Chuyên Gia Giải Pháp Smarthome Tuya &amp; Home Assistant Local 100%</span>
+      </div>
+      <div class="topbar-right">
+        <a href="https://www.facebook.com/phuongminhorg/" target="_blank" rel="noopener noreferrer" class="topbar-link" title="Inbox Facebook Messenger">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          <span>Facebook</span>
+        </a>
+        <a href="https://zalo.me/0941204125" target="_blank" rel="noopener noreferrer" class="topbar-link" title="Chat Zalo">
+          <span>Zalo</span>
+        </a>
+        <a href="tel:0941204125" class="topbar-link topbar-hotline">
+          <span>Hotline: <strong>0941 204 125</strong></span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="container header-container">
+      <!-- Logo -->
+      <a href="index.html" class="brand-logo" title="Trang chủ Chu Gia Security">
+        <img src="images/logo_chugia_horizontal.svg" alt="Chu Gia Security Logo" class="brand-logo-img" />
+      </a>
+
+      <!-- Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Trang Chủ</a>
+        <a href="san-pham.html" class="nav-link">Kho 480+ Thiết Bị</a>
+        <a href="combo-smarthome.html" class="nav-link active" style="color: #c084fc; font-weight: 800;">Smarthome Tuya &amp; HASS 🤖</a>
+        <a href="combo-wifi.html" class="nav-link" style="color: #34D399; font-weight: 600;">Combo Mạng Wi-Fi 🔥</a>
+        <a href="san-pham.html#intercomCombos" class="nav-link" style="color: #38bdf8; font-weight: 600;">Combo Khóa &amp; Chuông Hình 🔔</a>
+        <a href="du-toan.html" class="nav-link">Dự Toán Chi Phí</a>
+        <a href="lien-he.html" class="nav-link">Liên Hệ</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="header-actions">
+        <a href="tel:0941204125" class="btn-header-hotline" title="Gọi kỹ thuật tư vấn 24/7">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <div class="header-hotline-text">
+            <small>Kỹ Sư Smarthome</small>
+            <strong>0941 204 125</strong>
+          </div>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="sh-hero-section">
+    <div class="container">
+      <div class="sh-hero-badge">
+        <span>🧠</span> BỘ NÃO HOME ASSISTANT LOCAL 100% + TUYA ZIGBEE 3.0 + AI CHATBOX
+      </div>
+      <h1 class="sh-hero-title">
+        Giải Pháp Smarthome Tuya &amp; HASS<br>
+        <span>Tích Hợp Trợ Lý AI Điều Khiển Điện Tự Nhiên</span>
+      </h1>
+      <p class="sh-hero-desc">
+        Chấm dứt nỗi lo chập chờn khi đứt cáp quang biển. Bộ não Home Assistant vận hành <strong>cục bộ Local 100%</strong> ngay tại nhà, phản hồi siêu tốc <strong>0.05 giây</strong>, bảo mật dữ liệu tuyệt đối. Tích hợp mô hình AI thông minh: chỉ cần trò chuyện tự nhiên qua 1 ô Chatbox duy nhất để điều khiển toàn bộ đèn, bình nóng lạnh, điều hòa, rèm cửa và khóa an ninh.
+      </p>
+
+      <!-- Pill Highlights -->
+      <div class="sh-pill-grid">
+        <div class="sh-pill-item">
+          <span class="sh-icon">⚡</span>
+          <div>
+            <strong>Local 100% Không Cloud</strong>
+            <div style="font-size: 0.74rem; color: #94a3b8;">Mất mạng Internet nhà vẫn hoạt động</div>
+          </div>
+        </div>
+        <div class="sh-pill-item">
+          <span class="sh-icon">🤖</span>
+          <div>
+            <strong>Chatbox AI Tự Nhiên</strong>
+            <div style="font-size: 0.74rem; color: #94a3b8;">Gõ lệnh tự do không cần học cú pháp</div>
+          </div>
+        </div>
+        <div class="sh-pill-item">
+          <span class="sh-icon">📶</span>
+          <div>
+            <strong>Tuya Zigbee 3.0 Mesh</strong>
+            <div style="font-size: 0.74rem; color: #94a3b8;">Sóng khỏe xuyên sàn, ổn định bền bỉ</div>
+          </div>
+        </div>
+        <div class="sh-pill-item">
+          <span class="sh-icon">🛡️</span>
+          <div>
+            <strong>Bảo Hành 1 Đổi 1 Tận Nơi</strong>
+            <div style="font-size: 0.74rem; color: #94a3b8;">Hỗ trợ kỹ thuật 24/7 trọn đời</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LIVE AI DEMO INTERACTIVE ARENA ================= -->
+  <section class="sh-demo-section" id="ai-demo">
+    <div class="container">
+      <div class="sh-demo-header">
+        <span class="sh-demo-badge">✨ TRẢI NGHIỆM TRỰC TIẾP TRÊN WEB</span>
+        <h2 class="sh-demo-title">Bấm Lệnh Thử &amp; Xem Thiết Bị Đổi Trạng Thái Tức Thì</h2>
+        <p style="color: #94a3b8; font-size: 0.95rem;">
+          Thử gõ hoặc bấm vào các câu lệnh mẫu bên dưới. Trợ lý AI HASS sẽ phản hồi tự nhiên và điều khiển các thiết bị ở bảng Dashboard bên phải theo thời gian thực!
+        </p>
+      </div>
+
+      <div class="sh-demo-grid">
+        <!-- Cột trái: Khung Chatbox AI -->
+        <div class="sh-chatbox-card">
+          <div class="sh-chatbox-top">
+            <div class="sh-chatbox-status">
+              <span class="sh-status-dot"></span>
+              <span>Home Assistant AI Assist (Local Host)</span>
+            </div>
+            <span style="font-size: 0.75rem; color: #38bdf8; background: rgba(56,189,248,0.1); padding: 3px 8px; border-radius: 6px;">DeepSeek / Local LLM</span>
+          </div>
+
+          <div class="sh-chat-feed" id="demoChatFeed">
+            <div class="sh-msg ai">
+              <div class="sh-msg-avatar">AI</div>
+              <div class="sh-msg-bubble">
+                Chào anh/chị chủ nhà! Em là Trợ lý AI của bộ não Home Assistant. Anh/chị hãy gõ hoặc bấm các câu lệnh mẫu bên dưới để em điều khiển thiết bị điện ngay nhé! 🏡⚡
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick prompt chips -->
+          <div class="sh-quick-prompts">
+            <button type="button" class="sh-prompt-chip" onclick="window.sendDemoPrompt(this, 'Bật bình nóng lạnh tầng 2 và hẹn 20 phút sau tắt')">♨️ Bật bình nóng lạnh tầng 2 (hẹn 20p)</button>
+            <button type="button" class="sh-prompt-chip" onclick="window.sendDemoPrompt(this, 'Tôi vừa về nhà, mở rèm phòng khách và bật điều hòa 25 độ')">🏠 Tôi vừa về nhà (Bật điều hòa 25°C + Mở rèm)</button>
+            <button type="button" class="sh-prompt-chip" onclick="window.sendDemoPrompt(this, 'Nhà có bao nhiêu đèn đang bật? Tắt hết các tầng trừ phòng ngủ master')">💡 Kiểm tra đèn &amp; Tắt bớt</button>
+            <button type="button" class="sh-prompt-chip" onclick="window.sendDemoPrompt(this, 'Chuẩn bị đi ngủ')">🌙 Kịch bản đi ngủ (Khóa cửa, tắt đèn)</button>
+            <button type="button" class="sh-prompt-chip" onclick="window.sendDemoPrompt(this, 'Nhiệt độ và độ ẩm phòng em bé hiện tại thế nào?')">🌡️ Xem nhiệt độ &amp; độ ẩm</button>
+          </div>
+
+          <form class="sh-chat-input-bar" onsubmit="window.handleDemoSubmit(event)">
+            <input type="text" id="demoChatInput" class="sh-chat-input" placeholder="Gõ lệnh bất kỳ (VD: Bật đèn phòng khách, tắt bình nóng lạnh...)" autocomplete="off">
+            <button type="submit" class="sh-chat-send" aria-label="Gửi lệnh">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path></svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- Cột phải: Bảng Dashboard Thiết Bị Cục Bộ -->
+        <div class="sh-dash-card">
+          <div class="sh-dash-top">
+            <div class="sh-dash-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+              <span>HASS Local Dashboard Live</span>
+            </div>
+            <span style="font-size: 0.75rem; color: #10b981; font-weight: 700;">Ping: 0.05s</span>
+          </div>
+
+          <div class="sh-device-grid">
+            <!-- Đèn Khách -->
+            <div class="sh-dev-item" id="dev-light-living">
+              <div class="sh-dev-top">
+                <span class="sh-dev-icon">💡</span>
+                <span class="sh-dev-badge" id="badge-light-living">TẮT</span>
+              </div>
+              <div class="sh-dev-name">Đèn Phòng Khách</div>
+              <div class="sh-dev-sub" id="sub-light-living">Tuya Zigbee 3.0</div>
+            </div>
+
+            <!-- Đèn Ngủ Master -->
+            <div class="sh-dev-item active" id="dev-light-master">
+              <div class="sh-dev-top">
+                <span class="sh-dev-icon">💡</span>
+                <span class="sh-dev-badge" id="badge-light-master">BẬT</span>
+              </div>
+              <div class="sh-dev-name">Đèn Ngủ Master</div>
+              <div class="sh-dev-sub" id="sub-light-master">Sáng 80% • Ấm áp</div>
+            </div>
+
+            <!-- Bình nóng lạnh -->
+            <div class="sh-dev-item" id="dev-water-heater">
+              <div class="sh-dev-top">
+                <span class="sh-dev-icon">♨️</span>
+                <span class="sh-dev-badge" id="badge-water-heater">TẮT</span>
+              </div>
+              <div class="sh-dev-name">Bình Nước Nóng T2</div>
+              <div class="sh-dev-sub" id="sub-water-heater">Công tắc 20A Tuya</div>
+            </div>
+
+            <!-- Điều hòa -->
+            <div class="sh-dev-item" id="dev-ac">
+              <div class="sh-dev-top">
+                <span class="sh-dev-icon">❄️</span>
+                <span class="sh-dev-badge" id="badge-ac">TẮT</span>
+              </div>
+              <div class="sh-dev-name">Điều Hòa Phòng Khách</div>
+              <div class="sh-dev-sub" id="sub-ac">IR Hub Zigbee</div>
+            </div>
+
+            <!-- Rèm cửa -->
+            <div class="sh-dev-item" id="dev-curtain">
+              <div class="sh-dev-top">
+                <span class="sh-dev-icon">🪟</span>
+                <span class="sh-dev-badge" id="badge-curtain">ĐÓNG</span>
+              </div>
+              <div class="sh-dev-name">Rèm Cửa Ban Công</div>
+              <div class="sh-dev-sub" id="sub-curtain">Động cơ kéo Tuya</div>
+            </div>
+
+            <!-- Khóa Tenon -->
+            <div class="sh-dev-item active" id="dev-lock">
+              <div class="sh-dev-top">
+                <span class="sh-dev-icon">🔒</span>
+                <span class="sh-dev-badge" id="badge-lock">ĐÃ KHÓA</span>
+              </div>
+              <div class="sh-dev-name">Khóa Tenon Face ID</div>
+              <div class="sh-dev-sub" id="sub-lock">Cửa chốt an toàn</div>
+            </div>
+          </div>
+
+          <!-- Sensor Box -->
+          <div style="background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between;">
+            <div>
+              <div style="font-size: 0.8rem; color: #94a3b8;">Cảm biến radar mmWave &amp; Nhiệt ẩm:</div>
+              <strong style="color: #38bdf8; font-size: 0.95rem;" id="sensor-data">Phòng Khách: 25.8°C • Độ ẩm 58% • Có người</strong>
+            </div>
+            <span style="font-size: 1.4rem;">📡</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 4 GÓI COMBO SMARTHOME ================= -->
+  <section class="sh-combos-section" id="cac-goi-combo">
+    <div class="container">
+      <div class="sh-combos-title-box">
+        <span class="sh-demo-badge">🔥 BẢNG BÁO GIÁ TRỌN GÓI</span>
+        <h2 style="font-size: 2.2rem; font-weight: 800; color: #ffffff; margin-bottom: 12px;">
+          4 Gói Combo Smarthome Tuya &amp; HASS Được Yêu Thích Nhất
+        </h2>
+        <p style="color: #94a3b8; font-size: 1rem;">
+          Đã bao gồm thiết bị phần cứng chính hãng, công cài đặt Home Assistant OS, tích hợp AI Chatbox ngôn ngữ tự nhiên và bảo hành tận nơi 24 tháng 1 đổi 1.
+        </p>
+      </div>
+
+      <div class="sh-combos-cards-grid">
+        <!-- Gói 1: Căn Hộ -->
+        <div class="sh-combo-box featured">
+          <span class="sh-combo-tag">BÁN CHẠY NHẤT</span>
+          <h3 class="sh-combo-name">Combo Căn Hộ Chung Cư Smarthome AI</h3>
+          <div class="sh-combo-target">Dành cho Căn hộ 2–3 Phòng Ngủ (60m² – 100m²)</div>
+          <div class="sh-combo-price-wrap">
+            <span class="sh-combo-price">12.800.000₫</span>
+            <span class="sh-combo-original-price">15.500.000₫</span>
+          </div>
+          <ul class="sh-combo-items-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>01 Bộ não Mini PC HASS OS x86</strong> (RAM 8GB, SSD NVMe 128GB, chạy 24/7 siêu mát).</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>01 USB Zigbee 3.0 Dongle Plus</strong> công suất cao, ăng-ten rời kết nối 100+ thiết bị.</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>05 Công tắc thông minh Tuya Zigbee</strong> phím cơ nảy êm / cảm ứng kính chữ nhật US.</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>01 Công tắc bình nóng lạnh 20A Tuya Zigbee</strong> hẹn giờ chống rò điện và đo điện năng.</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>02 Cảm biến radar hiện diện mmWave 24GHz</strong> (nhận diện người ngồi đọc sách không tắt đèn).</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>01 Hub điều khiển hồng ngoại IR Zigbee</strong> bật/tắt điều hòa, quạt theo nhiệt độ.</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Cài đặt Trợ lý AI Chatbox</strong> điều khiển toàn bộ căn hộ bằng ngôn ngữ tự nhiên.</span>
+            </li>
+          </ul>
+          <div class="sh-combo-actions">
+            <a href="https://zalo.me/0941204125?text=Toi%20quan%20tam%20Combo%20Smarthome%20Can%20Ho%2012.8tr" target="_blank" rel="noopener noreferrer" class="sh-btn-zalo">
+              💬 Nhận Báo Giá Zalo
+            </a>
+            <a href="tel:0941204125" class="sh-btn-call" title="Gọi Hotline">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Gói 2: Nhà Phố -->
+        <div class="sh-combo-box">
+          <span class="sh-combo-tag" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);">PHỦ SÓNG ĐA TẦNG</span>
+          <h3 class="sh-combo-name">Combo Nhà Phố 3–5 Tầng Smarthome AI Pro</h3>
+          <div class="sh-combo-target">Dành cho Nhà Phố Liền Kề 3–5 Tầng (200m² – 380m²)</div>
+          <div class="sh-combo-price-wrap">
+            <span class="sh-combo-price">26.500.000₫</span>
+            <span class="sh-combo-original-price">32.000.000₫</span>
+          </div>
+          <ul class="sh-combo-items-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>01 Server HASS Mini PC Intel N100 thế hệ mới</strong> (RAM 16GB, SSD 256GB).</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>01 USB Dongle Plus + 03 Zigbee Mesh Repeater</strong> phủ sóng xuyên sàn bê tông.</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>12 Công tắc thông minh Tuya Zigbee</strong> phím cơ/cảm ứng phủ kín các tầng.</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>03 Công tắc bình nóng lạnh 20A</strong> độc lập cho 3 tầng nhà tắm.</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>04 Cảm biến radar hiện diện mmWave</strong> cầu thang và phòng sinh hoạt.</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>03 Bộ hồng ngoại IR</strong> điều khiển điều hòa tự động các phòng ngủ.</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>AI Chatbox phân vùng</strong>: hiểu lệnh từng tầng ("Tắt tầng 2, bật bình tầng 3").</span>
+            </li>
+          </ul>
+          <div class="sh-combo-actions">
+            <a href="https://zalo.me/0941204125?text=Toi%20quan%20tam%20Combo%20Smarthome%20Nha%20Pho%2026.5tr" target="_blank" rel="noopener noreferrer" class="sh-btn-zalo">
+              💬 Nhận Báo Giá Zalo
+            </a>
+            <a href="tel:0941204125" class="sh-btn-call" title="Gọi Hotline">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Gói 3: Biệt Thự -->
+        <div class="sh-combo-box">
+          <span class="sh-combo-tag" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">LUXURY TOÀN DIỆN</span>
+          <h3 class="sh-combo-name">Combo Biệt Thự / Villa Smarthome AI Luxury</h3>
+          <div class="sh-combo-target">Dành cho Biệt Thự Sân Vườn, Penthouse (300m² – 800m²)</div>
+          <div class="sh-combo-price-wrap">
+            <span class="sh-combo-price">68.000.000₫</span>
+            <span class="sh-combo-original-price">82.000.000₫</span>
+          </div>
+          <ul class="sh-combo-items-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Server HASS Pro x86 Core i5</strong> (RAM 16GB, SSD 512GB, chạy Local AI Agent).</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Hệ thống 22 Công tắc kính cường lực viền kim loại cao cấp</strong> Tuya Zigbee.</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>04 Bộ động cơ rèm tự động Tuya Zigbee</strong> kéo mở theo ánh sáng mặt trời.</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>01 Khóa thông minh Tenon A7x Face ID 3D</strong> đồng bộ trạng thái cửa về HASS.</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>01 Chuông hình Dahua PoE mở cổng âm sàn</strong> tự động qua app DMSS &amp; HASS.</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>AI Agent cao cấp</strong>: kịch bản an ninh tuần tra, tiếp khách, tiệc tùng nghệ thuật.</span>
+            </li>
+          </ul>
+          <div class="sh-combo-actions">
+            <a href="https://zalo.me/0941204125?text=Toi%20quan%20tam%20Combo%20Smarthome%20Biet%20Thu%20Luxury%2068tr" target="_blank" rel="noopener noreferrer" class="sh-btn-zalo">
+              💬 Nhận Báo Giá Zalo
+            </a>
+            <a href="tel:0941204125" class="sh-btn-call" title="Gọi Hotline">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Gói 4: Nâng cấp HASS -->
+        <div class="sh-combo-box">
+          <span class="sh-combo-tag" style="background: rgba(16, 185, 129, 0.9);">TIẾT KIỆM TỐI ĐA</span>
+          <h3 class="sh-combo-name">Gói Nâng Cấp "Bộ Não HASS &amp; AI Chatbox"</h3>
+          <div class="sh-combo-target">Dành cho nhà đã có sẵn thiết bị Tuya / Sonoff / Aqara</div>
+          <div class="sh-combo-price-wrap">
+            <span class="sh-combo-price">6.900.000₫</span>
+            <span class="sh-combo-original-price">8.500.000₫</span>
+          </div>
+          <ul class="sh-combo-items-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>01 Mini PC HASS OS x86 chuyên dụng</strong> cài sẵn Home Assistant Supervised.</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>01 USB Zigbee 3.0 Dongle Plus</strong> thu sóng tất cả cảm biến và công tắc sẵn có.</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Tích hợp chuyển đổi Local 100%</strong>: Thoát khỏi Cloud chập chờn của Tuya/SmartLife.</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Cài đặt Trợ lý AI Chatbox điều khiển điện</strong> bằng tiếng Việt qua Zalo/App HASS.</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Bàn giao Dashboard máy tính bảng</strong> gắn tường trực quan, đẹp mắt.</span>
+            </li>
+          </ul>
+          <div class="sh-combo-actions">
+            <a href="https://zalo.me/0941204125?text=Toi%20quan%20tam%20Goi%20Nang%20Cap%20Bo%20Nao%20HASS%206.9tr" target="_blank" rel="noopener noreferrer" class="sh-btn-zalo">
+              💬 Nhận Báo Giá Zalo
+            </a>
+            <a href="tel:0941204125" class="sh-btn-call" title="Gọi Hotline">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COMPARISON TABLE ================= -->
+  <section class="sh-compare-section">
+    <div class="container">
+      <div class="sh-combos-title-box" style="margin-bottom: 36px;">
+        <h2 style="font-size: 1.95rem; font-weight: 800; color: #ffffff; margin-bottom: 10px;">
+          So Sánh: Smarthome Cloud Thông Thường vs Home Assistant Chu Gia
+        </h2>
+        <p style="color: #94a3b8; font-size: 0.95rem;">
+          Lý do các chủ nhà thông thái và kiến trúc sư lựa chọn giải pháp Home Assistant Local 100% thay vì các hệ thống Cloud đóng truyền thống.
+        </p>
+      </div>
+
+      <div class="sh-table-wrap">
+        <table class="sh-table">
+          <thead>
+            <tr>
+              <th>Tiêu chí so sánh</th>
+              <th>Smarthome Cloud Truyền Thống</th>
+              <th>Home Assistant + Tuya Chu Gia</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Vận hành khi mất mạng Internet</td>
+              <td>❌ Tê liệt hoàn toàn, không bấm được app</td>
+              <td>✅ Chạy bình thường 100% (Mạng nội bộ Local)</td>
+            </tr>
+            <tr>
+              <td>Tốc độ phản hồi lệnh</td>
+              <td>⚠️ Chậm (1–3 giây, giật lag khi đứt cáp biển)</td>
+              <td>⚡ Tức thì (0.05 giây, phản hồi ngay lập tức)</td>
+            </tr>
+            <tr>
+              <td>Bảo mật hình ảnh &amp; dữ liệu gia đình</td>
+              <td>⚠️ Lưu trữ trên máy chủ Cloud nước ngoài</td>
+              <td>🔒 Lưu 100% tại nhà trên ổ cứng máy chủ HASS</td>
+            </tr>
+            <tr>
+              <td>Khả năng kết nối liên hãng</td>
+              <td>❌ Bị khóa trong hệ sinh thái của hãng đó</td>
+              <td>✅ Tích hợp 2500+ hãng (Tuya, Dahua, Tenon, Daikin...)</td>
+            </tr>
+            <tr>
+              <td>Điều khiển điện bằng AI Chatbox</td>
+              <td>❌ Phải học đúng câu lệnh cứng nhắc từng từ</td>
+              <td>🤖 Gõ trò chuyện tự do bằng tiếng Việt tự nhiên</td>
+            </tr>
+            <tr>
+              <td>Phí duy trì máy chủ hàng tháng</td>
+              <td>⚠️ Nhiều hãng bắt mua gói cước Cloud</td>
+              <td>🎉 <strong>0đ trọn đời</strong> không phát sinh chi phí</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA BANNER ================= -->
+  <section style="padding: 70px 0; background: radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.15) 0%, #0b1329 80%); text-align: center; border-top: 1px solid rgba(255,255,255,0.08);">
+    <div class="container" style="max-width: 800px;">
+      <h2 style="font-size: 2.2rem; font-weight: 800; color: #ffffff; margin-bottom: 16px;">
+        Nâng Tầm Ngôi Nhà Với Bộ Não AI Smarthome Ngay Hôm Nay
+      </h2>
+      <p style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.7; margin-bottom: 30px;">
+        Kỹ sư Chu Gia Security sẵn sàng đến tận công trình để khảo sát thực địa, lên bản vẽ nguyên lý và báo giá dự toán bóc tách chi tiết hoàn toàn miễn phí.
+      </p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="https://zalo.me/0941204125" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #a855f7, #6366f1); color: #fff; font-weight: 700; padding: 14px 28px; border-radius: 9999px; text-decoration: none; font-size: 1rem; box-shadow: 0 4px 18px rgba(168,85,247,0.45);">
+          💬 Chát Zalo Kỹ Sư Smarthome 24/7
+        </a>
+        <a href="tel:0941204125" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(30, 41, 59, 0.8); border: 1px solid rgba(255,255,255,0.2); color: #fff; font-weight: 700; padding: 14px 28px; border-radius: 9999px; text-decoration: none; font-size: 1rem;">
+          📞 Gọi Hotline: 0941 204 125
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Chu Gia Security (chugia.shop). Đại lý phân phối chính hãng thiết bị an ninh &amp; Nhà thông minh Home Assistant từ 2014.</p>
+    </div>
+  </footer>
+
+  <!-- ================= JAVASCRIPT FOR INTERACTIVE AI DEMO ================= -->
+  <script>
+    // State of devices
+    const state = {
+      lightLiving: false,
+      lightMaster: true,
+      waterHeater: false,
+      ac: false,
+      curtain: false,
+      lock: true,
+      heaterTimer: null
+    };
+
+    function updateDashboardUI() {
+      // Light Living
+      const devLightLiving = document.getElementById('dev-light-living');
+      const badgeLightLiving = document.getElementById('badge-light-living');
+      if (state.lightLiving) {
+        devLightLiving.classList.add('active');
+        badgeLightLiving.textContent = 'BẬT 100%';
+      } else {
+        devLightLiving.classList.remove('active');
+        badgeLightLiving.textContent = 'TẮT';
+      }
+
+      // Light Master
+      const devLightMaster = document.getElementById('dev-light-master');
+      const badgeLightMaster = document.getElementById('badge-light-master');
+      if (state.lightMaster) {
+        devLightMaster.classList.add('active');
+        badgeLightMaster.textContent = 'BẬT';
+      } else {
+        devLightMaster.classList.remove('active');
+        badgeLightMaster.textContent = 'TẮT';
+      }
+
+      // Water Heater
+      const devWaterHeater = document.getElementById('dev-water-heater');
+      const badgeWaterHeater = document.getElementById('badge-water-heater');
+      const subWaterHeater = document.getElementById('sub-water-heater');
+      if (state.waterHeater) {
+        devWaterHeater.classList.add('heating');
+        badgeWaterHeater.textContent = 'ĐANG ĐUN';
+        subWaterHeater.textContent = '⚡ Hẹn tự tắt sau 20p';
+      } else {
+        devWaterHeater.classList.remove('heating');
+        badgeWaterHeater.textContent = 'TẮT';
+        subWaterHeater.textContent = 'Công tắc 20A Tuya';
+      }
+
+      // AC
+      const devAc = document.getElementById('dev-ac');
+      const badgeAc = document.getElementById('badge-ac');
+      const subAc = document.getElementById('sub-ac');
+      if (state.ac) {
+        devAc.classList.add('active');
+        badgeAc.textContent = '25°C COOL';
+        subAc.textContent = 'Gió êm • Làm mát';
+      } else {
+        devAc.classList.remove('active');
+        badgeAc.textContent = 'TẮT';
+        subAc.textContent = 'IR Hub Zigbee';
+      }
+
+      // Curtain
+      const devCurtain = document.getElementById('dev-curtain');
+      const badgeCurtain = document.getElementById('badge-curtain');
+      if (state.curtain) {
+        devCurtain.classList.add('active');
+        badgeCurtain.textContent = 'MỞ 100%';
+      } else {
+        devCurtain.classList.remove('active');
+        badgeCurtain.textContent = 'ĐÓNG';
+      }
+
+      // Lock
+      const devLock = document.getElementById('dev-lock');
+      const badgeLock = document.getElementById('badge-lock');
+      if (state.lock) {
+        devLock.classList.add('active');
+        badgeLock.textContent = 'ĐÃ KHÓA';
+      } else {
+        devLock.classList.remove('active');
+        badgeLock.textContent = 'MỞ CỬA';
+      }
+    }
+
+    function appendDemoMsg(role, text) {
+      const feed = document.getElementById('demoChatFeed');
+      const msgDiv = document.createElement('div');
+      msgDiv.className = `sh-msg ${role}`;
+      msgDiv.innerHTML = `
+        <div class="sh-msg-avatar">${role === 'user' ? '👤' : 'AI'}</div>
+        <div class="sh-msg-bubble">${text}</div>
+      `;
+      feed.appendChild(msgDiv);
+      feed.scrollTop = feed.scrollHeight;
+    }
+
+    function processAiCommand(command) {
+      const lower = command.toLowerCase().trim();
+      let reply = "";
+
+      if (lower.includes('bình nóng lạnh') || lower.includes('nóng lạnh') || lower.includes('đun nước')) {
+        state.waterHeater = true;
+        reply = "♨️ **Đã bật bình nóng lạnh tầng 2!** Em đã thiết lập đồng hồ đếm ngược, bình sẽ tự động ngắt sau đúng 20 phút để chống lãng phí điện và an toàn tuyệt đối cho gia đình nhé ạ.";
+      } else if (lower.includes('về nhà') || lower.includes('vừa về') || (lower.includes('điều hòa') && lower.includes('rèm'))) {
+        state.lightLiving = true;
+        state.curtain = true;
+        state.ac = true;
+        reply = "🏡 **Chào mừng anh/chị về nhà!** Em đã mở rèm phòng khách đón ánh sáng, bật đèn dịu mắt và khởi động điều hòa 25°C làm mát sẵn sàng rồi ạ!";
+      } else if (lower.includes('tắt bớt') || (lower.includes('đèn') && lower.includes('tắt'))) {
+        state.lightLiving = false;
+        state.lightMaster = true;
+        reply = "💡 **Đã kiểm tra hệ thống chiếu sáng:** Em đã tắt toàn bộ đèn phòng khách và các khu vực trống, chỉ duy trì đèn phòng ngủ Master với ánh sáng ấm 2700K cho anh/chị nghỉ ngơi ạ.";
+      } else if (lower.includes('đi ngủ') || lower.includes('ngủ ngon')) {
+        state.lightLiving = false;
+        state.lightMaster = false;
+        state.curtain = false;
+        state.waterHeater = false;
+        state.ac = true;
+        state.lock = true;
+        reply = "🌙 **Đã kích hoạt kịch bản Đi Ngủ:** Khóa Tenon đã chốt an toàn, toàn bộ đèn trong nhà đã tắt, rèm đã hạ xuống, điều hòa duy trì 26°C ngủ ngon. Chúc anh/chị ngủ ngon giấc!";
+      } else if (lower.includes('nhiệt độ') || lower.includes('độ ẩm') || lower.includes('phòng em bé')) {
+        reply = "🌡️ **Báo cáo môi trường phòng em bé:** Nhiệt độ hiện tại là **25.5°C**, độ ẩm **58%** — đạt chuẩn lý tưởng cho trẻ nhỏ. Điều hòa và máy lọc không khí đang chạy ở chế độ siêu êm ạ.";
+      } else if (lower.includes('bật đèn')) {
+        state.lightLiving = true;
+        reply = "💡 Em đã bật đèn phòng khách lên mức sáng 100% rồi ạ!";
+      } else if (lower.includes('tắt đèn')) {
+        state.lightLiving = false;
+        state.lightMaster = false;
+        reply = "💡 Em đã tắt toàn bộ hệ thống đèn trong nhà rồi ạ!";
+      } else {
+        reply = `🤖 **Dạ vâng!** Em đã tiếp nhận lệnh: *"${command}"*. Hệ thống Home Assistant Local đã thực thi thành công tới các thiết bị Tuya Zigbee tương ứng ạ!`;
+      }
+
+      setTimeout(() => {
+        appendDemoMsg('ai', reply);
+        updateDashboardUI();
+      }, 400);
+    }
+
+    window.sendDemoPrompt = function(btn, promptText) {
+      appendDemoMsg('user', promptText);
+      processAiCommand(promptText);
+    };
+
+    window.handleDemoSubmit = function(e) {
+      e.preventDefault();
+      const input = document.getElementById('demoChatInput');
+      const text = input.value.trim();
+      if (!text) return;
+      input.value = '';
+      appendDemoMsg('user', text);
+      processAiCommand(text);
+    };
+
+    // Mobile menu toggle
+    document.getElementById('mobileToggle')?.addEventListener('click', function() {
+      document.getElementById('navMenu')?.classList.toggle('active');
+    });
+
+    // Init UI
+    updateDashboardUI();
+  </script>
+</body>
+</html>

@@ -318,13 +318,26 @@ body {
 .landing-intercom-hero-btn {
   background: rgba(167, 139, 250, 0.09);
   border: 1.5px solid rgba(167, 139, 250, 0.4);
-  color: #c084fc;
+  color: #a78bfa;
 }
 .landing-intercom-hero-btn:hover {
   background: rgba(167, 139, 250, 0.2);
+  border-color: #a78bfa;
+  color: #ffffff;
+  box-shadow: 0 0 22px rgba(167, 139, 250, 0.35);
+  transform: translateY(-1px);
+}
+
+.landing-smarthome-hero-btn {
+  background: rgba(168, 85, 247, 0.1);
+  border: 1.5px solid rgba(168, 85, 247, 0.45);
+  color: #c084fc;
+}
+.landing-smarthome-hero-btn:hover {
+  background: rgba(168, 85, 247, 0.22);
   border-color: #c084fc;
   color: #ffffff;
-  box-shadow: 0 0 22px rgba(192, 132, 252, 0.35);
+  box-shadow: 0 0 22px rgba(168, 85, 247, 0.4);
   transform: translateY(-1px);
 }
 

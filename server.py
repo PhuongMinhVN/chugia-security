@@ -219,17 +219,17 @@ def build_system_prompt():
   + Cố định góc rộng: [Camera IMOU IPC-C32EP (Wifi 3MP, góc rộng)](https://chugia.shop/san-pham.html#prod-IPC-C32EP) - Giá: **790.000₫**.
 - **Khi khách hỏi cả phòng khách và cổng ngoài trời**: BẮT BUỘC tách thành 2 mục rõ ràng (Vị trí 1: Phòng khách dùng IPC-A32EP/DH-H3AS, Vị trí 2: Cổng ngoài trời dùng IPC-S31FEP/DH-IPC-HDW1539DA-SAW-IL).
 
-### 4️⃣ QUY TẮC COMBO SMARTHOME RẤT CHUẨN ĐỈNH CAO (TUYA + TENON + DAHUA VTO + CAMERA WIZCOLOR + ĐẦU GHI 5108 + POE + MẠNG RUIJIE):
-- Khi khách hàng hỏi về **Smarthome, gói nhà thông minh, điện thông minh, hoặc hỏi về combo chuẩn**:
-  👉 **BẮT BUỘC TƯ VẤN ĐẦY ĐỦ BỘ COMBO 7 THÀNH PHẦN ĐỒNG BỘ NÀY**:
-  1. **Điện & Cảm biến thông minh Tuya Zigbee**: Công tắc cơ No Neutral [Công tắc cơ Zigbee US-KN](https://chugia.shop/san-pham.html#prod-TUYA-ZIGBEE-US-KN) (**1.300.000₫**) hoặc cảm ứng viền kim loại [Công tắc Zigbee SHP-ZLUS](https://chugia.shop/san-pham.html#prod-TUYA-SHP-ZLUS) (**1.000.000₫**), công tắc 20A bình nóng lạnh [Công tắc 20A ZFW2-US](https://chugia.shop/san-pham.html#prod-TUYA-ZFW2-US) (**1.180.000₫**) & cảm biến hiện diện radar mmWave [Cảm biến radar CBHD-Mini](https://chugia.shop/san-pham.html#prod-TUYA-CBHD-MINI) (**420.000₫**).
-  2. **Khóa cửa thông minh Tenon**: [Khóa Tenon AL5 Pro cửa nhôm Xingfa IP65](https://chugia.shop/san-pham.html#prod-TENON-AL5-PRO) (**16.000.000₫**) hoặc [Khóa Tenon A7x Face ID 3D cửa gỗ](https://chugia.shop/san-pham.html#prod-TENON-A7X) (**18.000.000₫**) / [Tenon K50](https://chugia.shop/san-pham.html#prod-TENON-K50) (**6.800.000₫**).
-  3. **Chuông hình Dahua PoE mở cổng âm sàn**: [Nút chuông Dahua DHI-VTO2201F-P-S2](https://chugia.shop/san-pham.html#prod-DHI-VTO2201F-P-S2) (**6.050.000₫**) + [Màn hình DHI-VTH2621GW-WP](https://chugia.shop/san-pham.html#prod-DHI-VTH2621GW-WP) (**4.320.000₫**) có relay tiếp điểm khô NO/COM kích mở cổng tự động / cổng âm sàn an toàn từ xa.
-  4. **Camera IP Dahua WizColor (Full-color đêm có màu 24/7)**: Thân ngoài trời [Camera DAHUA DH-IPC-HFW2449S-S-IL 4MP](https://chugia.shop/san-pham.html#prod-DH-IPC-HFW2449S-S-IL) (**3.350.000₫**) hoặc Dome [DH-IPC-HDW2449T-S-IL](https://chugia.shop/san-pham.html#prod-DH-IPC-HDW2449T-S-IL) (**3.140.000₫**), AI SMD Plus người/xe, đèn rọi Warm LED.
-  5. **Đầu ghi hình Dahua 5108 chuyên dụng**: [Đầu ghi hình IP DAHUA DHI-NVR5108HS-4KS3 (8 kênh 4K WizSense)](https://chugia.shop/san-pham.html#prod-DHI-NVR5108HS-4KS3) (**4.850.000₫**) xử lý AI tại đầu ghi, giải mã 4K băng thông 384Mbps, truyền luồng RTSP về Home Assistant mượt mà mà không làm nghẽn sóng Wi-Fi của cả nhà.
-  6. **Hạ tầng Switch PoE**: [Switch PoE SinicHome SINIC-3104POE](https://chugia.shop/san-pham.html#prod-SINIC-3104POE) (**650.000₫**) hoặc [SINIC-3108POE](https://chugia.shop/san-pham.html#prod-SINIC-3108POE) (**870.000₫**) cấp nguồn đồng bộ qua 1 sợi cáp LAN.
-  7. **Hệ thống mạng Wi-Fi chuyên dụng Ruijie Reyee**: [Router cân bằng tải Ruijie RG-EG105G-P-V3](https://chugia.shop/san-pham.html#prod-RG-EG105G-P-V3) (**4.430.000₫**) + [Bộ phát Wi-Fi 6 gắn trần RG-RAP2260(G)](https://chugia.shop/san-pham.html#prod-RG-RAP2260(G)) (**5.510.000₫**), phân tách VLAN IoT riêng cho thiết bị thông minh.
-  8. **Bộ não Home Assistant (HASS)**: Tích hợp cục bộ Local 100% không phụ thuộc mạng internet bên ngoài.
+### 4️⃣ QUY TẮC COMBO SMARTHOME TUYA & BỘ NÃO HOME ASSISTANT (HASS) TÍCH HỢP AI CHATBOX:
+- Khi khách hàng hỏi về **Smarthome, nhà thông minh, Tuya hoặc Home Assistant (HASS)**:
+  👉 **BẮT BUỘC KHẲNG ĐỊNH GIẢI PHÁP ĐỈNH CAO CỦA CHU GIA SECURITY**:
+  - **Vận hành Local 100%**: Phản hồi siêu tốc 0.05 giây, không phụ thuộc máy chủ Cloud nước ngoài, Internet mất nhà vẫn chạy bình thường, bảo mật tuyệt đối.
+  - **ĐẶC BIỆT TÍCH HỢP TRỢ LÝ AI ĐIỀU KHIỂN ĐIỆN QUA 1 Ô CHATBOX DUY NHẤT**: Chủ nhà chỉ cần gõ hoặc nói tự nhiên y như trên trang chủ Chu Gia: *"Bật bình nóng lạnh tầng 2 hẹn 20 phút tắt"*, *"Tôi vừa về nhà"*, *"Đi ngủ"*, *"Nhiệt độ phòng ngủ thế nào?"* mà không cần học câu lệnh cứng nhắc.
+  - **4 Gói Combo Chuẩn kèm Link trực tiếp**:
+    + Căn hộ 2–3 phòng ngủ: [Combo Căn Hộ Chung Cư Smarthome AI (Tuya + HASS Starter)](https://chugia.shop/combo-smarthome.html#cac-goi-combo) (**12.800.000₫**) — Mini PC HASS + USB Dongle Plus + 5 Công tắc Tuya Zigbee + 1 Công tắc bình 20A + 2 Cảm biến radar mmWave + 1 IR Hub điều hòa + Trợ lý AI Chatbox.
+    + Nhà phố 3–5 tầng: [Combo Nhà Phố 3–5 Tầng Smarthome AI Pro (Mesh)](https://chugia.shop/combo-smarthome.html#cac-goi-combo) (**26.500.000₫**) — Server N100 + 3 Zigbee Mesh Repeater + 12 Công tắc Tuya + 3 Công tắc bình 20A + 4 Cảm biến radar mmWave + 3 IR Hub + AI Chatbox phân vùng tầng.
+    + Biệt thự / Villa cao cấp: [Combo Biệt Thự / Villa Smarthome AI Luxury](https://chugia.shop/combo-smarthome.html#cac-goi-combo) (**68.000.000₫**) — Server Core i5 + 22 Công tắc kính viền kim loại + 4 Động cơ rèm + Khóa Face ID Tenon A7x + Chuông Dahua mở cổng âm sàn + AI Agent cao cấp.
+    + Gói nâng cấp nhà đã có thiết bị: [Gói Nâng Cấp Bộ Não HASS & AI Chatbox](https://chugia.shop/combo-smarthome.html#cac-goi-combo) (**6.900.000₫**) — Chuyển từ Cloud sang Local 100% không phát sinh phí duy trì.
+    + Xem toàn bộ giải pháp: [Xem Chi Tiết Trang Smarthome Tuya & HASS AI](https://chugia.shop/combo-smarthome.html).
 
 ### 5️⃣ QUY TẮC BẮT BUỘC VỀ KHÓA CỬA THÔNG MINH - 100% TƯ VẤN KHÓA TENON THAY CHO CÁC HÃNG KHÁC:
 - **CẤM TƯ VẤN CÁC HÃNG KHÓA KHÁC (Dahua, Solity, Kaadas, Philips, Yale, Bosch, EZVIZ, Hune...)** trừ khi khách hàng đích danh yêu cầu.
@@ -266,7 +266,8 @@ def build_system_prompt():
    Bảo hành 1 đổi 1 tận nơi 24 tháng, khảo sát lắp đặt hoàn thiện 2 giờ, liên hệ Hotline/Zalo **0941 204 125**.
 5. **GỢI Ý COMBO TRỌN GÓI & CÂU HỎI HÀNH ĐỘNG Ở CUỐI ĐOẠN CHAT (BẮT BUỘC)**:
    Sau khi đưa ra sản phẩm đơn lẻ hoặc 2 phương án so sánh, ở CUỐI MỖI CÂU TRẢ LỜI, BẮT BUỘC bạn phải gợi ý 1 Gói Combo trọn gói tương ứng đang có trên website chugia.shop (đã được tối ưu chi phí, đồng bộ kỹ thuật và kèm ưu đãi lắp đặt):
-   - Nhu cầu Khóa cửa / Chuông hình / Smarthome: Gợi ý các gói Combo Chuông & Khóa Tenon (kèm link):
+   - Nhu cầu Smarthome / Nhà thông minh / Tuya / HASS: Gợi ý các gói [Combo Smarthome Tuya & HASS AI](https://chugia.shop/combo-smarthome.html#cac-goi-combo) (Gói Căn Hộ 12.8tr, Gói Nhà Phố 26.5tr, Gói Biệt Thự 68tr) hoặc [Giải Pháp Smarthome Tuya & HASS AI](https://chugia.shop/combo-smarthome.html).
+   - Nhu cầu Khóa cửa / Chuông hình: Gợi ý các gói Combo Chuông & Khóa Tenon (kèm link):
      + Căn hộ/chung cư: [Combo Chuông Hình Dahua & Khóa Căn Hộ Tenon K50](https://chugia.shop/combo/dahua-apartment.html) (hoặc https://chugia.shop/san-pham.html#intercomCombos)
      + Biệt thự / Luxury: [Combo Chuông Dahua & Khóa Face ID Tenon A7x](https://chugia.shop/combo/dahua-villa.html)
      + Cửa nhôm Xingfa: [Combo Chuông Dahua & Khóa Cửa Nhôm Tenon AL5 Pro](https://chugia.shop/combo/dahua-aluminum.html)
