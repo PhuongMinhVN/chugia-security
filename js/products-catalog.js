@@ -667,13 +667,11 @@
   }
 
   function getWifiComboShareUrl(brandKey, comboId) {
-    const base = getShareBaseUrl('combo-wifi.html');
-    return `${base}?brand=${encodeURIComponent(brandKey)}&combo=${encodeURIComponent(comboId)}`;
+    return getShareBaseUrl(`combo/${brandKey}-${comboId}.html`);
   }
 
   function getIntercomComboShareUrl(brandKey, comboId) {
-    const base = getShareBaseUrl('san-pham.html');
-    return `${base}?intercomBrand=${encodeURIComponent(brandKey)}&intercomCombo=${encodeURIComponent(comboId)}#intercomCombosSection`;
+    return getShareBaseUrl(`combo/${brandKey}-${comboId}.html`);
   }
 
   function showComboShareToast(title, url) {
@@ -753,6 +751,85 @@
       });
     } else {
       window.copyComboShareLink(url, title);
+    }
+  };
+
+  window.copyComboPostText = function(brandKey, comboId, btnEl) {
+    let combo = null;
+    let brandData = null;
+    let isWifi = false;
+
+    if (window.ALL_WIFI_COMBOS && window.ALL_WIFI_COMBOS[brandKey]) {
+      brandData = window.ALL_WIFI_COMBOS[brandKey];
+      combo = brandData.combos[comboId];
+      isWifi = true;
+    } else if (window.ALL_INTERCOM_COMBOS && window.ALL_INTERCOM_COMBOS[brandKey]) {
+      brandData = window.ALL_INTERCOM_COMBOS[brandKey];
+      combo = brandData.combos[comboId];
+      isWifi = false;
+    }
+
+    if (!combo) return;
+
+    const shareUrl = isWifi ? getWifiComboShareUrl(brandKey, comboId) : getIntercomComboShareUrl(brandKey, comboId);
+    const itemsText = combo.items.map(i => ` • ${i.qty}x ${i.name}`).join('\n');
+
+    const postText = 
+`🔥 ${combo.title.toUpperCase()}
+⭐ Giải pháp ${combo.subtitle} chính hãng bởi Chu Gia Security
+
+💰 Giá ưu đãi trọn gói: ${formatVND(combo.comboPrice)} (Giá niêm yết: ${formatVND(combo.retailTotal)})
+🎁 ${combo.savingsText}
+
+📦 TRỌN BỘ THIẾT BỊ BAO GỒM:
+${itemsText}
+
+🛡️ CHÍNH SÁCH VÀNG CHU GIA SECURITY:
+✅ Thiết bị nhập khẩu chính hãng 100%
+✅ Bảo hành tiêu chuẩn vàng 24 tháng (1 đổi 1)
+✅ Khảo sát & đo kiểm tận nơi miễn phí 0đ
+✅ Hỗ trợ cấu hình tối ưu hiệu năng trọn đời
+
+👉 Xem chi tiết cấu hình & đặt mua tại:
+${shareUrl}
+
+☎️ Hotline / Zalo tư vấn 24/7: 0941 204 125
+🏢 Chu Gia Security - Kho Thiết Bị An Ninh & Điện Thông Minh`;
+
+    const handleSuccess = () => {
+      if (btnEl) {
+        const origHtml = btnEl.innerHTML;
+        btnEl.classList.add('copied');
+        btnEl.innerHTML = `
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span>Đã chép!</span>
+        `;
+        setTimeout(() => {
+          btnEl.classList.remove('copied');
+          btnEl.innerHTML = origHtml;
+        }, 2000);
+      }
+      showComboShareToast('Đã sao chép nội dung bài đăng!', shareUrl);
+    };
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(postText).then(handleSuccess).catch(() => {
+        const tmpInput = document.createElement('textarea');
+        tmpInput.value = postText;
+        document.body.appendChild(tmpInput);
+        tmpInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tmpInput);
+        handleSuccess();
+      });
+    } else {
+      const tmpInput = document.createElement('textarea');
+      tmpInput.value = postText;
+      document.body.appendChild(tmpInput);
+      tmpInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tmpInput);
+      handleSuccess();
     }
   };
 
@@ -973,9 +1050,13 @@
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.08L2 22l5.07-1.33C8.52 21.52 10.21 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm1 14.5h-2v-2h2v2zm0-4h-2V7h2v5.5z"/></svg>
                   <span>Zalo</span>
                 </a>
+                <button type="button" class="btn-combo-social btn-social-copy-post" onclick="window.copyComboPostText('${brandKey}', '${combo.id}', this)" title="Sao chép bài viết kèm link để đăng mạng xã hội">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                  <span>Chép bài</span>
+                </button>
                 <button type="button" class="btn-combo-social btn-social-native" onclick="window.triggerNativeComboShare('${shareUrl}', '${combo.title.replace(/'/g, "\\'")}', '${combo.savingsText.replace(/'/g, "\\'")}')" title="Chia sẻ qua ứng dụng khác">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
-                  <span>Chia sẻ</span>
+                  <span>Khác</span>
                 </button>
               </div>
             </div>
@@ -2369,9 +2450,13 @@
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.08L2 22l5.07-1.33C8.52 21.52 10.21 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm1 14.5h-2v-2h2v2zm0-4h-2V7h2v5.5z"/></svg>
                   <span>Zalo</span>
                 </a>
+                <button type="button" class="btn-combo-social btn-social-copy-post" onclick="window.copyComboPostText('${brandKey}', '${combo.id}', this)" title="Sao chép bài viết kèm link để đăng mạng xã hội">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                  <span>Chép bài</span>
+                </button>
                 <button type="button" class="btn-combo-social btn-social-native" onclick="window.triggerNativeComboShare('${shareUrl}', '${combo.title.replace(/'/g, "\\'")}', '${combo.savingsText.replace(/'/g, "\\'")}')" title="Chia sẻ qua ứng dụng khác">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
-                  <span>Chia sẻ</span>
+                  <span>Khác</span>
                 </button>
               </div>
             </div>
