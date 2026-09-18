@@ -6287,10 +6287,11 @@ a.floating-hud-badge.hud-top-right:hover {
 }
 
 .mbn-item span {
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   font-weight: 600;
   line-height: 1.1;
   transition: color 0.2s ease;
+  white-space: nowrap;
 }
 
 /* Touch feedback */
@@ -6365,30 +6366,62 @@ a.floating-hud-badge.hud-top-right:hover {
 
 @media (max-width: 768px) {
   body {
-    padding-bottom: calc(68px + env(safe-area-inset-bottom, 0px)) !important;
+    padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)) !important;
   }
 
   .mobile-bottom-nav {
     display: flex !important;
   }
 
-  .floating-widgets,
-  .floating-cta,
+  /* Ẩn nút giỏ hàng nổi trùng lặp trên mobile vì đã có nút Báo Giá tại bottom nav */
   .cart-float-btn {
-    bottom: 74px !important;
+    display: none !important;
+  }
+
+  /* Tối ưu widget liên hệ: chỉ hiện Zalo gọn gàng nổi ngay phía trên bottom nav */
+  .floating-widgets,
+  .floating-cta {
+    bottom: calc(74px + env(safe-area-inset-bottom, 0px)) !important;
     right: 14px !important;
+    gap: 8px !important;
+    z-index: 980 !important;
     transition: bottom 0.28s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
+  /* Ẩn Messenger trên mobile để tránh che khuất màn hình */
+  .float-fb {
+    display: none !important;
+  }
+
+  /* Ẩn nút gọi nổi vì đã có nút Hotline trực tiếp tại thanh điều hướng đáy */
+  .float-phone {
+    display: none !important;
+  }
+
+  .float-btn {
+    width: 44px !important;
+    height: 44px !important;
+    box-shadow: 0 4px 16px rgba(0, 104, 255, 0.45) !important;
+  }
+
+  .float-zalo {
+    font-size: 0.8rem !important;
+  }
+
   body.has-calc-sticky-visible .floating-widgets,
-  body.has-calc-sticky-visible .floating-cta,
-  body.has-calc-sticky-visible .cart-float-btn {
-    bottom: 125px !important;
-    bottom: calc(125px + env(safe-area-inset-bottom)) !important;
+  body.has-calc-sticky-visible .floating-cta {
+    bottom: calc(130px + env(safe-area-inset-bottom)) !important;
   }
 
   body.has-calc-sticky-visible #floatTop {
     display: none !important;
+  }
+
+  /* Thêm khoảng đệm đáy cho các section combo để không bị thanh nav che nội dung */
+  .omada-combos-section,
+  .intercom-combos-section,
+  .smarthome-combos-section {
+    padding-bottom: 50px !important;
   }
 }
 
