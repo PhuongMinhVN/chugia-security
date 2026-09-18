@@ -1,5 +1,5 @@
 /**
- * CHU GIA SMART SECURITY - MAIN JAVASCRIPT
+ * CHU GIA SMART TECHNOLOGY - MAIN JAVASCRIPT
  * Công ty TNHH Đầu tư và Thương mại Chu Gia
  * Hotline: 0941204125
  * 
@@ -354,7 +354,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ctx.fillStyle = '#FFFFFF';
     ctx.font = 'bold 16px "Plus Jakarta Sans", sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText('CHU GIA SMART SECURITY  •  0941 204 125', w / 2, 33);
+    ctx.fillText('CHU GIA SMART TECHNOLOGY  •  0941 204 125', w / 2, 33);
 
     // Khung ảnh sản phẩm to
     const heroX = 24;
@@ -556,7 +556,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="qr-card-header">
           <div class="qr-shop-brand">
             <span class="qr-shop-dot"></span>
-            <strong>CHU GIA SMART SECURITY</strong>
+            <strong>CHU GIA SMART TECHNOLOGY</strong>
           </div>
           <span class="qr-card-tag">Chính hãng 100%</span>
         </div>
@@ -678,7 +678,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!product || !modalOverlay || !modalBody) return;
 
     const shareUrl = getProductShareUrl(product.id);
-    const shareTitle = `${product.name} - Giá ưu đãi tại Chu Gia Security`;
+    const shareTitle = `${product.name} - Giá ưu đãi tại Chu Gia Technology`;
     const shareText = `${product.name} giá ${formatVND(product.price)}. ${product.desc}`;
 
     try {
@@ -2137,7 +2137,7 @@ ${customLines.join('\n')}
     const grandTotalText = summaryTotalPrice ? summaryTotalPrice.textContent : '';
 
     const zaloMsg = 
-`Xin chào Chu Gia Security! Tôi muốn đặt lịch tư vấn & báo giá theo dự toán trên website:
+`Xin chào Chu Gia Technology! Tôi muốn đặt lịch tư vấn & báo giá theo dự toán trên website:
 
 ${sections.join('\n\n')}
 
@@ -2150,7 +2150,7 @@ Nhờ Chu Gia liên hệ tư vấn và xác nhận đơn hàng sớm giúp tôi 
       navigator.clipboard.writeText(zaloMsg).catch(() => {});
     }
 
-    showToast('Đang mở Zalo kết nối với Chu Gia Security... Đã sao chép cấu hình gói!');
+    showToast('Đang mở Zalo kết nối với Chu Gia Technology... Đã sao chép cấu hình gói!');
 
     const zaloUrl = `https://zalo.me/0941204125?text=${encodeURIComponent(zaloMsg)}`;
     window.open(zaloUrl, '_blank');

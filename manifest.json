@@ -1,8 +1,8 @@
 {
   "id": "/?source=pwa",
-  "name": "Chu Gia Security - An Ninh & Smarthome",
+  "name": "Chu Gia Technology - An Ninh & Smarthome",
   "short_name": "Chu Gia",
-  "description": "Trợ lý AI tư vấn Camera, Mạng Wifi, Khóa Thông Minh & Smarthome Chu Gia Security",
+  "description": "Trợ lý AI tư vấn Camera, Mạng Wifi, Khóa Thông Minh & Smarthome Chu Gia Technology",
   "start_url": "./index.html?source=pwa",
   "scope": "./",
   "display": "standalone",

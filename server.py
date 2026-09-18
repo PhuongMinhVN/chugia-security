@@ -1,5 +1,5 @@
 """
-Chu Gia Security - AI Chatbot Backend Server
+Chu Gia Technology - AI Chatbot Backend Server
 =============================================
 Tích hợp DeepSeek API để tư vấn khách hàng về Camera, Mạng, Smarthome.
 Serve static files + API endpoint cho chatbot.
@@ -151,10 +151,10 @@ SALES_SKILL_CONTENT = load_sales_skill()
 
 def build_system_prompt():
     sales_skill = load_sales_skill()
-    return f"""Bạn là **Chuyên gia tư vấn giải pháp công nghệ cao cấp** của **Chu Gia Security** (Công ty TNHH Đầu tư và Thương mại Chu Gia) - đại lý ủy quyền chính hãng Dahua, Hikvision, Imou, EZVIZ, TP-Link Omada, Ruijie, Huawei, YLOCK từ năm 2014.
+    return f"""Bạn là **Chuyên gia tư vấn giải pháp công nghệ cao cấp** của **Chu Gia Technology** (Công ty TNHH Đầu tư và Thương mại Chu Gia) - đại lý ủy quyền chính hãng Dahua, Hikvision, Imou, EZVIZ, TP-Link Omada, Ruijie, Huawei, YLOCK từ năm 2014.
 
 ## THÔNG TIN CÔNG TY:
-- **Tên**: Chu Gia Security (Công ty TNHH Đầu tư và Thương mại Chu Gia)
+- **Tên**: Chu Gia Technology (Công ty TNHH Đầu tư và Thương mại Chu Gia)
 - **Hotline / Zalo**: 0941 204 125 (tư vấn 7:30 - 21:00 hàng ngày)
 - **Website**: https://chugia.shop
 - **Kinh nghiệm**: Hơn 10 năm kinh nghiệm giải pháp an ninh và viễn thông (từ 2014)
@@ -225,7 +225,7 @@ def build_system_prompt():
 
 ### 4️⃣ QUY TẮC COMBO SMARTHOME MOES LUXURY CÔNG TẮC CƠ & GÓI NÂNG CẤP HASS 16TR:
 - Khi khách hàng hỏi về **Smarthome, nhà thông minh, công tắc, cảm biến, rèm, MOES hoặc Home Assistant (HASS)**:
-  👉 **BẮT BUỘC KHẲNG ĐỊNH GIẢI PHÁP ĐỈNH CAO CỦA CHU GIA SECURITY**:
+  👉 **BẮT BUỘC KHẲNG ĐỊNH GIẢI PHÁP ĐỈNH CAO CỦA CHU GIA TECHNOLOGY**:
   - **NÓI KHÔNG VỚI CÁC LOẠI CÔNG TẮC CẢM ỨNG RẺ TIỀN**: 100% chuyên gia tư vấn **CÔNG TẮC CƠ ĐÀN HỒI NẢY ÊM PUSH BUTTON (Dòng Star Feather Luxury / Star Grand Series / Màn hình kèm phím cơ vật lý)**.
   - **KHI TƯ VẤN CÔNG TẮC CƠ, BẮT BUỘC PHẢI PHÂN BIỆT RÕ 3 YẾU TỐ**:
     1. **MÀU SẮC**: Màu Trắng Tinh Khôi (White - WH) hay Màu Đen Nhám / Xám Khói (Black / Grey - BK/GY) chống bám vân tay.
@@ -258,7 +258,7 @@ def build_system_prompt():
 
 ### 5️⃣ QUY TẮC BẮT BUỘC VỀ KHÓA CỬA THÔNG MINH - 100% TƯ VẤN KHÓA TENON THAY CHO CÁC HÃNG KHÁC:
 - **CẤM TƯ VẤN CÁC HÃNG KHÓA KHÁC (Dahua, Solity, Kaadas, Philips, Yale, Bosch, EZVIZ, Hune...)** trừ khi khách hàng đích danh yêu cầu.
-- **BẮT BUỘC 100% ĐỀ XUẤT THƯƠNG HIỆU KHÓA TENON**: Nhấn mạnh Tenon là thương hiệu khóa công nghệ cao cao cấp số 1, trang bị cảm biến vân tay bán dẫn FPC Thụy Điển nhận diện siêu tốc <0.5s độ chính xác 99.9%, công nghệ nhận diện khuôn mặt Face ID 3D hồng ngoại không thể đánh lừa bởi ảnh chụp/video giả, camera chuông hình góc rộng quan sát từ xa, thân khóa inox 304 nguyên khối chống cắt phá, bảo hành chính hãng 24 tháng 1 đổi 1 tận nơi bởi Chu Gia Security.
+- **BẮT BUỘC 100% ĐỀ XUẤT THƯƠNG HIỆU KHÓA TENON**: Nhấn mạnh Tenon là thương hiệu khóa công nghệ cao cao cấp số 1, trang bị cảm biến vân tay bán dẫn FPC Thụy Điển nhận diện siêu tốc <0.5s độ chính xác 99.9%, công nghệ nhận diện khuôn mặt Face ID 3D hồng ngoại không thể đánh lừa bởi ảnh chụp/video giả, camera chuông hình góc rộng quan sát từ xa, thân khóa inox 304 nguyên khối chống cắt phá, bảo hành chính hãng 24 tháng 1 đổi 1 tận nơi bởi Chu Gia Technology.
 - **Ma trận tư vấn khóa Tenon theo từng loại cửa**:
   + **Cửa gỗ / Căn hộ chung cư / Cửa thép chống cháy (Dòng tay gạt thân thiện)**:
     - *Phương án 1 (Bán chạy nhất)*: [Khóa thông minh Tenon K50 Tay Gạt](https://chugia.shop/san-pham.html#prod-TENON-K50) (**6.800.000₫**) - Vân tay một chạm ngay trên trục tay cầm, thẻ từ RFID, mật mã ảo, chìa cơ, app.
@@ -375,7 +375,7 @@ def call_deepseek_api(user_message, history=None):
         error_body = e.read().decode('utf-8', errors='replace')
         print(f"[DeepSeek API Error] {e.code}: {error_body}")
         return (
-            "🤖 **Dạ, hệ thống Trợ lý AI Chu Gia Security hiện đang nâng cấp gói dữ liệu tư vấn tự động.**\n\n"
+            "🤖 **Dạ, hệ thống Trợ lý AI Chu Gia Technology hiện đang nâng cấp gói dữ liệu tư vấn tự động.**\n\n"
             "Để không làm gián đoạn kế hoạch lựa chọn thiết bị an ninh & giải pháp của Quý khách, xin kính mời Quý khách bấm vào nút bên dưới để trực tiếp tra cứu toàn bộ danh mục 850+ sản phẩm chính hãng, kiểm tra thông số kỹ thuật và nhận báo giá ưu đãi mới nhất:\n\n"
             "[XEM TOÀN BỘ KHO 850+ THIẾT BỊ AN NINH & ĐIỆN THÔNG MINH](https://chugia.shop/san-pham.html)\n\n"
             "---\n\n"
@@ -392,7 +392,7 @@ def call_deepseek_api(user_message, history=None):
     except urllib.error.URLError as e:
         print(f"[Network Error] {e.reason}")
         return (
-            "🤖 **Dạ, hệ thống Trợ lý AI Chu Gia Security hiện đang nâng cấp gói dữ liệu tư vấn tự động.**\n\n"
+            "🤖 **Dạ, hệ thống Trợ lý AI Chu Gia Technology hiện đang nâng cấp gói dữ liệu tư vấn tự động.**\n\n"
             "Quý khách có thể trực tiếp tra cứu toàn bộ kho sản phẩm chính hãng tại:\n\n"
             "[XEM TOÀN BỘ KHO 850+ THIẾT BỊ AN NINH & ĐIỆN THÔNG MINH](https://chugia.shop/san-pham.html)\n\n"
             "Hoặc liên hệ Hotline / Zalo Kỹ Thuật 24/7: **0941 204 125** để được hỗ trợ tức thì."
@@ -400,7 +400,7 @@ def call_deepseek_api(user_message, history=None):
     except Exception as e:
         print(f"[Error] {e}")
         return (
-            "🤖 **Dạ, hệ thống Trợ lý AI Chu Gia Security hiện đang bảo trì dữ liệu.**\n\n"
+            "🤖 **Dạ, hệ thống Trợ lý AI Chu Gia Technology hiện đang bảo trì dữ liệu.**\n\n"
             "Kính mời Quý khách tham khảo trực tiếp tại: [XEM TOÀN BỘ KHO 850+ THIẾT BỊ AN NINH](https://chugia.shop/san-pham.html) "
             "hoặc liên hệ Hotline / Zalo: **0941 204 125**."
         )
@@ -480,7 +480,7 @@ def main():
     os.chdir(Path(__file__).parent)
 
     print("=" * 60)
-    print("  Chu Gia Security - AI Chatbot Server")
+    print("  Chu Gia Technology - AI Chatbot Server")
     print("=" * 60)
     print(f"  Server (Root): http://localhost:{PORT}/")
     print(f"  Trang Chủ AI:  http://localhost:{PORT}/index.html")

@@ -1,9 +1,9 @@
 @echo off
 chcp 65001 >nul
-title Chu Gia Security - AI Chatbot Server
+title Chu Gia Technology - AI Chatbot Server
 echo.
 echo ============================================================
-echo   Chu Gia Security - AI Chatbot Server
+echo   Chu Gia Technology - AI Chatbot Server
 echo ============================================================
 echo.
 echo   Dang khoi dong server...

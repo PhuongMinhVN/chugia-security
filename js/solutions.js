@@ -1,5 +1,5 @@
 /**
- * CHU GIA SECURITY - ENTERPRISE SOLUTIONS
+ * CHU GIA TECHNOLOGY - ENTERPRISE SOLUTIONS
  * Dedicated Solutions for HIKVISION, DAHUA & RUIJIE
  * Hotline: 0941 204 125
  */
@@ -847,7 +847,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const phone = document.getElementById('clientPhone')?.value || '';
       const sol = selectedSolutionInput?.value || 'Giải pháp chuyên dụng';
 
-      alert(`Cảm ơn ${name} (${phone})!\nChu Gia Security đã tiếp nhận yêu cầu tư vấn giải pháp: "${sol}".\nKỹ sư trưởng dự án sẽ liên hệ lại trong vòng 30 phút để khảo sát và lên phương án!`);
+      alert(`Cảm ơn ${name} (${phone})!\nChu Gia Technology đã tiếp nhận yêu cầu tư vấn giải pháp: "${sol}".\nKỹ sư trưởng dự án sẽ liên hệ lại trong vòng 30 phút để khảo sát và lên phương án!`);
       consultForm.reset();
     });
   }

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CHU GIA SECURITY - PRODUCTS CATALOG STYLESHEET (san-pham.html)
+   CHU GIA TECHNOLOGY - PRODUCTS CATALOG STYLESHEET (san-pham.html)
    ========================================================================== */
 
 /* Page Banner */
@@ -741,7 +741,7 @@
   transform: scale(1.08);
 }
 
-/* Chu Gia Security Watermark Stamp (Covers and replaces old watermark at bottom-left) */
+/* Chu Gia Technology Watermark Stamp (Covers and replaces old watermark at bottom-left) */
 .pro-card-watermark {
   position: absolute;
   bottom: 8px;

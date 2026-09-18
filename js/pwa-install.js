@@ -1,5 +1,5 @@
 /**
- * Chu Gia Security - Progressive Web App (PWA) Install Manager
+ * Chu Gia Technology - Progressive Web App (PWA) Install Manager
  * Hỗ trợ cài đặt PWA trên Android (Chrome, Edge, Samsung Internet...), iOS (Safari) và Desktop
  */
 

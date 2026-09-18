@@ -1,5 +1,5 @@
 /**
- * CHU GIA SECURITY - PRODUCTS CATALOG CONTROLLER
+ * CHU GIA TECHNOLOGY - PRODUCTS CATALOG CONTROLLER
  * Đồng bộ 469 sản phẩm từ HTA Vietnam (Sapo Landing Order)
  * Quy tắc tính giá: Giá nhập x 130% (+30%) ra Giá bán lẻ niêm yết
  * Hotline: 0941204125
@@ -240,7 +240,7 @@
       alert('Giỏ báo giá đang trống! Hãy thêm sản phẩm trước.');
       return;
     }
-    let msg = 'Xin chào Chu Gia Security! Tôi muốn yêu cầu báo giá các sản phẩm sau:\n\n';
+    let msg = 'Xin chào Chu Gia Technology! Tôi muốn yêu cầu báo giá các sản phẩm sau:\n\n';
     state.cart.forEach((item, i) => {
       msg += `${i + 1}. ${item.name}${item.sku ? ' (SKU: ' + item.sku + ')' : ''} — SL: ${item.qty}${item.retailPrice > 0 ? ' — Đơn giá: ' + formatVND(item.retailPrice) : ''}\n`;
     });
@@ -252,7 +252,7 @@
 
   function copyCartList() {
     if (state.cart.length === 0) return;
-    let text = 'DANH SÁCH BÁO GIÁ - CHU GIA SECURITY\n' + '='.repeat(40) + '\n';
+    let text = 'DANH SÁCH BÁO GIÁ - CHU GIA TECHNOLOGY\n' + '='.repeat(40) + '\n';
     state.cart.forEach((item, i) => {
       text += `${i + 1}. ${item.name}\n   SKU: ${item.sku || 'N/A'} | SL: ${item.qty} | Đơn giá: ${item.retailPrice > 0 ? formatVND(item.retailPrice) : 'Liên hệ'}\n`;
     });
@@ -303,7 +303,7 @@
       brandName: 'TP-Link Omada SDN',
       brandBadge: 'HỆ THỐNG MẠNG & WI-FI 6 DOANH NGHIỆP • TP-LINK OMADA SDN',
       sectionTitle: 'Combo Giải Pháp Wi-Fi 6 & Mạng Chuyên Dụng TP-Link Omada',
-      sectionSub: 'Được kỹ sư Chu Gia Security thiết kế và tối ưu thông số chịu tải thực chiến: <strong>Nhà ở thông minh, Biệt thự Villa, Văn phòng doanh nghiệp</strong> và <strong>Nhà máy sản xuất</strong>. Chuyển vùng Seamless Roaming không ngắt cuộc gọi, cân bằng tải Multi-WAN gộp nhiều đường truyền Internet và quản trị Cloud 24/7.',
+      sectionSub: 'Được kỹ sư Chu Gia Technology thiết kế và tối ưu thông số chịu tải thực chiến: <strong>Nhà ở thông minh, Biệt thự Villa, Văn phòng doanh nghiệp</strong> và <strong>Nhà máy sản xuất</strong>. Chuyển vùng Seamless Roaming không ngắt cuộc gọi, cân bằng tải Multi-WAN gộp nhiều đường truyền Internet và quản trị Cloud 24/7.',
       exploreText: 'Xem 16 Thiết Bị Omada Trong Kho ↓',
       combos: {
         home: {
@@ -741,8 +741,8 @@
   window.triggerNativeComboShare = function(url, title, subText) {
     if (navigator.share) {
       navigator.share({
-        title: `${title} | Chu Gia Security`,
-        text: `${title} - ${subText || 'Giải pháp trọn gói chính hãng tại Chu Gia Security'}`,
+        title: `${title} | Chu Gia Technology`,
+        text: `${title} - ${subText || 'Giải pháp trọn gói chính hãng tại Chu Gia Technology'}`,
         url: url
       }).catch(err => {
         if (err.name !== 'AbortError') {
@@ -776,7 +776,7 @@
 
     const postText = 
 `🔥 ${combo.title.toUpperCase()}
-⭐ Giải pháp ${combo.subtitle} chính hãng bởi Chu Gia Security
+⭐ Giải pháp ${combo.subtitle} chính hãng bởi Chu Gia Technology
 
 💰 Giá ưu đãi trọn gói: ${formatVND(combo.comboPrice)} (Giá niêm yết: ${formatVND(combo.retailTotal)})
 🎁 ${combo.savingsText}
@@ -784,7 +784,7 @@
 📦 TRỌN BỘ THIẾT BỊ BAO GỒM:
 ${itemsText}
 
-🛡️ CHÍNH SÁCH VÀNG CHU GIA SECURITY:
+🛡️ CHÍNH SÁCH VÀNG CHU GIA TECHNOLOGY:
 ✅ Thiết bị nhập khẩu chính hãng 100%
 ✅ Bảo hành tiêu chuẩn vàng 24 tháng (1 đổi 1)
 ✅ Khảo sát & đo kiểm tận nơi miễn phí 0đ
@@ -794,7 +794,7 @@ ${itemsText}
 ${shareUrl}
 
 ☎️ Hotline / Zalo tư vấn 24/7: 0941 204 125
-🏢 Chu Gia Security - Kho Thiết Bị An Ninh & Điện Thông Minh`;
+🏢 Chu Gia Technology - Kho Thiết Bị An Ninh & Điện Thông Minh`;
 
     const handleSuccess = () => {
       if (btnEl) {
@@ -1244,7 +1244,7 @@ ${shareUrl}
               retailPrice: matchItem.price,
               image: matchItem.img,
               images: [matchItem.img],
-              description: `<p><strong>${matchItem.name} (${matchItem.sku})</strong></p><p>Thiết bị chính hãng phân phối bởi Chu Gia Security, vai trò trong giải pháp: <em>${matchItem.role}</em>.</p><p>Cam kết 100% hàng chính hãng đầy đủ giấy tờ CO/CQ, bảo hành 24 tháng 1 đổi 1, hỗ trợ cài đặt cấu hình Cloud 24/7.</p>`
+              description: `<p><strong>${matchItem.name} (${matchItem.sku})</strong></p><p>Thiết bị chính hãng phân phối bởi Chu Gia Technology, vai trò trong giải pháp: <em>${matchItem.role}</em>.</p><p>Cam kết 100% hàng chính hãng đầy đủ giấy tờ CO/CQ, bảo hành 24 tháng 1 đổi 1, hỗ trợ cài đặt cấu hình Cloud 24/7.</p>`
             };
             break;
           }
@@ -1268,7 +1268,7 @@ ${shareUrl}
               retailPrice: matchItem.price,
               image: matchItem.img,
               images: [matchItem.img],
-              description: `<p><strong>${matchItem.name} (${matchItem.sku})</strong></p><p>Thiết bị chính hãng phân phối bởi Chu Gia Security, vai trò trong giải pháp: <em>${matchItem.role}</em>.</p><p>Cam kết 100% hàng chính hãng đầy đủ giấy tờ CO/CQ, bảo hành 24 tháng 1 đổi 1, hỗ trợ khảo sát lắp đặt chuyển giao tận nơi.</p>`
+              description: `<p><strong>${matchItem.name} (${matchItem.sku})</strong></p><p>Thiết bị chính hãng phân phối bởi Chu Gia Technology, vai trò trong giải pháp: <em>${matchItem.role}</em>.</p><p>Cam kết 100% hàng chính hãng đầy đủ giấy tờ CO/CQ, bảo hành 24 tháng 1 đổi 1, hỗ trợ khảo sát lắp đặt chuyển giao tận nơi.</p>`
             };
             break;
           }
@@ -1291,7 +1291,7 @@ ${shareUrl}
             retailPrice: matchItem.price,
             image: matchItem.img,
             images: [matchItem.img],
-            description: `<p><strong>${matchItem.name} (${matchItem.sku})</strong></p><p>Thiết bị chính hãng phân phối bởi Chu Gia Security, vai trò trong giải pháp: <em>${matchItem.role}</em>.</p><p>Vận hành Local 100% chuẩn giao thức Zigbee 3.0, tương thích tuyệt đối với Home Assistant và Trợ lý AI Chatbox điều khiển nhà thông minh.</p>`
+            description: `<p><strong>${matchItem.name} (${matchItem.sku})</strong></p><p>Thiết bị chính hãng phân phối bởi Chu Gia Technology, vai trò trong giải pháp: <em>${matchItem.role}</em>.</p><p>Vận hành Local 100% chuẩn giao thức Zigbee 3.0, tương thích tuyệt đối với Home Assistant và Trợ lý AI Chatbox điều khiển nhà thông minh.</p>`
           };
           break;
         }
@@ -1384,7 +1384,7 @@ ${shareUrl}
       return;
     }
 
-    let msg = `Xin chào Chu Gia Security! Tôi quan tâm đến giải pháp mạng:\n`;
+    let msg = `Xin chào Chu Gia Technology! Tôi quan tâm đến giải pháp mạng:\n`;
     msg += `⭐ ${brandData.brandName.toUpperCase()} — ${combo.title.toUpperCase()}\n`;
     msg += `• Giá combo ưu đãi trọn gói: ${formatVND(combo.comboPrice)}\n`;
     msg += `• Quy mô đề xuất: ${combo.stats.map(s => s.label + ': ' + s.val).join(' | ')}\n\n`;
@@ -2658,7 +2658,7 @@ ${shareUrl}
       return;
     }
 
-    let msg = `Xin chào Chu Gia Security! Tôi quan tâm đến giải pháp Chuông hình & Khóa cửa thông minh:\n`;
+    let msg = `Xin chào Chu Gia Technology! Tôi quan tâm đến giải pháp Chuông hình & Khóa cửa thông minh:\n`;
     msg += `⭐ ${brandData.brandName.toUpperCase()} — ${combo.title.toUpperCase()}\n`;
     msg += `• Giá combo ưu đãi trọn gói: ${formatVND(combo.comboPrice)}\n`;
     msg += `• Quy mô đề xuất: ${combo.stats.map(s => s.label + ': ' + s.val).join(' | ')}\n\n`;
@@ -3443,7 +3443,7 @@ ${shareUrl}
       return;
     }
 
-    let msg = `Xin chào Chu Gia Security! Tôi quan tâm đến giải pháp Nhà thông minh Tuya & Home Assistant:\n`;
+    let msg = `Xin chào Chu Gia Technology! Tôi quan tâm đến giải pháp Nhà thông minh Tuya & Home Assistant:\n`;
     msg += `⭐ ${combo.title.toUpperCase()}\n`;
     msg += `• Giá combo ưu đãi trọn gói: ${formatVND(combo.comboPrice)}\n`;
     msg += `• Quy mô đề xuất: ${combo.stats.map(s => s.label + ': ' + s.val).join(' | ')}\n\n`;
@@ -4534,9 +4534,9 @@ ${shareUrl}
               referrerpolicy="no-referrer"
               onerror="this.onerror=null;this.src='images/hero_security.jpg';"
             />
-            <!-- Chu Gia Security Watermark Stamp (Che logo cũ ở góc trái dưới) -->
+            <!-- Chu Gia Technology Watermark Stamp (Che logo cũ ở góc trái dưới) -->
             <div class="pro-card-watermark">
-              <img src="images/chugia_watermark.svg" alt="Chu Gia Security" />
+              <img src="images/chugia_watermark.svg" alt="Chu Gia Technology" />
             </div>
             <div class="pro-card-hover-overlay">
               <button class="btn-quick-preview" type="button">
@@ -5223,7 +5223,7 @@ ${shareUrl}
 
   // Zalo Order Direct Link
   function orderZalo(prod) {
-    const text = `Xin chào Chu Gia Security! Tôi quan tâm đến sản phẩm:\n- Tên: ${prod.name}\n- Mã: ${prod.sku || 'N/A'}\n- Giá bán lẻ: ${formatVND(prod.retailPrice)}\nNhờ Chu Gia tư vấn đặt hàng giúp tôi nhé!`;
+    const text = `Xin chào Chu Gia Technology! Tôi quan tâm đến sản phẩm:\n- Tên: ${prod.name}\n- Mã: ${prod.sku || 'N/A'}\n- Giá bán lẻ: ${formatVND(prod.retailPrice)}\nNhờ Chu Gia tư vấn đặt hàng giúp tôi nhé!`;
     const encoded = encodeURIComponent(text);
     // Link to Zalo chat
     const zaloUrl = `https://zalo.me/0941204125?text=${encoded}`;
@@ -5288,7 +5288,7 @@ ${shareUrl}
     // Header Logo & Branding
     ctx.fillStyle = '#0084ff';
     ctx.font = 'bold 22px "Plus Jakarta Sans", sans-serif';
-    ctx.fillText('CHU GIA SECURITY', 36, 46);
+    ctx.fillText('CHU GIA TECHNOLOGY', 36, 46);
 
     ctx.fillStyle = '#94a3b8';
     ctx.font = '13px "Plus Jakarta Sans", sans-serif';
@@ -5408,22 +5408,22 @@ ${shareUrl}
     ctx.fillStyle = '#ffffff';
     ctx.strokeStyle = '#e2e8f0';
     ctx.lineWidth = 1.5;
-    roundRect(ctx, x, y, 160, 34, 6);
+    roundRect(ctx, x, y, 175, 34, 6);
     ctx.fill();
     ctx.stroke();
 
-    // Text: CHU GIA SECURITY
+    // Text: CHU GIA TECHNOLOGY
     ctx.fillStyle = '#0f172a';
     ctx.font = 'bold 11px "Plus Jakarta Sans", sans-serif';
     ctx.fillText('CHU GIA', x + 10, y + 21);
 
     ctx.fillStyle = '#0072ff';
-    ctx.fillText('SECURITY', x + 64, y + 21);
+    ctx.fillText('TECHNOLOGY', x + 64, y + 21);
 
     // Orange accent dot
     ctx.fillStyle = '#ff6600';
     ctx.beginPath();
-    ctx.arc(x + 146, y + 17, 3.5, 0, Math.PI * 2);
+    ctx.arc(x + 158, y + 17, 3.5, 0, Math.PI * 2);
     ctx.fill();
 
     ctx.restore();
@@ -5487,7 +5487,7 @@ ${shareUrl}
 
     ctx.fillStyle = '#ffffff';
     ctx.font = 'bold 13px "Plus Jakarta Sans", sans-serif';
-    ctx.fillText('📱 Quét mã QR trên ảnh để xem chi tiết & nhận ưu đãi tại Chu Gia Security', 52, 678);
+    ctx.fillText('📱 Quét mã QR trên ảnh để xem chi tiết & nhận ưu đãi tại Chu Gia Technology', 52, 678);
 
     ctx.fillStyle = '#cbd5e1';
     ctx.font = '12px "Plus Jakarta Sans", sans-serif';
