@@ -439,13 +439,31 @@
           }
         })
         .catch(err => {
-          console.error('Chat error:', err);
+          console.error('Chat error / out of credit:', err);
           typingEl.remove();
-          appendMessage('ai', '⚠️ Không thể kết nối tới trợ lý AI lúc này. Quý khách vui lòng liên hệ trực tiếp hotline để được hỗ trợ tức thì:\n\n**Hotline / Zalo tư vấn 24/7:** 📞 [0941 204 125](tel:0941204125) • [Chát Zalo Kỹ Thuật](https://zalo.me/0941204125)');
+          const fallbackMsg = getOutOfCreditMessage();
+          appendMessage('ai', fallbackMsg);
+          conversationHistory.push({ role: 'assistant', content: fallbackMsg });
           isWaiting = false;
           replySendBtn.disabled = false;
           ensureVisibleBottom();
         });
+    }
+
+    // ── Fallback message when AI is out of credit / quota / disconnected ──
+    function getOutOfCreditMessage() {
+      return "🤖 **Dạ, hệ thống Trợ lý AI Chu Gia Security hiện đang nâng cấp gói dữ liệu tư vấn tự động.**\n\n" +
+        "Để không làm gián đoạn kế hoạch lựa chọn thiết bị an ninh & giải pháp của Quý khách, xin kính mời Quý khách bấm vào nút bên dưới để trực tiếp tra cứu toàn bộ danh mục 480+ sản phẩm chính hãng, kiểm tra thông số kỹ thuật và nhận báo giá ưu đãi mới nhất:\n\n" +
+        "[XEM TOÀN BỘ KHO 480+ THIẾT BỊ AN NINH & ĐIỆN THÔNG MINH](https://chugia.shop/san-pham.html)\n\n" +
+        "---\n\n" +
+        "✨ **HOẶC XEM NHANH CÁC BỘ GIẢI PHÁP COMBO TRỌN GÓI BÁN CHẠY:**\n" +
+        "- 📶 **12 Gói Combo Mạng Wi-Fi Chuyên Dụng:** [Khám Phá Gói Wi-Fi 6/7](https://chugia.shop/combo-wifi.html)\n" +
+        "- 🔔 **12 Gói Combo Chuông Hình & Khóa Thông Minh:** [Khám Phá Gói Chuông & Khóa Tenon](https://chugia.shop/san-pham.html#intercomCombos)\n" +
+        "- 🧮 **Dự toán chi phí & Đăng ký khảo sát 0đ:** [Lập Dự Toán Trọn Gói](https://chugia.shop/du-toan.html)\n\n" +
+        "---\n\n" +
+        "📞 **Kỹ sư Chu Gia luôn sẵn sàng hỗ trợ trực tiếp 24/7:**\n" +
+        "- **Hotline tư vấn nhanh:** [0941 204 125](tel:0941204125)\n" +
+        "- **Zalo Kỹ Thuật:** [Chát Zalo Nhận Báo Giá Trực Tiếp](https://zalo.me/0941204125)";
     }
 
     // ── Client System Prompt for standalone browser fallback on chugia.shop ──
@@ -553,7 +571,11 @@
 
       if (!dsRes.ok) {
         const errBody = await dsRes.text();
-        throw new Error('DeepSeek API error: ' + dsRes.status + ' ' + errBody);
+        console.warn('DeepSeek API status:', dsRes.status, errBody);
+        const err = new Error('DeepSeek API error: ' + dsRes.status + ' ' + errBody);
+        err.status = dsRes.status;
+        err.body = errBody;
+        throw err;
       }
 
       const dsData = await dsRes.json();
@@ -719,6 +741,8 @@
         .replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;')
+        // Horizontal rule ---
+        .replace(/^---+$/gm, '<hr class="chat-divider">')
         // Bold
         .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
         // Italic
@@ -730,6 +754,10 @@
           const url = getProductChugiaUrl(sku);
           const cleanTitle = title.replace(/"/g, '&quot;');
           return `<a href="${url}" class="chat-prod-link" data-sku="${sku}" data-name="${cleanTitle}" title="Bấm xem ảnh & chi tiết ${cleanTitle}">📸 <strong>${title}</strong> <span class="chat-prod-badge">🔍 Xem ảnh &amp; giá</span> <span class="chat-prod-buy-btn" data-sku="${sku}" data-name="${cleanTitle}" title="Mua ngay qua Zalo 0941 204 125">⚡ Mua ngay</span></a>`;
+        })
+        // Special Catalog CTA button: [text](https://chugia.shop/san-pham.html) or [text](/san-pham.html) (strictly without hash)
+        .replace(/\[([^\]]+)\]\((?:https?:\/\/chugia\.shop)?\/san-pham\.html\/?\)/g, (match, title) => {
+          return `<a href="https://chugia.shop/san-pham.html" target="_blank" rel="noopener noreferrer" class="chat-catalog-cta-btn" title="Xem 480+ thiết bị tại Kho Sản Phẩm Chu Gia">🚀 <span>${title}</span> <span class="cta-arrow">➜</span></a>`;
         })
         // Standard Links: [text](url)
         .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
@@ -1140,14 +1168,16 @@
         return;
       }
 
-      // 3. Product link clicked -> show image right in chat!
-      const link = e.target.closest('.chat-prod-link, .chat-prod-quickbtn, a[href*="chugia.shop/san-pham.html"], a[href^="#prod-"]');
+      // 3. Product link clicked -> show image right in chat ONLY if it has a SKU / #prod-
+      const link = e.target.closest('.chat-prod-link, .chat-prod-quickbtn, a[href*="#prod-"]');
       if (link) {
-        e.preventDefault();
-        e.stopPropagation();
         const rawHref = link.getAttribute('href') || '';
-        const sku = link.dataset.sku || rawHref.replace(/^.*#prod-/, '');
-        toggleInlineProductPreview(link, sku);
+        if (rawHref.includes('#prod-') || link.dataset.sku) {
+          e.preventDefault();
+          e.stopPropagation();
+          const sku = link.dataset.sku || rawHref.replace(/^.*#prod-/, '');
+          toggleInlineProductPreview(link, sku);
+        }
       }
     });
 

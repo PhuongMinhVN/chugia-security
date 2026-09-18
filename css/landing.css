@@ -701,6 +701,52 @@ body {
   font-size: 15px;
 }
 
+/* Chat divider & CTA buttons */
+.chat-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin: 12px 0;
+}
+
+.chat-catalog-cta-btn {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin: 14px 0 10px 0;
+  padding: 13px 20px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 14.5px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  border-radius: 12px;
+  text-decoration: none !important;
+  box-shadow: 0 4px 18px rgba(16, 185, 129, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+}
+
+.chat-catalog-cta-btn:hover {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.6);
+  color: #ffffff !important;
+}
+
+.chat-catalog-cta-btn .cta-arrow {
+  display: inline-block;
+  font-size: 16px;
+  transition: transform 0.25s ease;
+}
+
+.chat-catalog-cta-btn:hover .cta-arrow {
+  transform: translateX(5px);
+}
+
 /* Product card inside chat */
 .chat-product-card {
   display: flex;
