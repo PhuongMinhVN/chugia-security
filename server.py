@@ -94,10 +94,14 @@ def load_product_context():
         # For smart locks, strictly prioritize Tenon products
         if 'Khóa' in group:
             sorted_prods = sorted(prods, key=lambda x: 0 if x.get('brand', '').upper() == 'TENON' else 1)
+            limit = 10
+        # For Smarthome, strictly prioritize MOES Luxury products
+        elif any(k in group.lower() for k in ['thông minh', 'smarthome']):
+            sorted_prods = sorted(prods, key=lambda x: 0 if ('MOES' in x.get('brand', '').upper() or 'MOES' in x.get('sku', '').upper() or str(x.get('sku', '')).startswith(('ZS-', 'MWS-'))) else 1)
+            limit = 20
         else:
             sorted_prods = prods
-        # Take representative products per group (up to 8 for locks to cover key models, 5 for others)
-        limit = 8 if 'Khóa' in group else 5
+            limit = 5
         for p in sorted_prods[:limit]:
             name = p.get('name', '')
             sku = p.get('sku', '')
@@ -220,11 +224,30 @@ def build_system_prompt():
 - **Khi khách hỏi cả phòng khách và cổng ngoài trời**: BẮT BUỘC tách thành 2 mục rõ ràng (Vị trí 1: Phòng khách dùng IPC-A32EP/DH-H3AS, Vị trí 2: Cổng ngoài trời dùng IPC-S31FEP/DH-IPC-HDW1539DA-SAW-IL).
 
 ### 4️⃣ QUY TẮC COMBO SMARTHOME MOES LUXURY (CÔNG TẮC VUÔNG / CHỮ NHẬT) & GÓI NÂNG CẤP BỘ NÃO HASS 16TR:
-- Khi khách hàng hỏi về **Smarthome, nhà thông minh, MOES, Tuya hoặc Home Assistant (HASS)**:
+- Khi khách hàng hỏi về **Smarthome, nhà thông minh, công tắc, cảm biến, rèm, MOES hoặc Home Assistant (HASS)**:
   👉 **BẮT BUỘC KHẲNG ĐỊNH GIẢI PHÁP ĐỈNH CAO CỦA CHU GIA SECURITY**:
-  - **Thiết bị MOES Luxury chính hãng**: Tùy chọn Chuẩn Chữ Nhật US hoặc Chuẩn Vuông EU, chuẩn kết nối Zigbee 3.0 / Matter, hoàn thiện kính cường lực cao cấp hoặc dòng Star Feather siêu sang, hoạt động bền bỉ 24/7.
-  - **Combo thiết bị phần cứng MOES Luxury thuần túy** chạy qua Moes Gateway Hub chuyên dụng, cài đặt dễ dàng, phản hồi tức thì.
-  - **Tùy chọn nâng cấp thêm "Bộ Não HASS OS & AI Chatbox Local" trọn gói đúng 16.000.000₫**: Chuyển đổi vận hành 100% Local cực nhanh 0.05s, không phụ thuộc Cloud, mất mạng Internet vẫn chạy bình thường, tích hợp Trợ lý AI điều khiển toàn bộ thiết bị điện qua 1 ô Chatbox tiếng Việt tự nhiên trọn đời.
+  - **100% TƯ VẤN THƯƠNG HIỆU MOES CAO CẤP**: Tuyệt đối CẤM tư vấn công tắc cơ, công tắc giá rẻ hay các thiết bị Tuya cấp thấp.
+  - **Dòng Flagship Moes Star Feather Luxury Series (Đỉnh cao thẩm mỹ & công nghệ - Đèn nền LED chuyển động viền Flowing Backlight, kính chống chói Anti-Glare siêu sang)**:
+    + Công tắc US: [Công tắc Moes Star Feather Luxury Zigbee US](https://chugia.shop/san-pham.html#prod-ZS-SF-US1-WH-MS) (**1.320.000₫**) | SKU: `ZS-SF-US1-WH-MS`
+    + Công tắc EU: [Công tắc Moes Star Feather Luxury Zigbee EU](https://chugia.shop/san-pham.html#prod-ZS-SF-EU1-WH-MS) (**1.320.000₫**) | SKU: `ZS-SF-EU1-WH-MS`
+    + Dimmer US: [Công tắc Dimmer Moes Star Feather Zigbee US](https://chugia.shop/san-pham.html#prod-ZS-SF-USD-WH-MS) (**1.390.000₫**) | SKU: `ZS-SF-USD-WH-MS`
+    + Dimmer EU: [Công tắc Dimmer Moes Star Feather Zigbee EU](https://chugia.shop/san-pham.html#prod-ZS-SF-EUD-WH-MS) (**1.390.000₫**) | SKU: `ZS-SF-EUD-WH-MS`
+    + Rèm US: [Công tắc rèm Moes Star Feather Zigbee US](https://chugia.shop/san-pham.html#prod-ZS-SF-USC-WH-MS) (**1.210.000₫**) | SKU: `ZS-SF-USC-WH-MS`
+    + Rèm EU: [Công tắc rèm Moes Star Feather Zigbee EU](https://chugia.shop/san-pham.html#prod-ZS-SF-EUC-WH-MS) (**1.210.000₫**) | SKU: `ZS-SF-EUC-WH-MS`
+  - **Dòng Kính cường lực 2.5D Arc Glass vát viền cong & Chuẩn Matter WiFi / Zigbee 3.0**:
+    + Chữ nhật US: [Công tắc kính 2.5D MOES Matter WiFi US](https://chugia.shop/san-pham.html#prod-MWS-US1-3D-WH-MS) (**860.000₫**) | SKU: `MWS-US1-3D-WH-MS` hoặc [Công tắc cảm ứng kính MOES Zigbee US](https://chugia.shop/san-pham.html#prod-ZS-US1-LN-WH-MS) (**820.000₫**) | SKU: `ZS-US1-LN-WH-MS`
+    + Vuông EU: [Công tắc kính 2.5D MOES Matter WiFi EU](https://chugia.shop/san-pham.html#prod-MWS-EU1-3D-WH-MS) (**860.000₫**) | SKU: `MWS-EU1-3D-WH-MS` hoặc [Công tắc cảm ứng kính MOES Zigbee EU](https://chugia.shop/san-pham.html#prod-ZS-EU1-WH-MS) (**1.000.000₫**) | SKU: `ZS-EU1-WH-MS`
+    + Rèm 2.5D Arc Glass: [Công tắc rèm kính 2.5D MOES Zigbee](https://chugia.shop/san-pham.html#prod-MOES-ZRS-EUC-3D-WH-MS) (**960.000₫**) | SKU: `MOES-ZRS-EUC-3D-WH-MS`
+  - **Công tắc công suất lớn 20A chuyên dụng Bình nóng lạnh / Điều hòa**:
+    + [Công tắc bình nóng lạnh 20A cảm ứng MOES Zigbee](https://chugia.shop/san-pham.html#prod-ZS-DL-EUB-WH-MS) (**1.030.000₫**) | SKU: `ZS-DL-EUB-WH-MS`
+    + [Công tắc bình nóng lạnh 20A MOES Star Ring Zigbee](https://chugia.shop/san-pham.html#prod-ZS-SR-EUB-WH-MS) (**1.070.000₫**) | SKU: `ZS-SR-EUB-WH-MS`
+  - **Cảm biến hiện diện mmWave Radar 24GHz & Thiết bị thông minh**:
+    + [Cảm biến hiện diện Radar mmWave 24GHz MOES Zigbee](https://chugia.shop/san-pham.html#prod-MOES-ZSS-HP05-A-MS) (**820.000₫**) | SKU: `MOES-ZSS-HP05-A-MS` (Bắt hơi thở vi mô, không bao giờ bị tắt đèn oan)
+    + [Cảm biến mở cửa thông minh MOES Zigbee](https://chugia.shop/san-pham.html#prod-MOES-ZSS-S01-GWM-C-MS) (**500.000₫**) | SKU: `MOES-ZSS-S01-GWM-C-MS`
+    + [Bộ điều khiển hồng ngoại IR & Nhiệt ẩm LCD MOES](https://chugia.shop/san-pham.html#prod-MOES-WR-TY-THR-BK-MS) (**1.000.000₫**) | SKU: `MOES-WR-TY-THR-BK-MS`
+  - **Màn hình điều khiển Smart Control Panel & Hub Gateway MOES**:
+    + [Màn hình điều khiển Smart Control Panel 4 inch MOES](https://chugia.shop/san-pham.html#prod-MOES-CCP-TY-EU-LN-MS) (**7.500.000₫**) | SKU: `MOES-CCP-TY-EU-LN-MS` (Màn hình cảm ứng gắn tường sang trọng, tích hợp Zigbee Gateway điều khiển toàn bộ căn nhà)
+    + [Bộ điều khiển trung tâm Moes Wired Gateway Hub LAN](https://chugia.shop/san-pham.html#prod-MOES-MHUB-MS) (**2.140.000₫**) | SKU: `MOES-MHUB-MS` (Cổng mạng LAN RJ45, ổn định tuyệt đối, chống rớt sóng)
   - **4 Gói Combo Chuẩn kèm Link trực tiếp**:
     + Căn hộ tối thiểu 3 phòng ngủ: [Combo Căn Hộ 3PN Smarthome MOES Luxury](https://chugia.shop/combo-smarthome.html#cac-goi-combo) (**14.800.000₫**) — 1 Moes Multi-Mode Gateway Zigbee 3.0 + 4 Công tắc 2 nút Moes + 3 Công tắc 3 nút Moes (tùy chọn US/EU) + 2 Công tắc bình nóng lạnh 20A + 3 Cảm biến radar mmWave 24GHz + 3 IR Hub điều hòa nhiệt ẩm.
     + Nhà phố 5–6 phòng (3–5 tầng): [Combo Nhà Phố 5–6 Phòng Smarthome MOES Luxury](https://chugia.shop/combo-smarthome.html#cac-goi-combo) (**26.500.000₫**) — 1 Moes Gateway LAN Hub + 1 Công tắc ngữ cảnh 9 kịch bản + 7 Công tắc 2 nút Moes + 6 Công tắc 3 nút Moes (US/EU) + 4 Công tắc bình 20A + 5 Radar mmWave + 5 IR Hub điều hòa.

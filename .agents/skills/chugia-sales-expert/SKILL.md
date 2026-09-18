@@ -199,112 +199,47 @@ Một giải pháp Smarthome chuẩn chỉ và ổn định tại Chu Gia Securi
 
 ---
 
-### ⭐ COMBO SMARTHOME RẤT CHUẨN ĐỈNH CAO CHU GIA SECURITY (BẮT BUỘC ĐỀ XUẤT):
-Khi khách hàng quan tâm đến giải pháp **Nhà thông minh (Smarthome), combo smarthome, điện thông minh hoặc tích hợp Home Assistant**, chuyên gia BẮT BUỘC đề xuất ngay bộ combo chuẩn 7 thành phần này:
+### ⭐ GIẢI PHÁP SMARTHOME MOES LUXURY & HOME ASSISTANT CHU GIA SECURITY (ƯU TIÊN TUYỆT ĐỐI):
+Khi khách hàng quan tâm đến giải pháp **Nhà thông minh (Smarthome), công tắc thông minh, cảm biến radar, điều khiển rèm, combo smarthome hoặc tích hợp Home Assistant**, chuyên gia BẮT BUỘC đề xuất hệ sinh thái **MOES Luxury cao cấp** (chuẩn chữ nhật US 120x72mm hoặc vuông EU 86x86mm):
+> [!IMPORTANT]
+> **TUYỆT ĐỐI CẤM TƯ VẤN CÁC DÒNG TUYA CƠ GIÁ RẺ, THIẾT BỊ CẤP THẤP**. 100% tư vấn thương hiệu **MOES chính hãng cao cấp**: Dòng Flagship Moes Star Feather viền đèn LED chuyển động Flowing Backlight, Mặt kính cường lực 2.5D Arc Glass vát cong sang trọng, Cảm biến radar mmWave 24GHz phát hiện hơi thở vi mô, Màn hình cảm ứng Smart Control Panel 4 inch gắn tường, và Bộ điều khiển trung tâm Moes Gateway Hub cổng LAN RJ45 siêu bền bỉ.
 
-1. **Thiết bị Điện thông minh Tuya Zigbee**:
-   - Công tắc đèn Zigbee (Chuẩn vuông EU 86x86 hoặc chữ nhật US 120x72):
-     - `[Công tắc cơ không dây nguội Zigbee hình chữ nhật Tuya ZigBeeUS-KN](https://chugia.shop/san-pham.html#prod-TUYA-ZIGBEE-US-KN)` | SKU: `TUYA-ZIGBEE-US-KN` | Giá: **1.300.000₫** (Phím cơ đàn hồi nảy êm, không cần kéo dây N).
-     - `[Công tắc Zigbee viền kim loại nút bấm lõm hình chữ nhật SHP-ZLUS](https://chugia.shop/san-pham.html#prod-TUYA-SHP-ZLUS)` | SKU: `TUYA-SHP-ZLUS` | Giá: **1.000.000₫** (Cảm ứng viền kim loại sang trọng).
-     - `[Công tắc cảm ứng thông minh Tuya Zigbee ZLUX](https://chugia.shop/san-pham.html#prod-TUYA-ZLUX-ZA1)` | Giá: **320.000₫ – 450.000₫** (1 đến 4 nút).
-   - Công tắc công suất lớn 20A (4400W) cho Bình nóng lạnh, Bếp từ, Máy lạnh:
-     - `[Công tắc Zigbee công suất lớn 20A viền kim loại chữ nhật Tuya ZFW2-US](https://chugia.shop/san-pham.html#prod-TUYA-ZFW2-US)` | SKU: `TUYA-ZFW2-US` | Giá: **1.180.000₫**.
-     - `[Công tắc Zigbee công suất lớn 20A viền kim loại vuông Tuya ZFW2-EU](https://chugia.shop/san-pham.html#prod-TUYA-ZFW2-EU)` | SKU: `TUYA-ZFW2-EU` | Giá: **1.180.000₫**.
-   - Cảm biến hiện diện mmWave Radar 24GHz:
-     - `[Cảm biến hiện diện người siêu nhỏ Tuya mmWave Radar CBHD-Mini](https://chugia.shop/san-pham.html#prod-TUYA-CBHD-MINI)` | SKU: `TUYA-CBHD-MINI` | Giá: **420.000₫** (Ngồi yên đọc sách không bị tắt đèn).
-     - `[Công tắc kiêm cảm biến Radar Zigbee vuông Tuya ZCTR25-EU](https://chugia.shop/san-pham.html#prod-TUYA-ZCTR25-EU)` | SKU: `TUYA-ZCTR25-EU` | Giá: **780.000₫**.
+1. **Dòng Công tắc Flagship Moes Star Feather Luxury Series (Đỉnh cao thẩm mỹ & công nghệ)**:
+   - Đèn nền LED chuyển động viền Flowing Backlight, mặt kính mờ chống chói Anti-Glare siêu sang, tùy chọn chuẩn chữ nhật US hoặc vuông EU:
+     - `[Công tắc thông minh Moes Star Feather Luxury Zigbee US](https://chugia.shop/san-pham.html#prod-ZS-SF-US1-WH-MS)` | SKU: `ZS-SF-US1-WH-MS` | Giá: **1.320.000₫** (Chuẩn chữ nhật US)
+     - `[Công tắc thông minh Moes Star Feather Luxury Zigbee EU](https://chugia.shop/san-pham.html#prod-ZS-SF-EU1-WH-MS)` | SKU: `ZS-SF-EU1-WH-MS` | Giá: **1.320.000₫** (Chuẩn vuông EU)
+     - `[Công tắc Dimmer Moes Star Feather Luxury Zigbee US](https://chugia.shop/san-pham.html#prod-ZS-SF-USD-WH-MS)` | SKU: `ZS-SF-USD-WH-MS` | Giá: **1.390.000₫** (Chiết áp chỉnh độ sáng đèn US)
+     - `[Công tắc Dimmer Moes Star Feather Luxury Zigbee EU](https://chugia.shop/san-pham.html#prod-ZS-SF-EUD-WH-MS)` | SKU: `ZS-SF-EUD-WH-MS` | Giá: **1.390.000₫** (Chiết áp chỉnh độ sáng đèn EU)
+     - `[Công tắc rèm Moes Star Feather Luxury Zigbee US](https://chugia.shop/san-pham.html#prod-ZS-SF-USC-WH-MS)` | SKU: `ZS-SF-USC-WH-MS` | Giá: **1.210.000₫**
+     - `[Công tắc rèm Moes Star Feather Luxury Zigbee EU](https://chugia.shop/san-pham.html#prod-ZS-SF-EUC-WH-MS)` | SKU: `ZS-SF-EUC-WH-MS` | Giá: **1.210.000₫**
 
-2. **Khóa cửa thông minh Tenon**:
-   - Cửa nhôm Xingfa: `[Khóa điện tử Tenon AL5 Pro (IP65 ngoài trời)](https://chugia.shop/san-pham.html#prod-TENON-AL5-PRO)` | SKU: `TENON-AL5-PRO` | Giá: **16.000.000₫** (Chuyên cửa nhôm xingfa, chống nước mưa IP65, vân tay, mã số, thẻ, app).
-   - Cửa gỗ / Biệt thự / Căn hộ cao cấp: `[Khóa kéo đẩy Tenon A7x Face ID 3D](https://chugia.shop/san-pham.html#prod-TENON-A7X)` | SKU: `TENON-A7X` | Giá: **18.000.000₫** (Face ID 3D hồng ngoại không chạm, camera chuông hình trên khóa, vân tay FPC Thụy Điển).
-   - Lựa chọn tiết kiệm cửa gỗ: `[Khóa thông minh Tenon K50 Tay Gạt](https://chugia.shop/san-pham.html#prod-TENON-K50)` | SKU: `TENON-K50` | Giá: **6.800.000₫**.
+2. **Dòng Công tắc Mặt kính cường lực 2.5D Arc Glass & Chuẩn Matter WiFi / Zigbee 3.0**:
+   - `[Công tắc kính cường lực 2.5D MOES Matter WiFi US](https://chugia.shop/san-pham.html#prod-MWS-US1-3D-WH-MS)` | SKU: `MWS-US1-3D-WH-MS` | Giá: **860.000₫**
+   - `[Công tắc kính cường lực 2.5D MOES Matter WiFi EU](https://chugia.shop/san-pham.html#prod-MWS-EU1-3D-WH-MS)` | SKU: `MWS-EU1-3D-WH-MS` | Giá: **860.000₫**
+   - `[Công tắc cảm ứng kính MOES Zigbee US](https://chugia.shop/san-pham.html#prod-ZS-US1-LN-WH-MS)` | SKU: `ZS-US1-LN-WH-MS` | Giá: **820.000₫**
+   - `[Công tắc cảm ứng kính MOES Zigbee EU](https://chugia.shop/san-pham.html#prod-ZS-EU1-WH-MS)` | SKU: `ZS-EU1-WH-MS` | Giá: **1.000.000₫**
+   - `[Công tắc rèm kính 2.5D Arc Glass MOES Zigbee](https://chugia.shop/san-pham.html#prod-MOES-ZRS-EUC-3D-WH-MS)` | SKU: `MOES-ZRS-EUC-3D-WH-MS` | Giá: **960.000₫**
 
-3. **Chuông cửa có hình Dahua PoE (Hỗ trợ mở cổng âm sàn & cổng tự động)**:
-   - Nút chuông cổng: `[Nút nhấn Camera chuông hình Dahua DHI-VTO2201F-P-S2 (PoE, vỏ kim loại, góc 140 độ)](https://chugia.shop/san-pham.html#prod-DHI-VTO2201F-P-S2)` | SKU: `DHI-VTO2201F-P-S2` | Giá: **6.050.000₫** (Relay NO/COM mở cổng âm sàn) hoặc `[Dahua DHI-VTO2111D-P-S2](https://chugia.shop/san-pham.html#prod-DHI-VTO2111D-P-S2)` (**3.030.000₫**).
-   - Màn hình trong nhà: `[Màn hình chuông hình Dahua DHI-VTH2621GW-WP (7 inch, PoE, Wifi)](https://chugia.shop/san-pham.html#prod-DHI-VTH2621GW-WP)` | SKU: `DHI-VTH2621GW-WP` | Giá: **4.320.000₫** (Cảm ứng 7 inch, mở cổng 1 chạm).
+3. **Công tắc công suất lớn 20A (4400W) cho Bình nóng lạnh, Máy lạnh, Bếp từ**:
+   - `[Công tắc bình nóng lạnh 20A cảm ứng MOES Zigbee](https://chugia.shop/san-pham.html#prod-ZS-DL-EUB-WH-MS)` | SKU: `ZS-DL-EUB-WH-MS` | Giá: **1.030.000₫**
+   - `[Công tắc bình nóng lạnh 20A MOES Star Ring Zigbee](https://chugia.shop/san-pham.html#prod-ZS-SR-EUB-WH-MS)` | SKU: `ZS-SR-EUB-WH-MS` | Giá: **1.070.000₫**
 
-4. **Camera IP Dahua WizColor / WizSense Full-color (Đêm có màu 24/7)**:
-   - Camera thân ngoài trời: `[Camera DAHUA DH-IPC-HFW2449S-S-IL (Thân 4MP, liền Mic, ánh sáng kép WizColor)](https://chugia.shop/san-pham.html#prod-DH-IPC-HFW2449S-S-IL)` | SKU: `DH-IPC-HFW2449S-S-IL` | Giá: **3.350.000₫**.
-   - Camera Dome trong nhà / hiên: `[Camera DAHUA DH-IPC-HDW2449T-S-IL (Dome 4MP, liền Mic, ánh sáng kép WizColor)](https://chugia.shop/san-pham.html#prod-DH-IPC-HDW2449T-S-IL)` | SKU: `DH-IPC-HDW2449T-S-IL` | Giá: **3.140.000₫**.
-   - Tiết kiệm 2MP: `[Camera DAHUA DH-IPC-HDW2249T-S-IL (2MP PoE)](https://chugia.shop/san-pham.html#prod-DH-IPC-HDW2249T-S-IL)` | SKU: `DH-IPC-HDW2249T-S-IL` | Giá: **1.450.000₫**.
-   - Ưu điểm vượt trội: Đêm có màu rực rỡ như ban ngày, AI SMD Plus lọc báo động giả lá cây chó mèo, phát hiện người tự động bật đèn rọi Warm LED.
+4. **Cảm biến hiện diện mmWave Radar 24GHz & Cảm biến thông minh MOES**:
+   - `[Cảm biến hiện diện Radar mmWave 24GHz MOES Zigbee](https://chugia.shop/san-pham.html#prod-MOES-ZSS-HP05-A-MS)` | SKU: `MOES-ZSS-HP05-A-MS` | Giá: **820.000₫** (Bắt hơi thở vi mô, chống tắt đèn oan khi ngồi yên đọc sách)
+   - `[Cảm biến mở cửa thông minh MOES Zigbee](https://chugia.shop/san-pham.html#prod-MOES-ZSS-S01-GWM-C-MS)` | SKU: `MOES-ZSS-S01-GWM-C-MS` | Giá: **500.000₫**
+   - `[Bộ điều khiển hồng ngoại IR & Nhiệt ẩm LCD MOES](https://chugia.shop/san-pham.html#prod-MOES-WR-TY-THR-BK-MS)` | SKU: `MOES-WR-TY-THR-BK-MS` | Giá: **1.000.000₫** (Màn hình LCD hiển thị nhiệt ẩm, điều khiển điều hòa, TV)
 
-5. **Đầu ghi hình Dahua 5108 chuyên dụng**:
-   - `[Đầu ghi hình IP DAHUA DHI-NVR5108HS-4KS3 (8 Kênh 4K WizSense AI chuyên Camera WizColor)](https://chugia.shop/san-pham.html#prod-DHI-NVR5108HS-4KS3)` | SKU: `DHI-NVR5108HS-4KS3` | Giá: **4.850.000₫**.
-   - Nâng cấp 2 ổ cứng: `[Đầu ghi hình DAHUA DHI-NVR5208-EI (8 kênh, hỗ trợ 2 HDD)](https://chugia.shop/san-pham.html#prod-DHI-NVR5208-EI)` | SKU: `DHI-NVR5208-EI` | Giá: **12.750.000₫**.
-   - Điểm then chốt: Dòng 5108 WizSense xử lý AI tập trung tại đầu ghi, băng thông 384Mbps siêu mượt, lưu trữ dữ liệu tập trung an toàn trên ổ cứng camera, truyền luồng video RTSP trực tiếp vào Home Assistant mà không làm nghẽn sóng Wi-Fi của cả nhà.
+5. **Màn hình điều khiển trung tâm Smart Control Panel & Bộ Gateway Hub LAN MOES**:
+   - `[Màn hình điều khiển Smart Control Panel 4 inch MOES](https://chugia.shop/san-pham.html#prod-MOES-CCP-TY-EU-LN-MS)` | SKU: `MOES-CCP-TY-EU-LN-MS` | Giá: **7.500.000₫** (Màn hình cảm ứng gắn tường sang trọng, tích hợp Zigbee Gateway điều khiển toàn bộ căn nhà)
+   - `[Màn hình thông minh Smart Panel 5 inch MOES](https://chugia.shop/san-pham.html#prod-MOES-CCP-US-AVS-MS)` | SKU: `MOES-CCP-US-AVS-MS` | Giá: **7.850.000₫**
+   - `[Bộ điều khiển trung tâm Moes Wired Gateway Hub LAN](https://chugia.shop/san-pham.html#prod-MOES-MHUB-MS)` | SKU: `MOES-MHUB-MS` | Giá: **2.140.000₫** (Cổng mạng LAN RJ45, ổn định tuyệt đối, chống rớt sóng)
+   - `[Bộ điều khiển trung tâm Moes Matter Thread Gateway Hub](https://chugia.shop/san-pham.html#prod-MOES-MZHUB-MS)` | SKU: `MOES-MZHUB-MS` | Giá: **2.820.000₫** (Hỗ trợ Matter & Apple Home)
 
-6. **Hạ tầng Switch PoE cấp nguồn tập trung**:
-   - `[Switch PoE SinicHome SINIC-3104POE (4 PoE, 2 uplink, 60W)](https://chugia.shop/san-pham.html#prod-SINIC-3104POE)` | SKU: `SINIC-3104POE` | Giá: **650.000₫**.
-   - Hoặc bản 8 cổng: `[Switch PoE SinicHome SINIC-3108POE](https://chugia.shop/san-pham.html#prod-SINIC-3108POE)` | SKU: `SINIC-3108POE` | Giá: **870.000₫**.
-   - Cấp nguồn đồng bộ cho Camera WizColor, Chuông hình VTO, Màn hình VTH qua 1 sợi cáp mạng LAN, chống cháy nổ, an toàn điện tuyệt đối.
+6. **Động cơ rèm thông minh MOES**:
+   - `[Động cơ rèm cuốn thông minh MOES Zigbee](https://chugia.shop/san-pham.html#prod-MOES-ZC-AM16-LB-MS)` | SKU: `MOES-ZC-AM16-LB-MS` | Giá: **3.890.000₫**
 
-7. **Hệ thống mạng Wi-Fi chuyên dụng Ruijie Reyee**:
-   - Router cân bằng tải: `[Modem Router Ruijie cân bằng tải RG-EG105G-P-V3](https://chugia.shop/san-pham.html#prod-RG-EG105G-P-V3)` | SKU: `RG-EG105G-P-V3` | Giá: **4.430.000₫** (Chịu tải 100 user, 4 cổng PoE).
-   - Bộ phát Wi-Fi 6 gắn trần: `[Bộ phát Wifi Ruijie gắn trần RG-RAP2260(G)](https://chugia.shop/san-pham.html#prod-RG-RAP2260(G))` | SKU: `RG-RAP2260(G)` | Giá: **5.510.000₫** (Wi-Fi 6 1775Mbps xuyên tầng).
-   - Lợi ích tối cao: Phân tách VLAN riêng cho thiết bị Smarthome Tuya & HASS, giúp hệ thống nhà thông minh phản hồi tức thì dưới 50ms, không bao giờ bị nghẽn mạng khi xem TV hay chơi game.
-
-8. **Bộ não điều khiển trung tâm Home Assistant (HASS)**:
-   - Mini PC x86 / Home Assistant Green + USB Zigbee Dongle Plus.
-   - Điều khiển Local 100% không phụ thuộc internet: Khách bấm chuông Dahua ngoài cổng -> TV hiện hình ảnh camera WizColor -> Nhấn mở cổng âm sàn -> Khóa Tenon mở chốt -> Đèn công tắc Tuya tự sáng đón chủ.
-
----
-
-#### 1. Công tắc thông minh & Cảm biến (Tuya / Zitech & Aqara):
-- **Công tắc cảm ứng Tuya Zigbee ZLUX cao cấp (Mặt kính cường lực viền nhôm Anode, chuẩn US chữ nhật & EU vuông)**:
-  - `[Công tắc cảm ứng thông minh Tuya Zigbee 1 nút ZLUX-ZA1](https://chugia.shop/san-pham.html#prod-TUYA-ZLUX-ZA1)` | SKU: `TUYA-ZLUX-ZA1` | Giá: **320.000₫**
-  - `[Công tắc cảm ứng thông minh Tuya Zigbee 2 nút ZLUX-ZA2](https://chugia.shop/san-pham.html#prod-TUYA-ZLUX-ZA2)` | SKU: `TUYA-ZLUX-ZA2` | Giá: **360.000₫**
-  - `[Công tắc cảm ứng thông minh Tuya Zigbee 3 nút ZLUX-ZA3](https://chugia.shop/san-pham.html#prod-TUYA-ZLUX-ZA3)` | SKU: `TUYA-ZLUX-ZA3` | Giá: **400.000₫**
-  - `[Công tắc cảm ứng thông minh Tuya Zigbee 4 nút ZLUX-ZA4](https://chugia.shop/san-pham.html#prod-TUYA-ZLUX-ZA4)` | SKU: `TUYA-ZLUX-ZA4` | Giá: **450.000₫**
-  - `[Công tắc cảm ứng Tuya Zigbee 1 nút Công Suất Cao 16A/20A ZLUX-ZA1-HP](https://chugia.shop/san-pham.html#prod-TUYA-ZLUX-ZA1-HP)` | SKU: `TUYA-ZLUX-ZA1-HP` | Giá: **480.000₫** (Bình nóng lạnh, bếp từ, máy bơm)
-- **Công tắc cơ Zigbee không dây nguội (No Neutral) Tuya (Giải pháp hoàn hảo thay thế công tắc cũ không có dây N)**:
-  - `[Công tắc cơ không dây nguội Zigbee hình vuông Tuya ZigBeeEU-KN](https://chugia.shop/san-pham.html#prod-TUYA-ZIGBEE-EU-KN)` | SKU: `TUYA-ZIGBEE-EU-KN` | Giá: **1.300.000₫** (Chuẩn vuông EU 86x86mm, phím đàn hồi nảy êm)
-  - `[Công tắc cơ không dây nguội Zigbee hình chữ nhật Tuya ZigBeeUS-KN](https://chugia.shop/san-pham.html#prod-TUYA-ZIGBEE-US-KN)` | SKU: `TUYA-ZIGBEE-US-KN` | Giá: **1.300.000₫** (Chuẩn chữ nhật US 120x72mm)
-- **Công tắc viền kim loại CNC cao cấp & Mặt kính tràn viền Tuya Zigbee**:
-  - `[Công tắc Zigbee viền kim loại điều khiển qua app Tuya VKLZ-US](https://chugia.shop/san-pham.html#prod-TUYA-VKLZ-US)` | SKU: `TUYA-VKLZ-US` | Giá: **860.000₫**
-  - `[Công tắc Zigbee viền kim loại nút bấm lõm hình chữ nhật SHP-ZLUS](https://chugia.shop/san-pham.html#prod-TUYA-SHP-ZLUS)` | SKU: `TUYA-SHP-ZLUS` | Giá: **1.000.000₫**
-  - `[Công tắc Zigbee viền kim loại nút bấm lõm hình vuông SHP-ZLEU](https://chugia.shop/san-pham.html#prod-TUYA-SHP-ZLEU)` | SKU: `TUYA-SHP-ZLEU` | Giá: **1.000.000₫**
-  - `[Công tắc Zigbee viền kim loại mặt vuông Tuya SHP-VKLZ-EU](https://chugia.shop/san-pham.html#prod-TUYA-SHP-VKLZ-EU)` | SKU: `TUYA-SHP-VKLZ-EU` | Giá: **1.000.000₫**
-  - `[Công tắc cơ Zigbee thông minh hình vuông Tuya ZigbeeEU nhôm phay](https://chugia.shop/san-pham.html#prod-TUYA-ZIGBEE-EU-M)` | SKU: `TUYA-ZIGBEE-EU-M` | Giá: **900.000₫**
-  - `[Công tắc Zigbee không dây nguội cảm ứng Tuya ZCUS mặt kính tràn viền](https://chugia.shop/san-pham.html#prod-TUYA-ZCUS)` | SKU: `TUYA-ZCUS` | Giá: **910.000₫**
-  - `[Công tắc Zigbee cảm ứng mặt kính vuông 4 nút Tuya ZE2-4EU](https://chugia.shop/san-pham.html#prod-TUYA-ZE2-4EU)` | SKU: `TUYA-ZE2-4EU` | Giá: **2.180.000₫**
-- **Công tắc công suất lớn 20A viền kim loại (Bình nóng lạnh, máy lạnh, bếp từ)**:
-  - `[Công tắc Zigbee công suất lớn 20A viền kim loại vuông Tuya ZFW2-EU](https://chugia.shop/san-pham.html#prod-TUYA-ZFW2-EU)` | SKU: `TUYA-ZFW2-EU` | Giá: **1.180.000₫** (Tải 4400W)
-  - `[Công tắc Zigbee công suất lớn 20A viền kim loại chữ nhật Tuya ZFW2-US](https://chugia.shop/san-pham.html#prod-TUYA-ZFW2-US)` | SKU: `TUYA-ZFW2-US` | Giá: **1.180.000₫** (Tải 4400W)
-  - `[Công tắc Zigbee công suất lớn 20A chữ nhật 2 nút Tuya ZFW1-US](https://chugia.shop/san-pham.html#prod-TUYA-ZFW1-US)` | SKU: `TUYA-ZFW1-US` | Giá: **1.380.000₫** (2 kênh 20A độc lập)
-- **Công tắc kiêm cảm biến Radar, Dimmer & Cửa cuốn / Rèm**:
-  - `[Công tắc thông minh kiêm cảm biến Radar Zigbee hình vuông Tuya ZCTR25-EU](https://chugia.shop/san-pham.html#prod-TUYA-ZCTR25-EU)` | SKU: `TUYA-ZCTR25-EU` | Giá: **780.000₫** (Cảm biến radar vi sóng 24GHz tự động bật/tắt đèn hành lang, cầu thang)
-  - `[Công tắc Dimmer độ sáng đèn hình vuông Zigbee Tuya SHP-ZDM3](https://chugia.shop/san-pham.html#prod-TUYA-SHP-ZDM3)` | SKU: `TUYA-SHP-ZDM3` | Giá: **940.000₫** (Chiết áp dimmer đèn/quạt)
-  - `[Công tắc điều khiển cửa cuốn / rèm viền kim loại Zigbee Tuya CS1v2-ZB](https://chugia.shop/san-pham.html#prod-TUYA-CS1V2-ZB)` | SKU: `TUYA-CS1V2-ZB` | Giá: **1.100.000₫**
-- **Nút bấm / Remote ngữ cảnh dán tường không dây (Pin 1-2 năm, dán mọi vị trí)**:
-  - `[Công tắc ngữ cảnh 1 nút dán Zigbee Tuya ZNC2](https://chugia.shop/san-pham.html#prod-TUYA-ZNC2)` | SKU: `TUYA-ZNC2` | Giá: **580.000₫** (3 kịch bản: 1 chạm, nhấn đúp, giữ)
-  - `[Công tắc ngữ cảnh 4 nút dán tường Zigbee Tuya ZNC1](https://chugia.shop/san-pham.html#prod-TUYA-ZNC1)` | SKU: `TUYA-ZNC1` | Giá: **780.000₫** (12 kịch bản smarthome)
-  - `[Remote ngữ cảnh 4 nút dán tường Zigbee Tuya ZNC3](https://chugia.shop/san-pham.html#prod-TUYA-ZNC3)` | SKU: `TUYA-ZNC3` | Giá: **780.000₫**
-- **Hệ thống điều khiển tủ điện, Aptomat & Module mini**:
-  - `[Aptomat đơn thông minh Zigbee Tuya SHP-ZIO2](https://chugia.shop/san-pham.html#prod-TUYA-SHP-ZIO2)` | SKU: `TUYA-SHP-ZIO2` | Giá: **2.180.000₫** (MCB gắn thanh ray DIN, đo điện năng tiêu thụ kWh, V, A, W, ngắt bảo vệ từ xa)
-  - `[Công tắc Zigbee 6 cổng 16A 220V điều khiển qua App Tuya ZPN6](https://chugia.shop/san-pham.html#prod-TUYA-ZPN6)` | SKU: `TUYA-ZPN6` | Giá: **1.980.000₫** (Relay 6 kênh gắn tủ điện)
-  - `[Công tắc Zigbee Module hỗ trợ công tắc tay Tuya CH](https://chugia.shop/san-pham.html#prod-TUYA-MODULE-CH)` | SKU: `TUYA-MODULE-CH` | Giá: **660.000₫** (Module relay mini âm tường)
-- **Module công tắc mini đa năng Tuya Zigbee / Wifi (Giấu đế âm tường, giữ nguyên mặt công tắc cơ nguyên bản)**:
-  - `[Module công tắc thông minh mini Tuya Zigbee 1 kênh ZMW-ZB1](https://chugia.shop/san-pham.html#prod-TUYA-ZMW-ZB1)` | SKU: `TUYA-ZMW-ZB1` | Giá: **190.000₫** (tải 16A)
-  - `[Module công tắc thông minh mini Tuya Zigbee 2 kênh ZMW-ZB2](https://chugia.shop/san-pham.html#prod-TUYA-ZMW-ZB2)` | SKU: `TUYA-ZMW-ZB2` | Giá: **240.000₫** (tải 16A)
-  - `[Module công tắc thông minh mini Tuya Zigbee 3 kênh ZMW-ZB3](https://chugia.shop/san-pham.html#prod-TUYA-ZMW-ZB3)` | SKU: `TUYA-ZMW-ZB3` | Giá: **290.000₫** (tải 10A)
-  - `[Module công tắc thông minh mini Tuya Wifi 1 kênh ZMW-WF1](https://chugia.shop/san-pham.html#prod-TUYA-ZMW-WF1)` | SKU: `TUYA-ZMW-WF1` | Giá: **180.000₫** (trực tiếp Wifi không cần Hub)
-- **Cảm biến hiện diện người mmWave Radar 24GHz & Cảm biến cửa Tuya (Khắc phục triệt để lỗi tắt đèn oan khi ngồi yên)**:
-  - `[Cảm biến hiện diện người siêu nhỏ Tuya mmWave Radar CBHD-Mini](https://chugia.shop/san-pham.html#prod-TUYA-CBHD-MINI)` | SKU: `TUYA-CBHD-MINI` | Giá: **420.000₫** (phát hiện nhịp thở vi mô)
-  - `[Cảm biến hiện diện âm trần có Relay Tuya mmWave Radar CBHD-AT](https://chugia.shop/san-pham.html#prod-TUYA-CBHD-AT)` | SKU: `TUYA-CBHD-AT` | Giá: **490.000₫** (đóng cắt đèn 220V trực tiếp)
-  - `[Cảm biến hiện diện gắn nổi trần có Relay Tuya mmWave Radar CBHD-NT](https://chugia.shop/san-pham.html#prod-TUYA-CBHD-NT)` | SKU: `TUYA-CBHD-NT` | Giá: **520.000₫**
-  - `[Cảm biến cửa từ thông minh Tuya Zigbee 4 trạng thái ngữ cảnh CBC-ZB](https://chugia.shop/san-pham.html#prod-TUYA-CBC-ZB)` | SKU: `TUYA-CBC-ZB` | Giá: **190.000₫**
-- **Bộ điều khiển Cửa cuốn & Cổng tự động thông minh Zitech / Tuya**:
-  - `[Bộ điều khiển Cửa cuốn / Cổng tự động thông minh ZiTech BASIC 3.0 (Wifi + Bluetooth + RF433)](https://chugia.shop/san-pham.html#prod-TUYA-ZT-BASIC-3.0)` | SKU: `TUYA-ZT-BASIC-3.0` | Giá: **650.000₫**
-  - `[Bộ điều khiển Cửa cuốn ZiTech Pro 2026 (Kéo % độ mở, đồng bộ remote gốc)](https://chugia.shop/san-pham.html#prod-TUYA-ZT-PRO-2026)` | SKU: `TUYA-ZT-PRO-2026` | Giá: **1.150.000₫**
-  - `[Công tắc điều khiển cửa cuốn / cổng tự động ZLUX-WD](https://chugia.shop/san-pham.html#prod-TUYA-ZLUX-WD)` | SKU: `TUYA-ZLUX-WD` | Giá: **480.000₫**
-- **Bộ điều khiển trung tâm Gateway Hub Tuya & Matter**:
-  - `[Bộ điều khiển trung tâm Tuya Gateway Zigbee 3.0 & Bluetooth Mesh](https://chugia.shop/san-pham.html#prod-TUYA-HUB-ZGB-WF-BLE)` | SKU: `TUYA-HUB-ZGB-WF-BLE` | Giá: **490.000₫**
-  - `[Bộ điều khiển trung tâm Tuya Zigbee cổng LAN RJ45 có Ăng-ten ngoài](https://chugia.shop/san-pham.html#prod-TUYA-HUB-ZGB-LAN-ANT)` | SKU: `TUYA-HUB-ZGB-LAN-ANT` | Giá: **850.000₫** (xuyên tường 30-35m, 128 thiết bị)
-  - `[Bộ điều khiển trung tâm Zemismart M6 Matter Gateway](https://chugia.shop/san-pham.html#prod-TUYA-HUB-MATTER-M6)` | SKU: `TUYA-HUB-MATTER-M6` | Giá: **1.150.000₫** (kết nối Apple Home qua Matter)
-- **Công tắc & Thiết bị Aqara Zigbee**:
-  - Aqara D1 / H1 / Z1 Pro (chuẩn vuông EU, cơ nảy cao cấp, độ bền 100.000 lần bấm, hỗ trợ HomeKit & Home Assistant) - Giá: **550.000₫ – 950.000₫/chiếc**.
-  - Hub Aqara M2 / E1 / M3, Động cơ rèm Aqara Curtain Driver E1/B1.
+7. **Bộ não Home Assistant HASS OS & AI Chatbox Local (Trọn gói 16 Tr)**:
+   - Mini PC x86 Intel N100 + USB Zigbee 3.0 Dongle Plus + Bản quyền phần mềm AI HASS Pro Local trọn đời: Điều khiển 100% Local không phụ thuộc internet, phản hồi tức thì 0.05s, tích hợp 1 ô Chatbox tiếng Việt tự nhiên điều khiển toàn bộ ngôi nhà.
 
 #### 2. Khóa cửa thông minh Tenon (Phân loại theo loại cửa & tính năng):
 - **Cửa nhôm Xingfa**: `[Tenon AL5 Pro (IP65 ngoài trời)](https://chugia.shop/san-pham.html#prod-TENON-AL5-PRO)` (**16.000.000₫**) hoặc `[Tenon AL8 (Face ID 3D + Camera)](https://chugia.shop/san-pham.html#prod-TENON-AL8)` (**26.600.000₫**).

@@ -738,11 +738,23 @@
     // ── Automatic Product Linker Rules ──
     // Automatically wraps mentioned model numbers and common product phrases into clickable links
     const AUTO_PRODUCT_RULES = [
-      // Tuya Smart Home
-      { pat: /(?:Công tắc\s+(?:cơ\s+)?(?:Tuya\s+)?Zigbee\s+)?US-KN|TUYA-ZIGBEE-US-KN/gi, sku: 'TUYA-ZIGBEE-US-KN', name: 'Công tắc cơ Tuya Zigbee US-KN' },
-      { pat: /(?:Công tắc\s+cảm ứng\s+(?:Tuya\s+)?)?SHP-ZLUS|TUYA-SHP-ZLUS/gi, sku: 'TUYA-SHP-ZLUS', name: 'Công tắc cảm ứng Tuya Zigbee SHP-ZLUS' },
-      { pat: /(?:Công tắc\s+(?:bình nóng lạnh\s+)?20A\s+)?ZFW2-US|TUYA-ZFW2-US/gi, sku: 'TUYA-ZFW2-US', name: 'Công tắc bình nóng lạnh 20A Tuya ZFW2-US' },
-      { pat: /(?:Cảm biến\s+(?:hiện diện\s+)?(?:radar\s+)?)?CBHD-Mini|TUYA-CBHD-MINI/gi, sku: 'TUYA-CBHD-MINI', name: 'Cảm biến radar hiện diện mmWave Tuya CBHD-Mini' },
+      // MOES Smart Home Luxury (Chuẩn vuông EU / chữ nhật US & Star Feather)
+      { pat: /ZS-SF-US1-WH-MS|Moes\s+Star\s+Feather(?:\s+Luxury)?(?:\s+Zigbee)?\s+US/gi, sku: 'ZS-SF-US1-WH-MS', name: 'Công tắc Moes Star Feather Luxury Zigbee US' },
+      { pat: /ZS-SF-EU1-WH-MS|Moes\s+Star\s+Feather(?:\s+Luxury)?(?:\s+Zigbee)?\s+EU/gi, sku: 'ZS-SF-EU1-WH-MS', name: 'Công tắc Moes Star Feather Luxury Zigbee EU' },
+      { pat: /ZS-SF-USD-WH-MS|Dimmer\s+Moes\s+Star\s+Feather(?:\s+Luxury)?\s+US/gi, sku: 'ZS-SF-USD-WH-MS', name: 'Công tắc Dimmer Moes Star Feather Zigbee US' },
+      { pat: /ZS-SF-EUD-WH-MS|Dimmer\s+Moes\s+Star\s+Feather(?:\s+Luxury)?\s+EU/gi, sku: 'ZS-SF-EUD-WH-MS', name: 'Công tắc Dimmer Moes Star Feather Zigbee EU' },
+      { pat: /ZS-SF-USC-WH-MS|Rèm\s+Moes\s+Star\s+Feather(?:\s+Luxury)?\s+US/gi, sku: 'ZS-SF-USC-WH-MS', name: 'Công tắc rèm Moes Star Feather Zigbee US' },
+      { pat: /ZS-SF-EUC-WH-MS|Rèm\s+Moes\s+Star\s+Feather(?:\s+Luxury)?\s+EU/gi, sku: 'ZS-SF-EUC-WH-MS', name: 'Công tắc rèm Moes Star Feather Zigbee EU' },
+      { pat: /MWS-US1-3D-WH-MS|Công tắc(?:\s+kính)?(?:\s+2\.5D)?\s+MOES\s+Matter(?:\s+WiFi)?\s+US/gi, sku: 'MWS-US1-3D-WH-MS', name: 'Công tắc kính 2.5D MOES Matter WiFi US' },
+      { pat: /MWS-EU1-3D-WH-MS|Công tắc(?:\s+kính)?(?:\s+2\.5D)?\s+MOES\s+Matter(?:\s+WiFi)?\s+EU/gi, sku: 'MWS-EU1-3D-WH-MS', name: 'Công tắc kính 2.5D MOES Matter WiFi EU' },
+      { pat: /ZS-US1-LN-WH-MS|Công tắc\s+cảm ứng\s+(?:kính\s+)?MOES(?:\s+Zigbee)?\s+US/gi, sku: 'ZS-US1-LN-WH-MS', name: 'Công tắc cảm ứng kính MOES Zigbee US' },
+      { pat: /ZS-EU1-WH-MS|Công tắc\s+cảm ứng\s+(?:kính\s+)?MOES(?:\s+Zigbee)?\s+EU/gi, sku: 'ZS-EU1-WH-MS', name: 'Công tắc cảm ứng kính MOES Zigbee EU' },
+      { pat: /ZS-DL-EUB-WH-MS|Công tắc\s+bình\s+(?:nóng\s+lạnh\s+)?20A\s+(?:cảm ứng\s+)?MOES/gi, sku: 'ZS-DL-EUB-WH-MS', name: 'Công tắc bình nóng lạnh 20A cảm ứng MOES Zigbee' },
+      { pat: /MOES-ZSS-HP05-A-MS|(?:Cảm biến\s+(?:hiện diện\s+)?(?:Radar\s+)?)?mmWave\s+24GHz\s+MOES/gi, sku: 'MOES-ZSS-HP05-A-MS', name: 'Cảm biến hiện diện Radar mmWave 24GHz MOES Zigbee' },
+      { pat: /MOES-ZSS-S01-GWM-C-MS|Cảm biến\s+mở\s+cửa(?:\s+thông minh)?\s+MOES/gi, sku: 'MOES-ZSS-S01-GWM-C-MS', name: 'Cảm biến mở cửa thông minh MOES Zigbee' },
+      { pat: /MOES-WR-TY-THR-BK-MS|IR\s+Hub\s+điều hòa(?:\s+nhiệt ẩm\s+LCD)?\s+MOES/gi, sku: 'MOES-WR-TY-THR-BK-MS', name: 'Bộ điều khiển hồng ngoại IR & Nhiệt ẩm LCD MOES' },
+      { pat: /MOES-CCP-TY-EU-LN-MS|Smart\s+Control\s+Panel\s+4(?:\s*inch|\")?\s+MOES/gi, sku: 'MOES-CCP-TY-EU-LN-MS', name: 'Màn hình điều khiển Smart Control Panel 4 inch MOES' },
+      { pat: /MOES-MHUB-MS|Moes\s+(?:Wired\s+)?Gateway\s+Hub\s+LAN/gi, sku: 'MOES-MHUB-MS', name: 'Bộ điều khiển trung tâm Moes Wired Gateway Hub LAN' },
 
       // Tenon Smart Locks
       { pat: /Tenon\s+AL5\s*Pro|TENON-AL5-PRO/gi, sku: 'TENON-AL5-PRO', name: 'Khóa thông minh Tenon AL5 Pro' },
@@ -897,27 +909,43 @@
       if (!window.HTA_PRODUCTS_DATA || !Array.isArray(window.HTA_PRODUCTS_DATA.products)) return null;
       const prods = window.HTA_PRODUCTS_DATA.products;
       const q = String(query).trim().toLowerCase();
+      if (!q) return null;
       const cleanQ = q.replace(/[^a-z0-9]/g, '');
 
-      // 1. Exact SKU match
+      // 1. Exact SKU match (ưu tiên số 1 tuyệt đối)
       let found = prods.find(p => (p.sku || '').toLowerCase() === q);
       if (found) return found;
 
-      // 2. Cleaned SKU match
-      found = prods.find(p => (p.sku || '').toLowerCase().replace(/[^a-z0-9]/g, '') === cleanQ);
-      if (found) return found;
-
-      // 3. ID match
+      // 2. Exact ID match
       found = prods.find(p => String(p.id) === q);
       if (found) return found;
 
-      // 4. SKU contains query or query contains SKU
-      found = prods.find(p => p.sku && (q.includes(p.sku.toLowerCase()) || p.sku.toLowerCase().includes(q)));
-      if (found) return found;
+      // 3. Cleaned alphanumeric SKU match (chỉ so sánh khi độ dài >= 4 ký tự)
+      if (cleanQ.length >= 4) {
+        found = prods.find(p => (p.sku || '').toLowerCase().replace(/[^a-z0-9]/g, '') === cleanQ);
+        if (found) return found;
+      }
 
-      // 5. Product name contains query
-      found = prods.find(p => p.name.toLowerCase().includes(q));
-      if (found) return found;
+      // 4. SKU prefix match (chỉ khi q có độ dài >= 5)
+      if (q.length >= 5) {
+        found = prods.find(p => {
+          const s = (p.sku || '').toLowerCase();
+          return s && (s.startsWith(q) || q.startsWith(s));
+        });
+        if (found) return found;
+      }
+
+      // 5. SKU contains query (chỉ khi q >= 5 ký tự và sku >= 5 ký tự để tránh match từ ngắn)
+      if (q.length >= 5) {
+        found = prods.find(p => p.sku && p.sku.length >= 5 && p.sku.toLowerCase().includes(q));
+        if (found) return found;
+      }
+
+      // 6. Product name contains query (chỉ khi q có độ dài >= 6 ký tự)
+      if (q.length >= 6) {
+        found = prods.find(p => p.name && p.name.toLowerCase().includes(q));
+        if (found) return found;
+      }
 
       return null;
     }
