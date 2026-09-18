@@ -351,12 +351,13 @@ def call_deepseek_api(user_message, history=None):
         print(f"[DeepSeek API Error] {e.code}: {error_body}")
         return (
             "🤖 **Dạ, hệ thống Trợ lý AI Chu Gia Security hiện đang nâng cấp gói dữ liệu tư vấn tự động.**\n\n"
-            "Để không làm gián đoạn kế hoạch lựa chọn thiết bị an ninh & giải pháp của Quý khách, xin kính mời Quý khách bấm vào nút bên dưới để trực tiếp tra cứu toàn bộ danh mục 480+ sản phẩm chính hãng, kiểm tra thông số kỹ thuật và nhận báo giá ưu đãi mới nhất:\n\n"
-            "[XEM TOÀN BỘ KHO 480+ THIẾT BỊ AN NINH & ĐIỆN THÔNG MINH](https://chugia.shop/san-pham.html)\n\n"
+            "Để không làm gián đoạn kế hoạch lựa chọn thiết bị an ninh & giải pháp của Quý khách, xin kính mời Quý khách bấm vào nút bên dưới để trực tiếp tra cứu toàn bộ danh mục 850+ sản phẩm chính hãng, kiểm tra thông số kỹ thuật và nhận báo giá ưu đãi mới nhất:\n\n"
+            "[XEM TOÀN BỘ KHO 850+ THIẾT BỊ AN NINH & ĐIỆN THÔNG MINH](https://chugia.shop/san-pham.html)\n\n"
             "---\n\n"
             "✨ **HOẶC XEM NHANH CÁC BỘ GIẢI PHÁP COMBO TRỌN GÓI BÁN CHẠY:**\n"
             "- 📶 **12 Gói Combo Mạng Wi-Fi Chuyên Dụng:** [Khám Phá Gói Wi-Fi 6/7](https://chugia.shop/combo-wifi.html)\n"
             "- 🔔 **12 Gói Combo Chuông Hình & Khóa Thông Minh:** [Khám Phá Gói Chuông & Khóa Tenon](https://chugia.shop/san-pham.html#intercomCombos)\n"
+            "- 🤖 **Combo Nhà Thông Minh Tuya & HASS AI:** [Khám Phá Gói Smarthome & HASS AI](https://chugia.shop/san-pham.html#smarthomeCombos)\n"
             "- 🧮 **Dự toán chi phí & Đăng ký khảo sát 0đ:** [Lập Dự Toán Trọn Gói](https://chugia.shop/du-toan.html)\n\n"
             "---\n\n"
             "📞 **Kỹ sư Chu Gia luôn sẵn sàng hỗ trợ trực tiếp 24/7:**\n"
@@ -368,14 +369,14 @@ def call_deepseek_api(user_message, history=None):
         return (
             "🤖 **Dạ, hệ thống Trợ lý AI Chu Gia Security hiện đang nâng cấp gói dữ liệu tư vấn tự động.**\n\n"
             "Quý khách có thể trực tiếp tra cứu toàn bộ kho sản phẩm chính hãng tại:\n\n"
-            "[XEM TOÀN BỘ KHO 480+ THIẾT BỊ AN NINH & ĐIỆN THÔNG MINH](https://chugia.shop/san-pham.html)\n\n"
+            "[XEM TOÀN BỘ KHO 850+ THIẾT BỊ AN NINH & ĐIỆN THÔNG MINH](https://chugia.shop/san-pham.html)\n\n"
             "Hoặc liên hệ Hotline / Zalo Kỹ Thuật 24/7: **0941 204 125** để được hỗ trợ tức thì."
         )
     except Exception as e:
         print(f"[Error] {e}")
         return (
             "🤖 **Dạ, hệ thống Trợ lý AI Chu Gia Security hiện đang bảo trì dữ liệu.**\n\n"
-            "Kính mời Quý khách tham khảo trực tiếp tại: [XEM TOÀN BỘ KHO 480+ THIẾT BỊ AN NINH](https://chugia.shop/san-pham.html) "
+            "Kính mời Quý khách tham khảo trực tiếp tại: [XEM TOÀN BỘ KHO 850+ THIẾT BỊ AN NINH](https://chugia.shop/san-pham.html) "
             "hoặc liên hệ Hotline / Zalo: **0941 204 125**."
         )
 

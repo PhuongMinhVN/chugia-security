@@ -4171,7 +4171,12 @@ ${shareUrl}
       } else if (brandUpper === 'TUYA' || brandUpper === 'ZITECH') {
         list = list.filter(p => {
           const b = (p.brand || '').toUpperCase();
-          return b.includes('TUYA') || b.includes('ZITECH') || p.primaryCategoryId === 54001;
+          return b.includes('TUYA') || b.includes('ZITECH') || b.includes('MOES') || p.primaryCategoryId === 54001 || p.primaryCategoryId === 54004;
+        });
+      } else if (brandUpper === 'MOES') {
+        list = list.filter(p => {
+          const b = (p.brand || '').toUpperCase();
+          return b.includes('MOES') || (p.tags && p.tags.includes('MOES')) || p.primaryCategoryId === 54004;
         });
       } else {
         list = list.filter(p => (p.brand || '').toUpperCase() === brandUpper);
@@ -4364,6 +4369,8 @@ ${shareUrl}
       const retailPriceStr = formatVND(p.retailPrice);
       const oldPriceStr = p.originalPrice > 0 ? formatVND(p.originalPrice) : '';
       const isContactOnly = p.retailPrice <= 0;
+      const displayBrandBadge = p.brand === 'MOES' ? 'MOES Tuya Luxury ⭐' : p.brand;
+      const discountPercent = p.discountPercent || (p.originalPrice > p.retailPrice && p.retailPrice > 0 ? Math.round((1 - p.retailPrice / p.originalPrice) * 100) : 0);
 
       // Features list
       let featuresHtml = '';
@@ -4381,8 +4388,8 @@ ${shareUrl}
         <article class="pro-card" data-id="${p.id}">
           <!-- Badges -->
           <div class="pro-card-badges">
-            <span class="pro-brand-badge ${brandClass}">${p.brand}</span>
-            ${p.discountPercent > 0 ? `<span class="pro-discount-badge">-${p.discountPercent}%</span>` : ''}
+            <span class="pro-brand-badge ${brandClass}">${displayBrandBadge}</span>
+            ${discountPercent > 0 ? `<span class="pro-discount-badge">-${discountPercent}%</span>` : ''}
           </div>
 
           <!-- Image -->
