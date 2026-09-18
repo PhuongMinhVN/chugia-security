@@ -1273,6 +1273,27 @@ ${shareUrl}
         if (prod) break;
       }
     }
+    if (!prod && window.ALL_SMARTHOME_COMBOS && window.ALL_SMARTHOME_COMBOS.combos) {
+      const shCombos = window.ALL_SMARTHOME_COMBOS.combos;
+      for (const cKey in shCombos) {
+        const matchItem = shCombos[cKey].items.find(it => it.id === itemId || it.sku === itemSku);
+        if (matchItem) {
+          prod = {
+            id: matchItem.id,
+            name: matchItem.name,
+            sku: matchItem.sku,
+            brand: 'Tuya & Home Assistant',
+            categoryName: 'Nhà Thông Minh & Bộ Não HASS AI',
+            warranty: '24 Tháng (1 đổi 1 chính hãng)',
+            retailPrice: matchItem.price,
+            image: matchItem.img,
+            images: [matchItem.img],
+            description: `<p><strong>${matchItem.name} (${matchItem.sku})</strong></p><p>Thiết bị chính hãng phân phối bởi Chu Gia Security, vai trò trong giải pháp: <em>${matchItem.role}</em>.</p><p>Vận hành Local 100% chuẩn giao thức Zigbee 3.0, tương thích tuyệt đối với Home Assistant và Trợ lý AI Chatbox điều khiển nhà thông minh.</p>`
+          };
+          break;
+        }
+      }
+    }
     if (prod) {
       openQuickView(prod);
     }
@@ -2706,6 +2727,699 @@ ${shareUrl}
   window.filterIntercomBrandCatalog = brandKey => filterIntercomBrandCatalog(brandKey);
   // ===================== END SPECIALIZED INTERCOM & SMART LOCK COMBOS SYSTEM =====================
 
+  // ===================== SPECIALIZED SMARTHOME TUYA & HOME ASSISTANT COMBOS SYSTEM =====================
+  window.ALL_SMARTHOME_COMBOS = {
+    brandName: "Tuya & Home Assistant",
+    brandBadge: "HỆ THỐNG NHÀ THÔNG MINH TUYA & HOME ASSISTANT (HASS) • AI CHATBOX",
+    sectionTitle: "Combo Nhà Thông Minh Tuya & Bộ Não HASS Tích Hợp AI Chatbox",
+    sectionSub: "Vận hành <strong>100% Local cực nhanh 0.05s</strong>, mất mạng Internet vẫn bật tắt kịch bản bình thường. Tích hợp Trợ lý AI điều khiển toàn bộ thiết bị qua <strong>1 ô Chatbox ngôn ngữ tự nhiên</strong>.",
+    exploreText: "Xem Tất Cả 88+ Thiết Bị Tuya & Smarthome Trong Kho ↓",
+    combos: {
+      "apartment": {
+        id: "apartment",
+        badge: "BÁN CHẠY NHẤT • CĂN HỘ CHUNG CƯ",
+        title: "Combo Căn Hộ Chung Cư Smarthome AI (Tuya + HASS Starter)",
+        subtitle: "Bộ não Mini PC HASS OS x86, USB Dongle Sonoff Plus, 5 công tắc Tuya Zigbee, 1 công tắc bình nóng lạnh 20A, 2 cảm biến radar mmWave và 1 hub hồng ngoại điều hòa.",
+        tabLabel: "Căn Hộ Chung Cư",
+        tabSub: "HASS x86 + 5 Công tắc + Bình nóng lạnh + Radar",
+        icon: "🏢",
+        shareSlug: "tuya-hass-apartment",
+        stats: [
+          { label: "Phân khúc", val: "Căn hộ 2–3 PN (60–100m²)" },
+          { label: "Bộ não HASS", val: "Mini PC Intel N100 x86" },
+          { label: "Kết nối", val: "Zigbee 3.0 Local 100%" },
+          { label: "Điều khiển", val: "AI Chatbox Tiếng Việt" }
+        ],
+        retailTotal: 15500000,
+        comboPrice: 12800000,
+        savingsText: "Tiết kiệm 2.700.000₫ (Đã gồm cấu hình HASS & AI)",
+        items: [
+          {
+            id: 996001,
+            sku: "HASS-MINIPC-N100",
+            name: "Bộ não Server Mini PC HASS OS x86 (Intel Alder Lake N100, RAM 8GB, SSD NVMe 128GB, chạy 24/7 cực mát)",
+            qty: 1,
+            role: "Bộ não trung tâm điều khiển Local 100%, tích hợp AI Chatbox ngôn ngữ tự nhiên",
+            price: 4500000,
+            img: "images/sensor_hub.png"
+          },
+          {
+            id: 996002,
+            sku: "ZIGBEE-DONGLE-PLUS",
+            name: "USB Zigbee 3.0 Dongle Plus TI CC2652P ăng-ten rời 20dBm công suất cao Sonoff-P",
+            qty: 1,
+            role: "Bộ thu phát sóng Zigbee 3.0 Coordinator kết nối trực tiếp vào Mini PC, quản lý 100+ thiết bị",
+            price: 650000,
+            img: "images/smart_device.png"
+          },
+          {
+            id: 1197562,
+            sku: "TUYA-SW-REC-M-W2",
+            name: "Công tắc thông minh TUYA Zigbee mặt chữ nhật phím cơ 2 nút (trắng) relay nảy êm",
+            qty: 3,
+            role: "Điều khiển chiếu sáng phòng khách, phòng ngủ, phản hồi trạng thái 2 chiều tức thì",
+            price: 420000,
+            img: "images/smart_device.png"
+          },
+          {
+            id: 1197563,
+            sku: "TUYA-SW-REC-M-W3",
+            name: "Công tắc thông minh TUYA Zigbee mặt chữ nhật phím cơ 3 nút (trắng)",
+            qty: 2,
+            role: "Điều khiển hệ thống đèn trần, đèn hắt thạch cao phòng khách và bếp",
+            price: 460000,
+            img: "images/smart_device.png"
+          },
+          {
+            id: 997016,
+            sku: "TUYA-ZFW2-US",
+            name: "Công tắc thông minh TUYA Zigbee Công Suất Cao 20A mặt chữ nhật US (Bình nóng lạnh)",
+            qty: 1,
+            role: "Đóng cắt bình nóng lạnh an toàn, tự ngắt khi đủ nhiệt, đo công suất tiêu thụ điện",
+            price: 1180000,
+            img: "https://pos.nvncdn.com/52c0ae-95155/ps/20210304_GCF9lNmNIVFGg49rFjMZwX6X.png?v=1674742087"
+          },
+          {
+            id: 995006,
+            sku: "TUYA-CBHD-MINI",
+            name: "Cảm biến hiện diện người siêu nhỏ Tuya mmWave Radar CBHD-Mini (Phát hiện tĩnh vi mô 24GHz)",
+            qty: 2,
+            role: "Nhận diện người ngồi làm việc/đọc sách không tắt đèn, tự động tắt khi rời phòng",
+            price: 420000,
+            img: "images/products/tuya-cbhd-mini.png"
+          },
+          {
+            id: 995011,
+            sku: "TUYA-IR-MINI-ZB",
+            name: "Bộ điều khiển hồng ngoại Mini Tuya Zigbee & Wifi IR-Mini (Điều hòa, Quạt, Tivi)",
+            qty: 1,
+            role: "Tự động điều chỉnh nhiệt độ điều hòa phòng khách theo kịch bản ngủ ngon AI",
+            price: 450000,
+            img: "images/products/tuya-ir-mini-zb.png"
+          }
+        ]
+      },
+      "townhouse": {
+        id: "townhouse",
+        badge: "PHỦ SÓNG ĐA TẦNG • NHÀ PHỐ LIỀN KỀ",
+        title: "Combo Nhà Phố 3–5 Tầng Smarthome AI Pro (Mesh + HASS N100)",
+        subtitle: "Server HASS Mini PC Intel N100, USB Dongle + 3 Repeater Mesh xuyên sàn, 12 công tắc Tuya Zigbee, 3 công tắc bình nóng lạnh, 4 radar mmWave và 3 hub IR.",
+        tabLabel: "Nhà Phố 3–5 Tầng",
+        tabSub: "HASS N100 + Mesh xuyên tầng + 12 Công tắc",
+        icon: "🏡",
+        shareSlug: "tuya-hass-townhouse",
+        stats: [
+          { label: "Phân khúc", val: "Nhà phố 3–5 tầng (200–380m²)" },
+          { label: "Bộ não Server", val: "Server HASS Intel N100 (RAM 16GB)" },
+          { label: "Mạng Mesh", val: "Dongle Plus + 3 Mesh Repeater" },
+          { label: "Phân vùng", val: "AI Chatbox điều khiển theo từng tầng" }
+        ],
+        retailTotal: 32000000,
+        comboPrice: 26500000,
+        savingsText: "Tiết kiệm 5.500.000₫ (Đã gồm cấu hình Mesh xuyên tầng & AI)",
+        items: [
+          {
+            id: 996003,
+            sku: "HASS-SERVER-PRO-N100",
+            name: "Server HASS Mini PC Intel Alder Lake N100 Pro (RAM 16GB, SSD 256GB NVMe, LAN 2.5Gbps, chạy 24/7)",
+            qty: 1,
+            role: "Máy chủ HASS OS tải nặng, lưu trữ lịch sử cảm biến và chạy mô hình Trợ lý AI",
+            price: 5500000,
+            img: "images/sensor_hub.png"
+          },
+          {
+            id: 996004,
+            sku: "ZIGBEE-MESH-PACK-4",
+            name: "Bộ Thu Phát Zigbee 3.0 Sonoff Dongle Plus + 03 Bộ Kích Sóng Zigbee Mesh Repeater USB",
+            qty: 1,
+            role: "Tạo mạng Zigbee Mesh đồng bộ liên tầng, phủ sóng xuyên sàn bê tông 3-5 tầng",
+            price: 1650000,
+            img: "images/smart_device.png"
+          },
+          {
+            id: 1197562,
+            sku: "TUYA-SW-REC-M-W2",
+            name: "Công tắc thông minh TUYA Zigbee mặt chữ nhật phím cơ 2 nút (trắng)",
+            qty: 6,
+            role: "Công tắc chiếu sáng các phòng ngủ, ban công và hành lang các tầng",
+            price: 420000,
+            img: "images/smart_device.png"
+          },
+          {
+            id: 1197563,
+            sku: "TUYA-SW-REC-M-W3",
+            name: "Công tắc thông minh TUYA Zigbee mặt chữ nhật phím cơ 3 nút (trắng)",
+            qty: 6,
+            role: "Điều khiển các cụm đèn chính, đèn hắt, đèn trang trí phòng khách và bếp",
+            price: 460000,
+            img: "images/smart_device.png"
+          },
+          {
+            id: 997016,
+            sku: "TUYA-ZFW2-US",
+            name: "Công tắc thông minh TUYA Zigbee Công Suất Cao 20A mặt chữ nhật US (Bình nóng lạnh)",
+            qty: 3,
+            role: "Công tắc bình nóng lạnh riêng biệt cho 3 nhà tắm tại các tầng",
+            price: 1180000,
+            img: "https://pos.nvncdn.com/52c0ae-95155/ps/20210304_GCF9lNmNIVFGg49rFjMZwX6X.png?v=1674742087"
+          },
+          {
+            id: 995006,
+            sku: "TUYA-CBHD-MINI",
+            name: "Cảm biến hiện diện người siêu nhỏ Tuya mmWave Radar CBHD-Mini (24GHz)",
+            qty: 4,
+            role: "Tự động bật tắt đèn cầu thang và các khu vực sinh hoạt chung khi có người",
+            price: 420000,
+            img: "images/products/tuya-cbhd-mini.png"
+          },
+          {
+            id: 995011,
+            sku: "TUYA-IR-MINI-ZB",
+            name: "Bộ điều khiển hồng ngoại Mini Tuya Zigbee & Wifi IR-Mini (Điều hòa, Tivi)",
+            qty: 3,
+            role: "Điều khiển điều hòa 3 phòng ngủ, tự động tắt khi không có người trong phòng",
+            price: 450000,
+            img: "images/products/tuya-ir-mini-zb.png"
+          }
+        ]
+      },
+      "villa": {
+        id: "villa",
+        badge: "LUXURY TOÀN DIỆN • BIỆT THỰ / PENTHOUSE",
+        title: "Combo Biệt Thự / Villa Smarthome AI Luxury (Full Local + Radar + Rèm + Khóa Face ID)",
+        subtitle: "Server HASS Pro Core i5, Coordinator PoE LAN, 22 công tắc viền kim loại cao cấp, 4 động cơ rèm Zigbee, 5 công tắc bình nóng lạnh, 8 radar mmWave và khóa Face ID Tenon A7x.",
+        tabLabel: "Biệt Thự & Penthouse",
+        tabSub: "Core i5 + 22 Công tắc Lux + 4 Rèm + Khóa Tenon FaceID",
+        icon: "🏰",
+        shareSlug: "tuya-hass-villa",
+        stats: [
+          { label: "Phân khúc", val: "Biệt thự sân vườn (300–800m²)" },
+          { label: "Bộ não Server", val: "Server HASS Pro Intel Core i5 x86" },
+          { label: "Rèm & Khóa", val: "4 Động cơ rèm + Khóa Tenon A7x FaceID" },
+          { label: "Cảm biến", val: "8 Cảm biến radar mmWave âm trần" }
+        ],
+        retailTotal: 82000000,
+        comboPrice: 68000000,
+        savingsText: "Tiết kiệm 14.000.000₫ (Đã gồm lập trình ngữ cảnh Luxury & AI)",
+        items: [
+          {
+            id: 996005,
+            sku: "HASS-PRO-COREI5",
+            name: "Server HASS Pro Mini PC Intel Core i5 x86 (RAM 16GB, SSD 512GB NVMe, Dual LAN Intel, chạy 24/7)",
+            qty: 1,
+            role: "Bộ não trung tâm cao cấp điều khiển 200+ thiết bị, lưu camera NVR và AI agent cục bộ",
+            price: 8500000,
+            img: "images/sensor_hub.png"
+          },
+          {
+            id: 996006,
+            sku: "ZIGBEE-ETH-POE-PACK",
+            name: "Bộ Điều Phối Zigbee 3.0 Coordinator PoE LAN SLZB-06 + 6 Mesh Repeater Router",
+            qty: 1,
+            role: "Cắm trực tiếp dây mạng LAN PoE, phủ sóng Zigbee cực mạnh khắp khuôn viên biệt thự",
+            price: 3200000,
+            img: "images/smart_device.png"
+          },
+          {
+            id: 995026,
+            sku: "TUYA-ZLUX-ZA2",
+            name: "Công tắc cảm ứng thông minh Tuya Zigbee 2 nút ZLUX-ZA2 (Mặt kính cường lực viền nhôm sang trọng)",
+            qty: 12,
+            role: "Chiếu sáng thông minh phòng khách lớn, phòng ăn, sảnh và các phòng ngủ Master",
+            price: 680000,
+            img: "images/products/tuya-zlux-za2.png"
+          },
+          {
+            id: 995024,
+            sku: "TUYA-ZLUX-ZA4",
+            name: "Công tắc cảm ứng thông minh Tuya Zigbee 4 nút ZLUX-ZA4 (Mặt kính cường lực viền nhôm)",
+            qty: 10,
+            role: "Điều khiển nhiều line đèn sân vườn, đèn rọi tranh và đèn âm trần cao cấp",
+            price: 790000,
+            img: "images/products/tuya-zlux-za4.png"
+          },
+          {
+            id: 997016,
+            sku: "TUYA-ZFW2-US",
+            name: "Công tắc thông minh TUYA Zigbee Công Suất Cao 20A mặt chữ nhật US (Bình nóng lạnh)",
+            qty: 5,
+            role: "Điều khiển bình nóng lạnh, sưởi phòng tắm cho toàn bộ 5 phòng tắm biệt thự",
+            price: 1180000,
+            img: "https://pos.nvncdn.com/52c0ae-95155/ps/20210304_GCF9lNmNIVFGg49rFjMZwX6X.png?v=1674742087"
+          },
+          {
+            id: 995007,
+            sku: "TUYA-CBHD-AT",
+            name: "Cảm biến hiện diện âm trần có Relay Tuya mmWave Radar CBHD-AT (Đóng cắt đèn trực tiếp)",
+            qty: 8,
+            role: "Cảm biến radar âm trần thẩm mỹ tuyệt đối, giữ đèn sáng khi có người trong phòng",
+            price: 550000,
+            img: "images/products/tuya-cbhd-at.png"
+          },
+          {
+            id: 996007,
+            sku: "TUYA-CURTAIN-ZIGBEE",
+            name: "Động cơ rèm thông minh tự động Tuya Zigbee (Kèm ray rèm hợp kim nhôm định hình cao cấp)",
+            qty: 4,
+            role: "Đóng mở rèm tự động theo cường độ ánh sáng, lệnh giọng nói hoặc AI Chatbox",
+            price: 1850000,
+            img: "images/smart_device.png"
+          },
+          {
+            id: 990012,
+            sku: "TENON-A7X",
+            name: "Khóa thông minh Tenon A7x Nhận Diện Khuôn Mặt Face ID 3D (Tự động chốt, Vân tay FPC, Mã ảo, App)",
+            qty: 1,
+            role: "Khóa cửa chính cao cấp nhận diện Face ID 3D siêu tốc 0.3s, đồng bộ trạng thái về HASS",
+            price: 9800000,
+            img: "images/products/tenon-a7x.png"
+          }
+        ]
+      },
+      "upgrade": {
+        id: "upgrade",
+        badge: "NÂNG CẤP BỘ NÃO • LOCAL 100%",
+        title: "Gói Nâng Cấp \"Bộ Não HASS & AI Chatbox\" Cho Nhà Đã Có Thiết Bị",
+        subtitle: "Dành cho gia đình đã lắp công tắc Tuya / Sonoff / Aqara nhưng bị trễ do Cloud hoặc mất mạng không dùng được. Bổ sung Mini PC N100 + USB Sonoff Dongle-P + Tích hợp AI.",
+        tabLabel: "Nâng Cấp Bộ Não HASS",
+        tabSub: "Mini PC N100 + Dongle-P + Cài HASS & AI",
+        icon: "🧠",
+        shareSlug: "tuya-hass-upgrade",
+        stats: [
+          { label: "Mục đích", val: "Chuyển Cloud sang Local 100%" },
+          { label: "Phần cứng", val: "Mini PC Intel N100 x86" },
+          { label: "Giao thức", val: "Zigbee2MQTT / ZHA Local" },
+          { label: "Tính năng mới", val: "Trợ lý AI Chatbox tự nhiên" }
+        ],
+        retailTotal: 8900000,
+        comboPrice: 6900000,
+        savingsText: "Tiết kiệm 2.000.000₫ (Trọn gói phần cứng & kỹ sư cài đặt tận nơi)",
+        items: [
+          {
+            id: 996001,
+            sku: "HASS-MINIPC-N100",
+            name: "Bộ não Server Mini PC HASS OS x86 (Intel Alder Lake N100, RAM 8GB, SSD NVMe 128GB, chạy 24/7)",
+            qty: 1,
+            role: "Bộ não trung tâm điều khiển Local 100%, thay thế toàn bộ Cloud chập chờn",
+            price: 4500000,
+            img: "images/sensor_hub.png"
+          },
+          {
+            id: 996002,
+            sku: "ZIGBEE-DONGLE-PLUS",
+            name: "USB Zigbee 3.0 Dongle Plus TI CC2652P ăng-ten rời 20dBm Sonoff-P",
+            qty: 1,
+            role: "Kết nối vào Mini PC để nhận diện toàn bộ công tắc Tuya/Sonoff có sẵn trong nhà",
+            price: 650000,
+            img: "images/smart_device.png"
+          },
+          {
+            id: 996008,
+            sku: "SVC-HASS-AI-SETUP",
+            name: "Gói Dịch Vụ Kỹ Sư Tích Hợp Home Assistant Local & AI Chatbox Tận Nơi",
+            qty: 1,
+            role: "Kỹ sư Chu Gia cài đặt HASS OS, nạp mô hình Trợ lý AI tiếng Việt, bàn giao hoàn thiện",
+            price: 1750000,
+            img: "images/smart_device.png"
+          }
+        ]
+      }
+    }
+  };
+
+  let currentActiveSmarthomeCombo = 'apartment';
+
+  function getSmarthomeComboShareUrl(comboId) {
+    const origin = window.location.origin && window.location.origin.includes('http') ? window.location.origin : 'https://chugia.shop';
+    return `${origin}/combo/tuya-hass-${comboId}.html`;
+  }
+
+  function renderSmarthomeTabs(activeComboKey) {
+    const tabsNav = document.getElementById('smarthomeTabsNav');
+    if (!tabsNav) return;
+
+    const combos = window.ALL_SMARTHOME_COMBOS.combos;
+    let html = '';
+    Object.keys(combos).forEach(cKey => {
+      const c = combos[cKey];
+      const isActive = (cKey === activeComboKey);
+      html += `
+        <button type="button" class="omada-tab-btn ${isActive ? 'active' : ''}" data-combo="${cKey}">
+          <span class="tab-icon">${c.icon}</span>
+          <div class="tab-text">
+            <strong>${c.tabLabel || c.title}</strong>
+            <small>${c.tabSub || c.subtitle}</small>
+          </div>
+        </button>
+      `;
+    });
+    tabsNav.innerHTML = html;
+  }
+
+  function renderSmarthomeCombo(comboKey) {
+    const container = document.getElementById('smarthomeComboDisplay');
+    if (!container) return;
+
+    const combos = window.ALL_SMARTHOME_COMBOS.combos;
+    const combo = combos[comboKey] || combos.apartment;
+    currentActiveSmarthomeCombo = comboKey;
+
+    const shareUrl = getSmarthomeComboShareUrl(combo.id);
+
+    let statsHtml = '';
+    combo.stats.forEach(st => {
+      statsHtml += `
+        <div class="combo-stat-pill">
+          <small>${st.label}</small>
+          <strong>${st.val}</strong>
+        </div>
+      `;
+    });
+
+    let defaultLogo = 'images/smart_device.png';
+
+    let itemsHtml = '';
+    combo.items.forEach((item) => {
+      const lineTotal = item.price * (item.qty || 0);
+      const isMuted = (item.qty === 0);
+      itemsHtml += `
+        <div class="combo-hw-card ${isMuted ? 'item-muted' : ''}" data-prod-id="${item.id}">
+          <div class="combo-hw-img-wrap" onclick="window.viewComboProductDetail(${item.id}, '${item.sku}')" title="Xem chi tiết ${item.name}">
+            <img src="${item.img}" alt="${item.name}" loading="lazy" onerror="this.src='${defaultLogo}'" />
+            <span class="combo-hw-qty-badge">x${item.qty}</span>
+          </div>
+          <div class="combo-hw-info">
+            <div class="combo-hw-top">
+              <span class="combo-hw-sku" onclick="window.viewComboProductDetail(${item.id}, '${item.sku}')" title="Xem chi tiết ${item.sku}">${item.sku}</span>
+              <span class="combo-hw-role">${item.role}</span>
+            </div>
+            <div class="combo-hw-name" title="${item.name}" onclick="window.viewComboProductDetail(${item.id}, '${item.sku}')">${item.name}</div>
+            <div class="combo-hw-pricing">
+              <span class="combo-hw-unit">${formatVND(item.price)} / chiếc</span>
+              ${item.qty > 0 ? `<span class="combo-hw-subtotal">Tổng: <strong>${formatVND(lineTotal)}</strong></span>` : '<span class="combo-hw-subtotal muted-text">(Chưa chọn)</span>'}
+            </div>
+          </div>
+          <div class="combo-hw-actions">
+            <div class="combo-qty-stepper" title="Tùy chỉnh số lượng thiết bị">
+              <button type="button" class="btn-qty-step btn-qty-minus" onclick="event.stopPropagation(); window.stepSmarthomeComboQty('${combo.id}', ${item.id}, -1)" ${item.qty <= 0 ? 'disabled' : ''} aria-label="Giảm số lượng">−</button>
+              <span class="combo-qty-value">${item.qty}</span>
+              <button type="button" class="btn-qty-step btn-qty-plus" onclick="event.stopPropagation(); window.stepSmarthomeComboQty('${combo.id}', ${item.id}, 1)" ${item.qty >= 99 ? 'disabled' : ''} aria-label="Tăng số lượng">+</button>
+            </div>
+            <button type="button" class="btn-hw-detail" onclick="event.stopPropagation(); window.viewComboProductDetail(${item.id}, '${item.sku}')" title="Xem chi tiết thông số kỹ thuật ${item.sku}">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              <span>Chi tiết</span>
+            </button>
+          </div>
+        </div>
+      `;
+    });
+
+    const totalQty = combo.items.reduce((s, i) => s + i.qty, 0);
+
+    container.innerHTML = `
+      <div class="omada-combo-card" data-brand="smarthome" data-combo="${combo.id}">
+        <!-- Left / Main Column: Overview & Equipment List -->
+        <div class="combo-main-col">
+          <div class="combo-header-box">
+            <div class="combo-header-top-row">
+              <span class="combo-card-badge">${combo.badge}</span>
+              <button type="button" class="btn-combo-header-share" onclick="window.copyComboShareLink('${shareUrl}', '${combo.title.replace(/'/g, "\\'")}', this)" title="Sao chép link chia sẻ combo này">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                <span>Chia sẻ combo</span>
+              </button>
+            </div>
+            <h3 class="combo-card-title">${combo.title}</h3>
+            <p class="combo-card-subtitle">${combo.subtitle}</p>
+          </div>
+
+          <!-- Fast Metrics Strip -->
+          <div class="combo-stats-strip">
+            ${statsHtml}
+          </div>
+
+          <!-- Included Hardware Grid -->
+          <div class="combo-hw-section">
+            <div class="combo-hw-header">
+              <span>DANH SÁCH THIẾT BỊ TRỌN BỘ (${totalQty} THIẾT BỊ)</span>
+              <span class="combo-hw-co-cq">✓ 100% Vận Hành Local Zigbee 3.0 &amp; HASS OS</span>
+            </div>
+            <div class="combo-hw-grid">
+              ${itemsHtml}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Price & High-Converting Actions -->
+        <div class="combo-side-col">
+          <div class="combo-pricing-card">
+            <div class="combo-price-head">
+              <span class="price-head-label">DỰ TOÁN TRỌN GÓI ƯU ĐÃI</span>
+              <span class="price-save-badge">🔥 ${combo.savingsText}</span>
+            </div>
+
+            <div class="combo-price-body">
+              <div class="combo-retail-price">
+                <span class="label">Tổng giá bán lẻ linh kiện:</span>
+                <span class="val strike">${formatVND(combo.retailTotal)}</span>
+              </div>
+              <div class="combo-final-price">
+                <span class="label">Giá Combo Trọn Gói Chu Gia:</span>
+                <div class="price-val-wrap">
+                  <span class="val-num">${formatVND(combo.comboPrice)}</span>
+                  <span class="val-note">Đã gồm cài đặt HASS OS, nạp AI Chatbox &amp; Bảo hành 24T</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Value Props List -->
+            <ul class="combo-guarantees-list">
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Vận hành <strong>100% Local cực nhanh 0.05s</strong>, mất mạng vẫn dùng</span>
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Tích hợp <strong>Trợ lý AI điều khiển qua 1 ô Chatbox</strong> tự nhiên</span>
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Bảo hành tận nơi chính hãng <strong>24 tháng (1 đổi 1)</strong></span>
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Khảo sát đo đạc vị trí công tắc &amp; tủ điện tận nơi <strong>0đ</strong></span>
+              </li>
+            </ul>
+
+            <!-- Actions -->
+            <div class="combo-actions-wrap">
+              <button type="button" class="btn-combo-cart" onclick="window.addSmarthomeComboToCart('${combo.id}')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                <span>Thêm Toàn Bộ Vào Giỏ Báo Giá</span>
+              </button>
+
+              <button type="button" class="btn-combo-zalo" onclick="window.bookSmarthomeComboZalo('${combo.id}')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                <span>Tư Vấn &amp; Nhận Báo Giá Zalo</span>
+              </button>
+
+              <a href="combo-smarthome.html" target="_blank" rel="noopener noreferrer" class="btn-combo-explore" style="text-decoration: none; text-align: center;">
+                <span>🚀 Xem Chi Tiết Giải Pháp HASS &amp; Thử AI Chatbox ↗</span>
+              </a>
+
+              <button type="button" class="btn-combo-explore" onclick="window.filterSmarthomeCatalog()" style="margin-top: -6px;">
+                <span>${window.ALL_SMARTHOME_COMBOS.exploreText}</span>
+              </button>
+            </div>
+
+            <!-- Social Share Box -->
+            <div class="combo-share-box">
+              <div class="combo-share-head">
+                <span class="combo-share-label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2.2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                  <span>Link chia sẻ combo:</span>
+                </span>
+                <span class="combo-share-hint">Hiện ảnh &amp; mô tả combo riêng trên MXH</span>
+              </div>
+              
+              <div class="combo-share-input-row">
+                <input type="text" class="combo-share-input" readonly value="${shareUrl}" onclick="this.select()" title="Bấm để chọn toàn bộ link" />
+                <button type="button" class="btn-combo-copy-link" onclick="window.copyComboShareLink('${shareUrl}', '${combo.title.replace(/'/g, "\\'")}', this)" title="Sao chép link chia sẻ">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Sao chép</span>
+                </button>
+              </div>
+
+              <div class="combo-share-social-grid">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}" target="_blank" rel="noopener noreferrer" class="btn-combo-social btn-social-fb" title="Chia sẻ bài viết lên Facebook">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                  <span>Facebook</span>
+                </a>
+                <a href="https://zalo.me/share?url=${encodeURIComponent(shareUrl)}" target="_blank" rel="noopener noreferrer" class="btn-combo-social btn-social-zalo" title="Gửi link qua Zalo">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.08L2 22l5.07-1.33C8.52 21.52 10.21 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm1 14.5h-2v-2h2v2zm0-4h-2V7h2v5.5z"/></svg>
+                  <span>Zalo</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function switchSmarthomeCombo(comboKey) {
+    const combos = window.ALL_SMARTHOME_COMBOS.combos;
+    if (!combos[comboKey]) comboKey = 'apartment';
+    renderSmarthomeTabs(comboKey);
+    renderSmarthomeCombo(comboKey);
+  }
+
+  function stepSmarthomeComboQty(comboKey, itemId, delta) {
+    const combos = window.ALL_SMARTHOME_COMBOS.combos;
+    const combo = combos[comboKey];
+    if (!combo) return;
+    const item = combo.items.find(it => it.id === itemId);
+    if (!item) return;
+
+    if (combo.baseDiscountRatio === undefined) {
+      combo.baseRetailTotal = combo.retailTotal;
+      combo.baseComboPrice = combo.comboPrice;
+      combo.baseDiscountRatio = (combo.comboPrice / combo.retailTotal);
+    }
+
+    const nextQty = Math.max(0, Math.min(item.qty + delta, 99));
+    if (nextQty === item.qty) return;
+    item.qty = nextQty;
+
+    const newRetail = combo.items.reduce((s, it) => s + it.price * it.qty, 0);
+    let newCombo = 0;
+    if (newRetail > 0) {
+      newCombo = Math.round((newRetail * combo.baseDiscountRatio) / 10000) * 10000;
+    }
+    const newSavings = Math.max(0, newRetail - newCombo);
+
+    combo.retailTotal = newRetail;
+    combo.comboPrice = newCombo;
+    combo.savingsAmount = newSavings;
+    combo.savingsText = newSavings > 0 
+      ? `Tiết kiệm ${formatVND(newSavings)} (Đã áp dụng chiết khấu combo)`
+      : 'Giá theo số lượng cấu hình';
+
+    renderSmarthomeCombo(comboKey);
+  }
+
+  function addSmarthomeComboToCart(comboKey) {
+    const combos = window.ALL_SMARTHOME_COMBOS.combos;
+    const combo = combos[comboKey];
+    if (!combo) return;
+
+    const activeItems = combo.items.filter(item => item.qty > 0);
+    if (activeItems.length === 0) {
+      alert('Vui lòng chọn ít nhất 1 thiết bị để thêm vào giỏ báo giá!');
+      return;
+    }
+
+    activeItems.forEach(item => {
+      const prod = state.products.find(p => p.id === item.id || p.sku === item.sku) || {
+        id: item.id,
+        name: item.name,
+        sku: item.sku,
+        brand: 'Tuya & Home Assistant',
+        retailPrice: item.price,
+        image: item.img
+      };
+
+      const existing = state.cart.find(c => c.id === prod.id);
+      if (existing) {
+        existing.qty = Math.min(existing.qty + item.qty, 99);
+      } else {
+        state.cart.push({
+          id: prod.id,
+          name: prod.name,
+          sku: prod.sku || item.sku,
+          brand: prod.brand || 'Tuya & Home Assistant',
+          retailPrice: prod.retailPrice || item.price,
+          image: prod.image || item.img,
+          qty: item.qty
+        });
+      }
+    });
+
+    saveCartToStorage();
+    updateCartUI();
+    renderCartDrawer();
+    openCartDrawer();
+
+    const btn = document.querySelector(`.omada-combo-card[data-combo="${comboKey}"] .btn-combo-cart`);
+    if (btn) {
+      const origText = btn.innerHTML;
+      btn.classList.add('added');
+      btn.innerHTML = `<span>✓ Đã Thêm Toàn Bộ ${activeItems.reduce((s, i) => s + i.qty, 0)} Thiết Bị!</span>`;
+      setTimeout(() => {
+        btn.classList.remove('added');
+        btn.innerHTML = origText;
+      }, 2000);
+    }
+  }
+
+  function bookSmarthomeComboZalo(comboKey) {
+    const combos = window.ALL_SMARTHOME_COMBOS.combos;
+    const combo = combos[comboKey];
+    if (!combo) return;
+
+    const activeItems = combo.items.filter(item => item.qty > 0);
+    if (activeItems.length === 0) {
+      alert('Vui lòng chọn ít nhất 1 thiết bị để nhận tư vấn Zalo!');
+      return;
+    }
+
+    let msg = `Xin chào Chu Gia Security! Tôi quan tâm đến giải pháp Nhà thông minh Tuya & Home Assistant:\n`;
+    msg += `⭐ ${combo.title.toUpperCase()}\n`;
+    msg += `• Giá combo ưu đãi trọn gói: ${formatVND(combo.comboPrice)}\n`;
+    msg += `• Quy mô đề xuất: ${combo.stats.map(s => s.label + ': ' + s.val).join(' | ')}\n\n`;
+    msg += `Cấu hình thiết bị đã chọn:\n`;
+    activeItems.forEach((it, idx) => {
+      msg += `  ${idx + 1}. [x${it.qty}] ${it.name} (${it.sku}) - ${formatVND(it.price * it.qty)}\n`;
+    });
+    msg += `\nTổng dự toán: ${formatVND(combo.comboPrice)}\nNhờ Chu Gia khảo sát và tư vấn chi tiết lắp đặt!`;
+
+    const zaloUrl = `https://zalo.me/0941204125?text=${encodeURIComponent(msg)}`;
+    window.open(zaloUrl, '_blank');
+  }
+
+  function filterSmarthomeCatalog() {
+    setBrand('TUYA');
+    const catalogEl = document.getElementById('catalogMain');
+    if (catalogEl) {
+      const yOffset = -70;
+      const y = catalogEl.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  }
+
+  function initSmarthomeCombos() {
+    const tabsNav = document.getElementById('smarthomeTabsNav');
+    if (tabsNav) {
+      tabsNav.addEventListener('click', e => {
+        const btn = e.target.closest('.omada-tab-btn');
+        if (!btn) return;
+        const comboKey = btn.getAttribute('data-combo');
+        if (comboKey) switchSmarthomeCombo(comboKey);
+      });
+    }
+
+    renderSmarthomeTabs('apartment');
+    renderSmarthomeCombo('apartment');
+  }
+
+  // Global Helpers for Smarthome Combos
+  window.switchSmarthomeCombo = comboKey => switchSmarthomeCombo(comboKey);
+  window.stepSmarthomeComboQty = (comboKey, itemId, delta) => stepSmarthomeComboQty(comboKey, itemId, delta);
+  window.addSmarthomeComboToCart = comboKey => addSmarthomeComboToCart(comboKey);
+  window.bookSmarthomeComboZalo = comboKey => bookSmarthomeComboZalo(comboKey);
+  window.filterSmarthomeCatalog = () => filterSmarthomeCatalog();
+  // ===================== END SPECIALIZED SMARTHOME TUYA & HOME ASSISTANT COMBOS SYSTEM =====================
+
   // ===================== END SPECIALIZED MULTI-BRAND WI-FI COMBOS SYSTEM =====================
 
   // Initialize
@@ -2724,6 +3438,7 @@ ${shareUrl}
     bindEvents();
     initOmadaCombos();
     initIntercomCombos();
+    initSmarthomeCombos();
     applyFilters();
     updateCartUI();
 
@@ -2838,6 +3553,28 @@ ${shareUrl}
           if (intercomSection) {
             const yOffset = -70;
             const y = intercomSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        }, 180);
+      }
+
+      const smarthomeComboParam = urlParams.get('smarthomeCombo');
+      if (smarthomeComboParam) {
+        setTimeout(() => {
+          switchSmarthomeCombo(smarthomeComboParam);
+          const shSection = document.getElementById('smarthomeCombos') || document.getElementById('smarthomeComboDisplay');
+          if (shSection) {
+            const yOffset = -70;
+            const y = shSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        }, 180);
+      } else if (window.location.hash === '#smarthomeCombos') {
+        setTimeout(() => {
+          const shSection = document.getElementById('smarthomeCombos');
+          if (shSection) {
+            const yOffset = -70;
+            const y = shSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
             window.scrollTo({ top: y, behavior: 'smooth' });
           }
         }, 180);

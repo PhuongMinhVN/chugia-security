@@ -3391,6 +3391,89 @@
   color: #7dd3fc !important;
 }
 
+/* Nav Link Highlight for Smarthome in Header */
+.nav-link-smarthome-highlight {
+  position: relative;
+  transition: all 0.25s ease;
+}
+.nav-link-smarthome-highlight:hover {
+  text-shadow: 0 0 12px rgba(168, 85, 247, 0.6);
+  color: #e9d5ff !important;
+}
+
+/* ===================== SMARTHOME COMBOS THEME (PURPLE & CYAN NEON) ===================== */
+.smarthome-combos-section {
+  border-top-color: rgba(168, 85, 247, 0.25) !important;
+  border-bottom-color: rgba(168, 85, 247, 0.2) !important;
+  background: radial-gradient(circle at 50% 0%, rgba(168, 85, 247, 0.12) 0%, rgba(6, 182, 212, 0.05) 45%, rgba(11, 19, 41, 0) 80%), #0B1329 !important;
+}
+.smarthome-combos-section::before {
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, rgba(6, 182, 212, 0.08) 50%, transparent 75%) !important;
+}
+.smarthome-combos-section .smarthome-badge-tag {
+  background: rgba(168, 85, 247, 0.12);
+  border-color: rgba(168, 85, 247, 0.35);
+  color: #c084fc;
+}
+.smarthome-combos-section .smarthome-badge-tag .pulse-beacon {
+  background: #a855f7;
+  box-shadow: 0 0 10px #a855f7;
+}
+.smarthome-combos-section .omada-tab-btn:hover {
+  border-color: rgba(168, 85, 247, 0.4);
+  background: rgba(168, 85, 247, 0.06);
+}
+.smarthome-combos-section .omada-tab-btn.active {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.22) 0%, rgba(99, 102, 241, 0.22) 100%);
+  border-color: #a855f7;
+  box-shadow: 0 0 24px rgba(168, 85, 247, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+.smarthome-combos-section .omada-tab-btn.active .tab-text small {
+  color: #d8b4fe;
+}
+.smarthome-combos-section .omada-tab-btn.active .tab-icon {
+  transform: scale(1.15);
+}
+.smarthome-combos-section .combo-card-badge {
+  background: rgba(168, 85, 247, 0.15);
+  border-color: rgba(168, 85, 247, 0.35);
+  color: #c084fc;
+}
+.smarthome-combos-section .combo-guarantees-list svg {
+  stroke: #a855f7;
+}
+.smarthome-combos-section .btn-combo-cart {
+  background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 18px rgba(168, 85, 247, 0.4);
+}
+.smarthome-combos-section .btn-combo-cart:hover {
+  background: linear-gradient(135deg, #c084fc 0%, #9333ea 100%);
+  box-shadow: 0 8px 26px rgba(168, 85, 247, 0.55);
+}
+.smarthome-combos-section .btn-combo-explore:hover {
+  border-color: rgba(168, 85, 247, 0.5);
+  color: #d8b4fe;
+  background: rgba(168, 85, 247, 0.08);
+}
+.smarthome-combos-section .btn-hw-detail {
+  background: rgba(168, 85, 247, 0.08);
+  border-color: rgba(168, 85, 247, 0.3);
+  color: #d8b4fe;
+}
+.smarthome-combos-section .btn-hw-detail:hover {
+  background: rgba(168, 85, 247, 0.22);
+  border-color: #a855f7;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(168, 85, 247, 0.4);
+}
+.smarthome-combos-section .combo-hw-name:hover {
+  color: #c084fc;
+}
+.smarthome-combos-section .combo-pricing-card {
+  border-color: rgba(168, 85, 247, 0.38);
+}
+
 /* ===================== INTERCOM COMBOS BRAND THEMES ===================== */
 /* Hikvision (Red & Dark Silver Theme) */
 .intercom-combos-section[data-brand="hikvision"] {
