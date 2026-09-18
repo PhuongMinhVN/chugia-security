@@ -572,10 +572,201 @@
     </div>
   </footer>
 
+
+  <!-- ================= QUICK VIEW PRODUCT MODAL ================= -->
+  <div class="modal-overlay" id="quickViewModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Đóng modal" type="button">✕</button>
+      <div class="modal-body-grid">
+        <!-- Product Media Gallery -->
+        <div class="modal-gallery">
+          <div class="modal-main-img-wrap">
+            <img src="images/imou_indoor_ranger.png" alt="Sản phẩm" id="modalMainImg" class="modal-main-img" />
+          </div>
+          <div class="modal-thumbs" id="modalThumbs"></div>
+        </div>
+
+        <!-- Product Summary Details -->
+        <div class="modal-info">
+          <div class="modal-brand-badge" id="modalBrandTag">CHU GIA SECURITY</div>
+          <h2 class="modal-title" id="modalTitle">Tên thiết bị</h2>
+
+          <div class="modal-sku-row">
+            <span>Mã SKU: <strong id="modalSku">--</strong></span>
+            <span>Danh mục: <strong id="modalCategory">Thiết Bị Chính Hãng</strong></span>
+            <span>Bảo hành: <strong id="modalWarranty" class="warranty-highlight">24 Tháng (1 đổi 1)</strong></span>
+          </div>
+
+          <div class="modal-price-box">
+            <div class="modal-retail-price" id="modalRetailPrice">0 ₫</div>
+            <div class="modal-old-price" id="modalOldPrice"></div>
+            <div class="modal-discount-tag" id="modalDiscountTag">CHÍNH HÃNG</div>
+          </div>
+
+          <!-- Modal Tabs Navigation -->
+          <div class="modal-tabs-nav" id="modalTabsNav">
+            <button type="button" class="modal-tab-btn active" data-tab="tab-specs">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              <span>Điểm Nổi Bật</span>
+            </button>
+            <button type="button" class="modal-tab-btn" data-tab="tab-tags">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+              <span>Công Nghệ &amp; Tag</span>
+            </button>
+            <button type="button" class="modal-tab-btn" data-tab="tab-desc">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              <span>Mô Tả</span>
+            </button>
+            <button type="button" class="modal-tab-btn" data-tab="tab-tech">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+              <span>Thông Số Kỹ Thuật</span>
+            </button>
+          </div>
+
+          <!-- Tab Panes -->
+          <div class="modal-tab-panes">
+            <!-- Tab 1: Highlights -->
+            <div class="modal-tab-pane active" id="tab-specs">
+              <ul class="modal-specs-list" id="modalSpecsList"></ul>
+            </div>
+
+            <!-- Tab 2: Description -->
+            <div class="modal-tab-pane" id="tab-desc">
+              <div class="modal-description" id="modalDescription"></div>
+            </div>
+
+            <!-- Tab 3: Tags -->
+            <div class="modal-tab-pane" id="tab-tags">
+              <div class="modal-tag-sections">
+                <div class="modal-tag-block" id="modalTechTagsBlock">
+                  <div class="modal-tag-label">
+                    <span class="tag-icon-badge tag-icon-tech">⚡</span>
+                    <strong>Thương hiệu &amp; Danh mục:</strong>
+                  </div>
+                  <div class="modal-tag-chips-wrap" id="modalTechTags"></div>
+                </div>
+                <div class="modal-tag-block" id="modalFitTagsBlock" style="display: none;">
+                  <div class="modal-tag-label">
+                    <span class="tag-icon-badge tag-icon-fit">🎯</span>
+                    <strong>Không gian phù hợp:</strong>
+                  </div>
+                  <div class="modal-tag-chips-wrap" id="modalFitTags"></div>
+                </div>
+                <div class="modal-tag-block" id="modalMaterialTagsBlock" style="display: none;">
+                  <div class="modal-tag-label">
+                    <span class="tag-icon-badge tag-icon-material">🛡️</span>
+                    <strong>Chất liệu &amp; Tiêu chuẩn:</strong>
+                  </div>
+                  <div class="modal-tag-chips-wrap" id="modalMaterialTags"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 4: Tech specs table -->
+            <div class="modal-tab-pane" id="tab-tech">
+              <div class="modal-tech-table-wrap" id="modalTechTable"></div>
+            </div>
+          </div>
+
+          <div class="modal-actions">
+            <button class="btn-modal-cart" id="modalAddCartBtn" type="button">
+              🛒 Thêm vào Giỏ Báo Giá
+            </button>
+            <div class="modal-actions-subgroup">
+              <button class="btn-modal-zalo" id="modalZaloBtn" type="button" title="Tư vấn &amp; Đặt hàng qua Zalo">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                <span>Zalo</span>
+              </button>
+              <a href="https://www.facebook.com/phuongminhorg/" target="_blank" rel="noopener noreferrer" class="btn-modal-messenger" id="modalMessengerBtn" title="Inbox Facebook Messenger tư vấn trực tiếp">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.455 5.517 3.736 7.218V22l3.39-1.86c.928.257 1.913.398 2.874.398 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.066 12.443l-2.708-2.889-5.284 2.889 5.808-6.166 2.774 2.888 5.218-2.888-5.808 6.166z"/></svg>
+                <span>Messenger</span>
+              </a>
+              <a href="tel:0941204125" class="btn-modal-call" id="modalCallBtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span>Gọi điện</span>
+              </a>
+              <button class="btn-modal-share" id="modalShareBtn" type="button" title="Tạo mã QR &amp; Poster chia sẻ">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= QR SHARE MODAL ================= -->
+  <div class="modal-overlay" id="qrShareModal">
+    <div class="modal-card" style="max-width: 520px; padding: 24px; text-align: center;">
+      <button class="modal-close-btn" id="qrModalClose" aria-label="Đóng" type="button">✕</button>
+
+      <div style="font-size: 0.8rem; font-weight: 700; color: #0084ff; text-transform: uppercase; margin-bottom: 4px;">MÃ QR &amp; POSTER CHIA SẺ</div>
+      <h3 style="font-size: 1.15rem; font-weight: 800; margin-bottom: 14px; color: #0f172a;" id="qrShareTitle">Sản phẩm Chu Gia</h3>
+
+      <!-- Canvas Poster Display -->
+      <div style="background: #0f172a; border-radius: var(--radius-sm); padding: 10px; margin-bottom: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
+        <canvas id="qrShareCanvas" style="max-width: 100%; height: auto; border-radius: 6px; display: block; margin: 0 auto;"></canvas>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+        <button class="btn btn-primary" id="qrDownloadBtn" style="justify-content: center;" type="button">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          <span>Tải Ảnh Poster</span>
+        </button>
+        <button class="btn btn-outline" id="qrCopyLinkBtn" style="justify-content: center;" type="button">
+          📋 Sao chép liên kết
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= CART DRAWER ================= -->
+  <div class="cart-drawer-backdrop" id="cartDrawerBackdrop"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        🛒 Giỏ Báo Giá
+        <span class="cart-drawer-count">(<span id="cartItemCount">0</span> loại • <span id="cartTotalCount">0</span> sản phẩm)</span>
+      </div>
+      <button class="cart-drawer-close" id="cartDrawerClose" type="button" aria-label="Đóng">✕</button>
+    </div>
+
+    <div class="cart-items-list" id="cartItemsList">
+      <!-- Rendered by JS -->
+    </div>
+
+    <div class="cart-drawer-footer">
+      <div class="cart-total-row">
+        <span>Tổng dự kiến:</span>
+        <span class="cart-total-price" id="cartTotalPrice">0 ₫</span>
+      </div>
+      <div class="cart-footer-note">* Giá có thể thay đổi theo số lượng và chính sách chiết khấu. Kỹ thuật Chu Gia sẽ liên hệ xác nhận báo giá chính xác.</div>
+      <button class="cart-btn-zalo" id="cartSendZaloBtn" type="button">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        Gửi Yêu Cầu Báo Giá Qua Zalo
+      </button>
+      <div class="cart-footer-actions">
+        <button class="cart-btn-copy" id="cartCopyBtn" type="button">📋 Sao chép danh sách</button>
+        <button class="cart-btn-clear" id="cartClearBtn" type="button">🗑 Xóa tất cả</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= FLOAT CART BUTTON ================= -->
+  <button class="cart-float-btn" id="cartFloatBtn" type="button" aria-label="Giỏ báo giá">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <path d="M16 10a4 4 0 01-8 0"></path>
+    </svg>
+    <span class="cart-float-label">Giỏ Báo Giá</span>
+    <span class="cart-float-badge" id="cartFloatBadge" style="display:none;">0</span>
+  </button>
+
   <!-- Scripts -->
   <script src="js/qrcode.min.js"></script>
   <script src="js/hta-products-data.js?v=20260913_2315"></script>
-  <script src="js/products-catalog.js?v=20260918_1830"></script>
+  <script src="js/products-catalog.js?v=20260918_1840"></script>
   <script>
     // Header Mobile Menu Toggle
     const mobileToggle = document.getElementById('mobileToggle');

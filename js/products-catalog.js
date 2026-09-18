@@ -4980,8 +4980,71 @@ ${shareUrl}
     if (prod.image) setMeta('property', 'og:image', prod.image);
   }
 
+  function ensureModalElements() {
+    const ids = [
+      'quickViewModal', 'modalCloseBtn', 'modalMainImg', 'modalThumbs',
+      'modalBrandTag', 'modalTitle', 'modalSku', 'modalCategory', 'modalWarranty',
+      'modalRetailPrice', 'modalOldPrice', 'modalDiscountTag', 'modalTabsNav',
+      'modalSpecsList', 'modalDescription', 'modalTechTags', 'modalFitTags',
+      'modalMaterialTags', 'modalTechTable', 'modalAddCartBtn', 'modalZaloBtn',
+      'modalMessengerBtn', 'modalCallBtn', 'modalShareBtn',
+      'cartDrawer', 'cartDrawerBackdrop', 'cartDrawerClose', 'cartItemsList',
+      'cartItemCount', 'cartTotalCount', 'cartTotalPrice', 'cartSendZaloBtn',
+      'cartCopyBtn', 'cartClearBtn', 'cartFloatBtn', 'cartFloatBadge'
+    ];
+    ids.forEach(id => {
+      if (!el[id]) el[id] = document.getElementById(id);
+    });
+
+    if (el.modalCloseBtn && !el.modalCloseBtn._bound) {
+      el.modalCloseBtn._bound = true;
+      el.modalCloseBtn.addEventListener('click', closeQuickView);
+    }
+    if (el.quickViewModal && !el.quickViewModal._bound) {
+      el.quickViewModal._bound = true;
+      el.quickViewModal.addEventListener('click', e => {
+        if (e.target === el.quickViewModal) closeQuickView();
+      });
+    }
+    if (el.modalTabsNav && !el.modalTabsNav._bound) {
+      el.modalTabsNav._bound = true;
+      el.modalTabsNav.addEventListener('click', e => {
+        const btn = e.target.closest('.modal-tab-btn');
+        if (!btn) return;
+        const targetTabId = btn.getAttribute('data-tab');
+        if (!targetTabId) return;
+        el.modalTabsNav.querySelectorAll('.modal-tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.modal-tab-pane').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        const targetPane = document.getElementById(targetTabId);
+        if (targetPane) targetPane.classList.add('active');
+      });
+    }
+    if (el.modalAddCartBtn && !el.modalAddCartBtn._bound) {
+      el.modalAddCartBtn._bound = true;
+      el.modalAddCartBtn.addEventListener('click', () => {
+        if (state.currentModalProduct) {
+          addToCart(state.currentModalProduct);
+          el.modalAddCartBtn.textContent = '✓ Đã thêm vào giỏ!';
+          el.modalAddCartBtn.style.background = '#16a34a';
+          setTimeout(() => {
+            el.modalAddCartBtn.textContent = '🛒 Thêm vào Giỏ Báo Giá';
+            el.modalAddCartBtn.style.background = '';
+          }, 1800);
+        }
+      });
+    }
+    if (el.modalZaloBtn && !el.modalZaloBtn._bound) {
+      el.modalZaloBtn._bound = true;
+      el.modalZaloBtn.addEventListener('click', () => {
+        if (state.currentModalProduct) orderZalo(state.currentModalProduct);
+      });
+    }
+  }
+
   // Open Quick View Modal
   function openQuickView(prod) {
+    ensureModalElements();
     state.currentModalProduct = prod;
 
     if (el.modalMainImg) {
@@ -5155,7 +5218,7 @@ ${shareUrl}
       el.quickViewModal.classList.remove('active');
       document.body.style.overflow = '';
     }
-    history.replaceState(null, null, window.location.pathname);
+    history.replaceState(null, null, window.location.pathname + window.location.search);
   }
 
   // Zalo Order Direct Link
