@@ -1135,7 +1135,6 @@ ${shareUrl}
     }
 
     // Segment Tabs click events (delegated on container)
-    const tabsNav = document.getElementById('omadaTabsNav');
     if (tabsNav) {
       tabsNav.addEventListener('click', e => {
         const btn = e.target.closest('.omada-tab-btn');
