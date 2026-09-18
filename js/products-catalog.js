@@ -774,6 +774,11 @@
     const shareUrl = isWifi ? getWifiComboShareUrl(brandKey, comboId) : getIntercomComboShareUrl(brandKey, comboId);
     const itemsText = combo.items.map(i => ` • ${i.qty}x ${i.name}`).join('\n');
 
+    let hookHighlight = '';
+    if (brandKey === 'dahua' && comboId === 'villa') {
+      hookHighlight = '⚡ TIỆN ÍCH ĐỈNH CAO: Bấm 1 chạm trên màn hình hoặc smartphone — Mở cổng âm sàn tự động & mở khóa Face ID đón khách từ xa!\n👁️ Camera chuông Dahua góc siêu rộng 140° quan sát toàn cảnh cổng & biển số xe, xóa sạch điểm mù.\n\n';
+    }
+
     const postText = 
 `🔥 ${combo.title.toUpperCase()}
 ⭐ Giải pháp ${combo.subtitle} chính hãng bởi Chu Gia Technology
