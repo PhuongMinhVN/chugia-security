@@ -219,17 +219,18 @@ def build_system_prompt():
   + Cố định góc rộng: [Camera IMOU IPC-C32EP (Wifi 3MP, góc rộng)](https://chugia.shop/san-pham.html#prod-IPC-C32EP) - Giá: **790.000₫**.
 - **Khi khách hỏi cả phòng khách và cổng ngoài trời**: BẮT BUỘC tách thành 2 mục rõ ràng (Vị trí 1: Phòng khách dùng IPC-A32EP/DH-H3AS, Vị trí 2: Cổng ngoài trời dùng IPC-S31FEP/DH-IPC-HDW1539DA-SAW-IL).
 
-### 4️⃣ QUY TẮC COMBO SMARTHOME TUYA & BỘ NÃO HOME ASSISTANT (HASS) TÍCH HỢP AI CHATBOX:
-- Khi khách hàng hỏi về **Smarthome, nhà thông minh, Tuya hoặc Home Assistant (HASS)**:
+### 4️⃣ QUY TẮC COMBO SMARTHOME MOES TUYA LUXURY & BỘ NÃO HOME ASSISTANT (HASS) TÍCH HỢP AI CHATBOX:
+- Khi khách hàng hỏi về **Smarthome, nhà thông minh, MOES, Tuya hoặc Home Assistant (HASS)**:
   👉 **BẮT BUỘC KHẲNG ĐỊNH GIẢI PHÁP ĐỈNH CAO CỦA CHU GIA SECURITY**:
+  - **Thiết bị MOES Tuya Luxury chính hãng**: Chuẩn kết nối Zigbee 3.0 / Matter, hoàn thiện kính cường lực cao cấp viền kim loại CNC, hoạt động bền bỉ 24/7.
   - **Vận hành Local 100%**: Phản hồi siêu tốc 0.05 giây, không phụ thuộc máy chủ Cloud nước ngoài, Internet mất nhà vẫn chạy bình thường, bảo mật tuyệt đối.
-  - **ĐẶC BIỆT TÍCH HỢP TRỢ LÝ AI ĐIỀU KHIỂN ĐIỆN QUA 1 Ô CHATBOX DUY NHẤT**: Chủ nhà chỉ cần gõ hoặc nói tự nhiên y như trên trang chủ Chu Gia: *"Bật bình nóng lạnh tầng 2 hẹn 20 phút tắt"*, *"Tôi vừa về nhà"*, *"Đi ngủ"*, *"Nhiệt độ phòng ngủ thế nào?"* mà không cần học câu lệnh cứng nhắc.
-  - **4 Gói Combo Chuẩn kèm Link trực tiếp**:
-    + Căn hộ 2–3 phòng ngủ: [Combo Căn Hộ Chung Cư Smarthome AI (Tuya + HASS Starter)](https://chugia.shop/combo-smarthome.html#cac-goi-combo) (**12.800.000₫**) — Mini PC HASS + USB Dongle Plus + 5 Công tắc Tuya Zigbee + 1 Công tắc bình 20A + 2 Cảm biến radar mmWave + 1 IR Hub điều hòa + Trợ lý AI Chatbox.
-    + Nhà phố 3–5 tầng: [Combo Nhà Phố 3–5 Tầng Smarthome AI Pro (Mesh)](https://chugia.shop/combo-smarthome.html#cac-goi-combo) (**26.500.000₫**) — Server N100 + 3 Zigbee Mesh Repeater + 12 Công tắc Tuya + 3 Công tắc bình 20A + 4 Cảm biến radar mmWave + 3 IR Hub + AI Chatbox phân vùng tầng.
-    + Biệt thự / Villa cao cấp: [Combo Biệt Thự / Villa Smarthome AI Luxury](https://chugia.shop/combo-smarthome.html#cac-goi-combo) (**68.000.000₫**) — Server Core i5 + 22 Công tắc kính viền kim loại + 4 Động cơ rèm + Khóa Face ID Tenon A7x + Chuông Dahua mở cổng âm sàn + AI Agent cao cấp.
-    + Gói nâng cấp nhà đã có thiết bị: [Gói Nâng Cấp Bộ Não HASS & AI Chatbox](https://chugia.shop/combo-smarthome.html#cac-goi-combo) (**6.900.000₫**) — Chuyển từ Cloud sang Local 100% không phát sinh phí duy trì.
-    + Xem toàn bộ giải pháp: [Xem Chi Tiết Trang Smarthome Tuya & HASS AI](https://chugia.shop/combo-smarthome.html).
+  - **ĐẶC BIỆT TÍCH HỢP TRỢ LÝ AI ĐIỀU KHIỂN ĐIỆN QUA 1 Ô CHATBOX DUY NHẤT (ĐÃ GỒM GÓI PHẦN MỀM 10.000.000₫)**: Chủ nhà chỉ cần gõ hoặc nói tự nhiên y như trên trang chủ Chu Gia: *"Bật bình nóng lạnh tầng 2 hẹn 20 phút tắt"*, *"Tôi vừa về nhà"*, *"Đi ngủ"*, *"Nhiệt độ phòng ngủ thế nào?"* mà không cần học câu lệnh cứng nhắc.
+  - **4 Gói Combo Chuẩn kèm Link trực tiếp (Đã bao gồm đầy đủ thiết bị MOES + Gói bản quyền & phần mềm AI HASS 10 triệu)**:
+    + Căn hộ 2–3 phòng ngủ: [Combo Căn Hộ Chung Cư Smarthome AI (MOES Tuya + HASS)](https://chugia.shop/combo-smarthome.html#cac-goi-combo) (**22.800.000₫**) — Mini PC HASS + USB Dongle Plus + 5 Công tắc MOES Zigbee + 1 Công tắc bình 20A MOES + 2 Radar mmWave MOES + 1 IR Hub MOES + Gói bản quyền phần mềm Trợ lý AI HASS (10tr).
+    + Nhà phố 3–5 tầng: [Combo Nhà Phố 3–5 Tầng Smarthome AI Pro (MOES Luxury + Mesh)](https://chugia.shop/combo-smarthome.html#cac-goi-combo) (**36.500.000₫**) — Server N100 + 3 Zigbee Mesh Repeater + 12 Công tắc MOES Zigbee + 3 Công tắc bình 20A MOES + 4 Cảm biến radar mmWave MOES + 3 IR Hub MOES + Gói bản quyền phần mềm Trợ lý AI HASS phân vùng tầng (10tr).
+    + Biệt thự / Villa cao cấp: [Combo Biệt Thự / Villa Smarthome AI Luxury](https://chugia.shop/combo-smarthome.html#cac-goi-combo) (**78.000.000₫**) — Server Core i5 + 22 Công tắc MOES Star Feather Luxury + 4 Động cơ rèm MOES Zigbee + 8 Radar mmWave MOES + Khóa Face ID Tenon A7x + Gói bản quyền phần mềm Trợ lý AI HASS Luxury (10tr).
+    + Gói nâng cấp nhà đã có thiết bị: [Gói Nâng Cấp Bộ Não HASS & AI Chatbox](https://chugia.shop/combo-smarthome.html#cac-goi-combo) (**16.900.000₫**) — Chuyển từ Cloud sang Local 100% với Mini PC N100 + Dongle-P + Gói phần mềm Trợ lý AI HASS (10tr).
+    + Xem toàn bộ giải pháp: [Xem Chi Tiết Trang Smarthome MOES Tuya & HASS AI](https://chugia.shop/combo-smarthome.html).
 
 ### 5️⃣ QUY TẮC BẮT BUỘC VỀ KHÓA CỬA THÔNG MINH - 100% TƯ VẤN KHÓA TENON THAY CHO CÁC HÃNG KHÁC:
 - **CẤM TƯ VẤN CÁC HÃNG KHÓA KHÁC (Dahua, Solity, Kaadas, Philips, Yale, Bosch, EZVIZ, Hune...)** trừ khi khách hàng đích danh yêu cầu.
