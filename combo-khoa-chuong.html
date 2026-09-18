@@ -217,7 +217,114 @@
       font-size: 0.72rem;
       color: #94a3b8;
       margin-top: 2px;
-    /* Tenon Features Spotlight Responsive */
+    }
+
+    /* Intercom Hero Section Responsive */
+    @media (max-width: 991px) {
+      .intercom-hero-section {
+        padding: 100px 0 40px;
+      }
+      .intercom-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .intercom-hero-title {
+        font-size: 1.75rem;
+        line-height: 1.3;
+        margin-bottom: 12px;
+      }
+      .intercom-hero-desc {
+        font-size: 0.92rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      .intercom-hero-highlights {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 22px;
+      }
+      .intercom-hero-card-col {
+        max-width: 540px;
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+    @media (max-width: 576px) {
+      .intercom-hero-section {
+        padding: 85px 0 30px;
+      }
+      .intercom-hero-badge {
+        font-size: 0.72rem;
+        padding: 4px 12px;
+        margin-bottom: 12px;
+      }
+      .intercom-hero-title {
+        font-size: 1.45rem;
+        line-height: 1.28;
+        margin-bottom: 12px;
+      }
+      .intercom-hero-desc {
+        font-size: 0.88rem;
+        line-height: 1.5;
+        margin-bottom: 16px;
+      }
+      .intercom-hero-highlights {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        margin-bottom: 18px;
+      }
+      .intercom-hl-item {
+        padding: 8px 12px;
+        font-size: 0.82rem;
+      }
+      .intercom-hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+      }
+      .btn-hero-intercom-cta,
+      .btn-hero-intercom-phone {
+        width: 100%;
+        justify-content: center;
+        padding: 11px 16px;
+        font-size: 0.86rem;
+      }
+      .intercom-hero-card {
+        padding: 16px 14px;
+        border-radius: 14px;
+      }
+      .ihc-header {
+        padding-bottom: 10px;
+        margin-bottom: 12px;
+      }
+      .ihc-title {
+        font-size: 0.85rem;
+      }
+      .ihc-specs-grid {
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+      .ihc-spec-box {
+        padding: 8px 10px;
+      }
+      .ihc-spec-label {
+        font-size: 0.68rem;
+        margin-bottom: 2px;
+      }
+      .ihc-spec-val {
+        font-size: 0.84rem;
+      }
+      .ihc-stats-strip {
+        padding-top: 12px;
+        gap: 6px;
+      }
+      .ihc-stat-val {
+        font-size: 1.05rem;
+      }
+      .ihc-stat-label {
+        font-size: 0.68rem;
+      }
+    }
     .tenon-pillars-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -388,26 +495,26 @@
         <div class="intercom-hero-content">
           <div class="intercom-hero-badge">
             <span class="pulse-beacon" style="background:#38bdf8;"></span>
-            <span>HỆ THỐNG KIỂM SOÁT RA VÀO • AN NINH 2 LỚP ĐỒNG BỘ</span>
+            <span>AN NINH 2 LỚP • CHUẨN POE ĐỒNG BỘ</span>
           </div>
           <h1 class="intercom-hero-title">
-            Combo Chuông Cửa Có Hình IP &amp; Khóa Thông Minh Tenon Cao Cấp
+            Combo Chuông Cửa IP &amp; Khóa Tenon Cao Cấp
           </h1>
           <p class="intercom-hero-desc">
-            Sự kết hợp hoàn hảo giữa <strong>Camera Chuông Hình IP góc rộng 140°</strong> (Hikvision, Dahua, EZVIZ) và <strong>Khóa cửa thông minh Tenon</strong> (Face ID 3D không chạm, vân tay FPC Thụy Điển, tự động chốt). Đàm thoại 2 chiều sắc nét, mở khóa cửa &amp; cổng âm sàn từ xa qua màn hình cảm ứng trong nhà và ứng dụng di động.
+            Hệ thống an ninh 2 lớp: Đàm thoại video HD sắc nét, mở khóa cửa Face ID 3D và điều khiển mở cổng tự động từ xa qua màn hình trong nhà &amp; điện thoại.
           </p>
           <div class="intercom-hero-highlights">
             <div class="intercom-hl-item">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              <span>Khóa Tenon Face ID 3D &amp; FPC Thụy Điển</span>
+              <span>Face ID 3D &amp; Vân Tay Thụy Điển</span>
             </div>
             <div class="intercom-hl-item">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-              <span>Màn Hình 7" Cảm Ứng Mở Cổng Từ Xa</span>
+              <span>Màn Hình 7" Mở Cổng Tự Động</span>
             </div>
             <div class="intercom-hl-item">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              <span>Đàm Thoại 2 Chiều Khử Nhiễu Rõ Nét</span>
+              <span>Chuông Hình HD Góc Rộng 140°</span>
             </div>
             <div class="intercom-hl-item">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -431,7 +538,7 @@
             <div class="ihc-header">
               <div class="ihc-title">
                 <span class="ihc-pulse"></span>
-                <span>Hệ Thống Kiểm Soát Cửa Chu Gia</span>
+                <span>Kiểm Soát Cửa Chu Gia</span>
               </div>
               <span class="ihc-status-tag">ĐỒNG BỘ 100%</span>
             </div>
@@ -446,7 +553,7 @@
               </div>
               <div class="ihc-spec-box">
                 <div class="ihc-spec-label">Mở Khóa Cổng Tự Động</div>
-                <div class="ihc-spec-val">Relay Kích Tiếp Điểm</div>
+                <div class="ihc-spec-val">Relay Tiếp Điểm</div>
               </div>
               <div class="ihc-spec-box">
                 <div class="ihc-spec-label">Hạ Tầng Kết Nối</div>
@@ -456,15 +563,15 @@
             <div class="ihc-stats-strip">
               <div class="ihc-stat">
                 <div class="ihc-stat-val">100%</div>
-                <div class="ihc-stat-label">Chính Hãng 1 Đổi 1</div>
+                <div class="ihc-stat-label">Chính Hãng</div>
               </div>
               <div class="ihc-stat">
                 <div class="ihc-stat-val">&lt; 0.3s</div>
-                <div class="ihc-stat-label">Nhận Diện Face ID</div>
+                <div class="ihc-stat-label">Face ID 3D</div>
               </div>
               <div class="ihc-stat">
                 <div class="ihc-stat-val">2 Giờ</div>
-                <div class="ihc-stat-label">Lắp Đặt Hoàn Thiện</div>
+                <div class="ihc-stat-label">Lắp Đặt</div>
               </div>
             </div>
           </div>
