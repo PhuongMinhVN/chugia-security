@@ -2729,349 +2729,370 @@ ${shareUrl}
 
   // ===================== SPECIALIZED SMARTHOME TUYA & HOME ASSISTANT COMBOS SYSTEM =====================
   window.ALL_SMARTHOME_COMBOS = {
-    brandName: "MOES Tuya & Home Assistant",
-    brandBadge: "HỆ THỐNG NHÀ THÔNG MINH MOES TUYA LUXURY & HOME ASSISTANT (HASS) • AI CHATBOX",
-    sectionTitle: "Combo Nhà Thông Minh MOES Tuya Luxury & Bộ Não HASS Tích Hợp AI Chatbox",
-    sectionSub: "Vận hành <strong>100% Local cực nhanh 0.05s</strong>, mất mạng Internet vẫn bật tắt kịch bản bình thường. Tích hợp Trợ lý AI điều khiển toàn bộ thiết bị qua <strong>1 ô Chatbox ngôn ngữ tự nhiên</strong>.",
+    brandName: "MOES Tuya Luxury & Smarthome",
+    brandBadge: "HỆ THỐNG NHÀ THÔNG MINH MOES LUXURY • CÔNG TẮC VUÔNG & CHỮ NHẬT • TÙY CHỌN BỘ NÃO HASS",
+    sectionTitle: "Combo Smarthome MOES Luxury (Công Tắc Vuông EU / Chữ Nhật US)",
+    sectionSub: "Giải pháp trọn gói thiết bị chính hãng MOES Luxury: Căn hộ tối thiểu 3PN, Nhà phố 5–6 phòng, Biệt thự Villa 7–8 phòng. Thiết bị chuẩn vuông & chữ nhật. Tùy chọn nâng cấp Bộ não HASS OS & AI Chatbox Local trọn gói 16tr.",
     exploreText: "Xem Tất Cả 235+ Thiết Bị MOES Tuya & Smarthome Trong Kho ↓",
-    combos: {
+      combos: {
       "apartment": {
-        id: "apartment",
-        badge: "BÁN CHẠY NHẤT • CĂN HỘ CHUNG CƯ",
-        title: "Combo Căn Hộ Chung Cư Smarthome AI (MOES Tuya Luxury + HASS)",
-        subtitle: "Bộ não Mini PC HASS OS x86, USB Dongle Sonoff Plus, 5 công tắc MOES Zigbee mặt kính cường lực, 1 công tắc bình nóng lạnh 20A MOES, 2 cảm biến radar mmWave MOES, 1 hub hồng ngoại MOES và Gói phần mềm Trợ lý AI HASS.",
-        tabLabel: "Căn Hộ Chung Cư",
-        tabSub: "HASS x86 + MOES Luxury + Radar + Phần mềm AI HASS",
-        icon: "🏢",
-        shareSlug: "tuya-hass-apartment",
-        stats: [
-          { label: "Phân khúc", val: "Căn hộ 2–3 PN (60–100m²)" },
-          { label: "Bộ não HASS", val: "Mini PC Intel N100 x86" },
-          { label: "Thiết bị", val: "MOES Tuya Luxury Zigbee 3.0" },
-          { label: "Phần mềm", val: "Trợ lý AI Chatbox trọn đời" }
-        ],
-        retailTotal: 23800000,
-        comboPrice: 22800000,
-        savingsText: "Tiết kiệm 1.000.000₫ (Đã gồm full bản quyền phần mềm AI & cấu hình HASS)",
-        items: [
-          {
-            id: 996001,
-            sku: "HASS-MINIPC-N100",
-            name: "Bộ não Server Mini PC HASS OS x86 (Intel Alder Lake N100, RAM 8GB, SSD NVMe 128GB, chạy 24/7 cực mát)",
-            qty: 1,
-            role: "Bộ não trung tâm điều khiển Local 100%, tích hợp AI Chatbox ngôn ngữ tự nhiên",
-            price: 4500000,
-            img: "images/sensor_hub.png"
-          },
-          {
-            id: 996002,
-            sku: "ZIGBEE-DONGLE-PLUS",
-            name: "USB Zigbee 3.0 Dongle Plus TI CC2652P ăng-ten rời 20dBm công suất cao Sonoff-P",
-            qty: 1,
-            role: "Bộ thu phát sóng Zigbee 3.0 Coordinator kết nối trực tiếp vào Mini PC, quản lý 100+ thiết bị",
-            price: 650000,
-            img: "images/smart_device.png"
-          },
-          {
-            id: 2100208,
-            sku: "ZS-US-2G-WH-MS",
-            name: "Công tắc cảm ứng thông minh MOES Tuya Zigbee 2 nút chuẩn chữ nhật US (Mặt kính cường lực cao cấp)",
-            qty: 3,
-            role: "Điều khiển chiếu sáng phòng khách, phòng ngủ, phản hồi trạng thái 2 chiều tức thì",
-            price: 960000,
-            img: "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/zigbee-wall-touch-smart-light-switch-with-neutral-wireno-neutral-wireno-capacitor-needed-smart-lifetuya-23-way-multi-control-association-hub-required-123-gang-w-716413.jpg?v=1646321480"
-          },
-          {
-            id: 2100209,
-            sku: "ZS-US-3G-WH-MS",
-            name: "Công tắc cảm ứng thông minh MOES Tuya Zigbee 3 nút chuẩn chữ nhật US (Mặt kính cường lực cao cấp)",
-            qty: 2,
-            role: "Điều khiển hệ thống đèn trần, đèn hắt thạch cao phòng khách và bếp",
-            price: 1050000,
-            img: "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/zigbee-wall-touch-smart-light-switch-with-neutral-wireno-neutral-wireno-capacitor-needed-smart-lifetuya-23-way-multi-control-association-hub-required-123-gang-w-716413.jpg?v=1646321480"
-          },
-          {
-            id: 2100179,
-            sku: "ZS-DL-EUB-WH-MS",
-            name: "Công tắc thông minh MOES Zigbee Công Suất Cao 20A / 40A (Bình nóng lạnh & Sưởi phòng tắm)",
-            qty: 1,
-            role: "Đóng cắt bình nóng lạnh an toàn, tự ngắt khi đủ nhiệt, đo công suất tiêu thụ điện",
-            price: 1030000,
-            img: "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/zigbee-smart-boiler-touch-switch-water-heater-single-pole-neutral-wire-required-20a40a-eu-679546.jpg?v=1688464008"
-          },
-          {
-            id: 2100054,
-            sku: "MOES-ZSS-HP05-A-MS",
-            name: "Cảm biến hiện diện người mmWave Radar MOES Zigbee 24GHz (Phát hiện tĩnh vi mô, không lo tắt đèn)",
-            qty: 2,
-            role: "Nhận diện người ngồi làm việc/đọc sách không tắt đèn, tự động tắt khi rời phòng",
-            price: 820000,
-            img: "https://cdn.shopify.com/s/files/1/0095/4079/6497/files/ZigBee_Smart_mmWave_Human_Presence_PIR_Sensor_App_Remote_Monitoring_Motion_Motionless_Detection-1.jpg?v=1745304559"
-          },
-          {
-            id: 2100181,
-            sku: "MOES-WR-TY-THR-BK-MS",
-            name: "Bộ điều khiển hồng ngoại thông minh MOES Zigbee & WiFi tích hợp cảm biến nhiệt ẩm",
-            qty: 1,
-            role: "Tự động điều chỉnh nhiệt độ điều hòa phòng khách theo kịch bản ngủ ngon AI",
-            price: 1000000,
-            img: "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/wi-fi-smart-ir-remote-control-with-temperature-and-humidity-sensor-for-air-conditioner-tv-ac-243402.jpg?v=1661241201"
-          },
-          {
-            id: 996099,
-            sku: "SW-HASS-AI-PRO",
-            name: "Gói Bản Quyền & Phần Mềm Điều Khiển Trợ Lý AI Home Assistant Local",
-            qty: 1,
-            role: "Hệ điều hành HASS OS bản quyền, nạp mô hình Trợ lý AI tiếng Việt, tích hợp phân vùng và kịch bản căn hộ trọn đời",
-            price: 10000000,
-            img: "images/sensor_hub.png"
-          }
-        ]
+            "id": "apartment",
+            "badge": "TỐI THIỂU 3 PHÒNG NGỦ • MOES LUXURY",
+            "title": "Combo Căn Hộ 3 Phòng Ngủ Smarthome MOES Luxury (Công Tắc Vuông / Chữ Nhật)",
+            "subtitle": "Giải pháp nhà thông minh trọn gói cho căn hộ 3 phòng ngủ + 1 khách + 1 bếp + 2 WC. Trang bị Bộ điều khiển trung tâm Moes Multi-Mode Gateway Zigbee 3.0, 7 công tắc cảm ứng Moes Luxury (tùy chọn Chuẩn Chữ Nhật US / Chuẩn Vuông EU), 2 công tắc bình nóng lạnh 20A, 3 cảm biến radar mmWave và 3 bộ hồng ngoại điều hòa.",
+            "tabLabel": "Căn Hộ 3 Phòng Ngủ",
+            "tabSub": "Moes Zigbee Hub + 7 Công Tắc Moes + 2 Bình Nóng Lạnh + 3 Radar",
+            "icon": "🏢",
+            "shareSlug": "tuya-hass-apartment",
+            "stats": [
+                  {
+                        "label": "Quy mô",
+                        "val": "Căn hộ tối thiểu 3 PN (85–130m²)"
+                  },
+                  {
+                        "label": "Bộ trung tâm",
+                        "val": "Moes Gateway Zigbee 3.0 + BLE Mesh"
+                  },
+                  {
+                        "label": "Công tắc",
+                        "val": "MOES Luxury (Tùy chọn US/EU)"
+                  },
+                  {
+                        "label": "Điều khiển",
+                        "val": "App Tuya/SmartLife + Giọng nói"
+                  }
+            ],
+            "retailTotal": 16650000,
+            "comboPrice": 14800000,
+            "savingsText": "Tiết kiệm 1.850.000₫ (Trọn gói thiết bị Moes Luxury chính hãng)",
+            "items": [
+                  {
+                        "id": 2100157,
+                        "sku": "MOES-MHUB-MS",
+                        "name": "Bộ điều khiển trung tâm Moes Multi-Mode Gateway Zigbee 3.0 + BLE Mesh + WiFi",
+                        "qty": 1,
+                        "role": "Bộ não trung tâm kết nối toàn bộ công tắc, cảm biến, bình nóng lạnh và điều hòa",
+                        "price": 2140000,
+                        "img": "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/smart-wired-multi-mode-gateway-zigbee-wifi-bluetooth-mesh-hub-away-stay-home-security-protect-mode-360623.png?v=1682513101"
+                  },
+                  {
+                        "id": 2100208,
+                        "sku": "ZS-US-2G-WH-MS",
+                        "name": "Công tắc cảm ứng thông minh MOES Tuya Zigbee 2 nút (Tùy chọn Chuẩn Chữ Nhật US / Vuông EU)",
+                        "qty": 4,
+                        "role": "Điều khiển chiếu sáng 3 phòng ngủ và phòng khách, mặt kính cường lực sang trọng",
+                        "price": 960000,
+                        "img": "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/zigbee-wall-touch-smart-light-switch-with-neutral-wireno-neutral-wireno-capacitor-needed-smart-lifetuya-23-way-multi-control-association-hub-required-123-gang-w-716413.jpg?v=1646321480"
+                  },
+                  {
+                        "id": 2100209,
+                        "sku": "ZS-US-3G-WH-MS",
+                        "name": "Công tắc cảm ứng thông minh MOES Tuya Zigbee 3 nút (Tùy chọn Chuẩn Chữ Nhật US / Vuông EU)",
+                        "qty": 3,
+                        "role": "Điều khiển cụm đèn trần, đèn hắt thạch cao phòng khách, khu bếp và ban công",
+                        "price": 1050000,
+                        "img": "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/zigbee-wall-touch-smart-light-switch-with-neutral-wireno-neutral-wireno-capacitor-needed-smart-lifetuya-23-way-multi-control-association-hub-required-123-gang-w-716413.jpg?v=1646321480"
+                  },
+                  {
+                        "id": 2100179,
+                        "sku": "ZS-DL-EUB-WH-MS",
+                        "name": "Công tắc thông minh MOES Zigbee Công Suất Cao 20A / 40A (Bình nóng lạnh & Sưởi phòng tắm)",
+                        "qty": 2,
+                        "role": "Điều khiển 2 bình nóng lạnh tại 2 phòng tắm, hẹn giờ tự ngắt, chống giật an toàn",
+                        "price": 1030000,
+                        "img": "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/zigbee-smart-boiler-touch-switch-water-heater-single-pole-neutral-wire-required-20a40a-eu-679546.jpg?v=1688464008"
+                  },
+                  {
+                        "id": 2100054,
+                        "sku": "MOES-ZSS-HP05-A-MS",
+                        "name": "Cảm biến hiện diện người mmWave Radar MOES Zigbee 24GHz (Phát hiện tĩnh vi mô, không lo tắt đèn)",
+                        "qty": 3,
+                        "role": "Phát hiện chuyển động vi mô cho 3 phòng ngủ và phòng khách, giữ sáng khi có người ngồi yên",
+                        "price": 820000,
+                        "img": "https://cdn.shopify.com/s/files/1/0095/4079/6497/files/ZigBee_Smart_mmWave_Human_Presence_PIR_Sensor_App_Remote_Monitoring_Motion_Motionless_Detection-1.jpg?v=1745304559"
+                  },
+                  {
+                        "id": 2100181,
+                        "sku": "MOES-WR-TY-THR-BK-MS",
+                        "name": "Bộ điều khiển hồng ngoại thông minh MOES Zigbee & WiFi tích hợp cảm biến nhiệt ẩm",
+                        "qty": 3,
+                        "role": "Tự động điều chỉnh nhiệt độ điều hòa 3 phòng ngủ theo thói quen sinh hoạt và độ ẩm",
+                        "price": 1000000,
+                        "img": "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/wi-fi-smart-ir-remote-control-with-temperature-and-humidity-sensor-for-air-conditioner-tv-ac-243402.jpg?v=1661241201"
+                  }
+            ]
       },
       "townhouse": {
-        id: "townhouse",
-        badge: "PHỦ SÓNG ĐA TẦNG • NHÀ PHỐ LIỀN KỀ",
-        title: "Combo Nhà Phố 3–5 Tầng Smarthome AI Pro (MOES Luxury + Mesh + HASS N100)",
-        subtitle: "Server HASS Mini PC Intel N100, USB Dongle + 3 Repeater Mesh xuyên sàn, 12 công tắc cảm ứng MOES Zigbee, 3 công tắc bình nóng lạnh MOES 20A, 4 radar mmWave MOES, 3 hub IR MOES và Gói phần mềm Trợ lý AI HASS.",
-        tabLabel: "Nhà Phố 3–5 Tầng",
-        tabSub: "HASS N100 + MOES Luxury + 12 Công tắc + Phần mềm AI HASS",
-        icon: "🏡",
-        shareSlug: "tuya-hass-townhouse",
-        stats: [
-          { label: "Phân khúc", val: "Nhà phố 3–5 tầng (200–380m²)" },
-          { label: "Bộ não Server", val: "Server HASS Intel N100 (RAM 16GB)" },
-          { label: "Thiết bị", val: "MOES Tuya Luxury Zigbee 3.0" },
-          { label: "Phần mềm", val: "Trợ lý AI Chatbox phân vùng tầng" }
-        ],
-        retailTotal: 38580000,
-        comboPrice: 36500000,
-        savingsText: "Tiết kiệm 2.080.000₫ (Đã gồm full bản quyền phần mềm AI & cấu hình Mesh)",
-        items: [
-          {
-            id: 996003,
-            sku: "HASS-SERVER-PRO-N100",
-            name: "Server HASS Mini PC Intel Alder Lake N100 Pro (RAM 16GB, SSD 256GB NVMe, LAN 2.5Gbps, chạy 24/7)",
-            qty: 1,
-            role: "Máy chủ HASS OS tải nặng, lưu trữ lịch sử cảm biến và chạy mô hình Trợ lý AI",
-            price: 5500000,
-            img: "images/sensor_hub.png"
-          },
-          {
-            id: 996004,
-            sku: "ZIGBEE-MESH-PACK-4",
-            name: "Bộ Thu Phát Zigbee 3.0 Sonoff Dongle Plus + 03 Bộ Kích Sóng Zigbee Mesh Repeater USB",
-            qty: 1,
-            role: "Tạo mạng Zigbee Mesh đồng bộ liên tầng, phủ sóng xuyên sàn bê tông 3-5 tầng",
-            price: 1650000,
-            img: "images/smart_device.png"
-          },
-          {
-            id: 2100208,
-            sku: "ZS-US-2G-WH-MS",
-            name: "Công tắc cảm ứng thông minh MOES Tuya Zigbee 2 nút chuẩn chữ nhật US (Mặt kính cường lực cao cấp)",
-            qty: 6,
-            role: "Công tắc chiếu sáng các phòng ngủ, ban công và hành lang các tầng",
-            price: 960000,
-            img: "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/zigbee-wall-touch-smart-light-switch-with-neutral-wireno-neutral-wireno-capacitor-needed-smart-lifetuya-23-way-multi-control-association-hub-required-123-gang-w-716413.jpg?v=1646321480"
-          },
-          {
-            id: 2100209,
-            sku: "ZS-US-3G-WH-MS",
-            name: "Công tắc cảm ứng thông minh MOES Tuya Zigbee 3 nút chuẩn chữ nhật US (Mặt kính cường lực cao cấp)",
-            qty: 6,
-            role: "Điều khiển các cụm đèn chính, đèn hắt, đèn trang trí phòng khách và bếp",
-            price: 1050000,
-            img: "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/zigbee-wall-touch-smart-light-switch-with-neutral-wireno-neutral-wireno-capacitor-needed-smart-lifetuya-23-way-multi-control-association-hub-required-123-gang-w-716413.jpg?v=1646321480"
-          },
-          {
-            id: 2100179,
-            sku: "ZS-DL-EUB-WH-MS",
-            name: "Công tắc thông minh MOES Zigbee Công Suất Cao 20A / 40A (Bình nóng lạnh & Sưởi phòng tắm)",
-            qty: 3,
-            role: "Công tắc bình nóng lạnh riêng biệt cho 3 nhà tắm tại các tầng",
-            price: 1030000,
-            img: "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/zigbee-smart-boiler-touch-switch-water-heater-single-pole-neutral-wire-required-20a40a-eu-679546.jpg?v=1688464008"
-          },
-          {
-            id: 2100054,
-            sku: "MOES-ZSS-HP05-A-MS",
-            name: "Cảm biến hiện diện người mmWave Radar MOES Zigbee 24GHz (Phát hiện tĩnh vi mô, không lo tắt đèn)",
-            qty: 4,
-            role: "Tự động bật tắt đèn cầu thang và các khu vực sinh hoạt chung khi có người",
-            price: 820000,
-            img: "https://cdn.shopify.com/s/files/1/0095/4079/6497/files/ZigBee_Smart_mmWave_Human_Presence_PIR_Sensor_App_Remote_Monitoring_Motion_Motionless_Detection-1.jpg?v=1745304559"
-          },
-          {
-            id: 2100181,
-            sku: "MOES-WR-TY-THR-BK-MS",
-            name: "Bộ điều khiển hồng ngoại thông minh MOES Zigbee & WiFi tích hợp cảm biến nhiệt ẩm",
-            qty: 3,
-            role: "Điều khiển điều hòa 3 phòng ngủ, tự động tắt khi không có người trong phòng",
-            price: 1000000,
-            img: "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/wi-fi-smart-ir-remote-control-with-temperature-and-humidity-sensor-for-air-conditioner-tv-ac-243402.jpg?v=1661241201"
-          },
-          {
-            id: 996099,
-            sku: "SW-HASS-AI-PRO",
-            name: "Gói Bản Quyền & Phần Mềm Điều Khiển Trợ Lý AI Home Assistant Local",
-            qty: 1,
-            role: "Hệ điều hành HASS OS bản quyền, nạp mô hình Trợ lý AI tiếng Việt, phân vùng kịch bản điều khiển tầng trọn đời",
-            price: 10000000,
-            img: "images/sensor_hub.png"
-          }
-        ]
+            "id": "townhouse",
+            "badge": "NHÀ PHỐ 5–6 PHÒNG • 3–5 TẦNG",
+            "title": "Combo Nhà Phố 5–6 Phòng Smarthome MOES Luxury (Phủ Sóng Đa Tầng Zigbee)",
+            "subtitle": "Giải pháp nhà thông minh cao cấp cho nhà phố liền kề 5–6 phòng (4-5 phòng ngủ + khách + bếp + 4 WC). Trang bị Bộ điều khiển trung tâm Moes Gateway Zigbee 3.0 LAN chịu tải lớn, 13 công tắc Moes Luxury (tùy chọn Chuẩn Chữ Nhật US / Vuông EU), 4 công tắc bình nóng lạnh 20A, 5 radar mmWave và 5 bộ điều khiển hồng ngoại điều hòa.",
+            "tabLabel": "Nhà Phố 5–6 Phòng",
+            "tabSub": "Moes Gateway LAN + 13 Công Tắc Moes + 4 Bình Nóng Lạnh + 5 Radar",
+            "icon": "🏡",
+            "shareSlug": "tuya-hass-townhouse",
+            "stats": [
+                  {
+                        "label": "Quy mô",
+                        "val": "Nhà phố 5–6 phòng (200–380m²)"
+                  },
+                  {
+                        "label": "Bộ trung tâm",
+                        "val": "Moes Gateway LAN Zigbee 3.0 Chịu Tải"
+                  },
+                  {
+                        "label": "Công tắc",
+                        "val": "MOES Luxury (Tùy chọn US/EU)"
+                  },
+                  {
+                        "label": "Ngữ cảnh",
+                        "val": "Công tắc 9 kịch bản không dây"
+                  }
+            ],
+            "retailTotal": 29410000,
+            "comboPrice": 26500000,
+            "savingsText": "Tiết kiệm 2.910.000₫ (Trọn gói thiết bị Moes Luxury chính hãng)",
+            "items": [
+                  {
+                        "id": 2100157,
+                        "sku": "MOES-MHUB-MS",
+                        "name": "Bộ điều khiển trung tâm Moes Multi-Mode Gateway Zigbee 3.0 + Cổng LAN chuyên dụng",
+                        "qty": 1,
+                        "role": "Bộ não Gateway Zigbee 3.0 chịu tải lớn, kết nối mạng LAN ổn định 24/7 cho toàn bộ nhà phố",
+                        "price": 2140000,
+                        "img": "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/smart-wired-multi-mode-gateway-zigbee-wifi-bluetooth-mesh-hub-away-stay-home-security-protect-mode-360623.png?v=1682513101"
+                  },
+                  {
+                        "id": 2100017,
+                        "sku": "MOES-ZT-B-US3-WH-MS",
+                        "name": "Công tắc ngữ cảnh không dây MOES Zigbee 3 Gang 9 Kịch Bản (Treo tường hoặc cầm tay)",
+                        "qty": 1,
+                        "role": "Đặt đầu giường hoặc cửa ra vào kích hoạt nhanh kịch bản 'Rời nhà', 'Tiếp khách', 'Đi ngủ'",
+                        "price": 1030000,
+                        "img": "https://cdn.shopify.com/s/files/1/0095/4079/6497/files/MOESZigbeeWirelessSceneSwitch-3Gang9ScenariosSmartPushButtonRemote_MagneticHandheldDesign.jpg?v=1777273025"
+                  },
+                  {
+                        "id": 2100208,
+                        "sku": "ZS-US-2G-WH-MS",
+                        "name": "Công tắc cảm ứng thông minh MOES Tuya Zigbee 2 nút (Tùy chọn Chuẩn Chữ Nhật US / Vuông EU)",
+                        "qty": 7,
+                        "role": "Chiếu sáng 5 phòng ngủ, phòng khách, phòng thờ và ban công các tầng",
+                        "price": 960000,
+                        "img": "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/zigbee-wall-touch-smart-light-switch-with-neutral-wireno-neutral-wireno-capacitor-needed-smart-lifetuya-23-way-multi-control-association-hub-required-123-gang-w-716413.jpg?v=1646321480"
+                  },
+                  {
+                        "id": 2100209,
+                        "sku": "ZS-US-3G-WH-MS",
+                        "name": "Công tắc cảm ứng thông minh MOES Tuya Zigbee 3 nút (Tùy chọn Chuẩn Chữ Nhật US / Vuông EU)",
+                        "qty": 6,
+                        "role": "Điều khiển cụm đèn chính, đèn trang trí phòng khách, bếp và hành lang các tầng",
+                        "price": 1050000,
+                        "img": "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/zigbee-wall-touch-smart-light-switch-with-neutral-wireno-neutral-wireno-capacitor-needed-smart-lifetuya-23-way-multi-control-association-hub-required-123-gang-w-716413.jpg?v=1646321480"
+                  },
+                  {
+                        "id": 2100179,
+                        "sku": "ZS-DL-EUB-WH-MS",
+                        "name": "Công tắc thông minh MOES Zigbee Công Suất Cao 20A / 40A (Bình nóng lạnh & Sưởi phòng tắm)",
+                        "qty": 4,
+                        "role": "Điều khiển 4 bình nóng lạnh riêng biệt cho 4 phòng tắm các tầng, hẹn giờ tự ngắt",
+                        "price": 1030000,
+                        "img": "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/zigbee-smart-boiler-touch-switch-water-heater-single-pole-neutral-wire-required-20a40a-eu-679546.jpg?v=1688464008"
+                  },
+                  {
+                        "id": 2100054,
+                        "sku": "MOES-ZSS-HP05-A-MS",
+                        "name": "Cảm biến hiện diện người mmWave Radar MOES Zigbee 24GHz (Phát hiện tĩnh vi mô, không lo tắt đèn)",
+                        "qty": 5,
+                        "role": "Tự động bật đèn cầu thang thông minh và các khu vực sinh hoạt chung khi có người",
+                        "price": 820000,
+                        "img": "https://cdn.shopify.com/s/files/1/0095/4079/6497/files/ZigBee_Smart_mmWave_Human_Presence_PIR_Sensor_App_Remote_Monitoring_Motion_Motionless_Detection-1.jpg?v=1745304559"
+                  },
+                  {
+                        "id": 2100181,
+                        "sku": "MOES-WR-TY-THR-BK-MS",
+                        "name": "Bộ điều khiển hồng ngoại thông minh MOES Zigbee & WiFi tích hợp cảm biến nhiệt ẩm",
+                        "qty": 5,
+                        "role": "Điều khiển điều hòa 5 phòng ngủ/khách, tự động tắt khi phòng không có người",
+                        "price": 1000000,
+                        "img": "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/wi-fi-smart-ir-remote-control-with-temperature-and-humidity-sensor-for-air-conditioner-tv-ac-243402.jpg?v=1661241201"
+                  }
+            ]
       },
       "villa": {
-        id: "villa",
-        badge: "LUXURY TOÀN DIỆN • BIỆT THỰ / PENTHOUSE",
-        title: "Combo Biệt Thự / Villa Smarthome AI Luxury (MOES Star Feather + Radar + Rèm + Khóa Face ID)",
-        subtitle: "Server HASS Pro Core i5, Coordinator PoE LAN, 22 công tắc MOES Star Feather & Touch cao cấp, 4 động cơ rèm MOES Zigbee, 5 công tắc bình 20A MOES, 8 radar mmWave MOES, khóa Face ID Tenon A7x và Gói phần mềm Trợ lý AI HASS.",
-        tabLabel: "Biệt Thự & Penthouse",
-        tabSub: "Core i5 + MOES Star Feather + 4 Rèm + Khóa Tenon + Phần mềm AI HASS",
-        icon: "🏰",
-        shareSlug: "tuya-hass-villa",
-        stats: [
-          { label: "Phân khúc", val: "Biệt thự sân vườn (300–800m²)" },
-          { label: "Bộ não Server", val: "Server HASS Pro Intel Core i5 x86" },
-          { label: "Thiết bị", val: "MOES Star Feather Luxury" },
-          { label: "Phần mềm", val: "Trợ lý AI Chatbox Luxury trọn đời" }
-        ],
-        retailTotal: 103110000,
-        comboPrice: 78000000,
-        savingsText: "Tiết kiệm 25.110.000₫ (Đã gồm full bản quyền phần mềm AI & kịch bản Luxury)",
-        items: [
-          {
-            id: 996005,
-            sku: "HASS-PRO-COREI5",
-            name: "Server HASS Pro Mini PC Intel Core i5 x86 (RAM 16GB, SSD 512GB NVMe, Dual LAN Intel, chạy 24/7)",
-            qty: 1,
-            role: "Bộ não trung tâm cao cấp điều khiển 200+ thiết bị, lưu camera NVR và AI agent cục bộ",
-            price: 8500000,
-            img: "images/sensor_hub.png"
-          },
-          {
-            id: 996006,
-            sku: "ZIGBEE-ETH-POE-PACK",
-            name: "Bộ Điều Phối Zigbee 3.0 Coordinator PoE LAN SLZB-06 + 6 Mesh Repeater Router",
-            qty: 1,
-            role: "Cắm trực tiếp dây mạng LAN PoE, phủ sóng Zigbee cực mạnh khắp khuôn viên biệt thự",
-            price: 3200000,
-            img: "images/smart_device.png"
-          },
-          {
-            id: 2100002,
-            sku: "ZS-SF-USD-WH-MS",
-            name: "Công tắc thông minh MOES Star Feather Luxury Series chuẩn chữ nhật US (Kính nhám Skin-Feel sang trọng)",
-            qty: 12,
-            role: "Chiếu sáng thông minh phòng khách lớn, phòng ăn, sảnh và các phòng ngủ Master",
-            price: 1390000,
-            img: "https://cdn.shopify.com/s/files/1/0095/4079/6497/files/MOESStarFeatherSeriesSmartZigbeeDimmerSwitchNeutralWireRequired-1.jpg?v=1784976767"
-          },
-          {
-            id: 2100209,
-            sku: "ZS-US-3G-WH-MS",
-            name: "Công tắc cảm ứng thông minh MOES Tuya Zigbee 3 nút chuẩn chữ nhật US (Mặt kính cường lực cao cấp)",
-            qty: 10,
-            role: "Điều khiển nhiều line đèn sân vườn, đèn rọi tranh và đèn âm trần cao cấp",
-            price: 1050000,
-            img: "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/zigbee-wall-touch-smart-light-switch-with-neutral-wireno-neutral-wireno-capacitor-needed-smart-lifetuya-23-way-multi-control-association-hub-required-123-gang-w-716413.jpg?v=1646321480"
-          },
-          {
-            id: 2100179,
-            sku: "ZS-DL-EUB-WH-MS",
-            name: "Công tắc thông minh MOES Zigbee Công Suất Cao 20A / 40A (Bình nóng lạnh & Sưởi phòng tắm)",
-            qty: 5,
-            role: "Điều khiển bình nóng lạnh, sưởi phòng tắm cho toàn bộ 5 phòng tắm biệt thự",
-            price: 1030000,
-            img: "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/zigbee-smart-boiler-touch-switch-water-heater-single-pole-neutral-wire-required-20a40a-eu-679546.jpg?v=1688464008"
-          },
-          {
-            id: 2100111,
-            sku: "MOES-ZSS-LP-HP02-MS",
-            name: "Cảm biến hiện diện mmWave Radar cao cấp MOES Zigbee (Âm trần thẩm mỹ & Phát hiện vi mô)",
-            qty: 8,
-            role: "Cảm biến radar âm trần thẩm mỹ tuyệt đối, giữ đèn sáng khi có người trong phòng",
-            price: 1430000,
-            img: "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/moes-zigbee-human-presence-sensor-detector-radar-wave-detection-sensor-for-home-security-596265.png?v=1692258238"
-          },
-          {
-            id: 2100215,
-            sku: "MOES-CM-PJ-T220-Z",
-            name: "Động cơ rèm thông minh cao cấp MOES Zigbee (Kèm ray rèm hợp kim nhôm định hình chuẩn sang trọng)",
-            qty: 4,
-            role: "Đóng mở rèm tự động theo cường độ ánh sáng, lệnh giọng nói hoặc AI Chatbox",
-            price: 6960000,
-            img: "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/zigbee-smart-electric-motorized-splicing-curtain-tracks-systemtuya-curtain-motor-with-diy-track-rf-remote-189028.jpg?v=1660030077"
-          },
-          {
-            id: 990012,
-            sku: "TENON-A7X",
-            name: "Khóa thông minh Tenon A7x Nhận Diện Khuôn Mặt Face ID 3D (Tự động chốt, Vân tay FPC, Mã ảo, App)",
-            qty: 1,
-            role: "Khóa cửa chính cao cấp nhận diện Face ID 3D siêu tốc 0.3s, đồng bộ trạng thái về HASS",
-            price: 9800000,
-            img: "images/products/tenon-a7x.png"
-          },
-          {
-            id: 996099,
-            sku: "SW-HASS-AI-PRO",
-            name: "Gói Bản Quyền & Phần Mềm Điều Khiển Trợ Lý AI Home Assistant Local",
-            qty: 1,
-            role: "Hệ điều hành HASS OS bản quyền, nạp mô hình Trợ lý AI tiếng Việt, lập trình kịch bản Luxury trọn đời",
-            price: 10000000,
-            img: "images/sensor_hub.png"
-          }
-        ]
+            "id": "villa",
+            "badge": "BIỆT THỰ / VILLA 7–8 PHÒNG • MOES STAR FEATHER",
+            "title": "Combo Biệt Thự / Villa 7–8 Phòng Smarthome MOES Luxury (Màn Hình Trung Tâm + Rèm + Khóa Face ID)",
+            "subtitle": "Giải pháp siêu sang cho biệt thự villa 7–8 phòng (6 phòng ngủ Master + đại sảnh + phòng sinh hoạt chung + 6 WC). Trang bị Màn hình điều khiển Smart Control Panel 4 inch gắn tường, 22 công tắc Moes Star Feather Luxury & 3 Gang (tùy chọn Chuẩn Chữ Nhật US / Vuông EU), 6 công tắc bình 20A, 8 radar mmWave âm trần, 4 động cơ rèm Moes, khóa Face ID Tenon A7x và 6 bộ hồng ngoại điều hòa.",
+            "tabLabel": "Biệt Thự 7–8 Phòng",
+            "tabSub": "Smart Panel 4\" + Star Feather + 4 Rèm Moes + Khóa Face ID + 6 Bình",
+            "icon": "🏰",
+            "shareSlug": "tuya-hass-villa",
+            "stats": [
+                  {
+                        "label": "Quy mô",
+                        "val": "Biệt thự villa 7–8 phòng (350–800m²)"
+                  },
+                  {
+                        "label": "Màn hình trung tâm",
+                        "val": "Smart Control Panel 4 inch Gắn Tường"
+                  },
+                  {
+                        "label": "Công tắc",
+                        "val": "MOES Star Feather Luxury (US/EU)"
+                  },
+                  {
+                        "label": "An ninh & Rèm",
+                        "val": "Khóa Face ID 3D + 4 Động cơ rèm Moes"
+                  }
+            ],
+            "retailTotal": 97400000,
+            "comboPrice": 79000000,
+            "savingsText": "Tiết kiệm 18.400.000₫ (Trọn gói thiết bị Moes Star Feather Luxury siêu sang)",
+            "items": [
+                  {
+                        "id": 2100129,
+                        "sku": "MOES-CCP-TY-EU-LN-MS",
+                        "name": "Màn hình điều khiển trung tâm cảm ứng Moes Smart Control Panel 4 inch gắn tường tích hợp Zigbee Hub",
+                        "qty": 1,
+                        "role": "Trung tâm điều khiển cảm ứng sang trọng đặt tại đại sảnh biệt thự, tích hợp Gateway Zigbee 3.0",
+                        "price": 7500000,
+                        "img": "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/tuya-wifi-smart-touch-screen-center-control-panel-with-voice-control-alexa-built-in-zigbee-gateway-built-in-116493.jpg?v=1688695158"
+                  },
+                  {
+                        "id": 2100157,
+                        "sku": "MOES-MHUB-MS",
+                        "name": "Bộ điều khiển trung tâm Moes Multi-Mode Gateway Hub Zigbee 3.0 + LAN dự phòng",
+                        "qty": 1,
+                        "role": "Kết nối mạng Zigbee Mesh tầng 2-3 chịu tải hàng trăm thiết bị ổn định tuyệt đối",
+                        "price": 2140000,
+                        "img": "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/smart-wired-multi-mode-gateway-zigbee-wifi-bluetooth-mesh-hub-away-stay-home-security-protect-mode-360623.png?v=1682513101"
+                  },
+                  {
+                        "id": 2100002,
+                        "sku": "ZS-SF-USD-WH-MS",
+                        "name": "Công tắc Dimmer thông minh MOES Star Feather Luxury Series (Tùy chọn Chuẩn Chữ Nhật US / Vuông EU)",
+                        "qty": 10,
+                        "role": "Điều chỉnh độ sáng êm ái đèn đại sảnh, phòng ngủ Master, phòng ăn và quầy bar",
+                        "price": 1390000,
+                        "img": "https://cdn.shopify.com/s/files/1/0095/4079/6497/files/StarFeatherSeriesUSStandardSmartZigbeeDimmerSwitch-1.jpg?v=1788413312"
+                  },
+                  {
+                        "id": 2100209,
+                        "sku": "ZS-US-3G-WH-MS",
+                        "name": "Công tắc cảm ứng thông minh MOES Tuya Zigbee 3 nút (Tùy chọn Chuẩn Chữ Nhật US / Vuông EU)",
+                        "qty": 12,
+                        "role": "Hệ thống đèn chiếu sáng cho toàn bộ 7-8 phòng và khu vực sân vườn trong biệt thự",
+                        "price": 1050000,
+                        "img": "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/zigbee-wall-touch-smart-light-switch-with-neutral-wireno-neutral-wireno-capacitor-needed-smart-lifetuya-23-way-multi-control-association-hub-required-123-gang-w-716413.jpg?v=1646321480"
+                  },
+                  {
+                        "id": 2100179,
+                        "sku": "ZS-DL-EUB-WH-MS",
+                        "name": "Công tắc thông minh MOES Zigbee Công Suất Cao 20A / 40A (Bình nóng lạnh & Sưởi phòng tắm)",
+                        "qty": 6,
+                        "role": "Điều khiển bình nóng lạnh, sưởi phòng tắm cho toàn bộ 6 phòng tắm biệt thự",
+                        "price": 1030000,
+                        "img": "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/zigbee-smart-boiler-touch-switch-water-heater-single-pole-neutral-wire-required-20a40a-eu-679546.jpg?v=1688464008"
+                  },
+                  {
+                        "id": 2100111,
+                        "sku": "MOES-ZSS-LP-HP02-MS",
+                        "name": "Cảm biến hiện diện mmWave Radar âm trần cao cấp MOES Zigbee (Phát hiện vi mô chống tắt đèn)",
+                        "qty": 8,
+                        "role": "Cảm biến radar âm trần siêu thẩm mỹ phát hiện chuyển động vi mô cho các phòng Master",
+                        "price": 1430000,
+                        "img": "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/moes-zigbee-human-presence-sensor-detector-radar-wave-detection-sensor-for-home-security-596265.png?v=1692258238"
+                  },
+                  {
+                        "id": 2100215,
+                        "sku": "MOES-CM-PJ-T220-Z",
+                        "name": "Động cơ rèm thông minh cao cấp MOES Zigbee (Kèm ray rèm hợp kim nhôm định hình chuẩn sang trọng)",
+                        "qty": 4,
+                        "role": "Tự động đóng mở 4 bộ rèm đại sảnh và các phòng ngủ Master theo ánh sáng hoặc app",
+                        "price": 6960000,
+                        "img": "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/zigbee-smart-electric-motorized-splicing-curtain-tracks-systemtuya-curtain-motor-with-diy-track-rf-remote-189028.jpg?v=1660030077"
+                  },
+                  {
+                        "id": 990012,
+                        "sku": "TENON-A7X",
+                        "name": "Khóa thông minh Tenon A7x Nhận Diện Khuôn Mặt Face ID 3D (Tự động chốt, Vân tay FPC, Mã ảo, App)",
+                        "qty": 1,
+                        "role": "Khóa cửa chính biệt thự bảo mật đa tầng, nhận diện khuôn mặt 3D siêu tốc 0.3s",
+                        "price": 9800000,
+                        "img": "images/products/tenon-a7x.png"
+                  },
+                  {
+                        "id": 2100181,
+                        "sku": "MOES-WR-TY-THR-BK-MS",
+                        "name": "Bộ điều khiển hồng ngoại thông minh MOES Zigbee & WiFi tích hợp cảm biến nhiệt ẩm",
+                        "qty": 6,
+                        "role": "Tự động hóa điều hòa và TV cho 6 phòng ngủ Master theo nhiệt độ và ngữ cảnh",
+                        "price": 1000000,
+                        "img": "https://cdn.shopify.com/s/files/1/0095/4079/6497/products/wi-fi-smart-ir-remote-control-with-temperature-and-humidity-sensor-for-air-conditioner-tv-ac-243402.jpg?v=1661241201"
+                  }
+            ]
       },
       "upgrade": {
-        id: "upgrade",
-        badge: "NÂNG CẤP BỘ NÃO • LOCAL 100%",
-        title: "Gói Nâng Cấp \"Bộ Não HASS & AI Chatbox\" Cho Nhà Đã Có Thiết Bị",
-        subtitle: "Dành cho gia đình đã lắp công tắc Tuya / MOES / Sonoff / Aqara nhưng bị trễ do Cloud. Bổ sung Mini PC N100 + USB Dongle-P + Gói phần mềm Trợ lý AI HASS.",
-        tabLabel: "Nâng Cấp Bộ Não HASS",
-        tabSub: "Mini PC N100 + Dongle-P + Phần mềm AI HASS",
-        icon: "🧠",
-        shareSlug: "tuya-hass-upgrade",
-        stats: [
-          { label: "Mục đích", val: "Chuyển Cloud sang Local 100%" },
-          { label: "Phần cứng", val: "Mini PC Intel N100 x86" },
-          { label: "Giao thức", val: "Zigbee2MQTT / ZHA Local" },
-          { label: "Phần mềm", val: "Trợ lý AI Chatbox trọn đời" }
-        ],
-        retailTotal: 15150000,
-        comboPrice: 16900000,
-        savingsText: "Trọn gói phần cứng & bản quyền phần mềm AI HASS",
-        items: [
-          {
-            id: 996001,
-            sku: "HASS-MINIPC-N100",
-            name: "Bộ não Server Mini PC HASS OS x86 (Intel Alder Lake N100, RAM 8GB, SSD NVMe 128GB, chạy 24/7)",
-            qty: 1,
-            role: "Bộ não trung tâm điều khiển Local 100%, thay thế toàn bộ Cloud chập chờn",
-            price: 4500000,
-            img: "images/sensor_hub.png"
-          },
-          {
-            id: 996002,
-            sku: "ZIGBEE-DONGLE-PLUS",
-            name: "USB Zigbee 3.0 Dongle Plus TI CC2652P ăng-ten rời 20dBm Sonoff-P",
-            qty: 1,
-            role: "Kết nối vào Mini PC để nhận diện toàn bộ công tắc Tuya/Sonoff/MOES có sẵn trong nhà",
-            price: 650000,
-            img: "images/smart_device.png"
-          },
-          {
-            id: 996099,
-            sku: "SW-HASS-AI-PRO",
-            name: "Gói Bản Quyền & Phần Mềm Điều Khiển Trợ Lý AI Home Assistant Local",
-            qty: 1,
-            role: "Hệ điều hành HASS OS bản quyền, nạp mô hình Trợ lý AI tiếng Việt, tích hợp phân vùng và kịch bản tự động hóa trọn đời",
-            price: 10000000,
-            img: "images/sensor_hub.png"
-          }
-        ]
+            "id": "upgrade",
+            "badge": "NÂNG CẤP BỘ NÃO HASS • TRỌN GÓI 16TR",
+            "title": "Gói Nâng Cấp \"Bộ Não HASS OS & AI Chatbox Local\" (Trọn Gói 16 Triệu)",
+            "subtitle": "Dành cho gia đình đã có sẵn công tắc, cảm biến (Tuya / MOES / Sonoff / Aqara...) muốn chuyển sang Local 100% không phụ thuộc Cloud. Bổ sung Server Mini PC N100 x86 + USB Zigbee Dongle-P + Gói phần mềm Trợ lý AI HASS Pro trọn đời.",
+            "tabLabel": "Nâng Cấp Bộ Não HASS (16tr)",
+            "tabSub": "Server Mini PC N100 + Dongle-P + Phần Mềm AI HASS Trọn Gói 16tr",
+            "icon": "🧠",
+            "shareSlug": "tuya-hass-upgrade",
+            "stats": [
+                  {
+                        "label": "Mục đích",
+                        "val": "Chuyển Cloud sang Local 100%"
+                  },
+                  {
+                        "label": "Phần cứng Server",
+                        "val": "Mini PC Intel N100 x86 Chạy 24/7"
+                  },
+                  {
+                        "label": "Giao thức",
+                        "val": "Zigbee2MQTT / ZHA Local Không Độ Trễ"
+                  },
+                  {
+                        "label": "Phần mềm AI",
+                        "val": "Trợ Lý AI Chatbox Điều Khiển Trọn Đời"
+                  }
+            ],
+            "retailTotal": 16000000,
+            "comboPrice": 16000000,
+            "savingsText": "Trọn gói phần cứng Server & bản quyền phần mềm AI HASS (Giá gốc 18.500.000₫)",
+            "items": [
+                  {
+                        "id": 996001,
+                        "sku": "HASS-MINIPC-N100",
+                        "name": "Bộ não Server Mini PC HASS OS x86 (Intel Alder Lake N100, RAM 8GB, SSD NVMe 128GB, chạy 24/7 cực mát)",
+                        "qty": 1,
+                        "role": "Bộ não trung tâm điều khiển Local 100%, thay thế toàn bộ Cloud chập chờn của hãng",
+                        "price": 4500000,
+                        "img": "images/sensor_hub.png"
+                  },
+                  {
+                        "id": 996002,
+                        "sku": "ZIGBEE-DONGLE-PLUS",
+                        "name": "USB Zigbee 3.0 Dongle Plus TI CC2652P ăng-ten rời 20dBm Sonoff-P Coordinator",
+                        "qty": 1,
+                        "role": "Kết nối vào Mini PC để nhận diện toàn bộ công tắc Tuya/Sonoff/MOES có sẵn trong nhà",
+                        "price": 650000,
+                        "img": "images/smart_device.png"
+                  },
+                  {
+                        "id": 996099,
+                        "sku": "SW-HASS-AI-PRO",
+                        "name": "Gói Bản Quyền & Phần Mềm Điều Khiển Trợ Lý AI Home Assistant Local",
+                        "qty": 1,
+                        "role": "Hệ điều hành HASS OS bản quyền, nạp mô hình Trợ lý AI tiếng Việt, tích hợp phân vùng và kịch bản tự động hóa trọn đời",
+                        "price": 10850000,
+                        "img": "images/sensor_hub.png"
+                  }
+            ]
       }
-    }
+}
   };
 
   let currentActiveSmarthomeCombo = 'apartment';
@@ -3188,7 +3209,7 @@ ${shareUrl}
           <div class="combo-hw-section">
             <div class="combo-hw-header">
               <span>DANH SÁCH THIẾT BỊ TRỌN BỘ (${totalQty} THIẾT BỊ)</span>
-              <span class="combo-hw-co-cq">✓ 100% Vận Hành Local Zigbee 3.0 &amp; HASS OS</span>
+              <span class="combo-hw-co-cq">${combo.id === 'upgrade' ? '✓ Trọn Bộ Server Local x86 &amp; Bản Quyền AI HASS' : '✓ 100% Thiết Bị MOES Luxury Zigbee 3.0 Chính Hãng'}</span>
             </div>
             <div class="combo-hw-grid">
               ${itemsHtml}
@@ -3213,7 +3234,7 @@ ${shareUrl}
                 <span class="label">Giá Combo Trọn Gói Chu Gia:</span>
                 <div class="price-val-wrap">
                   <span class="val-num">${formatVND(combo.comboPrice)}</span>
-                  <span class="val-note">Đã gồm cài đặt HASS OS, nạp AI Chatbox &amp; Bảo hành 24T</span>
+                  <span class="val-note">${combo.id === 'upgrade' ? 'Đã gồm Mini PC N100, USB Dongle Sonoff-P, Phần Mềm AI &amp; Bảo hành 24T' : 'Thiết bị MOES Luxury chính hãng, cài đặt đồng bộ &amp; Bảo hành 24T'}</span>
                 </div>
               </div>
             </div>
@@ -3222,19 +3243,19 @@ ${shareUrl}
             <ul class="combo-guarantees-list">
               <li>
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Vận hành <strong>100% Local cực nhanh 0.05s</strong>, mất mạng vẫn dùng</span>
+                <span>Thiết bị <strong>MOES Luxury chính hãng</strong> tùy chọn Chuẩn Vuông EU / Chữ Nhật US</span>
               </li>
               <li>
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Tích hợp <strong>Trợ lý AI điều khiển qua 1 ô Chatbox</strong> tự nhiên</span>
+                <span>Kết nối <strong>Zigbee 3.0 phản hồi 0.05s</strong>, độ ổn định cao, tiết kiệm điện</span>
               </li>
               <li>
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Bảo hành tận nơi chính hãng <strong>24 tháng (1 đổi 1)</strong></span>
+                <span>Tùy chọn nâng cấp thêm <strong>Bộ Não HASS OS &amp; AI Chatbox Local (Gói 16tr)</strong></span>
               </li>
               <li>
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Khảo sát đo đạc vị trí công tắc &amp; tủ điện tận nơi <strong>0đ</strong></span>
+                <span>Bảo hành chính hãng <strong>24 tháng (1 đổi 1)</strong>, khảo sát tận nơi 0đ</span>
               </li>
             </ul>
 
@@ -3251,7 +3272,7 @@ ${shareUrl}
               </button>
 
               <a href="combo-smarthome.html" target="_blank" rel="noopener noreferrer" class="btn-combo-explore" style="text-decoration: none; text-align: center;">
-                <span>🚀 Xem Chi Tiết Giải Pháp HASS &amp; Thử AI Chatbox ↗</span>
+                <span>🚀 Xem Chi Tiết Gói Nâng Cấp HASS 16tr &amp; Thử AI Chatbox ↗</span>
               </a>
 
               <button type="button" class="btn-combo-explore" onclick="window.filterSmarthomeCatalog()" style="margin-top: -6px;">
