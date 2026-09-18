@@ -51184,13 +51184,13 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Khóa thông minh TENON",
       "parentGroup": "Khóa Cửa Thông Minh",
       "brand": "TENON",
-      "image": "https://tenontech.vn/wp-content/uploads/2022/11/a7x2-scaled.jpeg",
+      "image": "images/products/tenon-a7x.jpg",
       "images": [
-        "https://tenontech.vn/wp-content/uploads/2022/11/a7x2-scaled.jpeg",
-        "https://tenontech.vn/wp-content/uploads/2022/11/a7x1-scaled.jpeg",
-        "https://tenontech.vn/wp-content/uploads/2022/11/a7x3-scaled.jpeg",
-        "https://tenontech.vn/wp-content/uploads/2022/11/a7x4-scaled.jpeg",
-        "https://tenontech.vn/wp-content/uploads/2022/11/a7x5-scaled.jpeg"
+        "images/products/tenon-a7x.jpg",
+        "images/products/tenon-a7x_2.jpg",
+        "images/products/tenon-a7x_3.jpg",
+        "images/products/tenon-a7x_4.jpg",
+        "images/products/tenon-a7x_5.jpg"
       ],
       "features": [
         "Model: TENON A7X – Cửa gỗ tự nhiên",
@@ -51833,12 +51833,12 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Khóa thông minh TENON",
       "parentGroup": "Khóa Cửa Thông Minh",
       "brand": "TENON",
-      "image": "https://tenontech.vn/wp-content/uploads/2024/06/AL5-Pro-bac-2-2.png",
+      "image": "images/products/tenon-al5-pro.png",
       "images": [
-        "https://tenontech.vn/wp-content/uploads/2024/06/AL5-Pro-bac-2-2.png",
-        "https://tenontech.vn/wp-content/uploads/2024/06/AL5-Pro-den-5.png",
-        "https://tenontech.vn/wp-content/uploads/2024/06/AL5-Pro-cua-1.png",
-        "https://tenontech.vn/wp-content/uploads/2024/06/AL5-PRO-cua.png"
+        "images/products/tenon-al5-pro.png",
+        "images/products/tenon-al5-pro_2.png",
+        "images/products/tenon-al5-pro_3.png",
+        "images/products/tenon-al5-pro_4.png"
       ],
       "features": [
         "Model: TENON AL5-PRO – Cửa nhôm hệ Xingfa",
@@ -51924,12 +51924,12 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Khóa thông minh TENON",
       "parentGroup": "Khóa Cửa Thông Minh",
       "brand": "TENON",
-      "image": "https://tenontech.vn/wp-content/uploads/2023/07/7-2.png",
+      "image": "images/products/tenon-al8.png",
       "images": [
-        "https://tenontech.vn/wp-content/uploads/2023/07/7-2.png",
-        "https://tenontech.vn/wp-content/uploads/2023/07/8.png",
-        "https://tenontech.vn/wp-content/uploads/2023/07/9-2.png",
-        "https://tenontech.vn/wp-content/uploads/2023/07/AL8.png"
+        "images/products/tenon-al8.png",
+        "images/products/tenon-al8_2.png",
+        "images/products/tenon-al8_3.png",
+        "images/products/tenon-al8_4.png"
       ],
       "features": [
         "Model: TENON AL8 – Cửa nhôm hệ Xingfa",
@@ -52015,11 +52015,11 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Khóa thông minh TENON",
       "parentGroup": "Khóa Cửa Thông Minh",
       "brand": "TENON",
-      "image": "https://tenontech.vn/wp-content/uploads/2023/04/HB-CN86-Black-avt.png",
+      "image": "images/products/tenon-al5.png",
       "images": [
-        "https://tenontech.vn/wp-content/uploads/2023/04/HB-CN86-Black-avt.png",
-        "https://tenontech.vn/wp-content/uploads/2023/04/al5-lg.png",
-        "https://tenontech.vn/wp-content/uploads/2023/04/AL5-1.png"
+        "images/products/tenon-al5.png",
+        "images/products/tenon-al5_2.png",
+        "images/products/tenon-al5_3.png"
       ],
       "features": [
         "Model: TENON AL5 – Cửa nhôm Xingfa",
@@ -52105,10 +52105,10 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Khóa thông minh TENON",
       "parentGroup": "Khóa Cửa Thông Minh",
       "brand": "TENON",
-      "image": "https://tenontech.vn/wp-content/uploads/2026/03/AL10-1-1.png",
+      "image": "images/products/tenon-al10.png",
       "images": [
-        "https://tenontech.vn/wp-content/uploads/2026/03/AL10-1-1.png",
-        "https://tenontech.vn/wp-content/uploads/2026/03/AL10-7.png"
+        "images/products/tenon-al10.png",
+        "images/products/tenon-al10_2.png"
       ],
       "features": [
         "Model: TENON AL10 – Cửa nhôm trượt lùa",
@@ -52194,13 +52194,13 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Khóa thông minh TENON",
       "parentGroup": "Khóa Cửa Thông Minh",
       "brand": "TENON",
-      "image": "https://tenontech.vn/wp-content/uploads/2025/04/AL4-2.png",
+      "image": "images/products/tenon-al4.png",
       "images": [
-        "https://tenontech.vn/wp-content/uploads/2025/04/AL4-2.png",
-        "https://tenontech.vn/wp-content/uploads/2025/04/AL4-1.png",
-        "https://tenontech.vn/wp-content/uploads/2025/04/AL4-3.png",
-        "https://tenontech.vn/wp-content/uploads/2025/04/AL4-4.png",
-        "https://tenontech.vn/wp-content/uploads/2025/04/Al419.png"
+        "images/products/tenon-al4.png",
+        "images/products/tenon-al4_2.png",
+        "images/products/tenon-al4_3.png",
+        "images/products/tenon-al4_4.png",
+        "images/products/tenon-al4_5.png"
       ],
       "features": [
         "Model: TENON AL4 – Cửa nhôm Xingfa",
@@ -52286,9 +52286,9 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Khóa thông minh TENON",
       "parentGroup": "Khóa Cửa Thông Minh",
       "brand": "TENON",
-      "image": "https://tenontech.vn/wp-content/uploads/2025/02/z6351302252185_9c731e0574ed3a1518e4bf4024d19426.jpg",
+      "image": "images/products/tenon-a20-pro.jpg",
       "images": [
-        "https://tenontech.vn/wp-content/uploads/2025/02/z6351302252185_9c731e0574ed3a1518e4bf4024d19426.jpg"
+        "images/products/tenon-a20-pro.jpg"
       ],
       "features": [
         "Model: TENON A20-PRO – Cửa gỗ căn hộ",
@@ -52374,11 +52374,11 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Khóa thông minh TENON",
       "parentGroup": "Khóa Cửa Thông Minh",
       "brand": "TENON",
-      "image": "https://tenontech.vn/wp-content/uploads/2025/09/Chua-co-ten-1280-x-1920-px-1920-x-1920-px-2.png",
+      "image": "images/products/tenon-a5-pro.png",
       "images": [
-        "https://tenontech.vn/wp-content/uploads/2025/09/Chua-co-ten-1280-x-1920-px-1920-x-1920-px-2.png",
-        "https://tenontech.vn/wp-content/uploads/2025/09/A5PRo-cua.png",
-        "https://tenontech.vn/wp-content/uploads/2025/09/kich-thuoc.png"
+        "images/products/tenon-a5-pro.png",
+        "images/products/tenon-a5-pro_2.png",
+        "images/products/tenon-a5-pro_3.png"
       ],
       "features": [
         "Model: TENON A5-PRO – Cửa gỗ chung cư",
@@ -52464,12 +52464,12 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Khóa thông minh TENON",
       "parentGroup": "Khóa Cửa Thông Minh",
       "brand": "TENON",
-      "image": "https://tenontech.vn/wp-content/uploads/2025/09/A30-2-1-scaled.png",
+      "image": "images/products/tenon-a30.png",
       "images": [
-        "https://tenontech.vn/wp-content/uploads/2025/09/A30-2-1-scaled.png",
-        "https://tenontech.vn/wp-content/uploads/2025/09/A30-1-1-2-scaled.png",
-        "https://tenontech.vn/wp-content/uploads/2025/09/A30-den-cua-1.png",
-        "https://tenontech.vn/wp-content/uploads/2025/09/A30-cua-1.png"
+        "images/products/tenon-a30.png",
+        "images/products/tenon-a30_2.png",
+        "images/products/tenon-a30_3.png",
+        "images/products/tenon-a30_4.png"
       ],
       "features": [
         "Model: TENON A30 – Cửa gỗ",
@@ -52555,11 +52555,11 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Khóa thông minh TENON",
       "parentGroup": "Khóa Cửa Thông Minh",
       "brand": "TENON",
-      "image": "https://tenontech.vn/wp-content/uploads/2025/09/Chua-co-ten-1280-x-1920-px-1920-x-1920-px-1.jpg",
+      "image": "images/products/tenon-a9-pro.jpg",
       "images": [
-        "https://tenontech.vn/wp-content/uploads/2025/09/Chua-co-ten-1280-x-1920-px-1920-x-1920-px-1.jpg",
-        "https://tenontech.vn/wp-content/uploads/2025/09/3.png",
-        "https://tenontech.vn/wp-content/uploads/2025/09/A9pro-9.jpg"
+        "images/products/tenon-a9-pro.jpg",
+        "images/products/tenon-a9-pro_2.png",
+        "images/products/tenon-a9-pro_3.jpg"
       ],
       "features": [
         "Model: TENON A9-PRO – Cửa gỗ biệt thự",
@@ -52645,10 +52645,10 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Khóa thông minh TENON",
       "parentGroup": "Khóa Cửa Thông Minh",
       "brand": "TENON",
-      "image": "https://tenontech.vn/wp-content/uploads/2024/05/K50-7-2.png",
+      "image": "images/products/tenon-k50.png",
       "images": [
-        "https://tenontech.vn/wp-content/uploads/2024/05/K50-7-2.png",
-        "https://tenontech.vn/wp-content/uploads/2024/05/Ban-ve-san-pham-12.png"
+        "images/products/tenon-k50.png",
+        "images/products/tenon-k50_2.png"
       ],
       "features": [
         "Model: TENON K50 – Cửa gỗ tự nhiên",
@@ -52734,11 +52734,11 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Khóa thông minh TENON",
       "parentGroup": "Khóa Cửa Thông Minh",
       "brand": "TENON",
-      "image": "https://tenontech.vn/wp-content/uploads/2024/12/K60-xam-bac.png",
+      "image": "images/products/tenon-k60.png",
       "images": [
-        "https://tenontech.vn/wp-content/uploads/2024/12/K60-xam-bac.png",
-        "https://tenontech.vn/wp-content/uploads/2024/12/K60-den.png",
-        "https://tenontech.vn/wp-content/uploads/2024/12/K60-dong-2.png"
+        "images/products/tenon-k60.png",
+        "images/products/tenon-k60_2.png",
+        "images/products/tenon-k60_3.png"
       ],
       "features": [
         "Model: TENON K60 – Cửa gỗ",
@@ -52824,11 +52824,11 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Khóa thông minh TENON",
       "parentGroup": "Khóa Cửa Thông Minh",
       "brand": "TENON",
-      "image": "https://tenontech.vn/wp-content/uploads/2024/12/K60-dong-2.png",
+      "image": "images/products/tenon-k70-plus.png",
       "images": [
-        "https://tenontech.vn/wp-content/uploads/2024/12/K60-dong-2.png",
-        "https://tenontech.vn/wp-content/uploads/2024/12/K60-den.png",
-        "https://tenontech.vn/wp-content/uploads/2024/12/K60-xam-bac.png"
+        "images/products/tenon-k70-plus.png",
+        "images/products/tenon-k70-plus_2.png",
+        "images/products/tenon-k70-plus_3.png"
       ],
       "features": [
         "Model: TENON K70-PLUS – Cửa gỗ",
@@ -52914,9 +52914,9 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Khóa thông minh TENON",
       "parentGroup": "Khóa Cửa Thông Minh",
       "brand": "TENON",
-      "image": "https://tenontech.vn/wp-content/uploads/woocommerce-placeholder-600x600.png",
+      "image": "images/products/tenon-k3.png",
       "images": [
-        "https://tenontech.vn/wp-content/uploads/woocommerce-placeholder-600x600.png"
+        "images/products/tenon-k3.png"
       ],
       "features": [
         "Model: TENON K3 – Cửa gỗ thông phòng",
@@ -53002,11 +53002,11 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Khóa thông minh TENON",
       "parentGroup": "Khóa Cửa Thông Minh",
       "brand": "TENON",
-      "image": "https://tenontech.vn/wp-content/uploads/2025/09/G3-mau-2-1.png",
+      "image": "images/products/tenon-g3.png",
       "images": [
-        "https://tenontech.vn/wp-content/uploads/2025/09/G3-mau-2-1.png",
-        "https://tenontech.vn/wp-content/uploads/2025/09/G3-mau-3-1.png",
-        "https://tenontech.vn/wp-content/uploads/2025/09/G3-2026-cua.png"
+        "images/products/tenon-g3.png",
+        "images/products/tenon-g3_2.png",
+        "images/products/tenon-g3_3.png"
       ],
       "features": [
         "Model: TENON G3 – Cửa cổng sắt",
@@ -53092,12 +53092,12 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Khóa thông minh TENON",
       "parentGroup": "Khóa Cửa Thông Minh",
       "brand": "TENON",
-      "image": "https://tenontech.vn/wp-content/uploads/2025/10/9.png",
+      "image": "images/products/tenon-g5.png",
       "images": [
-        "https://tenontech.vn/wp-content/uploads/2025/10/9.png",
-        "https://tenontech.vn/wp-content/uploads/2025/10/7-1.png",
-        "https://tenontech.vn/wp-content/uploads/2025/10/8-2.png",
-        "https://tenontech.vn/wp-content/uploads/2025/10/G5cong.png"
+        "images/products/tenon-g5.png",
+        "images/products/tenon-g5_2.png",
+        "images/products/tenon-g5_3.png",
+        "images/products/tenon-g5_4.png"
       ],
       "features": [
         "Model: TENON G5 – Cổng biệt thự nhôm đúc",
@@ -53183,12 +53183,12 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Khóa thông minh TENON",
       "parentGroup": "Khóa Cửa Thông Minh",
       "brand": "TENON",
-      "image": "https://tenontech.vn/wp-content/uploads/2024/03/G4-3.png",
+      "image": "images/products/tenon-g4.png",
       "images": [
-        "https://tenontech.vn/wp-content/uploads/2024/03/G4-3.png",
-        "https://tenontech.vn/wp-content/uploads/2024/03/G4-1-1.png",
-        "https://tenontech.vn/wp-content/uploads/2024/03/G4-gold-3.png",
-        "https://tenontech.vn/wp-content/uploads/2024/03/G4-gold.png"
+        "images/products/tenon-g4.png",
+        "images/products/tenon-g4_2.png",
+        "images/products/tenon-g4_3.png",
+        "images/products/tenon-g4_4.png"
       ],
       "features": [
         "Model: TENON G4 – Cửa kính cường lực văn phòng",
@@ -53274,12 +53274,12 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Khóa thông minh TENON",
       "parentGroup": "Khóa Cửa Thông Minh",
       "brand": "TENON",
-      "image": "https://tenontech.vn/wp-content/uploads/2026/03/G4pro-1.png",
+      "image": "images/products/tenon-g4-pro.png",
       "images": [
-        "https://tenontech.vn/wp-content/uploads/2026/03/G4pro-1.png",
-        "https://tenontech.vn/wp-content/uploads/2026/03/G4pro-3.png",
-        "https://tenontech.vn/wp-content/uploads/2026/03/G4pro-4.png",
-        "https://tenontech.vn/wp-content/uploads/2026/03/G4pro-2.png"
+        "images/products/tenon-g4-pro.png",
+        "images/products/tenon-g4-pro_2.png",
+        "images/products/tenon-g4-pro_3.png",
+        "images/products/tenon-g4-pro_4.png"
       ],
       "features": [
         "Model: TENON G4-PRO – Cửa kính cường lực không khoan văn phòng",
@@ -53365,12 +53365,12 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Khóa thông minh TENON",
       "parentGroup": "Khóa Cửa Thông Minh",
       "brand": "TENON",
-      "image": "https://tenontech.vn/wp-content/uploads/2022/11/F8-1-scaled.jpeg",
+      "image": "images/products/tenon-f8.jpg",
       "images": [
-        "https://tenontech.vn/wp-content/uploads/2022/11/F8-1-scaled.jpeg",
-        "https://tenontech.vn/wp-content/uploads/2022/11/F8-2-scaled.jpeg",
-        "https://tenontech.vn/wp-content/uploads/2022/11/F8-3-scaled.jpeg",
-        "https://tenontech.vn/wp-content/uploads/2022/11/F8-4-scaled.jpeg"
+        "images/products/tenon-f8.jpg",
+        "images/products/tenon-f8_2.jpg",
+        "images/products/tenon-f8_3.jpg",
+        "images/products/tenon-f8_4.jpg"
       ],
       "features": [
         "Model: TENON F8 – Cửa gỗ đại sảnh biệt thự",
@@ -53456,10 +53456,10 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Khóa thông minh TENON",
       "parentGroup": "Khóa Cửa Thông Minh",
       "brand": "TENON",
-      "image": "https://tenontech.vn/wp-content/uploads/2026/01/V5.jpg",
+      "image": "images/products/tenon-v5.jpg",
       "images": [
-        "https://tenontech.vn/wp-content/uploads/2026/01/V5.jpg",
-        "https://tenontech.vn/wp-content/uploads/2026/01/V5-13-1.png"
+        "images/products/tenon-v5.jpg",
+        "images/products/tenon-v5_2.png"
       ],
       "features": [
         "Model: TENON V5 – Cửa gỗ tân cổ điển biệt thự",
@@ -53544,9 +53544,9 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
       "parentGroup": "Nhà Thông Minh & Smarthome",
       "brand": "TUYA / ZITECH",
-      "image": "https://zitech.vn/wp-content/uploads/2026/08/cap-ZT-06.jpg",
+      "image": "images/products/tuya-cap-zt-06-08.jpg",
       "images": [
-        "https://zitech.vn/wp-content/uploads/2026/08/cap-ZT-06.jpg"
+        "images/products/tuya-cap-zt-06-08.jpg"
       ],
       "features": [
         "Model: Cáp 8 chân (ZT-08 dùng cho hộp nhận YH) hoặc Cáp 6 chân (ZT-06 dùng cho hộp nhận CH)",
@@ -53594,9 +53594,9 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
       "parentGroup": "Nhà Thông Minh & Smarthome",
       "brand": "TUYA / ZITECH",
-      "image": "https://zitech.vn/wp-content/uploads/2026/08/mini-sw-3gang-zigbee.jpg",
+      "image": "images/products/tuya-zmw-zb3.jpg",
       "images": [
-        "https://zitech.vn/wp-content/uploads/2026/08/mini-sw-3gang-zigbee.jpg"
+        "images/products/tuya-zmw-zb3.jpg"
       ],
       "features": [
         "Model: ZMW-ZB3",
@@ -53656,9 +53656,9 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
       "parentGroup": "Nhà Thông Minh & Smarthome",
       "brand": "TUYA / ZITECH",
-      "image": "https://zitech.vn/wp-content/uploads/2026/08/mini-sw-2gang-zigbee.jpg",
+      "image": "images/products/tuya-zmw-zb2.jpg",
       "images": [
-        "https://zitech.vn/wp-content/uploads/2026/08/mini-sw-2gang-zigbee.jpg"
+        "images/products/tuya-zmw-zb2.jpg"
       ],
       "features": [
         "Model: ZMW-ZB2",
@@ -53718,9 +53718,9 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
       "parentGroup": "Nhà Thông Minh & Smarthome",
       "brand": "TUYA / ZITECH",
-      "image": "https://zitech.vn/wp-content/uploads/2026/08/mini-sw-1-gang-zigbee.jpg",
+      "image": "images/products/tuya-zmw-zb1.jpg",
       "images": [
-        "https://zitech.vn/wp-content/uploads/2026/08/mini-sw-1-gang-zigbee.jpg"
+        "images/products/tuya-zmw-zb1.jpg"
       ],
       "features": [
         "Model: ZMW-ZB1",
@@ -53780,11 +53780,11 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
       "parentGroup": "Nhà Thông Minh & Smarthome",
       "brand": "TUYA / ZITECH",
-      "image": "https://zitech.vn/wp-content/uploads/2026/08/mini-switch-wifi-da-nang-1-3.jpg",
+      "image": "images/products/tuya-zmw-wf1.jpg",
       "images": [
-        "https://zitech.vn/wp-content/uploads/2026/08/mini-switch-wifi-da-nang-1-3.jpg",
-        "https://zitech.vn/wp-content/uploads/2026/08/mini-switch-wifi-da-nang-1-1024x1024.png",
-        "https://zitech.vn/wp-content/uploads/2026/08/mini-switch-wifi-da-nang-1-2-1024x1024.png"
+        "images/products/tuya-zmw-wf1.jpg",
+        "images/products/tuya-zmw-wf1_2.png",
+        "images/products/tuya-zmw-wf1_3.png"
       ],
       "features": [
         "Model: ZMW-WF1",
@@ -53840,16 +53840,16 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
       "parentGroup": "Nhà Thông Minh & Smarthome",
       "brand": "TUYA / ZITECH",
-      "image": "https://zitech.vn/wp-content/uploads/2026/08/CBHDM1.png",
+      "image": "images/products/tuya-cbhd-mini.png",
       "images": [
-        "https://zitech.vn/wp-content/uploads/2026/08/CBHDM1.png",
-        "https://zitech.vn/wp-content/uploads/2026/08/CBHDM5-542x1024.png",
-        "https://zitech.vn/wp-content/uploads/2026/08/CBHDM6-668x1024.png",
-        "https://zitech.vn/wp-content/uploads/2026/08/CBHDM7-682x1024.png",
-        "https://zitech.vn/wp-content/uploads/2026/08/CBHDM8-542x1024.png",
-        "https://zitech.vn/wp-content/uploads/2026/08/CBHDM9-542x1024.png",
-        "https://zitech.vn/wp-content/uploads/2026/08/CBHDM10-578x1024.png",
-        "https://zitech.vn/wp-content/uploads/2026/08/CBHDm4-626x1024.png"
+        "images/products/tuya-cbhd-mini.png",
+        "images/products/tuya-cbhd-mini_2.png",
+        "images/products/tuya-cbhd-mini_3.png",
+        "images/products/tuya-cbhd-mini_4.png",
+        "images/products/tuya-cbhd-mini_5.png",
+        "images/products/tuya-cbhd-mini_6.png",
+        "images/products/tuya-cbhd-mini_7.png",
+        "images/products/tuya-cbhd-mini_8.png"
       ],
       "features": [
         "Model: CBHD-MINI",
@@ -53909,9 +53909,9 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
       "parentGroup": "Nhà Thông Minh & Smarthome",
       "brand": "TUYA / ZITECH",
-      "image": "https://zitech.vn/wp-content/uploads/2026/08/CBHDA2.png",
+      "image": "images/products/tuya-cbhd-at.png",
       "images": [
-        "https://zitech.vn/wp-content/uploads/2026/08/CBHDA2.png"
+        "images/products/tuya-cbhd-at.png"
       ],
       "features": [
         "Model: CBHD-AT",
@@ -53967,10 +53967,10 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
       "parentGroup": "Nhà Thông Minh & Smarthome",
       "brand": "TUYA / ZITECH",
-      "image": "https://zitech.vn/wp-content/uploads/2026/08/CBHD13.png",
+      "image": "images/products/tuya-cbhd-nt.png",
       "images": [
-        "https://zitech.vn/wp-content/uploads/2026/08/CBHD13.png",
-        "https://zitech.vn/wp-content/uploads/2026/08/CBHD12.png"
+        "images/products/tuya-cbhd-nt.png",
+        "images/products/tuya-cbhd-nt_2.png"
       ],
       "features": [
         "Model: CBHD-NT",
@@ -54022,9 +54022,9 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
       "parentGroup": "Nhà Thông Minh & Smarthome",
       "brand": "TUYA / ZITECH",
-      "image": "https://zitech.vn/wp-content/uploads/2026/08/CBC1.jpg",
+      "image": "images/products/tuya-cbc-zb.jpg",
       "images": [
-        "https://zitech.vn/wp-content/uploads/2026/08/CBC1.jpg"
+        "images/products/tuya-cbc-zb.jpg"
       ],
       "features": [
         "Model: CBC-ZB",
@@ -54084,9 +54084,9 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
       "parentGroup": "Nhà Thông Minh & Smarthome",
       "brand": "TUYA / ZITECH",
-      "image": "https://zitech.vn/wp-content/uploads/2026/08/IR10.png",
+      "image": "images/products/tuya-ir-wf-01.png",
       "images": [
-        "https://zitech.vn/wp-content/uploads/2026/08/IR10.png"
+        "images/products/tuya-ir-wf-01.png"
       ],
       "features": [
         "Model: IR-WF-01",
@@ -54142,9 +54142,9 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
       "parentGroup": "Nhà Thông Minh & Smarthome",
       "brand": "TUYA / ZITECH",
-      "image": "https://zitech.vn/wp-content/uploads/2026/08/IR1.png",
+      "image": "images/products/tuya-ir-mini-zb.png",
       "images": [
-        "https://zitech.vn/wp-content/uploads/2026/08/IR1.png"
+        "images/products/tuya-ir-mini-zb.png"
       ],
       "features": [
         "Model: IR-MINI-ZB",
@@ -54196,9 +54196,9 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
       "parentGroup": "Nhà Thông Minh & Smarthome",
       "brand": "TUYA / ZITECH",
-      "image": "https://zitech.vn/wp-content/uploads/2026/08/rm3-2.png",
+      "image": "images/products/tuya-remote-rf-3.png",
       "images": [
-        "https://zitech.vn/wp-content/uploads/2026/08/rm3-2.png"
+        "images/products/tuya-remote-rf-3.png"
       ],
       "features": [
         "Model: RF 433MHz",
@@ -54250,9 +54250,9 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
       "parentGroup": "Nhà Thông Minh & Smarthome",
       "brand": "TUYA / ZITECH",
-      "image": "https://zitech.vn/wp-content/uploads/2026/08/rm4-1.png",
+      "image": "images/products/tuya-remote-rf-4.png",
       "images": [
-        "https://zitech.vn/wp-content/uploads/2026/08/rm4-1.png"
+        "images/products/tuya-remote-rf-4.png"
       ],
       "features": [
         "Model: Rolling Code (Mã nhảy) chống hoàn toàn máy dò mã và sao chép",
@@ -54300,11 +54300,11 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
       "parentGroup": "Nhà Thông Minh & Smarthome",
       "brand": "TUYA / ZITECH",
-      "image": "https://zitech.vn/wp-content/uploads/2026/08/Zitech-RF.jpg",
+      "image": "images/products/tuya-zt-rf-usb.jpg",
       "images": [
-        "https://zitech.vn/wp-content/uploads/2026/08/Zitech-RF.jpg",
-        "https://zitech.vn/wp-content/uploads/2026/08/Zitech-USB-RF-1024x722.png",
-        "https://zitech.vn/wp-content/uploads/2026/08/HDSD-Zitech-RF1-01-1024x576.jpg"
+        "images/products/tuya-zt-rf-usb.jpg",
+        "images/products/tuya-zt-rf-usb_2.png",
+        "images/products/tuya-zt-rf-usb_3.jpg"
       ],
       "features": [
         "Model: ZT-RF-USB",
@@ -54356,11 +54356,11 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
       "parentGroup": "Nhà Thông Minh & Smarthome",
       "brand": "TUYA / ZITECH",
-      "image": "https://zitech.vn/wp-content/uploads/2026/08/Pro2.png",
+      "image": "images/products/tuya-zt-pro-2026.png",
       "images": [
-        "https://zitech.vn/wp-content/uploads/2026/08/Pro2.png",
-        "https://zitech.vn/wp-content/uploads/2026/08/dong-bo-remote-goc-zitech-pro-1024x683.png",
-        "https://zitech.vn/wp-content/uploads/2026/08/canh-bao-Zitech-Pro-1024x683.png"
+        "images/products/tuya-zt-pro-2026.png",
+        "images/products/tuya-zt-pro-2026_2.png",
+        "images/products/tuya-zt-pro-2026_3.png"
       ],
       "features": [
         "Model: ZT-PRO-2026",
@@ -54416,9 +54416,9 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
       "parentGroup": "Nhà Thông Minh & Smarthome",
       "brand": "TUYA / ZITECH",
-      "image": "https://zitech.vn/wp-content/uploads/2026/08/1-nut-to.png",
+      "image": "images/products/tuya-zlux-za1-hp.png",
       "images": [
-        "https://zitech.vn/wp-content/uploads/2026/08/1-nut-to.png"
+        "images/products/tuya-zlux-za1-hp.png"
       ],
       "features": [
         "Model: ZLUX-ZA1-HP",
@@ -54482,9 +54482,9 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
       "parentGroup": "Nhà Thông Minh & Smarthome",
       "brand": "TUYA / ZITECH",
-      "image": "https://zitech.vn/wp-content/uploads/2026/08/O1CN01EXoiai274oEIiRXAW_3244507744-0-cib.jpg",
+      "image": "images/products/tuya-hub-zgb-wf-ble.jpg",
       "images": [
-        "https://zitech.vn/wp-content/uploads/2026/08/O1CN01EXoiai274oEIiRXAW_3244507744-0-cib.jpg"
+        "images/products/tuya-hub-zgb-wf-ble.jpg"
       ],
       "features": [
         "Model: HUB-ZGB-WF-BLE",
@@ -54540,9 +54540,9 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
       "parentGroup": "Nhà Thông Minh & Smarthome",
       "brand": "TUYA / ZITECH",
-      "image": "https://zitech.vn/wp-content/uploads/2026/08/O1CN01qeDCsO26Gt1l0gXap_2209780547635-0-cib.jpg",
+      "image": "images/products/tuya-hub-zgb-lan-ant.jpg",
       "images": [
-        "https://zitech.vn/wp-content/uploads/2026/08/O1CN01qeDCsO26Gt1l0gXap_2209780547635-0-cib.jpg"
+        "images/products/tuya-hub-zgb-lan-ant.jpg"
       ],
       "features": [
         "Model: HUB-ZGB-LAN-ANT",
@@ -54602,9 +54602,9 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
       "parentGroup": "Nhà Thông Minh & Smarthome",
       "brand": "TUYA / ZITECH",
-      "image": "https://zitech.vn/wp-content/uploads/2026/08/H9d45f4caa96343398d17cd4b9ebb0b174.jpg",
+      "image": "images/products/tuya-hub-matter-m6.jpg",
       "images": [
-        "https://zitech.vn/wp-content/uploads/2026/08/H9d45f4caa96343398d17cd4b9ebb0b174.jpg"
+        "images/products/tuya-hub-matter-m6.jpg"
       ],
       "features": [
         "Model: M6 Matter Gateway",
@@ -54660,9 +54660,9 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
       "parentGroup": "Nhà Thông Minh & Smarthome",
       "brand": "TUYA / ZITECH",
-      "image": "https://zitech.vn/wp-content/uploads/2026/08/coi.jpg",
+      "image": "images/products/tuya-coi-alarm-vol.jpg",
       "images": [
-        "https://zitech.vn/wp-content/uploads/2026/08/coi.jpg"
+        "images/products/tuya-coi-alarm-vol.jpg"
       ],
       "features": [
         "Model: 5V / 12V / 24V DC linh hoạt",
@@ -54714,9 +54714,9 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
       "parentGroup": "Nhà Thông Minh & Smarthome",
       "brand": "TUYA / ZITECH",
-      "image": "https://zitech.vn/wp-content/uploads/2026/08/1784541890163_2145839061888008250_8546263865904608871_b64dafa06f5e471149f9798620091fab-1.jpg",
+      "image": "images/products/tuya-zt-basic-3_0.jpg",
       "images": [
-        "https://zitech.vn/wp-content/uploads/2026/08/1784541890163_2145839061888008250_8546263865904608871_b64dafa06f5e471149f9798620091fab-1.jpg"
+        "images/products/tuya-zt-basic-3_0.jpg"
       ],
       "features": [
         "Model: ZT-BASIC-3.0",
@@ -54772,9 +54772,9 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
       "parentGroup": "Nhà Thông Minh & Smarthome",
       "brand": "TUYA / ZITECH",
-      "image": "https://zitech.vn/wp-content/uploads/2026/08/CC14.png",
+      "image": "images/products/tuya-zlux-wd.png",
       "images": [
-        "https://zitech.vn/wp-content/uploads/2026/08/CC14.png"
+        "images/products/tuya-zlux-wd.png"
       ],
       "features": [
         "Model: ZLUX-WD",
@@ -54834,9 +54834,9 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
       "parentGroup": "Nhà Thông Minh & Smarthome",
       "brand": "TUYA / ZITECH",
-      "image": "https://zitech.vn/wp-content/uploads/2026/08/Boxx1.jpg",
+      "image": "images/products/tuya-zt-box.jpg",
       "images": [
-        "https://zitech.vn/wp-content/uploads/2026/08/Boxx1.jpg"
+        "images/products/tuya-zt-box.jpg"
       ],
       "features": [
         "Model: ZT-BOX",
@@ -54888,12 +54888,12 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
       "parentGroup": "Nhà Thông Minh & Smarthome",
       "brand": "TUYA / ZITECH",
-      "image": "https://zitech.vn/wp-content/uploads/2026/08/4nut11.png",
+      "image": "images/products/tuya-zlux-za4.png",
       "images": [
-        "https://zitech.vn/wp-content/uploads/2026/08/4nut11.png",
-        "https://zitech.vn/wp-content/uploads/2026/08/Kich-Thuoc-CT-1.png",
-        "https://zitech.vn/wp-content/uploads/2026/08/tin-tuc-tre-tat-thong-minh-khi-cong-tac-co-the-mo-phong-cam-303.png",
-        "https://zitech.vn/wp-content/uploads/2026/08/tin-tuc-tre-tat-thong-minh-khi-cong-tac-co-the-mo-phong-cam-301.png"
+        "images/products/tuya-zlux-za4.png",
+        "images/products/tuya-zlux-za4_2.png",
+        "images/products/tuya-zlux-za4_3.png",
+        "images/products/tuya-zlux-za4_4.png"
       ],
       "features": [
         "Model: ZLUX-ZA4",
@@ -54957,12 +54957,12 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
       "parentGroup": "Nhà Thông Minh & Smarthome",
       "brand": "TUYA / ZITECH",
-      "image": "https://zitech.vn/wp-content/uploads/2026/08/3nut3.png",
+      "image": "images/products/tuya-zlux-za3.png",
       "images": [
-        "https://zitech.vn/wp-content/uploads/2026/08/3nut3.png",
-        "https://zitech.vn/wp-content/uploads/2026/08/Kich-Thuoc-CT-1.png",
-        "https://zitech.vn/wp-content/uploads/2026/08/tin-tuc-tre-tat-thong-minh-khi-cong-tac-co-the-mo-phong-cam-303.png",
-        "https://zitech.vn/wp-content/uploads/2026/08/tin-tuc-tre-tat-thong-minh-khi-cong-tac-co-the-mo-phong-cam-301.png"
+        "images/products/tuya-zlux-za3.png",
+        "images/products/tuya-zlux-za3_2.png",
+        "images/products/tuya-zlux-za3_3.png",
+        "images/products/tuya-zlux-za3_4.png"
       ],
       "features": [
         "Model: ZLUX-ZA3",
@@ -55026,12 +55026,12 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
       "parentGroup": "Nhà Thông Minh & Smarthome",
       "brand": "TUYA / ZITECH",
-      "image": "https://zitech.vn/wp-content/uploads/2026/08/2nut9.png",
+      "image": "images/products/tuya-zlux-za2.png",
       "images": [
-        "https://zitech.vn/wp-content/uploads/2026/08/2nut9.png",
-        "https://zitech.vn/wp-content/uploads/2026/08/Kich-Thuoc-CT-1.png",
-        "https://zitech.vn/wp-content/uploads/2026/08/tin-tuc-tre-tat-thong-minh-khi-cong-tac-co-the-mo-phong-cam-303.png",
-        "https://zitech.vn/wp-content/uploads/2026/08/tin-tuc-tre-tat-thong-minh-khi-cong-tac-co-the-mo-phong-cam-301.png"
+        "images/products/tuya-zlux-za2.png",
+        "images/products/tuya-zlux-za2_2.png",
+        "images/products/tuya-zlux-za2_3.png",
+        "images/products/tuya-zlux-za2_4.png"
       ],
       "features": [
         "Model: ZLUX-ZA2",
@@ -55099,12 +55099,12 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Công tắc & Cảm biến TUYA Smarthome",
       "parentGroup": "Nhà Thông Minh & Smarthome",
       "brand": "TUYA / ZITECH",
-      "image": "https://zitech.vn/wp-content/uploads/2026/08/1nut5.png",
+      "image": "images/products/tuya-zlux-za1.png",
       "images": [
-        "https://zitech.vn/wp-content/uploads/2026/08/1nut5.png",
-        "https://zitech.vn/wp-content/uploads/2026/08/Kich-Thuoc-CT-1.png",
-        "https://zitech.vn/wp-content/uploads/2026/08/tin-tuc-tre-tat-thong-minh-khi-cong-tac-co-the-mo-phong-cam-303.png",
-        "https://zitech.vn/wp-content/uploads/2026/08/tin-tuc-tre-tat-thong-minh-khi-cong-tac-co-the-mo-phong-cam-301.png"
+        "images/products/tuya-zlux-za1.png",
+        "images/products/tuya-zlux-za1_2.png",
+        "images/products/tuya-zlux-za1_3.png",
+        "images/products/tuya-zlux-za1_4.png"
       ],
       "features": [
         "Model: ZLUX-ZA1",
@@ -57112,9 +57112,9 @@ window.HTA_PRODUCTS_DATA = {
       "categoryName": "Đầu Ghi Hình IP DAHUA",
       "parentGroup": "Camera Quan Sát & CCTV",
       "brand": "DAHUA",
-      "image": "https://sapo.dktcdn.net/100/825/511/variants/dhi-nvr4108hs-4ks3-1777898865611.jpg",
+      "image": "https://sapo.dktcdn.net/100/825/511/variants/nvr4108hs-4ks3-1777902202394.png",
       "images": [
-        "https://sapo.dktcdn.net/100/825/511/variants/dhi-nvr4108hs-4ks3-1777898865611.jpg"
+        "https://sapo.dktcdn.net/100/825/511/variants/nvr4108hs-4ks3-1777902202394.png"
       ],
       "features": [
         "Model: DHI-NVR5108HS-4KS3 – Chuẩn 8 Kênh IP 4K chuyên dụng dòng 5108 cao cấp",

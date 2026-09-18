@@ -2794,9 +2794,18 @@
           const a = document.createElement('a');
           a.download = `ChuGia-${(state.currentModalProduct?.sku || 'san-pham')}.png`;
           a.href = el.qrShareCanvas.toDataURL('image/png');
+          document.body.appendChild(a);
           a.click();
+          setTimeout(() => document.body.removeChild(a), 400);
         } catch (err) {
-          alert('Không thể lưu ảnh từ canvas bảo mật: ' + err.message);
+          console.warn('Canvas export warning:', err);
+          // Fallback: If canvas is tainted by cross-origin security, trigger direct image save or open
+          const prod = state.currentModalProduct;
+          if (prod && prod.image) {
+            window.open(prod.image, '_blank');
+          } else {
+            alert('Vui lòng chụp màn hình hoặc nhấn giữ để lưu ảnh poster.');
+          }
         }
       });
     }
@@ -3850,14 +3859,6 @@
     const cardW = width - 72;
     const cardH = 380;
 
-    ctx.fillStyle = '#ffffff';
-    roundRect(ctx, cardX, cardY, cardW, cardH, 16);
-    ctx.fill();
-
-    // Load Product Image onto Poster
-    const prodImg = new Image();
-    prodImg.crossOrigin = 'anonymous';
-
     // Temporary container to generate QR Code
     const qrDiv = document.createElement('div');
     const shareUrl = getProductShareUrl(prod);
@@ -3871,31 +3872,39 @@
       correctLevel: QRCode.CorrectLevel.M
     });
 
-    prodImg.onload = function () {
-      // Draw product image inside card
-      try {
-        const padding = 20;
-        const imgMaxW = cardW - padding * 2;
-        const imgMaxH = cardH - padding * 2;
-        const hRatio = imgMaxW / prodImg.width;
-        const vRatio = imgMaxH / prodImg.height;
-        const ratio = Math.min(hRatio, vRatio);
-        const centerShiftX = cardX + (cardW - prodImg.width * ratio) / 2;
-        const centerShiftY = cardY + (cardH - prodImg.height * ratio) / 2;
+    function finishPosterWithImage(img) {
+      // Draw pristine white card container
+      ctx.fillStyle = '#ffffff';
+      roundRect(ctx, cardX, cardY, cardW, cardH, 16);
+      ctx.fill();
 
-        ctx.drawImage(
-          prodImg,
-          0,
-          0,
-          prodImg.width,
-          prodImg.height,
-          centerShiftX,
-          centerShiftY,
-          prodImg.width * ratio,
-          prodImg.height * ratio
-        );
-      } catch (err) {
-        console.warn('Image draw error:', err);
+      if (img && (img.naturalWidth || img.width)) {
+        try {
+          const imgW = img.naturalWidth || img.width;
+          const imgH = img.naturalHeight || img.height;
+          const padding = 20;
+          const imgMaxW = cardW - padding * 2;
+          const imgMaxH = cardH - padding * 2;
+          const hRatio = imgMaxW / imgW;
+          const vRatio = imgMaxH / imgH;
+          const ratio = Math.min(hRatio, vRatio);
+          const centerShiftX = cardX + (cardW - imgW * ratio) / 2;
+          const centerShiftY = cardY + (cardH - imgH * ratio) / 2;
+
+          ctx.drawImage(
+            img,
+            0,
+            0,
+            imgW,
+            imgH,
+            centerShiftX,
+            centerShiftY,
+            imgW * ratio,
+            imgH * ratio
+          );
+        } catch (err) {
+          console.warn('Image draw error:', err);
+        }
       }
 
       // Draw QR badge at bottom right of card
@@ -3904,17 +3913,45 @@
       drawWatermarkCornerBadge(ctx, cardX + 12, cardY + 12);
       drawWatermarkCornerBadge(ctx, cardX + 12, cardY + cardH - 46);
       drawPosterDetails(ctx, prod, width, height);
+    }
+
+    const rawSrc = prod.image || '';
+    if (!rawSrc) {
+      finishPosterWithImage(null);
+      return;
+    }
+
+    const isLocal = !rawSrc.startsWith('http://') && !rawSrc.startsWith('https://');
+    const isFileProto = window.location.protocol === 'file:';
+
+    const tryLoad = (src, useCors, onDone, onFail) => {
+      const img = new Image();
+      if (useCors && !isFileProto) {
+        img.crossOrigin = 'anonymous';
+      }
+      img.onload = () => onDone(img);
+      img.onerror = () => onFail();
+      img.src = src;
     };
 
-    prodImg.onerror = function () {
-      // Fallback if image blocked
-      drawQrCornerBadge(ctx, cardX + cardW - 105, cardY + cardH - 105, qrDiv);
-      drawWatermarkCornerBadge(ctx, cardX + 12, cardY + 12);
-      drawWatermarkCornerBadge(ctx, cardX + 12, cardY + cardH - 46);
-      drawPosterDetails(ctx, prod, width, height);
-    };
-
-    prodImg.src = prod.image;
+    // Stage 1: Standard load with CORS
+    tryLoad(rawSrc, true, finishPosterWithImage, () => {
+      // Stage 2: If remote HTTP, try CORS CDN Proxy (wsrv.nl)
+      if (!isLocal && rawSrc.startsWith('http')) {
+        const proxyUrl = `https://wsrv.nl/?url=${encodeURIComponent(rawSrc)}&output=png`;
+        tryLoad(proxyUrl, true, finishPosterWithImage, () => {
+          // Stage 3: Load direct WITHOUT CORS so image ALWAYS renders on screen
+          tryLoad(rawSrc, false, finishPosterWithImage, () => {
+            finishPosterWithImage(null);
+          });
+        });
+      } else {
+        // Local asset failed with CORS (e.g. file:// protocol), retry without CORS
+        tryLoad(rawSrc, false, finishPosterWithImage, () => {
+          finishPosterWithImage(null);
+        });
+      }
+    });
   }
 
   function drawWatermarkCornerBadge(ctx, x, y) {
