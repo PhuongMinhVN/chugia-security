@@ -1106,17 +1106,39 @@
   };
 
   window.filterWifiBrandCatalog = function(brandKey) {
-    if (brandKey === 'omada') {
-      setCategory(53999);
-    } else if (brandKey === 'ruijie') {
-      setBrand('RUIJIE');
-    } else if (brandKey === 'huawei') {
-      setBrand('HUAWEI');
-    }
+    const brandMap = {
+      'omada': { type: 'category', value: 53999, brandParam: 'TP-LINK' },
+      'ruijie': { type: 'brand', value: 'RUIJIE' },
+      'huawei': { type: 'brand', value: 'HUAWEI' }
+    };
+    const target = brandMap[brandKey] || { type: 'brand', value: 'RUIJIE' };
+
     const catalogEl = document.getElementById('catalogMain');
-    if (catalogEl) {
-      catalogEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (!catalogEl) {
+      // Đang ở combo-wifi.html hoặc trang không có catalogMain -> chuyển hướng sang san-pham.html
+      if (target.type === 'category') {
+        window.location.href = `san-pham.html?category=${target.value}#catalogMain`;
+      } else {
+        window.location.href = `san-pham.html?brand=${encodeURIComponent(target.value)}#catalogMain`;
+      }
+      return;
     }
+
+    // Đang ở trang san-pham.html (có catalogMain)
+    if (target.type === 'category') {
+      setCategory(target.value);
+    } else {
+      setBrand(target.value);
+    }
+
+    // Cuộn mượt với offset 80px để không bị header / sticky pills bar che mất
+    const headerOffset = 80;
+    const elementPosition = catalogEl.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
   };
 
   window.filterOmadaCatalog = function() {
@@ -1127,16 +1149,48 @@
     state.selectedBrand = brandName;
     state.selectedCategoryId = -1;
     state.currentPage = 1;
+
+    // Reset tìm kiếm để không bị lọc kép
+    state.searchQuery = '';
+    if (el.searchHeroInput) el.searchHeroInput.value = '';
+    if (el.searchHeroClear) el.searchHeroClear.classList.remove('active');
+
+    // Reset khoảng giá về "Tất cả"
+    state.selectedPriceRange = 'all';
+    if (el.priceRadios) {
+      el.priceRadios.forEach(r => {
+        r.checked = (r.value === 'all');
+      });
+    }
+
+    // Cập nhật brand chips
     if (el.brandFilters) {
       el.brandFilters.querySelectorAll('.brand-chip').forEach(c => {
         c.classList.toggle('active', (c.dataset.brand || '').toUpperCase() === brandName.toUpperCase());
       });
     }
+
+    // Cập nhật quick pills về "Tất cả"
+    let activePill = null;
     if (el.quickPills) {
       el.quickPills.querySelectorAll('.quick-pill').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.catId === '-1');
+        const isAll = btn.dataset.catId === '-1';
+        btn.classList.toggle('active', isAll);
+        if (isAll) activePill = btn;
       });
     }
+    if (activePill) {
+      scrollPillToCenter(activePill);
+    }
+
+    // Cập nhật sidebar categories về "Tất cả"
+    if (el.sidebarCats) {
+      el.sidebarCats.querySelectorAll('.cat-filter-item').forEach(item => {
+        const pid = parseInt(item.dataset.catId, 10);
+        item.classList.toggle('active', pid === -1);
+      });
+    }
+
     applyFilters();
   }
 
@@ -2253,17 +2307,28 @@
   }
 
   function filterIntercomBrandCatalog(brandKey) {
-    if (brandKey === 'hikvision') {
-      setBrand('HIKVISION');
-    } else if (brandKey === 'dahua') {
-      setBrand('DAHUA');
-    } else if (brandKey === 'ezviz') {
-      setBrand('EZVIZ');
-    }
+    const brandMap = {
+      'hikvision': 'HIKVISION',
+      'dahua': 'DAHUA',
+      'ezviz': 'EZVIZ'
+    };
+    const targetBrand = brandMap[brandKey] || 'HIKVISION';
+
     const catalogEl = document.getElementById('catalogMain');
-    if (catalogEl) {
-      catalogEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (!catalogEl) {
+      window.location.href = `san-pham.html?brand=${encodeURIComponent(targetBrand)}#catalogMain`;
+      return;
     }
+
+    setBrand(targetBrand);
+
+    const headerOffset = 80;
+    const elementPosition = catalogEl.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
   }
 
   function initIntercomCombos() {
@@ -2354,10 +2419,43 @@
           setTimeout(() => setCategory(cid), 150);
         }
       }
-      const brandParam = urlParams.get('brand') || urlParams.get('wifiBrand');
-      if (brandParam && ['omada', 'ruijie', 'huawei'].includes(brandParam.toLowerCase())) {
-        setTimeout(() => switchWifiBrand(brandParam.toLowerCase()), 100);
+      // Xử lý tham số wifiBrand cho combo tab
+      const wifiBrandParam = urlParams.get('wifiBrand');
+      if (wifiBrandParam && ['omada', 'ruijie', 'huawei'].includes(wifiBrandParam.toLowerCase())) {
+        setTimeout(() => switchWifiBrand(wifiBrandParam.toLowerCase()), 100);
       }
+
+      // Xử lý tham số brand lọc catalog sản phẩm và đồng bộ tab tương ứng
+      const brandParam = urlParams.get('brand');
+      if (brandParam) {
+        const bLower = brandParam.toLowerCase();
+        if (bLower === 'omada') {
+          setTimeout(() => {
+            setCategory(53999);
+            switchWifiBrand('omada');
+          }, 150);
+        } else if (bLower === 'ruijie') {
+          setTimeout(() => {
+            setBrand('RUIJIE');
+            switchWifiBrand('ruijie');
+          }, 150);
+        } else if (bLower === 'huawei') {
+          setTimeout(() => {
+            setBrand('HUAWEI');
+            switchWifiBrand('huawei');
+          }, 150);
+        } else if (['hikvision', 'dahua', 'ezviz'].includes(bLower)) {
+          setTimeout(() => {
+            setBrand(brandParam.toUpperCase());
+            switchIntercomBrand(bLower);
+          }, 150);
+        } else {
+          setTimeout(() => {
+            setBrand(brandParam.toUpperCase());
+          }, 150);
+        }
+      }
+
       const comboParam = urlParams.get('combo');
       if (comboParam && ['home', 'villa', 'office', 'factory'].includes(comboParam)) {
         setTimeout(() => switchWifiCombo(comboParam), 150);
@@ -2378,6 +2476,22 @@
         if (el.searchHeroInput) el.searchHeroInput.value = searchParam.trim();
         if (el.searchHeroClear) el.searchHeroClear.classList.add('active');
         applyFilters();
+      }
+
+      // Tự động cuộn xuống catalog nếu URL có hash #catalogMain
+      if (window.location.hash === '#catalogMain') {
+        setTimeout(() => {
+          const catalogEl = document.getElementById('catalogMain');
+          if (catalogEl) {
+            const headerOffset = 80;
+            const elementPosition = catalogEl.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        }, 280);
       }
     } catch (e) {
       console.error('Error parsing catalog URL params:', e);
@@ -2867,6 +2981,20 @@
   function setCategory(catId) {
     state.selectedCategoryId = catId;
     state.currentPage = 1;
+
+    // Reset brand về 'all' và khoảng giá về 'all' khi chọn danh mục
+    state.selectedBrand = 'all';
+    if (el.brandFilters) {
+      el.brandFilters.querySelectorAll('.brand-chip').forEach(c => {
+        c.classList.toggle('active', (c.dataset.brand || '').toLowerCase() === 'all');
+      });
+    }
+    state.selectedPriceRange = 'all';
+    if (el.priceRadios) {
+      el.priceRadios.forEach(r => {
+        r.checked = (r.value === 'all');
+      });
+    }
 
     // Tự động xóa bộ lọc tìm kiếm khi click sang danh mục sản phẩm khác
     state.searchQuery = '';
