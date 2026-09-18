@@ -941,7 +941,20 @@
   window.viewComboProductDetail = function(itemId, itemSku) {
     let prod = null;
     if (state.products && state.products.length > 0) {
-      prod = state.products.find(p => p.id === itemId || (p.sku && itemSku && p.sku.toLowerCase() === itemSku.toLowerCase()) || (p.sku && itemSku && p.sku.toLowerCase().includes(itemSku.toLowerCase())));
+      // 1. Ưu tiên 1: Khớp chính xác theo ID sản phẩm
+      if (itemId) {
+        prod = state.products.find(p => p.id === itemId || String(p.id) === String(itemId));
+      }
+      // 2. Ưu tiên 2: Khớp chính xác tuyệt đối theo SKU (không phân biệt hoa thường)
+      if (!prod && itemSku) {
+        const skuTrimmed = String(itemSku).trim().toLowerCase();
+        prod = state.products.find(p => p.sku && String(p.sku).trim().toLowerCase() === skuTrimmed);
+      }
+      // 3. Ưu tiên 3: Khớp theo mã SKU chuẩn hóa loại bỏ ký tự đặc biệt
+      if (!prod && itemSku) {
+        const cleanSku = String(itemSku).replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+        prod = state.products.find(p => p.sku && String(p.sku).replace(/[^a-zA-Z0-9]/g, '').toLowerCase() === cleanSku);
+      }
     }
     if (!prod) {
       // Look up in ALL_WIFI_COMBOS across all brands
@@ -1138,18 +1151,18 @@
   window.ALL_INTERCOM_COMBOS = {
   "hikvision": {
     "brandName": "Hikvision",
-    "brandBadge": "HỆ THỐNG CHUÔNG HÌNH IP & AN NINH RA VÀO • HIKVISION",
-    "sectionTitle": "Combo Chuông Cửa Có Hình & Khóa Thông Minh Hikvision",
-    "sectionSub": "Nút nhấn camera chuông hình Hikvision kết nối 100% đồng bộ chuẩn giao thức ISAPI/PoE với màn hình IP Hikvision và khóa cửa thông minh cao cấp.",
+    "brandBadge": "HỆ THỐNG CHUÔNG HÌNH IP & AN NINH RA VÀO • HIKVISION & TENON",
+    "sectionTitle": "Combo Chuông Cửa Có Hình Hikvision & Khóa Thông Minh Tenon",
+    "sectionSub": "Nút nhấn camera chuông hình Hikvision kết nối 100% đồng bộ chuẩn giao thức ISAPI/PoE với màn hình IP Hikvision và khóa cửa thông minh Tenon cao cấp.",
     "exploreText": "Xem Tất Cả 75+ Thiết Bị Hikvision Trong Kho ↓",
     "combos": {
       "apartment": {
         "id": "apartment",
         "badge": "GIẢI PHÁP TIÊU BIỂU • CĂN HỘ CHUNG CƯ",
-        "title": "Combo Chuông Hình IP Hikvision & Khóa Vân Tay Căn Hộ",
-        "subtitle": "Nút chuông PoE/Wifi ngoài cửa chống nước, màn hình 7 inch cảm ứng đàm thoại và khóa cửa vân tay YLOCK chống trộm đa điểm.",
+        "title": "Combo Chuông Hình IP Hikvision & Khóa Vân Tay Tenon K50",
+        "subtitle": "Nút chuông PoE/Wifi ngoài cửa chống nước, màn hình 7 inch cảm ứng đàm thoại và khóa cửa vân tay thông minh Tenon K50 một chạm trên tay cầm.",
         "tabLabel": "Căn Hộ & Chung Cư",
-        "tabSub": "Chuông 2MP + Màn 7\" + YLock",
+        "tabSub": "Chuông 2MP + Màn 7\" + Tenon K50",
         "icon": "🏢",
         "stats": [
           {
@@ -1166,7 +1179,7 @@
           },
           {
             "label": "Khóa cửa",
-            "val": "YLOCK 4 chế độ"
+            "val": "Tenon K50 Vân Tay 1 Chạm"
           }
         ],
         "items": [
@@ -1198,27 +1211,27 @@
             "img": "https://sapo.dktcdn.net/100/825/511/variants/1-1777901088907.jpg"
           },
           {
-            "id": 1181939,
-            "sku": "YL-8882-B",
-            "name": "Khóa cửa điện tử YLOCK YL-8882-B (Vân tay, Thẻ từ, Mật mã, Khóa cơ)",
+            "id": 990011,
+            "sku": "TENON-K50",
+            "name": "Khóa thông minh Tenon K50 Tay Gạt (Vân tay một chạm trên tay cầm, Mật khẩu ảo, Thẻ từ RFID, Chìa cơ vi tính)",
             "qty": 1,
-            "role": "Khóa cửa điện tử vân tay, mật mã, thẻ từ, chìa cơ YLOCK YL-8882-B",
-            "price": 4760000,
-            "img": "https://sapo.dktcdn.net/100/825/511/variants/8882-1777900287823.png"
+            "role": "Khóa thông minh Tenon K50 vân tay 1 chạm trên tay gạt, thẻ từ, mã số ảo, chìa cơ, app",
+            "price": 6800000,
+            "img": "images/products/tenon-k50.png"
           }
         ],
-        "comboPrice": 12740000,
-        "savingsText": "Tiết kiệm 1.050.000 ₫ (Miễn phí cài đặt Cloud Hik-Connect)",
-        "retailTotal": 13790000,
-        "savingsAmount": 1050000
+        "comboPrice": 14580000,
+        "savingsText": "Tiết kiệm 1.250.000 ₫ (Miễn phí cài đặt Cloud Hik-Connect & App Tenon)",
+        "retailTotal": 15830000,
+        "savingsAmount": 1250000
       },
       "villa": {
         "id": "villa",
         "badge": "GIẢI PHÁP CAO CẤP • BIỆT THỰ & LIỀN KỀ",
-        "title": "Combo Chuông Hình Hợp Kim IK08 & Màn 10\" Biệt Thự",
-        "subtitle": "Nút chuông vỏ kim loại chuẩn chống va đập IK08, màn hình 10 inch siêu lớn và khóa điện tử Solity GM-1000BK nhập khẩu Hàn Quốc.",
+        "title": "Combo Chuông Hình Hợp Kim IK08 & Khóa Kéo Đẩy Tenon A30",
+        "subtitle": "Nút chuông vỏ kim loại chuẩn chống va đập IK08, màn hình 10 inch siêu lớn và khóa điện tử kéo đẩy cao cấp Tenon A30 công nghệ Thụy Điển.",
         "tabLabel": "Biệt Thự & Villa",
-        "tabSub": "Chuông IK08 + Màn 10\" + Solity",
+        "tabSub": "Chuông IK08 + Màn 10\" + Tenon A30",
         "icon": "🏛️",
         "stats": [
           {
@@ -1235,7 +1248,7 @@
           },
           {
             "label": "Khóa cửa",
-            "val": "Solity Hàn Quốc GM-1000BK"
+            "val": "Tenon A30 Kéo Đẩy Luxury"
           }
         ],
         "items": [
@@ -1267,27 +1280,27 @@
             "img": "https://sapo.dktcdn.net/100/825/511/variants/ds-kabv8113-rs-1777901082797.jpg"
           },
           {
-            "id": 1181945,
-            "sku": "GM-1000BK",
-            "name": "Khóa cửa điện tử SOLITY GM-1000BK",
+            "id": 990009,
+            "sku": "TENON-A30",
+            "name": "Khóa thông minh Tenon A30 Kéo Đẩy Cao Cấp (Vân tay đa điểm FPC, Thẻ từ RFID, Mật mã ảo, Chìa cơ dự phòng, App TTLock)",
             "qty": 1,
-            "role": "Khóa cửa điện tử SOLITY GM-1000BK chuẩn công nghệ Hàn Quốc",
-            "price": 9080000,
-            "img": "https://sapo.dktcdn.net/100/825/511/variants/gm-1000bk-1777900066203.png"
+            "role": "Khóa cửa kéo đẩy Push-Pull Tenon A30 thiết kế Luxury nguyên khối, cảm biến FPC Thụy Điển",
+            "price": 12600000,
+            "img": "images/products/tenon-a30.png"
           }
         ],
-        "comboPrice": 20240000,
-        "savingsText": "Tiết kiệm 1.640.000 ₫ (Miễn phí đo kiểm kết nối liên tầng)",
-        "retailTotal": 21880000,
-        "savingsAmount": 1640000
+        "comboPrice": 23450000,
+        "savingsText": "Tiết kiệm 1.950.000 ₫ (Miễn phí đo kiểm kết nối liên tầng & công lắp)",
+        "retailTotal": 25400000,
+        "savingsAmount": 1950000
       },
       "faceid": {
         "id": "faceid",
         "badge": "GIẢI PHÁP ĐỈNH CAO • 3D FACE ID FLAGSHIP",
-        "title": "Combo Chuông Hình FaceID 4.3\" & Khóa Solity 3D Khuôn Mặt",
-        "subtitle": "Nút chuông nhận diện khuôn mặt tự động mở cổng kết hợp 2 màn hình 10 inch tầng 1-2 và khóa Solity GP-6000BAK mở cửa không chạm.",
+        "title": "Combo Chuông Hình FaceID 4.3\" & Khóa Tenon A7x 3D Face ID",
+        "subtitle": "Nút chuông nhận diện khuôn mặt tự động mở cổng kết hợp 2 màn hình 10 inch tầng 1-2 và khóa kéo đẩy Flagship Tenon A7x Face ID 3D mở cửa không chạm.",
         "tabLabel": "Siêu Dinh Thự 3D Face ID",
-        "tabSub": "FaceID 4.3\" + 2 Màn 10\" + Solity",
+        "tabSub": "FaceID 4.3\" + 2 Màn 10\" + Tenon A7x",
         "icon": "👑",
         "stats": [
           {
@@ -1304,7 +1317,7 @@
           },
           {
             "label": "Khóa cửa",
-            "val": "Solity GP-6000BAK Flagship"
+            "val": "Tenon A7x Face ID 3D Flagship"
           }
         ],
         "items": [
@@ -1327,27 +1340,27 @@
             "img": "https://sapo.dktcdn.net/100/825/511/variants/ds-kh8520-wte1-1777901098139.jpg"
           },
           {
-            "id": 1181943,
-            "sku": "GP-6000BAK",
-            "name": "Khóa cửa điện tử SOLITY GP-6000BAK (khuôn mặt, vân tay, mã số, thẻ từ, chìa cơ, smartphone)",
+            "id": 1197611,
+            "sku": "TENON-A7X",
+            "name": "Khóa thông minh kéo đẩy Tenon A7x Face ID 3D (Camera chuông hình, Nhận diện khuôn mặt 3D hồng ngoại, Vân tay FPC, Mật mã, Thẻ, Chìa cơ, Wifi)",
             "qty": 1,
-            "role": "Khóa cửa điện tử SOLITY GP-6000BAK Flagship mở khóa khuôn mặt 3D",
-            "price": 21600000,
-            "img": "https://sapo.dktcdn.net/100/825/511/variants/gp-6000bak-1777900366357.png"
+            "role": "Khóa thông minh Flagship Tenon A7x nhận diện khuôn mặt Face ID 3D hồng ngoại, tích hợp camera chuông hình",
+            "price": 18000000,
+            "img": "images/products/tenon-a7x.jpg"
           }
         ],
-        "comboPrice": 39600000,
-        "savingsText": "Tiết kiệm 3.170.000 ₫ (Tặng gói cài đặt bảo mật đa lớp)",
-        "retailTotal": 42770000,
-        "savingsAmount": 3170000
+        "comboPrice": 35900000,
+        "savingsText": "Tiết kiệm 3.270.000 ₫ (Tặng gói cài đặt bảo mật Face ID đa lớp & Cloud)",
+        "retailTotal": 39170000,
+        "savingsAmount": 3270000
       },
       "office": {
         "id": "office",
         "badge": "GIẢI PHÁP CỬA KÍNH • VĂN PHÒNG & SHOWROOM",
-        "title": "Combo Chuông Hình Hikvision & Khóa Kẹp Kính ZKTeco",
-        "subtitle": "Giải pháp kiểm soát ra vào chuyên biệt cho cửa kính thủy lực văn phòng, đàm thoại từ bàn lễ tân và mở khóa từ xa qua màn hình.",
+        "title": "Combo Chuông Hình Hikvision & Khóa Kẹp Kính Tenon G4",
+        "subtitle": "Giải pháp kiểm soát ra vào chuyên biệt cho cửa kính thủy lực văn phòng, đàm thoại từ bàn lễ tân và mở khóa điện tử Tenon G4 từ xa qua màn hình.",
         "tabLabel": "Văn Phòng Cửa Kính",
-        "tabSub": "Chuông IK08 + Khóa Kẹp Kính",
+        "tabSub": "Chuông IK08 + Khóa Tenon G4 Kính",
         "icon": "🏢",
         "stats": [
           {
@@ -1364,7 +1377,7 @@
           },
           {
             "label": "Khóa điện tử",
-            "val": "ZKTeco chuyên cửa kính"
+            "val": "Tenon G4 Kẹp Cửa Kính"
           }
         ],
         "items": [
@@ -1387,36 +1400,36 @@
             "img": "https://sapo.dktcdn.net/100/825/511/variants/ds-kh6320-wte1-6813f0de-19f3-4c27-a2ac-0e8b71f16373-1777900023215.jpg"
           },
           {
-            "id": 1181934,
-            "sku": "ZKT-GL300",
-            "name": "Khóa cửa điện tử ZKTeco cửa kính ZKT-GL300 (Vân tay, Thẻ từ, Mật mã, Remote)",
+            "id": 990017,
+            "sku": "TENON-G4",
+            "name": "Khóa điện tử Tenon G4 chuyên Cửa Kính Cường Lực (Lắp đặt không khoan kính, Cảm biến vân tay siêu nhạy, Mã số ảo, Thẻ từ, Chìa cơ, Chuông cửa)",
             "qty": 1,
-            "role": "Khóa cửa điện tử ZKTeco ZKT-GL300 kẹp kính không cần khoan kính",
-            "price": 5840000,
-            "img": "images/products/1181934.jpg"
+            "role": "Khóa cửa kính thông minh Tenon G4 kẹp kính không cần khoan kính, vân tay siêu nhạy",
+            "price": 6800000,
+            "img": "images/products/tenon-g4.png"
           }
         ],
-        "comboPrice": 15000000,
-        "savingsText": "Tiết kiệm 1.220.000 ₫ (Miễn phí khảo sát lắp ráp cửa kính)",
-        "retailTotal": 16220000,
-        "savingsAmount": 1220000
+        "comboPrice": 15880000,
+        "savingsText": "Tiết kiệm 1.300.000 ₫ (Miễn phí kẹp kính cường lực & cấu hình lễ tân)",
+        "retailTotal": 17180000,
+        "savingsAmount": 1300000
       }
     }
   },
   "dahua": {
     "brandName": "Dahua",
-    "brandBadge": "HỆ THỐNG CHUÔNG HÌNH IP GÓC RỘNG & KHÓA DAHUA • DAHUA TECHNOLOGY",
-    "sectionTitle": "Combo Chuông Cửa Có Hình & Khóa Điện Tử Dahua",
-    "sectionSub": "Nút nhấn camera chuông hình Dahua đồng bộ 100% chuẩn giao thức VTO/VTH với màn hình IP Dahua và khóa thông minh Dahua nguyên bản.",
+    "brandBadge": "HỆ THỐNG CHUÔNG HÌNH IP GÓC RỘNG & KHÓA TENON • DAHUA TECHNOLOGY",
+    "sectionTitle": "Combo Chuông Cửa Có Hình Dahua & Khóa Thông Minh Tenon",
+    "sectionSub": "Nút nhấn camera chuông hình Dahua đồng bộ chuẩn VTO/VTH với màn hình IP Dahua và hệ thống khóa cửa thông minh cao cấp Tenon.",
     "exploreText": "Xem Tất Cả 110+ Thiết Bị Dahua Trong Kho ↓",
     "combos": {
       "apartment": {
         "id": "apartment",
         "badge": "GIẢI PHÁP TIÊU BIỂU • CĂN HỘ HIỆN ĐẠI",
-        "title": "Combo Chuông Hình Dahua VTO2211G & Khóa Dahua Đồng",
-        "subtitle": "Nút chuông PoE/Wifi nhỏ gọn, màn hình 7 inch trắng tinh tế và khóa điện tử màu đồng hoàng gia Dahua ASL9112R-B.",
+        "title": "Combo Chuông Hình Dahua VTO2211G & Khóa Thông Minh Tenon K50",
+        "subtitle": "Nút chuông PoE/Wifi nhỏ gọn, màn hình 7 inch trắng tinh tế và khóa điện tử thông minh Tenon K50 vân tay một chạm siêu tốc.",
         "tabLabel": "Căn Hộ Chung Cư",
-        "tabSub": "VTO2211G + Màn 7\" + Dahua",
+        "tabSub": "VTO2211G + Màn 7\" + Tenon K50",
         "icon": "🏠",
         "stats": [
           {
@@ -1433,7 +1446,7 @@
           },
           {
             "label": "Khóa cửa",
-            "val": "Dahua ASL9112R-B Đồng"
+            "val": "Tenon K50 Vân Tay 1 Chạm"
           }
         ],
         "items": [
@@ -1465,27 +1478,27 @@
             "img": "https://sapo.dktcdn.net/100/825/511/variants/vtm09r-1777901440523.png"
           },
           {
-            "id": 1181950,
-            "sku": "ASL9112R-B",
-            "name": "Khóa cửa điện tử Dahua ASL9112R-B màu đồng",
+            "id": 990011,
+            "sku": "TENON-K50",
+            "name": "Khóa thông minh Tenon K50 Tay Gạt (Vân tay một chạm trên tay cầm, Mật khẩu ảo, Thẻ từ RFID, Chìa cơ vi tính, Quản lý qua App)",
             "qty": 1,
-            "role": "Khóa cửa thông minh Dahua ASL9112R-B vân tay thẻ từ màu đồng hoàng gia",
-            "price": 7780000,
-            "img": "images/products/1181950.jpg"
+            "role": "Khóa thông minh Tenon K50 tay gạt vân tay 1 chạm trên tay nắm, chống nhìn trộm, quản lý app",
+            "price": 6800000,
+            "img": "images/products/tenon-k50.png"
           }
         ],
-        "comboPrice": 15700000,
-        "savingsText": "Tiết kiệm 1.270.000 ₫ (Miễn phí kết nối liên động mở khóa)",
-        "retailTotal": 16970000,
-        "savingsAmount": 1270000
+        "comboPrice": 14790000,
+        "savingsText": "Tiết kiệm 1.200.000 ₫ (Miễn phí kết nối liên động mở khóa từ xa)",
+        "retailTotal": 15990000,
+        "savingsAmount": 1200000
       },
       "villa": {
         "id": "villa",
         "badge": "GIẢI PHÁP CAO CẤP • GÓC SIÊU RỘNG 140°",
-        "title": "Combo Chuông Hình 140° VTO2201 & Màn 10\" VTH5441",
-        "subtitle": "Nút chuông góc siêu rộng 140 độ quan sát toàn cảnh cổng, màn hình cảm ứng 10 inch cực đại và khóa Dahua màu diệp lục sang trọng.",
+        "title": "Combo Chuông Hình 140° VTO2201 & Khóa Tenon A7x Face ID 3D",
+        "subtitle": "Nút chuông góc siêu rộng 140 độ quan sát toàn cảnh cổng, màn hình cảm ứng 10 inch cực đại và khóa kéo đẩy Flagship Tenon A7x nhận diện gương mặt 3D.",
         "tabLabel": "Biệt Thự & Nhà Phố",
-        "tabSub": "Góc Rộng 140° + Màn 10\" + Dahua",
+        "tabSub": "Góc Rộng 140° + Màn 10\" + Tenon A7x",
         "icon": "🏛️",
         "stats": [
           {
@@ -1502,7 +1515,7 @@
           },
           {
             "label": "Khóa cửa",
-            "val": "Dahua ASL9112C-B Diệp Lục"
+            "val": "Tenon A7x Face ID 3D"
           }
         ],
         "items": [
@@ -1534,27 +1547,27 @@
             "img": "https://sapo.dktcdn.net/100/825/511/variants/vtm114-1777901443071.jpg"
           },
           {
-            "id": 1181951,
-            "sku": "ASL9112C-B",
-            "name": "Khóa cửa điện tử Dahua ASL9112C-B màu diệp lục",
+            "id": 1197611,
+            "sku": "TENON-A7X",
+            "name": "Khóa thông minh kéo đẩy Tenon A7x Face ID 3D (Camera chuông hình, Nhận diện khuôn mặt 3D hồng ngoại, Vân tay FPC, Mật mã, Thẻ, Chìa cơ, Wifi)",
             "qty": 1,
-            "role": "Khóa cửa thông minh Dahua ASL9112C-B màu diệp lục độc đáo",
-            "price": 7780000,
-            "img": "images/products/1181951.jpg"
+            "role": "Khóa cửa Flagship kéo đẩy Tenon A7x mở khóa khuôn mặt 3D, tích hợp camera chuông hình góc rộng",
+            "price": 18000000,
+            "img": "images/products/tenon-a7x.jpg"
           }
         ],
-        "comboPrice": 21440000,
-        "savingsText": "Tiết kiệm 1.730.000 ₫ (Đã gồm hộp đế âm tường cao cấp)",
-        "retailTotal": 23170000,
-        "savingsAmount": 1730000
+        "comboPrice": 30890000,
+        "savingsText": "Tiết kiệm 2.500.000 ₫ (Đã gồm hộp đế âm tường & cấu hình liên thông)",
+        "retailTotal": 33390000,
+        "savingsAmount": 2500000
       },
       "multidoor": {
         "id": "multidoor",
         "badge": "GIẢI PHÁP ĐA CỔNG • 2 NÚT CHUÔNG & 2 MÀN HÌNH",
-        "title": "Combo 2 Cổng Đa Tầng & Khóa Kéo Đẩy Solity Hàn Quốc",
-        "subtitle": "2 nút chuông camera cho cổng chính và cửa phụ, 2 màn hình 7 inch các tầng và khóa cửa kéo đẩy Push-Pull Solity GSP-2000BK.",
+        "title": "Combo 2 Cổng Đa Tầng & Khóa Kéo Đẩy Tenon A30",
+        "subtitle": "2 nút chuông camera cho cổng chính và cửa phụ, 2 màn hình 7 inch các tầng và khóa cửa kéo đẩy Push-Pull Tenon A30 công nghệ Thụy Điển.",
         "tabLabel": "2 Cổng & Đa Tầng",
-        "tabSub": "2 Nút Chuông + 2 Màn + Push-Pull",
+        "tabSub": "2 Nút Chuông + 2 Màn + Tenon A30",
         "icon": "🚪",
         "stats": [
           {
@@ -1571,7 +1584,7 @@
           },
           {
             "label": "Khóa cửa",
-            "val": "Solity Push-Pull GSP-2000BK"
+            "val": "Tenon A30 Kéo Đẩy Luxury"
           }
         ],
         "items": [
@@ -1603,27 +1616,27 @@
             "img": "https://sapo.dktcdn.net/100/825/511/variants/vth2621gw-wp-trang-1777901472022.jpg"
           },
           {
-            "id": 1181944,
-            "sku": "GSP-2000BK DS",
-            "name": "Khóa cửa điện tử SOLITY GSP-2000BK DS (màu đen bạc)",
+            "id": 990009,
+            "sku": "TENON-A30",
+            "name": "Khóa thông minh Tenon A30 Kéo Đẩy Cao Cấp (Vân tay đa điểm FPC, Thẻ từ RFID, Mật mã ảo, Chìa cơ dự phòng, App TTLock)",
             "qty": 1,
-            "role": "Khóa cửa SOLITY GSP-2000BK DS tay nắm Push-Pull nguyên khối Hàn Quốc",
-            "price": 16850000,
-            "img": "https://sapo.dktcdn.net/100/825/511/variants/gsp-2000-1777900364917.jpg"
+            "role": "Khóa cửa kéo đẩy Push-Pull Tenon A30 hợp kim nguyên khối, vân tay FPC Thụy Điển siêu nhạy",
+            "price": 12600000,
+            "img": "images/products/tenon-a30.png"
           }
         ],
-        "comboPrice": 32600000,
-        "savingsText": "Tiết kiệm 2.620.000 ₫ (Miễn phí thiết lập đàm thoại liên tầng)",
-        "retailTotal": 35220000,
-        "savingsAmount": 2620000
+        "comboPrice": 28600000,
+        "savingsText": "Tiết kiệm 2.370.000 ₫ (Miễn phí thiết lập đàm thoại liên tầng & mở khóa)",
+        "retailTotal": 30970000,
+        "savingsAmount": 2370000
       },
       "economic": {
         "id": "economic",
         "badge": "GIẢI PHÁP TIẾT KIỆM • TỐI ƯU CHI PHÍ",
-        "title": "Combo Chuông Hình Dahua VTO2111 & Khóa YLOCK",
-        "subtitle": "Giải pháp chuông hình IP và khóa thông minh tiết kiệm chi phí nhưng vẫn đảm bảo sự đồng bộ và bền bỉ tuyệt đối.",
+        "title": "Combo Chuông Hình Dahua VTO2111 & Khóa Tenon K3",
+        "subtitle": "Giải pháp chuông hình IP và khóa thông minh Tenon K3 tiết kiệm chi phí nhưng vẫn đảm bảo chất lượng cơ khí vượt trội và thẩm mỹ tinh tế.",
         "tabLabel": "Gói Tiết Kiệm",
-        "tabSub": "VTO2111 + Màn 7\" + YLOCK",
+        "tabSub": "VTO2111 + Màn 7\" + Tenon K3",
         "icon": "💰",
         "stats": [
           {
@@ -1640,7 +1653,7 @@
           },
           {
             "label": "Khóa cửa",
-            "val": "YLOCK YL-8882-B"
+            "val": "Tenon K3 Tay Gạt Bền Bỉ"
           }
         ],
         "items": [
@@ -1663,41 +1676,41 @@
             "img": "https://sapo.dktcdn.net/100/825/511/variants/vth2621gw-wp-trang-1777901472022.jpg"
           },
           {
-            "id": 1181939,
-            "sku": "YL-8882-B",
-            "name": "Khóa cửa điện tử YLOCK YL-8882-B (Vân tay, Thẻ từ, Mật mã, Khóa cơ)",
+            "id": 990014,
+            "sku": "TENON-K3",
+            "name": "Khóa thông minh Tenon K3 (Thiết kế tay gạt tối giản nhỏ gọn, Vân tay trên tay cầm, Mật khẩu ảo, Thẻ từ RFID, Chìa cơ)",
             "qty": 1,
-            "role": "Khóa cửa điện tử vân tay thẻ từ YLOCK YL-8882-B",
-            "price": 4760000,
-            "img": "https://sapo.dktcdn.net/100/825/511/variants/8882-1777900287823.png"
+            "role": "Khóa thông minh Tenon K3 thiết kế tay gạt tối giản nhỏ gọn, vân tay trên tay cầm, mật khẩu ảo",
+            "price": 5500000,
+            "img": "images/products/tenon-k3.png"
           }
         ],
-        "comboPrice": 11200000,
-        "savingsText": "Tiết kiệm 910.000 ₫ (Miễn phí cài đặt ứng dụng DMSS)",
-        "retailTotal": 12110000,
-        "savingsAmount": 910000
+        "comboPrice": 11850000,
+        "savingsText": "Tiết kiệm 1.000.000 ₫ (Miễn phí cài đặt ứng dụng DMSS & liên kết khóa)",
+        "retailTotal": 12850000,
+        "savingsAmount": 1000000
       }
     }
   },
   "ezviz": {
     "brandName": "EZVIZ",
-    "brandBadge": "HỆ THỐNG SMART HOME CHUÔNG HÌNH & KHÓA THÔNG MINH • EZVIZ",
-    "sectionTitle": "Combo Chuông Cửa Có Hình & Khóa Thông Minh EZVIZ",
-    "sectionSub": "Chuông hình EZVIZ thế hệ mới kết nối màn hình cảm ứng trong nhà đồng bộ hoàn hảo cùng khóa cửa điện tử qua duy nhất 1 ứng dụng EZVIZ.",
+    "brandBadge": "HỆ THỐNG SMART HOME CHUÔNG HÌNH & KHÓA TENON • EZVIZ",
+    "sectionTitle": "Combo Chuông Cửa Có Hình EZVIZ & Khóa Thông Minh Tenon",
+    "sectionSub": "Chuông hình EZVIZ thế hệ mới kết nối màn hình cảm ứng trong nhà đồng bộ hoàn hảo cùng hệ sinh thái khóa cửa thông minh Tenon cao cấp.",
     "exploreText": "Xem Tất Cả 60+ Thiết Bị EZVIZ Trong Kho ↓",
     "combos": {
       "apartment": {
         "id": "apartment",
         "badge": "GIẢI PHÁP KHÔNG DÂY • CĂN HỘ & NHÀ PHỐ",
-        "title": "Combo Chuông Hình EZVIZ HP5 & Khóa Vân Tay DL05",
-        "subtitle": "Trọn bộ chuông hình HP5 (màn 7 inch + nút camera 2MP) kết hợp khóa điện tử EZVIZ DL05 điều khiển mở khóa từ xa qua App EZVIZ.",
+        "title": "Combo Chuông Hình EZVIZ HP5 & Khóa Tenon K70 Plus",
+        "subtitle": "Trọn bộ chuông hình HP5 (màn 7 inch + nút camera 2MP) kết hợp khóa thông minh Tenon K70 Plus mặt kính cường lực đẳng cấp vượt trội.",
         "tabLabel": "Căn Hộ Không Dây",
-        "tabSub": "HP5 + Khóa EZVIZ DL05",
+        "tabSub": "HP5 + Khóa Tenon K70 Plus",
         "icon": "📱",
         "stats": [
           {
             "label": "Hệ sinh thái",
-            "val": "EZVIZ 1 App Duy Nhất"
+            "val": "EZVIZ & Smarthome Đa Năng"
           },
           {
             "label": "Bộ chuông",
@@ -1705,7 +1718,7 @@
           },
           {
             "label": "Khóa cửa",
-            "val": "EZVIZ DL05 Mở từ xa"
+            "val": "Tenon K70 Plus Kính Cường Lực"
           },
           {
             "label": "Đàm thoại",
@@ -1723,27 +1736,27 @@
             "img": "images/products/1168282.jpg"
           },
           {
-            "id": 1181949,
-            "sku": "EZVIZ DL05",
-            "name": "Khóa cửa điện tử EZVIZ DL05 (APP, Vân tay, mật mã, thẻ từ, chìa cơ)",
+            "id": 990013,
+            "sku": "TENON-K70-PLUS",
+            "name": "Khóa thông minh Tenon K70 Plus Tay Gạt Cao Cấp (Mặt kính cường lực sang trọng, Vân tay FPC, Mã số ảo, Thẻ chip, Chìa cơ, App Tuya/TTLock)",
             "qty": 1,
-            "role": "Khóa cửa điện tử EZVIZ DL05 vân tay, app EZVIZ mở khóa từ xa",
-            "price": 5400000,
-            "img": "images/products/1181949.jpg"
+            "role": "Khóa cửa thông minh Tenon K70 Plus mặt kính cường lực sang trọng, vân tay FPC Thụy Điển",
+            "price": 5900000,
+            "img": "images/products/tenon-k70-plus.png"
           }
         ],
-        "comboPrice": 10600000,
-        "savingsText": "Tiết kiệm 850.000 ₫ (Miễn phí kết nối App EZVIZ)",
-        "retailTotal": 11450000,
-        "savingsAmount": 850000
+        "comboPrice": 10950000,
+        "savingsText": "Tiết kiệm 1.000.000 ₫ (Miễn phí kết nối liên động qua hệ sinh thái thông minh)",
+        "retailTotal": 11950000,
+        "savingsAmount": 1000000
       },
       "villa": {
         "id": "villa",
         "badge": "GIẢI PHÁP CAO CẤP • ĐỘ PHÂN GIẢI 2K 4MP",
-        "title": "Combo Chuông Hình 2K EZVIZ HP7 & Khóa Vân Tay 2 Mặt DL06",
-        "subtitle": "Trọn bộ chuông hình cao cấp HP7 camera 2K 4MP góc 162 độ cùng khóa cửa EZVIZ DL06 Pro vân tay 2 mặt an toàn tuyệt đối.",
+        "title": "Combo Chuông Hình 2K EZVIZ HP7 & Khóa Cổng Tenon G3 IP68",
+        "subtitle": "Trọn bộ chuông hình cao cấp HP7 camera 2K 4MP góc 162 độ cùng khóa cổng ngoài trời Tenon G3 chống nước IP68 tuyệt đối, bảo mật 2 mặt vân tay.",
         "tabLabel": "Biệt Thự 2K",
-        "tabSub": "HP7 2K + Khóa DL06 Pro",
+        "tabSub": "HP7 2K + Khóa Cổng Tenon G3 IP68",
         "icon": "✨",
         "stats": [
           {
@@ -1756,7 +1769,7 @@
           },
           {
             "label": "Khóa an toàn",
-            "val": "DL06 Pro (Vân tay 2 mặt)"
+            "val": "Tenon G3 IP68 (Vân tay 2 mặt)"
           },
           {
             "label": "Chuông báo",
@@ -1774,27 +1787,27 @@
             "img": "images/products/1168281.jpg"
           },
           {
-            "id": 1181946,
-            "sku": "EZVIZ DL06 Pro",
-            "name": "Khóa cửa điện tử EZVIZ DL06 Pro (APP, Vân tay 2 mặt, mật mã, thẻ từ, chìa cơ)",
+            "id": 990015,
+            "sku": "TENON-G3",
+            "name": "Khóa cổng thông minh ngoài trời Tenon G3 (Chuẩn chống nước IP68, 2 mặt vân tay trước-sau, Thẻ từ, Mã số ảo, Chìa cơ vi tính, Remote/App)",
             "qty": 1,
-            "role": "Khóa cửa điện tử EZVIZ DL06 Pro vân tay 2 mặt chống thò tay mở khoá",
-            "price": 7560000,
-            "img": "https://sapo.dktcdn.net/100/825/511/variants/ezviz-dl06-pro-3a53bfb3-306b-4bed-b497-efd8c94eea70-1777899476871.jpg"
+            "role": "Khóa cổng thông minh Tenon G3 chống nước IP68, 2 mặt vân tay trước sau an toàn tuyệt đối",
+            "price": 8000000,
+            "img": "images/products/tenon-g3.png"
           }
         ],
-        "comboPrice": 13200000,
-        "savingsText": "Tiết kiệm 1.060.000 ₫ (Miễn phí kích hoạt bảo hành điện tử)",
-        "retailTotal": 14260000,
-        "savingsAmount": 1060000
+        "comboPrice": 13500000,
+        "savingsText": "Tiết kiệm 1.200.000 ₫ (Miễn phí phụ kiện lắp đặt khóa cổng ngoài trời)",
+        "retailTotal": 14700000,
+        "savingsAmount": 1200000
       },
       "faceid": {
         "id": "faceid",
         "badge": "GIẢI PHÁP FLAGSHIP • 3D FACE ID & MÀN HÌNH TÍCH HỢP",
-        "title": "Combo Chuông Hình EZVIZ HP7 & Khóa Face ID DL50FVS",
-        "subtitle": "Hệ thống an ninh đỉnh cao EZVIZ: Chuông hình HP7 ngoài cổng kết hợp khóa cửa Flagship DL50FVS nhận diện gương mặt 3D và tích hợp camera.",
+        "title": "Combo Chuông Hình EZVIZ HP7 & Khóa Tenon A7x Face ID 3D",
+        "subtitle": "Hệ thống an ninh đỉnh cao: Chuông hình HP7 ngoài cổng kết hợp khóa cửa Flagship Tenon A7x nhận diện gương mặt 3D chống giả mạo và tích hợp camera chuông hình.",
         "tabLabel": "3D Face ID Cao Cấp",
-        "tabSub": "HP7 2K + Khóa FaceID DL50",
+        "tabSub": "HP7 2K + Khóa FaceID Tenon A7x",
         "icon": "👑",
         "stats": [
           {
@@ -1807,7 +1820,7 @@
           },
           {
             "label": "Khóa cửa",
-            "val": "DL50FVS Có Camera & Màn"
+            "val": "Tenon A7x Face ID 3D Flagship"
           },
           {
             "label": "Video call",
@@ -1825,27 +1838,27 @@
             "img": "images/products/1168281.jpg"
           },
           {
-            "id": 1181948,
-            "sku": "EZVIZ DL50FVS",
-            "name": "Khóa cửa điện tử EZVIZ DL50FVS (APP, Khuôn mặt, vân tay, mật mã, chìa cơ)",
+            "id": 1197611,
+            "sku": "TENON-A7X",
+            "name": "Khóa thông minh kéo đẩy Tenon A7x Face ID 3D (Camera chuông hình, Nhận diện khuôn mặt 3D hồng ngoại, Vân tay FPC, Mật mã, Thẻ, Chìa cơ, Wifi)",
             "qty": 1,
-            "role": "Khóa cửa điện tử đỉnh cao EZVIZ DL50FVS nhận diện gương mặt 3D, tích hợp camera",
-            "price": 13400000,
-            "img": "https://sapo.dktcdn.net/100/825/511/variants/dl50fvs-1777901579969.jpg"
+            "role": "Khóa kéo đẩy đỉnh cao Tenon A7x Face ID 3D nhận diện khuôn mặt hồng ngoại và camera chuông hình",
+            "price": 18000000,
+            "img": "images/products/tenon-a7x.jpg"
           }
         ],
-        "comboPrice": 18600000,
-        "savingsText": "Tiết kiệm 1.500.000 ₫ (Tặng gói lưu trữ Cloud 1 năm)",
-        "retailTotal": 20100000,
-        "savingsAmount": 1500000
+        "comboPrice": 22800000,
+        "savingsText": "Tiết kiệm 1.900.000 ₫ (Tặng gói lưu trữ Cloud 1 năm & bảo hành 24 tháng tận nơi)",
+        "retailTotal": 24700000,
+        "savingsAmount": 1900000
       },
       "aluminum": {
         "id": "aluminum",
         "badge": "GIẢI PHÁP ĐỐ HẸP • CỬA NHÔM XINGFA",
-        "title": "Combo Chuông Hình EZVIZ HP5 & Khóa Cửa Nhôm Xingfa",
-        "subtitle": "Bộ chuông hình HP5 tiện lợi kết hợp khóa điện tử YLOCK YL-3368-G thiết kế thon gọn chuyên dụng cho cửa nhôm hệ Xingfa.",
+        "title": "Combo Chuông Hình EZVIZ HP5 & Khóa Tenon AL10 Cửa Nhôm",
+        "subtitle": "Bộ chuông hình HP5 tiện lợi kết hợp khóa điện tử Tenon AL10 thiết kế thon gọn tinh xảo chuyên dụng cho cửa nhôm hệ Xingfa đố hẹp và cửa trượt lùa.",
         "tabLabel": "Cửa Nhôm Xingfa",
-        "tabSub": "HP5 + Khóa YLOCK Nhôm",
+        "tabSub": "HP5 + Khóa Tenon AL10 Nhôm",
         "icon": "🚪",
         "stats": [
           {
@@ -1858,11 +1871,11 @@
           },
           {
             "label": "Khóa cửa",
-            "val": "YLOCK YL-3368-G Đố Hẹp"
+            "val": "Tenon AL10 Nhôm Đố Hẹp"
           },
           {
             "label": "Mở khóa",
-            "val": "Vân tay, mã số, thẻ, app"
+            "val": "Vân tay FPC, mã số ảo, thẻ từ, chìa cơ"
           }
         ],
         "items": [
@@ -1876,24 +1889,23 @@
             "img": "images/products/1168282.jpg"
           },
           {
-            "id": 1181937,
-            "sku": "YL-3368-G",
-            "name": "Khóa cửa điện tử YLOCK cửa nhôm cửa sắt YL-3368-G (màu vàng)",
+            "id": 990004,
+            "sku": "TENON-AL10",
+            "name": "Khóa điện tử Tenon AL10 (Cửa nhôm trượt lùa & mở quay, Đố siêu mỏng, Vân tay FPC, Thẻ từ, Mã số ảo, Chìa cơ)",
             "qty": 1,
-            "role": "Khóa cửa điện tử YLOCK YL-3368-G chuyên đố hẹp nhôm Xingfa màu vàng kim",
-            "price": 4320000,
-            "img": "https://sapo.dktcdn.net/100/825/511/variants/ylock-yl-3368-g-1739239809267-1777900297333.jpg"
+            "role": "Khóa điện tử Tenon AL10 chuyên dụng cửa nhôm Xingfa đố hẹp và cửa lùa, cảm biến FPC Thụy Điển",
+            "price": 5200000,
+            "img": "images/products/tenon-al10.png"
           }
         ],
-        "comboPrice": 9600000,
-        "savingsText": "Tiết kiệm 770.000 ₫ (Miễn phí lắp đặt trên cửa nhôm)",
-        "retailTotal": 10370000,
-        "savingsAmount": 770000
+        "comboPrice": 10350000,
+        "savingsText": "Tiết kiệm 900.000 ₫ (Miễn phí lắp đặt trên cửa nhôm & bảo hành 24 tháng)",
+        "retailTotal": 11250000,
+        "savingsAmount": 900000
       }
     }
   }
 };
-
   let currentActiveIntercomBrand = 'hikvision';
   let currentActiveIntercomCombo = 'apartment';
 

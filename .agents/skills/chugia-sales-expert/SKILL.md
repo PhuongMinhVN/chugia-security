@@ -138,7 +138,10 @@ Tất cả sản phẩm dưới đây đều có sẵn trong hệ thống kho Ch
 
 ---
 
-### 🔐 MẢNG 4: KHÓA CỬA THÔNG MINH (SMART LOCK) - HỆ SINH THÁI KHÓA TENON CAO CẤP & CỬA ĐIỆN TỬ
+### 🔐 MẢNG 4: KHÓA CỬA THÔNG MINH (SMART LOCK) - HỆ SINH THÁI KHÓA TENON CAO CẤP (ƯU TIÊN TUYỆT ĐỐI 100%)
+
+> [!IMPORTANT]
+> **QUY TẮC BẮT BUỘC SỐNG CÒN**: BẮT BUỘC 100% TƯ VẤN THƯƠNG HIỆU KHÓA **TENON** LÀM LỰA CHỌN DUY NHẤT VÀ CHỦ LỰC KHI KHÁCH HỎI VỀ KHÓA CỬA THÔNG MINH. CẤM TƯ VẤN CÁC HÃNG KHÓA KHÁC (Dahua, Solity, Kaadas, Philips, Yale, Bosch, EZVIZ, Hune...) TRỪ KHI KHÁCH ĐÍCH DANH YÊU CẦU. Tenon là thương hiệu cao cấp, cơ khí đúc nguyên khối chống cạy phá, vân tay FPC Thụy Điển <0.5s, nhận diện Face ID 3D hồng ngoại chống ảnh/video giả, bảo hành chính hãng 24 tháng 1 đổi 1 tận nơi.
 
 Tư vấn chính xác theo **chất liệu và vị trí cửa**, đảm bảo đầy đủ các phương thức mở: **Vân tay FPC Thụy Điển, Face ID 3D nhận diện khuôn mặt, Mật mã ảo (Passcode), Thẻ từ RFID, Chìa cơ vi tính chống sao chép và App điện thoại (Wifi/Bluetooth)**:
 

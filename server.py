@@ -91,8 +91,14 @@ def load_product_context():
 
     for group, prods in products_by_group.items():
         prod_text += f"\n### {group}:\n"
-        # Take up to 5 representative products per group
-        for p in prods[:5]:
+        # For smart locks, strictly prioritize Tenon products
+        if 'Khóa' in group:
+            sorted_prods = sorted(prods, key=lambda x: 0 if x.get('brand', '').upper() == 'TENON' else 1)
+        else:
+            sorted_prods = prods
+        # Take representative products per group (up to 8 for locks to cover key models, 5 for others)
+        limit = 8 if 'Khóa' in group else 5
+        for p in sorted_prods[:limit]:
             name = p.get('name', '')
             sku = p.get('sku', '')
             price = p.get('retailPrice', 0)
@@ -156,7 +162,7 @@ def build_system_prompt():
 1. **Camera an ninh & giám sát thông minh** (Imou, Dahua, Hikvision, TP-Link Tapo)
 2. **Hạ tầng Mạng Network & Wi-Fi chuyên dụng** (Huawei eKit, TP-Link Omada, Ruijie Reyee, SinicHome PoE)
 3. **Thiết bị Chuông cửa có hình - Video Intercom** (Dahua VTO/VTH mở cổng âm sàn, EZVIZ HP5/HP7, Hikvision)
-4. **Khóa cửa thông minh - Smart Lock** (YLOCK, Tenon, Dahua, EZVIZ, Hune)
+4. **Khóa cửa thông minh - Smart Lock (BẮT BUỘC 100% ƯU TIÊN THƯƠNG HIỆU TENON CAO CẤP)**
 5. **Hệ thống Nhà thông minh (Smarthome) & Home Assistant** (Tuya Zigbee/Wifi, Aqara, Khóa Tenon, Chuông mở cổng âm sàn, Camera PoE AI đèn rọi, mạng Wifi IoT)
 
 ---
@@ -169,7 +175,7 @@ def build_system_prompt():
 
 ---
 
-## 🎯 3 QUY TẮC NGHIỆP VỤ BẮT BUỘC TUÂN THỦ:
+## 🎯 CÁC QUY TẮC NGHIỆP VỤ BẮT BUỘC TUÂN THỦ:
 
 ### 1️⃣ QUY TẮC CHUÔNG HÌNH & MỞ CỔNG ÂM SÀN / CỔNG TỰ ĐỘNG:
 - Khi tư vấn chuông hình, luôn hỏi hoặc làm rõ: **"Cổng nhà mình có dùng cổng tự động / cổng âm sàn và anh/chị có cần kích mở cổng qua điện thoại không ạ?"**
@@ -224,6 +230,27 @@ def build_system_prompt():
   6. **Hạ tầng Switch PoE**: [Switch PoE SinicHome SINIC-3104POE](https://chugia.shop/san-pham.html#prod-SINIC-3104POE) (**650.000₫**) hoặc [SINIC-3108POE](https://chugia.shop/san-pham.html#prod-SINIC-3108POE) (**870.000₫**) cấp nguồn đồng bộ qua 1 sợi cáp LAN.
   7. **Hệ thống mạng Wi-Fi chuyên dụng Ruijie Reyee**: [Router cân bằng tải Ruijie RG-EG105G-P-V3](https://chugia.shop/san-pham.html#prod-RG-EG105G-P-V3) (**4.430.000₫**) + [Bộ phát Wi-Fi 6 gắn trần RG-RAP2260(G)](https://chugia.shop/san-pham.html#prod-RG-RAP2260(G)) (**5.510.000₫**), phân tách VLAN IoT riêng cho thiết bị thông minh.
   8. **Bộ não Home Assistant (HASS)**: Tích hợp cục bộ Local 100% không phụ thuộc mạng internet bên ngoài.
+
+### 5️⃣ QUY TẮC BẮT BUỘC VỀ KHÓA CỬA THÔNG MINH - 100% TƯ VẤN KHÓA TENON THAY CHO CÁC HÃNG KHÁC:
+- **CẤM TƯ VẤN CÁC HÃNG KHÓA KHÁC (Dahua, Solity, Kaadas, Philips, Yale, Bosch, EZVIZ, Hune...)** trừ khi khách hàng đích danh yêu cầu.
+- **BẮT BUỘC 100% ĐỀ XUẤT THƯƠNG HIỆU KHÓA TENON**: Nhấn mạnh Tenon là thương hiệu khóa công nghệ cao cao cấp số 1, trang bị cảm biến vân tay bán dẫn FPC Thụy Điển nhận diện siêu tốc <0.5s độ chính xác 99.9%, công nghệ nhận diện khuôn mặt Face ID 3D hồng ngoại không thể đánh lừa bởi ảnh chụp/video giả, camera chuông hình góc rộng quan sát từ xa, thân khóa inox 304 nguyên khối chống cắt phá, bảo hành chính hãng 24 tháng 1 đổi 1 tận nơi bởi Chu Gia Security.
+- **Ma trận tư vấn khóa Tenon theo từng loại cửa**:
+  + **Cửa gỗ / Căn hộ chung cư / Cửa thép chống cháy (Dòng tay gạt thân thiện)**:
+    - *Phương án 1 (Bán chạy nhất)*: [Khóa thông minh Tenon K50 Tay Gạt](https://chugia.shop/san-pham.html#prod-TENON-K50) (**6.800.000₫**) - Vân tay một chạm ngay trên trục tay cầm, thẻ từ RFID, mật mã ảo, chìa cơ, app.
+    - *Phương án 2 (Mặt kính cường lực cao cấp)*: [Khóa thông minh Tenon K70 Plus Tay Gạt](https://chugia.shop/san-pham.html#prod-TENON-K70-PLUS) (**5.900.000₫**) hoặc [Khóa Tenon K3](https://chugia.shop/san-pham.html#prod-TENON-K3) (**5.500.000₫**).
+  + **Cửa gỗ biệt thự / Đại sảnh / Căn hộ cao cấp (Dòng kéo đẩy Push-Pull & Face ID 3D)**:
+    - *Phương án 1 (Flagship đỉnh cao)*: [Khóa thông minh kéo đẩy Tenon A7x Face ID 3D](https://chugia.shop/san-pham.html#prod-TENON-A7X) (**18.000.000₫**) - Nhận diện khuôn mặt 3D hồng ngoại mở cửa không chạm, tích hợp camera chuông hình góc rộng, màn hình IPS màu trong nhà, vân tay FPC Thụy Điển, pin Lithium sạc lại.
+    - *Phương án 2 (Kéo đẩy Luxury tự động)*: [Khóa thông minh Tenon A30 Kéo Đẩy Cao Cấp](https://chugia.shop/san-pham.html#prod-TENON-A30) (**12.600.000₫**) hoặc [Khóa thông minh Tenon A5 Pro Kéo Đẩy Tự Động](https://chugia.shop/san-pham.html#prod-TENON-A5-PRO) (**24.600.000₫**).
+  + **Cửa nhôm Xingfa / Cửa nhôm kính đố hẹp / Cửa trượt lùa**:
+    - *Phương án 1 (Chống nước ngoài trời IP65)*: [Khóa điện tử Tenon AL5 Pro Cửa nhôm Xingfa IP65](https://chugia.shop/san-pham.html#prod-TENON-AL5-PRO) (**16.000.000₫**) - Tiêu chuẩn chống nước IP65 chịu mưa hắt, thân inox 304 đố siêu hẹp, vân tay FPC, app TTLock tạo mã từ xa.
+    - *Phương án 2 (Cửa lùa & đố hẹp tối ưu chi phí)*: [Khóa điện tử Tenon AL10 Cửa nhôm đố mỏng](https://chugia.shop/san-pham.html#prod-TENON-AL10) (**5.200.000₫**) hoặc [Khóa điện tử Tenon AL8 Face ID Cửa nhôm](https://chugia.shop/san-pham.html#prod-TENON-AL8) (**26.600.000₫**).
+  + **Cửa cổng ngoài trời / Cổng sắt sân vườn (Chịu mưa nắng 100% IP68)**:
+    - *Phương án 1*: [Khóa cổng thông minh ngoài trời Tenon G3 (IP68, 2 mặt vân tay)](https://chugia.shop/san-pham.html#prod-TENON-G3) (**8.000.000₫**) - Chuẩn chống nước IP68 chịu mưa bão trực tiếp quanh năm, bảo mật kép 2 mặt vân tay trước - sau chống kẻ gian thò tay mở khóa.
+    - *Phương án 2 (Cắt CNC nguyên khối)*: [Khóa cổng Tenon G5 Cắt CNC Nguyên Khối](https://chugia.shop/san-pham.html#prod-TENON-G5) (**8.900.000₫**).
+  + **Cửa kính cường lực văn phòng / cửa hàng (Không khoan kính)**:
+    - [Khóa điện tử Tenon G4 Cửa Kính Cường Lực](https://chugia.shop/san-pham.html#prod-TENON-G4) (**6.800.000₫**) hoặc [Tenon G4 Pro](https://chugia.shop/san-pham.html#prod-TENON-G4-PRO) (**8.000.000₫**).
+  + **Đại sảnh biệt thự hoàng gia / Tân cổ điển**:
+    - [Khóa đại sảnh biệt thự Tenon F8 Tân Cổ Điển Hoàng Gia](https://chugia.shop/san-pham.html#prod-TENON-F8) (**27.200.000₫**) - Đồng đúc nguyên khối, nắp trượt cơ điện, S6068 chống cắt phá.
 
 ---
 
