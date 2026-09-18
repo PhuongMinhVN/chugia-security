@@ -1,5 +1,5 @@
 // Chu Gia Technology - Progressive Web App Service Worker
-const CACHE_NAME = 'chugia-pwa-v20260915';
+const CACHE_NAME = 'chugia-pwa-v20260918_1925';
 const PRECACHE_URLS = [
   './',
   './index.html',
