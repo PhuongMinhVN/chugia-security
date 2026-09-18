@@ -29,7 +29,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css?v=20260918_1310">
-  <link rel="stylesheet" href="css/products.css?v=20260918_1745">
+  <link rel="stylesheet" href="css/products.css?v=20260918_1845">
   <link rel="stylesheet" href="css/product-modal.css?v=20260918_1350">
   
   <style>
@@ -217,13 +217,93 @@
       font-size: 0.72rem;
       color: #94a3b8;
       margin-top: 2px;
+    /* Tenon Features Spotlight Responsive */
+    .tenon-pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 36px;
     }
-    @media (max-width: 900px) {
-      .intercom-hero-grid {
+    .tenon-pillar-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .tenon-pillar-card:hover {
+      transform: translateY(-3px);
+      border-color: #38bdf8;
+      box-shadow: 0 10px 24px rgba(2, 132, 199, 0.12);
+    }
+    .tenon-pillar-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .tenon-pillar-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(2, 132, 199, 0.1);
+      color: #0284c7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .tenon-pillar-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: rgba(2, 132, 199, 0.1);
+      color: #0284c7;
+    }
+    .tenon-pillar-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 12px;
+    }
+    .tenon-pillar-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .tenon-pillar-bullets li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.86rem;
+      color: #475569;
+      line-height: 1.4;
+    }
+    .tenon-bullet-dot {
+      color: #0284c7;
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 840px) {
+      .tenon-pillars-grid {
         grid-template-columns: 1fr;
+        gap: 14px;
       }
-      .intercom-hero-title {
-        font-size: 1.9rem;
+      .tenon-pillar-card {
+        padding: 18px 16px;
+      }
+      .tenon-pillar-title {
+        font-size: 1.05rem;
+        margin-bottom: 10px;
+      }
+      .tenon-pillar-bullets li {
+        font-size: 0.84rem;
       }
     }
   </style>
@@ -444,29 +524,73 @@
         <p class="section-desc" style="color: #64748b; font-size: 0.95rem; margin-top: 8px;">Tenon là thương hiệu khóa cửa công nghệ cao dẫn đầu phân khúc an ninh cao cấp, đem lại độ tin cậy vượt trội so với các loại khóa gia công trôi nổi trên thị trường.</p>
       </div>
 
-      <div class="tech-pillars-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px;">
-        <div class="tech-pillar-card" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; padding: 28px;">
-          <div style="width: 46px; height: 46px; border-radius: 12px; background: rgba(2, 132, 199, 0.1); color: #0284c7; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      <!-- Modern Icon-Driven Responsive Grid (Optimized for Mobile) -->
+      <div class="tenon-pillars-grid">
+        <!-- Card 1: Face ID 3D -->
+        <div class="tenon-pillar-card">
+          <div class="tenon-pillar-header">
+            <div class="tenon-pillar-icon" title="Face ID 3D Biometric">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 8V6a2 2 0 0 1 2-2h2"></path>
+                <path d="M16 4h2a2 2 0 0 1 2 2v2"></path>
+                <path d="M20 16v2a2 2 0 0 1-2 2h-2"></path>
+                <path d="M8 20H6a2 2 0 0 1-2-2v-2"></path>
+                <circle cx="12" cy="11" r="3"></circle>
+                <path d="M8.5 16.5c1-1 2.2-1.5 3.5-1.5s2.5.5 3.5 1.5"></path>
+              </svg>
+            </div>
+            <span class="tenon-pillar-badge">&lt; 0.5s Siêu Tốc</span>
           </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Nhận Diện Khuôn Mặt Face ID 3D</h3>
-          <p style="color: #64748b; font-size: 0.88rem; line-height: 1.6;">Cảm biến hồng ngoại 3D quét cấu trúc xương mặt theo thời gian thực, mở cửa rảnh tay khi xách đồ. Chống đánh lừa 100% bằng hình ảnh, video hoặc mô hình giả mạo.</p>
+          <h3 class="tenon-pillar-title">Nhận Diện Face ID 3D</h3>
+          <ul class="tenon-pillar-bullets">
+            <li><span class="tenon-bullet-dot">✓</span><span>Quét cấu trúc xương mặt 3D chuẩn xác</span></li>
+            <li><span class="tenon-bullet-dot">✓</span><span>Mở cửa rảnh tay tiện lợi khi xách đồ</span></li>
+            <li><span class="tenon-bullet-dot">✓</span><span>Chống giả mạo 100% bằng hình ảnh &amp; video</span></li>
+          </ul>
         </div>
 
-        <div class="tech-pillar-card" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; padding: 28px;">
-          <div style="width: 46px; height: 46px; border-radius: 12px; background: rgba(2, 132, 199, 0.1); color: #0284c7; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v8"></path><path d="M8 12h8"></path></svg>
+        <!-- Card 2: FPC Fingerprint -->
+        <div class="tenon-pillar-card">
+          <div class="tenon-pillar-header">
+            <div class="tenon-pillar-icon" title="Cảm Biến Vân Tay FPC">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a10 10 0 0 0-6.88 17.26"></path>
+                <path d="M8.56 15.44A6 6 0 0 1 12 6a6 6 0 0 1 6 6v3"></path>
+                <path d="M12 10a2 2 0 0 1 2 2v6"></path>
+                <path d="M9 13.5v3"></path>
+                <path d="M16 19a4 4 0 0 0 .5-2"></path>
+                <path d="M20.2 14.5a9.96 9.96 0 0 0 .8-3.5 10 10 0 0 0-2-6"></path>
+              </svg>
+            </div>
+            <span class="tenon-pillar-badge">FPC Thụy Điển</span>
           </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Cảm Biến Vân Tay Bán Dẫn FPC Thụy Điển</h3>
-          <p style="color: #64748b; font-size: 0.88rem; line-height: 1.6;">Tích hợp chip bảo mật FPC nhận diện siêu nhạy < 0.3s, tự học đường vân tay lão hóa của người lớn tuổi và trẻ nhỏ, chống làm giả dấu vân tay cao su.</p>
+          <h3 class="tenon-pillar-title">Vân Tay Bán Dẫn FPC</h3>
+          <ul class="tenon-pillar-bullets">
+            <li><span class="tenon-bullet-dot">✓</span><span>Nhận diện một chạm siêu nhạy &lt; 0.3s</span></li>
+            <li><span class="tenon-bullet-dot">✓</span><span>Tự học vân tay người lớn tuổi &amp; trẻ nhỏ</span></li>
+            <li><span class="tenon-bullet-dot">✓</span><span>Chống làm giả tuyệt đối với vân tay cao su</span></li>
+          </ul>
         </div>
 
-        <div class="tech-pillar-card" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; padding: 28px;">
-          <div style="width: 46px; height: 46px; border-radius: 12px; background: rgba(2, 132, 199, 0.1); color: #0284c7; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+        <!-- Card 3: Intercom & Gate Relay -->
+        <div class="tenon-pillar-card">
+          <div class="tenon-pillar-header">
+            <div class="tenon-pillar-icon" title="Đồng Bộ Chuông Mở Cổng">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+                <circle cx="12" cy="10" r="2"></circle>
+              </svg>
+            </div>
+            <span class="tenon-pillar-badge">Mở Cổng Tự Động</span>
           </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Đồng Bộ Mở Khóa &amp; Cổng Âm Sàn</h3>
-          <p style="color: #64748b; font-size: 0.88rem; line-height: 1.6;">Khách nhấn chuông cổng ngoài, màn hình trong nhà phát video HD trực tiếp. Chủ nhà bấm 1 nút trên màn hình hoặc smartphone là cổng tự động mở đón khách vào.</p>
+          <h3 class="tenon-pillar-title">Đồng Bộ Chuông &amp; Cổng</h3>
+          <ul class="tenon-pillar-bullets">
+            <li><span class="tenon-bullet-dot">✓</span><span>Màn hình đàm thoại 2 chiều Full HD sắc nét</span></li>
+            <li><span class="tenon-bullet-dot">✓</span><span>1 Nút bấm mở cổng tự động &amp; khóa cửa</span></li>
+            <li><span class="tenon-bullet-dot">✓</span><span>Đàm thoại và mở cửa từ xa qua điện thoại</span></li>
+          </ul>
         </div>
       </div>
     </div>

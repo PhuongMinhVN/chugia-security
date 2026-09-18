@@ -29,7 +29,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css?v=20260918_1310">
-  <link rel="stylesheet" href="css/products.css?v=20260918_1350">
+  <link rel="stylesheet" href="css/products.css?v=20260918_1845">
   <link rel="stylesheet" href="css/product-modal.css?v=20260918_1350">
   <link rel="stylesheet" href="css/landing.css?v=20260918_1310">
 
@@ -765,9 +765,88 @@
     .moes-pill.highlight {
       background: rgba(16, 185, 129, 0.15);
       border-color: rgba(16, 185, 129, 0.4);
-      color: #6ee7b7;
+    .moes-card-sku {
+      font-size: 0.76rem;
+      color: #94a3b8;
+      margin-bottom: 6px;
     }
-
+    .moes-card-sku strong {
+      color: #38bdf8;
+      font-weight: 700;
+    }
+    .moes-card-price-box {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin: 8px 0 10px;
+      padding: 8px 10px;
+      background: rgba(15, 23, 42, 0.6);
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .moes-price-current {
+      font-size: 1.22rem;
+      font-weight: 800;
+      color: #34d399;
+    }
+    .moes-price-old {
+      font-size: 0.82rem;
+      color: #64748b;
+      text-decoration: line-through;
+    }
+    .moes-discount-badge {
+      margin-left: auto;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #f43f5e;
+      background: rgba(244, 63, 94, 0.15);
+      border: 1px solid rgba(244, 63, 94, 0.3);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .moes-card-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .btn-moes-detail {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: rgba(168, 85, 247, 0.15);
+      border: 1px solid rgba(168, 85, 247, 0.4);
+      color: #e9d5ff;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-moes-detail:hover {
+      background: rgba(168, 85, 247, 0.3);
+      border-color: #a855f7;
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+    .btn-moes-order {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #0284c7;
+      color: #ffffff;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+    .btn-moes-order:hover {
+      background: #0369a1;
+    }
   </style>
 </head>
 <body>
@@ -1049,11 +1128,17 @@
       <div class="moes-grid-4">
         <!-- Card 1: Star Feather US Chữ Nhật -->
         <div class="moes-card">
-          <div class="moes-card-img-wrap">
+          <div class="moes-card-img-wrap" style="cursor: pointer;" onclick="window.viewComboProductDetail(2100043, 'MOES-WS-SF-US1-WH-MS')" title="Bấm xem chi tiết MOES Star Feather US">
             <img src="https://cdn.shopify.com/s/files/1/0095/4079/6497/files/ZigBeeSmartSwitchPushButtonWithNeutralLightScene2in1SwitchUSVersion-1.jpg?v=1750670642" alt="Công tắc cơ MOES Star Feather US Chữ Nhật" class="moes-card-img" />
             <span class="moes-card-badge">CHỮ NHẬT US (120x72mm)</span>
           </div>
-          <h3 class="moes-card-title">MOES Star Feather US (Chữ Nhật)</h3>
+          <div class="moes-card-sku">Mã SKU: <strong>MOES-WS-SF-US1-WH-MS</strong></div>
+          <h3 class="moes-card-title" style="cursor: pointer;" onclick="window.viewComboProductDetail(2100043, 'MOES-WS-SF-US1-WH-MS')">MOES Star Feather US (Chữ Nhật)</h3>
+          <div class="moes-card-price-box">
+            <div class="moes-price-current">1.250.000 ₫</div>
+            <div class="moes-price-old">1.520.000 ₫</div>
+            <span class="moes-discount-badge">-18%</span>
+          </div>
           <p class="moes-card-desc">
             Phím cơ Push Button nảy êm 2in1 (Đèn & Ngữ cảnh), viền LED chuyển động Flowing Backlight. Khớp 100% đế âm chữ nhật Sino/Panasonic thông dụng tại Việt Nam.
           </p>
@@ -1062,15 +1147,30 @@
             <span class="moes-pill">1 Nút / 2 Nút / 3 Nút Bấm</span>
             <span class="moes-pill">Zigbee 3.0 / Matter WiFi</span>
           </div>
+          <div class="moes-card-actions">
+            <button type="button" class="btn-moes-detail" onclick="window.viewComboProductDetail(2100043, 'MOES-WS-SF-US1-WH-MS')">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              <span>Xem Chi Tiết</span>
+            </button>
+            <a href="https://zalo.me/0941204125?text=Toi%20quan%20tam%20Cong%20tac%20co%20MOES%20Star%20Feather%20US%20MOES-WS-SF-US1-WH-MS" target="_blank" rel="noopener noreferrer" class="btn-moes-order" title="Tư vấn Zalo">
+              <span>Zalo</span>
+            </a>
+          </div>
         </div>
 
         <!-- Card 2: Star Feather EU Vuông -->
         <div class="moes-card">
-          <div class="moes-card-img-wrap">
+          <div class="moes-card-img-wrap" style="cursor: pointer;" onclick="window.viewComboProductDetail(2100045, 'MOES-WS-SF-EU1-WH-MS')" title="Bấm xem chi tiết MOES Star Feather EU">
             <img src="https://cdn.shopify.com/s/files/1/0095/4079/6497/files/StarFeathergSeriesZigBeeSmartSwitchPushButtonWithNeutralLightScene2in1SwitchEUVersion-1.jpg?v=1750650935" alt="Công tắc cơ MOES Star Feather EU Vuông" class="moes-card-img" />
             <span class="moes-card-badge">CHUẨN VUÔNG EU (86x86mm)</span>
           </div>
-          <h3 class="moes-card-title">MOES Star Feather EU (Chuẩn Vuông)</h3>
+          <div class="moes-card-sku">Mã SKU: <strong>MOES-WS-SF-EU1-WH-MS</strong></div>
+          <h3 class="moes-card-title" style="cursor: pointer;" onclick="window.viewComboProductDetail(2100045, 'MOES-WS-SF-EU1-WH-MS')">MOES Star Feather EU (Chuẩn Vuông)</h3>
+          <div class="moes-card-price-box">
+            <div class="moes-price-current">1.250.000 ₫</div>
+            <div class="moes-price-old">1.520.000 ₫</div>
+            <span class="moes-discount-badge">-18%</span>
+          </div>
           <p class="moes-card-desc">
             Thiết kế chuẩn vuông Châu Âu 86x86mm sang trọng, mặt kính mờ chống chói Anti-Glare, phím cơ đàn hồi nhạy bén, phối hợp hoàn hảo cho căn hộ cao cấp & biệt thự.
           </p>
@@ -1079,15 +1179,30 @@
             <span class="moes-pill">1 Nút / 2 Nút / 3 Nút Bấm</span>
             <span class="moes-pill">Đế âm vuông 86 tiêu chuẩn</span>
           </div>
+          <div class="moes-card-actions">
+            <button type="button" class="btn-moes-detail" onclick="window.viewComboProductDetail(2100045, 'MOES-WS-SF-EU1-WH-MS')">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              <span>Xem Chi Tiết</span>
+            </button>
+            <a href="https://zalo.me/0941204125?text=Toi%20quan%20tam%20Cong%20tac%20co%20MOES%20Star%20Feather%20EU%20MOES-WS-SF-EU1-WH-MS" target="_blank" rel="noopener noreferrer" class="btn-moes-order" title="Tư vấn Zalo">
+              <span>Zalo</span>
+            </a>
+          </div>
         </div>
 
         <!-- Card 3: Star Grand Matter Full-Touch Cơ -->
         <div class="moes-card">
-          <div class="moes-card-img-wrap">
+          <div class="moes-card-img-wrap" style="cursor: pointer;" onclick="window.viewComboProductDetail(2100015, 'MWS-SG-US1-WH-MS')" title="Bấm xem chi tiết MOES Star Grand Matter">
             <img src="https://cdn.shopify.com/s/files/1/0095/4079/6497/files/MOESMatterWiFiSmartSwitch_StarGrandSeriesFull-Touch10A2200WPowerLoad_NeutralRequired.png?v=1778837054" alt="Công tắc MOES Star Grand Matter Full-Touch" class="moes-card-img" />
             <span class="moes-card-badge">STAR GRAND MATTER</span>
           </div>
-          <h3 class="moes-card-title">MOES Star Grand Full-Touch 10A</h3>
+          <div class="moes-card-sku">Mã SKU: <strong>MWS-SG-US1-WH-MS</strong></div>
+          <h3 class="moes-card-title" style="cursor: pointer;" onclick="window.viewComboProductDetail(2100015, 'MWS-SG-US1-WH-MS')">MOES Star Grand Full-Touch 10A</h3>
+          <div class="moes-card-price-box">
+            <div class="moes-price-current">1.280.000 ₫</div>
+            <div class="moes-price-old">1.560.000 ₫</div>
+            <span class="moes-discount-badge">-18%</span>
+          </div>
           <p class="moes-card-desc">
             Phím bấm cơ phẳng Full-Touch chịu tải lớn 10A 2200W, kết nối trực tiếp giao thức Matter & WiFi Tuya, điều khiển mượt mà qua Apple Home, Google & Home Assistant.
           </p>
@@ -1096,15 +1211,30 @@
             <span class="moes-pill">Tải 10A 2200W</span>
             <span class="moes-pill">Chuẩn Matter Quốc Tế</span>
           </div>
+          <div class="moes-card-actions">
+            <button type="button" class="btn-moes-detail" onclick="window.viewComboProductDetail(2100015, 'MWS-SG-US1-WH-MS')">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              <span>Xem Chi Tiết</span>
+            </button>
+            <a href="https://zalo.me/0941204125?text=Toi%20quan%20tam%20Cong%20tac%20MOES%20Star%20Grand%20Matter%20MWS-SG-US1-WH-MS" target="_blank" rel="noopener noreferrer" class="btn-moes-order" title="Tư vấn Zalo">
+              <span>Zalo</span>
+            </a>
+          </div>
         </div>
 
         <!-- Card 4: Smart Center Control Panel Physical Buttons -->
         <div class="moes-card">
-          <div class="moes-card-img-wrap">
+          <div class="moes-card-img-wrap" style="cursor: pointer;" onclick="window.viewComboProductDetail(2100041, 'MOES-CCP-S05-EU-GY-MS')" title="Bấm xem chi tiết MOES Smart Panel 3.5">
             <img src="https://cdn.shopify.com/s/files/1/0095/4079/6497/files/3.5-inSmartCenterControlPanel-1.jpg?v=1753335294" alt="Màn hình MOES Smart Center 3 Phím Cơ Vật Lý" class="moes-card-img" />
             <span class="moes-card-badge" style="background: rgba(245, 158, 11, 0.85); border-color: #f59e0b;">3 NÚT BẤM CƠ VẬT LÝ</span>
           </div>
-          <h3 class="moes-card-title">MOES Smart Panel 3.5" (3 Phím Cơ)</h3>
+          <div class="moes-card-sku">Mã SKU: <strong>MOES-CCP-S05-EU-GY-MS</strong></div>
+          <h3 class="moes-card-title" style="cursor: pointer;" onclick="window.viewComboProductDetail(2100041, 'MOES-CCP-S05-EU-GY-MS')">MOES Smart Panel 3.5" (3 Phím Cơ)</h3>
+          <div class="moes-card-price-box">
+            <div class="moes-price-current">5.710.000 ₫</div>
+            <div class="moes-price-old">6.940.000 ₫</div>
+            <span class="moes-discount-badge">-18%</span>
+          </div>
           <p class="moes-card-desc">
             Màn hình thông minh trung tâm 3.5" tích hợp 3 nút bấm cơ vật lý (Physical Buttons) màu Xám Kim Loại cực kỳ tiện lợi cho người lớn tuổi và trẻ nhỏ thao tác nhanh.
           </p>
@@ -1112,6 +1242,15 @@
             <span class="moes-pill highlight">🔘 Màu Xám Kim Loại</span>
             <span class="moes-pill">3 Relays Phím Cơ</span>
             <span class="moes-pill">BLE Sigmesh Hub Built-in</span>
+          </div>
+          <div class="moes-card-actions">
+            <button type="button" class="btn-moes-detail" onclick="window.viewComboProductDetail(2100041, 'MOES-CCP-S05-EU-GY-MS')">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              <span>Xem Chi Tiết</span>
+            </button>
+            <a href="https://zalo.me/0941204125?text=Toi%20quan%20tam%20Man%20hinh%20MOES%20Smart%20Panel%203.5%20MOES-CCP-S05-EU-GY-MS" target="_blank" rel="noopener noreferrer" class="btn-moes-order" title="Tư vấn Zalo">
+              <span>Zalo</span>
+            </a>
           </div>
         </div>
       </div>
