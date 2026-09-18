@@ -556,7 +556,7 @@
 /* Action Buttons */
 .modal-actions {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 8px;
   margin-top: auto;
   width: 100%;
@@ -564,8 +564,8 @@
 }
 
 .btn-modal-chugia {
-  flex: 1 1 170px;
-  min-width: 0;
+  width: 100%;
+  flex: 1 1 100%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -573,8 +573,8 @@
   background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
   color: #ffffff !important;
   font-weight: 700;
-  font-size: 0.84rem;
-  padding: 10px 14px;
+  font-size: 0.9rem;
+  padding: 12px 14px;
   border-radius: 8px;
   text-decoration: none !important;
   transition: all 0.25s ease;
@@ -592,17 +592,17 @@
 }
 
 .btn-modal-cart {
-  flex: 1 1 170px;
-  min-width: 0;
+  width: 100%;
+  flex: 1 1 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 10px 14px;
+  padding: 12px 14px;
   border-radius: 8px;
-  background: #0068ff;
+  background: linear-gradient(135deg, #0084ff 0%, #0056b3 100%);
   color: #ffffff;
-  font-size: 0.84rem;
+  font-size: 0.92rem;
   font-weight: 700;
   border: none;
   cursor: pointer;
@@ -610,15 +610,15 @@
   text-decoration: none;
   white-space: nowrap;
   box-sizing: border-box;
+  box-shadow: 0 4px 14px rgba(0, 132, 255, 0.3);
 }
 
 .btn-modal-cart:hover {
-  opacity: 0.92;
+  opacity: 0.95;
   transform: translateY(-1px);
 }
 
 .modal-actions-subgroup {
-  flex: 1 1 100%;
   display: flex;
   gap: 6px;
   width: 100%;
