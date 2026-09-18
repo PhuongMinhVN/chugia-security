@@ -655,6 +655,107 @@
   window.RUIJIE_COMBOS = window.ALL_WIFI_COMBOS.ruijie.combos;
   window.HUAWEI_COMBOS = window.ALL_WIFI_COMBOS.huawei.combos;
 
+  // Base share URL helper (tự động dùng https://chugia.shop khi ở offline/local hoặc dùng origin khi deploy)
+  function getShareBaseUrl(pageFileName) {
+    const isHttp = window.location.protocol.startsWith('http');
+    const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    if (!isHttp || isLocalhost) {
+      return `https://chugia.shop/${pageFileName}`;
+    }
+    const basePath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
+    return `${window.location.origin}${basePath}${pageFileName}`;
+  }
+
+  function getWifiComboShareUrl(brandKey, comboId) {
+    const base = getShareBaseUrl('combo-wifi.html');
+    return `${base}?brand=${encodeURIComponent(brandKey)}&combo=${encodeURIComponent(comboId)}`;
+  }
+
+  function getIntercomComboShareUrl(brandKey, comboId) {
+    const base = getShareBaseUrl('san-pham.html');
+    return `${base}?intercomBrand=${encodeURIComponent(brandKey)}&intercomCombo=${encodeURIComponent(comboId)}#intercomCombosSection`;
+  }
+
+  function showComboShareToast(title, url) {
+    let toast = document.getElementById('comboShareToast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'comboShareToast';
+      toast.className = 'combo-share-toast';
+      document.body.appendChild(toast);
+    }
+
+    toast.innerHTML = `
+      <div class="toast-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      </div>
+      <div class="toast-body">
+        <div class="toast-title">Đã sao chép link combo!</div>
+        <div class="toast-desc">${title ? title + ' — ' : ''}Sẵn sàng dán lên Facebook, Zalo, Messenger để chia sẻ.</div>
+      </div>
+    `;
+
+    toast.classList.add('show');
+    clearTimeout(toast._timer);
+    toast._timer = setTimeout(() => {
+      toast.classList.remove('show');
+    }, 3200);
+  }
+
+  window.copyComboShareLink = function(url, title, btnEl) {
+    navigator.clipboard.writeText(url).then(() => {
+      if (btnEl) {
+        const origHtml = btnEl.innerHTML;
+        btnEl.classList.add('copied');
+        btnEl.innerHTML = `
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span>Đã chép!</span>
+        `;
+        setTimeout(() => {
+          btnEl.classList.remove('copied');
+          btnEl.innerHTML = origHtml;
+        }, 2000);
+      }
+      showComboShareToast(title, url);
+    }).catch(() => {
+      const tmpInput = document.createElement('input');
+      tmpInput.value = url;
+      document.body.appendChild(tmpInput);
+      tmpInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tmpInput);
+      if (btnEl) {
+        const origHtml = btnEl.innerHTML;
+        btnEl.classList.add('copied');
+        btnEl.innerHTML = `
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span>Đã chép!</span>
+        `;
+        setTimeout(() => {
+          btnEl.classList.remove('copied');
+          btnEl.innerHTML = origHtml;
+        }, 2000);
+      }
+      showComboShareToast(title, url);
+    });
+  };
+
+  window.triggerNativeComboShare = function(url, title, subText) {
+    if (navigator.share) {
+      navigator.share({
+        title: `${title} | Chu Gia Security`,
+        text: `${title} - ${subText || 'Giải pháp trọn gói chính hãng tại Chu Gia Security'}`,
+        url: url
+      }).catch(err => {
+        if (err.name !== 'AbortError') {
+          window.copyComboShareLink(url, title);
+        }
+      });
+    } else {
+      window.copyComboShareLink(url, title);
+    }
+  };
+
   let currentActiveWifiBrand = 'omada';
   let currentActiveWifiCombo = 'home';
 
@@ -755,12 +856,20 @@
       `;
     });
 
+    const shareUrl = getWifiComboShareUrl(brandKey, combo.id);
+
     container.innerHTML = `
       <div class="omada-combo-card" data-brand="${brandKey}" data-combo="${combo.id}">
         <!-- Left / Main Column: Overview & Equipment List -->
         <div class="combo-main-col">
           <div class="combo-header-box">
-            <span class="combo-card-badge">${combo.badge}</span>
+            <div class="combo-header-top-row">
+              <span class="combo-card-badge">${combo.badge}</span>
+              <button type="button" class="btn-combo-header-share" onclick="window.copyComboShareLink('${shareUrl}', '${combo.title.replace(/'/g, "\\'")}', this)" title="Sao chép link chia sẻ combo này">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                <span>Chia sẻ combo</span>
+              </button>
+            </div>
             <h3 class="combo-card-title">${combo.title}</h3>
             <p class="combo-card-subtitle">${combo.subtitle}</p>
           </div>
@@ -836,16 +945,54 @@
                 <span>${brandData.exploreText}</span>
               </button>
             </div>
+
+            <!-- Social Share Box -->
+            <div class="combo-share-box">
+              <div class="combo-share-head">
+                <span class="combo-share-label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                  <span>Link chia sẻ combo:</span>
+                </span>
+                <span class="combo-share-hint">Gửi khách hàng hoặc đăng MXH</span>
+              </div>
+              
+              <div class="combo-share-input-row">
+                <input type="text" class="combo-share-input" readonly value="${shareUrl}" onclick="this.select()" title="Bấm để chọn toàn bộ link" />
+                <button type="button" class="btn-combo-copy-link" onclick="window.copyComboShareLink('${shareUrl}', '${combo.title.replace(/'/g, "\\'")}', this)" title="Sao chép link chia sẻ">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Sao chép</span>
+                </button>
+              </div>
+
+              <div class="combo-share-social-grid">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}" target="_blank" rel="noopener noreferrer" class="btn-combo-social btn-social-fb" title="Chia sẻ bài viết lên Facebook">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                  <span>Facebook</span>
+                </a>
+                <a href="https://zalo.me/share?url=${encodeURIComponent(shareUrl)}" target="_blank" rel="noopener noreferrer" class="btn-combo-social btn-social-zalo" title="Gửi link qua Zalo">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.08L2 22l5.07-1.33C8.52 21.52 10.21 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm1 14.5h-2v-2h2v2zm0-4h-2V7h2v5.5z"/></svg>
+                  <span>Zalo</span>
+                </a>
+                <button type="button" class="btn-combo-social btn-social-native" onclick="window.triggerNativeComboShare('${shareUrl}', '${combo.title.replace(/'/g, "\\'")}', '${combo.savingsText.replace(/'/g, "\\'")}')" title="Chia sẻ qua ứng dụng khác">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+                  <span>Chia sẻ</span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     `;
   }
 
-  function switchWifiBrand(brandKey) {
+  function switchWifiBrand(brandKey, comboKey) {
     if (!window.ALL_WIFI_COMBOS[brandKey]) brandKey = 'omada';
     currentActiveWifiBrand = brandKey;
-    currentActiveWifiCombo = 'home';
+    if (comboKey && window.ALL_WIFI_COMBOS[brandKey].combos[comboKey]) {
+      currentActiveWifiCombo = comboKey;
+    } else {
+      currentActiveWifiCombo = 'home';
+    }
 
     // Update brand selector buttons
     const brandNav = document.getElementById('wifiBrandNav');
@@ -857,6 +1004,16 @@
 
     renderWifiBrandTabs(brandKey);
     renderWifiCombo(brandKey, currentActiveWifiCombo);
+
+    // Sync URL params without page reload
+    try {
+      const url = new URL(window.location.href);
+      if (url.protocol.startsWith('http')) {
+        url.searchParams.set('brand', brandKey);
+        url.searchParams.set('combo', currentActiveWifiCombo);
+        window.history.replaceState(null, '', url.pathname + url.search);
+      }
+    } catch (e) {}
   }
 
   function switchWifiCombo(comboKey) {
@@ -868,6 +1025,16 @@
       });
     }
     renderWifiCombo(currentActiveWifiBrand, comboKey);
+
+    // Sync URL params without page reload
+    try {
+      const url = new URL(window.location.href);
+      if (url.protocol.startsWith('http')) {
+        url.searchParams.set('brand', currentActiveWifiBrand);
+        url.searchParams.set('combo', comboKey);
+        window.history.replaceState(null, '', url.pathname + url.search);
+      }
+    } catch (e) {}
   }
 
   function initWifiCombos() {
@@ -893,8 +1060,28 @@
       });
     }
 
-    renderWifiBrandTabs('omada');
-    renderWifiCombo('omada', 'home');
+    // Kiểm tra URL params ngay khi init để không bị flash giao diện
+    let initBrand = 'omada';
+    let initCombo = 'home';
+    try {
+      const p = new URLSearchParams(window.location.search);
+      const b = (p.get('brand') || p.get('wifiBrand') || '').toLowerCase();
+      if (['omada', 'ruijie', 'huawei'].includes(b)) initBrand = b;
+      const c = (p.get('combo') || '').toLowerCase();
+      if (window.ALL_WIFI_COMBOS[initBrand]?.combos[c]) initCombo = c;
+    } catch (e) {}
+
+    currentActiveWifiBrand = initBrand;
+    currentActiveWifiCombo = initCombo;
+
+    if (brandNav) {
+      brandNav.querySelectorAll('.wifi-brand-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-brand') === initBrand);
+      });
+    }
+
+    renderWifiBrandTabs(initBrand);
+    renderWifiCombo(initBrand, initCombo);
   }
 
   function stepWifiComboQty(brandKey, comboKey, itemId, delta) {
@@ -1960,8 +2147,11 @@
     }
   }
 };
+
   let currentActiveIntercomBrand = 'hikvision';
   let currentActiveIntercomCombo = 'apartment';
+
+
 
   function renderIntercomBrandTabs(brandKey) {
     const tabsNav = document.getElementById('intercomTabsNav');
@@ -1995,6 +2185,8 @@
     const combo = brandData.combos[comboKey] || brandData.combos.apartment;
     currentActiveIntercomBrand = brandKey;
     currentActiveIntercomCombo = comboKey;
+
+    const shareUrl = getIntercomComboShareUrl(brandKey, combo.id);
 
     // Update section titles & header
     const badgeTextEl = document.getElementById('intercomBadgeText');
@@ -2067,7 +2259,13 @@
         <!-- Left / Main Column: Overview & Equipment List -->
         <div class="combo-main-col">
           <div class="combo-header-box">
-            <span class="combo-card-badge">${combo.badge}</span>
+            <div class="combo-header-top-row">
+              <span class="combo-card-badge">${combo.badge}</span>
+              <button type="button" class="btn-combo-header-share" onclick="window.copyComboShareLink('${shareUrl}', '${combo.title.replace(/'/g, "\\'")}', this)" title="Sao chép link chia sẻ combo này">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                <span>Chia sẻ combo</span>
+              </button>
+            </div>
             <h3 class="combo-card-title">${combo.title}</h3>
             <p class="combo-card-subtitle">${combo.subtitle}</p>
           </div>
@@ -2143,16 +2341,54 @@
                 <span>${brandData.exploreText}</span>
               </button>
             </div>
+
+            <!-- Social Share Box -->
+            <div class="combo-share-box">
+              <div class="combo-share-head">
+                <span class="combo-share-label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                  <span>Link chia sẻ combo:</span>
+                </span>
+                <span class="combo-share-hint">Gửi khách hàng hoặc đăng MXH</span>
+              </div>
+              
+              <div class="combo-share-input-row">
+                <input type="text" class="combo-share-input" readonly value="${shareUrl}" onclick="this.select()" title="Bấm để chọn toàn bộ link" />
+                <button type="button" class="btn-combo-copy-link" onclick="window.copyComboShareLink('${shareUrl}', '${combo.title.replace(/'/g, "\\'")}', this)" title="Sao chép link chia sẻ">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Sao chép</span>
+                </button>
+              </div>
+
+              <div class="combo-share-social-grid">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}" target="_blank" rel="noopener noreferrer" class="btn-combo-social btn-social-fb" title="Chia sẻ bài viết lên Facebook">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                  <span>Facebook</span>
+                </a>
+                <a href="https://zalo.me/share?url=${encodeURIComponent(shareUrl)}" target="_blank" rel="noopener noreferrer" class="btn-combo-social btn-social-zalo" title="Gửi link qua Zalo">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.08L2 22l5.07-1.33C8.52 21.52 10.21 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm1 14.5h-2v-2h2v2zm0-4h-2V7h2v5.5z"/></svg>
+                  <span>Zalo</span>
+                </a>
+                <button type="button" class="btn-combo-social btn-social-native" onclick="window.triggerNativeComboShare('${shareUrl}', '${combo.title.replace(/'/g, "\\'")}', '${combo.savingsText.replace(/'/g, "\\'")}')" title="Chia sẻ qua ứng dụng khác">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+                  <span>Chia sẻ</span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     `;
   }
 
-  function switchIntercomBrand(brandKey) {
+  function switchIntercomBrand(brandKey, comboKey) {
     if (!window.ALL_INTERCOM_COMBOS[brandKey]) brandKey = 'hikvision';
     currentActiveIntercomBrand = brandKey;
-    currentActiveIntercomCombo = 'apartment';
+    if (comboKey && window.ALL_INTERCOM_COMBOS[brandKey].combos[comboKey]) {
+      currentActiveIntercomCombo = comboKey;
+    } else {
+      currentActiveIntercomCombo = 'apartment';
+    }
 
     // Update brand selector buttons
     const brandNav = document.getElementById('intercomBrandNav');
@@ -2164,6 +2400,16 @@
 
     renderIntercomBrandTabs(brandKey);
     renderIntercomCombo(brandKey, currentActiveIntercomCombo);
+
+    // Sync URL params without page reload
+    try {
+      const url = new URL(window.location.href);
+      if (url.protocol.startsWith('http')) {
+        url.searchParams.set('intercomBrand', brandKey);
+        url.searchParams.set('intercomCombo', currentActiveIntercomCombo);
+        window.history.replaceState(null, '', url.pathname + url.search);
+      }
+    } catch (e) {}
   }
 
   function switchIntercomCombo(comboKey) {
@@ -2175,6 +2421,16 @@
       });
     }
     renderIntercomCombo(currentActiveIntercomBrand, comboKey);
+
+    // Sync URL params without page reload
+    try {
+      const url = new URL(window.location.href);
+      if (url.protocol.startsWith('http')) {
+        url.searchParams.set('intercomBrand', currentActiveIntercomBrand);
+        url.searchParams.set('intercomCombo', comboKey);
+        window.history.replaceState(null, '', url.pathname + url.search);
+      }
+    } catch (e) {}
   }
 
   function stepIntercomComboQty(brandKey, comboKey, itemId, delta) {
@@ -2419,55 +2675,87 @@
           setTimeout(() => setCategory(cid), 150);
         }
       }
-      // Xử lý tham số wifiBrand cho combo tab
+      // Xử lý tham số wifiBrand hoặc brand cho combo Wi-Fi
       const wifiBrandParam = urlParams.get('wifiBrand');
+      const brandParam = urlParams.get('brand');
+      const comboParam = urlParams.get('combo');
+
+      let targetWifiBrand = null;
       if (wifiBrandParam && ['omada', 'ruijie', 'huawei'].includes(wifiBrandParam.toLowerCase())) {
-        setTimeout(() => switchWifiBrand(wifiBrandParam.toLowerCase()), 100);
+        targetWifiBrand = wifiBrandParam.toLowerCase();
+      } else if (brandParam && ['omada', 'ruijie', 'huawei'].includes(brandParam.toLowerCase())) {
+        targetWifiBrand = brandParam.toLowerCase();
       }
 
-      // Xử lý tham số brand lọc catalog sản phẩm và đồng bộ tab tương ứng
-      const brandParam = urlParams.get('brand');
-      if (brandParam) {
+      if (targetWifiBrand) {
+        setTimeout(() => {
+          if (targetWifiBrand === 'omada') {
+            if (document.getElementById('catalogMain')) setCategory(53999);
+            switchWifiBrand('omada', comboParam || 'home');
+          } else if (targetWifiBrand === 'ruijie') {
+            if (document.getElementById('catalogMain')) setBrand('RUIJIE');
+            switchWifiBrand('ruijie', comboParam || 'home');
+          } else if (targetWifiBrand === 'huawei') {
+            if (document.getElementById('catalogMain')) setBrand('HUAWEI');
+            switchWifiBrand('huawei', comboParam || 'home');
+          }
+          if (comboParam) {
+            const omadaSection = document.getElementById('omadaCombos') || document.getElementById('omadaComboDisplay');
+            if (omadaSection) {
+              const yOffset = -70;
+              const y = omadaSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+              window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+          }
+        }, 150);
+      } else if (brandParam) {
         const bLower = brandParam.toLowerCase();
-        if (bLower === 'omada') {
+        if (['hikvision', 'dahua', 'ezviz'].includes(bLower)) {
           setTimeout(() => {
-            setCategory(53999);
-            switchWifiBrand('omada');
-          }, 150);
-        } else if (bLower === 'ruijie') {
-          setTimeout(() => {
-            setBrand('RUIJIE');
-            switchWifiBrand('ruijie');
-          }, 150);
-        } else if (bLower === 'huawei') {
-          setTimeout(() => {
-            setBrand('HUAWEI');
-            switchWifiBrand('huawei');
-          }, 150);
-        } else if (['hikvision', 'dahua', 'ezviz'].includes(bLower)) {
-          setTimeout(() => {
-            setBrand(brandParam.toUpperCase());
+            if (document.getElementById('catalogMain')) setBrand(brandParam.toUpperCase());
             switchIntercomBrand(bLower);
           }, 150);
         } else {
           setTimeout(() => {
-            setBrand(brandParam.toUpperCase());
+            if (document.getElementById('catalogMain')) setBrand(brandParam.toUpperCase());
           }, 150);
         }
-      }
-
-      const comboParam = urlParams.get('combo');
-      if (comboParam && ['home', 'villa', 'office', 'factory'].includes(comboParam)) {
-        setTimeout(() => switchWifiCombo(comboParam), 150);
+      } else if (comboParam && ['home', 'villa', 'office', 'factory'].includes(comboParam)) {
+        setTimeout(() => {
+          switchWifiCombo(comboParam);
+          const omadaSection = document.getElementById('omadaCombos') || document.getElementById('omadaComboDisplay');
+          if (omadaSection) {
+            const yOffset = -70;
+            const y = omadaSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        }, 150);
       }
 
       const intercomBrandParam = urlParams.get('intercomBrand');
-      if (intercomBrandParam && ['hikvision', 'dahua', 'ezviz'].includes(intercomBrandParam.toLowerCase())) {
-        setTimeout(() => switchIntercomBrand(intercomBrandParam.toLowerCase()), 120);
-      }
       const intercomComboParam = urlParams.get('intercomCombo');
-      if (intercomComboParam) {
-        setTimeout(() => switchIntercomCombo(intercomComboParam), 180);
+      if (intercomBrandParam && ['hikvision', 'dahua', 'ezviz'].includes(intercomBrandParam.toLowerCase())) {
+        setTimeout(() => {
+          switchIntercomBrand(intercomBrandParam.toLowerCase(), intercomComboParam || 'apartment');
+          if (intercomComboParam) {
+            const intercomSection = document.getElementById('intercomCombos') || document.getElementById('intercomComboDisplay');
+            if (intercomSection) {
+              const yOffset = -70;
+              const y = intercomSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+              window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+          }
+        }, 150);
+      } else if (intercomComboParam) {
+        setTimeout(() => {
+          switchIntercomCombo(intercomComboParam);
+          const intercomSection = document.getElementById('intercomCombos') || document.getElementById('intercomComboDisplay');
+          if (intercomSection) {
+            const yOffset = -70;
+            const y = intercomSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        }, 180);
       }
 
       const searchParam = urlParams.get('search') || urlParams.get('q');
