@@ -322,6 +322,66 @@ img {
   color: #0369A1 !important;
 }
 
+/* Specialized Combo Nav Badges with Professional Icons */
+.nav-combo-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 5px 11px !important;
+  border-radius: 8px !important;
+  font-weight: 700 !important;
+  font-size: 0.84rem !important;
+  transition: all 0.2s ease !important;
+  white-space: nowrap !important;
+  text-decoration: none !important;
+}
+.nav-combo-badge svg {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.nav-combo-badge:hover svg {
+  transform: translateY(-1px);
+}
+
+.nav-combo-wifi {
+  color: #059669 !important;
+  background: rgba(16, 185, 129, 0.08) !important;
+  border: 1px solid rgba(16, 185, 129, 0.25) !important;
+}
+.nav-combo-wifi:hover,
+.nav-combo-wifi.active {
+  background: rgba(16, 185, 129, 0.16) !important;
+  border-color: #10b981 !important;
+  color: #047857 !important;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.15);
+}
+
+.nav-combo-intercom {
+  color: #0284c7 !important;
+  background: rgba(2, 132, 199, 0.08) !important;
+  border: 1px solid rgba(2, 132, 199, 0.25) !important;
+}
+.nav-combo-intercom:hover,
+.nav-combo-intercom.active {
+  background: rgba(2, 132, 199, 0.16) !important;
+  border-color: #0284c7 !important;
+  color: #0369a1 !important;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.15);
+}
+
+.nav-combo-smarthome {
+  color: #7c3aed !important;
+  background: rgba(124, 58, 237, 0.08) !important;
+  border: 1px solid rgba(124, 58, 237, 0.25) !important;
+}
+.nav-combo-smarthome:hover,
+.nav-combo-smarthome.active {
+  background: rgba(124, 58, 237, 0.16) !important;
+  border-color: #7c3aed !important;
+  color: #6d28d9 !important;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.15);
+}
+
 /* Header Hotline Button */
 .btn-header-hotline {
   display: inline-flex;
